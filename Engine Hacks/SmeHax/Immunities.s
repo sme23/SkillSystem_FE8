@@ -2,13 +2,13 @@
 .align
 
 
-.global Immunities
-.type Immunities, %function
+.global IocanePowder
+.type IocanePowder, %function
 
 .equ IsImmuneReturnPoint, 0x802B697
 .equ NotImmuneReturnPoint, 0x802B631
 
-Immunities:
+IocanePowder:
 @things we overwrote with the hook
 mov r7,r5
 add r7,#0x48

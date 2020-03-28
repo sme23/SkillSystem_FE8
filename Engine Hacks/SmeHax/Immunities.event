@@ -4,7 +4,7 @@
 
 PUSH
 	ORG 0x2B628
-	jumpToHack(Immunities)
+	jumpToHack(IocanePowder)
 POP
 
 #include "Immunities.lyn.event"
