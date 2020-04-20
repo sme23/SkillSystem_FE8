@@ -1,0 +1,15 @@
+#ifndef SHOP_UNIT_INSTALLED
+#define SHOP_UNIT_INSTALLED
+
+//unit menu usability/effect on player shop
+
+#include "ShopUnit.lyn.event"
+
+
+
+
+
+
+
+#endif // SHOP_UNIT_INSTALLED
+
