@@ -180,8 +180,10 @@ POP
   #include "ExternalHacks/NarrowFont/NarrowFontInstaller.event"
   
   ALIGN 4
-  #include "SmeHax/Immunities.event"
+  #include "SmeHax/Immunities/Immunities.event"
   
+  ALIGN 4
+  #include "SmeHax/ASMCs/death.lyn.event"
   
   
   
