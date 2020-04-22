@@ -1,0 +1,7 @@
+#ifndef ESCAPE_ARRIVE_INSTALLED
+#define ESCAPE_ARRIVE_INSTALLED
+
+#include "UnitMenu.lyn.event"
+
+
+#endif // ESCAPE_ARRIVE_INSTALLED
