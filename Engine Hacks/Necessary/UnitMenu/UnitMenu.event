@@ -130,9 +130,13 @@ UnitMenuTable:
   
   UM_Chest
   UM_Door
+  
   UM_Armory
   UM_Vendor
   UM_Secret
+  
+  MenuCommand(UM_Shop, UM_ShopDesc, NormalText, ShopUnitCommandUsability, ShopUnitCommandEffect)
+  
   UM_Arena
   
   // Shove & cie

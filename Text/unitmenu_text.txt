@@ -71,3 +71,9 @@ ally.[X]
 ## UM_CaptureDesc
 Strike a fatal blow with reduced[N]
 stats to capture an enemy.[X]
+
+## UM_Shop
+ Shop[X]
+ 
+## UM_ShopDesc
+Player shop[X]
