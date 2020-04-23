@@ -15,7 +15,7 @@ SHORT AllUnitsMustEscapeFlag
 ALIGN 4
 LordMustEscapeLastTextIDLink:
 SHORT LordMustEscapeLastText
-MESSAGE EscapeCommandUsability
+
 ALIGN 4
 RefEscapeTable:
 #incbin "RefEscapeTable.dmp"
