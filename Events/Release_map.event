@@ -145,7 +145,7 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-//ENUT 0x129
+ENUT 0x128
 ENUT 0x1 //no more boss quotes
 ENUT 0x2 //no more death quotes
 LOAD1 0x1 EnemyUnits
