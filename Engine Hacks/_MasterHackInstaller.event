@@ -188,6 +188,8 @@ POP
   ALIGN 4
   #include "SmeHax/ShopUnit/ShopUnit.event"
   
+  ALIGN 4
+  #include "SmeHax/Aum/Aum.event"
   
   
 
