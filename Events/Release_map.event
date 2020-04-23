@@ -38,6 +38,8 @@ Armory(ArmoryItems,10,26)
 Village(0x8,VillageEvent,18,27)
 House(0,HouseEvent,6,24)
 Seize(10,2)
+Escape(9,22)
+Arrive(8,22)
 END_MAIN
 
 MiscBasedEvents:
@@ -143,6 +145,7 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+//ENUT 0x129
 ENUT 0x1 //no more boss quotes
 ENUT 0x2 //no more death quotes
 LOAD1 0x1 EnemyUnits

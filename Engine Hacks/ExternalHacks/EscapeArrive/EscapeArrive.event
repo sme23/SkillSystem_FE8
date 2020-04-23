@@ -8,10 +8,14 @@
 
 ALIGN 4
 LordMustEscapeLastFlagLink:
-BYTE LordMustEscapeLastFlag
+SHORT LordMustEscapeLastFlag
+ALIGN 4
 AllUnitsMustEscapeFlagLink:
-BYTE AllUnitsMustEscapeFlag
-
+SHORT AllUnitsMustEscapeFlag
+ALIGN 4
+LordMustEscapeLastTextIDLink:
+SHORT LordMustEscapeLastText
+MESSAGE EscapeCommandEffect
 ALIGN 4
 RefEscapeTable:
 #incbin "RefEscapeTable.dmp"
