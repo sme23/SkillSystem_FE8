@@ -178,6 +178,23 @@ POP
   //Narrow Fonts by Scraiza
   ALIGN 4
   #include "ExternalHacks/NarrowFont/NarrowFontInstaller.event"
+  
+  ALIGN 4
+  //#include "SmeHax/Immunities/Immunities.event"
+  
+  ALIGN 4
+  #include "ItemEffectRevamp/IERevamp_Installer.event"
+  
+  ALIGN 4
+  #include "SmeHax/ASMCs/death.lyn.event"
+  
+  ALIGN 4
+  #include "SmeHax/ShopUnit/ShopUnit.event"
+  
+  ALIGN 4
+  #include "SmeHax/Aum/Aum.event"
+  
+  
 
   ALIGN 4
   #include "SkillSystem/SkillSystemInstaller.event"

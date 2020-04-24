@@ -88,6 +88,12 @@ by having this unit arrive.[X]
 ## LordMustEscapeLastText
 This unit must escape last.[X]
 
+## AumName
+Aum[X]
+
+## AumDesc
+Revives a dead ally.[X]
+
 ## Mov_Text_ID
 Mov[X]
 
