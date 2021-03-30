@@ -47,6 +47,17 @@ bx		r0
 @g = g*75/128
 @b = b*15/128
 
+@these are for a different format actually
+@real grayscale is (r+g+b / 3) as the r g and b values
+
+.equ CheckEventId, 0x8083da9
+.macro blh to,reg=r3
+	push {\reg}
+	ldr \reg,=\to
+	mov r14,\reg
+	pop {\reg}
+	.short 0xF800
+.endm
 
 GetSepia:
 push	{r4-r7,r14}
@@ -56,11 +67,23 @@ lsl		r5,r0,#22
 lsr		r5,#27			@green
 lsl		r6,r0,#17
 lsr		r6,#27			@blue
-mov		r7,#0			@new number
+mov		r7,r0			@for storage
 
+
+ldr r0,=GrayscaleFlagIDLink
+ldrh r0,[r0]
+blh CheckEventId
+cmp r0,#0
+bne GetSepia_DoGrayscale
+mov r0,r7
+b GetSepia_GoBack
+
+.ltorg
+.align
+
+GetSepia_DoGrayscale:
 @average rgb and triplicate
 @(r4 + r5 + r6) / 3
-
 add r4,r5
 add r0,r4,r6
 mov r1,#3
@@ -70,6 +93,8 @@ lsl r1,r0,#5
 lsl r2,r0,#10
 orr r0,r1
 orr r0,r2
+
+GetSepia_GoBack:
 
 pop {r4-r7}
 pop {r1}
