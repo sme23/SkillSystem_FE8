@@ -8,7 +8,7 @@
 // =========================
 
 // If commented, the skill reorder warning will not be displayed.
-#define SHOW_SKILL_WARNING
+//#define SHOW_SKILL_WARNING
 
 // If commented, the test map will not be installed.
 #define USE_TEST_MAP

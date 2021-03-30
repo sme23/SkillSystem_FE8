@@ -1,0 +1,12 @@
+
+#include "Sepia.lyn.event"
+
+ALIGN 4
+GrayscaleFlagIDLink:
+SHORT 0xB0
+
+PUSH
+	ORG $DB8
+		jumpToHack(GlobalColorModifier)
+POP
+	
