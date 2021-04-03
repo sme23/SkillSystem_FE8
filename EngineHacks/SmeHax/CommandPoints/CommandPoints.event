@@ -4,6 +4,10 @@
 PUSH
 	ORG $59A2B4
 		POIN TerrainHealLoopProc
+	ORG $1DBA4
+		jumpToHack(NewAutoEndEvalFunc)
+	ORG $1D246
+		SHORT 0xE027
 POP
 
 ALIGN 4

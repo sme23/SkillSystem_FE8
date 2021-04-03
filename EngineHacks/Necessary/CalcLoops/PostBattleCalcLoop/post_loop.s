@@ -38,10 +38,10 @@ ldr	r6, =ActionStruct
 ldr	r7, #PostCombatSkills
 
 @set the "action taken" flag
-ldr	r0, [r4,#0x0C]	@status bitfield
-mov	r1, #0x02
-orr	r0, r1		@set bit 0x2
-str	r0, [r4,#0x0C]
+@ldr	r0, [r4,#0x0C]	@status bitfield
+@mov	r1, #0x02
+@orr	r0, r1		@set bit 0x2
+@str	r0, [r4,#0x0C]
 
 @changes attacker and defender around for every routine call
 @(currently commented out because no skill makes use of it, but has been tested)
@@ -77,7 +77,7 @@ mov	r0, #0x01
 ldr	r4,=#0x801d316
 b	Skipmore
 Skipmov:
-ldr	r4,=#0x801d310
+ldr	r4,=#0x801d316
 Skipmore:
 mov	lr, r4
 pop	{r4}

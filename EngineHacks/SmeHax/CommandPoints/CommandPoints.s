@@ -12,6 +12,7 @@
 .equ CommandPointsRamLoc,0x0203F107 @hopefully not used by anything else but we'll see
 .equ ChapterDataStruct,0x202BCF0
 .equ GetChapterAllyUnitCount,0x8012345
+.equ ProcGoto,0x8002f25
 
 .global GetCommandPoints
 .type GetCommandPoints, %function
@@ -27,6 +28,9 @@
 
 .global AlreadyMovedMoveDebuff
 .type AlreadyMovedMoveDebuff, %function
+
+.global NewAutoEndEvalFunc
+.type NewAutoEndEvalFunc, %function
 
 
 GetCommandPoints: @no arguments, returns command points in r0
@@ -104,7 +108,7 @@ and r0,r1
 cmp r0,#0
 beq AlreadyMovedMoveDebuff_GoBack
 
-lsr r4,r4,#2 @/4
+lsr r4,r4,#1 @/2
 
 AlreadyMovedMoveDebuff_GoBack:
 mov r0,r4
@@ -113,4 +117,44 @@ pop {r4-r6}
 pop {r2}
 bx r2
 
+.ltorg
+.align
+
+NewAutoEndEvalFunc: @r0 = parent proc
+push {r4,r14}
+mov r4,r0
+
+ldr r0,=ChapterDataStruct
+add r0,#0x41
+ldrb r0,[r0]
+mov r1,#0x40
+and r0,r1
+cmp r0,#0
+bne NewAutoEndEvalFunc_DecrementCommandPoints
+
+bl GetCommandPoints
+cmp r0,#0
+bne NewAutoEndEvalFunc_DecrementCommandPoints
+
+mov r0,r4
+mov r1,#3
+blh ProcGoto
+b NewAutoEndEvalFunc_GoBack
+
+NewAutoEndEvalFunc_DecrementCommandPoints:
+bl GetCommandPoints
+sub r0,#1
+cmp r0,#0
+bge NewAutoEndEvalFunc_SetDecrementedValue
+mov r0,#0
+NewAutoEndEvalFunc_SetDecrementedValue:
+bl SetCommandPoints
+
+NewAutoEndEvalFunc_GoBack:
+pop {r4}
+pop {r0}
+bx r0
+
+.ltorg
+.align
 
