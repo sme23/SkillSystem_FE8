@@ -16,7 +16,7 @@
   #define Trv_Icon_Y 0x2E
   
   #include "DisplayGrowthsOptions/DisplayGrowthsOptions.event"
- 
+ /*
   PUSH
     ORG 0x205b24 //24 for stat screen
       POIN MSS_page1|1 MSS_page2|1 MSS_page3|1 MSS_page4|1
@@ -260,11 +260,11 @@
     WORD Growth_Options
 
   ALIGN 4
-/*
+
   This has been moved to a CSV
   Class_Level_Cap_Table:
     #incbin "Display Growths Options/Class_Level_Cap_Table.dmp"
-*/
+
   ALIGN 4
   Enemy_Autolevel:
     #incbin "asm/Enemy_Autolevel.dmp"
@@ -285,7 +285,7 @@
 
 
   #include "RText.event"
-
+*/
 #else // _FE8_
   ERROR Modular Stat Screen hack is for FE8
 #endif // _FE8_

@@ -9,7 +9,7 @@
 
 #include "PreBattleCalcLoop/PreBattleCalcLoop.event"
 
-#include "WeaponUsabilityCalcLoop/WeaponUsabilityCalcLoop.event"
+//#include "WeaponUsabilityCalcLoop/WeaponUsabilityCalcLoop.event"
 
 #include "WTACalcLoop/WTACalcLoop.event"
 

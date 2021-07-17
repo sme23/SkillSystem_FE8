@@ -32,3 +32,22 @@
 #include "EngineHacks/SkillSystem/skill_definitions.event"
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+
+#define NoStatusID 0
+#define PoisonStatusID 1
+#define SleepStatusID 2
+#define SilenceStatusID 3
+#define BerserkStatusID 4
+#define AtkRingStatusID 5
+#define DefRingStatusID 6
+#define CritRingStatusID 7
+#define AvoRingStatusID 8
+#define SickStatusID 9
+#define PetrifyStatusID 13
+
+#define HexingRodStatusID 0xE //first fully unused status ID
+#define FreezeStatusID 0xF
+#define RegenStatusID 0x10
+#define HasteStatusID 0x11
+#define SlowStatusID 0x12
+#define EnfeebleStatusID 0x1F //last valid status ID

@@ -1,17 +1,53 @@
 
-#ifdef USE_STATUS_EXPANSION
+#define NoStatusID 0
+#define PoisonStatusID 1
+#define SleepStatusID 2
+#define SilenceStatusID 3
+#define BerserkStatusID 4
+#define AtkRingStatusID 5
+#define DefRingStatusID 6
+#define CritRingStatusID 7
+#define AvoRingStatusID 8
+#define SickStatusID 9
+#define PetrifyStatusID 13
+
+#define HexingRodStatusID 0xE //first fully unused status ID
+#define FreezeStatusID 0xF
+#define RegenStatusID 0x10
+#define HasteStatusID 0x11
+#define SlowStatusID 0x12
+#define EnfeebleStatusID 0x1F //last valid status ID
+
 
 #ifndef STATUS_EXPANSION_INSTALLED
 #define STATUS_EXPANSION_INSTALLED
 
+#include "Extensions/Hack Installation.txt"
+
 PUSH
 
-//ORG $16604 //CanUnitWieldWeapon; not used if skill system
-//SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+//things to verify are skill system-specific
+//for standalone version
 
-//check where boon hooks
-//check where hp bars does its thing
+//CanUnitWieldWeapon
+ORG $166F6
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+ORG $16F32
+SHORT 0x211F //change 0xF bitmask to 0x1F bitmask
+//stat screen
+ORG $8739A
+SHORT 0x221F //change weird reuse of r6 to static 0x1F bimask
+ORG $873EA
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+ORG $873F4
+SHORT 0x0952 //change right shift amount to 1 more bit (5 from 4)
+
+
+//check where boon hooks $188F6
+//check where hp bars does its thing 0x0802241A
 //check where stat screen does status
+
+
 
 
 ORG $178EA //SetUnitNewStatus
@@ -271,4 +307,3 @@ prCheckUnitStatus:
 #endif // STATUS_EXPANSION_INSTALLED
 
 
-#endif // USE_STATUS_EXPANSION
