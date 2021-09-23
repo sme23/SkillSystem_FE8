@@ -202,6 +202,9 @@ POP
   ALIGN 4
   #include "Necessary/StatGetters/_InstallStatGetters.event"
   
+  ALIGN 4
+  #include "LineOfSight/LineOfSight.event"
+  
   //Growth Getters
   #ifndef USE_STRMAG_SPLIT
     #include "Necessary/GrowthGetters/GrowthGetters.event"
