@@ -1,0 +1,13 @@
+MESSAGE currentOffset
+#include "LineOfSight.event"
+
+//going to be inserted to ItemRangeFix's Write_Range function
+//(which is what writes the range which is the behavior we're changing)
+//ok so the idea is to check each square as it is the current square
+//which means we're going to need to call our function just after writing
+//range normally to potentially undo something with those coordinates
+//this is actually 10x more complex than i can handle atm aaa
+//can't even comprehend the functions that this has to alter
+//let alone the algorithm that it has to implement
+//shelving this perhaps indefinitely
+

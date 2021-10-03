@@ -10,7 +10,7 @@ BYTE $A5 $4D $02 $08 $8D $4D $02 $08 $D0 $A5 $59 $08 $2C $00 $01 $00
 POIN (SkillTester|1)
 WORD $0202B256 // gAuraUnitListOut : Unit allegiance list output
 SHORT $4718 $46C0
-
+MESSAGE AuraSkillCheck
 
 #include "SpurSkills/SpurSkills.event"
 
