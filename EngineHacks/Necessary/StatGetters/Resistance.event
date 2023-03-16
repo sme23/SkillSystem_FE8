@@ -4,7 +4,9 @@
 #include "_Common.event"
 
 pResistanceModifiers: // Resistance
-	POIN prAddUnitResistance prHalveIfCapturing prDebuffRes prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes
+	POIN prAddUnitResistance prHalveIfCapturing 
+	POIN prDebuffRes StrongCon
+	POIN prAddEquipResistance prItemPassiveResistance prRallyRes prAddPureWaterBarrierMod prLifeAndDeathMinus prSkillFury prFortressResistanceRes prDefiantRes prPushRes
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -19,14 +21,6 @@ prAddEquipResistance:
 prAddPureWaterBarrierMod: // Upper part of byte 0x31 in unit struct is current pure water/barrier bonus duration
 	rAdd(rUpperHalfByteOf(rUByteAt(0x31)))
 
-prDebuffRes:
-	#include "_asm/DebuffRes.lyn.event"
-	POIN GetDebuffs|1
-
-prRallyRes:
-	#include "_asm/RallyRes.lyn.event"
-	POIN GetDebuffs|1
-
 prLifeAndDeathMinus:
 _testSkill(HeroesLifeAndDeathID,0,5)
 
@@ -34,6 +28,10 @@ prFortressResistanceRes:
 	_testSkill(FortressResistanceID,5,0)
 
 prItemPassiveResistance:
-	rPassiveStatBoosts(STAT_RESISTANCE)
+#ifndef DONT_STACK_BOOSTS
+	rPassiveStatBoostsStacking(STAT_RESISTANCE)
+#else // DONT_STACK_BOOSTS
+	rPassiveStatBoostsNonStacking(STAT_RESISTANCE)
+#endif // DONT_STACK_BOOSTS
 
 #endif // MODULAR_GETTER_RESISTANCE_EVENT

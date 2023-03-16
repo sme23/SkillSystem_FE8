@@ -5,6 +5,12 @@ jumpToHack(CheckGaleforce)
 //ORG $39BDC //this added 1 to make the ai move the next unit
 POP
 
+//change a strange canto bitflag check when triggering mines to a different, redundant flag
+PUSH
+ORG $37760
+BYTE 8
+POP
+
 ALIGN 4
 CheckGaleforce: //decides if the unit should be cantoing or not
 #incbin "Galeforce/checkgaleforce.dmp"
@@ -54,7 +60,7 @@ SavageBlow:
 POIN SkillTester
 WORD SavageBlowID
 POIN SavageBlowEvent
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 #include "SavageBlow/SavageBlowEvent.event"
 
 ALIGN 4
@@ -63,7 +69,7 @@ BreathOfLife:
 POIN SkillTester
 WORD BreathOfLifeID
 POIN BreathOfLifeEvent
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 #include "BreathOfLife/BreathOfLifeEvent.event"
 
 ALIGN 4
@@ -83,9 +89,22 @@ WORD ENABLE_LEGACY_CANTO
 
 ALIGN 4
 CantoPlus:
-#incbin "CantoPlus/cantoplus.dmp"
+#include "CantoPlus/cantoplus.lyn.event"
 POIN SkillTester
 WORD CantoPlusID
+
+CantoAI_Label:
+WORD CANTO_AI 
+
+MoveActiveTo_sBCoords: 
+EVBIT_MODIFY 1 
+EVBIT_T 9 // follow camera 
+ASMC MoveActorToCoords_sB
+ENUN 
+SET_ENDTURN (-1) 
+//ASMC SetActorCoords 
+NoFade 
+ENDA 
 
 ALIGN 4
 ReMove:
@@ -124,6 +143,9 @@ SHORT 0x7B18 0x2102 0x4008 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x2802 //galeforce
 #else
 SHORT 0x7b18 0x2102 0x4001 0x2902 0xd020 0x2140 0x4008 0x46c0 0x2800 //galeforce does not autoselect the unit
 #endif
+
+ORG $2302C //prevent infinite canto after seizing under certain conditions as a consequence of the modified canto check
+SHORT 0x2102
 
 ORG $18754 //this used to set state to "turn ended"
 SHORT 0x46C0

@@ -4,15 +4,22 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prArmorMarchCheck (AlreadyMovedMoveDebuff-1)
+	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
+	POIN prDebuffMov 
+	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck
 	#ifdef STAIRS_ASM
-	POIN StairsMoveDebuff-1
+	POIN StairsMoveDebuff
 	#endif
-	POIN prNullifyIfFreeze
+	POIN prNullifyIfFreeze prNullifyIfGuardAI
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
+	POIN MaxMovCap
 WORD 0
+
+ALIGN 4 
+MaxMovementValue_Link: 
+WORD 15 // Above this may break the game, though Pokemblem does 19 and has not attributed any bugs to it 
 
 prAddUnitBaseMov: // byte 0x12 in ROM class data is base class movement
 	rAdd(rForWordAt(UNIT_ROMCLASS, rSByteAt(0x12))) 
@@ -37,10 +44,6 @@ prNullifyIfFreeze:
 	rIfUnitHasStatus(0x9)
 		rConstant(0)
 
-prRallyMov:
-	#include "_asm/RallyMov.lyn.event"
-	POIN GetDebuffs|1
-
 ALIGN 4
 prAddEquipMov:
 	rAdd(rForUnitEquipped(rCallExternal(prGetItemMovBonus)))
@@ -48,6 +51,10 @@ prAddEquipMov:
 
 ALIGN 4
 prItemPassiveMov:
-	rPassiveStatBoosts(STAT_MOV)
+#ifndef DONT_STACK_BOOSTS
+	rPassiveStatBoostsStacking(STAT_MOV)
+#else // DONT_STACK_BOOSTS
+	rPassiveStatBoostsNonStacking(STAT_MOV)
+#endif // DONT_STACK_BOOSTS
 
 #endif // MODULAR_GETTER_MOVEMENT_EVENT

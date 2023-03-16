@@ -23,7 +23,7 @@
 .type TrapRework_NewRefreshTrapFogVision, %function
 
 .global TrapRework_NewUpdateAllLightRunes
-.type NewUpdateAllLightRunes, %function
+.type TrapRework_NewUpdateAllLightRunes, %function
 
 
 .macro blh to, reg=r3
@@ -237,11 +237,12 @@ NewRefreshTrapFogVision_ValidTrap:
 ldrb r0,[r4]
 ldrb r1,[r4,#1]
 ldrb r2,[r4,#3]
+cmp r2,#0
+beq NewRefreshTrapFogVision_LoopRestart
 ldr r3,=MapAddInRange
 mov r14,r3
 mov r3,#1
 .short 0xF800
-
 
 NewRefreshTrapFogVision_LoopRestart:
 add r4,#8 @size of trap data entry

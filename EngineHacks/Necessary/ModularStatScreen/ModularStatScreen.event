@@ -16,7 +16,12 @@
   #define Trv_Icon_Y 0x2E
   
   #include "DisplayGrowthsOptions/DisplayGrowthsOptions.event"
+
  /*
+
+  #include "WeaponRankStatScreen/WeaponRankStatScreen.event"
+  #include "Background/Background.event"
+ 
   PUSH
     ORG 0x205b24 //24 for stat screen
       POIN MSS_page1|1 MSS_page2|1 MSS_page3|1 MSS_page4|1
@@ -155,8 +160,15 @@
   
   #endif // USE_STRMAG_SPLIT
   
+  #ifdef QOL_STAT_SCREEN_BALLISTA
+  
+    #include "pages/mss_page2_ballista.lyn.event"
+
+  #else  // QOL_STAT_SCREEN_BALLISTA
   
     #include "pages/mss_page2_original.lyn.event"
+
+  #endif  // QOL_STAT_SCREEN_BALLISTA
   
   #ifdef ONLY_SHOW_USED_RANKS
   
@@ -204,7 +216,7 @@
 
   ALIGN 4
   NewPageNameLayout:
-    POIN $a008bc $a008d0 $a008de $a008bc
+    POIN $a008bc $a008d0 $a008de $a008d0
 
   ALIGN 4
   NewPageNameTiles:

@@ -87,9 +87,9 @@ b GoBack
 .ltorg
 
 AltRetTrueCondition:
-ldr r0,=0xFFFEFFF3
-and r1,r0
-str r1,[r2,#0xC]
+@ldr r0,=0xFFFEFFF3
+@and r1,r0
+@str r1,[r2,#0xC]
 b ReturnTrue
 
 LoopStart:
@@ -151,7 +151,7 @@ b ReturnFalse
 
 CheckNextUnit:
 add r4,#1
-cmp r4,#0x3F
+cmp r4,#0xAF @ For compatibility with Pikmin's npc/enemy summons hack
 ble GetSummonUnit
 
 ReturnTrue:
