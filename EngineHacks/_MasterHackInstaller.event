@@ -224,3 +224,4 @@ POP
     MESSAGE "Using EMS Save/Suspend Expansion"
     #include "Necessary/ExpandedModularSave/ExModularSave.event"
 
+  #include "PirateHax/PirateHaxInstaller.event"

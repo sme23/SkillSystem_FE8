@@ -30,9 +30,6 @@ ALIGN 4
 Rogue_Robbery:
 #incbin "FE8-Rogue_Robbery.dmp"
 POIN prConGetter
-POIN SkillTester
-WORD StealPlusID
-WORD WatchfulID
 
 //#ifndef prConGetter
 //	ALIGN 4
@@ -61,8 +58,6 @@ WORD WatchfulID
 
 #endif
 
-//The following changes the checks for steal ability (0x4 of byte 1) to a check for either the Steal skill or Steal+
-#ifdef ENABLE_STEAL_SKILL
 	
 	PUSH
 	
@@ -88,10 +83,5 @@ WORD WatchfulID
 	ALIGN 4
 	Can_Unit_Steal:
 	#incbin "Can_Unit_Steal.dmp"
-	POIN SkillTester
-	WORD StealID
-	WORD StealPlusID
-	WORD ALSO_USE_VANILLA_STEAL_CHECK
 	
-#endif
 	
