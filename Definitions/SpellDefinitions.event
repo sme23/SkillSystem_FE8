@@ -1,0 +1,58 @@
+// I highly doubt we'll need to fill in any spell association ids between 0x4 and 0x39 but the spaces are there in case
+#define HandAxeSpell 0x1
+#define ArrowSpell 0x2
+#define JavelinSpell 0x3
+
+#define BallistaSpell 0x10
+
+#define DragonstoneSpell 0x13
+
+#define FireSpell 0x16
+#define ElfireSpell 0x17
+
+#define ThunderSpell 0x19
+#define BoltingSpell 0x1A
+#define FimbulvetrSpell 0x1B
+#define AircaliburSpell 0x1C
+#define FluxSpell 0x1D
+#define NosferatuSpell 0x1E
+#define LightningSpell 0x1F
+#define PurgeSpell 0x20
+
+#define DivineSpell 0x22
+
+#define EclipseSpell 0x24
+#define FenrirSpell 0x25
+#define HealSpell 0x26
+#define MendSpell 0x27
+#define RecoverSpell 0x28
+#define PhysicSpell 0x29
+#define FortifySpell 0x2A
+#define LatonaSpell 0x2B
+#define RestoreSpell 0x2C
+#define SilenceSpell 0x2D
+#define SleepSpell 0x2E
+#define HammerneSpell 0x2F
+#define BerserkSpell 0x30
+#define BarrierSpell 0x31
+#define PromoItemSpell 0x32
+#define ShineSpell 0x33
+#define LunaSpell 0x34
+#define ExcaliburSpell 0x35
+
+#define AuraSpell 0x37
+
+#define FilasMightSpell 0x3A
+#define NinisGraceSpell 0x3B
+#define ThorsIreSpell 0x3C
+#define SetsLitanySpell 0x3D
+#define StoneSpell 0x3E
+#define IvaldiSpell 0x3F
+#define DemonLightSpell 0x40
+#define GleipnirSpell 0x41
+#define BloodyEyeSpell 0x42
+#define EvilEyeSpell 0x43
+#define ShadowshotSpell 0x44
+#define DemonSurgeSpell 0x45
+#define NaglfarSpell 0x46
+#define WretchedAirSpell 0x47
