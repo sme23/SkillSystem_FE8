@@ -1,0 +1,20 @@
+#define Negative(Number) "0x100 - Number"
+#define WTHitBonus 15
+#define WTMtBonus 1
+#define WTInteraction(AdvantageType, DisadvantageType) "BYTE AdvantageType DisadvantageType WTHitBonus WTMtBonus DisadvantageType AdvantageType Negative(WTHitBonus) Negative(WTMtBonus)"
+#define WTTerminator "BYTE 0xFF 0 0 0"
+
+PUSH
+ORG $2C7CC
+POIN NewWeaponTriangleList
+POP
+
+ALIGN 4
+NewWeaponTriangleList:
+WTInteraction(Sword, Axe)
+WTInteraction(Lance, Sword)
+WTInteraction(Axe, Lance)
+WTInteraction(Tome, Bow)
+WTInteraction(Bow, Dagger)
+WTInteraction(Dagger, Tome)
+WTTerminator
