@@ -1,0 +1,21 @@
+#define Sword 0x0
+
+#define Lance 0x1
+
+#define Axe 0x2
+
+#define Bow 0x3
+
+#define Staff 0x4
+
+#define Tome 0x5
+#define Tomes Tome
+
+#define Dagger 0x6
+#define Daggers Dagger
+#define Knife Dagger
+#define Knives Dagger
+
+#define Unarmed 0x9
+
+#define MonsterWep 0xB

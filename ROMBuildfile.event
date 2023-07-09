@@ -5,6 +5,9 @@
     ORG FreeSpace
 
     #include "repointedTextTable.event"
+	
+	//Definitions to be used throughout the hack
+	#include "Definitions/DefinitionsInstaller.event"
 
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
