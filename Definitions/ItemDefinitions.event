@@ -1,0 +1,6 @@
+#define IronKnife 0xbd
+#define SteelKnife 0xbe
+#define SilverKnife 0xbf
+#define IronDagger 0xc0
+#define SteelDagger 0xc1
+#define SilverDagger 0xc2

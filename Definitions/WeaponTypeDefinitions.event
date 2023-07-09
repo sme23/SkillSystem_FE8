@@ -17,5 +17,6 @@
 #define Knives Dagger
 
 #define Unarmed 0x9
+#define Item Unarmed
 
 #define MonsterWep 0xB

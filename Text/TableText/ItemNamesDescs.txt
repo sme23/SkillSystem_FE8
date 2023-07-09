@@ -1,0 +1,35 @@
+## IronKnifeName
+Iron Knife[X]
+
+## IronKnifeDesc
+Can attack from afar.[X]
+
+## SteelKnifeName
+Steel Knife[X]
+
+## SteelKnifeDesc
+Can attack from afar.[X]
+
+## SilverKnifeName
+Silver Knife[X]
+
+## SilverKnifeDesc
+Can attack from afar.[X]
+
+## IronDaggerName
+Iron Dagger[X]
+
+## IronDaggerDesc
+Doubles attacks dealt.[X]
+
+## SteelDaggerName
+Steel Dagger[X]
+
+## SteelDaggerDesc
+Doubles attacks dealt.[X]
+
+## SilverDaggerName
+Silver Dagger[X]
+
+## SilverDaggerDesc
+Doubles attacks dealt.[X]
