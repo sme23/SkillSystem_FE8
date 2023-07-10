@@ -1,5 +1,13 @@
 #include "RTextChanges/Installer.event"
+//Loog
 
 #ifdef __CHAPTERJUMP__
     #include "ChapterJump/ChapterJump.event"
 #endif //__CHAPTERJUMP__
+//Contro
+
+#include "RW Cloud Fix/Cloud_Fix_EA.event"
+//RW and Tequila
+
+#include "SplitPromoItems/SplitPromoItems.event"
+//Sme
