@@ -2,6 +2,7 @@ PUSH
 
 ORG 0x59D21C  // Chapter Menu
 POIN ChapterMenu
+PROTECT 0x59D21C currentOffset
 
 POP
 
