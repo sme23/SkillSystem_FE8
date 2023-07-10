@@ -1,1 +1,5 @@
 #include "RTextChanges/Installer.event"
+
+#ifdef __CHAPTERJUMP__
+    #include "ChapterJump/ChapterJump.event"
+#endif //__CHAPTERJUMP__

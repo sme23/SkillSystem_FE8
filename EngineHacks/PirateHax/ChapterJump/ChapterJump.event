@@ -1,0 +1,24 @@
+#include "src/ChapterJump.lyn.event"
+#include "ChapterMenu.event"
+
+ALIGN 4
+gRAMChapterJumpEvent:
+WORD 0x202B670
+
+//DO NOT TOUCH
+//This is the base event that will get copied to RAM then modified
+ALIGN 4
+gChapterJumpEvent:
+    FADI 60
+    CALL EmptyEvent //Gets modified after memcpy
+    SVAL 2 0x0 //Gets modified after memcpy
+    MNC2 0xFFFD
+    NoFade
+    ENDA
+
+
+//Default event if there's no extra event for a chapter
+ALIGN 4
+EmptyEvent:
+    NoFade
+    ENDA
