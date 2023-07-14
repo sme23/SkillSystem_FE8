@@ -11,3 +11,6 @@
 
 #include "SplitPromoItems/SplitPromoItems.event"
 //Sme
+
+#include "FE8-Text_Engine_Rework/_FE8-Text_Engine_Rework_EA.event"
+//Tequila
