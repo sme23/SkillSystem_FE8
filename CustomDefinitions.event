@@ -39,6 +39,7 @@
 #define SkillScroll 0xBC
 
 #include "EngineHacks/SkillSystem/skill_definitions.event"
+#include "EngineHacks/SkillSystem/skill_definitions_pirate.event"
 
 // #define __CHAPTERJUMP__ // Uncomment to enable chapter jump
 

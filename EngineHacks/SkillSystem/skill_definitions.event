@@ -643,7 +643,7 @@
 
 //Wrath: If HP < 50%, +20 critical rate.
 //Author Unknown (Initial Commit)
-#define WrathID 255
+//#define WrathID 255
 
 //Quick Draw: +4 Damage when initiating battle.
 //Author Unknown (Initial Commit)
@@ -729,7 +729,7 @@
 
 //Adept: Gain a consecutive attack. (Speed % activation)
 //Author Unknown (Initial Commit)
-#define AdeptID 255
+//#define AdeptID 255
 
 //Aegis: Nullify a magic attack. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -902,7 +902,7 @@
 
 //Desperation: If HP < 50%, double attacks occur immediately.
 //By ??? (Initial Commit)
-#define DesperationID 255
+//#define DesperationID 255
 
 //Assassinate: When initiating battle at 1 range: +2 Damage, double attacks occur before counter.
 //By Zeta
@@ -1096,7 +1096,7 @@
 
 //Vantage: If HP < 50%, strike first when attacked.
 //Author Unknown (Initial Commit)
-#define VantageID 255
+//#define VantageID 255
 
 //Catch 'Em All: Grants the user every skill.
 //By Leonarth

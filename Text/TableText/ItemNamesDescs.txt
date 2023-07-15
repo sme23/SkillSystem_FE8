@@ -1,35 +1,209 @@
+## EmptyDesc
+ [X]
+
+## BraveDesc
+Doubles attacks dealt.[X]
+
+## KillerDesc
+Grants high critical rate.[X]
+
+## ReaverDesc
+Reverses/doubles the weapon triangle.[X]
+
+## ThrowingWeaponDesc
+Capable of ranged attacks.[X]
+
+## DesperationDesc
+Follow-up attacks occur consecutively.[X]
+
+//SWORDS
+
+## OnigiriName
+Onigiri[X]
+
+## WingclipperName
+Wingclipper[X]
+
+## WingclipperDesc
+Eff. vs. fliers.[X]
+
+## RapierDesc
+Eff. vs. horses/armors.[X]
+
+## WoDaoName
+Wo Dao[X]
+
+## WoDaoDesc
+A deadly blade with extreme lethality.[X]
+
+## FlameSwordName
+Flame Sword[X]
+
+## FlameSwordDesc
+An arcane blade wreathed in fire.[X]
+
+## LightBrandDesc
+A magic sword that casts light.[X]
+
+//LANCES
+
+## SaunionName
+Saunion[X]
+
+## SaunionDesc
+A mighty throwing spear with good range.[X]
+
+## PikeName
+Pike[X]
+
+## PikeDesc
+User always attacks first.[X]
+
+## ImpalerName
+Impaler[X]
+
+## ImpalerDesc
+Ignores enemy defense.[X]
+
+## HorseslayerDesc
+Eff. vs. horses.[X]
+
+//AXES
+
+## BloodaxeName
+Bloodaxe[X]
+
+## BloodaxeDesc
+If countering, first attack always crits.[X]
+
+## CrusherName
+Crusher[X]
+
+## CrusherDesc
+Cannot counter or be countered.[X]
+
+## HammerDesc
+Eff. vs. armors.[X]
+
+## BattleAxeName
+Battle Axe[X]
+
+## BattleAxeDesc
+A metal heap with unparalleled might.[X]
+
+//BOWS
+
+## DeadeyeName
+Deadeye[X]
+
+## DeadeyeDesc
+A bow with great range and precision.[X]
+
+## MiniBowName
+Mini Bow[X]
+
+## MiniBowDesc
+Can counter at melee, but only melee.[X]
+
+## PursuerName
+Pursuer[X]
+
+## PursuerDesc
+When initiating, grants an extra strike.[X]
+
+## LongGreatbowDesc
+A bow with above-average range.[X]
+
+## MagekillerName
+Magekiller[X]
+
+## MagekillerDesc
+Reverses WTA and is eff. vs. tome users.[X]
+
+## GreatbowName
+Greatbow[X]
+
+## SlimshotName
+Slimshot[X]
+
+//TOMES
+
+## BoltingDesc
+Powerful lightning with endless reach.[X]
+
+## ArcfireName
+Arcfire[X]
+
+## HeroFlareName
+Hero's Flare[X]
+
+## TornadoName
+Tornado[X]
+
+## TornadoDesc
+Eff. vs. fliers.[X]
+
+## SurgeName
+Surge[X]
+
+## SurgeDesc
+A short-range burst that cannot miss.[X]
+
+## ThaniName
+Thani[X]
+
+## SagittaeName
+Sagittae[X]
+
+## SagittaeDesc
+Casts magical arrows that fly far.[X]
+
+## LunaDesc
+Ignores enemy resistance.[X]
+
+## NosferatuDesc
+Restores HP equal to damage dealt.[X]
+
+//KNIVES
+
 ## IronKnifeName
 Iron Knife[X]
-
-## IronKnifeDesc
-Can attack from afar.[X]
 
 ## SteelKnifeName
 Steel Knife[X]
 
-## SteelKnifeDesc
-Can attack from afar.[X]
-
 ## SilverKnifeName
 Silver Knife[X]
 
-## SilverKnifeDesc
+## KnifeDesc
 Can attack from afar.[X]
 
 ## IronDaggerName
 Iron Dagger[X]
 
-## IronDaggerDesc
-Doubles attacks dealt.[X]
-
 ## SteelDaggerName
 Steel Dagger[X]
-
-## SteelDaggerDesc
-Doubles attacks dealt.[X]
 
 ## SilverDaggerName
 Silver Dagger[X]
 
-## SilverDaggerDesc
-Doubles attacks dealt.[X]
+## BloodletterName
+Bloodletter[X]
+
+## StilettoName
+Stiletto[X]
+
+## ArcaneKnifeName
+Arcane Knife[X]
+
+## ArcaneKnifeDesc
+A magical knife etched with runes.[X]
+
+## PeshkatzName
+Peshkatz[X]
+
+## BaselardName
+Baselard[X]
+
+## HeartpiercerName
+Heartpiercer[X]

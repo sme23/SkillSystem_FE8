@@ -1,0 +1,12 @@
+
+//Desperation: Follow-up attacks occur consecutively.
+#define DesperationID 1
+
+//Vantage: User always attacks first.
+#define VantageID 2
+
+//Wrath: When countering, user's first attack is a crit.
+#define WrathID 3
+
+//Adept: When initiating, grant an extra attack after user's first.
+#define AdeptID 4
