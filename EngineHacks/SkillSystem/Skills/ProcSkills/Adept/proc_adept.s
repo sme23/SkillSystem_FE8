@@ -1,10 +1,11 @@
 .thumb
 .macro blh to, reg=r3
-  ldr \reg, =\to
+  ldr \reg, \to
   mov lr, \reg
   .short 0xf800
 .endm
 .equ AdeptID, SkillTester+4
+.equ IsFollowupAttack, AdeptID+4
 .equ d100Result, 0x802a52c
 .equ recurse_round, 0x802b83c
 
@@ -40,11 +41,18 @@ cmp r0, #0
 beq End
 @if user has Adept, check for proc rate
 
-ldrb r0, [r4, #0x16] @speed stat as activation rate
-mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End 
+@ ldrb r0, [r4, #0x16] @speed stat as activation rate
+@ mov r1, r4 @skill user
+@ blh d100Result
+@ cmp r0, #1
+@ bne End 
+
+mov r0,r6
+blh IsFollowupAttack
+cmp r0,#1
+beq End
+
+
 
 @if we proc, set the brave effect flag for the NEXT hit
 ldrb r1, AdeptID @first mark Adept active
