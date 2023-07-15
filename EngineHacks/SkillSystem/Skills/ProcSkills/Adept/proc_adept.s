@@ -47,6 +47,12 @@ beq End
 @ cmp r0, #1
 @ bne End 
 
+@Don't work if we're defending
+ldr r0,=#0x203a56c
+cmp r0,r4
+beq End
+
+@ Don't work if it's a followup attack
 mov r0,r6
 blh IsFollowupAttack
 cmp r0,#1
