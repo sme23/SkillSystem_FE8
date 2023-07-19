@@ -27,6 +27,9 @@ Proc_Adept:
 #incbin "Adept/proc_adept.dmp"
 POIN SkillTester
 WORD AdeptID
+POIN IsFollowupAttack
+
+#include "Adept/IsFollowupAttack.lyn.event"
 
 Proc_Astra:
 #incbin "Astra/proc_astra.dmp"
