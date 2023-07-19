@@ -1,0 +1,17 @@
+// Jungle Mountainous
+    ALIGN 4
+    FlasubanVillageSkyObject:
+    #incbin "Dmp/Object/FlasubanVillageSky.dmp"
+
+    ALIGN 4
+    FlasubanVillageSkyPalette:
+    #incbin "Dmp/Palette/FlasubanVillageSky_pal.dmp"
+
+    ALIGN 4
+    FlasubanVillageSkyMapchipConfig:
+    #incbin "Dmp/Config/FlasubanVillageSky_comp.dmp"
+
+    EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
+    EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
+    EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
+  

@@ -1,0 +1,14 @@
+
+//CHAPTER IDs
+#define Chapter1 0
+
+//CHAPTER MAP/MAPCHANGES/EVENTS IDs
+#define Chapter1MapID 0x4
+#define Chapter1MapChangesID 0x6
+#define Chapter1EventsID 0x7
+
+//TILESET IDs (START FROM 0x88 when replacing stuff)
+#define FlasubanVillageSkyObjectID 0x88
+#define FlasubanVillageSkyPaletteID 0x89
+#define FlasubanVillageSkyConfigID 0x8A
+#define FlasubanVillageTileAnimationsID 0x8B

@@ -1,0 +1,5 @@
+#include "Undefs.event" // for undoing EA definitions without messing with the folder
+#include "WeaponTypeDefinitions.event"
+#include "ItemDefinitions.event"
+#include "SpellDefinitions.event"
+#include "ChapterDefinitions.event"
