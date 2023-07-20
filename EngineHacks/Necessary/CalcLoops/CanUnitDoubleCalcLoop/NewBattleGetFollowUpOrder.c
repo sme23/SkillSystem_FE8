@@ -158,7 +158,7 @@ int RecklessFighter(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
 int DoesUnitImmediatelyFollowUp(struct BattleUnit* bunitA, struct BattleUnit* bunitB) { 
 	int result = false; 
     int dist = gBattleStats.range; 
-	int hasDesperation = (SkillTester(&bunitA->unit, DesperationID_Link) && (bunitA->hpInitial < (bunitA->unit.maxHP/2)));
+	int hasDesperation = SkillTester(&bunitA->unit, DesperationID_Link);
 	int hasAssassinate = (SkillTester(&bunitA->unit, AssassinateID_Link) && (dist == 1) && (bunitA == &gBattleActor)); // assassinate only works while attacking 
 	if (hasDesperation || hasAssassinate) { 
 		result = true; } 

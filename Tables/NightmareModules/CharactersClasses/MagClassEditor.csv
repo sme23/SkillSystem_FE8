@@ -24,8 +24,8 @@ Swordmaster,2,10,23,1
 Swordmaster (F),2,10,23,1
 Assassin,1,0,22,0
 Assassin (F),1,0,22,0
-Archer,0,0,20,0
-Archer (F),0,0,20,0
+Archer,1,10,20,0
+Archer (F),1,10,20,0
 Sniper,1,10,24,1
 Sniper (F),1,10,24,1
 Ranger,0,0,22,0
@@ -36,8 +36,8 @@ Wyvern Lord,0,0,21,0
 Wyvern Lord (F),0,0,21,0
 Wyvern Knight,1,5,24,1
 Wyvern Knight (F),1,5,24,1
-Mage,1,55,20,0
-Mage (F),1,55,20,0
+Mage,8,55,20,0
+Mage (F),8,55,20,0
 Sage,5,45,28,1
 Sage (F),4,45,30,1
 Mage Knight,4,40,24,2
@@ -127,11 +127,11 @@ Cyclops,0,0,21,0
 Elder Bael,0,0,22,0
 Journeyman (2),0,0,20,0
 Pupil (2),2,55,20,1
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
+Captain,1,10,30,0
+Ninja,1,25,20,0
+Warden,1,10,20,0
+Curate,1,50,20,0
+Ephraim Lord,1,35,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0

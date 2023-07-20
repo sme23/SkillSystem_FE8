@@ -1,0 +1,12 @@
+//CLASSES
+#define Captain $80 
+#define Ninja $81
+#define Warden $82
+#define Curate $83
+
+//STANDING MAP SPRITES
+
+#define CaptainMapSprite $6b 
+#define NinjaMapSprite $6c
+#define WardenMapSprite $6d
+#define CurateMapSprite $6e

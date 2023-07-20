@@ -1,0 +1,89 @@
+EventPointerTable(Chapter1EventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+END_MAIN
+
+Units1:
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+LOAD1 1 PlayerGroup
+LOAD1 1 EnemyGroup
+ENUN
+WEATHER 7
+NoFade
+ENDA
+
+PlayerGroup:
+UNIT Luisa Captain 0x00 Level(10,Ally,False) [7,19] 0 0 0 0 [Cutlass, IronRifle] NoAI
+UNIT Desiderio Warden 0x00 Level(6,Ally,False) [7,20] 0 0 0 0 [SteelAxe, IronLance] NoAI
+UNIT Pilar Ninja 0x00 Level(8,Ally,False) [6,19] 0 0 0 0 [SteelDagger, IronKnife] NoAI
+UNIT Raimon Curate 0x00 Level(3,Ally,False) [6,20] 0 0 0 0 [Mend, Heal] NoAI
+UNIT Carmen Mage 0x00 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire] NoAI
+UNIT Ximo Archer 0x00 Level(1,Ally,False) [6,21] 0 0 0 0 [IronBow] NoAI
+UNIT
+
+EnemyGroup:
+UNIT Khazar Mercenary 0x00 Level(5,Enemy,False) [17,8] 0 0 0 0 [SteelSword] NoAI
+UNIT
+
+EndingScene:
+NoFade
+ENDA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

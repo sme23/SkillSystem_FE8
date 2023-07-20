@@ -1,0 +1,29 @@
+## CaptainName
+Captain[X]
+
+## CaptainDesc
+ [X]
+
+## NinjaName
+Ninja[X]
+
+## NinjaDesc
+ [X]
+
+## WardenName
+Warden[X]
+
+## WardenDesc
+ [X]
+
+## CurateName
+Curate[X]
+
+## CurateDesc
+ [X]
+
+## BardName
+Bard[X]
+
+## BardDesc
+ [X]

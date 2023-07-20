@@ -1,90 +1,94 @@
 // SWORDS
 
-//#define IronSword 0x01
-#define Onigiri 0x2
-//#define SteelSword 0x3
-//#define SilverSword 0x4
+//#define IronSword $1
+#define Onigiri $2
+//#define SteelSword $3
+//#define SilverSword $4
 
-#define Wingclipper 0x8
-//#define Rapier 0x9
-#define WoDao 0xa
-//#define BraveSword 0xb
-#define FlameSword 0xc
-//#define KillingEdge 0xd
+#define Wingclipper $8
+//#define Rapier $9
+#define WoDao $a
+//#define BraveSword $b
+#define FlameSword $c
+//#define KillingEdge $d
+#define Cutlass $e
 
-//#define LightBrand 0x10
+//#define LightBrand $10
 
-//#define Lancereaver 0x12 
+//#define Lancereaver $12 
 
 //LANCES
-#define Saunion 0x13
-//#define IronLance 0x14
-#define Pike 0x15
-//#define SteelLance 0x16
-//#define SilverLance 0x17
-#define Impaler 0x18
-//#define BraveLance 0x19
-//#define KillerLance 0x1a
-//#define Horseslayer 0x1b
-//#define Javelin 0x1c
-//#define Spear 0x1d
-//#define Axereaver 0x1e
+#define Saunion $13
+//#define IronLance $14
+#define Pike $15
+//#define SteelLance $16
+//#define SilverLance $17
+#define Impaler $18
+//#define BraveLance $19
+//#define KillerLance $1a
+//#define Horseslayer $1b
+//#define Javelin $1c
+//#define Spear $1d
+//#define Axereaver $1e
 
 //AXES
-//#define IronAxe 0x1f
-//#define SteelAxe 0x20
-//#define SilverAxe 0x21
-#define Bloodaxe 0x22
-//#define BraveAxe 0x23
-//#define KillerAxe 0x24
-#define Crusher 0x25
-//#define Hammer 0x26
+//#define IronAxe $1f
+//#define SteelAxe $20
+//#define SilverAxe $21
+#define Bloodaxe $22
+//#define BraveAxe $23
+//#define KillerAxe $24
+#define Crusher $25
+//#define Hammer $26
 
-//#define HandAxe 0x28
-//#define Tomahawk 0x29
-//#define Swordreaver 0x2a
-#define BattleAxe 0x2b
+//#define HandAxe $28
+//#define Tomahawk $29
+//#define Swordreaver $2a
+#define BattleAxe $2b
 
 //BOWS
-#define DeadeyeBow 0x2c
-//#define IronBow 0x2d
-//#define SteelBow 0x2e
-//#define SilverBow 0x2f
-#define MiniBow 0x30
-//#define KillerBow 0x31
-//#define BraveBow 0x32
-#define Pursuer 0x33
-//#define Longbow 0x34
-#define MagekillerBow 0x35
-#define Greatbow 0x36
-#define Slimshot 0x37
+#define DeadeyeBow $2c
+//#define IronBow $2d
+//#define SteelBow $2e
+//#define SilverBow $2f
+#define MiniBow $30
+//#define KillerBow $31
+//#define BraveBow $32
+#define Pursuer $33
+//#define Longbow $34
+#define MagekillerBow $35
+#define Greatbow $36
+#define Slimshot $37
 
 //TOMES
 
-//#define Fire 0x38
-//#define Thunder 0x39
-//#define Elfire 0x3a
-//#define Bolting 0x3b
-#define Arcfire 0x3c
-#define HeroFlare 0x3d
-#define Tornado 0x3e
-#define Surge 0x3f
-#define Thani 0x40
-#define Sagittae 0x41
+//#define Fire $38
+//#define Thunder $39
+//#define Elfire $3a
+//#define Bolting $3b
+#define Arcfire $3c
+#define HeroFlare $3d
+#define Tornado $3e
+#define Surge $3f
+#define Thani $40
+#define Sagittae $41
 
-//#define Luna 0x46
-//#define Nosferatu 0x47
+//#define Luna $46
+//#define Nosferatu $47
 
 //KNIVES
-#define IronKnife 0xbd
-#define SteelKnife 0xbe
-#define SilverKnife 0xbf
-#define IronDagger 0xc0
-#define SteelDagger 0xc1
-#define SilverDagger 0xc2
-#define Bloodletter 0xc3
-#define Stiletto 0xc4
-#define ArcaneKnife 0xc5
-#define Peshkatz 0xc6
-#define Baselard 0xc7
-#define Heartpiercer 0xc8
+#define IronKnife $bd
+#define SteelKnife $be
+#define SilverKnife $bf
+#define IronDagger $c0
+#define SteelDagger $c1
+#define SilverDagger $c2
+#define Bloodletter $c3
+#define Stiletto $c4
+#define ArcaneKnife $c5
+#define Peshkatz $c6
+#define Baselard $c7
+#define Heartpiercer $c8
+
+// GUNS
+#define IronRifle $c9

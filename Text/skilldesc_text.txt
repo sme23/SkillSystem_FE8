@@ -4,8 +4,8 @@ Savior: Can rescue[N]
 without penalties.[X]
 
 ## SD_Adept
-Adept: Gain a consecutive attack.[N]
-(Speed % activation)[X]
+Adept: If initiating, unit gains a[N]
+consecutive attack after their first.[X]
 
 ## SD_Acrobat
 Acrobat: All traversable[N]
@@ -136,12 +136,11 @@ Armored Blow: +10 Def[N]
 when initiating battle.[X]
 
 ## SD_Vantage
-Vantage: If HP < 50%,[N]
-strike first when attacked.[X]
+Vantage: Strike first when attacked.[X]
 
 ## SD_Desperation
-Desperation: If HP < 50%,[N]
-double attacks occur immediately.[X]
+Desperation: Follow-up attacks[N]
+occur consecutively.[X]
 
 ## SD_Wrath
 Wrath: If HP < 50%,[N]

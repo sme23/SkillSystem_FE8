@@ -207,3 +207,12 @@ Baselard[X]
 
 ## HeartpiercerName
 Heartpiercer[X]
+
+## CutlassName
+Cutlass[X]
+
+## CutlassDesc
+Luisa only. Doubles attacks dealt.[X]
+
+## IronRifleName
+Iron Rifle[X]

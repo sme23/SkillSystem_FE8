@@ -3,3 +3,5 @@
 #include "ItemDefinitions.event"
 #include "SpellDefinitions.event"
 #include "ChapterDefinitions.event"
+#include "CharacterDefinitions.event"
+#include "ClassDefinitions.event"

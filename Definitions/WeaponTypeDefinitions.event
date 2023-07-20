@@ -16,6 +16,8 @@
 #define Knife Dagger
 #define Knives Dagger
 
+#define Gun 0x7
+
 #define Unarmed 0x9
 #define Item Unarmed
 

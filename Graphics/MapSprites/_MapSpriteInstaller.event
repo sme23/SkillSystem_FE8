@@ -1,0 +1,100 @@
+#include "_MapSpriteDefs.event"
+
+//repoint map sprite tables
+PUSH
+ORG $26730
+POIN StandingMapSpriteTable
+ORG $267B0
+POIN StandingMapSpriteTable
+ORG $26838
+POIN StandingMapSpriteTable
+ORG $26C88
+POIN StandingMapSpriteTable
+ORG $272D0
+POIN StandingMapSpriteTable
+ORG $27BB0
+POIN StandingMapSpriteTable
+ORG $27C9C
+POIN StandingMapSpriteTable
+ORG $27D48
+POIN StandingMapSpriteTable
+ORG $27E0C
+POIN StandingMapSpriteTable
+ORG $27E9C
+POIN StandingMapSpriteTable
+ORG $27F74
+POIN StandingMapSpriteTable
+ORG $28064
+POIN StandingMapSpriteTable
+
+ORG $79584
+POIN MovingMapSpriteTable
+ORG $79598
+POIN MovingMapSpriteTable
+ORG $BAC2C
+POIN MovingMapSpriteTable
+ORG $BAC40
+POIN MovingMapSpriteTable
+POP
+
+ALIGN 4
+StandingMapSpriteTable:
+FILL (256*8)
+
+ALIGN 4
+MovingMapSpriteTable:
+FILL (256*8)
+
+//we need to fill out these tables with the vanilla table contents
+//we'll use dmps because i'm lazy
+
+PUSH
+ORG StandingMapSpriteTable
+#incbin "VanillaStandingMapSpriteTable.dmp"
+ORG MovingMapSpriteTable
+#incbin "VanillaMovingMapSpriteTable.dmp"
+POP
+
+StandingMapSprite(CaptainMapSprite,MapSprite16x16,CaptainSMS)
+MovingMapSprite(Captain, $1C3D7C, CaptainMMS)
+
+ALIGN 4
+CaptainSMS:
+#incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-stand.dmp"
+
+ALIGN 4
+CaptainMMS:
+#incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-walk.dmp"
+
+StandingMapSprite(NinjaMapSprite,MapSprite16x16,NinjaSMS)
+MovingMapSprite(Ninja, $1C3D7C, NinjaMMS)
+
+ALIGN 4
+NinjaSMS:
+#incbin "Dmp/Ninja {Der}-stand.dmp"
+
+ALIGN 4
+NinjaMMS:
+#incbin "Dmp/Ninja {Der}-walk.dmp"
+
+StandingMapSprite(WardenMapSprite,MapSprite16x32,WardenSMS)
+MovingMapSprite(Warden, $1C3D7C, WardenMMS)
+
+ALIGN 4
+WardenSMS:
+#incbin "Dmp/Knight (U) Axe {SALVAGED}-stand.dmp"
+
+ALIGN 4
+WardenMMS:
+#incbin "Dmp/Knight (U) Axe {SALVAGED}-walk.dmp"
+
+StandingMapSprite(CurateMapSprite,MapSprite16x16,CurateSMS)
+MovingMapSprite(Curate, $1C3D7C, CurateMMS)
+
+ALIGN 4
+CurateSMS:
+#incbin "Dmp/Cleric (M) Trainee {Tdim}-stand.dmp"
+
+ALIGN 4
+CurateMMS:
+#incbin "Dmp/Cleric (M) Trainee {Tdim}-walk.dmp"
