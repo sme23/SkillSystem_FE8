@@ -1,12 +1,30 @@
 
-//Desperation: Follow-up attacks occur consecutively.
+//Desperation: Follow-up attacks occur consecutively. (Loog)
 #define DesperationID 1
 
-//Vantage: User always attacks first.
+//Vantage: User always attacks first. (Loog)
 #define VantageID 2
 
 //Wrath: When countering, user's first attack is a crit.
 #define WrathID 3
 
-//Adept: When initiating, grant an extra attack after user's first.
+//Adept: When initiating, grant an extra attack after user's first. (Sme)
 #define AdeptID 4
+
+//Supressive Fire: If an ally attacks an enemy within this unit’s attack range, they ignore Avo.
+#define SuppressiveFireID 5
+
+//Surprise Attack: If foe cannot counter, ignore their defense. (Dragz)
+#define SurpriseAttackID 6
+
+//Resolute Sacrifice: Healing staff amount is increased by this unit's missing HP.
+#define ResoluteSacrificeID 7
+
+//Eye for an Eye: If this unit is damaged, next attack’s might is increased by the same amount.
+#define EyeForAnEyeID 8
+
+//Sea Shanty: When an ally adjacent to this unit acts, they can move an additional 2 tiles post-action.
+#define SeaShantyID 9
+
+//Running Start:For every 3 tiles moved, this unit’s maximum attack range increases by 1.
+#define RunningStartID 10

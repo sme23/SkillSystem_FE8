@@ -381,5 +381,9 @@ SkillDescription(SteadyBrawlerID,SD_SteadyBrawler)
 SkillDescription(QuickLearnerID,SD_QuickLearner)
 SkillDescription(PassionsFlowID,SD_PassionsFlow)
 SkillDescription(BidingBlowID,SD_BidingBlow)
- 
- 
+SkillDescription(SuppressiveFireID,SD_SuppressiveFire)
+SkillDescription(SurpriseAttackID,SD_SurpriseAttack) 
+SkillDescription(ResoluteSacrificeID,SD_ResoluteSacrifice)
+SkillDescription(EyeForAnEyeID,SD_EyeForAnEye)
+SkillDescription(SeaShantyID,SD_SeaShanty)
+SkillDescription(RunningStartID,SD_RunningStart)

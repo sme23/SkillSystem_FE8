@@ -1568,12 +1568,9 @@ Prideful Warrior: This unit always[N]
 attacks after the enemy, but[N]
 always doubles.[X]
 
-
-
 ## SD_LastWord
 Last Word: When doubled, this unit[N]
 also doubles.[X]
-
 
 ## SD_BoldFighter
 Bold Fighter: When attacking,[N]
@@ -1582,7 +1579,6 @@ this unit always doubles.[X]
 ## SD_VengefulFighter
 Vengeful Fighter: When defending,[N]
 this unit always doubles.[X]
-
 
 ## SD_SteadyBrawler
 Steady Brawler: This unit deals[N]
@@ -1598,17 +1594,35 @@ Passion's Flow: If gaining support[N]
 bonuses, this unit always doubles[N]
 while attacking.[X]
 
-
 ## SD_BidingBlow
 Biding Blow: If the opponent[N]
 cannot counter, this unit doubles.[X]
 
+## SD_SuppressiveFire
+Suppressive Fire: If an ally attacks an[N]
+an enemy in this unit's attack range,[N]
+ally ignores enemy's AVO.[X]
 
+## SD_SurpriseAttack
+Surprise Attack: If foe is unable[N]
+to counter, ignore foe's defense.[X]
 
+## SD_ResoluteSacrifice
+Resolute Sacrifice: Healing staff[N]
+amount is increased by this unit's[N]
+missing HP.[X]
 
+## SD_EyeForAnEye
+Eye For An Eye: If this unit is[N]
+damaged, next attack's might[N]
+increases by damage taken.[X]
 
+## SD_SeaShanty
+Sea Shanty: When an ally adjacent to[N]
+this unit acts, they can move an[N]
+additional 2 tiles post-action.[X]
 
-
-
-
-
+## SD_RunningStart
+Running Start: Unit's maximum attack[N]
+range increases by 1 for every 3[N]
+tiles moved before attacking.[X]
