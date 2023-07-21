@@ -1,9 +1,9 @@
 INLINE MagCharTable,Base Magic,Magic Growth
 None,0,0
 0x01 Luisa,0,15
-0x02 Pilar,2,25
-0x03 Desiderio,0,10
-0x04 Raimon,1,60
+0x02 Pilar,2,20
+0x03 Desiderio,1,5
+0x04 Raimon,1,55
 0x05 Carmen,0,60
 0x06 Ximo,0,15
 Ross,0,5
