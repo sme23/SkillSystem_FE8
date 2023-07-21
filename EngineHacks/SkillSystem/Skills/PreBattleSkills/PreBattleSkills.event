@@ -376,6 +376,12 @@ StunningSmile:
 POIN SkillTester
 WORD StunningSmileID
 
+ALIGN 4
+SurpriseAttack:
+#incbin "SurpriseAttack/SurpriseAttack.dmp"
+POIN SkillTester
+WORD SurpriseAttackID
+
 #include "KeenFighter/Installer.event" 
 
 
