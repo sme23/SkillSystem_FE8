@@ -1,12 +1,68 @@
 //CLASSES
-#define Captain $80 
-#define Ninja $81
+
+//SWORD
+//#define Mercenary $f
+//#define Mercenary_F $10
+
+//#define Myrmidon $13
+//#define Myrmidon_F $14
+
+// SWORD/LANCE
+#define Vanguard $9
+
+// SWORD/GUN
+#define Captain $80
+
+//LANCE
+//#define Soldier $4e
+
+#define Deserter $84
+
+//#define PegasusKnight $48
+
+// LANCE/AXE
 #define Warden $82
+
+//AXE
+//#define Fighter $3f
+
+//#define Brigand $41
+
+#define DragonRider $1f
+#define DragonRider_F $20
+
+
+//BOW
+//#define Archer $19
+//#define Archer_F $1a
+
+#define Hunter $85
+
+//TOME
+//#define Mage $25
+//#define Mage_F $26
+
+//#define Shaman $2d
+//#define Shaman_F $2e
+
+//KNIVES
+//#define Thief $d
+
+#define Ninja $81
+
+//STAVES
+//#define Priest $45
+//#define Cleric $4a
+
 #define Curate $83
 
-//STANDING MAP SPRITES
 
+
+
+//STANDING MAP SPRITES
 #define CaptainMapSprite $6b 
 #define NinjaMapSprite $6c
 #define WardenMapSprite $6d
 #define CurateMapSprite $6e
+#define DeserterMapSprite $6f
+#define HunterMapSprite $70

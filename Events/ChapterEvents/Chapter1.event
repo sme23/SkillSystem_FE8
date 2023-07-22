@@ -13,12 +13,24 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0, ThiefTime, 2)
 END_MAIN
+
+ThiefTime:
+LOAD1 1 ThiefSpawn
+ENUN
+NoFade
+ENDA
+
+ThiefSpawn:
+UNIT Blackheart Thief 0 Level(2, Enemy, True) [18,21] 0 0 0 0 [IronKnife, Shield, ChestKey] ThiefAI
+UNIT
 
 CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+DurabilityChest(SkillScroll,PassID,18,11)
 END_MAIN
 
 MiscBasedEvents:
@@ -44,16 +56,33 @@ NoFade
 ENDA
 
 PlayerGroup:
-UNIT Luisa Captain 0x00 Level(10,Ally,False) [7,19] 0 0 0 0 [Cutlass, IronRifle] NoAI
-UNIT Desiderio Warden 0x00 Level(6,Ally,False) [7,20] 0 0 0 0 [SteelAxe, IronLance] NoAI
-UNIT Pilar Ninja 0x00 Level(8,Ally,False) [6,19] 0 0 0 0 [SteelDagger, IronKnife] NoAI
-UNIT Raimon Curate 0x00 Level(3,Ally,False) [6,20] 0 0 0 0 [Mend, Heal] NoAI
-UNIT Carmen Mage 0x00 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire] NoAI
-UNIT Ximo Archer 0x00 Level(1,Ally,False) [6,21] 0 0 0 0 [IronBow] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [6,19] 0 0 0 0 [Cutlass, IronRifle, Vulnerary] NoAI
+UNIT Desiderio Warden 0 Level(6,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance] NoAI
+UNIT Pilar Ninja 0 Level(8,Ally,False) [5,19] 0 0 0 0 [SteelDagger, IronKnife, Vulnerary] NoAI
+UNIT Razvan Curate 0 Level(3,Ally,False) [5,20] 0 0 0 0 [Mend, Heal, Vulnerary] NoAI
+UNIT Carmen Mage 0 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire, Vulnerary] NoAI
+UNIT Ximo Archer 0 Level(1,Ally,False) [6,21] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
 EnemyGroup:
-UNIT Khazar Mercenary 0x00 Level(5,Enemy,False) [17,8] 0 0 0 0 [SteelSword] NoAI
+UNIT Khazhak Fighter 0 Level(5,Enemy,False) [17,8] 0 0 0 0 [SteelAxe, HandAxe] BossAI
+UNIT Blackheart Soldier 0 Level(2, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
+UNIT Blackheart Fighter 0 Level(2, Enemy, True) [12,19] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Blackheart Vanguard 0 Level(3, Enemy, True) [13,18] 0 0 0 0 [SteelSword, Javelin] BossAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,21] 0 0 0 0 [IronBow] ChargeAI
+UNIT Blackheart Myrmidon 0 Level(2, Enemy, True) [19,20] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Blackheart Mercenary 0 Level(2, Enemy, True) [15,16] 0 0 0 0 [SteelSword] AttackInRangeAI
+UNIT Blackheart Vanguard 0 Level(3, Enemy, True) [17,18] 0 0 0 0 [SteelLance, Javelin] BossAI
+UNIT Blackheart Mage 0 Level(2, Enemy, True) [12,15] 0 0 0 0 [Fire] AttackInRangeAI
+
+UNIT Blackheart Vanguard 0 Level(2, Enemy, True) [15,12] 0 0 0 0 [SteelSword] BossAI
+UNIT Blackheart Vanguard 0 Level(2, Enemy, True) [16,12] 0 0 0 0 [SteelLance] BossAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [15,11] 0 0 0 0 [IronBow] BossAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [16,11] 0 0 0 0 [IronBow] BossAI
+UNIT Blackheart Deserter 0 Level(2, Enemy, True) [19,9] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT Blackheart Fighter 0 Level(2, Enemy, True) [14,9] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Blackheart Mage 0 Level(2, Enemy, True) [18,8] 0 0 0 0 [Elfire] AttackInRangeAI
+
 UNIT
 
 EndingScene:

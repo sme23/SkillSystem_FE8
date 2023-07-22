@@ -1,35 +1,47 @@
-## LuisaName
-Luisa[X]
+## LuaName
+Lua[X]
 
-## LuisaDesc
- [X]
+## LuaDesc
+[X]
 
 ## PilarName
 Pilar[X]
 
 ## PilarDesc
- [X]
+[X]
 
 ## DesiderioName
 Desiderio[X]
 
 ## DesiderioDesc
- [X]
+[X]
 
-## RaimonName
-Raimon[X]
+## RazvanName
+Razvan[X]
 
-## RaimonDesc
- [X]
+## RazvanDesc
+[X]
 
 ## CarmenName
 Carmen[X]
 
 ## CarmenDesc
- [X]
+[X]
 
 ## XimoName
 Ximo[X]
 
 ## XimoDesc
- [X]
+[X]
+
+## KhazhakName
+Khazhak[X]
+
+## KhazhakDesc
+[X]
+
+## BlackheartName
+Blackheart[X]
+
+## BlackheartDesc
+[X]

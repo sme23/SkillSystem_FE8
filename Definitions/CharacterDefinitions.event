@@ -1,12 +1,13 @@
 // PLAYER ($1 through $45 allowed)
-#define Luisa $1
+#define Lua $1
 #define Pilar $2
 #define Desiderio $3
-#define Raimon $4
+#define Razvan $4
 #define Carmen $5
 #define Ximo $6
 
 // ENEMY/NPC ($46 through $FF)
 
 //Chapter 1
-#define Khazar $46
+#define Khazhak $46
+#define Blackheart $47

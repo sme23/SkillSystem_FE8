@@ -48,5 +48,5 @@ RGB2HEX(255, 91, 96)
 RGB2HEX(85, 28, 33)
 
 RGB2HEX(155, 74, 97)
-RGB2HEX(255, 64, 69)
+RGB2HEX(255, 64, 69) //reddest, leave it alone bc debuffs use it
 RGB2HEX(85, 28, 33)

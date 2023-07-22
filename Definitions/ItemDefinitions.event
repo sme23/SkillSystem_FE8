@@ -92,3 +92,6 @@
 
 // GUNS
 #define IronRifle $c9
+
+// EQUIPS
+#define Shield $ca

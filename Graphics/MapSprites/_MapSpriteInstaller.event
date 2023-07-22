@@ -98,3 +98,25 @@ CurateSMS:
 ALIGN 4
 CurateMMS:
 #incbin "Dmp/Cleric (M) Trainee {Tdim}-walk.dmp"
+
+StandingMapSprite(DeserterMapSprite,MapSprite16x16,DeserterSMS)
+MovingMapSprite(Deserter, $1C3D7C, DeserterMMS)
+
+ALIGN 4
+DeserterSMS:
+#incbin "Dmp/Militia (M) Deserter Lance {Alusq}-stand.dmp"
+
+ALIGN 4
+DeserterMMS:
+#incbin "Dmp/Militia (M) Deserter Lance {Alusq}-walk.dmp"
+
+StandingMapSprite(HunterMapSprite,MapSprite16x16,HunterSMS)
+MovingMapSprite(Hunter, $1C3D7C, HunterMMS)
+
+ALIGN 4
+HunterSMS:
+#incbin "Dmp/Hunter (M) {MeatOfJustice}-stand.dmp"
+
+ALIGN 4
+HunterMMS:
+#incbin "Dmp/Hunter (M) {MeatOfJustice}-walk.dmp"

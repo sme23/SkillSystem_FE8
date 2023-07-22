@@ -5,3 +5,4 @@
 #include "ChapterDefinitions.event"
 #include "CharacterDefinitions.event"
 #include "ClassDefinitions.event"
+#include "AIDefinitions.event"

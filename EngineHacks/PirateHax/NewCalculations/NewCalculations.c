@@ -1,0 +1,210 @@
+#include "gbafe.h"
+
+#include "NewCalculations.h"
+
+
+int GetCurrentPromotedLevelBonus(){
+    return 0; //promo'd units don't get anything bc level doesn't reset
+}
+
+void ComputeBattleUnitHitRate(BattleUnit* bu) {
+    bu->battleHitRate = (bu->unit.skl * 3) + GetItemHit(bu->weapon) + bu->wTriangleHitBonus;
+}
+
+void ComputeBattleUnitAvoidRate(BattleUnit* bu) {
+    bu->battleAvoidRate = bu->terrainAvoid + (bu->unit.lck * 3);
+
+    if (bu->battleAvoidRate < 0){
+        bu->battleAvoidRate = 0;
+    }
+}
+
+void ComputeBattleUnitCritRate(struct BattleUnit* bu) {
+	if (GetItemCrit(bu->weapon) != 255){
+		bu->battleCritRate = GetItemCrit(bu->weapon);
+	}
+    else{
+		bu->battleCritRate = 0;
+	}
+}
+
+void ComputeBattleUnitWeaponRankBonuses(struct BattleUnit* bu) {
+    return;
+}
+
+int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target){
+	
+	if (CanBattleUnitGainExp(actor, target)){
+
+        // tinked or missed
+		if (!(actor->nonZeroDamage)){
+			return 0;
+		}
+
+        int levelDiff = GetLevelDifference(actor, target);
+
+		// killed
+		if (target->unit.curHP == 0){
+			
+            int bossFactor = 1;
+
+			if (target->unit.pCharacterData->attributes & CA_BOSS){
+				bossFactor = 2;
+			}
+			
+            int initialKillExp = (30 + 3 * levelDiff) * bossFactor;
+
+			if(initialKillExp <= 3){
+				return 3;
+			}
+			else if(initialKillExp >= 100){
+				return 100;
+			}
+			else{
+				return initialKillExp;
+			}
+		}
+
+		// hit
+		int initialHitExp = 10 + 1 * levelDiff;
+
+			if(initialHitExp <= 1){
+				return 1;
+			}
+			else if(initialHitExp >= 33){
+				return 33;
+			}
+			else{
+				return initialHitExp;
+			}
+
+	}
+
+	return 0;
+}
+
+bool CanBattleUnitGainExp(BattleUnit* actor, BattleUnit* target){
+
+	// is the unit exp maxed
+	if (!CanBattleUnitGainLevels(actor)){
+		return false;
+	}
+
+	// is the unit alive
+	if (actor->unit.curHP == 0){
+		return false;
+	}
+
+	// does the opponent prevent exp gain
+	if (((target->unit.pCharacterData->attributes) | (target->unit.pClassData->attributes)) & CA_NO_EXP){
+		return false;
+	}
+
+	return true;
+
+}
+
+int GetUnitEffectiveLevel(Unit* unit){
+
+	int effectiveLevel = unit->level;
+
+    if (unit->pClassData->attributes & CA_PROMOTED)
+    {
+        effectiveLevel += 10; //add 10 if promoted
+    }
+
+	return effectiveLevel;
+
+}
+
+int GetLevelDifference(BattleUnit* actor, BattleUnit* target){
+
+	int diff = GetUnitEffectiveLevel(&target->unit) - GetUnitEffectiveLevel(&actor->unit);
+	return diff;
+
+}
+
+bool CanBattleUnitGainLevels(BattleUnit* battleUnit) {
+    if (battleUnit->unit.exp == 0xFF){
+    	return false;
+    }
+
+    if (UNIT_FACTION(&battleUnit->unit) != FACTION_BLUE){
+    	return false;
+    }
+
+    return true;
+}
+
+int GetBattleUnitStaffExp(BattleUnit* actor){
+	if (!CanBattleUnitGainLevels(actor)){
+		return 0;
+	}
+
+	// is the unit alive
+	if (actor->unit.curHP == 0){
+		return 0;
+	}
+
+	const ItemData* staffData = GetItemData(GetItemIndex(actor->weapon));
+	int staffRank = staffData->weaponRank;
+	
+    if( staffRank == D_RANK ){ // d rank
+		return 20;
+	}
+	else if( staffRank == C_RANK){ // c rank
+		return 25;
+	} 
+	else if( staffRank == B_RANK){ // b rank
+		return 30;
+	}
+	else if( staffRank == A_RANK ){ // a rank
+		return 35;
+	}
+	else{ // s rank
+		return 40;
+	}
+}
+
+// makes autolevels fixed
+int GetAutoleveledStatIncrease(int growth, int levelCount) {
+    return GetNPCStatIncrease(growth * (levelCount + 1));
+}
+
+int GetNPCStatIncrease(int growth){
+	int result = 0;
+	
+	while (growth >= 100) {
+        result++;
+        growth -= 100;
+    }
+
+	return result;
+}
+
+void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* character) {
+    int i;
+    
+    unit->maxHP = character->baseHP + unit->pClassData->baseHP;
+    unit->pow   = character->basePow + unit->pClassData->basePow;
+	unit->mag   = MagCharTable[character->number].baseMag + MagClassTable[unit->pClassData->number].baseMag;
+    unit->skl   = character->baseSkl + unit->pClassData->baseSkl;
+    unit->spd   = character->baseSpd + unit->pClassData->baseSpd;
+    unit->def   = character->baseDef + unit->pClassData->baseDef;
+    unit->res   = character->baseRes + unit->pClassData->baseRes;
+    unit->lck   = character->baseLck + unit->pClassData->baseLck;
+
+    unit->conBonus = 0;
+
+    for (i = 0; i < 8; ++i) {
+        unit->ranks[i] = unit->pClassData->baseRanks[i];
+
+        if (unit->pCharacterData->baseRanks[i])
+            unit->ranks[i] = unit->pCharacterData->baseRanks[i];
+    }
+
+    if (UNIT_FACTION(unit) == FACTION_BLUE && (unit->level != UNIT_LEVEL_MAX))
+        unit->exp = 0;
+    else
+        unit->exp = UNIT_EXP_DISABLED;
+}

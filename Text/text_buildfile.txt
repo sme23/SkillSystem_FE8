@@ -17,8 +17,14 @@ Knife[X]
 # 0x565
 Tome mastery level.[X]
 
-# 0x0566
+# 0x566
 Knife mastery level.[X]
+
+# 0x50C
+Gun[X]
+
+# 0x0567
+Gun mastery level.[X]
 
 #0x3A LearnedSkillText
 //first text ID in the free block

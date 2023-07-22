@@ -1,3 +1,7 @@
+//Locktouch: Can open locks without keys or picks.
+#define LockTouchID 0 //everyone gets it
+#define LocktouchID LockTouchID
+
 
 //Desperation: Follow-up attacks occur consecutively. (Loog)
 #define DesperationID 1
@@ -26,5 +30,8 @@
 //Sea Shanty: When an ally adjacent to this unit acts, they can move an additional 2 tiles post-action.
 #define SeaShantyID 9
 
-//Running Start:For every 3 tiles moved, this unit’s maximum attack range increases by 1.
+//Running Start: For every 3 tiles moved, this unit’s maximum attack range increases by 1.
 #define RunningStartID 10
+
+//Pass: Can move through enemy units.
+#define PassID 11

@@ -314,7 +314,7 @@
 
 //Pass: Can move through enemy units.
 //By Tequila
-#define PassID 255
+//#define PassID 255
 
 //Keep Up: At start of turn, if unit is within 3 spaces of an ally with Canto or Canto+, unit gains +2 Mov.
 //By Sme
@@ -1116,8 +1116,8 @@
 
 //Locktouch: Can open locks without keys or picks.
 //By Kao
-#define LockTouchID 255
-#define LocktouchID LockTouchID //Alias
+//#define LockTouchID 255
+//#define LocktouchID LockTouchID //Alias
 
 //Expertise: Reduce bonus damage from critical hits by 50%.
 //Author Unknown (Initial Commit)

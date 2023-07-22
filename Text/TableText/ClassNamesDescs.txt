@@ -27,3 +27,15 @@ Bard[X]
 
 ## BardDesc
  [X]
+
+## DeserterName
+Deserter[X]
+
+## DeserterDesc
+ [X]
+
+## HunterName
+Hunter[X]
+
+## HunterDesc
+ [X]
