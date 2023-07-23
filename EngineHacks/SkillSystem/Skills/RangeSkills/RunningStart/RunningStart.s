@@ -31,6 +31,12 @@ mov r1, #0x3
 swi #0x6 @stores quotient in r0
 mov r3, r0
 
+@this is a vanilla bug, if range bonus is over 3 we have to set it to 0
+cmp r3, #0x3
+blt GiveRange
+mov r3, #0x0
+
+GiveRange:
 mov 	r2, sp
 ldrh 	r0, [r2]
 add 	r0, r3
