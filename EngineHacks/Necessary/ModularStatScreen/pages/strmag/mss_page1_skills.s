@@ -116,7 +116,7 @@ draw_talk_text_at 21, 11
 
 ldr r0,=SkillsTextIDLink
 ldrh r0, [r0]
-draw_textID_at 21, 13, colour=White @skills
+draw_textID_at 21, 13, colour=Yellow @skills
 
 Nexty:
 
