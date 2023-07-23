@@ -1624,5 +1624,5 @@ additional 2 tiles post-action.[X]
 
 ## SD_RunningStart
 Running Start: Unit's maximum attack[N]
-range increases by 1 for every 3[N]
-tiles moved before attacking.[X]
+range with bows increases by 1 for[N]
+every 3 tiles moved before attacking.[X]
