@@ -1624,4 +1624,4 @@ additional 2 tiles post-action.[X]
 
 ## SD_RunningStart
 Running Start: +1 max attack range[N]
-withs bows for every 3 tiles moved.[X]
+with bows for every 3 tiles moved.[X]
