@@ -135,6 +135,11 @@ WORD ACTION_SWAP
 WORD ACTION_PUSH
 WORD ACTION_SWARP
 
+ALIGN 4
+SeaShanty:
+#incbin "SeaShanty/SeaShanty.dmp"
+POIN AuraSkillCheck
+WORD SeaShantyID
 
 PUSH //some changes to vanilla code to make everything work
 ORG $1D24C //check for canto, modified to just check for cantoing bit set
