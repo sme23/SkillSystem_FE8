@@ -24,19 +24,21 @@ _blh GetWeaponType
 cmp 	r0, #0x3 @bow
 bne End
 
-@get number of spaces moved, divide by 3 for range bonus
+@get number of spaces moved
 ldr r0,=0x203a968
 ldrb r0,[r0]
+
+@if value is obscene, read from a different byte
+ldr r1,=0x203FFF0 @random free byte near end of RAM
+cmp r0, #0xFF
+bne GiveBonus
+ldrb r0, [r1]
+
+GiveBonus:
+strb r0, [r1] @store normal number of tiles moved at end of RAM
 mov r1, #0x3
 swi #0x6 @stores quotient in r0
 mov r3, r0
-
-@this is a vanilla bug, if range bonus is over 3 we have to set it to 0
-cmp r3, #0x3
-blt GiveRange
-mov r3, #0x0
-
-GiveRange:
 mov 	r2, sp
 ldrh 	r0, [r2]
 add 	r0, r3
