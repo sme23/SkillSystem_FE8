@@ -1,0 +1,8 @@
+#define LuaMug $2
+#define PilarMug $4
+#define DesiderioMug $5
+#define RazvanMug $6
+#define CarmenMug $7
+#define XimoMug $8
+
+#define KhazhakMug $31

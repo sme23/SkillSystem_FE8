@@ -212,7 +212,7 @@ Heartpiercer[X]
 Cutlass[X]
 
 ## CutlassDesc
-Luisa only. Doubles attacks dealt.[X]
+Lua only. Doubles attacks dealt.[X]
 
-## IronRifleName
-Iron Rifle[X]
+## IronMusketName
+Iron Musket[X]

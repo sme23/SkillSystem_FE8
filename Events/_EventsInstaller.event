@@ -1,2 +1,4 @@
+#include "Macros.event"
 #include "ChapterEvents/_Installer.event"
 #include "WorldMapEvents.event"
+#include "Escape_Points.event"

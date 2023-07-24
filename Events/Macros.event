@@ -1,0 +1,1 @@
+#define EraseBackground "CALL $9EE2C4"

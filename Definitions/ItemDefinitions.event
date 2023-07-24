@@ -91,7 +91,7 @@
 #define Heartpiercer $c8
 
 // GUNS
-#define IronRifle $c9
+#define IronMusket $c9
 
 // EQUIPS
 #define Shield $ca

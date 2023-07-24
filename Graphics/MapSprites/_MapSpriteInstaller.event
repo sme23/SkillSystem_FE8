@@ -77,15 +77,15 @@ ALIGN 4
 NinjaMMS:
 #incbin "Dmp/Ninja {Der}-walk.dmp"
 
-StandingMapSprite(WardenMapSprite,MapSprite16x32,WardenSMS)
-MovingMapSprite(Warden, $1C3D7C, WardenMMS)
+StandingMapSprite(VanguardMapSprite,MapSprite16x32,VanguardSMS)
+MovingMapSprite(Vanguard, $1C3D7C, VanguardMMS)
 
 ALIGN 4
-WardenSMS:
+VanguardSMS:
 #incbin "Dmp/Knight (U) Axe {SALVAGED}-stand.dmp"
 
 ALIGN 4
-WardenMMS:
+VanguardMMS:
 #incbin "Dmp/Knight (U) Axe {SALVAGED}-walk.dmp"
 
 StandingMapSprite(CurateMapSprite,MapSprite16x16,CurateSMS)

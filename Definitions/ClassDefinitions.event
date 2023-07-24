@@ -8,7 +8,8 @@
 //#define Myrmidon_F $14
 
 // SWORD/LANCE
-#define Vanguard $9
+#define Warden $9
+
 
 // SWORD/GUN
 #define Captain $80
@@ -21,7 +22,7 @@
 //#define PegasusKnight $48
 
 // LANCE/AXE
-#define Warden $82
+#define Vanguard $82
 
 //AXE
 //#define Fighter $3f
@@ -62,7 +63,7 @@
 //STANDING MAP SPRITES
 #define CaptainMapSprite $6b 
 #define NinjaMapSprite $6c
-#define WardenMapSprite $6d
+#define VanguardMapSprite $6d
 #define CurateMapSprite $6e
 #define DeserterMapSprite $6f
 #define HunterMapSprite $70

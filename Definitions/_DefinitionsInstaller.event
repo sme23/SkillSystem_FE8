@@ -6,3 +6,4 @@
 #include "CharacterDefinitions.event"
 #include "ClassDefinitions.event"
 #include "AIDefinitions.event"
+#include "MugDefinitions.event"

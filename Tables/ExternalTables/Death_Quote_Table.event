@@ -1,0 +1,10 @@
+//DeathQuote(Character,Chapter,EventID,TextID)
+#define DeathQuote(Character,Chapter,EventID,TextID,Pointer) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID ; POIN Pointer"
+#define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
+
+// Bosses
+
+DeathQuote(Khazhak,Chapter1, 2, 0)
+DeathQuote(Lua, AllChapters, 0x65, 0)
+
+DeathQuote(0xFFFF,0,0,0) // terminator

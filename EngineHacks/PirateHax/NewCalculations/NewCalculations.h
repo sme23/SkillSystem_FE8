@@ -5,10 +5,21 @@ int GetNPCStatIncrease(int growth);
 
 #define CA_NO_EXP CA_NEGATE_LETHALITY
 
-#define D_RANK 51
-#define C_RANK 101
-#define B_RANK 151
-#define A_RANK 201
+#define NO_WEXP 0
+#define D_WEXP 51
+#define C_WEXP 101
+#define B_WEXP 151
+#define A_WEXP 201
+#define S_WEXP 251
+
+#define NO_RANK 0
+#define D_RANK 2
+#define C_RANK 3
+#define B_RANK 4
+#define A_RANK 5
+#define S_RANK 6
+
+
 
 struct CharacterMagicData {
 	/* 00 */ s8 baseMag;

@@ -208,3 +208,51 @@ void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* ch
     else
         unit->exp = UNIT_EXP_DISABLED;
 }
+
+int GetWeaponLevelFromExp(int wexp) {
+    if (wexp < D_WEXP)
+        return NO_RANK;
+
+    if (wexp < C_WEXP)
+        return D_RANK;
+
+    if (wexp < B_WEXP)
+        return C_RANK;
+
+    if (wexp < A_WEXP)
+        return B_RANK;
+
+    if (wexp < S_WEXP)
+        return A_RANK;
+
+    return S_RANK;
+}
+
+void GetWeaponExpProgressState(int wrank, int* valOut, int* maxOut) {
+    int currentRank = GetWeaponLevelFromExp(wrank);
+	if (currentRank == NO_RANK){
+		*valOut = 0;
+        *maxOut = 0;
+	}
+	else if(currentRank == D_RANK){
+		*valOut = wrank      - D_WEXP;
+        *maxOut   = C_WEXP - D_WEXP;		
+	}
+	else if(currentRank == C_RANK){
+		*valOut = wrank      - C_WEXP;
+        *maxOut   = B_WEXP - C_WEXP;
+	}
+	else if(currentRank == B_RANK){
+		*valOut = wrank      - B_WEXP;
+        *maxOut   = A_WEXP - B_WEXP;
+	}
+	else if(currentRank == A_RANK){
+		*valOut = wrank      - A_WEXP;
+        *maxOut   = S_WEXP - A_WEXP;
+	}
+	else{
+		*valOut = 0;
+        *maxOut   = 0;
+	}
+	return;
+}

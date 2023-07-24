@@ -13,7 +13,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0, ThiefTime, 2)
+TurnEventPlayer(0, ThiefTime, 3)
 END_MAIN
 
 ThiefTime:
@@ -23,7 +23,7 @@ NoFade
 ENDA
 
 ThiefSpawn:
-UNIT Blackheart Thief 0 Level(2, Enemy, True) [18,21] 0 0 0 0 [IronKnife, Shield, ChestKey] ThiefAI
+UNIT Blackheart Thief 0 Level(2, Enemy, True) [19,16] 0 0 0 0 [IronKnife, Shield, ChestKey] ThiefAI
 UNIT
 
 CharacterBasedEvents:
@@ -34,6 +34,8 @@ DurabilityChest(SkillScroll,PassID,18,11)
 END_MAIN
 
 MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
@@ -48,16 +50,26 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+WEATHER 7
+SetBackground(Inn)
+Text(Ch1BeginningScene1)
+SetBackground(Ship)
+Text(Ch1BeginningScene2)
+Text(Ch1BeginningScene3)
+Text(Ch1BeginningScene4)
+Text(Ch1BeginningScene5)
+Text(Ch1BeginningScene6)
+Text(Ch1BeginningScene7)
+EraseBackground
 LOAD1 1 PlayerGroup
 LOAD1 1 EnemyGroup
 ENUN
-WEATHER 7
 NoFade
 ENDA
 
 PlayerGroup:
-UNIT Lua Captain 0 Level(10,Ally,False) [6,19] 0 0 0 0 [Cutlass, IronRifle, Vulnerary] NoAI
-UNIT Desiderio Warden 0 Level(6,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [6,19] 0 0 0 0 [Cutlass, IronMusket, Vulnerary] NoAI
+UNIT Desiderio Vanguard 0 Level(6,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance] NoAI
 UNIT Pilar Ninja 0 Level(8,Ally,False) [5,19] 0 0 0 0 [SteelDagger, IronKnife, Vulnerary] NoAI
 UNIT Razvan Curate 0 Level(3,Ally,False) [5,20] 0 0 0 0 [Mend, Heal, Vulnerary] NoAI
 UNIT Carmen Mage_F 0 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire, Vulnerary] NoAI
@@ -66,23 +78,22 @@ UNIT
 
 EnemyGroup:
 UNIT Khazhak Fighter 0 Level(5,Enemy,False) [17,8] 0 0 0 0 [SteelAxe, HandAxe] BossAI
+UNIT Blackheart Deserter 0 Level(2, Enemy, True) [17,7] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT Blackheart Fighter 0 Level(2, Enemy, True) [14,9] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,8] 0 0 0 0 [SteelBow] AttackInRangeAI
+
 UNIT Blackheart Soldier 0 Level(2, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
 UNIT Blackheart Fighter 0 Level(2, Enemy, True) [12,19] 0 0 0 0 [IronAxe] ChargeAI
-UNIT Blackheart Vanguard 0 Level(3, Enemy, True) [13,18] 0 0 0 0 [SteelSword, Javelin] BossAI
+UNIT Blackheart Warden 0 Level(3, Enemy, True) [13,18] 0 0 0 0 [SteelSword, Javelin] BossAI
 UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,21] 0 0 0 0 [IronBow] ChargeAI
-UNIT Blackheart Myrmidon 0 Level(2, Enemy, True) [19,20] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Blackheart Myrmidon 0 Level(2, Enemy, True) [19,19] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Blackheart Mercenary 0 Level(2, Enemy, True) [15,16] 0 0 0 0 [SteelSword] AttackInRangeAI
-UNIT Blackheart Vanguard 0 Level(3, Enemy, True) [17,18] 0 0 0 0 [SteelLance, Javelin] BossAI
-UNIT Blackheart Mage 0 Level(2, Enemy, True) [12,15] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [12,15] 0 0 0 0 [IronBow] AttackInRangeAI
 
-UNIT Blackheart Vanguard 0 Level(2, Enemy, True) [15,12] 0 0 0 0 [SteelSword] BossAI
-UNIT Blackheart Vanguard 0 Level(2, Enemy, True) [16,12] 0 0 0 0 [SteelLance] BossAI
-UNIT Blackheart Hunter 0 Level(2, Enemy, True) [15,11] 0 0 0 0 [IronBow] BossAI
-UNIT Blackheart Hunter 0 Level(2, Enemy, True) [16,11] 0 0 0 0 [IronBow] BossAI
-UNIT Blackheart Deserter 0 Level(2, Enemy, True) [19,9] 0 0 0 0 [SteelLance] AttackInRangeAI
-UNIT Blackheart Fighter 0 Level(2, Enemy, True) [14,9] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT Blackheart Mage 0 Level(2, Enemy, True) [18,8] 0 0 0 0 [Elfire] AttackInRangeAI
-
+UNIT Blackheart Warden 0 Level(2, Enemy, True) [15,12] 0 0 0 0 [SteelSword, Javelin] BossAI
+UNIT Blackheart Warden 0 Level(2, Enemy, True) [16,12] 0 0 0 0 [SteelLance, Javelin] BossAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [12,9] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [19,9] 0 0 0 0 [IronBow] AttackInRangeAI
 UNIT
 
 EndingScene:

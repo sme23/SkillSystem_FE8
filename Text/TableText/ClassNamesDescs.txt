@@ -10,22 +10,16 @@ Ninja[X]
 ## NinjaDesc
  [X]
 
-## WardenName
-Warden[X]
+## VanguardName
+Vanguard[X]
 
-## WardenDesc
+## VanguardDesc
  [X]
 
 ## CurateName
 Curate[X]
 
 ## CurateDesc
- [X]
-
-## BardName
-Bard[X]
-
-## BardDesc
  [X]
 
 ## DeserterName
