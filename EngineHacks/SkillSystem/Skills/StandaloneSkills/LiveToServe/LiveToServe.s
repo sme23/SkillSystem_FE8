@@ -6,7 +6,8 @@
 .endm
 .equ MaxHpGetter, 0x8019190
 .equ CurrHPGetter, 0x8019150
-.equ LiveToServeID, SkillTester+4
+.equ ResoluteSacrificeID, SkillTester+4
+.equ LiveToServeID, SkillTester+8
 
 @hook at 802ebd4
 @r5 is amount to heal
@@ -31,7 +32,34 @@ blh	0x8019430	@get target data
 blh	MaxHpGetter
 mov	r2,r0
 pop	{r1}
-add	r1,r5		@final hp
+add	r1,r5		@final hp without Resolute Sacrifice
+
+push {r1,r2}
+@check for Resolute Sacrifice
+ldrb	r0,[r4,#0xc]
+blh	0x8019430
+ldr	r1,ResoluteSacrificeID
+ldr	r3,SkillTester
+mov	lr,r3
+.short 0xf800
+cmp	r0,#0
+beq	AfterResoluteSacrifice
+
+@calculate razvan's missing hp
+ldrb	r0,[r4,#0xc]
+blh	0x8019430
+blh	MaxHpGetter
+mov r3, r0
+ldrb r0,[r4,#0xc]
+push {r3}
+blh	0x8019430
+blh	CurrHPGetter
+pop {r3}
+sub r3, r0
+pop {r1,r2}
+add r1, r3 @adds result to final heal
+
+AfterResoluteSacrifice:
 cmp	r1,r2
 ble	NoCap
 mov	r1,r2
@@ -58,7 +86,7 @@ ldr	r3,SkillTester
 mov	lr,r3
 .short 0xf800
 cmp	r0,#0
-beq	NoSkill
+beq	AfterLiveToServe
 
 @now heal self
 ldrb	r0,[r4,#0xc]
@@ -116,7 +144,7 @@ strb	r0,[r5,#0x13]
 ldr r0, =0x802ec03
 bx r0
 
-NoSkill:
+AfterLiveToServe:
 ldr r0,=0x802ebe1
 bx r0 
 

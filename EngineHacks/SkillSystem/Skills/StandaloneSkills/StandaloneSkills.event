@@ -74,6 +74,7 @@ ALIGN 4
 LiveToServe:
 #incbin "LiveToServe/LiveToServe.dmp"
 POIN SkillTester
+WORD ResoluteSacrificeID
 WORD LiveToServeID
 
 ALIGN 4
