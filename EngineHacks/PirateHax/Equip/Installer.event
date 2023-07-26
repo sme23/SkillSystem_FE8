@@ -8,7 +8,7 @@ EquipmentList:
 BYTE Shield
 BYTE 0x00 //terminator
 
-// Defense equipemnt loses durability on each hit taken
+// Defense equipment loses durability on each hit taken
 ALIGN 4
 DefenseEquipmentList:
 BYTE Shield
@@ -37,7 +37,7 @@ b SkipPool
 SkipPool:
 */
 
-/* // NEED TO DO THIS STILL
+/* 
 add this to both skillTester and skillTester2
 
 .equ GetEquipmentSkill, SkillGetter + 0xC

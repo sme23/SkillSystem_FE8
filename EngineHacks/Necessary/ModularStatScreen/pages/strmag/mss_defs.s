@@ -750,8 +750,8 @@
   lsl     r2, r2, #0x6
   mov     r1, r4
   blh     BgMap_ApplyTsa
-  ldr r0, [r6, #0xC]
-  blh DrawUnitEquippedItem
+  @ ldr r0, [r6, #0xC]
+  @ blh DrawUnitEquippedItem
   ldr     r0, =#0x8205A24     @map of text labels and positions
   blh     DrawStatscreenTextMap
   ldr     r6, =StatScreenStruct
@@ -928,9 +928,9 @@
   cmp     r4, #0x7
   ble     loc_0x8087660
 
-b SkipPool
-.ltorg
-SkipPool:
+@ b SkipPool
+@ .ltorg
+@ SkipPool:
 .endm
 
 .macro draw_items_text showBallista=0
