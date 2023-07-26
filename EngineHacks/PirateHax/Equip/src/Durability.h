@@ -9,4 +9,4 @@ int GetUnitMovement(Unit* unit);
 int GetUnitConstitution(Unit* unit);
 
 //bool gSkillTester(Unit* unit, int skillID);
-extern bool(*gSkillTester)(Unit* unit, int skillID);
+extern bool gSkillTester(Unit* unit, int skillID);
