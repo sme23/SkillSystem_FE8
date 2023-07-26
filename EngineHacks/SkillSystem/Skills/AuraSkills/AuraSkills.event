@@ -166,5 +166,13 @@ WORD NatureRushID
 WORD CantoID
 WORD CantoPlusID
 
+ALIGN 4
+SuppressiveFire:
+#incbin "SuppressiveFire/SuppressiveFire.dmp"
+POIN SkillTester
+WORD SuppressiveFireID
+POIN NewAuraSkillCheck
+POIN GetUnitsInRange
+
 #include "ClassTypeSkills/ClassTypeSkills.event"
 
