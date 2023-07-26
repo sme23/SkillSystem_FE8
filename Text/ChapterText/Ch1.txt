@@ -291,7 +291,7 @@ Failing that, this tome should suffice.[AN]
 [MidRight]
 Good. You're both green, but I have high[N]
 expectations for you in the future.[AN]
-Don't die in place like this![A][X]
+Don't die in a place like this![A][X]
 
 ## Ch1BeginningScene6
 [MidRight][LoadLua]
