@@ -1,1 +1,7 @@
 #define EraseBackground "CALL $9EE2C4"
+#define SpawnReinforcements(UnitGroup) "CamOn; LOAD1 0x1 UnitGroup; ENUN; CamOff; RefreshSMS; ENUN; STAL 30"
+#define CameraCursor(character) "CAM1 character; STAL 20; FlashCursor(character,60)"
+#define SetAI(unitid,ai1,ai2,ai3,ai4) "SVAL 0x1 ai1|(ai2<<8)|(ai3<<16)|(ai4<<24); CHAI unitid"
+#define CamOn "EVBIT_T 0x9"
+#define CamOff "EVBIT_F 0x9"
+#define RefreshSMS "ASMC 0x8026689"
