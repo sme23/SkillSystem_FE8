@@ -282,7 +282,7 @@ Stay behind me and Desiderio,[N]
 and take advantage of your strengths.[AN]
 [FarLeft]
 Aye aye, cap'n! Give me some room,[N]
-and I can shoot at anything!
+and I can shoot at anything![AN]
 Er[Beat] decently, anyway.[AN]
 [Left]
 My music should speed along our[N]
