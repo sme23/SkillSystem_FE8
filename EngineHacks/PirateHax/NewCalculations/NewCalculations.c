@@ -149,16 +149,16 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
 	const ItemData* staffData = GetItemData(GetItemIndex(actor->weapon));
 	int staffRank = staffData->weaponRank;
 	
-    if( staffRank == D_RANK ){ // d rank
+    if( staffRank == D_WEXP ){ // d rank
 		return 20;
 	}
-	else if( staffRank == C_RANK){ // c rank
+	else if( staffRank == C_WEXP){ // c rank
 		return 25;
 	} 
-	else if( staffRank == B_RANK){ // b rank
+	else if( staffRank == B_WEXP){ // b rank
 		return 30;
 	}
-	else if( staffRank == A_RANK ){ // a rank
+	else if( staffRank == A_WEXP ){ // a rank
 		return 35;
 	}
 	else{ // s rank

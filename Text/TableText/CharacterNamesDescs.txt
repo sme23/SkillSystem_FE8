@@ -2,46 +2,62 @@
 Lua[X]
 
 ## LuaDesc
-[X]
+Captain[N]
+Leader of the crew and the ship's pilot,[N]
+she flies the Liberator with ease.[X]
 
 ## PilarName
 Pilar[X]
 
 ## PilarDesc
-[X]
+Navigator[N]
+Experienced in which way the wind blows,[N]
+she and the captain decide on the route.[X]
 
 ## DesiderioName
 Desiderio[X]
 
 ## DesiderioDesc
-[X]
+Quartermaster[N]
+Enforces the crew's code and operates[N]
+as the captain's second-in-command.[X]
 
 ## RazvanName
 Razvan[X]
 
 ## RazvanDesc
-[X]
+Medic[N]
+Mends the wounds of his crewmates,[N]
+saving lives that would fade away.[X]
 
 ## CarmenName
 Carmen[X]
 
 ## CarmenDesc
-[X]
+Musician[N]
+Entertains the crew with her skill,[N]
+passing the time on long journies.[X]
 
 ## XimoName
 Ximo[X]
 
 ## XimoDesc
-[X]
+Swabbie[N]
+Cleans the deck with all his might,[N]
+as he has few other skills to ply.[X]
 
 ## KhazhakName
 Khazhak[X]
 
 ## KhazhakDesc
-[X]
+Sub-Captain
+A Blackheart appointed by his captain,[N]
+who executes his leader's will.[X]
 
 ## BlackheartName
 Blackheart[X]
 
 ## BlackheartDesc
-[X]
+Grunt[N]
+With little talent to speak of,[N]
+they risk their lives instead.[X]
