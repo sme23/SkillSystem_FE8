@@ -21,7 +21,7 @@
 #include "FE7 & 8-Show Heal Amount/FE7 & FE8-Show Heal Amount EA.event"
 //Tequila
 
-//#include "Equip/Installer.event"
+#include "Equip/Installer.event"
 //Pikmin1211
 
 #include "FE8-New_CHAI/FE8-New_CHAI_EA.event"
