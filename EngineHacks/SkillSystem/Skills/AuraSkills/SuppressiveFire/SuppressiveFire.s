@@ -10,6 +10,11 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
+@not at stat screen
+ldr r1, [r5,#4] @check defender's class
+cmp r1, #0 @if 0, this is stat screen
+beq End
+
 @okay this is unintuitive but since lua herself can't get the skill effect we jump to the end if any combatant has the skill
 ldr r0, SkillTester
 mov lr, r0
