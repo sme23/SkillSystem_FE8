@@ -1,6 +1,7 @@
 
 //CHAPTER IDs
 #define Chapter1 0
+#define Chapter1Hub 1
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
 #define Chapter1MapID 0x4

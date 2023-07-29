@@ -94,4 +94,4 @@
 #define IronMusket $c9
 
 // EQUIPS
-#define Shield $ca
+#define HideShield $ca

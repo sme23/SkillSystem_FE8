@@ -61,14 +61,14 @@ struct BattleUnit {
 	/* 77 */ s8 changeDef;
 	/* 78 */ s8 changeRes;
 	/* 79 */ s8 changeLck;
-	/* 7A */ s8 changeCon;
+	/* 7A */ s8 changeMag;
 
 	/* 7B */ s8 wexpMultiplier;
 	/* 7C */ s8 nonZeroDamage;
 	/* 7D */ s8 weaponBroke;
 
-	/* 7E */ s8 hasItemEffectTarget;
-	/* 7F */ /* pad */
+	/* 7E */ u8 attacksMade;
+	/* 7F */ u8 hitsTaken;
 };
 
 struct BattleStats {

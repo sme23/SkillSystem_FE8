@@ -485,3 +485,11 @@ our heads, but if we just sit here,[N]
 so will those dastards over there.[AN]
 All we can do is charge til they drop,[N]
 or we do! May the worst men win![A][X]
+
+## Ch1ThiefArrival
+[MidLeft][LoadLua][3LB]
+Looks like one of their goons has a mind[N]
+to take advantage of the confusion[N]
+and take whatever's in that chest[Beat][AN]
+Well, big mistake. That's our loot, now![N]
+Hunt him down before he gets away![A][X]

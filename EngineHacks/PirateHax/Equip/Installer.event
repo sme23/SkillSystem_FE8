@@ -5,13 +5,13 @@ ALIGN 4
 
 ALIGN 4
 EquipmentList:
-BYTE Shield
+BYTE HideShield
 BYTE 0x00 //terminator
 
 // Defense equipment loses durability on each hit taken
 ALIGN 4
 DefenseEquipmentList:
-BYTE Shield
+BYTE HideShield
 BYTE 0x00 // terminator
 
 // Offense equipment loses durability on each attack made
@@ -22,7 +22,7 @@ BYTE 0x00 // terminator
 // Equipment in neither list doesn't decrement durability
 
 // add prEquipmentBonus to each stat getter
-#define rEquipmentBonus(stat) "rAdd; rWithConstant(stat); rCallExternal(GetEquipmentStatBonus^1)"
+//#define rEquipmentBonus(stat) "rAdd; rWithConstant(stat); rCallExternal(GetEquipmentStatBonus^1)"
 
 /*
 add this to draw_stats_box in mss_defs after blh 0x80D74A0
@@ -75,7 +75,7 @@ PopRBattlePopup(PopR_InitEquipmentBroke, 0x592420, 96)
 
 PUSH
 ORG 0x2C1EC
-//jumpToHack(New_SaveUnitFromBattle)
+jumpToHack(New_SaveUnitFromBattle)
 PROTECT 0x2C1EC
 POP
 
@@ -87,7 +87,7 @@ POP
 
 ALIGN 4
 gSkillTester:
-POIN SkillTester+1
+POIN SkillTester
 
 #include "_UnitMenuDefs.event"
 #include "_ItemUnitMenuDefs.event"

@@ -85,6 +85,7 @@ DurabilityItemList: //used for durability
 DurabilityItem(SkillScroll)
 DurabilityItemEnd
 
+ALIGN 4
 DurabilityBasedItemIconList: //used for icons
 DurabilityIcon(SkillScroll,5)
 DurabilityIconEnd
@@ -96,4 +97,3 @@ Y - Name
 Y - Desc
 Y - Icon
 */
-

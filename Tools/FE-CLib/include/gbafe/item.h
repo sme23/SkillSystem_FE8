@@ -51,6 +51,9 @@ struct ItemData
 	/* 1E */ u8  useEffectId;
 	/* 1F */ u8  weaponEffectId;
 	/* 20 */ u8  weaponExp;
+	/* 21 */ u8  debuff;
+	/* 22 */ u8  IERExtraByte;
+	/* 23 */ u8  skill;
 };
 
 enum

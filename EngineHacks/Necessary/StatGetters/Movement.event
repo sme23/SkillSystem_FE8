@@ -6,7 +6,7 @@ ALIGN 4
 pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
 	POIN prDebuffMov 
-	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck
+	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prEquipmentMov
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
 	#endif
@@ -56,5 +56,8 @@ prItemPassiveMov:
 #else // DONT_STACK_BOOSTS
 	rPassiveStatBoostsNonStacking(STAT_MOV)
 #endif // DONT_STACK_BOOSTS
+
+prEquipmentMov:
+	rEquipmentBonus(STAT_MOV)
 
 #endif // MODULAR_GETTER_MOVEMENT_EVENT

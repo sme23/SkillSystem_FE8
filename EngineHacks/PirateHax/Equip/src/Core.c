@@ -1,14 +1,16 @@
+#define US_UNEQUIPMENT (1 << 31)
+
 bool IsItemEquipment (Item item){
 	extern u8 EquipmentList[];
 
-	if (item.number == 0) {
+	if (GetItemIndex(item) == 0) {
 		return false;
 	}
 
 	int cnt = 0;
 
 	while(EquipmentList[cnt] != 0){
-		if (item.number == EquipmentList[cnt]){
+		if (GetItemIndex(item) == EquipmentList[cnt]){
 			return true;
 		}
 		++cnt;
@@ -28,7 +30,7 @@ bool CanUnitEquipItem (Unit* unit, Item item){
 }
 
 Item GetUnitEquippedItem (Unit* unit){
-	Item item;
+	Item item = 0;
 
 	if (unit->state & US_UNEQUIPMENT){
 		return item;

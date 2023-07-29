@@ -45,6 +45,12 @@ An arcane blade wreathed in fire.[X]
 ## LightBrandDesc
 A magic sword that casts light.[X]
 
+## CutlassName
+Cutlass[X]
+
+## CutlassDesc
+Lua only. Doubles attacks dealt.[X]
+
 //LANCES
 
 ## SaunionName
@@ -208,11 +214,15 @@ Baselard[X]
 ## HeartpiercerName
 Heartpiercer[X]
 
-## CutlassName
-Cutlass[X]
-
-## CutlassDesc
-Lua only. Doubles attacks dealt.[X]
+// GUNS
 
 ## IronMusketName
 Iron Musket[X]
+
+// EQUIPS
+
+## HideShieldName
+Hide Shield[X]
+
+## HideShieldDesc
+Grants a boost to defense.[X]

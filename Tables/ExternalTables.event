@@ -94,8 +94,8 @@ DeathQuoteTable:
 PUSH
 ORG $8472C
 POIN DeathQuoteTable
-
 ORG $846AC
 POIN BattleQuoteTable
-
 POP
+
+#include "ExternalTables/ItemStatBoosts.event"
