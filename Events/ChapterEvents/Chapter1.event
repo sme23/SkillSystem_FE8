@@ -107,7 +107,7 @@ UNIT Blackheart Myrmidon 0 Level(2, Enemy, True) [18,18] 0 0 0 0 [IronSword] Att
 UNIT Blackheart Hunter 0 Level(2, Enemy, True) [12,15] 0 0 0 0 [IronBow] AttackInRangeAI
 
 UNIT Blackheart Mercenary 0 Level(2, Enemy, True) [15,14] 0 0 0 0 [SteelSword] AttackInRangeAI
-UNIT Blackheart Deserter 0 Level(2, Enemy, True) [16,14] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT Blackheart Deserter 0 Level(2, Enemy, True) [13,11] 0 0 0 0 [SteelLance] AttackInTwoAI
 
 UNIT Blackheart Warden 0 Level(2, Enemy, True) [15,12] 0 0 0 0 [SteelSword, Javelin] BossAI
 UNIT Blackheart Warden 0 Level(2, Enemy, True) [16,12] 0 0 0 0 [SteelLance, Javelin] BossAI
@@ -121,7 +121,7 @@ Text(Ch1EndingScene1)
 Text(Ch1EndingScene2)
 Text(Ch1EndingScene3)
 NoFade
-MNC2 Chapter1Hub
+MNC2 HubA
 ENDA
 
 Dunno1: //down here because nothing here is really used

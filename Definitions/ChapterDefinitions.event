@@ -1,12 +1,47 @@
 
 //CHAPTER IDs
 #define Chapter1 0
-#define Chapter1Hub 1
+#define HubA 1
+#define ChapterA1 2
+#define ChapterA2 3
+#define ChapterA3 4
+#define ChapterA4 5
+#define ChapterA5 6
+#define ChapterA6 7
+#define Chapter2 8
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
 #define Chapter1MapID 0x4
 #define Chapter1MapChangesID 0x6
 #define Chapter1EventsID 0x7
+
+#define HubAMapID 0x8
+#define HubAMapChangesID 0x9
+#define HubAEventsID 0xa
+
+#define HubA_1MapID 0xb
+#define HubA_1MapChangesID 0xc
+#define HubA_1EventsID 0xd
+
+#define HubA_2MapID 0x11
+#define HubA_2MapChangesID 0x13
+#define HubA_2EventsID 0x14
+
+#define HubA_3MapID 0x15
+#define HubA_3MapChangesID 0x16
+#define HubA_3EventsID 0x17
+
+#define HubA_4MapID 0x1b
+#define HubA_4MapChangesID 0x1d
+#define HubA_4EventsID 0x1e
+
+#define HubA_5MapID 0x1f
+#define HubA_5MapChangesID 0x20
+#define HubA_5EventsID 0x21
+
+#define HubA_6MapID 0x22
+#define HubA_6MapChangesID 0x23
+#define HubA_6EventsID 0x24
 
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88

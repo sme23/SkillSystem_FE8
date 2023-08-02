@@ -1,1 +1,8 @@
 #include "Ch1.txt"
+#include "HubA/Hub.txt"
+#include "HubA/A1.txt"
+#include "HubA/A2.txt"
+#include "HubA/A3.txt"
+#include "HubA/A4.txt"
+#include "HubA/A5.txt"
+#include "HubA/A6.txt"

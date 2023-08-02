@@ -1,3 +1,24 @@
 {
     #include "Chapter1.event"
 }
+{
+    #include "HubA/HubA.event"
+}
+{
+    #include "HubA/HubA_1.event"
+}
+{
+    #include "HubA/HubA_2.event"
+}
+{
+    #include "HubA/HubA_3.event"
+}
+{
+    #include "HubA/HubA_4.event"
+}
+{
+    #include "HubA/HubA_5.event"
+}
+{
+    #include "HubA/HubA_6.event"
+}
