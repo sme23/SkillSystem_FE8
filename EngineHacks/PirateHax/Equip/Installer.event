@@ -75,6 +75,16 @@ PopRBattlePopup(PopR_InitEquipmentBroke, 0x592420, 96)
 
 PUSH
 ORG 0x2C1EC
+
+// NEW for Eye for an Eye. This is a hack of a hack
+// I don't feel like risking breaking this hack by recompiling using my weird setups
+// so I'm just prepending the hook with what I need
+// =) -nat/stan
+SHORT $2337 // mov r3, #0x37 @ support_exp+5
+SHORT $5CCA // ldrb r2, [r0, r3]
+SHORT $54C2 // strb r2, [r1, r3]
+SHORT $46C0 // nop @ for alignment
+
 jumpToHack(New_SaveUnitFromBattle)
 PROTECT 0x2C1EC
 POP
