@@ -15,12 +15,12 @@
     #include "Tables/TableInstaller.event"
     MESSAGE Used table space ends at currentOffset
 
+    //Graphics
+    #include "Graphics/_GraphicsInstaller.event"
+
     //Engine Hacks
     #include "EngineHacks/_MasterHackInstaller.event"
     MESSAGE Used hax space ends at currentOffset
-
-    //Graphics
-    #include "Graphics/_GraphicsInstaller.event"
 
     //Events
     #include "Events/_EventsInstaller.event"

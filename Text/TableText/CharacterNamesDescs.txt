@@ -50,7 +50,7 @@ as he has few other skills to ply.[X]
 Khazhak[X]
 
 ## KhazhakDesc
-Sub-Captain
+Sub-Captain[N]
 A Blackheart appointed by his captain,[N]
 who executes his leader's will.[X]
 

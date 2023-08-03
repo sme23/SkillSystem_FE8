@@ -168,7 +168,7 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
 
 // makes autolevels fixed
 int GetAutoleveledStatIncrease(int growth, int levelCount) {
-    return GetNPCStatIncrease(growth * (levelCount + 1));
+    return GetNPCStatIncrease(growth * (levelCount));
 }
 
 int GetNPCStatIncrease(int growth){

@@ -60,6 +60,7 @@ Units1:
 UNIT
 
 Traps1:
+RedSigil(19,9)
 ENDTRAP
 ALIGN 4
 

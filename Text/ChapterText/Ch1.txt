@@ -38,6 +38,9 @@
 // Ximo - A man around Razvan's age who grew up in a port town. Lua found him desperately searching for a job and hired him despite her better judgement,
 // having Desiderio teach him carpentry. The chief deck swabber and scout, he sends much of his money back to his family and hopes to show the crew his worth.
 
+## Ch1Title
+Ch 1 - Sky Skirmish[X]
+
 ## Ch1BeginningScene1
 [FarLeft][LoadDesiderio]
 [Left][LoadPilar]
@@ -97,6 +100,9 @@ with all the booty in their stores.[AN]
 It's not often you find pirates[N]
 so flush with gold doubloons,[N]
 save for our fat cat-ptain here.[AN]
+[Left]
+That[Beat][N]
+Was that[Beat][AN]
 [FarRight]
 [Beat]Regardless, I certainly thought it[N]
 was worth the journey, Captain Lua.[AN]
@@ -328,6 +334,7 @@ Desiderio, take the front with me.[N]
 Pilar, fight wherever you wish.[AN]
 We're aiming for their boss,[N]
 but anyone in the way is fair game.[AN]
+Permission to plunder, granted![AN]
 [Left]
 Steal anything that isn't nailed down,[N]
 huh? Sounds just like my style.[AN]

@@ -67,3 +67,4 @@
 #define CurateMapSprite $6e
 #define DeserterMapSprite $6f
 #define HunterMapSprite $70
+#define SigilTrapMapSprite $71
