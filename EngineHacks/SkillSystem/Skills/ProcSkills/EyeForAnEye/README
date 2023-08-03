@@ -1,0 +1,15 @@
+This uses support exp number 5 to store the damage taken. Because I was told this hack doesn't use supports, this should be fine. Even if it does, using slot number 5 (the 6th because it starts at 0) means there is still 5 slots remaining before it that can still be used.
+This byte should be saved.
+
+When the units gets hit multiple times before dealing damage, maximum damage taken is considered (not last, not sum).
+
+This introduces two proc loop modules:
+
+- EyeForAnEyeProcApply, which is what adds the damage bonus.
+- EyeForAnEyeProcSave, which saves the damage taken for being added later. This should probably be last.
+
+I would have hacked BattleGenerateHitEffects instead for the save part but Break breaks(lol) any hooks into it by replacing the function entirely.
+
+I had to hack the UpdateUnitFromBattle hook by the Equip hack to save back the support_exp[5] field. This is very hacky (see there). If no such hook is done, the saved damage will not persist between combats.
+
+Implemented by nat/stan

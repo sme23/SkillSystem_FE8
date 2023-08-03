@@ -223,6 +223,7 @@ ALIGN 4
 Proc_CmbArtHpCost:
 #include "CmbArtHpCost/CmbArtHpCost.lyn.event"
 
+#include "EyeForAnEye/EyeForAnEye.lyn.event"
 
 //When animations are on, do the fancy palette swapping thing (pink for poison, etc) CURRENTLY DOESN'T WORK
 //PUSH
