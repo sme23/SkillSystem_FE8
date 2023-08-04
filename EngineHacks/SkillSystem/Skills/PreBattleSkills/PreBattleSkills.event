@@ -382,8 +382,6 @@ SurpriseAttack:
 POIN SkillTester
 WORD SurpriseAttackID
 
-<<<<<<< Updated upstream
-=======
 ALIGN 4
 Hangover:
 #incbin "Hangover/Hangover.dmp"
@@ -396,7 +394,6 @@ Underhanded:
 POIN SkillTester
 WORD UnderhandedID
 
->>>>>>> Stashed changes
 #include "KeenFighter/Installer.event" 
 
 

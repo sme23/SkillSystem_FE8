@@ -15,7 +15,7 @@
 //Adept: When initiating, grant an extra attack after user's first. (Sme)
 #define AdeptID 4
 
-//Supressive Fire: If an ally attacks an enemy within this unit’s attack range, they ignore Avo.
+//Supressive Fire: If an ally attacks an enemy within this unit’s attack range, they ignore Avo. (Dragz)
 #define SuppressiveFireID 5
 
 //Surprise Attack: If foe cannot counter, ignore their defense. (Dragz)
@@ -24,7 +24,7 @@
 //Resolute Sacrifice: Healing staff amount is increased by this unit's missing HP. (Dragz)
 #define ResoluteSacrificeID 7
 
-//Eye for an Eye: If this unit is damaged, next attack’s might is increased by the same amount.
+//Eye for an Eye: If this unit is damaged, next attack’s might is increased by the same amount. (Nat)
 #define EyeForAnEyeID 8
 
 //Sea Shanty: When an ally adjacent to this unit acts, they can move an additional 2 tiles post-action. (Dragz)
