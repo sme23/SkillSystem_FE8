@@ -94,8 +94,8 @@ POP
   SHORT $2a00 $dc00 $2201
 
 //Hold A to speed up movement (credit Gryz)
-  ORG $794ee
-  SHORT 0
+  //ORG $794ee
+  //SHORT 0
 
 //Skip H&S screen (credit Circles)
   ORG $CC20C

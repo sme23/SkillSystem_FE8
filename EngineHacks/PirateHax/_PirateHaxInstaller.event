@@ -32,3 +32,10 @@
 
 #include "Break/Installer.event"
 //Loog
+
+#include "FastBattleAnimation/Install.event"
+//7743
+
+#include "CustomGameSpeed/CustomGameSpeed.event"
+//StanH
+//Edited by Pikmin1211 to make R button speed up movement instead of A
