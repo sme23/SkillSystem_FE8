@@ -388,6 +388,12 @@ Hangover:
 POIN SkillTester
 WORD HangoverID
 
+ALIGN 4
+Underhanded:
+#incbin "Underhanded/Underhanded.dmp"
+POIN SkillTester
+WORD UnderhandedID
+
 #include "KeenFighter/Installer.event" 
 
 
