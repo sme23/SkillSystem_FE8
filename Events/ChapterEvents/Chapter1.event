@@ -57,12 +57,6 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [6,19] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Desiderio Vanguard 0 Level(6,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [5,19] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] NoAI
-UNIT Razvan Curate 0 Level(3,Ally,False) [5,20] 0 0 0 0 [Mend, Heal, Vulnerary] NoAI
-UNIT Carmen Mage_F 0 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire, Vulnerary] NoAI
-UNIT Ximo Archer 0 Level(1,Ally,False) [6,21] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
 Traps1:
@@ -74,10 +68,7 @@ Traps2:
 ENDTRAP
 ALIGN 4
 
-#define GiveItemWithDurability2(UnitID, Item, Durability) "CALL $591F40; SMOV 0x3 (Durability<<8)|Item ; GIVEITEMTO UnitID"
-
 BeginningScene:
-ASMC ClearAllDebuffs // now clears tonics, too. If you add a prep screen to this chapter, then restarting the chapter after saving will remove any tonic boosts because this ASMC is being called each time. 
 WEATHER 7
 SetBackground(Inn)
 Text(Ch1BeginningScene1)
@@ -92,8 +83,6 @@ EraseBackground
 LOAD1 1 PlayerGroup
 LOAD1 1 EnemyGroup
 ENUN
-//GiveItemWithDurability2(1, Tonic, 2) 
-//GotoPrepScreen
 NoFade
 ENDA
 
