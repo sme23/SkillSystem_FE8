@@ -31,7 +31,7 @@ POIN DefendingCheck
 #ifdef BIORHYTHM
   POIN BiorhythmFunc
 #endif //BIORHYTHM
-POIN Wrath SpurStr SpurMag SpurSpd SpurDef SpurRes
+POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
 POIN DriveStr DriveMag DriveSpd DriveDef DriveRes
 POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
 POIN Demoiselle Gentilhomme MaleficAura Intimidate Tantivy Focus Inspiration DivinelyInspiring Charm Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty Infiltrator
