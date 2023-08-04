@@ -34,9 +34,6 @@
 #define RunningStartID 10
 
 //Pass: Can move through enemy units.
-<<<<<<< Updated upstream
-#define PassID 11
-=======
 #define PassID 11
 
 //Hangover: For the first two turns, unit's Hit and Avo are reduced by 15. (Dragz)
@@ -50,4 +47,3 @@
 
 //Liquid Courage: Unit can consume 1 item per turn without losing their action. +2 STR/SKL/SPD upon doing so, decreases 1/turn.
 #define LiquidCourageID 15
->>>>>>> Stashed changes

@@ -387,10 +387,7 @@ SkillDescription(ResoluteSacrificeID,SD_ResoluteSacrifice)
 SkillDescription(EyeForAnEyeID,SD_EyeForAnEye)
 SkillDescription(SeaShantyID,SD_SeaShanty)
 SkillDescription(RunningStartID,SD_RunningStart)
-<<<<<<< Updated upstream
-=======
 SkillDescription(HangoverID,SD_Hangover)
 SkillDescription(StudiousBlowID,SD_StudiousBlow)
 SkillDescription(UnderhandedID,SD_Underhanded)
 SkillDescription(LiquidCourageID,SD_LiquidCourage)
->>>>>>> Stashed changes
