@@ -144,6 +144,12 @@ a skill when used.[X]
 
 #include "ChapterText/ChapterTextInstaller.txt"
 
+## PromotesToText
+Promote to:[X]
+
+## NoUseText
+Cannot Use[X]
+
 ## HealArrowText
 ->[X]
 
