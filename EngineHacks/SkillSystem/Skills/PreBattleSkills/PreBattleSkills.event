@@ -382,6 +382,12 @@ SurpriseAttack:
 POIN SkillTester
 WORD SurpriseAttackID
 
+ALIGN 4
+Hangover:
+#incbin "Hangover/Hangover.dmp"
+POIN SkillTester
+WORD HangoverID
+
 #include "KeenFighter/Installer.event" 
 
 
