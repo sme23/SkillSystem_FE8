@@ -5,7 +5,7 @@
 
 pPowerModifiers: // Power
 	POIN prAddUnitPower prHalveIfCapturing HalfStrFunc 
-	POIN prDebuffStr Guts
+	POIN prDebuffStr Guts prStrTonicBonus
 	POIN prAddEquipPower prItemPassivePow prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prDefiantStr prPushStr prEquipmentStr
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
@@ -30,6 +30,9 @@ prFortressDefensePow:
 
 prFortressResistancePow:
 	_testSkill(FortressResistanceID,0,3)
+
+prStrTonicBonus:
+rTonicBonus(STAT_POWER)
 
 prItemPassivePow:
 #ifndef DONT_STACK_BOOSTS
