@@ -7,8 +7,7 @@ struct NewBattleHit {
 /*03*/  s8 damage;
 /*04*/  u8 skillID;
 /*05*/  s8 hpChange;
-/*06*/  u8 totalDamage; 
-/*07*/  u8 totalHeal;
+/*06*/  s16 totalChange;
 };
 
 typedef struct NewBattleHit NewBattleHit;
@@ -48,4 +47,4 @@ enum {
 	BATTLE_HIT_INFO_END          = (1 << 4),
 };
 */
-
+extern NewBattleHit NewBattleHitArray[];
