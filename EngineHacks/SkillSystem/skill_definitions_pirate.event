@@ -47,3 +47,6 @@
 
 //Liquid Courage: Unit can consume 1 item per turn without losing their action. +2 STR/SKL/SPD upon doing so, decreases 1/turn.
 #define LiquidCourageID 15
+
+//Arms Mastery: If the weapon rank of unit's currently equipped weapon is higher than foe's, unit's attack is brave.
+#define ArmsMasteryID 16

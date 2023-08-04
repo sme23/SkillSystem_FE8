@@ -394,6 +394,12 @@ Underhanded:
 POIN SkillTester
 WORD UnderhandedID
 
+ALIGN 4
+ArmsMastery:
+#incbin "ArmsMastery/ArmsMastery.dmp"
+POIN SkillTester
+WORD ArmsMasteryID
+
 #include "KeenFighter/Installer.event" 
 
 

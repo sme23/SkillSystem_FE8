@@ -1644,3 +1644,8 @@ triangle advantage, +15 crit and[N]
 Liquid Courage: Once per turn, unit[N]
 can consume an item without using[N]
 their action. +2 STR/SKL/SPD (decays).[X]
+
+## SD_ArmsMastery
+Arms Mastery: If the weapon rank of[N]
+unit's currently equipped weapon is[N]
+higher than foe's, unit's attack is brave.[X]
