@@ -42,6 +42,8 @@
 #include "EngineHacks/SkillSystem/skill_definitions.event"
 #include "EngineHacks/SkillSystem/skill_definitions_pirate.event"
 
+#define NewBattleHitArray $203AAC0 //for some rounds stuff
+
 // #define __CHAPTERJUMP__ // Uncomment to enable chapter jump
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p

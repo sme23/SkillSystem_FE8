@@ -48,4 +48,4 @@ enum {
 	BATTLE_HIT_INFO_END          = (1 << 4),
 };
 */
-
+extern NewBattleHit NewBattleHitArray[];

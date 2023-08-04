@@ -34,3 +34,16 @@ NewBattleHit* getFirstDefenderRound(NewBattleHit* round) {
 	}
 }
 
+bool didAttackerLandHit() {
+	for (int i = 0; ; i++) {
+		if (!isDefenderRound(&NewBattleHitArray[i]) && roundHits(&NewBattleHitArray[i])) return true;
+		if (isLastRound(&NewBattleHitArray[i])) return false;
+	}
+}
+
+bool didDefenderLandHit() {
+	for (int i = 0; ; i++) {
+		if (isDefenderRound(&NewBattleHitArray[i]) && roundHits(&NewBattleHitArray[i])) return true;
+		if (isLastRound(&NewBattleHitArray[i])) return false;
+	}	
+}
