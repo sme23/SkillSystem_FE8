@@ -32,3 +32,6 @@
 
 #include "Break/Installer.event"
 //Loog
+
+#include "AdaptiveBGM/Installer.event"
+//Huichelaar
