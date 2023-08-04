@@ -5,7 +5,7 @@
 
 pLuckModifiers: // Luck
 	POIN prAddUnitLuck prHalveIfCapturing 
-	POIN prDebuffLuk 
+	POIN prDebuffLuk prLukTonicBonus
 	POIN prAddEquipLuck prItemPassiveLuck prRallyLuk prDefiantLck prEquipmentLck
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
@@ -20,6 +20,9 @@ prAddEquipLuck:
 
 prEquipmentLck:
 	rEquipmentBonus(STAT_LUCK)
+
+prLukTonicBonus:
+rTonicBonus(STAT_LUCK)
 
 prItemPassiveLuck:
 #ifndef DONT_STACK_BOOSTS
