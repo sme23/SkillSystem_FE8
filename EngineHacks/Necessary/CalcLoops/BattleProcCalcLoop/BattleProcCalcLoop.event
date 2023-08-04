@@ -108,6 +108,8 @@ BarricadeIDLink:
 BYTE BarricadeID
 BarricadePlusIDLink:
 BYTE BarricadePlusID
+WrathIDLink:
+BYTE WrathID
 
 ALIGN 4
 Proc_Finish:
@@ -144,3 +146,6 @@ SHORT 0x2900
 SHORT 0xD123
 SHORT 0xE011
 POP
+
+#include "BattleRoundParsing/BattleRoundParsing.lyn.event"
+

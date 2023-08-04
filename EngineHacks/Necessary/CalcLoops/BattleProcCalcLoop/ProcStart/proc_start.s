@@ -153,7 +153,22 @@ Attacker2:
 StoreDamage2:
 strh r0, [r7, #4] @final damage
 
+@check if current round is first defender round
+ldr r0,=#0x203AAC0 //start of rounds buffer
+bl getFirstDefenderRound //returns pointer to first defender round
+cmp r0,r6
+bne NormalCritCheck
+
+@check if this round's attacker has Wrath
+mov r0,r4 @attacker
+ldr r1,=WrathIDLink
+ldrb r1,[r1]
+blh SkillTester, r3
+cmp r0,#1
+beq IsCrit
+
 @now to check for a crit
+NormalCritCheck:
 ldrh r0, [r7, #0xc] @crit rate
 mov r1, #0
 blh d100Result
@@ -161,6 +176,7 @@ cmp r0, #1
 bne End
 
 @if crit:
+IsCrit:
 mov r0,r5		@defender
 ldr r1, =ExpertiseIDLink
 ldrb r1, [ r1 ]
