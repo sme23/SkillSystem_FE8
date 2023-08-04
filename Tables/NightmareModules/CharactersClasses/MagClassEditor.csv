@@ -4,7 +4,7 @@ Ephraim Lord,1,10,20,0
 Eirika Lord,1,25,20,0
 Ephraim Master Lord,2,10,24,1
 Eirika Master Lord,2,20,25,2
-Cavalier,0,0,20,0
+LanceCav,1,20,20,0
 Cavalier (F),0,0,20,0
 Paladin,2,10,24,2
 Paladin (F),2,10,24,2
@@ -133,7 +133,7 @@ Vanguard,1,20,20,0
 Curate,7,50,20,0
 Deserter,1,20,20,0
 Hunter,4,35,20,0
-Ephraim Lord,1,10,20,0
+Gunner,2,25,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0

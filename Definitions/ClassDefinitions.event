@@ -15,6 +15,8 @@
 #define Captain $80
 
 //LANCE
+#define LanceCav $5
+#define LanceCav_F $6
 //#define Soldier $4e
 
 #define Deserter $84
@@ -57,7 +59,8 @@
 
 #define Curate $83
 
-
+//GUNS
+#define Gunner $86
 
 
 //STANDING MAP SPRITES
@@ -68,3 +71,4 @@
 #define DeserterMapSprite $6f
 #define HunterMapSprite $70
 #define SigilTrapMapSprite $71
+#define GunnerMapSprite $72

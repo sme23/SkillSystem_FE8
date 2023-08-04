@@ -39,3 +39,6 @@
 #include "CustomGameSpeed/CustomGameSpeed.event"
 //StanH
 //Edited by Pikmin1211 to make R button speed up movement instead of A
+
+#include "mug_exceed/Installer.event"
+//MisakaMikoto, aera

@@ -69,6 +69,7 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+ASMC ClearAllDebuffs // now clears tonics, too. If you add a prep screen to this chapter, then restarting the chapter after saving will remove any tonic boosts because this ASMC is being called each time. 
 WEATHER 7
 SetBackground(Inn)
 Text(Ch1BeginningScene1)

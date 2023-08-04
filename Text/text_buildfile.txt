@@ -20,6 +20,30 @@ Tome mastery level.[X]
 # 0x566
 Knife mastery level.[X]
 
+# 0x055D
+Chance that the attack will hit.[NL]
+Skl x 3 + Weapon Hit + Triangle Adv.[X]
+
+# 0x0560
+Ability to dodge enemy attacks.[NL]
+Lck x 3 + Terrain Avoid[X]
+
+# 0x055C
+Amount of damage this weapon causes.[NL]
+Weapon Might + Str/Mag/Skl[X]
+
+# 0x0548
+Fighting skill. Increases accuracy[N]
+and damage dealt by firearms.[X]
+
+# 0x0549
+Speed. Determines whether a unit can[N]
+perform a follow-up attack on an enemy.[X]
+
+# 0x054A
+Luck. Increases evasion[N]
+and little else, save fortune.[X]
+
 # 0x50C
 Gun[X]
 
