@@ -1,0 +1,9 @@
+PUSH
+ORG 0x726CA
+#incbin "battle_changer.bin"
+
+ORG 0x72700
+#incbin "72700.bin"
+
+POP
+

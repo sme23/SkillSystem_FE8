@@ -1,0 +1,5 @@
+//Change Battle BGM By Chapter (credit: 7743)
+#include "battle_changer/battle_changer.event"
+
+//Adaptive BGM (credit: Huichelaar)
+#include "FE8-CalmFlow/CalmFlow.txt"
