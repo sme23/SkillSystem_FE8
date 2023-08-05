@@ -1649,3 +1649,18 @@ their action. +2 STR/SKL/SPD (decays).[X]
 Arms Mastery: If the weapon rank of[N]
 unit's currently equipped weapon is[N]
 higher than foe's, unit's attack is brave.[X]
+
+## SD_AstralBlessing
+Astral Blessing: At start of turn,[N]
+units within 3 spaces randomly gain[N]
+SPD+2, SKL+3, or LCK+4 for that turn.[X]
+
+## SD_CatchingUp
+Catching Up: If foe doubles unit, unit's[N]
+damage increases by the amount foe is[N]
+above the doubling threshold.[X]
+
+## SD_Nonconforming
+Nonconforming: Unit reverses the[N]
+weapon triangle in all combats.[N]
+Reavers have no effect.[X]

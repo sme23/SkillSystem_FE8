@@ -1,25 +1,25 @@
 INLINE MagCharTable,Base Magic,Magic Growth
 None,0,0
-0x01 Luisa,0,15
+0x01 Lua,0,15
 0x02 Pilar,2,20
 0x03 Desiderio,1,5
-0x04 Raimon,2,65
+0x04 Razvan,2,65
 0x05 Carmen,0,55
 0x06 Ximo,0,25
-Ross,0,5
-Neimi,2,15
-Colm,1,10
-Garcia,0,5
-Innes,1,10
-Lute,5,65
-Natasha,1,60
-Cormag,0,5
-Ephraim,0,15
-Forde,1,10
-Kyle,0,10
-Amelia,2,25
-Artur,5,50
-Gerik,0,10
+0x07 Estelle,1,40
+0x08 Hermenegildo,4,50
+0x09 MrYodsen,1,10
+0x0A Durgham,0,5
+0x0B AChapterUnit1,1,10
+0x0C AChapterUnit2,5,65
+0x0D AChapterUnit3,1,60
+0x0E AChapterUnit4,0,5
+0x0F AChapterUnit5,0,15
+0x10 AChapterUnit6,1,10
+0x11 AChapterUnit7,0,10
+0x12 AChapterUnit8,2,25
+0x13 AChapterUnit9,5,50
+0x14 AChapterUnit10,0,10
 Tethys,0,5
 Marisa,1,10
 Saleh,11,30

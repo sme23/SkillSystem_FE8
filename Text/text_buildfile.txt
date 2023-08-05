@@ -170,6 +170,12 @@ a skill when used.[X]
 
 #include "tonics.txt" 
 
+## PromotesToText
+Promote to:[X]
+
+## NoUseText
+Cannot Use[X]
+
 ## HealArrowText
 ->[X]
 

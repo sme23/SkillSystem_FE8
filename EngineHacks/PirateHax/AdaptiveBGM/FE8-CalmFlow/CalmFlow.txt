@@ -1,0 +1,74 @@
+//FE8 CalmFlow
+//Allow BGM to switch to Flow version of Desire Below during battle
+
+#ifndef _FE8_
+    ERROR "You're not assembling to an FE8 ROM!"
+#endif
+
+#include EAStdlib.event
+#include "Extensions/Hack Installation.txt"
+
+
+PUSH
+
+ORG 0xD03EC // Push r0, lets us recognise for what sound/music m4aMPlayImmInit was called
+SHORT 0xB5F1
+
+ORG 0xD0414 // Hook to InitCalm. Set Flow-tracks' volume level to 0
+callHack_r0(InitCalm)
+
+ORG 0xD042E // Pop r0, rebalance the stack
+SHORT 0xBCF1
+
+ORG 0xD0AF8 // Hook to FadeoutCalm. Don't fade out Flow-tracks
+callHack_r0(FadeoutCalm)
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+
+ORG 0x4FD8E // Hook to EndBattleCalm. Lower certain tracks volume level at the end of battle
+SHORT 0x46C0
+callHack_r0(EndBattleCalm)
+
+ORG 0xD11D4 // Hook to ReturnCalm. Lower certain tracks volume level for some exceptions
+callHack_r0(ReturnCalm)
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+SHORT 0x46C0
+
+ORG $71A68 // ContinueBattleBGM, modified to disable/enable certain tracks
+jumpToHack(Cbbgm)
+
+POP
+
+
+ALIGN 4
+InitCalm:
+#incbin "InitCalm.dmp"
+
+FadeoutCalm:
+#incbin "FadeoutCalm.dmp"
+
+ReturnCalm:
+#incbin "ReturnCalm.dmp"
+
+EndBattleCalm:
+#incbin "EndBattleCalm.dmp"
+
+Cbbgm:
+#incbin "ContinueBattleBGM.dmp"

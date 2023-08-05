@@ -11,5 +11,7 @@
 #define TrianaMug $3
 #define MedwynMug $b
 #define BartzMug $d
+#define IndioMug $f
+#define LeandraMug $10
 
 #define KhazhakMug $31

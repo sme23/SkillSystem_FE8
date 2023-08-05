@@ -33,6 +33,12 @@
 #include "Break/Installer.event"
 //Loog
 
+#include "AdaptiveBGM/Installer.event"
+//Huichelaar and 7743
+
+#include "PromoPreview/PromoPreview.event"
+//Sme
+
 #include "FastBattleAnimation/Install.event"
 //7743
 
@@ -42,3 +48,4 @@
 
 #include "mug_exceed/Installer.event"
 //MisakaMikoto, aera
+
