@@ -4,5 +4,12 @@
 #define RazvanMug $6
 #define CarmenMug $7
 #define XimoMug $8
+#define EstelleMug $9
+#define HermenegildoMug $a
+#define MrYodsenMug $c
+#define DurghamMug $e
+#define TrianaMug $3
+#define MedwynMug $b
+#define BartzMug $d
 
 #define KhazhakMug $31

@@ -28,6 +28,24 @@ void ComputeBattleUnitCritRate(struct BattleUnit* bu) {
 	}
 }
 
+void ComputeBattleUnitEffectiveCritRate(struct BattleUnit* attacker, struct BattleUnit* defender) {
+    int i;
+	Item item;
+
+    attacker->battleEffectiveCritRate = attacker->battleCritRate;
+
+    if (attacker->battleEffectiveCritRate < 0)
+        attacker->battleEffectiveCritRate = 0;
+	
+    for (i = 0; (i < UNIT_ITEM_COUNT); ++i) {
+		item = defender->unit.items[i];
+        if (GetItemAttributes(item) & IA_NEGATE_CRIT) {
+            attacker->battleEffectiveCritRate = 0;
+            break;
+        }
+    }
+}
+
 void ComputeBattleUnitWeaponRankBonuses(struct BattleUnit* bu) {
     return;
 }

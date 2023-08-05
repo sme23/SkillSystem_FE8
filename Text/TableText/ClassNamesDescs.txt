@@ -33,3 +33,12 @@ Hunter[X]
 
 ## HunterDesc
  [X]
+
+## GunnerName
+Gunner[X]
+
+## GunnerDesc
+ [X]
+
+## LanceCavName
+Lance Rider[X]
