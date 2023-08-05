@@ -48,3 +48,8 @@
 #define FlasubanVillageSkyPaletteID 0x89
 #define FlasubanVillageSkyConfigID 0x8A
 #define FlasubanVillageTileAnimationsID 0x8B
+
+#define DesertBastionNightObjectID 0x8C
+#define DesertBastionNightPaletteID 0x8D
+#define DesertBastionNightConfigID 0x8E
+#define DesertBastionNightTileAnimationsID 0x8F
