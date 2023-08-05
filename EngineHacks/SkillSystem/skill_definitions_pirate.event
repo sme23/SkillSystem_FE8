@@ -1,3 +1,6 @@
+//Comment out any skills defined here that are also in skillsys's definitions
+
+
 //Locktouch: Can open locks without keys or picks.
 #define LockTouchID 0 //everyone gets it
 #define LocktouchID LockTouchID

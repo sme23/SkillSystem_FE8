@@ -17,3 +17,12 @@ DesiderioMugData:
 #incbin "Dmp/Desiderio_minimug.dmp"
 setMugEntry(DesiderioMug, DesiderioMugData, 3, 5, 3, 3)
 
+ALIGN 16
+KhazhakMugData:
+#incbin "Dmp/Khazhak_mug.dmp"
+#incbin "Dmp/Khazhak_frames.dmp"
+#incbin "Dmp/Khazhak_palette.dmp"
+#incbin "Dmp/Khazhak_minimug.dmp"
+setMugEntry(KhazhakMug, KhazhakMugData, 3, 5, 3, 3)
+
+

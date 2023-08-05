@@ -3,9 +3,10 @@
 //SWORD
 //#define Mercenary $f
 //#define Mercenary_F $10
-
 //#define Myrmidon $13
 //#define Myrmidon_F $14
+#define SwordCav $87
+#define PegasusRider $48
 
 // SWORD/LANCE
 #define Warden $9
@@ -18,22 +19,18 @@
 #define LanceCav $5
 #define LanceCav_F $6
 //#define Soldier $4e
-
 #define Deserter $84
-
-//#define PegasusKnight $48
+#define GriffinRider $89
 
 // LANCE/AXE
 #define Vanguard $82
 
 //AXE
 //#define Fighter $3f
-
 //#define Brigand $41
-
 #define DragonRider $1f
 #define DragonRider_F $20
-
+#define AxeCav $88
 
 //BOW
 //#define Archer $19
@@ -72,3 +69,10 @@
 #define HunterMapSprite $70
 #define SigilTrapMapSprite $71
 #define GunnerMapSprite $72
+#define LanceCavMapSprite $73
+#define SwordCavMapSprite $74
+#define AxeCavMapSprite $75
+#define DragonRiderMapSprite $76
+#define PegasusRiderMapSprite $77
+#define GriffinRiderMapSprite $78
+#define SoldierMapSprite $79

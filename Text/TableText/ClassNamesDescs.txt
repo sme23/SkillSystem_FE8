@@ -41,4 +41,73 @@ Gunner[X]
  [X]
 
 ## LanceCavName
-Lance Rider[X]
+Lance Cav[X]
+
+## LanceCavDesc
+ [X]
+
+## WardenName
+Warden[X]
+
+## WardenDesc
+ [X]
+
+## ThiefDesc
+ [X]
+
+## MercenaryDesc
+ [X]
+
+## MyrmidonDesc
+ [X]
+
+## ArcherDesc
+ [X]
+
+## DragonRiderName
+Dragon Rider[X]
+
+## DragonRiderDesc
+ [X]
+
+## MageDesc
+ [X]
+
+## ShamanDesc
+ [X]
+
+## FighterDesc
+ [X]
+
+## BrigandDesc
+ [X]
+
+## PegasusRiderName
+Pegasus Rider[X]
+
+## PegasusRiderDesc
+ [X]
+
+## TroubadourDesc
+ [X]
+
+## SoldierDesc
+ [X]
+
+## SwordCavName
+Sword Cav[X]
+
+## SwordCavDesc
+ [X]
+
+## AxeCavName
+Axe Cav[X]
+
+## AxeCavDesc
+ [X]
+
+## GriffinRiderName
+Griffin Rider[X]
+
+## GriffinRiderDesc
+ [X]

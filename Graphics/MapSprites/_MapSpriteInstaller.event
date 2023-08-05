@@ -121,7 +121,7 @@ ALIGN 4
 HunterMMS:
 #incbin "Dmp/Hunter (M) {MeatOfJustice}-walk.dmp"
 
-StandingMapSprite(GunnerMapSprite,MapSprite16x16,GunnerSMS)
+StandingMapSprite(GunnerMapSprite,MapSprite16x32,GunnerSMS)
 MovingMapSprite(Gunner, $1C3D7C, GunnerMMS)
 
 ALIGN 4
@@ -131,3 +131,80 @@ GunnerSMS:
 ALIGN 4
 GunnerMMS:
 #incbin "Dmp/Lord (M) Ephraim Bow {SSHX}-walk.dmp"
+
+StandingMapSprite(SwordCavMapSprite,MapSprite16x32,SwordCavSMS)
+MovingMapSprite(SwordCav, $1C3D7C, SwordCavMMS)
+
+ALIGN 4
+SwordCavSMS:
+#incbin "Dmp/Cavalier (M) Sword {SALVAGED}-stand.dmp"
+
+ALIGN 4
+SwordCavMMS:
+#incbin "Dmp/Cavalier (M) Sword {SALVAGED}-walk.dmp"
+
+StandingMapSprite(LanceCavMapSprite,MapSprite16x32,LanceCavSMS)
+MovingMapSprite(LanceCav, $1C3D7C, LanceCavMMS)
+
+ALIGN 4
+LanceCavSMS:
+#incbin "Dmp/Cavalier (M) Lance {SALVAGED}-stand.dmp"
+
+ALIGN 4
+LanceCavMMS:
+#incbin "Dmp/Cavalier (M) Lance {SALVAGED}-walk.dmp"
+
+StandingMapSprite(AxeCavMapSprite,MapSprite16x32,AxeCavSMS)
+MovingMapSprite(AxeCav, $1C3D7C, AxeCavMMS)
+
+ALIGN 4
+AxeCavSMS:
+#incbin "Dmp/Cavalier (M) Axe {SALVAGED}-stand.dmp"
+
+ALIGN 4
+AxeCavMMS:
+#incbin "Dmp/Cavalier (M) Axe {SALVAGED}-walk.dmp"
+
+StandingMapSprite(PegasusRiderMapSprite,MapSprite16x32,PegasusRiderSMS)
+MovingMapSprite(PegasusRider, $1C3D7C, PegasusRiderMMS)
+
+ALIGN 4
+PegasusRiderSMS:
+#incbin "Dmp/Pegasi (F) T1 Helmet Sword {Sephie, Cornontherob}-stand.dmp"
+
+ALIGN 4
+PegasusRiderMMS:
+#incbin "Dmp/Pegasi (F) T1 Helmet Sword {Sephie, Cornontherob}-walk.dmp"
+
+StandingMapSprite(GriffinRiderMapSprite,MapSprite16x32,GriffinRiderSMS)
+MovingMapSprite(GriffinRider, $1C3D7C, GriffinRiderMMS)
+
+ALIGN 4
+GriffinRiderSMS:
+#incbin "Dmp/Griffon Rider (U) Lance {N426}-stand.dmp"
+
+ALIGN 4
+GriffinRiderMMS:
+#incbin "Dmp/Griffon Rider (U) Lance {N426}-walk.dmp"
+
+StandingMapSprite(DragonRiderMapSprite,MapSprite16x32,DragonRiderSMS)
+MovingMapSprite(DragonRider, $1C3D7C, DragonRiderMMS)
+
+ALIGN 4
+DragonRiderSMS:
+#incbin "Dmp/Wyvern Rider (M) Axe {flasuban}-stand.dmp"
+
+ALIGN 4
+DragonRiderMMS:
+#incbin "Dmp/Wyvern Rider (M) Axe {flasuban}-walk.dmp"
+
+StandingMapSprite(SoldierMapSprite,MapSprite16x16,SoldierSMS)
+MovingMapSprite(Soldier, $1C3D7C, SoldierMMS)
+
+ALIGN 4
+SoldierSMS:
+#incbin "Dmp/Soldier (M) Shield Lance {Rexacuse, Peerless, Alusq}-stand.dmp"
+
+ALIGN 4
+SoldierMMS:
+#incbin "Dmp/Soldier (M) Shield Lance {Rexacuse, Peerless, Alusq}-walk.dmp"

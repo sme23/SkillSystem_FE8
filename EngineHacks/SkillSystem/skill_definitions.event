@@ -705,7 +705,7 @@
 
 //Chaos Style: AS +3 during combat with a physical weapon against a foe armed with magic or vice versa.
 //By Jopettajah
-#define ChaosStyleID 255
+//#define ChaosStyleID 255
 
 //Dragonskin: Halve damage taken
 //By Jopettajah
