@@ -5,3 +5,7 @@
 #define CamOn "EVBIT_T 0x9"
 #define CamOff "EVBIT_F 0x9"
 #define RefreshSMS "ASMC 0x8026689"
+#define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; REMA"
+#define TutorialYesNoText(textid) "EVBIT_MODIFY 1; CenterTextbox(textid); EVBIT_MODIFY 0"
+
+#define GotoHubChapterIfYes(labelid, chapterid) "SVAL s1 0x1; BNE labelid s1 sC; MNC2 chapterid; LABEL labelid"

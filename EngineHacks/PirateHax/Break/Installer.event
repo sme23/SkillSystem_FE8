@@ -56,8 +56,9 @@ Instrument(0, $3C, 0, 0x083328AC, 255, 0, 255, 0)
 POP
 
 #define SFXGroup 6
-#define BreakSFX_Hit 0x26E
-#define BreakSFX_Kill 0x26F
+#define BreakSFX_Kill 0x26E
+#define BreakSFX_Hit 0x26F
+
 
 //used for break
 #include "MusicEvents/Song_HitBreak.event"

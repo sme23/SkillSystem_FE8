@@ -1,0 +1,26 @@
+## HubATitle
+Hub A - Port Greagor[X]
+
+## HubA1Prompt
+Go to Chapter A1?[N]
+[No][X]
+
+## HubA2Prompt
+Go to Chapter A2?[N]
+[No][X]
+
+## HubA3Prompt
+Go to Chapter A3?[N]
+[No][X]
+
+## HubA4Prompt
+Go to Chapter A4?[N]
+[No][X]
+
+## HubA5Prompt
+Go to Chapter A5?[N]
+[No][X]
+
+## HubA6Prompt
+Go to Chapter A6?[N]
+[No][X]

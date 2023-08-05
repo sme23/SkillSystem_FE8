@@ -22,10 +22,58 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
+AREA 0 GotoChapter1 [2, 3] [2, 3]
+AREA 0 GotoChapter2 [7, 3] [7, 3]
+AREA 0 GotoChapter3 [12, 3] [12, 3]
+AREA 0 GotoChapter4 [2, 8] [2, 8]
+AREA 0 GotoChapter5 [7, 8] [7, 8]
+AREA 0 GotoChapter6 [12, 8] [12, 8]
 CauseGameOverIfLordDies
 END_MAIN
 
+GotoChapter1:
+TutorialYesNoText(HubA1Prompt)
+GotoHubChapterIfYes(1, HubA_1)
+NoFade
+ENDA
+
+GotoChapter2:
+TutorialYesNoText(HubA2Prompt) 
+GotoHubChapterIfYes(2, HubA_2)
+NoFade
+ENDA
+
+GotoChapter3:
+TutorialYesNoText(HubA3Prompt) 
+GotoHubChapterIfYes(3, HubA_3)
+NoFade
+ENDA
+
+GotoChapter4:
+TutorialYesNoText(HubA4Prompt) 
+GotoHubChapterIfYes(4, HubA_4)
+NoFade
+ENDA
+
+GotoChapter5:
+TutorialYesNoText(HubA5Prompt) 
+GotoHubChapterIfYes(5, HubA_5)
+NoFade
+ENDA
+
+GotoChapter6:
+TutorialYesNoText(HubA6Prompt) 
+GotoHubChapterIfYes(6, HubA_6)
+NoFade
+ENDA
+
 Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [7,5] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+NewUnits:
+UNIT Estelle Troubadour 0 Level(3,Ally,False) [7,5] 0 0 0 0 [Heal, Torch] NoAI
+UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [7,6] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
 UNIT
 
 Traps1:
@@ -37,6 +85,9 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+LOAD1 1 NewUnits
+ENUN
+GotoPrepScreen
 NoFade
 ENDA
 

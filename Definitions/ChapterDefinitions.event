@@ -2,12 +2,12 @@
 //CHAPTER IDs
 #define Chapter1 0
 #define HubA 1
-#define ChapterA1 2
-#define ChapterA2 3
-#define ChapterA3 4
-#define ChapterA4 5
-#define ChapterA5 6
-#define ChapterA6 7
+#define HubA_1 2
+#define HubA_2 3
+#define HubA_3 4
+#define HubA_4 5
+#define HubA_5 6
+#define HubA_6 7
 #define Chapter2 8
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
