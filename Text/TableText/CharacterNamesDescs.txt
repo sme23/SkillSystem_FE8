@@ -11,7 +11,7 @@ Pilar[X]
 
 ## PilarDesc
 Navigator[N]
-Experienced in which way the wind blows,[N]
+Ever knowing which way the wind blows,[N]
 she and the captain decide on the route.[X]
 
 ## DesiderioName
@@ -45,6 +45,62 @@ Ximo[X]
 Swabbie[N]
 Cleans the deck with all his might,[N]
 as he has few other skills to ply.[X]
+
+## EstelleName
+Estelle[X]
+
+## EstelleDesc
+Astrologist[N]
+A diviner who desires to travel[N]
+to the stars in the night sky.[X]
+
+## HermenegildoName
+Hermenegildo[X]
+
+## HermenegildoDesc
+Servant[N]
+A castaway noble bookworm forced into[N]
+servitude by pirates, rescued by Lua.[X]
+
+## MrYodsenName
+Mr. Yodsen[X]
+
+## MrYodsenDesc
+Bookkeeper[N]
+A disgraced ex-merchant, now selling his[N]
+(evidently dubious) financial talents.[X]
+
+## DurghamName
+Durgham[X]
+
+## DurghamDesc
+Bladekeeper[N]
+A mercenary rider oft ignored[N]
+by seafaring merchants.[X]
+
+## TrianaName
+Triana[X]
+
+## TrianaDesc
+Scholar[N]
+A studious shaman with a deep[N]
+love for exploring the world.[X]
+
+## MedwynName
+Medwyn[X]
+
+## MedwynDesc
+Drunkard[N]
+A former lord turned to the bottle.[N]
+Down on his luck.[X]
+
+## BartzName
+Bartz[X]
+
+## BartzDesc
+Deserter[N]
+A soldier turned to a life of piracy.[N]
+Fights with no regards for honour.[X]
 
 ## KhazhakName
 Khazhak[X]

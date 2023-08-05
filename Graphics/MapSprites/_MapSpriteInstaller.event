@@ -120,3 +120,14 @@ HunterSMS:
 ALIGN 4
 HunterMMS:
 #incbin "Dmp/Hunter (M) {MeatOfJustice}-walk.dmp"
+
+StandingMapSprite(GunnerMapSprite,MapSprite16x16,GunnerSMS)
+MovingMapSprite(Gunner, $1C3D7C, GunnerMMS)
+
+ALIGN 4
+GunnerSMS:
+#incbin "Dmp/Lord (M) Ephraim Bow {SSHX}-stand.dmp"
+
+ALIGN 4
+GunnerMMS:
+#incbin "Dmp/Lord (M) Ephraim Bow {SSHX}-walk.dmp"

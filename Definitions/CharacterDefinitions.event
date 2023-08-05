@@ -1,10 +1,34 @@
 // PLAYER ($1 through $45 allowed)
+
+// CHAPTER 1
 #define Lua $1
 #define Pilar $2
 #define Desiderio $3
 #define Razvan $4
 #define Carmen $5
 #define Ximo $6
+
+// HUB A
+#define Estelle $7
+#define Hermenegildo $8
+#define MrYodsen $9 
+#define Durgham $a
+//Samson/Arrans
+#define Triana $43
+#define Medwyn $44
+#define Bartz $45
+
+// HUB A CHAPTER UNITS
+#define AChapterUnit1 $b
+#define AChapterUnit2 $c
+#define AChapterUnit3 $d
+#define AChapterUnit4 $e
+#define AChapterUnit5 $f
+#define AChapterUnit6 $10
+#define AChapterUnit7 $11
+#define AChapterUnit8 $12
+#define AChapterUnit9 $13
+#define AChapterUnit10 $14
 
 // ENEMY/NPC ($46 through $FF)
 
