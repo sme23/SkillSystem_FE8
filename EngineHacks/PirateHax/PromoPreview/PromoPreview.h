@@ -27,3 +27,5 @@ extern int NoUseTextIDLink;
 
 extern u8 ClassSkillTable[256];
 
+extern void EndMenuItemPanel();
+

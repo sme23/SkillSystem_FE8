@@ -109,4 +109,9 @@ void DrawPromoPreview(u16 item) {
 		}
 		wtIconIndex ++;
 	}
+	gBattleActor.battleAttack = gBattleTarget.battleAttack;
+	gBattleActor.battleHitRate = gBattleTarget.battleHitRate;
+	gBattleActor.battleCritRate = gBattleTarget.battleCritRate;
+	gBattleActor.battleAvoidRate = gBattleTarget.battleAvoidRate;
+	
 }
