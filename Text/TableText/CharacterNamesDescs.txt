@@ -78,6 +78,22 @@ Bladekeeper[N]
 A mercenary rider oft ignored[N]
 by seafaring merchants.[X]
 
+## IndioName
+Indio[X]
+
+## IndioDesc
+Wayfarer[N]
+A shaman islander making the most[N]
+of their short time on earth.[X]
+
+## LeandraName
+Leandra[X]
+
+## LeandraDesc
+Stevedore[N]
+A jaded wanderer believing money[N]
+is the grease that turns the world.[X]
+
 ## TrianaName
 Triana[X]
 
