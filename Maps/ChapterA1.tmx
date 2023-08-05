@@ -10,10 +10,10 @@
   <properties>
    <property name="Anims1" value="0"/>
    <property name="Anims2" value="0"/>
-   <property name="ChapterID" value="ChapterA1"/>
+   <property name="ChapterID" value="HubA_1"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="ChapterA1MapChangesID"/>
-   <property name="MapID" value="ChapterA1MapID"/>
+   <property name="MapChangesID" value="HubA_1MapChangesID"/>
+   <property name="MapID" value="HubA_1MapID"/>
    <property name="ObjectType" value="DesertBastionNightSkyObjectID"/>
    <property name="PaletteID" value="DesertBastionNightSkyPaletteID"/>
    <property name="TileConfig" value="DesertBastionNightSkyConfigID"/>

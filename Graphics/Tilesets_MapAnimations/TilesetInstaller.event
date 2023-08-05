@@ -27,6 +27,6 @@
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
   
-	EventPointerTable(DesertBastionNightObjectID,DesertBastionNightObject)
-    EventPointerTable(DesertBastionNightPaletteID,DesertBastionNightPalette)
-    EventPointerTable(DesertBastionNightConfigID,DesertBastionNightMapchipConfig)
+	EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
+    EventPointerTable(DesertBastionNightSkyPaletteID,DesertBastionNightSkyPalette)
+    EventPointerTable(DesertBastionNightSkyConfigID,DesertBastionNightSkyMapchipConfig)
