@@ -400,6 +400,14 @@ ArmsMastery:
 POIN SkillTester
 WORD ArmsMasteryID
 
+ALIGN 4
+CatchingUp:
+#incbin "CatchingUp/CatchingUp.dmp"
+POIN SkillTester
+WORD CatchingUpID
+
+
+
 #include "KeenFighter/Installer.event" 
 
 
