@@ -19,8 +19,8 @@
 #define Bartz $45
 
 // HUB A CHAPTER UNITS
-#define AChapterUnit1 $b
-#define AChapterUnit2 $c
+#define Indio $b
+#define Leandra $c
 #define AChapterUnit3 $d
 #define AChapterUnit4 $e
 #define AChapterUnit5 $f
