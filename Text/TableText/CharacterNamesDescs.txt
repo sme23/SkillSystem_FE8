@@ -118,6 +118,14 @@ Deserter[N]
 A soldier turned to a life of piracy.[N]
 Fights with no regards for honour.[X]
 
+## SuzanneName
+Suzanne[X]
+
+## SuzanneDesc
+Gunslinger[N]
+An intrepid mercenary whose talents[N]
+are only rivaled by her ego.[X]
+
 ## KhazhakName
 Khazhak[X]
 

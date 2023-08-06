@@ -28,10 +28,14 @@
 #define AChapterUnit7 $11
 #define AChapterUnit8 $12
 #define AChapterUnit9 $13
-#define AChapterUnit10 $14
+#define Suzanne $14
 
 // ENEMY/NPC ($46 through $FF)
 
 //Chapter 1
 #define Khazhak $46
 #define Blackheart $47
+
+//Chapter A-6
+#define Santiago $48
+#define Rochefort $49

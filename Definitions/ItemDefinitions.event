@@ -94,6 +94,10 @@
 #define IronMusket $c9
 #define SteelMusket $cc
 #define SilverMusket $cd
+#define Pistol $ce
+#define Culverin $cf
+#define Blunderbuss $d0
+#define Mortar $d1
 
 // EQUIPS
 #define HideShield $ca

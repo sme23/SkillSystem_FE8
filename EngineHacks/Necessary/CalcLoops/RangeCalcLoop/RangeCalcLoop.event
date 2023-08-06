@@ -16,5 +16,6 @@ RangeSkill(StaffSavantID, StaffSavantBonus)
 RangeSkill(PointBlankID, PointBlankBonus)
 RangeSkill(TomeRangeUpID, TomeRangeBonus)
 RangeSkill(RunningStartID, RunningStartBonus)
+RangeSkill(PanacheID, PanacheBonus)
 RangeSkillListEnd
 
