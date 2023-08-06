@@ -1,36 +1,10 @@
 #include "Battle.h"
 
-void BattleUnwind(void) {
-    ClearBattleHits();
-
-    // this do { ... } while (0); is required for match
-    // which is kind of neat because it implies scrapped plans for supporting some accost kind of thing
-    do {
-        struct BattleUnit* attacker;
-        struct BattleUnit* defender;
-        BattleGetBattleUnitOrder(&attacker, &defender);
-
-        gBattleHitIterator->info |= BATTLE_HIT_INFO_BEGIN;
-
-        if (!BattleGenerateRoundHits(attacker, defender)) {
-            gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_RETALIATE;
-
-            if (!BattleGenerateRoundHits(defender, attacker) && BattleGetFollowUpOrder(&attacker, &defender)) {
-                gBattleHitIterator->attributes = BATTLE_HIT_ATTR_FOLLOWUP;
-
-                BattleGenerateRoundHits(attacker, defender);
-            }
-        }
-    } while (FALSE);
-	//gDebuffTable[gBattleTarget.unit.index].skillState &= ~SKILLSTATE_BROKEN_IN_BATTLE; //gets rid of mid battle break
-    gBattleHitIterator->info |= BATTLE_HIT_INFO_END;
-}
-
 s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defender) {
     int i, count;
     u16 attrs; // NOTE: this is a bug! attrs are 19 bits in FE8 (they're 16 bits in previous games)
 
-    if (!(attacker->weapon.number) && !(attacker->weapon.durability)){
+    if (!(attacker->weapon)){
 		return FALSE;
 	}
         
@@ -154,7 +128,7 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS) || attacker->weaponAttributes & (IA_UNCOUNTERABLE | IA_MAGIC)) {
         attacker->weapon = GetItemAfterUse(attacker->weapon);
 
-        if (!(attacker->weapon.number) && !(attacker->weapon.durability))
+        if (!(attacker->weapon))
             attacker->weaponBroke = TRUE;
     }
 }
@@ -164,56 +138,43 @@ void New_BattleInitTargetCanCounter(){
 
 	// eggs
 	if (gBattleTarget.unit.pClassData->number == 0x34 || gBattleTarget.unit.pClassData->number == 0x62){
-		gBattleTarget.weapon.number = 0;
-		gBattleTarget.weapon.durability = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
-	// attacker weapon is uncounterable
-	if (gBattleActor.weaponAttributes & IA_UNCOUNTERABLE){
-		gBattleTarget.weapon.number = 0;
-		gBattleTarget.weapon.durability = 0;
-		gBattleTarget.canCounter = false;
-		return;
-	}
-
-	// target weapon is uncounterable
-	if (gBattleTarget.weaponAttributes & IA_UNCOUNTERABLE){
-		gBattleTarget.weapon.number = 0;
-		gBattleTarget.weapon.durability = 0;
+	// attacker/target weapon is uncounterable
+	if (gBattleActor.weaponAttributes & IA_UNCOUNTERABLE || gBattleTarget.weaponAttributes & IA_UNCOUNTERABLE){
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
 	// attacker is berserked and both units are blue
 	if ((gBattleActor.unit.statusIndex == UNIT_STATUS_BERSERK) && (gBattleActor.unit.index & FACTION_BLUE) && (gBattleTarget.unit.index & FACTION_BLUE)){
-		gBattleTarget.weapon.number = 0;
-		gBattleTarget.weapon.durability = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
     // attacker has dazzle
 	if (gSkillTester(&gBattleActor.unit, DazzleIDLink)){
-		gBattleTarget.weapon.number = 0;
-        gBattleTarget.weapon.durability = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
 	// defender is broken
 	if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BREAK){
-		gBattleTarget.weapon.number = 0;
-		gBattleTarget.weapon.durability = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
 }
 
-s8 CanUnitUseWeapon(Unit* unit, Item item) {
-    if (item.number == 0 && item.durability == 0){
+int CanUnitUseWeapon(struct Unit* unit, int item) {
+    if (item == 0){
 		return FALSE;
 	}
 
@@ -229,29 +190,6 @@ s8 CanUnitUseWeapon(Unit* unit, Item item) {
 
         if ((GetItemAttributes(item) & IA_LOCK_1) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_1))
             return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_4) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_4))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_5) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_5))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_6) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_6))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_7) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_7))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_2) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_2))
-            return FALSE;
-
-        // Monster lock is special
-        if (GetItemAttributes(item) & IA_LOCK_3) {
-            if (!(UNIT_CATTRIBUTES(unit) & CA_LOCK_3))
-                return FALSE;
-
-            return TRUE;
-        }
 
         if (GetItemAttributes(item) & IA_UNUSABLE)
             if (!(IsItemUnsealedForUnit(unit, item)))

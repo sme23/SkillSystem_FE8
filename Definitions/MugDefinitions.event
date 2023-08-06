@@ -1,17 +1,19 @@
 #define LuaMug $2
-#define PilarMug $4
-#define DesiderioMug $5
-#define RazvanMug $6
-#define CarmenMug $7
-#define XimoMug $8
-#define EstelleMug $9
-#define HermenegildoMug $a
-#define MrYodsenMug $c
-#define DurghamMug $e
-#define TrianaMug $3
-#define MedwynMug $b
-#define BartzMug $d
-#define IndioMug $f
-#define LeandraMug $10
+#define PilarMug $3
+#define DesiderioMug $4
+#define RazvanMug $5
+#define CarmenMug $6
+#define XimoMug $7
+#define EstelleMug $8
+#define HermenegildoMug $9
+#define MrYodsenMug $a
+#define DurghamMug $b
+#define TrianaMug $43
+#define MedwynMug $44
+#define BartzMug $45
+#define IndioMug $c
+#define LeandraMug $d
+
+#define MentorMug $16
 
 #define KhazhakMug $31

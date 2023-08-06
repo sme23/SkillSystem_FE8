@@ -19,26 +19,11 @@ bool DidUnitBreak(){
 		k++;
 	}
 	if ((gBattleActor.battleAttack > gBattleTarget.battleDefense)){ //did unit do damage
-		int i = 0;
-		while (BreakTargetTable[i].breakerWType != 0xFF){
-			if ((gBattleActor.weaponAttributes & IA_REVERTTRIANGLE) && !(gBattleTarget.weaponAttributes & IA_REVERTTRIANGLE)){
-				if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleTarget.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleActor.weaponBefore))){
-					return true;
-				}
-			}
-			else if ((gBattleTarget.weaponAttributes & IA_REVERTTRIANGLE) && !(gBattleActor.weaponAttributes & IA_REVERTTRIANGLE)){
-				if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleTarget.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleActor.weaponBefore))){
-					return true;
-				}
-			}
-			else{
-				if ((BreakTargetTable[i].breakerWType == GetItemType(gBattleActor.weaponBefore)) && (BreakTargetTable[i].brokenWType == GetItemType(gBattleTarget.weaponBefore))){
-					return true;
-				}
-				
-			}
-			i++;
+		if (gBattleActor.wTriangleHitBonus > 0 || gBattleTarget.wTriangleHitBonus < 0)
+		{
+			return true;
 		}
+		
 	}
 	return false;
 }
