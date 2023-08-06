@@ -30,6 +30,9 @@
 #define AChapterUnit9 $13
 #define AChapterUnit10 $14
 
+// CHAPTER 2
+#define Mentor $15
+
 // ENEMY/NPC ($46 through $FF)
 
 //Chapter 1
