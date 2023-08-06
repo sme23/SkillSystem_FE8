@@ -134,6 +134,14 @@ Bonemender[N]
 She trains healers for the rebels, but[N]
 is always looking for new opportunities.[X]
 
+## SuzanneName
+Suzanne[X]
+
+## SuzanneDesc
+Gunslinger[N]
+An intrepid mercenary whose talents[N]
+are only rivaled by her ego.[X]
+
 ## KhazhakName
 Khazhak[X]
 

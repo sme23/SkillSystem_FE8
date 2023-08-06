@@ -22,10 +22,17 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
+LoadUnit(0,0,Lua)
+UNIT Suzanne Gunner 0 Level(3,Ally,False) [1,1] 0 0 0 0 [Pistol, Culverin, Blunderbuss, Mortar] NoAI
+UNIT
+
+EnemyUnits1:
+UNIT Blackheart Fighter 0 Level(3, Enemy, True) [4,3] 0 0 0 0 [IronAxe] BossAI
 UNIT
 
 Traps1:
@@ -37,12 +44,15 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+LoadPlayerUnits(Units1)
+LoadEnemies(EnemyUnits1)
+GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
 NoFade
-MNC2 Chapter2
+MNC2 HubA
 ENDA
 
 Dunno1: //down here because nothing here is really used
