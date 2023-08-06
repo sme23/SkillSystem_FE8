@@ -21,8 +21,8 @@
 // HUB A CHAPTER UNITS
 #define Indio $b
 #define Leandra $c
-#define AChapterUnit3 $d
-#define AChapterUnit4 $e
+#define Jaime $d
+#define Leonor $e
 #define AChapterUnit5 $f
 #define AChapterUnit6 $10
 #define AChapterUnit7 $11
@@ -35,3 +35,8 @@
 //Chapter 1
 #define Khazhak $46
 #define Blackheart $47
+
+//Hub A2
+#define Felipe $4B
+#define Incendivis $4C
+#define Rebel $4D

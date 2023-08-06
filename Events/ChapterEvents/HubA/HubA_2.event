@@ -25,7 +25,15 @@ MiscBasedEvents:
 CauseGameOverIfLordDies
 END_MAIN
 
-Units1:
+Deployment:
+UNIT
+
+NewUnits:
+UNIT Jaime PegasusRider 0 Level(2,Ally,False) [19,2] 0 0 0 0 [SteelSword, IronSword] NoAI
+UNIT Leonor Cleric 0 Level(7,NPC,False) [9,9] 0 0 0 0 [Heal, Barrier] AttackInRangeAI
+UNIT
+
+NPCs:
 UNIT
 
 Traps1:

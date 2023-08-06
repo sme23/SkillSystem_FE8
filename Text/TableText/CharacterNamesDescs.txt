@@ -118,6 +118,22 @@ Deserter[N]
 A soldier turned to a life of piracy.[N]
 Fights with no regards for honour.[X]
 
+## JaimeName
+Jaime[X]
+
+## JaimeDesc
+Messenger[N]
+A young hothead with little physical power[N]
+who carries messages for the rebels.[X]
+
+## LeonorName
+Leonor[X]
+
+## LeonorDesc
+Bonemender[N]
+She trains healers for the rebels, but[N]
+is always looking for new opportunities.[X]
+
 ## KhazhakName
 Khazhak[X]
 
@@ -133,3 +149,27 @@ Blackheart[X]
 Grunt[N]
 With little talent to speak of,[N]
 they risk their lives instead.[X]
+
+## FelipeName
+Felipe[X]
+
+## FelipeDesc
+Lieutenant[N]
+An imperial noble with great[N]
+confidence in his combat skills.[X]
+
+## IncendivisName
+Incendivis[X]
+
+## IncendivisDesc
+Soldier[N]
+They enforce the empire's will[N]
+and do what they're told.[X]
+
+## RebelName
+Rebel[X]
+
+## RebelDesc
+Revolutionary[N]
+They fight against the empire[N]
+to secure their freedom.[X]
