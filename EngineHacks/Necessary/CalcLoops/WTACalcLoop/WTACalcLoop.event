@@ -6,7 +6,7 @@ WTACalcFunctions:
 #ifdef ANIMA_TRIANGLE
 	POIN AnimaTriangle
 #endif // ANIMA_TRIANGLE
-POIN TriangleAdept
+POIN TriangleAdept Nonconforming
 POIN Poise
 #ifdef REAVER_SPLIT
 	POIN DoubleWeaponTriangle

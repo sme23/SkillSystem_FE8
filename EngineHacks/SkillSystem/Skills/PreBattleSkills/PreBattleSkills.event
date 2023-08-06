@@ -406,8 +406,6 @@ CatchingUp:
 POIN SkillTester
 WORD CatchingUpID
 
-
-
 #include "KeenFighter/Installer.event" 
 
 
