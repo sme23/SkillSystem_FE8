@@ -55,13 +55,13 @@
 #define ArmsMasteryID 16
 
 //Astral Blessing: At start of turn, allies within 3 spaces randomly gain SPD+2, SKL+3, or LCK+4 for 1 turn.
-#define AstralBlessingID 16
+#define AstralBlessingID 17
 
 //Chaos Style: Gain +3 AS when wielding magic against a physical foe, or vice versa.
-#define ChaosStyleID 17
+#define ChaosStyleID 18
 
 //Catching Up: If foe doubles unit, unit’s damage increases by the amount above being doubled by. (Dragz)
-#define CatchingUpID 18
+#define CatchingUpID 19
 
 //Nonconforming: Unit reverses the weapon triangle in all combats. Reavers have no effect. (Dragz)
-#define NonconformingID 19
+#define NonconformingID 20

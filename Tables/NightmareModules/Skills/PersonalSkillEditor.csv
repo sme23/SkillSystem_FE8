@@ -1,17 +1,17 @@
 INLINE PersonalSkillTable,Skill
 None,0x0
-Lua,SuppressiveFireID
-Pilar,SurpriseAttackID
-Desiderio,EyeForAnEyeID
-Razvan,ResoluteSacrificeID
-Carmen,SeaShantyID
-Ximo,RunningStartID
-Estelle,AstralBlessingID
-Hermeneglido,StudiousBlowID
-MrYodsen,LiquidCourageID
-Durgham,ArmsMasteryID
-Indio,BowRangeUpID
-Leandra,ParagonID
+0x01 Lua,SuppressiveFireID
+0x02 Pilar,SurpriseAttackID
+0x03 Desiderio,EyeForAnEyeID
+0x04 Razvan,ResoluteSacrificeID
+0x05 Carmen,SeaShantyID
+0x06 Ximo,RunningStartID
+0x07 Estelle,AstralBlessingID
+0x08 Hermenegildo,StudiousBlowID
+0x09 MrYodsen,LiquidCourageID
+0x0A Durgham,ArmsMasteryID
+0x0B Indio,BowRangeUpID
+0x0C Leandra,ParagonID
 Natasha,SealLukID
 Cormag,RallyStrID
 Ephraim,InspirationID

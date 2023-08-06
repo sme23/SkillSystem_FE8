@@ -219,6 +219,12 @@ Heartpiercer[X]
 ## IronMusketName
 Iron Musket[X]
 
+## SteelMusketName
+Steel Musket[X]
+
+## SilverMusketName
+Silver Musket[X]
+
 // EQUIPS
 
 ## HideShieldName

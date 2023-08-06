@@ -55,7 +55,7 @@ A diviner who desires to travel[N]
 to the stars in the night sky.[X]
 
 ## HermenegildoName
-Hermenegildo[X]
+Hermen[X]
 
 ## HermenegildoDesc
 Servant[N]

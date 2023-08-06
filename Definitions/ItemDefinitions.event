@@ -92,6 +92,8 @@
 
 // GUNS
 #define IronMusket $c9
+#define SteelMusket $cc
+#define SilverMusket $cd
 
 // EQUIPS
 #define HideShield $ca
