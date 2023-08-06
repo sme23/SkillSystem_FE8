@@ -47,10 +47,6 @@ ldrb r1,[r0]
 neg r1,r1
 strb r1,[r0]
 
-@and then we set the reverse triangle bit on either combatant
-mov r0, #0x4c
-ldr r1, [r4,#0x4C]
-
 End:
 pop {r4-r7, r15}
 .align
