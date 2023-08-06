@@ -10,20 +10,6 @@ jumpToHack(New_BattleInitTargetCanCounter) //writes over current "can unit count
 POP
 PROTECT 0x2C844
 
-#define BreakTargetEntry(breakerWType, brokenWType) "BYTE breakerWType brokenWType"
-#define BreakTargetTerminator "BYTE 0xFF 0xFF"
-
-
-ALIGN 4 
-BreakTargetTable: //makes a separate table that determines WTA for breaking so that it is independent of vanilla WTA
-BreakTargetEntry(Sword, Axe)
-BreakTargetEntry(Axe, Lance)
-BreakTargetEntry(Lance, Sword)
-BreakTargetEntry(Bow, Knife)
-BreakTargetEntry(Tome, Bow)
-BreakTargetEntry(Knife, Tome)
-BreakTargetTerminator
-
 ALIGN 4 
 BreakExemptCharacterList:
 //BYTE Lyon
