@@ -17,3 +17,7 @@ TomeRangeBonus:
 ALIGN 4
 RunningStartBonus:
 #incbin "RunningStart/RunningStart.dmp"
+
+ALIGN 4
+PanacheBonus:
+#incbin "Panache/Panache.dmp"

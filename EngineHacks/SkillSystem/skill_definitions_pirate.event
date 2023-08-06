@@ -65,3 +65,6 @@
 
 //Nonconforming: Unit reverses the weapon triangle in all combats. Reavers have no effect. (Dragz)
 #define NonconformingID 20
+
+//Panache: Unit can initiate combat with guns, gaining WTA and 17% crit, and increasing AS by magic. (bpat)
+#define PanacheID 21
