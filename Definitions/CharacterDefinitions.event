@@ -38,3 +38,12 @@
 //Chapter 1
 #define Khazhak $46
 #define Blackheart $47
+
+// HUB A CHAPTER UNITS
+#define DragzArmorBoss1 $48
+#define DragzArmorBoss2 $49
+#define DragzMercBoss $4a
+#define DragzNoble $4b
+#define Contractor $4c
+#define Sentinel $4d
+#define Scoundrel $4e
