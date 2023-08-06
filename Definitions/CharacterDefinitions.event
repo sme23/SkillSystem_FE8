@@ -30,6 +30,9 @@
 #define AChapterUnit9 $13
 #define AChapterUnit10 $14
 
+// CHAPTER 2
+#define Mentor $15
+
 // ENEMY/NPC ($46 through $FF)
 
 //Chapter 1
@@ -37,6 +40,15 @@
 #define Blackheart $47
 
 //Hub A2
-#define Felipe $4B
-#define Incendivis $4C
-#define Rebel $4D
+#define Felipe $53
+#define Incendivis $54
+#define Rebel $55
+// HUB A CHAPTER UNITS
+#define DragzArmorBoss1 $48
+#define DragzArmorBoss2 $49
+#define DragzMercBoss $4a
+#define DragzChampionBoss $4b
+#define DragzNoble $4c
+#define Contractor $4d
+#define Sentinel $4e
+#define Scoundrel $4f
