@@ -10,8 +10,23 @@
     ALIGN 4
     FlasubanVillageSkyMapchipConfig:
     #incbin "Dmp/Config/FlasubanVillageSky_comp.dmp"
+	
+	ALIGN 4
+    DesertBastionNightSkyObject:
+    #incbin "Dmp/Object/DesertBastionNightSky.dmp"
+	
+	ALIGN 4
+    DesertBastionNightSkyPalette:
+    #incbin "Dmp/Palette/DesertBastionNightSky_pal.dmp"
+	
+	ALIGN 4
+    DesertBastionNightSkyMapchipConfig:
+    #incbin "Dmp/Config/DesertBastionNightSky_comp.dmp"
 
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
   
+	EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
+    EventPointerTable(DesertBastionNightSkyPaletteID,DesertBastionNightSkyPalette)
+    EventPointerTable(DesertBastionNightSkyConfigID,DesertBastionNightSkyMapchipConfig)

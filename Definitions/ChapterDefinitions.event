@@ -43,8 +43,15 @@
 #define HubA_6MapChangesID 0x23
 #define HubA_6EventsID 0x24
 
+
+
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88
 #define FlasubanVillageSkyPaletteID 0x89
 #define FlasubanVillageSkyConfigID 0x8A
 #define FlasubanVillageTileAnimationsID 0x8B
+
+#define DesertBastionNightSkyObjectID 0x8C
+#define DesertBastionNightSkyPaletteID 0x8D
+#define DesertBastionNightSkyConfigID 0x8E
+#define DesertBastionNightSkyTileAnimationsID 0x8F
