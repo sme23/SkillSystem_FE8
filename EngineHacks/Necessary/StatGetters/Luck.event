@@ -6,7 +6,7 @@
 pLuckModifiers: // Luck
 	POIN prAddUnitLuck prHalveIfCapturing 
 	POIN prDebuffLuk prLukTonicBonus
-	POIN prAddEquipLuck prItemPassiveLuck prRallyLuk prDefiantLck prEquipmentLck
+	POIN prAddEquipLuck prItemPassiveLuck prRallyLuk prDefiantLck prEquipmentLck AstralBlessingLukBoost
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
