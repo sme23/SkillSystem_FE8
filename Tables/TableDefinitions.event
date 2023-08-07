@@ -44,18 +44,10 @@
 #define NegateCriticals 0x00008000
 #define CannotUse 0x00010000
 #define NegateDef 0x00020000
-#ifdef _FE8_
-  #define EirikaLock 0x00040000
-  #define EphraimLock 0x00080000
-  #define WeaponLock3 0x00100000
-  #define WeaponLock4 0x00200000
-#endif
-#ifdef _FE7_
-  #define EliwoodLock 0x00040000
-  #define HectorLock 0x00080000
-  #define LynLock 0x00100000
-  #define AthosLock 0x00200000
-#endif
+#define EirikaLock 0x00040000
+#define SkillBased 0x00080000
+#define WeaponLock3 0x00100000
+#define WeaponLock4 0x00200000
 
 //Used For Consolidated AdvWeaponLocks 
 #define AdvWeaponLock 0x01000000
