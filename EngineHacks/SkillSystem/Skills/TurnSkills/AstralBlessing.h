@@ -28,4 +28,13 @@ long long AstralBlessingSpdBoost(u8 stat, Unit* unit);
 long long AstralBlessingSklBoost(u8 stat, Unit* unit);
 long long AstralBlessingLukBoost(u8 stat, Unit* unit);
 
+extern void StartBuffFx(Unit* unit, u8 rallyBits, u8 range); //not the real return type but works for here
 
+struct FxProc {
+	PROC_HEADER;
+	u32 unit;
+	u32 effectBits;
+	u32 range;
+} typedef FxProc;
+
+extern FxProc BuffFxProc;

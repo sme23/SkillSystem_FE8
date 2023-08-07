@@ -127,3 +127,32 @@ long long AstralBlessingLukBoost(u8 stat, Unit* unit) {
 	
 }
 
+void DoAstralBlessingBuffFx(Unit* unit) {
+	StartBuffFx(unit,0x80,AstralBlessing_Range);
+
+/* 	
+	Proc* parentProc = ProcFind(&BuffAnimationSkillProc);	
+	FxProc* newProc = ProcStartBlocking(&BuffFxProc,parentProc);
+
+	newProc->unit = unit;
+	newProc->effectBits = 0x80; //rally spectrum animation
+	newProc->range = AstralBlessing_Range;
+ */	
+	/*
+	mov r4, r0 @ unit 
+	mov r5, r1 @ rally bit(s) to set 
+	mov r6, r2 @ effect range 
+	ldr r0, =BuffFxProc @ arg r0 = proc scr
+	mov r1, #3           @ arg r1 = parent
+	blh StartProc
+	str r4, [r0, #0x30] @ unit 
+	str r5, [r0, #0x34] @ bits 
+	str r6, [r0, #0x38] @ effect range 
+	*/
+	
+}
+
+bool IsAstralBlessingApplicable() {
+	return true;
+}
+
