@@ -15,10 +15,19 @@ mov r5, #0x2 @IsMagic
 tst r5, r0
 bne Magic
 
+mov r5, #0x80
+lsl r5, #12
+tst r5, r0
+bne Skill
+
 b IsStr
 
 Magic:
 mov		r7,#0x3A
+b IsStr
+
+Skill:
+mov		r7,#0x15
 
 IsStr:
 ldrb	r7,[r6,r7]

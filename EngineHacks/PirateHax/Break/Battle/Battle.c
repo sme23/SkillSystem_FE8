@@ -138,42 +138,35 @@ void New_BattleInitTargetCanCounter(){
 
 	// eggs
 	if (gBattleTarget.unit.pClassData->number == 0x34 || gBattleTarget.unit.pClassData->number == 0x62){
-		gBattleTarget.weapon = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
-	// attacker weapon is uncounterable
-	if (gBattleActor.weaponAttributes & IA_UNCOUNTERABLE){
-		gBattleTarget.weapon = 0;
-		gBattleTarget.canCounter = false;
-		return;
-	}
-
-	// target weapon is uncounterable
-	if (gBattleTarget.weaponAttributes & IA_UNCOUNTERABLE){
-		gBattleTarget.weapon = 0;
+	// attacker/target weapon is uncounterable
+	if (gBattleActor.weaponAttributes & IA_UNCOUNTERABLE || gBattleTarget.weaponAttributes & IA_UNCOUNTERABLE){
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
 	// attacker is berserked and both units are blue
 	if ((gBattleActor.unit.statusIndex == UNIT_STATUS_BERSERK) && (gBattleActor.unit.index & FACTION_BLUE) && (gBattleTarget.unit.index & FACTION_BLUE)){
-		gBattleTarget.weapon = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
     // attacker has dazzle
 	if (gSkillTester(&gBattleActor.unit, DazzleIDLink)){
-		gBattleTarget.weapon = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
 
 	// defender is broken
 	if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BREAK){
-		gBattleTarget.weapon = 0;
+        gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;
 	}
@@ -197,29 +190,6 @@ int CanUnitUseWeapon(struct Unit* unit, int item) {
 
         if ((GetItemAttributes(item) & IA_LOCK_1) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_1))
             return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_4) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_4))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_5) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_5))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_6) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_6))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_7) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_7))
-            return FALSE;
-
-        if ((GetItemAttributes(item) & IA_LOCK_2) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_2))
-            return FALSE;
-
-        // Monster lock is special
-        if (GetItemAttributes(item) & IA_LOCK_3) {
-            if (!(UNIT_CATTRIBUTES(unit) & CA_LOCK_3))
-                return FALSE;
-
-            return TRUE;
-        }
 
         if (GetItemAttributes(item) & IA_UNUSABLE)
             if (!(IsItemUnsealedForUnit(unit, item)))

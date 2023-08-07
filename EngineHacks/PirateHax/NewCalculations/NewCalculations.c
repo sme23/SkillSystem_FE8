@@ -274,3 +274,25 @@ void GetWeaponExpProgressState(int wrank, int* valOut, int* maxOut) {
 	}
 	return;
 }
+
+int CanUnitRescue(const struct Unit* actor, const struct Unit* target){
+    
+    int actorAid  = GetUnitAid(actor);
+    int targetCon = UNIT_CON(target);
+
+    return (actorAid >= targetCon) ? TRUE : FALSE;
+}
+
+int GetUnitAid(const struct Unit* unit) {
+    int aid;
+	if (UNIT_CATTRIBUTES(unit) & CA_MOUNTED){
+		aid = 25 - UNIT_CON(unit);
+	}
+	else if (UNIT_CATTRIBUTES(unit) & CA_WYVERN || UNIT_CATTRIBUTES(unit) & CA_PEGASUS){
+		aid = 20 - UNIT_CON(unit);
+	}
+	else{
+		aid = UNIT_CON(unit) - 1;
+	}
+    return aid;
+}

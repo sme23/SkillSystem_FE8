@@ -71,7 +71,7 @@ MovRallyAmount_Link:
 WORD 2 
 
 
-#define DebuffEntrySize 8 // Number of bytes 
+#define DebuffEntrySize 9 // Number of bytes 
 
 // NOTE: If you wish to use more bits in the debuff table, please use the provided functions for ease of use. 
 /*
@@ -155,7 +155,12 @@ ArmorMarchBitOffset_Link:
 WORD MiscOffset+3
 VigorDanceBitOffset_Link:
 WORD MiscOffset+4 
-
+AstralBlessingSklOffset_Link:
+WORD MiscOffset+7
+AstralBlessingSpdOffset_Link:
+WORD MiscOffset+8
+AstralBlessingLckOffset_Link:
+WORD MiscOffset+9
 
 ALIGN 4 
 RalliesNumberOfBits_Link:

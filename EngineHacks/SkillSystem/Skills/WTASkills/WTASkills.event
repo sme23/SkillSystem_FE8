@@ -16,3 +16,9 @@ Nonconforming:
 #incbin "Nonconforming/Nonconforming.dmp"
 POIN SkillTester
 WORD NonconformingID
+
+ALIGN 4
+PanacheWTA:
+#incbin "Panache/Panache.dmp"
+POIN SkillTester
+WORD PanacheID

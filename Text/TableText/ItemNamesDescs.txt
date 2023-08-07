@@ -225,6 +225,27 @@ Steel Musket[X]
 ## SilverMusketName
 Silver Musket[X]
 
+## PistolName
+Pistol[X]
+
+## CulverinName
+Culverin[X]
+
+## CulverinDesc
+A powerful gun with long range.[X]
+
+## BlunderbussName
+Blunderbuss[X]
+
+## BlunderbussDesc
+A mighty, close-ranged gun.[X]
+
+## MortarName
+Mortar[X]
+
+## MortarDesc
+Extremely long-ranged artillery.[X]
+
 // EQUIPS
 
 ## HideShieldName

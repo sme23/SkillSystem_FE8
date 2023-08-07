@@ -408,6 +408,12 @@ WORD CatchingUpID
 
 #include "KeenFighter/Installer.event" 
 
+ALIGN 4
+PanachePreBattle:
+#incbin "Panache/Panache.dmp"
+POIN SkillTester
+WORD PanacheID
+
 
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	ALIGN 4

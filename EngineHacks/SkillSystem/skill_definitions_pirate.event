@@ -51,10 +51,10 @@
 //Liquid Courage: Unit can consume 1 item per turn without losing their action. +2 STR/SKL/SPD upon doing so, decreases 1/turn.
 #define LiquidCourageID 15
 
-//Arms Mastery: If the weapon rank of unit's currently equipped weapon is higher than foe's, unit's attack is brave.
+//Arms Mastery: If the weapon rank of unit's currently equipped weapon is higher than foe's, unit's attack is brave. (Dragz)
 #define ArmsMasteryID 16
 
-//Astral Blessing: At start of turn, allies within 3 spaces randomly gain SPD+2, SKL+3, or LCK+4 for 1 turn.
+//Astral Blessing: At start of turn, allies within 3 spaces randomly gain SPD+2, SKL+3, or LCK+4 for 1 turn. (Sme)
 #define AstralBlessingID 17
 
 //Chaos Style: Gain +3 AS when wielding magic against a physical foe, or vice versa.
@@ -65,3 +65,9 @@
 
 //Nonconforming: Unit reverses the weapon triangle in all combats. Reavers have no effect. (Dragz)
 #define NonconformingID 20
+
+//Panache: Unit can initiate combat with guns, gaining WTA and 17% crit, and increasing AS by magic. (bpat)
+#define PanacheID 21
+
+//Canter: Unit can move 2 spaces after combat. (Dragz)
+#define CanterID 22

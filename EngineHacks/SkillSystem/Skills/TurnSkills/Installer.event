@@ -50,4 +50,19 @@ String(WaitForVulneraryEnd);	BYTE 0x0
 
 
 
+#include "AstralBlessing.lyn.event"
 
+AstralBlessing_Spd:
+BYTE 4
+
+AstralBlessing_Skl:
+BYTE 4
+
+AstralBlessing_Luk:
+BYTE 5
+
+AstralBlessing_Range:
+BYTE 3
+
+AstralBlessingIDLink:
+BYTE AstralBlessingID

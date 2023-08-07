@@ -1664,3 +1664,12 @@ above the doubling threshold.[X]
 Nonconforming: Unit reverses the[N]
 weapon triangle in all combats.[N]
 Reavers have no effect.[X]
+
+## SD_Panache
+Panache: Unit can initiate combat[N]
+with guns in melee, gaining WTA and[N]
+17% crit, and adding magic to AS.[X]
+
+## SD_Canter
+Canter: Unit can move 2[N]
+spaces after combat.[X]
