@@ -44,10 +44,13 @@ UNIT Rebel Myrmidon 0 Level(1,NPC,True) [10,8] 0 0 0 0 [IronSword] AttackInRange
 UNIT
 
 Enemies:
-UNIT Felipe Soldier 0 Level(6,Enemy,False) [0,11] 0 0 0 0 [Javelin, Pike] BossAI
-UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [1,11] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [0,10] 0 0 0 0 [SteelAxe] ChargeAI
-UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [1,10] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Felipe Soldier 0 Level(6,Enemy,False) [0,12] 0 0 0 0 [Javelin, Pike] BossAI
+UNIT Incendivis Gunner 0 Level(4,Enemy,True) [1,12] 0 0 0 0 [Mortar,IronMusket] NoAI
+UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [0,11] 0 0 0 0 [HandAxe] NoAI
+UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [1,11] 0 0 0 0 [HandAxe] NoAI
+UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [0,0] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [0,1] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [0,2] 0 0 0 0 [SteelSword] ChargeAI
 UNIT
 
 Traps1:
@@ -60,6 +63,7 @@ ALIGN 4
 
 BeginningScene:
 NoFade
+WEATHER 7
 LOAD1 1 Deployment
 LOAD1 1 NewUnits
 LOAD1 1 NPCs
