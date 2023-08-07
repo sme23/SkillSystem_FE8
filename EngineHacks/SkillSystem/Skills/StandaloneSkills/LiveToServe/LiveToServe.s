@@ -34,7 +34,9 @@ mov	r2,r0
 pop	{r1}
 add	r1,r5		@final hp without Resolute Sacrifice
 
-push {r1,r2}
+push {r6,r7}
+mov  r6, r1
+mov  r7, r2
 @check for Resolute Sacrifice
 ldrb	r0,[r4,#0xc]
 blh	0x8019430
@@ -56,10 +58,12 @@ blh	0x8019430
 blh	CurrHPGetter
 pop {r3}
 sub r3, r0
-pop {r1,r2}
-add r1, r3 @adds result to final heal
+add r6, r3 @adds result to final heal
 
 AfterResoluteSacrifice:
+mov r1, r6
+mov r2, r7
+pop {r6,r7}
 cmp	r1,r2
 ble	NoCap
 mov	r1,r2
