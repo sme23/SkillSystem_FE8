@@ -13,6 +13,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,LoadJaime,1)
 END_MAIN
 
 CharacterBasedEvents:
@@ -26,28 +27,28 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
-UNIT
-
-Deployment:
 UNIT Lua Captain 0 Level(10,Ally,False) [20,1] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Captain 0 Level(10,Ally,False) [21,2] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Captain 0 Level(10,Ally,False) [18,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 NewUnits:
 UNIT Jaime PegasusRider 0 Level(2,Ally,False) [19,2] 0 0 0 0 [SteelSword, IronSword] NoAI
-UNIT Leonor Cleric 0 Level(7,NPC,False) [9,9] 0 0 0 0 [Heal, Barrier] AttackInRangeAI
 UNIT
 
 NPCs:
-UNIT Rebel Deserter 0 Level(1,NPC,True) [10,10] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT Rebel Brigand 0 Level(1,NPC,True) [8,8] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT Rebel Myrmidon 0 Level(1,NPC,True) [10,8] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Leonor Cleric 0 Level(7,NPC,False) [11,9] 0 0 0 0 [Heal, Barrier] AttackInRangeAI
+UNIT Rebel Deserter 0 Level(1,NPC,True) [12,10] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Rebel Brigand 0 Level(1,NPC,True) [10,8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Rebel Myrmidon 0 Level(1,NPC,True) [12,8] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Rebel Hunter 0 Level(1,NPC,True) [10,10] 0 0 0 0 [IronBow] AttackInRangeAI
 UNIT
 
 Enemies:
-UNIT Felipe Soldier 0 Level(6,Enemy,False) [0,12] 0 0 0 0 [Javelin, Pike] BossAI
-UNIT Incendivis Gunner 0 Level(4,Enemy,True) [1,12] 0 0 0 0 [Mortar,IronMusket] NoAI
-UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [0,11] 0 0 0 0 [HandAxe] NoAI
-UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [1,11] 0 0 0 0 [HandAxe] NoAI
+UNIT Felipe Soldier 0 Level(6,Enemy,False) [0,12] 0 0 0 0 [Javelin,Pike] BossAI
+UNIT Incendivis Gunner 0 Level(4,Enemy,True) [1,12] 0 0 0 0 [Mortar,IronMusket] BossAI
+UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [0,11] 0 0 0 0 [HandAxe,Javelin] BossAI
+UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [1,11] 0 0 0 0 [HandAxe,Javelin] BossAI
 UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [0,0] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [0,1] 0 0 0 0 [SteelAxe] ChargeAI
 UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [0,2] 0 0 0 0 [SteelSword] ChargeAI
@@ -64,10 +65,15 @@ ALIGN 4
 BeginningScene:
 NoFade
 WEATHER 7
-LOAD1 1 Deployment
-LOAD1 1 NewUnits
 LOAD1 1 NPCs
 LOAD1 1 Enemies
+ENUN
+GotoPrepScreen
+ENDA
+
+LoadJaime:
+NoFade
+LOAD1 1 NewUnits
 ENUN
 ENDA
 
