@@ -296,3 +296,31 @@ int GetUnitAid(const struct Unit* unit) {
 	}
     return aid;
 }
+
+void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
+    if (uDef->autolevel) {
+        int i;
+
+        for (i = 0; i < GetUnitItemCount(unit); ++i) {
+            int wType, item = unit->items[i];
+
+            if (!(GetItemAttributes(item) & IA_REQUIRES_WEXP))
+                continue;
+
+            if (GetItemAttributes(item) & IA_WEAPON)
+                if (CanUnitUseWeapon(unit, item))
+                    continue;
+
+            if (GetItemAttributes(item) & IA_STAFF)
+                if (CanUnitUseStaff(unit, item))
+                    continue;
+
+            wType = GetItemType(item);
+
+            if (unit->ranks[wType] == 0)
+                item = 0;
+
+            unit->ranks[wType] = GetItemRequiredExp(item);
+        }
+    }
+}

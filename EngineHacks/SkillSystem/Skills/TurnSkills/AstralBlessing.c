@@ -128,7 +128,7 @@ long long AstralBlessingLukBoost(u8 stat, Unit* unit) {
 }
 
 void DoAstralBlessingBuffFx(Unit* unit) {
-	StartBuffFx(unit,0x80,AstralBlessing_Range);
+	if (IsUnitOnField(unit)) StartBuffFx(unit,0x80,AstralBlessing_Range);
 
 /* 	
 	Proc* parentProc = ProcFind(&BuffAnimationSkillProc);	
