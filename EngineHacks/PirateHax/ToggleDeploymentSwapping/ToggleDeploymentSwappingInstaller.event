@@ -52,6 +52,7 @@ ALIGN 4
 
 ForcedDeploymentList: //Vanilla list at 0x9ED64C
 ForcedDeployment(Lua,UnlockedPosition,AllModes,AllChapters)
+ForcedDeployment(Indio,UnlockedPosition,AllModes,HubA_1)
 EndForcedDeploymentList
 
 DeploymentGroupChapterList:

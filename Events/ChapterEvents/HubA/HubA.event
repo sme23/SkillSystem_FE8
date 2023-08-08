@@ -32,7 +32,7 @@ CauseGameOverIfLordDies
 END_MAIN
 
 GotoChapter1:
-TutorialYesNoText(HubA1Prompt)
+Text(HubA1Prompt)
 GotoHubChapterIfYes(1, HubA_1)
 NoFade
 ENDA
