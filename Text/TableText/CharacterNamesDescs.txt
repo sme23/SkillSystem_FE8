@@ -158,7 +158,6 @@ Grunt[N]
 With little talent to speak of,[N]
 they risk their lives instead.[X]
 
-<<<<<<< Updated upstream
 ## FelipeName
 Felipe[X]
 
@@ -182,7 +181,7 @@ Rebel[X]
 Revolutionary[N]
 They fight against the empire[N]
 to secure their freedom.[X]
-=======
+
 ## DragzArmorBoss1Name
 Baza[X]
 
@@ -237,4 +236,3 @@ Scoundrel[X]
 ## ScoundrelDesc
 An independent thief using the chaos[N]
 of battle to line their pockets.[X]
->>>>>>> Stashed changes
