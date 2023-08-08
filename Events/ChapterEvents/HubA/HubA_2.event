@@ -17,6 +17,7 @@ TurnEventPlayer(0x0,LoadJaime,1)
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(0x7,LeonorRecruitment,Jaime,Leonor)
 END_MAIN
 
 LocationBasedEvents:
@@ -30,6 +31,11 @@ Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [20,1] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar Captain 0 Level(10,Ally,False) [21,2] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar Captain 0 Level(10,Ally,False) [18,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Captain 0 Level(10,Ally,False) [21,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Captain 0 Level(10,Ally,False) [17,1] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Captain 0 Level(10,Ally,False) [20,3] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Captain 0 Level(10,Ally,False) [21,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Captain 0 Level(10,Ally,False) [16,3] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 NewUnits:
@@ -75,6 +81,10 @@ LoadJaime:
 NoFade
 LOAD1 1 NewUnits
 ENUN
+ENDA
+
+LeonorRecruitment:
+
 ENDA
 
 EndingScene:
