@@ -7,6 +7,7 @@ extern u8 LiquidCourageSklLink;
 extern u8 LiquidCourageSpdLink;
 extern u8 DebuffStatNumberOfBits_Link;
 extern u8 LiquidCourageConsumables;
+extern int GaleforceEvent;
 
 extern bool SkillTester(Unit* unit, u8 skillID);
 extern bool CheckBit(u32* address, u8 bitOffset);
@@ -21,6 +22,7 @@ void LQ_SetBuff(Unit* unit, u8 statIndex, u8 statChange);
 void ResetLiquidCourage(Unit* unit);
 bool AlwaysTrueFunc();
 bool IsLiquidCourageConsumable(u16 item);
+void LQ_GaleforceIfApplicable(Unit* unit);
 
 #define StrStatIndex 1
 #define SklStatIndex 2

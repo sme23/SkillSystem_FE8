@@ -12,7 +12,7 @@ void LiquidCourage() {
 		LQ_SetBuff(unit, StrStatIndex, LiquidCourageStrLink);
 		LQ_SetBuff(unit, SklStatIndex, LiquidCourageSklLink);
 		LQ_SetBuff(unit, SpdStatIndex, LiquidCourageSpdLink);
-		m4aSongNumStart(0x10F);
+		LQ_GaleforceIfApplicable(unit);
 	}
 	
 }
@@ -45,3 +45,17 @@ bool IsLiquidCourageConsumable(u16 item) {
 	}
 	return false;
 }
+
+void LQ_GaleforceIfApplicable(Unit* unit) {
+	//did we already galeforce?
+	if ((unit->state & 0x400) == 0) {
+		u32 newState = unit->state;
+		newState = newState & (0xFFFFFFFF - 0x42); //unset 0x42
+		newState = newState | 0x400; //set 0x400
+		unit->state = newState;
+		CallMapEventEngine(&GaleforceEvent,1); //play sfx
+	}
+	
+	
+}
+
