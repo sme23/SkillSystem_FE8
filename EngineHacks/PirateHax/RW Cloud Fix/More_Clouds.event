@@ -7,8 +7,9 @@ PUSH
 		replaceWithHack(NewSetupCloudGFX)
 POP
 
-//an example for including a new clouds image
 
+//an example for including a new clouds image
+/*
 ALIGN 4
 Test_Clouds:
 #incext Png2Dmp "space.png" --lz77
@@ -16,10 +17,11 @@ Test_Clouds:
 ALIGN 4
 TestCloudPalette:
 #incext Png2Dmp "space.png" --palette-only
+*/
 
 #include "table.event"
+
 
 #define SetChapterClouds(id,gfxPtr,palPtr) "PUSH; ORG ChapterCloudTable+(id*8); ChapterCloudTableEntry(gfxPtr,palPtr); POP"
 
 //SetChapterClouds(HubA,Test_Clouds,TestCloudPalette)
-
