@@ -146,6 +146,8 @@ StartOfTurnBuffFunctionEntry(RallyChaosID	, IsRallyApplicable,	RallyChaosFunc)
 
 StartOfTurnBuffFunctionEntry(AstralBlessingID,	IsAstralBlessingApplicable, DoAstralBlessingBuffFx)
 
+StartOfTurnBuffFunctionEntry(LiquidCourageID, AlwaysTrueFunc, ResetLiquidCourage)
+
 #include "StartOfTurn_CalcLoop.lyn.event" 
 
 

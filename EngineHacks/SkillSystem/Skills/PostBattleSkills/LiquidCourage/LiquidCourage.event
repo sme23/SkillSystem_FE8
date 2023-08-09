@@ -1,0 +1,20 @@
+// 1/turn, using consumables doesn't end unit's turn. Upon doing so, gain +2 Str/Skl/Spd, decreasing 1/turn.
+
+#include "LiquidCourage.lyn.event"
+
+LiquidCourageIDLink:
+BYTE LiquidCourageID
+
+LiquidCourageStrLink:
+BYTE 2
+
+LiquidCourageSklLink:
+BYTE 2
+
+LiquidCourageSpdLink:
+BYTE 2
+
+LiquidCourageConsumables:
+BYTE Vulnerary Elixir PureWater
+BYTE 0
+
