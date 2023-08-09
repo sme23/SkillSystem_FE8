@@ -51,3 +51,6 @@
 
 #include "ToggleDeploymentSwapping/ToggleDeploymentSwappingInstaller.event"
 //Aura Wolf
+
+#include "ModularMinimugBox-master/Installers/MMBInstallerSagaOfTheSigilbearers.event"
+//Zane

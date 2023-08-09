@@ -26,3 +26,10 @@ KhazhakMugData:
 setMugEntry(KhazhakMug, KhazhakMugData, 3, 5, 3, 3)
 
 
+ALIGN 16
+PilarMugData:
+#incbin "Dmp/Pilar_mug.dmp"
+#incbin "Dmp/Pilar_frames.dmp"
+#incbin "Dmp/Pilar_palette.dmp"
+#incbin "Dmp/Pilar_minimug.dmp"
+setMugEntry(PilarMug, PilarMugData, 5, 4, 5, 2)
