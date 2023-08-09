@@ -1,3 +1,9 @@
 ## ChA1Title
-Ch. A-1: Rights to Own
+Ch. A-1: Rights to Own[X]
 
+## ChA1GoalWindow
+Loot > Escape[X]
+
+## ChA1StatusObjective
+Recover the relic,[N]
+escape guardhouse.[X]
