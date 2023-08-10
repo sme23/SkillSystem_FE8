@@ -7,4 +7,3 @@
 #include "ClassDefinitions.event"
 #include "AIDefinitions.event"
 #include "MugDefinitions.event"
-#include "REDAs.event"
