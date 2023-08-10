@@ -54,3 +54,6 @@
 
 #include "ModularMinimugBox-master/Installers/MMBInstallerSagaOfTheSigilbearers.event"
 //Zane
+
+#include "GetBlueUnitCountASMC/GetBlueUnitCountASMC.lyn.event"
+//Sme
