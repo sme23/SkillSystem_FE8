@@ -2,8 +2,13 @@
 Ch. A-1: Rights to Own[X]
 
 ## ChA1GoalWindow
-Loot > Escape[X]
+Loot / Escape[X]
 
 ## ChA1StatusObjective
 Recover the relic,[N]
 escape guardhouse.[X]
+
+## ChA1BeginningScene1
+[L][LoadRazvan]
+[FR][LoadLua]
+[FR][X]

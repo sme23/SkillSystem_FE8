@@ -19,6 +19,9 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Door(5, 3)
+Door(6, 3)
+Escape(5, 2)
 END_MAIN
 
 MiscBasedEvents:
@@ -27,13 +30,26 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
+UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT Indio Shaman 0 Level(1, Ally, False) [5,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [7,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [4,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT Indio Shaman 0 Level(1, Ally, False) [6,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT
 
 EnemyUnits1:
 UNIT Leandra Fighter 0 Level(5, Ally, False) [12,4] 0 0 0 0 [Bloodaxe, HandAxe, Vulnerary] NoAI
 UNIT Scoundrel Myrmidon 0 Level(3, Enemy, True) [6, 7] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT
+
+LuaRazvanCutsceneUnits:
+UNIT Lua Captain 0 Level(1, Ally, False) [0,3] 0 0 0 0 [0x0, 0x0, 0x0, 0x0] NoAI
+UNIT
+
+IndioCutsceneUnit:
 UNIT
 
 Traps1:
@@ -45,6 +61,7 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+ENUT AllUnitsMustEscapeFlag
 LOAD1 1 Units1
 ENUN
 LOAD1 1 EnemyUnits1

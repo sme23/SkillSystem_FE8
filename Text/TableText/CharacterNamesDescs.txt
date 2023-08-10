@@ -198,7 +198,7 @@ Guardshelm[X]
 Bizi[X]
 
 ## DragzMercBossDesc
-Head Honcho[X]
+Wrangler[X]
 
 ## DragzChampionBossName
 Buzu[X]
