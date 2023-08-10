@@ -1,5 +1,11 @@
 EventPointerTable(HubA_1EventsID, PointerList)
 
+#define CarmenIndioTalkSeen 0x7
+#define LeandraRecruited 0x8
+#define RelicRecovered 0x9
+#define ObjectiveSwitched 0xA
+#define EscapeDisallowed 0xB
+
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -19,13 +25,40 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Escape(EscapeDisallowed, EscapeEventCheck, 5, 2)
+DurabilityChest(SkillScroll, CanterID, 17, 4)
+ChestMoney(3000, 6, 15)
+Chest(Bloodletter, 22, 15)
+CHES RelicRecovered IronSword [18, 7] 0x14 // Macro can't set a flag so this is the objective chest 
 END_MAIN
 
 MiscBasedEvents:
+AFEV ObjectiveSwitched SwitchObjective RelicRecovered
+AFEV 0x0 CheckNoUnits 0x0
 CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
+UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [7,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [4,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT
+
+EnemyUnits1:
+UNIT Scoundrel Myrmidon 0 Level(3, Enemy, True) [28, 5] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT
+
+LuaRazvanCutsceneUnits:
+UNIT Lua Captain 0 Level(1, Ally, False) [0,3] 0 0 0 0 [0x0, 0x0, 0x0, 0x0] NoAI
+UNIT
+
+IndioCutsceneUnit:
 UNIT
 
 Traps1:
@@ -37,6 +70,38 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+ENUT EscapeDisallowed
+ENUT AllUnitsMustEscapeFlag
+TILECHANGE 0x8
+LOAD1 1 Units1
+ENUN
+LOAD1 1 EnemyUnits1
+ENUN
+GotoPrepScreen
+NoFade
+ENDA
+
+ALIGN 4
+SwitchObjective:
+AddTrap(BlueSigilTrapID, 5, 2)
+AddTrap(BlueSigilTrapID, 6, 2)
+AddTrap(BlueSigilTrapID, 26, 8)
+AddTrap(BlueSigilTrapID, 27, 8)
+ENUF EscapeDisallowed
+NoFade
+ENDA
+
+EscapeEventCheck:
+ENUF EscapeDisallowed
+NoFade
+ENDA
+
+CheckNoUnits:
+ASMC GetBlueUnitCountASMC
+BNE 1 s0 sC
+    ENUT 0x03
+    CALL EndingScene
+LABEL 1
 NoFade
 ENDA
 
