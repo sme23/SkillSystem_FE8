@@ -163,6 +163,8 @@ AstralBlessingLckOffset_Link:
 WORD MiscOffset+9
 LiquidCourageBitOffset_Link:
 WORD MiscOffset+10
+StudiousBlowBitOffset_Link:
+WORD MiscOffset+11
 
 ALIGN 4 
 RalliesNumberOfBits_Link:
