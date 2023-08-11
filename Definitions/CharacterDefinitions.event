@@ -43,6 +43,7 @@
 #define Felipe $53
 #define Incendivis $54
 #define Rebel $55
+#define IncendivisGroupAI $56
 // HUB A CHAPTER UNITS
 #define DragzArmorBoss1 $48
 #define DragzArmorBoss2 $49

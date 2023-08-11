@@ -58,6 +58,12 @@ UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [1,11] 0 0 0 0 [HandAxe,Javelin] 
 UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [0,0] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [0,1] 0 0 0 0 [SteelAxe] ChargeAI
 UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [0,2] 0 0 0 0 [SteelSword] ChargeAI
+UNIT IncendivisGroupAI Archer 0 Level(3,Enemy,True) [10,2] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT IncendivisGroupAI Shaman 0 Level(3,Enemy,True) [10,1] 0 0 0 0 [Elfire] AttackInRangeAI
+UNIT IncendivisGroupAI Thief 0 Level(3,Enemy,True) [10,0] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT Incendivis Soldier 0 Level(3,Enemy,True) [5,2] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Incendivis Fighter 0 Level(4,Enemy,True) [4,2] 0 0 0 0 [Bloodaxe] ChargeAI
+UNIT Incendivis Mercenary 0 Level(3,Enemy,True) [3,2] 0 0 0 0 [SteelSword] ChargeAI
 UNIT
 
 Traps1:
@@ -84,7 +90,7 @@ ENUN
 ENDA
 
 LeonorRecruitment:
-
+CUSA Leonor
 ENDA
 
 EndingScene:
