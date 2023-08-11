@@ -740,17 +740,17 @@
     ldr     r0, =SSS_StatsBoxTSA
     b       DecompressBoxTSA
   DefaultBox:
-    ldr     r0, =#0x8A02204   @box TSA
+    ldr     r0, =0x8A02204   @box TSA
   DecompressBoxTSA:
   ldr     r4, =gGenericBuffer
   mov     r1, r4
   blh     Decompress
-  ldr     r0, =#0x20049EE     @somewhere on the bgmap
+  ldr     r0, =0x20049EE     @somewhere on the bgmap
   mov     r2, #0xC1
   lsl     r2, r2, #0x6
   mov     r1, r4
   blh     BgMap_ApplyTsa
-  ldr     r0, =#0x8205A24     @map of text labels and positions
+  ldr     r0, =0x8205A24     @map of text labels and positions
   blh     DrawStatscreenTextMap
   ldr     r6, =StatScreenStruct
   ldr     r0, [r6, #0xC]
@@ -797,20 +797,21 @@
   lsl     r4, r4, #0x1
   add     r0, r4, #1
   lsl     r0, r0, #0x6
-  ldr     r1, =#0x2003D4C
+  ldr     r1, =0x2003D4C
   add     r0, r0, r1
   mov     r1, #0x0
   mov     r2, #0x35            @the equip 'E'
   blh     DrawSpecialUiChar
   add     r0, r4, #2
   lsl     r0, r0, #0x6
-  ldr     r1, =#0x200472E
+  ldr     r1, =0x200472E
   add     r0, r0, r1
-  ldr     r1, =#0x8A02250     @TSA for highlight bar
+  ldr     r1, =0x8A02250     @TSA for highlight bar
   mov     r2, #0xC1
   lsl     r2, r2, #0x6
   blh     BgMap_ApplyTsa
-  
+  ldr r0, [r6, #0xC]
+  blh DrawUnitEquippedItem
   cmp     r5, #0x0
   bne     SS_DoneEquipHighlightBar
   
@@ -830,7 +831,7 @@
   cmp     r0, #Deny_Statscreen_Class_Lo
   beq     SS_DrawItemBox_Unarmed
   
-  ldr     r4, =#0x200407C     @bgmap offset
+  ldr     r4, =0x200407C     @bgmap offset
   ldr     r6, =gActiveBattleUnit
   mov     r0, r6
   add     r0, #0x5A         @load battle atk
@@ -866,7 +867,7 @@
   b       SS_DrawItemBox_RangeText
   
   SS_DrawItemBox_Unarmed:
-  ldr     r4, =#0x200407C
+  ldr     r4, =0x200407C
   mov     r0, r4
   mov     r1, #0x2
   mov     r2, #0xFF
@@ -895,7 +896,7 @@
   mov     r0, r5
   blh     GetItemRangeString
   mov     r5, r0
-  ldr     r4, =#0x2003CB4
+  ldr     r4, =0x2003CB4
   blh     Text_GetStringTextWidth
   mov     r1, #0x37
   sub     r1, r1, r0
@@ -905,11 +906,11 @@
   blh     Text_InsertString, r4
   mov     r4, #0x0
   ldr     r0, =gpStatScreenPageBg0Map
-  ldr     r3, =#0x7060
+  ldr     r3, =0x7060
   mov     r5, r3
-  ldr     r6, =#0x2C2
+  ldr     r6, =0x2C2
   add     r2, r0, r6
-  ldr     r1, =#0x7068
+  ldr     r1, =0x7068
   mov     r3, r1
   add     r6, #0x40
   add     r1, r0, r6
@@ -926,6 +927,9 @@
   cmp     r4, #0x7
   ble     loc_0x8087660
   
+b SkipPool
+.ltorg
+SkipPool:
 .endm
 
 .macro draw_items_text showBallista=0
@@ -1018,9 +1022,9 @@
     mov     r2, #Grey
   SS_DrawItemName:
   lsl     r0, r4, #0x3
-  ldr     r1, =#0x2003C8C
+  ldr     r1, =0x2003C8C
   add     r0, r0, r1
-  ldr     r3, =#0x2003D2E    @ypos?
+  ldr     r3, =0x2003D2E    @ypos?
   add     r3, r6, r3
   mov     r1, r5
   blh     DrawItemOnStatscreen, r5

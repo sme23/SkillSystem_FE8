@@ -1,0 +1,11 @@
+
+#include "StudiousBlow.lyn.event"
+
+ALIGN 4
+StudiousBlowIDLink:
+BYTE StudiousBlowID
+
+ALIGN 4
+StudiousBlowByteLoc:
+WORD $203F105
+

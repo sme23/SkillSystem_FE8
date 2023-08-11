@@ -1,5 +1,8 @@
 EventPointerTable(HubAEventsID, PointerList)
 
+// temp flags
+#define SeenHubA1Pitch 0x7
+
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -32,8 +35,15 @@ CauseGameOverIfLordDies
 END_MAIN
 
 GotoChapter1:
-TutorialYesNoText(HubA1Prompt)
-GotoHubChapterIfYes(1, HubA_1)
+CHECK_EVENTID SeenHubA1Pitch
+BNE 7 sC s0
+Text(HubA1Pitch)
+LABEL 7
+EVBIT_MODIFY 4
+Text(HubA1Prompt)
+ENUT SeenHubA1Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
 NoFade
 ENDA
 
