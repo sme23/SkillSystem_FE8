@@ -13,6 +13,10 @@
 #define BartzMug $45
 #define IndioMug $c
 #define LeandraMug $d
+#define JaimeMug $e
+#define LeonorMug $f
+#define OndehMug $10
+#define BikoMug $11
 
 #define MentorMug $16
 

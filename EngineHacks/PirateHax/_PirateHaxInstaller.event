@@ -60,3 +60,6 @@
 
 #include "GroupAI/GroupAI.event"
 //PhantomSentine
+
+#include "FE8-Set Condition/FE8-Set Condition.event"
+//Tequila

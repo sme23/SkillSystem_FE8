@@ -89,8 +89,10 @@
 [LoadBartz] = [LoadFace][0x45][0x1]
 [LoadIndio] = [LoadFace][0xc][0x1]
 [LoadLeandra] = [LoadFace][0xd][0x1]
-
-
+[LoadJaime] = [LoadFace][0xe][0x1]
+[LoadLeonor] = [LoadFace][0xf][0x1]
+[LoadOndeh] = [LoadFace][0x10][0x1]
+[LoadBiko] = [LoadFace][0x11][0x1]
 
 
 

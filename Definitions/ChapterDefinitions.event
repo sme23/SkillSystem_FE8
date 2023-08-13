@@ -55,3 +55,8 @@
 #define DesertBastionNightSkyPaletteID 0x8D
 #define DesertBastionNightSkyConfigID 0x8E
 #define DesertBastionNightSkyTileAnimationsID 0x8F
+
+#define MountainousObjectID 0x6C
+#define MountainousPaletteID 0x6D
+#define MountainousConfigID 0x6E
+#define MountainousTileAnimationsID 0x5
