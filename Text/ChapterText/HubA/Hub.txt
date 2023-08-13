@@ -1,6 +1,32 @@
 ## HubATitle
 Hub A - Port Greagor[X]
 
+//Hub A of Pirate Project
+//Scenario: The crew arrives in Port Greagor and heads to port to sell the boat (first go-around). Various events occur in Port Greagor, and Hermenegildo/Estelle join you in the first run through the hub. Second and afterwards ones don't have the initial scene and just have hub events, changing every two chapters.
+
+
+//Scene 1
+//Lua and the crew sail towards their destination, and as they get close, Lua, Desiderio, and Pilar discuss the details of selling their new ship.
+//Desiderio and Pilar "cleaned" the ship by getting rid of the Blackhearts so that they could sell it; Lua is mildly displeased but accepts Desiderio's logic.
+//Lua brings up the possibility of keeping it for their fleet on their growing crew, but denies it due to the vessel being too wide for quick travel.
+//Desiderio says that they need a name for the crew before even considering that, to which Lua is noncommited, blaming her lack of creativity.
+//The group splits: Pilar and Desiderio take the Blackheart ship and head to port to sell it, while Lua and the rest head back to the crew's hideout.
+
+//Scene 2
+//Lua docks the boat, and Razvan thanks the Maker that they finally made it back. Lua asks if he wants her to accompany him into town and purchase anything,
+//but he says no, wanting to be nowhere near such a gathering of pirates. The two are greeted by Hermenegildo, another novice of the crew who was saved by
+//Lua from a life of servitude to a different pirate crew (who saved him from starvation when he was stranded). Lua thanks him for keeping an eye on the base,
+//saying that his debt to her has been reduced: she paid to free him from those pirates, after realizing he was a well-learned individual that she could use.
+//Hermenegildo pleads Lua for a tome he can use, to which Lua replies that she'll purchase one for him if he's willing to increase his debt: he relents.
+//Razvan asks Hermenegildo if he can teach him some of his tome knowledge, as he wants to learn how to defend himself, and Lua offers to decrease Hermenegildo's
+//debt if he does: The scholar agrees immediately, and the two set off for the hideout's library. Lua makes for port, wanting to check on the boat's sale.
+
+//Base Scene 1; Characters: Carmen and Ximo
+
+//Base Scene 2; Characters: Razvan and Hermenegildo
+
+//Scene 3
+
 ## HubA1Pitch
 [ML][LoadMentor]
 [R][LoadLua]
