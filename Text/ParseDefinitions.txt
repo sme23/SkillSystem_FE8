@@ -70,6 +70,8 @@
 [MoFR] = [MoveFarRight]
 [MoFFR] = [MoveFarFarRight]
 
+[OpenQuote] = [0x93]
+
 [CurrentPortrait] = [0xFF][0xFF]
 [LoadCurrent] = [LoadFace][CurrentPortrait]
 
@@ -93,17 +95,15 @@
 [LoadLeonor] = [LoadFace][0xf][0x1]
 [LoadOndeh] = [LoadFace][0x10][0x1]
 [LoadBiko] = [LoadFace][0x11][0x1]
-
-
-
-
-
+[LoadSuzanne] = [LoadFace][0x1b][0x1]
 
 [LoadMentor] = [LoadFace][0x16][0x1]
 [LoadOrlando] = [LoadMentor]
 [LoadRahel] = [LoadFace][0x17][0x1]
 
 [LoadKhazhak] = [LoadFace][0x31][0x1]
+[LoadSantiago] = [LoadFace][0x31][0x1]
+[LoadRochefort] = [LoadFace][0x31][0x1]
 
 [LoadIda] = [LoadFace][0x51][0x1]
 
