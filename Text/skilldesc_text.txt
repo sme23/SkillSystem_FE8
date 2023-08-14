@@ -1599,7 +1599,7 @@ Biding Blow: If the opponent[N]
 cannot counter, this unit doubles.[X]
 
 ## SD_SuppressiveFire
-Suppressive Fire: If an ally attacks an[N]
+Suppressive Fire: If an ally attacks[N]
 an enemy in this unit's attack range,[N]
 ally ignores enemy's AVO.[X]
 

@@ -173,3 +173,5 @@ POP
 
 #include "LiquidCourage/LiquidCourage.event"
 
+#include "StudiousBlow/StudiousBlow.event"
+

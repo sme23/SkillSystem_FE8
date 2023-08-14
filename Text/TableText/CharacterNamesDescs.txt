@@ -134,6 +134,20 @@ Bonemender[N]
 She trains healers for the rebels, but[N]
 is always looking for new opportunities.[X]
 
+## OndehName
+Ondeh[X]
+
+## OndehDesc
+A young woman forced to grow up[N]
+too soon. Biko's elder sister.[X]
+
+## BikoName
+Biko[X]
+
+## BikoDesc
+A young man trying to find[N]
+his confidence. Ondeh's brother.[X]
+
 ## SuzanneName
 Suzanne[X]
 
@@ -181,3 +195,58 @@ Rebel[X]
 Revolutionary[N]
 They fight against the empire[N]
 to secure their freedom.[X]
+
+## DragzArmorBoss1Name
+Baza[X]
+
+## DragzArmorBoss1Desc
+Guardshelm[X]
+
+## DragzArmorBoss2Name
+Bozo[X]
+
+## DragzArmorBoss2Desc
+Guardshelm[X]
+
+## DragzMercBossName
+Bizi[X]
+
+## DragzMercBossDesc
+Wrangler[X]
+
+## DragzChampionBossName
+Buzu[X]
+
+## DragzChampionBossDesc
+Minder[X]
+
+## DragzNobleName
+Beze[X]
+
+## DragzNobleDesc
+Parasite[N]
+The head of House Sanz, whose relic[N]
+collection hoards cultures worldwide.[X]
+
+## ContractorName
+Contractor[X]
+
+## ContractorDesc
+Muscle[N]
+A fresh member of a mercenary group[N]
+hired to defend House Sanz's guardhouse.[X]
+
+## SentinelName
+Sentinel[X]
+
+## SentinelDesc
+Guardsman[N]
+A full-time officer of House Sanz's[N]
+ever-increasing guard regime.[X]
+
+## ScoundrelName
+Scoundrel[X]
+
+## ScoundrelDesc
+An independent thief using the chaos[N]
+of battle to line their pockets.[X]

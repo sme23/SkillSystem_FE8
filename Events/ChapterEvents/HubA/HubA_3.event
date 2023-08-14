@@ -36,6 +36,12 @@ Traps2:
 ENDTRAP
 ALIGN 4
 
+EnemyGroup:
+UNIT Khazhak Fighter 0 Level(5,Enemy,False) [17,8] 0 0 0 0 [SteelAxe, HandAxe, HideShield] BossAI
+UNIT Blackheart Deserter 0 Level(2, Enemy, True) [17,7] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,8] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT
+
 BeginningScene:
 NoFade
 ENDA

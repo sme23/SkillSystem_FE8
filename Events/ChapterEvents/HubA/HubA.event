@@ -1,5 +1,8 @@
 EventPointerTable(HubAEventsID, PointerList)
 
+// temp flags
+#define SeenHubA1Pitch 0x7
+
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -28,12 +31,26 @@ AREA 0 GotoChapter3 [12, 3] [12, 3]
 AREA 0 GotoChapter4 [2, 8] [2, 8]
 AREA 0 GotoChapter5 [7, 8] [7, 8]
 AREA 0 GotoChapter6 [12, 8] [12, 8]
+AFEV 0 RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
 
+RefreshLua:
+SVAL s1 0x42
+UNSET_CONDITION Lua
+NoFade
+ENDA
+
 GotoChapter1:
-TutorialYesNoText(HubA1Prompt)
-GotoHubChapterIfYes(1, HubA_1)
+CHECK_EVENTID SeenHubA1Pitch
+BNE 7 sC s0
+Text(HubA1Pitch)
+LABEL 7
+EVBIT_MODIFY 4
+Text(HubA1Prompt)
+ENUT SeenHubA1Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
 NoFade
 ENDA
 
