@@ -123,7 +123,7 @@ int GetUnitEffectiveLevel(Unit* unit){
 	int effectiveLevel = unit->level;
 
     if (unit->pClassData->attributes & CA_PROMOTED){
-        effectiveLevel += 10;
+        effectiveLevel += 5;
     }
 
 	return effectiveLevel;
