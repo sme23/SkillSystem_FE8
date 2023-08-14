@@ -71,9 +71,9 @@
 [MoFFR] = [MoveFarFarRight]
 
 [CurrentPortrait] = [0xFF][0xFF]
-
-
 [LoadCurrent] = [LoadFace][CurrentPortrait]
+
+
 [LoadLua] = [LoadFace][0x2][0x1]
 [LoadPilar] = [LoadFace][0x3][0x1]
 [LoadDesiderio] = [LoadFace][0x4][0x1]
@@ -100,8 +100,12 @@
 
 
 [LoadMentor] = [LoadFace][0x16][0x1]
+[LoadOrlando] = [LoadMentor]
+[LoadRahel] = [LoadFace][0x17][0x1]
 
 [LoadKhazhak] = [LoadFace][0x31][0x1]
+
+[LoadIda] = [LoadFace][0x51][0x1]
 
 [Font] = [0x80][0x26]
 [TextPalette] = [0x80][0x27]
