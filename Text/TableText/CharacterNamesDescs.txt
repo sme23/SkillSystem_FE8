@@ -250,3 +250,15 @@ Scoundrel[X]
 ## ScoundrelDesc
 An independent thief using the chaos[N]
 of battle to line their pockets.[X]
+
+## SargargalaName
+Sargargala[X]
+
+## SargargalaDesc
+ [X]
+
+## LogPirateName
+R. Reaper[X]
+
+## LogPirateDesc
+ [X]
