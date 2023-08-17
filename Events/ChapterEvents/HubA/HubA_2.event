@@ -25,6 +25,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
 END_MAIN
 
 Units1:
@@ -81,6 +82,8 @@ WEATHER 7
 LOAD1 1 NPCs
 LOAD1 1 Enemies
 ENUN
+SetBackground(Town_Day)
+Text(A2PrePrepsCutscene)
 GotoPrepScreen
 ENDA
 
@@ -91,6 +94,7 @@ ENUN
 ENDA
 
 LeonorRecruitment:
+Text(A2LeonorRecruitment)
 CUSA Leonor
 ENDA
 
