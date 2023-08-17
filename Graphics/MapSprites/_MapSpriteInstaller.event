@@ -263,3 +263,14 @@ DreadnoughtSMS:
 ALIGN 4
 DreadnoughtMMS:
 #incbin "Dmp/Knight (U) FE10-Style Bow {Unknown}-walk.dmp"
+
+StandingMapSprite(SeraphMapSprite,MapSprite16x32,SeraphSMS)
+MovingMapSprite(Seraph, $1C3D7C, SeraphMMS)
+
+ALIGN 4
+SeraphSMS:
+#incbin "Dmp/Pegasi (F) T2 Staff {Blademaster}-stand.dmp"
+
+ALIGN 4
+SeraphMMS:
+#incbin "Dmp/Pegasi (F) T2 Staff {Blademaster}-walk.dmp"

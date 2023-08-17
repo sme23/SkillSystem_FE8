@@ -144,3 +144,12 @@ Dreadnought[X]
 
 ## DreadnoughtDesc
  [X]
+
+## SageDesc
+ [X]
+
+## SeraphName
+Seraph[X]
+
+## SeraphDesc
+ [X]
