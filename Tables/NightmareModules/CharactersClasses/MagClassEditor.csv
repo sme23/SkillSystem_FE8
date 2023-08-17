@@ -38,8 +38,8 @@ Wyvern Knight,1,20,30,1
 Wyvern Knight (F),1,20,30,1
 Mage,7,50,20,0
 Mage (F),7,50,20,0
-Sage,5,45,30,1
-Sage (F),4,45,30,1
+Sage,10,50,30,0
+Sage (F),10,50,30,0
 Mage Knight,4,40,30,2
 Mage Knight (F),3,40,30,2
 Bishop,4,35,25,2
@@ -142,7 +142,7 @@ Champion,1,20,20,0
 Log,0,0,0,0
 Master Ninja,4,30,30,0
 Dreadnought,1,20,30,0
-Ephraim Lord,1,10,20,0
+Seraph,7,40,30,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0
