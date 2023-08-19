@@ -91,6 +91,8 @@ LoadJaime:
 NoFade
 LOAD1 1 NewUnits
 ENUN
+CameraCursor(Jaime)
+Text(A2JaimeJoins)
 ENDA
 
 LeonorRecruitment:
