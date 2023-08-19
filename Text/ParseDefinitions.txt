@@ -74,7 +74,10 @@
 [MoFFR] = [MoveFarFarRight]
 
 [OpenQuote] = [0x93]
+[CloseQuote] = [0x94]
+[ú] = [0xFA]
 [OQ] = [OpenQuote]
+[CQ] = [CloseQuote]
 [ó] = [0xf3]
 
 [TS] = [ToggleSmile]
@@ -111,6 +114,10 @@
 [LoadKhazhak] = [LoadFace][0x31][0x1]
 [LoadSantiago] = [LoadFace][0x31][0x1]
 [LoadRochefort] = [LoadFace][0x31][0x1]
+[LoadGeraldo] = [LoadFace][0x31][0x1]
+[LoadYurena] = [LoadFace][0x31][0x1]
+[LoadSanz] = [LoadFace][0x31][0x1]
+[ilike0x31asourplaceholderportraitidlol] = [LoadFace][0x31][0x1]
 
 [LoadIda] = [LoadFace][0x51][0x1]
 [LoadSailor] = [LoadFace][0x6B][0x1]
