@@ -16,6 +16,9 @@
 [.7] = [.......]
 [Beat] = [ToggleMouthMove]...[.4][ToggleMouthMove]
 [Event] = [LoadOverworldFaces]
+[CSS] = [CloseSpeechSlow]
+[CF] = [ClearFace]
+[CSSCF] = [CSS][CF]
 
 [,] = ,[.4]
 [5.] = .[.5]
@@ -71,6 +74,10 @@
 [MoFFR] = [MoveFarFarRight]
 
 [OpenQuote] = [0x93]
+[OQ] = [OpenQuote]
+[ó] = [0xf3]
+
+[TS] = [ToggleSmile]
 
 [CurrentPortrait] = [0xFF][0xFF]
 [LoadCurrent] = [LoadFace][CurrentPortrait]
@@ -107,6 +114,7 @@
 [LoadFelipe] = [LoadFace][0x36][0x1]
 
 [LoadIda] = [LoadFace][0x51][0x1]
+[LoadSailor] = [LoadFace][0x6B][0x1]
 
 [Font] = [0x80][0x26]
 [TextPalette] = [0x80][0x27]
