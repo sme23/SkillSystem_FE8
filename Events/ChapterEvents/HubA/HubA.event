@@ -88,6 +88,8 @@ ENDA
 
 GotoChapter6:
 Text(HubA6Pitch)
+Text(ChA6Pre1)
+Text(ChA6Pre2)
 TutorialYesNoText(HubA6Prompt) 
 GotoHubChapterIfYes(6, HubA_6)
 NoFade
