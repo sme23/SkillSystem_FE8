@@ -27,7 +27,7 @@
 #define Biko $10
 #define AChapterUnit7 $11
 #define AChapterUnit8 $12
-#define AChapterUnit9 $13
+#define Matteo $13
 #define Suzanne $14
 
 // CHAPTER 2
@@ -61,3 +61,8 @@
 #define Sargargala $5B
 #define LogPirate $5C
 #define RiojaReaper LogPirate
+
+//Hub A6
+#define Slicer 0x50
+#define Dicer 0x51
+#define Santiago 0x52
