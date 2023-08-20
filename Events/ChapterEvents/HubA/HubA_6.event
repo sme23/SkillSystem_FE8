@@ -233,7 +233,7 @@ END_MAIN
 
 Units1:
 LoadUnit(4,23,Lua)
-UNIT Matteo Mercenary 0 Level(4,Ally,False) [6,23] 0 0 0 0 [SteelSword, IronSword, Estoc, Vulnerary] NoAI
+UNIT Matteo Mercenary 0 Level(5,Ally,False) [6,23] 0 0 0 0 [SteelSword, IronSword, Estoc, Vulnerary] NoAI
 UNIT Suzanne Gunner 0 Level(4,Ally,False) [9,23] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
 LoadUnit(5,24)
 LoadUnit(7,24)
