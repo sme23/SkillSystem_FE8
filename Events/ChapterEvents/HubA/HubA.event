@@ -118,6 +118,9 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+// only here for chapter A1 testing
+SVAL s3 3000
+GIVEMONEY Lua
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 GotoPrepScreen
 ENUN
