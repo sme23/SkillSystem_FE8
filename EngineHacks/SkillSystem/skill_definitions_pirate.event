@@ -82,3 +82,5 @@
 #define AdaptableID 25
 
 #define ShoveID 26
+
+#define FuseID 27
