@@ -70,6 +70,9 @@
 #include "HubFlagChecks/Installer.event"
 //Loog
 
+#include "SetStatus/SetStatusInstaller.event"
+//7743, Vesly
+
 
 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps
 PUSH 
