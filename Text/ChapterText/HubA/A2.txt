@@ -40,7 +40,7 @@ Hmph. I see you're not going to listen to[N]
 reason, so you leave me no choice![AN]
 [MidLeft][CloseSpeechSlow][MoveFarFarLeft][ClearFace]
 // This next load should be a generic soldier so I just chose someone random
-[MidLeft][LoadBartz][3LB]
+[MidLeft][LoadRebel][3LB]
 Uh[Beat] Boss? One of those soldiers has[N]
 a mortar. We're new recruits, and I doubt[N]
 we can face such a powerful weapon.[AN]
@@ -89,4 +89,26 @@ so I guess you're in command here.[AN]
 Splendid[Beat] I mean, good![N]
 I won't let you down, Commander Leonor![N]
 (Even though you insulted my hires[Beat])[AN]
+[X]
+
+## A2Village
+[MidLeft][LoadVillager][MidRight][LoadCurrent]
+[MidLeft][3LB]
+What? The Empire's here?[N]
+Damn! I hate those scoundrels![N]
+I was going to give this staff[AN]
+to the rebel Leonor, so could[N]
+you get it to her? I hadn't even[N]
+seen her yet[Beat][AN]
+[X]
+
+## A2FelipeFreaksOut
+[MidLeft][LoadFelipe]
+[MidLeft][3LB]
+D-Damn! The villains are upon[N]
+us! Charge them! Do whatever![N]
+Just don't let them kill me![AN]
+[X]
+
+## A2Ending1
 [X]
