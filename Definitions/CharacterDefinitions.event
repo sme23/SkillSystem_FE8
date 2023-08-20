@@ -32,6 +32,7 @@
 
 // CHAPTER 2
 #define Mentor $15
+#define Orlando Mentor
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -39,15 +40,16 @@
 #define Khazhak $46
 #define Blackheart $47
 
+// HUB A CHAPTER UNITS
 
 // HUB A CHAPTER ENEMIES + NPCS
 
 //Hub A1
-#define DragzArmorBoss1 $48
-#define DragzArmorBoss2 $49
-#define DragzMercBoss $4a
-#define DragzChampionBoss $4b
-#define DragzNoble $4c
+#define Buzu $48
+#define Bozo $49
+#define Geraldo $4a
+#define Yurena $4b
+#define Sanz $4c
 #define Contractor $4d
 #define Sentinel $4e
 #define Scoundrel $4f
@@ -56,6 +58,7 @@
 #define Felipe $53
 #define Incendivis $54
 #define Rebel $55
+#define IncendivisHP $56
 
 //Hub A3
 #define Sargargala $5B

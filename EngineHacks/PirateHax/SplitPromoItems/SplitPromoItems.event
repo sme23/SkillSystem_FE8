@@ -41,6 +41,8 @@ PromoListEnd
 ALIGN 4
 HuntersMarkPromoList:
 PromoListEntry(Ninja, Assassin)
+PromoListEntry(Archer, Sniper)
+PromoListEntry(Archer_F, Sniper_F)
 PromoListEnd
 
 ALIGN 4
@@ -51,14 +53,20 @@ PromoListEnd
 ALIGN 4
 RidersBadgePromoList:
 PromoListEntry(Vanguard, Cataphract)
+PromoListEntry(Mage, MageKnight)
+PromoListEntry(Mage_F, MageKnight_F)
 PromoListEnd
 
 ALIGN 4
 MagesRingPromoList:
 PromoListEntry(Curate, Sage)
+PromoListEntry(Mage, Sage)
+PromoListEntry(Mage_F, Sage_F)
 PromoListEnd
 
 ALIGN 4
 FliersPermitPromoList:
 PromoListEntry(Curate, Seraph)
+PromoListEntry(Archer, Bombardier)
+PromoListEntry(Archer_F, Bombardier)
 PromoListEnd

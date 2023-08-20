@@ -204,34 +204,42 @@ Revolutionary[N]
 They fight against the empire[N]
 to secure their freedom.[X]
 
-## DragzArmorBoss1Name
-Baza[X]
-
-## DragzArmorBoss1Desc
-Guardshelm[X]
-
-## DragzArmorBoss2Name
-Bozo[X]
-
-## DragzArmorBoss2Desc
-Guardshelm[X]
-
-## DragzMercBossName
-Bizi[X]
-
-## DragzMercBossDesc
-Wrangler[X]
-
-## DragzChampionBossName
+## BuzuName
 Buzu[X]
 
-## DragzChampionBossDesc
-Minder[X]
+## BuzuDesc
+Guardshelm[N]
+One half of House Sanz's guardian duo,[N]
+who were selected by an arena victory.[X]
 
-## DragzNobleName
-Beze[X]
+## BozoName
+Bozo[X]
 
-## DragzNobleDesc
+## BozoDesc
+Guardshelm[N]
+The other half of House Sanz's guardian duo,[N]
+who were selected by an arena victory.[X]
+
+## GeraldoName
+Geraldo[X]
+
+## GeraldoDesc
+Rehabilitator[N]
+An honorable and complacent merc known for[N]
+reforming and taking in hardened criminals.[X]
+
+## YurenaName
+Yurena[X]
+
+## YurenaDesc
+Minder[N]
+The personal bodyguard of Count Sanz,[N]
+a labor she faces with greatest valor.[X]
+
+## SanzName
+Sanz[X]
+
+## SanzDesc
 Parasite[N]
 The head of House Sanz, whose relic[N]
 collection hoards cultures worldwide.[X]
