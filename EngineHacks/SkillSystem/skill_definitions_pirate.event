@@ -83,4 +83,19 @@
 
 #define ShoveID 26
 
-#define FuseID 27
+//Hardworking: For every kill unit gets, +1 STR/MAG until end of chapter (max 5). (Dragz?)
+#define HardworkingID 27
+
+//Well-Rested: When unit isn't deployed for a chapter, +1 MOV. If deployed two maps in a row, -1 MOV (cannot go below base).
+#define WellRestedID 28
+
+//Forest Friend: Unit can walk through Thickets for 2 MOV and Forests for 1 MOV. (Dragz?)
+#define ForestFriendID 29
+
+//Dogfight: If unit's AS > foe's AS, unit can counter regardless of foe's range. (Dragz?)
+#define DogfightID 30
+
+//Equalizer: Unit and allies within 2 tiles add foe's level - their level (cannot go below 0) to their damage. (Dragz)
+#define EqualizerID 31
+
+#define FuseID 32

@@ -1693,7 +1693,30 @@ Growths remain the same.[X]
 ## UM_ShiftDesc
 Swap Str with Spd.[X]
 
+## SD_Hardworking
+Hardworking: For every kill unit gets,[N]
++1 STR/MAG until end of chapter (max 5).[X]
+
+## SD_WellRested
+When unit isn't deployed for a chapter,[N]
++1 MOV. If deployed two maps in a row,[N]
+-1 MOV (cannot go below base).[X]
+
+## SD_ForestFriend
+Forest Friend: Unit can walk through[N]
+Thickets for 2 MOV and Forests for 1 MOV.[X]
+
+## SD_Dogfight
+Dogfight: If unit's AS > foe's AS, unit[N]
+can counter regardless of foe's range.[X]
+
+## SD_Equalizer
+Equalizer: Unit and allies within 2[N]
+tiles add foe's level - their level[N]
+(cannot go below 0) to their damage.[X]
+
 ## SD_Fuse
 Countdown: Gain one HP each turn.[N]
 Game over at max HP! Attack at melee[N]
 to disarm (sword/lance/axe/knife only).[X]
+
