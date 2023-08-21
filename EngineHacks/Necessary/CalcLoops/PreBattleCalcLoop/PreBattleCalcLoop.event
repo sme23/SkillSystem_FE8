@@ -21,6 +21,7 @@ BtlLoopList:
 POIN BC_DefRes BC_Power BC_ASpd BC_Hit BC_Avo BC_Crit CritUpSkill BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
 POIN InitializePreBattleLoop
 POIN Lull //This is effectively a stat modifier routine, so it has to go first
+POIN PanachePreBattle // This needs to happen before any speed modifiers
 POIN FaireCheck HolyAura
 POIN BreakerCheck MageSlayer
 POIN BlowCheck
@@ -36,8 +37,7 @@ POIN DriveStr DriveMag DriveSpd DriveDef DriveRes
 POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn Hangover
 POIN Demoiselle Gentilhomme MaleficAura Intimidate Tantivy Focus Inspiration DivinelyInspiring Charm Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty Infiltrator
 POIN ElbowRoom NaturalCover Gamble FieryBlood LifeAndDeath WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Thunderstorm Outrider HeavyStrikes Charge Vanity KnightAspirant AssassinateDamageBonus ArcaneBlade Underhanded CatchingUp
-POIN PanachePreBattle
-POIN Daunt BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter Deadeye Fortune ChaosStyle StunningSmile HeavyBlade SurpriseAttack SuppressiveFire
+POIN Daunt BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter Deadeye Fortune ChaosStyle StunningSmile HeavyBlade SurpriseAttack SuppressiveFire Equalizer
 POIN BlueFlame BlueFlameAura DoubleLion Cultured Thighdeology Thotslayer KeepUp Armorboost Horseguard Skyguard ForeignPrincess ChargePlus ArmsMastery
 POIN Frenzy // This was moved here because Str/Mag Split conflict, and... I'm not sure why it wouldn't be here in the first place.
 POIN UpWithArch
@@ -45,6 +45,7 @@ POIN AxefaithHit
 POIN StancesASM
 POIN AirRaidSkillCheck
 POIN StudiousBlowAtkBonus
+POIN FusePreBattle // This needs to happen after any hit modifiers
 #ifdef ENABLE_GBA_LETHALITY
 POIN LethalitySkill 
 #else
@@ -107,6 +108,7 @@ AuraSkillEntry(BloodTideID)
 AuraSkillEntry(WhitePoolID)
 AuraSkillEntry(NightTideID)
 AuraSkillEntry(SuppressiveFireID)
+AuraSkillEntry(EqualizerID)
 
 PUSH
 ORG 0x2a3f8

@@ -22,3 +22,6 @@
 {
     #include "HubA/HubA_6.event"
 }
+{
+    #include "Chapter2.event"
+}

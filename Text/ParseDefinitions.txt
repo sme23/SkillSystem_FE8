@@ -16,6 +16,9 @@
 [.7] = [.......]
 [Beat] = [ToggleMouthMove]...[.4][ToggleMouthMove]
 [Event] = [LoadOverworldFaces]
+[CSS] = [CloseSpeechSlow]
+[CF] = [ClearFace]
+[CSSCF] = [CSS][CF]
 
 [,] = ,[.4]
 [5.] = .[.5]
@@ -70,10 +73,20 @@
 [MoFR] = [MoveFarRight]
 [MoFFR] = [MoveFarFarRight]
 
+[OpenQuote] = [0x93]
+[CloseQuote] = [0x94]
+[ú] = [0xFA]
+[OQ] = [OpenQuote]
+[CQ] = [CloseQuote]
+[ó] = [0xf3]
+
+[TS] = [ToggleSmile]
+
 [CurrentPortrait] = [0xFF][0xFF]
-
-
 [LoadCurrent] = [LoadFace][CurrentPortrait]
+[LoadActive] = [LoadCurent]
+
+
 [LoadLua] = [LoadFace][0x2][0x1]
 [LoadPilar] = [LoadFace][0x3][0x1]
 [LoadDesiderio] = [LoadFace][0x4][0x1]
@@ -93,15 +106,33 @@
 [LoadLeonor] = [LoadFace][0xf][0x1]
 [LoadOndeh] = [LoadFace][0x10][0x1]
 [LoadBiko] = [LoadFace][0x11][0x1]
+[LoadMatteo] = [LoadFace][0x1a][0x1]
+[LoadSuzanne] = [LoadFace][0x1b][0x1]
 
-
-
-
-
+[LoadRedSoldier] = [LoadFace][0x6B][0x1]
+[LoadRedFighter] = [LoadFace][0x6D][0x1]
 
 [LoadMentor] = [LoadFace][0x16][0x1]
+[LoadOrlando] = [LoadMentor]
+[LoadRahel] = [LoadFace][0x17][0x1]
 
 [LoadKhazhak] = [LoadFace][0x31][0x1]
+
+[LoadRochefort] = [LoadFace][0x31][0x1]
+[LoadSantiago] = [LoadFace][0x31][0x1]
+[LoadSlicer] = [LoadFace][0x31][0x1]
+[LoadDicer] = [LoadFace][0x31][0x1]
+
+[LoadGeraldo] = [LoadFace][0x31][0x1]
+[LoadYurena] = [LoadFace][0x31][0x1]
+[LoadSanz] = [LoadFace][0x31][0x1]
+[ilike0x31asourplaceholderportraitidlol] = [LoadFace][0x31][0x1]
+[LoadFelipe] = [LoadFace][0x36][0x1]
+
+[LoadIda] = [LoadFace][0x51][0x1]
+[LoadSailor] = [LoadFace][0x6B][0x1]
+[LoadRebel] = [LoadFace][0x6C][0x1]
+[LoadVillager] = [LoadFace][0x58][0x1]
 
 [Font] = [0x80][0x26]
 [TextPalette] = [0x80][0x27]

@@ -27,11 +27,12 @@
 #define Biko $10
 #define Tangyuan $11
 #define AChapterUnit8 $12
-#define AChapterUnit9 $13
+#define Matteo $13
 #define Suzanne $14
 
 // CHAPTER 2
 #define Mentor $15
+#define Orlando Mentor
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -39,19 +40,30 @@
 #define Khazhak $46
 #define Blackheart $47
 
+// HUB A CHAPTER UNITS
+
+// HUB A CHAPTER ENEMIES + NPCS
+
+//Hub A1
+#define Buzu $48
+#define Bozo $49
+#define Geraldo $4a
+#define Yurena $4b
+#define Sanz $4c
+#define Contractor $4d
+#define Sentinel $4e
+#define Scoundrel $4f
+
 //Hub A2
 #define Felipe $53
 #define Incendivis $54
 #define Rebel $55
-// HUB A CHAPTER UNITS
-#define DragzArmorBoss1 $48
-#define DragzArmorBoss2 $49
-#define DragzMercBoss $4a
-#define DragzChampionBoss $4b
-#define DragzNoble $4c
-#define Contractor $4d
-#define Sentinel $4e
-#define Scoundrel $4f
+#define IncendivisHP $56
+
+//Hub A3
+#define Sargargala $5B
+#define LogPirate $5C
+#define RiojaReaper LogPirate
 
 //A5
 #define Gunsmith $5A
@@ -65,3 +77,10 @@
 #define Jozef $65
 #define TheCloser $66
 #define BrickBoys $67
+
+//Hub A6
+#define Slicer 0x50
+#define Dicer 0x51
+#define Santiago 0x52
+
+#define Bomb 0x57

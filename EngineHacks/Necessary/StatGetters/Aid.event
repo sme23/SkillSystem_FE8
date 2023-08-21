@@ -5,6 +5,7 @@
 
 pAidModifiers: // Aid
 	POIN prAddUnitFinalConstitution prSubstractOne prAdjustAidIfMounted
+	POIN prSkillProtector
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -15,6 +16,10 @@ prAddUnitFinalConstitution:
 
 prSubstractOne:
 	rSubConst(1)
+
+prSkillProtector:
+	rIfUnitHasSkill(ProtectorID)
+		rAddConst(10)
 
 prAdjustAidIfMounted:
 {

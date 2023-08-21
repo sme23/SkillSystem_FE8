@@ -43,6 +43,9 @@
 #define HubA_6MapChangesID 0x23
 #define HubA_6EventsID 0x24
 
+#define Chapter2MapID 0x25
+#define Chapter2MapChangesID 0x26
+#define Chapter2EventsID 0x27
 
 
 //TILESET IDs (START FROM 0x88 when replacing stuff)
@@ -50,13 +53,24 @@
 #define FlasubanVillageSkyPaletteID 0x89
 #define FlasubanVillageSkyConfigID 0x8A
 #define FlasubanVillageTileAnimationsID 0x8B
+#define FlasubanVillageOurplePaletteID 0x97
 
 #define DesertBastionNightSkyObjectID 0x8C
 #define DesertBastionNightSkyPaletteID 0x8D
 #define DesertBastionNightSkyConfigID 0x8E
 #define DesertBastionNightSkyTileAnimationsID 0x8F
 
+#define FF5CaveObjectID 0x90
+#define FF5CavePaletteID 0x91
+#define FF5CaveConfigID 0x92
+#define FF5CaveTileAnimationsID 0x93
+
 #define MountainousObjectID 0x6C
 #define MountainousPaletteID 0x6D
 #define MountainousConfigID 0x6E
 #define MountainousTileAnimationsID 0x5
+
+#define FF5CaveExpandedObjectID 0x94
+#define FF5CaveExpandedPaletteID 0x95
+#define FF5CaveExpandedConfigID 0x96
+#define FF5CaveExpandedTileAnimationsID FF5CaveTileAnimationsID

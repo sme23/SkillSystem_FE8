@@ -1,0 +1,195 @@
+EventPointerTable(Chapter2EventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AREA MainRoomToOtherRooms GotoLuasQuarters [7,4] [7,4]
+AREA MainRoomToOtherRooms GotoLibrary [0,17] [0,18]
+AREA MainRoomToOtherRooms GotoBarracksAndTreasureRoom [5,13] [5,13]
+
+AREA TreasureRoomToMainRoom GoBackToMainRoomFromTreasureRoom [29,23] [29,24]
+
+AREA WentToPortGreagor GotoPortGreagorFirstTime [1,0] [3,0]
+AREA MainRoomToPort GotoPortGreagor [1,0] [3,0]
+
+AFEV 0 RefreshLua 0
+CauseGameOverIfLordDies
+END_MAIN
+
+GotoLuasQuarters:
+CALL ClearChapter2Traps
+NoFade
+ENDA
+
+GotoLibrary:
+CALL ClearChapter2Traps
+NoFade
+ENDA
+
+GotoBarracksAndTreasureRoom:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+TILECHANGE 1
+CALL ClearChapter2Traps
+LoadPlayerUnits(LuaInDaTreasureRoom)
+CALL AddTreasureRoomTraps
+ENUF TreasureRoomToMainRoom
+CAMERA_CENTERED Lua
+FADU 10
+NoFade
+ENDA
+
+GoBackToMainRoomFromTreasureRoom:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+TILEREVERT 1
+CALL ClearTreasureRoomTraps
+LoadPlayerUnits(LuaOnDaStairs)
+CALL AddChapter2Traps
+CAMERA_CENTERED Lua
+ENUF MainRoomToOtherRooms
+FADU 10
+NoFade
+ENDA
+
+GotoPortGreagorFirstTime:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+LOMA HubA
+LoadPlayerUnits(LuaInDaHubFirstTime)
+CAMERA_CENTERED Lua
+FADU 10
+Text(HubABeginningScene3)
+ENUT PortToDocks
+ENUF WentToPortGreagorDocks //sets the temp flag version and allows global to be triggered
+MUSC PortGreagorID
+NoFade
+ENDA
+
+GotoPortGreagor:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+LOMA HubA
+LoadPlayerUnits(LuaInDaHub) 
+CAMERA_CENTERED Lua
+FADU 10
+NoFade
+ENDA
+
+LuaInDaHub:
+UNIT Lua Captain 0 Level(10,Ally,False) [20,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+LuaInDaHubFirstTime:
+UNIT Lua Captain 0 Level(10,Ally,False) [20,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+LuaInDaTreasureRoom:
+UNIT Lua Captain 0 Level(10,Ally,False) [29,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+LuaOnDaStairs:
+UNIT Lua Captain 0 Level(10,Ally,False) [5,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+RefreshLua:
+SVAL s1 0x42
+UNSET_CONDITION Lua
+NoFade
+ENDA
+
+Units1:
+UNIT
+
+Traps1:
+BlueSigil(1,0)
+BlueSigil(2,0)
+BlueSigil(3,0)
+BlueSigil(7,4)
+BlueSigil(5,13)
+BlueSigil(0,17)
+BlueSigil(0,18)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+AddChapter2Traps:
+AddTrap(BlueSigilTrapID,1,0)
+AddTrap(BlueSigilTrapID,2,0)
+AddTrap(BlueSigilTrapID,3,0)
+AddTrap(BlueSigilTrapID,7,4)
+AddTrap(BlueSigilTrapID,5,13)
+AddTrap(BlueSigilTrapID,0,17)
+AddTrap(BlueSigilTrapID,0,18)
+NoFade
+ENDA
+
+AddTreasureRoomTraps:
+AddTrap(BlueSigilTrapID,29,23)
+AddTrap(BlueSigilTrapID,29,24)
+NoFade
+ENDA
+
+ClearChapter2Traps:
+RemoveTrapAtCoords(1,0)
+RemoveTrapAtCoords(2,0)
+RemoveTrapAtCoords(3,0)
+RemoveTrapAtCoords(7,4)
+RemoveTrapAtCoords(5,13)
+RemoveTrapAtCoords(0,17)
+RemoveTrapAtCoords(0,18)
+NoFade
+ENDA
+
+ClearTreasureRoomTraps:
+RemoveTrapAtCoords(29,23)
+RemoveTrapAtCoords(29,24)
+NoFade
+ENDA
+
+
+BeginningScene:
+NoFade
+ENDA
+
+EndingScene:
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

@@ -148,12 +148,20 @@ Biko[X]
 A young man trying to find[N]
 his confidence. Ondeh's brother.[X]
 
+## MatteoName
+Matteo[X]
+
+## MatteoDesc
+Swashbuckler[N]
+An intrepid sellsword skilled with a blade,[N]
+but not as skilled as he thinks he is.[X]
+
 ## SuzanneName
 Suzanne[X]
 
 ## SuzanneDesc
 Gunslinger[N]
-An intrepid mercenary whose talents[N]
+A hotheaded mercenary whose talents[N]
 are only rivaled by her ego.[X]
 
 ## TangyuanName
@@ -204,34 +212,57 @@ Revolutionary[N]
 They fight against the empire[N]
 to secure their freedom.[X]
 
-## DragzArmorBoss1Name
-Baza[X]
+## BombName
+Bomb[X]
 
-## DragzArmorBoss1Desc
-Guardshelm[X]
+## BombDesc
+Explosive Device[N]
+With a lit fuse, it threatens all[N]
+in the vicinity with a fiery grave![X]
 
-## DragzArmorBoss2Name
-Bozo[X]
+## BombClassName
+Explosive[X]
 
-## DragzArmorBoss2Desc
-Guardshelm[X]
+## BombClassDesc
+No armor can withstand its power.[N]
+Disarm it if you hope to survive.[X]
 
-## DragzMercBossName
-Bizi[X]
-
-## DragzMercBossDesc
-Wrangler[X]
-
-## DragzChampionBossName
+## BuzuName
 Buzu[X]
 
-## DragzChampionBossDesc
-Minder[X]
+## BuzuDesc
+Guardshelm[N]
+One half of House Sanz's guardian duo,[N]
+who were selected by an arena victory.[X]
 
-## DragzNobleName
-Beze[X]
+## BozoName
+Bozo[X]
 
-## DragzNobleDesc
+## BozoDesc
+Guardshelm[N]
+The other half of House Sanz's guardian duo,[N]
+who were selected by an arena victory.[X]
+
+## GeraldoName
+Geraldo[X]
+
+## GeraldoDesc
+Rehabilitator[N]
+An honorable and complacent merc known for[N]
+reforming and taking in hardened criminals.[X]
+
+## YurenaName
+Yurena[X]
+
+## YurenaDesc
+Minder[N]
+The personal bodyguard of Count Sanz,[N]
+a labor she faces with greatest valor.[X]
+
+## SanzName
+Sanz[X]
+
+## SanzDesc
 Parasite[N]
 The head of House Sanz, whose relic[N]
 collection hoards cultures worldwide.[X]
@@ -258,6 +289,37 @@ Scoundrel[X]
 ## ScoundrelDesc
 An independent thief using the chaos[N]
 of battle to line their pockets.[X]
+
+## SargargalaName
+Sargargala[X]
+
+## SargargalaDesc
+ [X]
+
+## LogPirateName
+R. Reaper[X]
+
+## LogPirateDesc
+ [X]
+
+## SlicerName
+Slicer[X]
+
+## DicerName
+Dicer[X]
+
+## SlicerDesc
+Co-Captain[N]
+Leads a small-time pirate crew with[N]
+his twin. Thinks he's the smart one.[X]
+
+## SantiagoName
+Santiago[X]
+
+## SantiagoDesc
+Commander[N]
+A rebel leader zealously devoted to the[N]
+cause. Respected by his subordinates.[X]
 
 ## GunsmithName
 Gunsmith[X]

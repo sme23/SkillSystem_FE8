@@ -23,10 +23,52 @@
     DesertBastionNightSkyMapchipConfig:
     #incbin "Dmp/Config/DesertBastionNightSky_comp.dmp"
 
+    ALIGN 4
+    FF5CaveObject:
+    #incbin "Dmp/Object/FF5Cave(Wave).dmp"
+
+    ALIGN 4
+    FF5CavePalette:
+    #incbin "Dmp/Palette/FF5Cave(Wave)_pal.dmp"
+
+    ALIGN 4
+    FF5CaveMapchipConfig:
+    //#incbin "Dmp/Config/FF5Cave(Wave)_comp.dmp"
+    #incbin "Dmp/Config/FF5Cave(Wave)_edit_comp.dmp" // Edited mapchip to count barrel bottoms as floor
+
+    ALIGN 4
+    FF5CaveExpandedObject:
+    #incbin "Dmp/Object/FF5CaveExpanded.dmp"
+
+    ALIGN 4
+    FF5CaveExpandedPalette:
+    #incbin "Dmp/Palette/FF5CaveExpanded_pal.dmp"
+
+    ALIGN 4
+    FF5CaveExpandedMapchipConfig:
+    #incbin "Dmp/Config/pirate_cave_with_boat_comp.dmp"
+
+    ALIGN 4
+    FlasubanOurpleVillagePalette:
+    #incbin "Dmp/Palette/FlasubanVillageSkyOurple_pal.dmp"
+
+
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
-  
+    EventPointerTable(FlasubanVillageOurplePaletteID,FlasubanOurpleVillagePalette)
+
 	EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
     EventPointerTable(DesertBastionNightSkyPaletteID,DesertBastionNightSkyPalette)
     EventPointerTable(DesertBastionNightSkyConfigID,DesertBastionNightSkyMapchipConfig)
+
+    EventPointerTable(FF5CaveObjectID,FF5CaveObject)
+    EventPointerTable(FF5CavePaletteID,FF5CavePalette)
+    EventPointerTable(FF5CaveConfigID,FF5CaveMapchipConfig)
+
+    EventPointerTable(FF5CaveExpandedObjectID, FF5CaveExpandedObject)
+    EventPointerTable(FF5CaveExpandedPaletteID, FF5CaveExpandedPalette)
+    EventPointerTable(FF5CaveExpandedConfigID, FF5CaveExpandedMapchipConfig)
+
+    
+    

@@ -51,13 +51,14 @@ Cutlass[X]
 ## CutlassDesc
 Lua only. Doubles attacks dealt.[X]
 
+## EstocName
+Estoc[X]
+
 ## PeacekeeperName
 Peacekeeper[X]
 
 ## PeacekeeperDesc
 Can't be countered.[X]
-
-
 
 //LANCES
 
@@ -82,12 +83,17 @@ Ignores enemy defense.[X]
 ## HorseslayerDesc
 Eff. vs. horses.[X]
 
+## HarpoonName
+Harpoon[X]
+
+## HarpoonDesc
+Eff. vs. horses and fliers.[X]
+
 ## SidepierceName
 Needle[X]
 
 ## SidepierceDesc
 Move 2 tiles after combat.[X]
-
 
 //AXES
 
@@ -112,12 +118,14 @@ Battle Axe[X]
 ## BattleAxeDesc
 A metal heap with unparalleled might.[X]
 
+## SlimAxeName
+Slim Axe[X]
+
 ## OversizeName
 Oversize[X]
 
 ## OversizeDesc
 Cannot double or be doubled.[X]
-
 
 //BOWS
 
@@ -153,6 +161,12 @@ Greatbow[X]
 
 ## SlimshotName
 Slimshot[X]
+
+## ShiningBowName
+Shining Bow[X]
+
+## ShiningBowDesc
+Uses Mag. Can counter at melee.[X]
 
 ## SnapshotName
 Snapshot[X]
@@ -299,4 +313,16 @@ Does exactly as advertised.[X]
 Hide Shield[X]
 
 ## HideShieldDesc
-Grants a boost to defense.[X]
+Grants +3 Def.[X]
+
+## GlassShieldName
+Glass Shield[X]
+
+## GlassShieldDesc
+Grants +7 Def/Res but breaks easily.[X]
+
+## ShoveGloveName
+Shove Glove[X]
+
+## ShoveGloveDesc
+Allows the holder to shove units 1 tile.[X]
