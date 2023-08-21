@@ -16,6 +16,7 @@
 //#define LightBrand $10
 
 //#define Lancereaver $12 
+#define Peacekeeper $d8
 
 //LANCES
 #define Saunion $13
@@ -30,6 +31,7 @@
 //#define Javelin $1c
 //#define Spear $1d
 //#define Axereaver $1e
+#define Sidepierce $d9
 
 //AXES
 //#define IronAxe $1f
@@ -45,6 +47,7 @@
 //#define Tomahawk $29
 //#define Swordreaver $2a
 #define BattleAxe $2b
+#define Oversize $da
 
 //BOWS
 #define DeadeyeBow $2c
@@ -59,6 +62,7 @@
 #define MagekillerBow $35
 #define Greatbow $36
 #define Slimshot $37
+#define Snapshot $db
 
 //TOMES
 
@@ -75,6 +79,7 @@
 
 //#define Luna $46
 //#define Nosferatu $47
+#define Galestrike $dc
 
 //KNIVES
 #define IronKnife $bd
@@ -89,6 +94,7 @@
 #define Peshkatz $c6
 #define Baselard $c7
 #define Heartpiercer $c8
+#define Compass $dd
 
 // GUNS
 #define IronMusket $c9
@@ -98,6 +104,7 @@
 #define Culverin $cf
 #define Blunderbuss $d0
 #define Mortar $d1
+#define Mincemaker $de
 
 // EQUIPS
 #define HideShield $ca

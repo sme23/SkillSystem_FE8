@@ -25,7 +25,7 @@
 #define Leonor $e
 #define Ondeh $f
 #define Biko $10
-#define AChapterUnit7 $11
+#define Tangyuan $11
 #define AChapterUnit8 $12
 #define AChapterUnit9 $13
 #define Suzanne $14
@@ -52,3 +52,16 @@
 #define Contractor $4d
 #define Sentinel $4e
 #define Scoundrel $4f
+
+//A5
+#define Gunsmith $5A
+#define BigBrick $5E
+#define Hakman $5F
+#define MrMist $60
+#define Yaoguai $61
+#define TheDuke $62
+#define TheDukes $63
+#define Guard $64
+#define Jozef $65
+#define TheCloser $66
+#define BrickBoys $67

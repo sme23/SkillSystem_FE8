@@ -71,3 +71,23 @@
 
 //Canter: Unit can move 2 spaces after combat. (Dragz)
 #define CanterID 22
+
+//Canto+: Can move again after attacking and other actions.
+//By Tequila
+#define CantoPlusID 23
+
+//Galeforce: Move again after attacking and defeating an enemy.
+//Author Unknown (Initial Commit)
+#define GaleforceID 24
+
+//Wary Fighter: Unit cannot double or be doubled.
+//By Tequila
+#define WaryFighterID 25
+
+//Dazzle: Opponents cannot counterattack this unit.
+//By circleseverywhere
+#define DazzleID 26
+
+// StrTaker: After attacking and defeating an enemy, gain +4 str. (Max +10) 
+// Author: Vesly 
+#define StrTakerID 27
