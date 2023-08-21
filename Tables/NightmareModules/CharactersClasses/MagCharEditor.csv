@@ -16,7 +16,7 @@ None,0,0
 0x0E Leonor,0,20
 0x0F Ondeh,3,40
 0x10 Biko,0,20
-0x11 AChapterUnit7,0,10
+0x11 Tangyuan,2,25
 0x12 AChapterUnit8,2,25
 0x13 Matteo,1,20
 0x14 Suzanne,3,35
@@ -95,7 +95,7 @@ Cyclops (Ch 12B),2,5
 Wight (Ch 11A),2,5
 Deathgoyle (Ch 11B),3,5
 Entombed (Monster Boss),3,5
-#NAME?,0,0
+#NAME?,8,0
 #NAME?,0,0
 #NAME?,0,0
 #NAME?,0,0

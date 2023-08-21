@@ -99,3 +99,23 @@
 #define EqualizerID 31
 
 #define FuseID 32
+
+//Canto+: Can move again after attacking and other actions.
+//By Tequila
+#define CantoPlusID 33
+
+//Galeforce: Move again after attacking and defeating an enemy.
+//Author Unknown (Initial Commit)
+#define GaleforceID 34
+
+//Wary Fighter: Unit cannot double or be doubled.
+//By Tequila
+#define WaryFighterID 35
+
+//Dazzle: Opponents cannot counterattack this unit.
+//By circleseverywhere
+#define DazzleID 36
+
+// StrTaker: After attacking and defeating an enemy, gain +4 str. (Max +10) 
+// Author: Vesly 
+#define StrTakerID 37
