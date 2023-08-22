@@ -257,49 +257,6 @@ int GetStealExpValue(int item){
     }
 }
 
-// makes autolevels fixed
-int GetAutoleveledStatIncrease(int growth, int levelCount) {
-    return GetNPCStatIncrease(growth * (levelCount));
-}
-
-int GetNPCStatIncrease(int growth){
-	int result = 0;
-	
-	while (growth >= 100) {
-        result++;
-        growth -= 100;
-    }
-
-	return result;
-}
-
-void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* character) {
-    int i;
-    
-    unit->maxHP = character->baseHP + unit->pClassData->baseHP;
-    unit->pow   = character->basePow + unit->pClassData->basePow;
-	unit->mag   = MagCharTable[character->number].baseMag + MagClassTable[unit->pClassData->number].baseMag;
-    unit->skl   = character->baseSkl + unit->pClassData->baseSkl;
-    unit->spd   = character->baseSpd + unit->pClassData->baseSpd;
-    unit->def   = character->baseDef + unit->pClassData->baseDef;
-    unit->res   = character->baseRes + unit->pClassData->baseRes;
-    unit->lck   = character->baseLck + unit->pClassData->baseLck;
-
-    unit->conBonus = 0;
-
-    for (i = 0; i < 8; ++i) {
-        unit->ranks[i] = unit->pClassData->baseRanks[i];
-
-        if (unit->pCharacterData->baseRanks[i])
-            unit->ranks[i] = unit->pCharacterData->baseRanks[i];
-    }
-
-    if (UNIT_FACTION(unit) == FACTION_BLUE && (unit->level != UNIT_LEVEL_MAX))
-        unit->exp = 0;
-    else
-        unit->exp = UNIT_EXP_DISABLED;
-}
-
 int GetWeaponLevelFromExp(int wexp) {
     if (wexp < D_WEXP)
         return NO_RANK;
@@ -354,34 +311,6 @@ int CanUnitRescue(const struct Unit* actor, const struct Unit* target){
     int targetCon = UNIT_CON(target);
 
     return (actorAid >= targetCon) ? TRUE : FALSE;
-}
-
-void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
-    if (uDef->autolevel) {
-        int i;
-
-        for (i = 0; i < GetUnitItemCount(unit); ++i) {
-            int wType, item = unit->items[i];
-
-            if (!(GetItemAttributes(item) & IA_REQUIRES_WEXP))
-                continue;
-
-            if (GetItemAttributes(item) & IA_WEAPON)
-                if (CanUnitUseWeapon(unit, item))
-                    continue;
-
-            if (GetItemAttributes(item) & IA_STAFF)
-                if (CanUnitUseStaff(unit, item))
-                    continue;
-
-            wType = GetItemType(item);
-
-            if (unit->ranks[wType] == 0)
-                item = 0;
-
-            unit->ranks[wType] = GetItemRequiredExp(item);
-        }
-    }
 }
 
 void ApplyUnitDefaultPromotion(struct Unit* unit) {
@@ -632,4 +561,121 @@ int CanUnitUseWeapon(struct Unit* unit, int item) {
     int uRank = (unit->ranks[GetItemType(item)]);
 
     return (uRank >= wRank) ? TRUE : FALSE;
+}
+
+// makes autolevels fixed
+int GetAutoleveledStatIncrease(int growth, int levelCount) {
+    return GetNPCStatIncrease(growth * (levelCount));
+}
+
+int GetNPCStatIncrease(int growth){
+	int result = 0;
+	
+	while (growth >= 100) {
+        result++;
+        growth -= 100;
+    }
+
+	return result;
+}
+
+void UnitInitFromDefinition(struct Unit* unit, const struct UnitDefinition* uDef) {
+    unit->pCharacterData = GetCharacterData(uDef->charIndex);
+
+    if (uDef->classIndex){
+        unit->pClassData = GetClassData(uDef->classIndex);
+    }  
+    else{
+        unit->pClassData = GetClassData(unit->pCharacterData->defaultClass);
+    }
+
+    unit->level = uDef->level;
+
+    if (uDef->autolevel){
+        unit->level += ReturnNumberOfHubChaptersVisited();
+    }
+
+    GenUnitDefinitionFinalPosition(uDef, &unit->xPos, &unit->yPos, FALSE);
+
+    if (UNIT_IS_GORGON_EGG(unit)) {
+        int i;
+
+        // For gorgon eggs, set first item to zero
+        // And store the other item ids in slots 1 through 4 for later initialization
+
+        unit->items[0] = 0;
+
+        for (i = 0; i < UNIT_DEFINITION_ITEM_COUNT; ++i){
+            unit->items[i + 1] = uDef->items[i];
+        }
+            
+    } else {
+        int i;
+
+        for (i = 0; (i < UNIT_DEFINITION_ITEM_COUNT) && (uDef->items[i]); ++i){
+            UnitAddItem(unit, MakeNewItem(uDef->items[i]));
+        }
+    }
+
+    SetUnitAiFromDefinition(unit, uDef);
+}
+
+void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* character) {
+    int i;
+    
+    unit->maxHP = character->baseHP + unit->pClassData->baseHP;
+    unit->pow   = character->basePow + unit->pClassData->basePow;
+	unit->mag   = MagCharTable[character->number].baseMag + MagClassTable[unit->pClassData->number].baseMag;
+    unit->skl   = character->baseSkl + unit->pClassData->baseSkl;
+    unit->spd   = character->baseSpd + unit->pClassData->baseSpd;
+    unit->def   = character->baseDef + unit->pClassData->baseDef;
+    unit->res   = character->baseRes + unit->pClassData->baseRes;
+    unit->lck   = character->baseLck + unit->pClassData->baseLck;
+
+    unit->conBonus = 0;
+
+    for (i = 0; i < 8; ++i) {
+        unit->ranks[i] = unit->pClassData->baseRanks[i];
+
+        if (unit->pCharacterData->baseRanks[i])
+            unit->ranks[i] = unit->pCharacterData->baseRanks[i];
+    }
+
+    if (UNIT_FACTION(unit) == FACTION_BLUE && (unit->level != UNIT_LEVEL_MAX))
+        unit->exp = 0;
+    else
+        unit->exp = UNIT_EXP_DISABLED;
+}
+
+
+void UnitAutolevel(struct Unit* unit) {
+    UnitAutolevelCore(unit, unit->pClassData->number, unit->level - 1);
+}
+
+void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
+    if (uDef->autolevel) {
+        int i;
+
+        for (i = 0; i < GetUnitItemCount(unit); ++i) {
+            int wType, item = unit->items[i];
+
+            if (!(GetItemAttributes(item) & IA_REQUIRES_WEXP))
+                continue;
+
+            if (GetItemAttributes(item) & IA_WEAPON)
+                if (CanUnitUseWeapon(unit, item))
+                    continue;
+
+            if (GetItemAttributes(item) & IA_STAFF)
+                if (CanUnitUseStaff(unit, item))
+                    continue;
+
+            wType = GetItemType(item);
+
+            if (unit->ranks[wType] == 0)
+                item = 0;
+
+            unit->ranks[wType] = GetItemRequiredExp(item);
+        }
+    }
 }

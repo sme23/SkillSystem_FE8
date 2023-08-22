@@ -3,8 +3,6 @@
 
 #include "_Common.event"
 
-#define rGetLuaMovement "rCallExternal(GetLuaMovement^1)"
-
 ALIGN 4
 pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
@@ -49,12 +47,17 @@ prNullifyIfFreeze:
 
 prLuaHubMovement:
 	rIfUnitHasSkill(SuppressiveFireID)
-		rGetLuaMovement
+		rIf(prCheckIfLuaInHub)
+			rConstant(15)
 
 ALIGN 4
 prAddEquipMov:
 	rAdd(rForUnitEquipped(rCallExternal(prGetItemMovBonus)))
 	#include "_asm/GetItemMovBonus.lyn.event"
+
+ALIGN 4
+prCheckIfLuaInHub:
+	rCallExternal(LuaIsInHub)
 
 ALIGN 4
 prItemPassiveMov:

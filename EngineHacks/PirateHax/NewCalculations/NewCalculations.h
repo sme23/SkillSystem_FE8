@@ -64,3 +64,8 @@ static const struct ProcInstruction sProcScr_BattleAnimSimpleLock[] = {
     PROC_CALL_ROUTINE(UpdateActorFromBattle),
     PROC_END
 };
+
+int GenUnitDefinitionFinalPosition(const struct UnitDefinition* uDef, s8* xOut, s8* yOut, s8 findNearest);
+void SetUnitAiFromDefinition(struct Unit* unit, const struct UnitDefinition* uDef);
+
+int ReturnNumberOfHubChaptersVisited();

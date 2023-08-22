@@ -27,7 +27,7 @@ END_MAIN
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [2,6] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Ondeh Hunter 0 Level(4,Ally,False) [1,5] 0x0 0x0 0 0 [IronBow,Vulnerary] NoAI
+UNIT Ondeh Hunter 0 Level(4,Ally,False) [1,5] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
 UNIT Biko Soldier 0 Level(1,Ally,False) [3,5] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
 UNIT Pilar Ninja 0 Level(8,Ally,False) [2,5] 0 0 0 0 [Vulnerary] NoAI
 UNIT Pilar Ninja 0 Level(8,Ally,False) [1,4] 0 0 0 0 [Vulnerary] NoAI

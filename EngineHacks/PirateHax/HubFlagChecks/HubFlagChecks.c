@@ -58,11 +58,19 @@ void UnsetAllHubChapterFlagsASMC(){
 }
 
 
-int GetLuaMovement(Unit* unit){
+bool LuaIsInHub(Unit* unit){
     if (CheckEventId(0xA0)){ //the "in a hub" flag
-        return 15; //max move
+        return true; //give 15 move
+    }
+    return false;
+}
+
+int ReturnNumberOfHubChaptersVisited(){
+    int hubChapters = (CheckEventId(0x83) + CheckEventId(0x8B) + CheckEventId(0x8c) + CheckEventId(0x8d) + CheckEventId(0x8e) + CheckEventId(0x8f) - 1);
+    if (hubChapters < 0){
+        return 0;
     }
     else{
-        return unit->move;
+        return hubChapters;
     }
 }
