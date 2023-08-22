@@ -73,7 +73,8 @@
 #include "SetStatus/SetStatusInstaller.event"
 //7743, Vesly
 
-
+#include "ItemNameTiles/ItemNameTiles.event"
+//Dragz
 
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
