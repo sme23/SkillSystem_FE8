@@ -302,6 +302,13 @@ R. Reaper[X]
 ## LogPirateDesc
  [X]
 
+## A3LogName
+Trunk[X]
+
+## A3LogDesc
+A mysterious, heavy piece of wood.[N]
+Magic emanates from its surface.[X]
+
 ## SlicerName
 Slicer[X]
 
@@ -404,3 +411,4 @@ The Closer[X]
 Legend[N]
 The Closer is known for being able to [N]
 close down any problem. For a price.[X]
+

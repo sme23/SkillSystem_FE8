@@ -73,6 +73,8 @@
 #include "SetStatus/SetStatusInstaller.event"
 //7743, Vesly
 
+#include "Music/MusicAsmInstaller.event"
+//7743
 
 
 PUSH

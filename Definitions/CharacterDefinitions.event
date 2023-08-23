@@ -64,6 +64,7 @@
 #define Sargargala $5B
 #define LogPirate $5C
 #define RiojaReaper LogPirate
+#define A3Log $58
 
 //A5
 #define Gunsmith $5A

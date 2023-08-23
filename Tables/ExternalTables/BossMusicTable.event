@@ -1,0 +1,17 @@
+#define BossBGMEntry(UnitId,SongId) "BYTE UnitId 0 0 0; SHORT SongId 0"
+#define BossBGMTerminator "BYTE 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF"
+
+ALIGN 4
+BossBGMTable:
+BossBGMEntry(Khazhak,FoolsBoldID)
+BossBGMEntry(Felipe,FoolsBoldID) 
+BossBGMEntry(Sargargala,FoolsBoldID) 
+BossBGMEntry(Santiago,FoolsBoldID) 
+BossBGMTerminator
+
+PUSH
+
+ORG $72908
+POIN BossBGMTable
+
+POP
