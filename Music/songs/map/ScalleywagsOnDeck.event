@@ -16,6 +16,7 @@ ScalleywagsOnDeck_0:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
         BYTE   TEMPO   120/2
+        BYTE           VOICE   60
         BYTE           PAN     c_v-18
         BYTE           VOL     127
         BYTE   W96
@@ -103,7 +104,6 @@ ScalleywagsOnDeck_0_LOOP:
 // 023   ----------------------------------------
         BYTE   W96
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_0_LOOP
         BYTE   FINE
@@ -113,6 +113,7 @@ ScalleywagsOnDeck_0_LOOP:
 ScalleywagsOnDeck_1:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   61
         BYTE           PAN     c_v-32
         BYTE           VOL     127
         BYTE   W96
@@ -194,7 +195,6 @@ ScalleywagsOnDeck_1_LOOP:
 // 023   ----------------------------------------
         BYTE   W96
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_1_LOOP
         BYTE   FINE
@@ -204,6 +204,7 @@ ScalleywagsOnDeck_1_LOOP:
 ScalleywagsOnDeck_2:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   50
         BYTE           PAN     c_v-38
         BYTE           N96     En4   v056
         BYTE           VOL     127
@@ -263,7 +264,6 @@ ScalleywagsOnDeck_2_LOOP:
 // 023   ----------------------------------------
         BYTE   W96
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_2_LOOP
         BYTE   FINE
@@ -273,6 +273,7 @@ ScalleywagsOnDeck_2_LOOP:
 ScalleywagsOnDeck_3:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   62
         BYTE           PAN     c_v+23
         BYTE           N96     En3   v056
         BYTE           N48     An3
@@ -443,7 +444,6 @@ ScalleywagsOnDeck_3_LOOP:
         BYTE           N06     Fn3
         BYTE   W06
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_3_LOOP
         BYTE   FINE
@@ -453,6 +453,7 @@ ScalleywagsOnDeck_3_LOOP:
 ScalleywagsOnDeck_4:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   38
         BYTE           N06     Gn2   v063
         BYTE           VOL     127
         BYTE   W06
@@ -743,7 +744,6 @@ ScalleywagsOnDeck_4_21:
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_4_21
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_4_LOOP
         BYTE   FINE
@@ -753,6 +753,7 @@ ScalleywagsOnDeck_4_21:
 ScalleywagsOnDeck_5:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   123
         BYTE           N12     Gs1   v063
         BYTE           N12     Bn0
         BYTE           VOL     127
@@ -1314,7 +1315,6 @@ ScalleywagsOnDeck_5_LOOP:
         BYTE           N12     Cn1
         BYTE   W12
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_5_LOOP
         BYTE   FINE
@@ -1324,6 +1324,7 @@ ScalleywagsOnDeck_5_LOOP:
 ScalleywagsOnDeck_6:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   55
         BYTE           N12     En2   v056
         BYTE           VOL     127
         BYTE   W12
@@ -1518,7 +1519,6 @@ ScalleywagsOnDeck_6_LOOP:
         BYTE                   En2
         BYTE   W06
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_6_LOOP
         BYTE   FINE
@@ -1528,6 +1528,7 @@ ScalleywagsOnDeck_6_LOOP:
 ScalleywagsOnDeck_7:
         BYTE   KEYSH   ScalleywagsOnDeck_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   98
         BYTE           N06     Gn3   v056
         BYTE           VOL     127
         BYTE   W06
@@ -1818,7 +1819,6 @@ ScalleywagsOnDeck_7_21:
         BYTE   PATT
          POIN2  ScalleywagsOnDeck_7_21
 // 024   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  ScalleywagsOnDeck_7_LOOP
         BYTE   FINE

@@ -95,6 +95,12 @@ Needle[X]
 ## SidepierceDesc
 Move 2 tiles after combat.[X]
 
+## PitchforkName
+Pitchfork[X]
+
+## PitchforkDesc
+Cannot counter/be countered.[X]
+
 //AXES
 
 ## BloodaxeName

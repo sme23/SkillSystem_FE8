@@ -1083,6 +1083,14 @@ ORG SkillIcon(SuppressiveFireID)
 #incbin "SkillIcons/SuppressiveFire.dmp"
 ORG SkillIcon(LiquidCourageID)
 #incbin "SkillIcons/LiquidCourage.dmp"
+ORG SkillIcon(SurpriseAttackID)
+#incbin "SkillIcons/SurpriseAttack.dmp"
+ORG SkillIcon(EyeForAnEyeID)
+#incbin "SkillIcons/EyeForAnEye.dmp"
+ORG SkillIcon(HangoverID)
+#incbin "SkillIcons/Hangover.dmp"
+ORG SkillIcon(UnderhandedID)
+#incbin "SkillIcons/Underhanded.dmp"
 
 ORG SkillIcon(PanacheID)
 #incbin "SkillIcons/SuppressiveFire.dmp" // Placeholder

@@ -28,6 +28,11 @@
 #define LoadUnit(x,y,unitID) "UNIT unitID 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for loading specific force deployed units
 #define LoadEnemies(unitPtr) "LOAD1 0x1 unitPtr; ENUN"
 
+
+//A3 macros
+#define BranchIfNotUnitAtCoords(xcoord, ycoord, unitId, label) "CHECK_AT [xcoord, ycoord]; SVAL s1 unitId; BNE label s0 sC"
+#define CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(label1, label2, areaFlag, turnFlag) "CHECK_ALLEGIANCE (-1); BEQ label1 s0 sC; ENUF areaFlag; GOTO label2; LABEL label1; ENUF turnFlag; LABEL label2"
+
 //SetUnitItemDurability(xcoord, ycoord, itemslot, durability)
 //SetUnitItemDurability(unitid, itemslot, durability)
 

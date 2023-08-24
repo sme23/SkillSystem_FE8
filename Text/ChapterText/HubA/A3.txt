@@ -1,2 +1,9 @@
 ## ChA3Title
 Ch. A-3: Under Log and Key[X]
+
+## ChA3GoalWindow
+Escape[X]
+
+## ChA3StatusObjective
+Escape before the[N]
+  spirit wakes.[X]

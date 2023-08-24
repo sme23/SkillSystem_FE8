@@ -565,7 +565,7 @@ int CanUnitUseWeapon(struct Unit* unit, int item) {
 
 // makes autolevels fixed
 int GetAutoleveledStatIncrease(int growth, int levelCount) {
-    return GetNPCStatIncrease(growth * (levelCount));
+    return GetNPCStatIncrease(growth * (levelCount + 1));
 }
 
 int GetNPCStatIncrease(int growth){

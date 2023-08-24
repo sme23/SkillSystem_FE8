@@ -34,6 +34,7 @@
 //#define Axereaver $1e
 #define Harpoon $d6
 #define Sidepierce $d9
+#define Pitchfork $df
 
 //AXES
 //#define IronAxe $1f

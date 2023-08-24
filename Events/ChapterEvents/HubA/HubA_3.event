@@ -1,3 +1,9 @@
+#define A3LogFlag 7
+#define A3Spawn1AreaFlag 8
+#define A3Spawn2AreaFlag 9
+#define A3Spawn1TurnFlag 10
+#define A3Spawn2TurnFlag 11
+
 EventPointerTable(HubA_3EventsID, PointerList)
 
 PointerList:
@@ -13,7 +19,33 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(A3Spawn1TurnFlag, A3Reinforce1, 1, 255) //bottom left fort spawn
+TurnEventPlayer(A3Spawn2TurnFlag, A3Reinforce2, 1, 255)
+Survive(GameOverYeaaaaah,10)
 END_MAIN
+
+GameOverYeaaaaah:
+CALL GameOverStart
+NoFade
+ENDA
+
+A3Reinforce1:
+SpawnReinforcements(Reinforce1)
+NoFade
+ENDA
+
+Reinforce1:
+UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [16,7] 0 0 0 0 [SteelBow, MiniBow] PursueWithoutHeedAI
+UNIT
+
+A3Reinforce2:
+SpawnReinforcements(Reinforce2)
+NoFade
+ENDA
+
+Reinforce2:
+UNIT RiojaReaper Soldier 0 Level(3, Enemy, True) [7,14] 0 0 0 0 [SteelLance, Horseslayer] PursueWithoutHeedAI
+UNIT
 
 CharacterBasedEvents:
 END_MAIN
@@ -25,9 +57,40 @@ Escape(18,15)
 END_MAIN
 
 MiscBasedEvents:
+AREA A3Spawn1AreaFlag CheckIfTimeForSpawn1 [12, 2] [18,9]
+AREA A3Spawn2AreaFlag CheckIfTimeForSpawn2 [4, 12] [9,16]
+AFEV A3LogFlag CheckIfLogsInPlace 0
 CauseGameOverIfLordDies
 AFEV 0x0 CheckNoUnits 0x0
 END_MAIN
+
+CheckIfTimeForSpawn1:
+CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(1, 2, A3Spawn1AreaFlag, A3Spawn1TurnFlag)
+NoFade
+ENDA
+
+CheckIfTimeForSpawn2:
+CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(1, 2, A3Spawn2AreaFlag, A3Spawn2TurnFlag)
+NoFade
+ENDA
+
+
+CheckIfLogsInPlace:
+BranchIfNotUnitAtCoords(0, 14, Log, 1)
+BranchIfNotUnitAtCoords(10, 9, Log, 1)
+BranchIfNotUnitAtCoords(18, 0, Log, 1)
+CALL ForestFriendEvent //if all 3 logs at the specified tiles, call forest friend event
+GOTO 2
+LABEL 1
+ENUF A3LogFlag
+LABEL 2
+NoFade
+ENDA
+
+ForestFriendEvent:
+GiveItemWithDurability(SkillScroll,ForestFriendID,0xFFFF)
+NoFade
+ENDA
 
 CheckNoUnits:
 ASMC GetBlueUnitCountASMC
@@ -69,7 +132,7 @@ ENDTRAP
 ALIGN 4
 
 EnemyGroup:
-UNIT Sargargala 0 0 Level(5,Enemy,False) [17,14] 0 0 0 0 [KillingEdge, Javelin] BossAI
+UNIT Sargargala 0 0 Level(7,Enemy,False) [17,14] 0 0 0 0 [KillerLance, LightBrand] BossAI
 UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,13] 0 0 0 0 [HandAxe] BossAI
 UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,15] 0 0 0 0 [HandAxe] BossAI
 
@@ -84,24 +147,24 @@ UNIT RiojaReaper Shaman 0 Level(3, Enemy, True) [16,10] 0 0 0 0 [Elfire] BossAI
 UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [17,10] 0 0 0 0 [Javelin] BossAI
 
 UNIT RiojaReaper Fighter 0 Level(3, Enemy, True) [2,11] 0 0 0 0 [SteelAxe] GroupOneAI
-UNIT RiojaReaper Hunter 0 Level(4, Enemy, True) [0,12] 0 0 0 0 [Pursuer, Longbow] GroupOneAI
+UNIT RiojaReaper Hunter 0 Level(4, Enemy, True) [0,13] 0 0 0 0 [Pursuer, Longbow] GroupOneAI
 UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [Onigiri] GroupOneAI
-UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [8,11] 0 0 0 0 [SteelKnife] GroupOneAI
+UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackInRangeAI
 
 UNIT RiojaReaper Mage 0 Level(3, Enemy, True) [6,0] 0 0 0 0 [Fire] GroupTwoAI
-UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [10,4] 0 0 0 0 [Pike, Horseslayer] GroupTwoAI
+UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [10,4] 0 0 0 0 [Pike, Pitchfork] GroupTwoAI
 UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [6,6] 0 0 0 0 [SteelSword] GroupTwoAI
 UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [13,0] 0 0 0 0 [IronAxe] GroupTwoAI
 
 UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [15,5] 0 0 0 0 [SteelLance] GroupThreeAI
 UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [12,9] 0 0 0 0 [KillingEdge] GroupThreeAI
-UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [18,7] 0 0 0 0 [SteelBow, MiniBow] GroupThreeAI
-UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [18,0] 0 0 0 0 [IronLance] GroupThreeAI
+UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [IronLance] GroupThreeAI
 
 UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [18,12] 0 0 0 0 [SteelSword] GroupFourAI
 UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [18,16] 0 0 0 0 [SteelLance] GroupFiveAI
-UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [15,13] 0 0 0 0 [IronLance] GroupFourAI
-UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [15,15] 0 0 0 0 [IronSword] GroupFiveAI
+UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [11,12] 0 0 0 0 [IronLance] GroupFourAI
+UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [11,16] 0 0 0 0 [IronSword] GroupFiveAI
+UNIT RiojaReaper DragonRider 0 Level(4, Enemy, True) [15,14] 0 0 0 0 [SteelAxe, Hammer] AttackInRangeAI
 UNIT
 
 LogGroup:
@@ -115,6 +178,8 @@ LOAD1 1 NewPlayerUnits
 LOAD1 1 EnemyGroup
 LOAD1 1 LogGroup
 ENUN
+ENUT A3Spawn1TurnFlag
+ENUT A3Spawn2TurnFlag
 GotoPrepScreen
 NoFade
 ENDA
