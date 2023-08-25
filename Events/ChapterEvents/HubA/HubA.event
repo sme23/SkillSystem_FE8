@@ -338,6 +338,7 @@ RemoveAll
 EraseBackground
 LOAD1 0 LuaFirstTripCaveGroup
 ENUN
+ENUT 4
 NoFade
 ENDB
 

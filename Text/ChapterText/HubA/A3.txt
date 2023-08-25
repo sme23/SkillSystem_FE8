@@ -7,3 +7,14 @@ Escape[X]
 ## ChA3StatusObjective
 Escape before the[N]
   spirit wakes.[X]
+
+## ChA3ObjectiveExplanation
+Escape the forest with all units[N]
+within 12 turns to beat this map.[N]
+Lua must be the last unit to leave[N]
+through the bottom right bridge.[A][X]
+
+## ChA3SideObjectiveExplanation
+As a side-objective, try to Drop[N]
+all the logs onto the Ruins tiles.[N]
+You'll get a reward for doing so.[A][X]

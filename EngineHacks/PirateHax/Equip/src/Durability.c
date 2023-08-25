@@ -1,10 +1,10 @@
 #include "Durability.h"
 
-int GetItemDurability(Item item){
+int GetItemDurability(u16 item){
 	return (item >> 8); //right shifted twice should mean we're left with only durability
 }
 
-bool IsItemDefenseEquipment(Item item){
+bool IsItemDefenseEquipment(u16 item){
 	extern u8 DefenseEquipmentList[];
 
 	if (GetItemIndex(item) == 0) {
@@ -23,7 +23,7 @@ bool IsItemDefenseEquipment(Item item){
 	return false;
 }
 
-bool IsItemOffenseEquipment(Item item){
+bool IsItemOffenseEquipment(u16 item){
 	extern u8 OffenseEquipmentList[];
 
 	if (GetItemIndex(item) == 0) {
@@ -42,14 +42,14 @@ bool IsItemOffenseEquipment(Item item){
 	return false;
 }
 
-bool CheckIfDefenseEquipmentBroke(BattleUnit* battleUnit, Item item){
+bool CheckIfDefenseEquipmentBroke(BattleUnit* battleUnit, u16 item){
 	if (GetItemDurability(item) <= battleUnit->hitsTaken){
 		return true;
 	}
 	return false;
 }
 
-bool CheckIfOffenseEquipmentBroke(BattleUnit* battleUnit, Item item){
+bool CheckIfOffenseEquipmentBroke(BattleUnit* battleUnit, u16 item){
 	if (GetItemDurability(item) <= battleUnit->attacksMade){
 		return true;
 	}
@@ -61,7 +61,7 @@ bool CheckIfEquipmentBroke(BattleUnit* battleUnit){
 		return false; // no popups for npcs
 	}
 
-	Item item = GetUnitEquippedItem(&battleUnit->unit);
+	u16 item = GetUnitEquippedItem(&battleUnit->unit);
 
 	if (GetItemIndex(item) == 0){
 		return false;
@@ -78,7 +78,7 @@ bool CheckIfEquipmentBroke(BattleUnit* battleUnit){
 }
 
 void DecrementItemSlotDurability(Unit* unit, int itemSlot, int amount){
-	Item item = unit->items[itemSlot];
+	u16 item = unit->items[itemSlot];
 	if (GetItemDurability(item) > amount){
 		item -= (amount << 8);
 	}
@@ -172,7 +172,7 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 	unit->items[4] = battleUnit->unit.items[4];
 
 	// Equipment
-	Item item = GetUnitEquippedItem(unit);
+	u16 item = GetUnitEquippedItem(unit);
 
 	if (GetItemIndex(item) != 0){
 		int itemSlot = GetUnitEquippedItemSlot(unit);

@@ -119,3 +119,7 @@
 // StrTaker: After attacking and defeating an enemy, gain +4 str. (Max +10) 
 // Author: Vesly 
 #define StrTakerID 37
+
+//Hawkeye: User will always hit the enemy.
+//By SD9k
+#define HawkeyeID 38

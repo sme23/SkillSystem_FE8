@@ -1703,8 +1703,8 @@ When unit isn't deployed for a chapter,[N]
 -1 MOV (cannot go below base).[X]
 
 ## SD_ForestFriend
-Forest Friend: Unit can walk through[N]
-Thickets for 2 MOV and Forests for 1 MOV.[X]
+Forest Friend: Unit can traverse[N]
+Thickets/Forests for 2/1 MOV.[X]
 
 ## SD_Dogfight
 Dogfight: If unit's AS > foe's AS, unit[N]

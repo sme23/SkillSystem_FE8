@@ -8,6 +8,8 @@
 #define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; REMA"
 #define TutorialYesNoText(textid) "EVBIT_MODIFY 1; CenterTextbox(textid); EVBIT_MODIFY 0"
 #define RemoveAll "REMOVEALL_BLUE; REMOVEALL_GREEN; REMOVEALL_RED"
+#define GiveItem(Item,Character) "CALL $591F40; SMOV 0x3 Item ; GIVEITEMTO Character"
+#define SilentGiveItem(item,unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItemFunc|1"
 
 #define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; SetHubChapterFlagAndGo(labelId, chapterId); LABEL labelId"
 #define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); SetHubChapterFlagAndGo(labelId, chapterId); LABEL labelId"
@@ -30,8 +32,10 @@
 
 
 //A3 macros
-#define BranchIfNotUnitAtCoords(xcoord, ycoord, unitId, label) "CHECK_AT [xcoord, ycoord]; SVAL s1 unitId; BNE label s0 sC"
+#define BranchIfNotUnitAtCoords(xcoord, ycoord, unitId, labelId) "CHECK_AT [xcoord, ycoord]; SVAL s1 unitId; BNE labelId s1 sC"
 #define CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(label1, label2, areaFlag, turnFlag) "CHECK_ALLEGIANCE (-1); BEQ label1 s0 sC; ENUF areaFlag; GOTO label2; LABEL label1; ENUF turnFlag; LABEL label2"
+#define PanToTileThenFlashCursorForXSeconds(xcoord, ycoord, time) "CAMERA_CENTERED [xcoord,ycoord]; FlashCursor(xcoord,ycoord,time)"
+#define PlayEventIfEventIDSet(flagId, labelId, offset) "CHECK_EVENTID flagId; BEQ labelId s0 sC; CALL offset; LABEL labelId"
 
 //SetUnitItemDurability(xcoord, ycoord, itemslot, durability)
 //SetUnitItemDurability(unitid, itemslot, durability)

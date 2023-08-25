@@ -332,3 +332,16 @@ Shove Glove[X]
 
 ## ShoveGloveDesc
 Allows the holder to shove units 1 tile.[X]
+
+## TealGemName
+Teal Gem[X]
+
+## TealGemDesc
+A common gemstone. Worth 1000 Gold.[X]
+
+## AshArrowName
+Ash Arrow[X]
+
+## AshArrowDesc
+Can only be equipped with Bows.[N]
+Gives all attacks 100% Hit.[X]

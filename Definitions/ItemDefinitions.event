@@ -124,3 +124,6 @@
 #define FliersPermit $67
 #define MagesRing $68
 #define RidersBadge $97
+#define TealGem $e0
+
+#define AshArrow $e2
