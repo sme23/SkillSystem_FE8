@@ -210,14 +210,7 @@ EVBIT_MODIFY 4
 Text(HubA6Prompt) 
 ENUT SeenHubA6Pitch
 EVBIT_MODIFY 0
-GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
-/*
-Text(HubA6Pitch)
-Text(ChA6Pre1)
-Text(ChA6Pre2)
-TutorialYesNoText(HubA6Prompt)
-GotoHubChapterIfYes(6, HubA_6)
-*/
+GotoHubChapterIfYes(6, HubA_6, HubA6Accepted)
 NoFade
 ENDA
 

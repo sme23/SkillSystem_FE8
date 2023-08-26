@@ -74,3 +74,13 @@ int ReturnNumberOfHubChaptersVisited(){
         return hubChapters;
     }
 }
+
+void CheckIfOneHubAChapterCompletedASMC(){
+    int numOfChapters = ReturnNumberOfHubChaptersVisited();
+    if (numOfChapters >= 1){
+        gEventSlot[0xC] = 1;
+    }
+    else{
+        gEventSlot[0xC] = 0;
+    }
+}

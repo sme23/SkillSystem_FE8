@@ -579,6 +579,53 @@ int GetNPCStatIncrease(int growth){
 	return result;
 }
 
+struct Unit* LoadUnit(const struct UnitDefinition* uDef) {
+
+    struct Unit* unit = NULL;
+
+    switch (uDef->allegiance) {
+        // TODO: unit definition faction constants
+        case 0:
+            unit = GetFreeBlueUnit(uDef);
+            break;
+
+        case 2:
+            unit = GetFreeUnit(FACTION_RED);
+            break;
+
+        case 1:
+            unit = GetFreeUnit(FACTION_GREEN);
+            break;
+    }
+
+    if (!unit)
+        return NULL;
+
+    ClearUnit(unit);
+
+    UnitInitFromDefinition(unit, uDef);
+    UnitLoadStatsFromChracter(unit, unit->pCharacterData);
+    HideIfUnderRoof(unit);
+
+    if (uDef->autolevel) {
+        if (UNIT_FACTION(unit) != FACTION_BLUE) {
+            SetUnitLeaderCharId(unit, uDef->leaderCharIndex);
+        }
+        UnitAutolevel(unit);
+        UnitAutolevelWExp(unit, uDef);
+
+    }
+
+    FixROMUnitStructPtr(unit);
+    UnitLoadSupports(unit);
+
+    UnitCheckStatCaps(unit);
+
+    unit->curHP = GetUnitMaxHp(unit);
+
+    return unit;
+}
+
 void UnitInitFromDefinition(struct Unit* unit, const struct UnitDefinition* uDef) {
     unit->pCharacterData = GetCharacterData(uDef->charIndex);
 
@@ -596,25 +643,11 @@ void UnitInitFromDefinition(struct Unit* unit, const struct UnitDefinition* uDef
     }
 
     GenUnitDefinitionFinalPosition(uDef, &unit->xPos, &unit->yPos, FALSE);
+        
+    int i;
 
-    if (UNIT_IS_GORGON_EGG(unit)) {
-        int i;
-
-        // For gorgon eggs, set first item to zero
-        // And store the other item ids in slots 1 through 4 for later initialization
-
-        unit->items[0] = 0;
-
-        for (i = 0; i < UNIT_DEFINITION_ITEM_COUNT; ++i){
-            unit->items[i + 1] = uDef->items[i];
-        }
-            
-    } else {
-        int i;
-
-        for (i = 0; (i < UNIT_DEFINITION_ITEM_COUNT) && (uDef->items[i]); ++i){
-            UnitAddItem(unit, MakeNewItem(uDef->items[i]));
-        }
+    for (i = 0; (i < UNIT_DEFINITION_ITEM_COUNT) && (uDef->items[i]); ++i){
+        UnitAddItem(unit, MakeNewItem(uDef->items[i]));
     }
 
     SetUnitAiFromDefinition(unit, uDef);
@@ -649,7 +682,35 @@ void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* ch
 
 
 void UnitAutolevel(struct Unit* unit) {
-    UnitAutolevelCore(unit, unit->pClassData->number, unit->level - 1);
+    UnitAutolevelCore(unit, unit->pClassData->number, unit->level - unit->pCharacterData->baseLevel);
+}
+
+void UnitAutolevelCore(struct Unit* unit, int classId, int levelCount) {
+    bool isUnitPlayer = (UNIT_FACTION(unit) == UA_BLUE);
+    bool IsUnitBoss = (unit->pCharacterData->attributes & CA_BOSS);
+    if (levelCount) {
+        if (isUnitPlayer || IsUnitBoss){
+            unit->maxHP += GetAutoleveledStatIncrease(unit->pCharacterData->growthHP,  levelCount);
+            unit->pow   += GetAutoleveledStatIncrease(unit->pCharacterData->growthPow, levelCount);
+            unit->mag   += GetAutoleveledStatIncrease(MagCharTable[unit->pCharacterData->number].growthMag, levelCount);
+            unit->skl   += GetAutoleveledStatIncrease(unit->pCharacterData->growthSkl, levelCount);
+            unit->spd   += GetAutoleveledStatIncrease(unit->pCharacterData->growthSpd, levelCount);
+            unit->def   += GetAutoleveledStatIncrease(unit->pCharacterData->growthDef, levelCount);
+            unit->res   += GetAutoleveledStatIncrease(unit->pCharacterData->growthRes, levelCount);
+            unit->lck   += GetAutoleveledStatIncrease(unit->pCharacterData->growthLck, levelCount);
+        }
+        else{
+            unit->maxHP += GetAutoleveledStatIncrease(unit->pClassData->growthHP,  levelCount);
+            unit->pow   += GetAutoleveledStatIncrease(unit->pClassData->growthPow, levelCount);
+            unit->mag   += GetAutoleveledStatIncrease(MagCharTable[unit->pClassData->number].growthMag, levelCount);
+            unit->skl   += GetAutoleveledStatIncrease(unit->pClassData->growthSkl, levelCount);
+            unit->spd   += GetAutoleveledStatIncrease(unit->pClassData->growthSpd, levelCount);
+            unit->def   += GetAutoleveledStatIncrease(unit->pClassData->growthDef, levelCount);
+            unit->res   += GetAutoleveledStatIncrease(unit->pClassData->growthRes, levelCount);
+            unit->lck   += GetAutoleveledStatIncrease(unit->pClassData->growthLck, levelCount);
+        }
+        
+    }
 }
 
 void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
@@ -677,5 +738,27 @@ void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
 
             unit->ranks[wType] = GetItemRequiredExp(item);
         }
+
+        int j;
+        for (j = 0; j < 8; j++){
+            if (unit->ranks[j] > 1 && unit->ranks[j] < 251){ //if it is an existent rank that is not S rank
+                if (unit->ranks[j] >= 246){
+                    unit->ranks[j] = 251; //if it would go above 251, just set it to be 251 (S rank)
+                }
+                else{
+                    unit->ranks[j] += 5; //increase wexp by 5 in all ranks the unit has
+                }
+            }
+        }
     }
+}
+
+void* GetChapterAllyUnitDefinitions(void) {
+    const struct ChapterEventGroup* evGroup = GetChapterEventDataPointer(gChapterData.chapterIndex);
+
+    if (gChapterData.chapterIndex <= 7 && gChapterData.chapterIndex >= 2 && ReturnNumberOfHubChaptersVisited() >= 1) {
+        return evGroup->playerUnitsInHard; //if we're in Hub A and more than one hub chapter has been visited, bigger unit group (+2 deploy)
+    }
+    
+    return evGroup->playerUnitsInNormal;
 }

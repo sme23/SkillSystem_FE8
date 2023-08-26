@@ -18,6 +18,7 @@
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
 #define BranchIfHubNotVisited(labelId, eventId) "CheckIfHubVisited; BNE labelId s0 sC; CALL eventId; LABEL labelId"
+#define CheckIfHubAChapterCompleted "ASMC CheckIfOneHubAChapterCompletedASMC"
 
 
 #define SetHubChapterFlag(flagId) "SVAL s1 flagId; ASMC SetHubChapterFlagASMC"

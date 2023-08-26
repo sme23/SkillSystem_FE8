@@ -7,15 +7,17 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno1 Dunno2 Dunno3 Tutorial
 POIN Traps1 Traps2
-POIN Units1 Units1
+POIN Units1 Units2
 POIN $0 $0 $0 
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
+#define A6PirateLevel 2
+#define A6RebelLevel 4
+
 TurnBasedEvents:
 TurnEventPlayer(0, LeftThiefEvent, 6)
 TurnEventPlayer(0, RightThiefEvent, 7)
-
 TurnEventEnemy(0, Turn1EP, 1)
 TurnEventEnemy(0, Turn2EP, 2)
 TurnEventEnemy(0, Turn3EP, 3)
@@ -232,7 +234,7 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
-LoadUnit(4,23,Lua)
+UNIT Lua 0 0 Level(10,Ally,False) [4,23] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Matteo Mercenary 0 Level(5,Ally,False) [6,23] 0 0 0 0 [SteelSword, IronSword, Estoc, Vulnerary] NoAI
 UNIT Suzanne Gunner 0 Level(4,Ally,False) [9,23] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
 LoadUnit(5,24)
@@ -244,8 +246,25 @@ LoadUnit(7,25)
 LoadUnit(9,25)
 UNIT
 
-#define A6PirateLevel 2
-#define A6RebelLevel 4
+Units2:
+UNIT Lua 0 0 Level(10,Ally,False) [4,23] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Matteo Mercenary 0 Level(5,Ally,False) [6,23] 0 0 0 0 [SteelSword, IronSword, Estoc, Vulnerary] NoAI
+UNIT Suzanne Gunner 0 Level(4,Ally,False) [9,23] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
+LoadUnit(5,24)
+LoadUnit(7,24)
+LoadUnit(8,24)
+LoadUnit(10,24)
+LoadUnit(6,25)
+LoadUnit(7,25)
+LoadUnit(9,25)
+LoadUnit(3,24)
+LoadUnit(12,24)
+UNIT
+
+NewUnits:
+UNIT Matteo Mercenary 0 Level(5,Ally,True) [6,23] 0 0 0 0 [SteelSword, IronSword, Estoc, Vulnerary] NoAI
+UNIT Suzanne Gunner 0 Level(4,Ally,True) [9,23] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
+UNIT
 
 EnemyUnitsBosses:
 // Bosses
@@ -307,14 +326,14 @@ UNIT Rebel Warden 0 Level(A6RebelLevel, Enemy, True) [15,4] 0 0 0 0 [LightBrand,
 UNIT
 
 EnemyUnitsBombs:
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [13,2] 0 0 0 0 [0x0] NoAI // 1hp
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [5,8] 0 0 0 0 [0x0] NoAI // 3hp
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [12,10] 0 0 0 0 [0x0] NoAI // 2hp
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [19,6] 0 0 0 0 [0x0] NoAI // 3hp
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [3,16] 0 0 0 0 [0x0] NoAI // 6hp
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [11,14] 0 0 0 0 [0x0] NoAI // 5hp
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [14,12] 0 0 0 0 [0x0] NoAI // 5hp
-UNIT Bomb BombClass 0 Level(1, Enemy, True) [21,16] 0 0 0 0 [0x0] NoAI // 4hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [13,2] 0 0 0 0 [0x0] NoAI // 1hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [5,8] 0 0 0 0 [0x0] NoAI // 3hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [12,10] 0 0 0 0 [0x0] NoAI // 2hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [19,6] 0 0 0 0 [0x0] NoAI // 3hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [3,16] 0 0 0 0 [0x0] NoAI // 6hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [11,14] 0 0 0 0 [0x0] NoAI // 5hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [14,12] 0 0 0 0 [0x0] NoAI // 5hp
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [21,16] 0 0 0 0 [0x0] NoAI // 4hp
 UNIT
 
 LeftThiefUnits:
@@ -336,13 +355,18 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-LoadPlayerUnits(Units1)
-LoadEnemies(EnemyUnitsBosses)
+SetBackground(0x28)
+Text(ChA6Pre1)
+ClearBackground
+SetBackground(0x34)
+Text(ChA6Pre2)
+FADI 15
 
+LoadPlayerUnits(NewUnits)
+LoadEnemies(EnemyUnitsBosses)
 LoadEnemies(EnemyUnits1)
 LoadEnemies(EnemyUnits2)
 LoadEnemies(EnemyUnits3)
-
 LoadEnemies(EnemyUnitsBombs)
 
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
@@ -353,13 +377,6 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb5Timer,AnyDeployed,AnyArmy,AnyClass,Area(3,1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer,AnyDeployed,AnyArmy,AnyClass,Area(11,14,11,14),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
-
-SetBackground(0x28)
-Text(ChA6Pre1)
-ClearBackground
-SetBackground(0x34)
-Text(ChA6Pre2)
-ClearBackground
 
 GotoPrepScreen
 NoFade
