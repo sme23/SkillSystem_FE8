@@ -78,7 +78,6 @@ PopRBattlePopup(PopR_InitEquipmentBroke, 0x592420, 96)
 
 PUSH
 ORG 0x2C1EC
-
 // NEW for Eye for an Eye. This is a hack of a hack
 // I don't feel like risking breaking this hack by recompiling using my weird setups
 // so I'm just prepending the hook with what I need

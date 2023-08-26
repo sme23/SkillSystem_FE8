@@ -107,7 +107,6 @@ bool PopR_InitEquipmentBroke(void) {
 void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 
 	extern u8 idkAddr; // 3003060
-	extern u8 SynchronizeIDLink;
 
 	unit->level = battleUnit->unit.level;
 	unit->exp   = battleUnit->unit.exp;
@@ -116,26 +115,6 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 
 	// (state>>11) & 7 placed at 3003060??
 	idkAddr = ((battleUnit->unit.state>>11) & 7);
-
-	// Skillsys modification
-	// Hooks at 0x2C214
-
-	// Synchronize
-	if (gSkillTester(&gBattleActor.unit, SynchronizeIDLink)){
-		if(gBattleActor.statusOut > 0){
-			if(gBattleTarget.statusOut != 0xFF){
-				gBattleTarget.statusOut = gBattleActor.statusOut;
-			}
-		}
-	}
-	if (gSkillTester(&gBattleTarget.unit, SynchronizeIDLink)){
-		if(gBattleTarget.statusOut > 0){
-			if(gBattleActor.statusOut != 0xFF){
-				gBattleActor.statusOut = gBattleTarget.statusOut;
-			}
-		}
-	}
-	// Synchronize
 
 	if (battleUnit->statusOut > 0){
 		SetUnitNewStatus(unit, battleUnit->statusOut);
