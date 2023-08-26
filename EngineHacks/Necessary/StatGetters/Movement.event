@@ -10,6 +10,7 @@ pMovModifiers: // Movement
 	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prEquipmentMov prLuaHubMovement
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
+	//POIN WellRested
 	#endif
 	POIN prNullifyIfFreeze prNullifyIfGuardAI
 	#ifdef DEBUFFS_MIN_ZERO

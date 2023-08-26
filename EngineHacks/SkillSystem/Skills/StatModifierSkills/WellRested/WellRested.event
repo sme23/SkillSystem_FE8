@@ -1,0 +1,15 @@
+#include "WellRested.lyn.event"
+#include "WellRestedHook.lyn.event"
+
+PUSH
+	ORG 0x957F8
+		//jumpToHack(WellRestedHook)
+POP
+
+WellRestedIDLink:
+BYTE WellRestedID
+
+// issue with implementation: existence of hub means it can't work like fatigue
+
+
+
