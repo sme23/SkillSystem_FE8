@@ -740,16 +740,21 @@ void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
         }
 
         int j;
-        for (j = 0; j < 8; j++){
-            if (unit->ranks[j] > 1 && unit->ranks[j] < 251){ //if it is an existent rank that is not S rank
-                if (unit->ranks[j] >= 246){
-                    unit->ranks[j] = 251; //if it would go above 251, just set it to be 251 (S rank)
-                }
-                else{
-                    unit->ranks[j] += 5; //increase wexp by 5 in all ranks the unit has
+        
+        bool isUnitPlayer = (UNIT_FACTION(unit) == UA_BLUE);
+        if (isUnitPlayer){ //if player unit, autolevel their wexp too
+            for (j = 0; j < 8; j++){
+                if (unit->ranks[j] > 1 && unit->ranks[j] < 251){ //if it is an existent rank that is not S rank
+                    if (unit->ranks[j] >= 246){
+                        unit->ranks[j] = 251; //if it would go above 251, just set it to be 251 (S rank)
+                    }
+                    else{
+                        unit->ranks[j] += 5; //increase wexp by 5 in all ranks the unit has
+                    }
                 }
             }
         }
+        
     }
 }
 
