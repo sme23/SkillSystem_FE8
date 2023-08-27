@@ -120,3 +120,9 @@ enum ChapterData_chapterStateBits {
     PLAY_FLAG_STATSCREENPAGE_SHIFT = 0,
     PLAY_FLAG_STATSCREENPAGE_MASK = PLAY_FLAG_STATSCREENPAGE0 | PLAY_FLAG_STATSCREENPAGE1,
 };
+
+s8 IsUnitEnemyWithActiveUnit(struct Unit* unit);
+
+s8 AreUnitsAllied(int left, int right);
+
+extern u8 A3LogIDLink;

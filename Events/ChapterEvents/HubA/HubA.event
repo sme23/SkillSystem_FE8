@@ -4,6 +4,11 @@ EventPointerTable(HubAEventsID, PointerList)
 #define SeenHubA1Pitch 0x7
 #define SeenHubA2Pitch 0x8
 #define SeenHubA6Pitch 0xc
+
+//hub maneuvering flags
+#define MrYodsenSpokeToOnce 27
+#define TavernToPort 28
+#define PortToTavern 29
 #define MainRoomToOtherRooms 30
 #define MainRoomToPort 31
 #define TreasureRoomToMainRoom 32
@@ -11,11 +16,25 @@ EventPointerTable(HubAEventsID, PointerList)
 #define PortToOtherAreas 34
 #define DocksToPort 35
 #define PortToBase 36
+#define DurghamSpokeToOnce 37
+#define TrianaSpokeToOnce 38
+#define MedwynSpokeToOnce 39
+#define BartzSpokeToOnce 40
 //global flags
+#define WentToHubA1 0x83
+#define WentToHubA2 0x8B
+#define WentToHubA3 0x8C
+#define WentToHubA4 0x8D
+#define WentToHubA5 0x8E
+#define WentToHubA6 0x8F
 #define WentToPortGreagor 0x92
 #define WentToPortGreagorDocks 0x93
 #define WentToBaseAgain 0x94
 #define CameBackFromDocks 0x95
+#define DurghamRecruitFlag 0x96
+#define HubASamsonArranRecruitFlag 0x97
+#define FirstTimeInTavern 0x98
+#define MrYodsenRecruitFlag 0x99
 
 PointerList:
 POIN TurnBasedEvents
@@ -33,202 +52,38 @@ TurnBasedEvents:
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(HubASamsonArranRecruitFlag, TalkToTriana, Lua, Triana)
+CharacterEvent(HubASamsonArranRecruitFlag, TalkToMedwyn, Lua, Medwyn)
+CharacterEvent(HubASamsonArranRecruitFlag, TalkToBartz, Lua, Bartz)
+CharacterEvent(DurghamRecruitFlag, TalkToDurgham, Lua, Durgham)
+CharacterEvent(MrYodsenRecruitFlag, TalkToMrYodsen, Lua, MrYodsen)
 END_MAIN
 
 LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-AREA WentToPortGreagorDocks PortGreagorDocksFirstTime [29,15] [29,16]
 AREA PortToDocks PortGreagorDocks [29,15] [29,16]
+AREA WentToPortGreagorDocks PortGreagorDocksFirstTime [29,15] [29,16]
 
-AREA CameBackFromDocks CameBackFromDocksFirstTime [0,13] [0,14]
 AREA DocksToPort GotoPortFromDocks [0,13] [0,14]
+AREA CameBackFromDocks CameBackFromDocksFirstTime [0,13] [0,14]
 
-AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
 AREA PortToBase BackToLuaBase [20,4] [21,4]
+AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
 
-AREA 0 GotoChapter1 [12, 5] [12, 5]
-AREA 0 GotoChapter2 [12, 9] [12, 9]
-AREA 0 GotoChapter3 [14, 9] [14, 9]
-AREA 0 GotoChapter4 [18, 9] [18, 9]
-AREA 0 GotoChapter5 [20, 9] [20, 9]
-AREA 0 GotoChapter6 [20, 13] [20, 13]
+AREA PortToTavern FromPortToTavern [8,20] [8,20]
+AREA TavernToPort ToPortFromTavern [8,20] [8,20] 
+
+AREA WentToHubA1 GotoChapter1 [12, 5] [12, 5]
+AREA WentToHubA2 GotoChapter2 [12, 9] [12, 9]
+AREA WentToHubA3 GotoChapter3 [14, 9] [14, 9]
+AREA WentToHubA4 GotoChapter4 [18, 9] [18, 9]
+AREA WentToHubA5 GotoChapter5 [20, 9] [20, 9]
+AREA WentToHubA6 GotoChapter6 [20, 13] [20, 13]
 AFEV 0 RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
-
-PortGreagorDocksFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILECHANGE 0
-CALL ClearHubATraps
-LoadPlayerUnits(LuaAtDaDocks)
-CALL AddDockTraps
-ENUF TreasureRoomToMainRoom
-CAMERA_CENTERED Lua
-FADU 10
-Text(HubABeginningScene4)
-Text(HubABeginningScene5)
-ENUT DocksToPort
-ENUF CameBackFromDocks
-NoFade
-ENDA
-
-PortGreagorDocks:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILECHANGE 0
-CALL ClearHubATraps
-LoadPlayerUnits(LuaAtDaDocks)
-CALL AddDockTraps
-ENUF TreasureRoomToMainRoom
-CAMERA_CENTERED Lua
-FADU 10
-NoFade
-ENDA
-
-LuaAtDaDocks:
-UNIT Lua Captain 0 Level(10,Ally,False) [0,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT
-
-CameBackFromDocksFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 0
-CALL ClearDockTraps
-LoadPlayerUnits(LuaBackFromDaDocks)
-CALL AddHubATraps
-ENUF TreasureRoomToMainRoom
-CAMERA_CENTERED Lua
-FADU 10
-ENUT PortToBase
-ENUF WentToBaseAgain
-NoFade
-ENDA
-
-
-GotoPortFromDocks:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 0
-CALL ClearDockTraps
-LoadPlayerUnits(LuaBackFromDaDocks)
-CALL AddHubATraps
-ENUF TreasureRoomToMainRoom
-CAMERA_CENTERED Lua
-FADU 10
-NoFade
-ENDA
-
-LuaBackFromDaDocks:
-UNIT Lua Captain 0 Level(10,Ally,False) [29,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT
-
-BackToLuaBase:
-NoFade
-ENDA
-
-BackToLuaBaseFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-SetBackground(Fort)
-Text(HubABeginningScene6)
-Text(HubABeginningScene6_2)
-FADI 10
-CAMERA_CENTERED [20,14]
-GotoPrepScreen
-NoFade
-ENDA
-
-NewUnits:
-UNIT Estelle Troubadour 0 Level(3,Ally,False) [0,5] 0 0 0 0 [Heal, Torch] NoAI
-UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [14,5] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
-UNIT
-
-RefreshLua:
-SVAL s1 0x42
-UNSET_CONDITION Lua
-NoFade
-ENDA
-
-GotoChapter1:
-CHECK_EVENTID SeenHubA1Pitch
-BNE 7 sC s0
-Text(HubA1Pitch)
-LABEL 7
-EVBIT_MODIFY 4
-Text(HubA1Prompt)
-ENUT SeenHubA1Pitch
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
-NoFade
-ENDA
-
-GotoChapter2:
-CHECK_EVENTID SeenHubA2Pitch
-BNE 7 sC s0
-Text(HubA2Pitch)
-LABEL 7
-EVBIT_MODIFY 4
-Text(HubA2Prompt) 
-ENUT SeenHubA2Pitch
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
-NoFade
-ENDA
-
-GotoChapter3:
-TutorialYesNoText(HubA3Prompt) 
-GotoHubChapterIfYes(3, HubA_3)
-NoFade
-ENDA
-
-GotoChapter4:
-TutorialYesNoText(HubA4Prompt) 
-GotoHubChapterIfYes(4, HubA_4)
-NoFade
-ENDA
-
-GotoChapter5:
-TutorialYesNoText(HubA5Prompt) 
-GotoHubChapterIfYes(5, HubA_5)
-NoFade
-ENDA
-
-GotoChapter6:
-CHECK_EVENTID SeenHubA6Pitch
-BNE 7 sC s0
-Text(HubA6Pitch)
-LABEL 7
-EVBIT_MODIFY 4
-Text(HubA6Prompt) 
-ENUT SeenHubA6Pitch
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(6, HubA_6, HubA6Accepted)
-NoFade
-ENDA
-
-Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [20,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT
-
-PortUnits:
-UNIT Durgham LanceCav 0 Level(5,NPC,False) [5,8] 0 0 0 0 [IronLance, SteelLance, Vulnerary] NoAI
-UNIT MrYodsen Gunner 0 Level(3,NPC,False) [9,8] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
-UNIT Triana Shaman_F 0 Level(4,NPC,False) [2,0] 0 0 0 0 [Surge, Elfire, Vulnerary] NoAI
-UNIT Medwyn Warden 0 Level(6,NPC,False) [7,0] 0 0 0 0 [SteelSword, Javelin, PureWater] NoAI
-UNIT Bartz Deserter 0 Level(8,NPC,False) [12,0] 0 0 0 0 [SteelLance, Vulnerary] NoAI
-UNIT
-
-LuaFirstTripCaveGroup:
-UNIT Lua Captain 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT
 
 Traps1:
 BlueSigil(0, 11)
@@ -249,6 +104,393 @@ RedSigil(20, 13)
 ENDTRAP
 ALIGN 4
 
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [20,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+BeginningScene:
+// only here for chapter A1 testing
+ENUT InAHubFlag
+ENUT PortToOtherAreas
+BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
+ENUT DocksToPort
+ENUT TavernToPort
+GotoPrepScreen
+ENUN
+NoFade
+ENDA
+
+EndingScene:
+NoFade
+MNC2 Chapter2
+ENDA
+
+
+//CHARACTER EVENTS HERE
+
+TalkToTriana:
+CheckHowManyHubChaptersCompleted
+SVAL s1 1
+BLE 1 sC s1 //if 1 or less hub chapters completed, triana recruitable so branch to that
+    Text(TrianaUnrecruitableText) //triana's statement that she's found work and isn't interested anymore
+    GOTO 5
+LABEL 1
+HubFirstTimeTalkToUnit(TrianaSpokeToOnce, 2, TrianaFirstTimeText)
+LABEL 2
+TutorialYesNoText(RecruitTrianaChoice)
+HubRecruitUnit(Triana, 3, TrianaRecruitedText, 4)
+LABEL 3
+Text(TrianaRejectedText)
+LABEL 5
+ENUF HubASamsonArranRecruitFlag
+LABEL 4
+NoFade
+ENDA
+
+TalkToMedwyn:
+CheckHowManyHubChaptersCompleted
+SVAL s1 3
+BLE 1 sC s1 //if less than 4, part of medwyn's time
+    Text(MedwynUnrecruitableText) //medwyn's statement that he's drunk off his ass so he's unintelligible
+    GOTO 5
+LABEL 1
+SVAL s1 2
+BGE 0 sC s1 //if 2 or 3, then it's medwyn's rare moment of clarity, so skip
+    Text(MedwynUnrecruitableText) 
+    GOTO 5
+LABEL 0
+HubFirstTimeTalkToUnit(MedwynSpokeToOnce, 2, MedwynFirstTimeText)
+LABEL 2
+TutorialYesNoText(RecruitMedwynChoice)
+HubRecruitUnit(Medwyn, 3, MedwynRecruitedText, 4)
+LABEL 3
+Text(MedwynRejectedText)
+LABEL 5
+ENUF HubASamsonArranRecruitFlag
+LABEL 4
+NoFade
+ENDA
+
+TalkToBartz:
+CheckHowManyHubChaptersCompleted
+SVAL s1 4
+BGE 1 sC s1 //if 4 hub chapters completed, bartz available for recruit so skip
+    Text(BartzUnrecruitableText) //bartz's statement that he's waiting for a job
+    GOTO 5
+LABEL 1
+HubFirstTimeTalkToUnit(BartzSpokeToOnce, 2, BartzFirstTimeText)
+LABEL 2
+TutorialYesNoText(RecruitBartzChoice)
+HubRecruitUnit(Bartz, 3, BartzRecruitedText, 4)
+LABEL 3
+Text(BartzRejectedText)
+LABEL 5
+ENUF HubASamsonArranRecruitFlag
+LABEL 4
+NoFade
+ENDA
+
+
+TalkToDurgham:
+HubFirstTimeTalkToUnit(DurghamSpokeToOnce, 1, DurghamFirstTimeText)
+LABEL 1
+TutorialYesNoText(RecruitDurghamChoice)
+HubRecruitUnit(Durgham, 2, DurghamRecruitedText, 3)
+LABEL 2
+HubRejectUnit(DurghamRejectedText, DurghamRecruitFlag) //unsets this flag if you decided not to recruit
+LABEL 3
+NoFade
+ENDA
+
+TalkToMrYodsen:
+CheckHowManyHubChaptersCompleted
+SVAL s1 6
+BNE 0 s1 sC //if not all hub chapters have been completed, branch to 0
+    HubFirstTimeTalkToUnit(MrYodsenSpokeToOnce, 1, MrYodsenFirstTimeFreeText)
+    SVAL s1 0
+    GOTO 1
+LABEL 0
+    HubFirstTimeTalkToUnit(MrYodsenSpokeToOnce, 4, MrYodsenFirstTimeText)
+LABEL 4
+    CalculateYodsenPrice
+    SADD s1 s0 sC
+    CHECK_MONEY
+    BLT 1 s1 sC //if you have more money than the cost, branch to 1
+        Text(MrYodsenTellsLuaShesBrokeText)
+        GOTO 5
+LABEL 1
+    GetTextFromMemSlot1
+    Text(RecruitMrYodsenChoice)
+    SADD s3 s1 s0 //moves how much gold to take to s3
+    TAKEMONEY 
+    HubRecruitUnit(MrYodsen, 2, MrYodsenRecruitedText, 3)
+LABEL 2
+Text(MrYodsenRejectedText)
+LABEL 5
+ENUF MrYodsenRecruitFlag //unsets this flag if you decided not to recruit
+LABEL 3
+NoFade
+ENDA
+
+// AREA EVENTS HERE
+
+FromPortToTavern:
+InitiateTileChangeInHub(ClearHubATraps, AddTavernTraps, 1, LuaInDaTavern, TavernGreensSpawnEvent)
+ENUF TavernToPort
+NoFade
+ENDA
+
+ToPortFromTavern:
+InitiateTileRevertInHub(ClearTavernTraps, AddHubATraps, 1, LuaInFrontOfDaTavern, PortSpawnEvent)
+ENUF PortToTavern
+NoFade
+ENDA
+
+PortGreagorDocksFirstTime:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+CALL ClearHubATraps
+STAL 1
+CALL AddDockTraps
+STAL 1
+TILECHANGE 0
+LoadPlayerUnits(LuaAtDaDocks)
+CAMERA_CENTERED Lua
+FADU 15
+ENUT DocksToPort
+ENUF CameBackFromDocks
+Text(HubABeginningScene4)
+Text(HubABeginningScene5)
+NoFade
+ENDA
+
+PortGreagorDocks:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+CALL ClearHubATraps
+STAL 10
+CALL AddDockTraps
+STAL 10
+TILECHANGE 0
+LoadPlayerUnits(LuaAtDaDocks)
+CAMERA_CENTERED Lua
+CALL DurghamSpawnEvent
+FADU 15
+ENUF DocksToPort
+NoFade
+ENDA
+
+CameBackFromDocksFirstTime:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+TILEREVERT 0
+STAL 10
+CALL ClearDockTraps
+STAL 10
+CALL AddHubATraps
+STAL 10
+LoadPlayerUnits(LuaBackFromDaDocks)
+CAMERA_CENTERED Lua
+FADU 15
+ENUT PortToBase
+ENUF WentToBaseAgain
+ENUF PortToDocks
+NoFade
+ENDA
+
+GotoPortFromDocks:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+TILEREVERT 0
+STAL 10
+CALL ClearDockTraps
+STAL 10
+CALL AddHubATraps
+STAL 10
+LoadPlayerUnits(LuaBackFromDaDocks)
+CAMERA_CENTERED Lua
+FADU 15
+ENUF PortToDocks
+NoFade
+ENDA
+
+BackToLuaBase:
+NoFade
+ENDA
+
+BackToLuaBaseFirstTime:
+FADI 10
+SET_ACTIVE 0
+RemoveAll
+SetBackground(Fort)
+Text(HubABeginningScene6)
+Text(HubABeginningScene6_2)
+FADI 10
+CAMERA_CENTERED [20,14]
+GotoPrepScreen
+NoFade
+ENDA
+
+RefreshLua:
+SVAL s1 0x42
+UNSET_CONDITION Lua
+NoFade
+ENDA
+
+GotoChapter1:
+CHECK_EVENTID SeenHubA1Pitch
+BNE 7 sC s0
+Text(HubA1Pitch)
+LABEL 7
+EVBIT_MODIFY 4
+Text(HubA1Prompt)
+ENUT SeenHubA1Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
+ENUF WentToHubA1
+NoFade
+ENDA
+
+GotoChapter2:
+CHECK_EVENTID SeenHubA2Pitch
+BNE 7 sC s0
+Text(HubA2Pitch)
+LABEL 7
+EVBIT_MODIFY 4
+Text(HubA2Prompt) 
+ENUT SeenHubA2Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_2, HubA2Accepted)
+ENUF WentToHubA2
+NoFade
+ENDA
+
+GotoChapter3:
+TutorialYesNoText(HubA3Prompt) 
+GotoHubChapterIfYes(1, HubA_3)
+ENUF WentToHubA3
+NoFade
+ENDA
+
+GotoChapter4:
+TutorialYesNoText(HubA4Prompt) 
+GotoHubChapterIfYes(1, HubA_4)
+ENUF WentToHubA4
+NoFade
+ENDA
+
+GotoChapter5:
+TutorialYesNoText(HubA5Prompt) 
+GotoHubChapterIfYes(1, HubA_5)
+ENUF WentToHubA5
+NoFade
+ENDA
+
+GotoChapter6:
+CHECK_EVENTID SeenHubA6Pitch
+BNE 7 sC s0
+Text(HubA6Pitch)
+LABEL 7
+EVBIT_MODIFY 4
+Text(HubA6Prompt) 
+ENUT SeenHubA6Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_6, HubA6Accepted)
+ENUF WentToHubA6
+NoFade
+ENDA
+
+LuaFirstTripCaveGroup:
+UNIT Lua Captain 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+
+
+BeginningSceneFirstTimeCave:
+SetBackground(Ship)
+Text(HubABeginningScene1)
+SetBackground(Fort)
+Text(HubABeginningScene2)
+ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
+ENUT WentToPortGreagorDocks //sets future global flag events that I don't want triggered yet
+ENUT CameBackFromDocks
+ENUT WentToBaseAgain 
+FADI 10
+LOMA Chapter2
+LOAD1 1 NewUnits
+ENUN
+RemoveAll
+EraseBackground
+LOAD1 0 LuaFirstTripCaveGroup
+ENUN
+ENUT 4
+NoFade
+ENDB
+
+LuaAtDaDocks:
+UNIT Lua Captain 0 Level(10,Ally,False) [0,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+LuaBackFromDaDocks:
+UNIT Lua Captain 0 Level(10,Ally,False) [29,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+LuaInFrontOfDaTavern:
+UNIT Lua Captain 0 Level(10,Ally,False) [8,20] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+LuaInDaTavern:
+UNIT Lua Captain 0 Level(10,Ally,False) [8,20] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+NewUnits:
+UNIT Estelle Troubadour 0 Level(3,Ally,False) [0,5] 0 0 0 0 [Heal, Torch] NoAI
+UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [14,5] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
+UNIT
+
+DurghamUnitGroup:
+UNIT Durgham LanceCav 0 Level(5,NPC,False) [1,20] 0 0 0 0 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT
+
+SamsonArranUnitGroup:
+UNIT Triana Shaman_F 0 Level(4,NPC,False) [3,14] 0 0 0 0 [Surge, Elfire, Vulnerary] NoAI
+UNIT Medwyn Warden 0 Level(6,NPC,False) [5,14] 0 0 0 0 [SteelSword, Javelin, PureWater] NoAI
+UNIT Bartz Deserter 0 Level(8,NPC,False) [7,14] 0 0 0 0 [SteelLance, Vulnerary] NoAI
+UNIT
+
+MrYodsenUnitGroup:
+UNIT MrYodsen Gunner 0 Level(3,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
+UNIT
+
+DurghamSpawnEvent:
+CHECK_EVENTID DurghamRecruitFlag
+BNE 776 s0 sC //if durgham recruited, do not spawn him in
+    CheckIfHubAChapterCompleted
+    BEQ 776 s0 sC //if no chapters completed, do not spawn him in
+        LoadPlayerUnits(DurghamUnitGroup) 
+LABEL 776
+NoFade
+ENDA
+
+TavernGreensSpawnEvent:
+LoadNPCUnitGroupIfEIDNotSet(HubASamsonArranRecruitFlag, 1, SamsonArranUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(MrYodsenRecruitFlag, 2, MrYodsenUnitGroup)
+NoFade
+ENDA
+
+PortSpawnEvent:
+NoFade
+ENDA
+
+
 AddHubATraps:
 AddTrap(BlueSigilTrapID,0, 11)
 AddTrap(BlueSigilTrapID,0, 12)
@@ -258,7 +500,6 @@ AddTrap(BlueSigilTrapID,21, 4)
 AddTrap(BlueSigilTrapID,29, 15)
 AddTrap(BlueSigilTrapID,29, 16)
 AddTrap(BlueSigilTrapID,8, 20)
-
 AddTrap(RedSigilTrapID,12, 5)
 AddTrap(RedSigilTrapID,12, 9)
 AddTrap(RedSigilTrapID,14, 9)
@@ -287,6 +528,16 @@ RemoveTrapAtCoords(20, 13)
 NoFade
 ENDA
 
+AddTavernTraps:
+AddTrap(BlueSigilTrapID, 8, 20)
+NoFade
+ENDA
+
+ClearTavernTraps:
+RemoveTrapAtCoords(8, 20)
+NoFade
+ENDA
+
 AddDockTraps:
 AddTrap(BlueSigilTrapID,0,13)
 AddTrap(BlueSigilTrapID,0,14)
@@ -297,47 +548,6 @@ ClearDockTraps:
 RemoveTrapAtCoords(0, 13)
 RemoveTrapAtCoords(0, 14)
 NoFade
-ENDA
-
-
-Traps2:
-ENDTRAP
-ALIGN 4
-
-BeginningScene:
-// only here for chapter A1 testing
-ENUT InAHubFlag
-ENUT PortToOtherAreas
-BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
-GotoPrepScreen
-ENUN
-NoFade
-ENDA
-
-BeginningSceneFirstTimeCave:
-SetBackground(Ship)
-Text(HubABeginningScene1)
-SetBackground(Fort)
-Text(HubABeginningScene2)
-ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
-ENUT WentToPortGreagorDocks //sets future global flag events that I don't want triggered yet
-ENUT CameBackFromDocks
-ENUT WentToBaseAgain 
-FADI 10
-LOMA Chapter2
-LOAD1 1 NewUnits
-ENUN
-RemoveAll
-EraseBackground
-LOAD1 0 LuaFirstTripCaveGroup
-ENUN
-ENUT 4
-NoFade
-ENDB
-
-EndingScene:
-NoFade
-MNC2 Chapter2
 ENDA
 
 Dunno1: //down here because nothing here is really used

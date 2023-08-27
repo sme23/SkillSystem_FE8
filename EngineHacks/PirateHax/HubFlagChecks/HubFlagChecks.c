@@ -67,6 +67,11 @@ bool LuaIsInHub(Unit* unit){
 
 int ReturnNumberOfHubChaptersVisited(){
     int hubChapters = (CheckEventId(0x83) + CheckEventId(0x8B) + CheckEventId(0x8c) + CheckEventId(0x8d) + CheckEventId(0x8e) + CheckEventId(0x8f) - 1);
+    
+    if (gChapterData.chapterIndex == 1){ //in Hub A, add 1
+        hubChapters++;
+    }
+
     if (hubChapters < 0){
         return 0;
     }
@@ -83,4 +88,19 @@ void CheckIfOneHubAChapterCompletedASMC(){
     else{
         gEventSlot[0xC] = 0;
     }
+}
+
+void CheckHowManyHubChaptersCompletedASMC(){
+    gEventSlot[0xC] = ReturnNumberOfHubChaptersVisited();
+}
+
+void CalculateYodsenPriceASMC(){
+    int basePrice = 3000;
+    int discount = ReturnNumberOfHubChaptersVisited() * 500;
+    gEventSlot[0xC] = basePrice - discount;
+}
+
+void GetTextFromMemorySlot1ASMC(){
+    int text = gEventSlot[0x1];
+    SetTalkNumber(text); //sets the talk number to be the value in s1
 }

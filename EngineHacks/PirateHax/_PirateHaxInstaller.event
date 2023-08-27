@@ -76,6 +76,8 @@
 #include "Music/MusicAsmInstaller.event"
 //7743
 
+#include "ASMCs/ASMCInstaller.event"
+//Miscellaneous
 
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743

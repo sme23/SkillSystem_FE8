@@ -3,6 +3,8 @@
 #define A3Spawn2AreaFlag 9
 #define A3Spawn1TurnFlag 10
 #define A3Spawn2TurnFlag 11
+#define A3Spawn3TurnFlag 12
+#define A3Spawn3AreaFlag 13
 
 EventPointerTable(HubA_3EventsID, PointerList)
 
@@ -22,6 +24,7 @@ TurnBasedEvents:
 TurnEventPlayer(0, A3Explanation, 1)
 TurnEventPlayer(A3Spawn1TurnFlag, A3Reinforce1, 1, 255) //bottom left fort spawn
 TurnEventPlayer(A3Spawn2TurnFlag, A3Reinforce2, 1, 255)
+TurnEventPlayer(A3Spawn3TurnFlag, A3Reinforce3, 1, 255)
 Survive(GameOverYeaaaaah,12)
 END_MAIN
 
@@ -59,6 +62,16 @@ Reinforce2:
 UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [7,14] 0 0 1 REDA7R14 [SteelLance] PursueWithoutHeedAI
 UNIT
 
+A3Reinforce3:
+SpawnReinforcements(Reinforce3)
+NoFade
+ENDA
+
+Reinforce3:
+UNIT RiojaReaper Fighter 0 Level(3, Enemy, True) [15,14] 0 0 1 REDA14R14 [SteelAxe] PursueWithoutHeedAI
+UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [15,14] 0 0 1 REDA15R13 [SteelSword] PursueWithoutHeedAI
+UNIT
+
 CharacterBasedEvents:
 END_MAIN
 
@@ -71,6 +84,7 @@ END_MAIN
 MiscBasedEvents:
 AREA A3Spawn1AreaFlag CheckIfTimeForSpawn1 [12, 2] [18,9]
 AREA A3Spawn2AreaFlag CheckIfTimeForSpawn2 [4, 12] [9,16]
+AREA A3Spawn3AreaFlag CheckIfTimeForSpawn3 [11, 11] [18,16]
 AFEV A3LogFlag CheckIfLogsInPlace 0
 CauseGameOverIfLordDies
 AFEV 0x0 CheckNoUnits 0x0
@@ -86,6 +100,10 @@ CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(1, 2, A3Spawn2AreaFlag, A3Spawn2
 NoFade
 ENDA
 
+CheckIfTimeForSpawn3:
+CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(1, 2, A3Spawn3AreaFlag, A3Spawn3TurnFlag)
+NoFade
+ENDA
 
 CheckIfLogsInPlace:
 BranchIfNotUnitAtCoords(0, 14, A3Log, 1)
@@ -100,16 +118,15 @@ NoFade
 ENDA
 
 ForestFriendEvent:
+//texto
+RemoveAllThreeLogs
+//texto
 GiveItemWithDurability(SkillScroll,ForestFriendID,0xFFFF)
 NoFade
 ENDA
 
 CheckNoUnits:
-ASMC GetBlueUnitCountASMC
-BNE 1 s0 sC
-ENUT 3
-CALL EndingScene
-LABEL 1
+GotoEndingSceneIfNoPlayers
 NoFade
 ENDA
 
@@ -144,7 +161,7 @@ ENDTRAP
 ALIGN 4
 
 EnemyGroup:
-UNIT Sargargala 0 0 Level(7,Enemy,False) [17,14] 0 0 0 0 [KillerLance, LightBrand] BossAI
+UNIT Sargargala 0 0 Level(7,Enemy,True) [17,14] 0 0 0 0 [KillerLance, LightBrand] BossAI
 UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,13] 0 0 0 0 [HandAxe] BossAI
 UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,15] 0 0 0 0 [HandAxe] BossAI
 
@@ -192,6 +209,7 @@ LOAD1 1 LogGroup
 ENUN
 ENUT A3Spawn1TurnFlag
 ENUT A3Spawn2TurnFlag
+ENUT A3Spawn3TurnFlag
 ENUT LordMustEscapeLastFlag
 GotoPrepScreen
 NoFade

@@ -1646,9 +1646,9 @@ can consume an item without using[N]
 their action. +2 STR/SKL/SPD (decays).[X]
 
 ## SD_ArmsMastery
-Arms Mastery: If the weapon rank of[N]
-unit's currently equipped weapon is[N]
-higher than foe's, unit's attack is brave.[X]
+Arms Mastery: If this unit initiates[N]
+with a weapon of higher rank than[N]
+the foe's, perform a followup attack.[X]
 
 ## SD_AstralBlessing
 Astral Blessing: At start of turn,[N]

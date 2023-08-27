@@ -17,4 +17,5 @@ through the bottom right bridge.[A][X]
 ## ChA3SideObjectiveExplanation
 As a side-objective, try to Drop[N]
 all the logs onto the Ruins tiles.[N]
-You'll get a reward for doing so.[A][X]
+You'll get a reward for doing so.[N]
+Enemies will not attack the logs.[A][X]

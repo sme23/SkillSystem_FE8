@@ -172,7 +172,7 @@ Slimshot[X]
 Shining Bow[X]
 
 ## ShiningBowDesc
-Uses Mag. Can counter at melee.[X]
+Uses Mag. Can attack at melee.[X]
 
 ## SnapshotName
 Snapshot[X]

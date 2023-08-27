@@ -686,7 +686,7 @@ void UnitAutolevel(struct Unit* unit) {
 }
 
 void UnitAutolevelCore(struct Unit* unit, int classId, int levelCount) {
-    bool isUnitPlayer = (UNIT_FACTION(unit) == UA_BLUE);
+    bool isUnitPlayer = (unit->pCharacterData->number <= 0x45);
     bool IsUnitBoss = (unit->pCharacterData->attributes & CA_BOSS);
     if (levelCount) {
         if (isUnitPlayer || IsUnitBoss){
@@ -741,7 +741,7 @@ void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
 
         int j;
         
-        bool isUnitPlayer = (UNIT_FACTION(unit) == UA_BLUE);
+        bool isUnitPlayer = (unit->pCharacterData->number <= 0x45);
         if (isUnitPlayer){ //if player unit, autolevel their wexp too
             for (j = 0; j < 8; j++){
                 if (unit->ranks[j] > 1 && unit->ranks[j] < 251){ //if it is an existent rank that is not S rank
@@ -766,4 +766,23 @@ void* GetChapterAllyUnitDefinitions(void) {
     }
     
     return evGroup->playerUnitsInNormal;
+}
+
+s8 AreUnitsAllied(int left, int right) {
+    int a = left & 0x80;
+    int b = right & 0x80;
+    return (a == b);
+}
+
+s8 IsUnitEnemyWithActiveUnit(struct Unit* unit) {
+
+    if (AreUnitsAllied(gActiveUnit->index, unit->index)) {
+        return 0;
+    }
+
+    if (unit->pCharacterData->number == A3LogIDLink){
+        return 0; //do not attack the a3 logs, as they aren't enemies
+    }
+
+    return 1;
 }

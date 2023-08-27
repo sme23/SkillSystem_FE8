@@ -47,11 +47,11 @@ UNIT Pilar Captain 0 Level(10,Ally,False) [16,3] 0 0 0 0 [Cutlass, IronSword, Ir
 UNIT
 
 NewUnits:
-UNIT Jaime PegasusRider 0 Level(2,Ally,False) [19,2] 0 0 0 0 [SteelSword, IronSword] NoAI
+UNIT Jaime PegasusRider 0 Level(2,Ally,True) [19,2] 0 0 0 0 [SteelSword, IronSword] NoAI
 UNIT
 
 NPCs:
-UNIT Leonor Cleric 0 Level(7,NPC,False) [11,9] 0 0 0 0 [Heal, Vulnerary] AttackInRangeAI
+UNIT Leonor Cleric 0 Level(7,NPC,True) [11,9] 0 0 0 0 [Heal, Vulnerary] AttackInRangeAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [12,10] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Rebel Brigand 0 Level(1,NPC,True) [10,8] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT Rebel Myrmidon 0 Level(1,NPC,True) [12,8] 0 0 0 0 [IronSword] AttackInRangeAI
@@ -59,7 +59,7 @@ UNIT Rebel Hunter 0 Level(1,NPC,True) [10,10] 0 0 0 0 [IronBow] AttackInRangeAI
 UNIT
 
 Enemies:
-UNIT Felipe Soldier 0 Level(6,Enemy,False) [0,12] 0 0 0 0 [Javelin,Pike] BossAI
+UNIT Felipe Soldier 0 Level(6,Enemy,True) [0,12] 0 0 0 0 [Javelin,Pike] BossAI
 UNIT IncendivisHP Gunner 0 Level(4,Enemy,True) [1,12] 0 0 0 0 [Mortar,IronMusket] BossAI
 UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [0,11] 0 0 0 0 [SteelAxe,Javelin] BossAI
 UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [1,11] 0 0 0 0 [SteelLance,HandAxe] BossAI
