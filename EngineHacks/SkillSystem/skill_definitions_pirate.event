@@ -66,7 +66,7 @@
 //Nonconforming: Unit reverses the weapon triangle in all combats. Reavers have no effect. (Dragz)
 #define NonconformingID 20
 
-//Panache: Unit can initiate combat with guns, gaining WTA and 17% crit, and increasing AS by magic. (bpat)
+//Panache: Unit can initiate combat with guns, gaining WTA and +5 AS. (bpat)
 #define PanacheID 21
 
 //Canter: Unit can move 2 spaces after combat. (Dragz)
@@ -75,7 +75,7 @@
 //Protector: Gain +10 Aid. Increase Def and Res by 2 while rescuing an ally. (bpat)
 #define ProtectorID 23
 
-// (bpat)
+//Kleptomania: After stealing, recover all HP and gain +10 avoid for 2 turns. (bpat_)
 #define KleptomaniaID 24
 
 //Adaptable: Can use the "Shift" command to swap Str with Spd. Growths are unaffected. (bpat)
@@ -98,6 +98,7 @@
 //Equalizer: Unit and allies within 2 tiles add foe's level - their level (cannot go below 0) to their damage. (Dragz)
 #define EqualizerID 31
 
+// Used by A-6 bombs
 #define FuseID 32
 
 //Canto+: Can move again after attacking and other actions.
@@ -123,3 +124,6 @@
 //Hawkeye: User will always hit the enemy.
 //By SD9k
 #define HawkeyeID 38
+
+//Eyepatch: Grants +30 crit, but reduces hit by 30. (bpat)
+#define EyepatchID 39

@@ -153,8 +153,8 @@ Matteo[X]
 
 ## MatteoDesc
 Swashbuckler[N]
-An intrepid sellsword skilled with a blade,[N]
-but not as skilled as he thinks he is.[X]
+An intrepid sellsword skilled with a blade.[N]
+A bit too confident in his abilities.[X]
 
 ## SuzanneName
 Suzanne[X]
@@ -327,6 +327,17 @@ Santiago[X]
 Commander[N]
 A rebel leader zealously devoted to the[N]
 cause. Respected by his subordinates.[X]
+
+## RochefortName
+Rochefort[X]
+
+## RochefortDesc
+Merchant[N]
+A trader from the distant reaches of[N]
+the empire. Seems a little shady.[X]
+
+## A6PirateName
+Pirate[X]
 
 ## GunsmithName
 Gunsmith[X]

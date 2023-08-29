@@ -32,13 +32,19 @@ ldrh r0,[r0,#2] @range
 cmp r0,#1
 bne End
 
+@increase AS by 5
+mov r1, #0x5E
+ldrh r0, [r4,r1]
+add r0, #5
+strh r0, [r4,r1]
+
 @store speed in r0
-mov		r1,#0x16
-ldrb	r0,[r4,r1]
+@mov		r1,#0x16
+@ldrb	r0,[r4,r1]
 
 @set AS = speed
-mov r1, #0x5E
-strh r0, [r4,r1]
+@mov r1, #0x5E
+@strh r0, [r4,r1]
 
 End:
 pop {r4-r7, r15}
