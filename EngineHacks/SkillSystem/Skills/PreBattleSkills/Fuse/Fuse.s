@@ -64,7 +64,7 @@ strh r3,[r0]
 
 mov r0, r5
 add r0,#0x5a
-mov r3,#15
+mov r3,#12
 strh r3,[r0]
 
 GoBack:

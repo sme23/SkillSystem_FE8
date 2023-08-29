@@ -339,6 +339,12 @@ Teal Gem[X]
 ## TealGemDesc
 A common gemstone. Worth 1000 Gold.[X]
 
+## EyepatchName
+Eyepatch[X]
+
+## EyepatchDesc
+Grants +30 crit, but reduces hit by 30.[X]
+
 ## AshArrowName
 Ash Arrow[X]
 
