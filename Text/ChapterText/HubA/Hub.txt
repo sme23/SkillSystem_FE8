@@ -1,6 +1,14 @@
 ## HubATitle
 Hub A - Port Greagor[X]
 
+## HubAStatusObjective
+ Explore Port Greagor[N]
+ and gather doubloons.[X]
+
+## HubAGoalWindow
+Explore[X]
+
+
 //Hub A of Pirate Project
 //Scenario: The crew arrives in Port Greagor and heads to port to sell the boat (first go-around).
 //Various events occur in Port Greagor, and Hermenegildo/Estelle join you in the first run through the hub.
@@ -948,6 +956,107 @@ For now though, I should snoop[N]
 around the port, expand the crew,[N]
 and grab whatever gold I can find.[AN]
 [Beat]And think of that damned name.[A][X]
+
+## DurghamFirstTimeText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## RecruitDurghamChoice
+Recruit Durgham?[N]
+[No][X]
+
+## DurghamRecruitedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## DurghamRejectedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## TrianaUnrecruitableText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## TrianaFirstTimeText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## RecruitTrianaChoice
+Recruit Triana?[N]
+[No][X]
+
+## TrianaRecruitedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## TrianaRejectedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## MedwynUnrecruitableText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## MedwynFirstTimeText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## RecruitMedwynChoice
+Recruit Medwyn?[N]
+[No][X]
+
+## MedwynRecruitedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## MedwynRejectedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## BartzUnrecruitableText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## BartzFirstTimeText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## RecruitBartzChoice
+Recruit Bartz?[N]
+[No][X]
+
+## BartzRecruitedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## BartzRejectedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## MrYodsenFirstTimeFreeText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## MrYodsenFirstTimeText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## RecruitMrYodsenChoice
+[MidRight][LoadLua]
+Is this Mr. Yodsen[N]
+worth [G] gold?[No][X]
+
+## MrYodsenRecruitedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## MrYodsenRejectedText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
+
+## MrYodsenTellsLuaShesBrokeText
+[MidRight][LoadLua]
+Placeholder Text 1![A][X]
 
 //Base Scene 1; Characters: Carmen and Ximo
 

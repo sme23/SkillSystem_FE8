@@ -1,3 +1,11 @@
+#define A3LogFlag 7
+#define A3Spawn1AreaFlag 8
+#define A3Spawn2AreaFlag 9
+#define A3Spawn1TurnFlag 10
+#define A3Spawn2TurnFlag 11
+#define A3Spawn3TurnFlag 12
+#define A3Spawn3AreaFlag 13
+
 EventPointerTable(HubA_3EventsID, PointerList)
 
 PointerList:
@@ -7,44 +15,159 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno1 Dunno2 Dunno3 Tutorial
 POIN Traps1 Traps2
-POIN Units1 Units1
+POIN Units1 Units2
 POIN $0 $0 $0 
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0, A3Explanation, 1)
+TurnEventPlayer(A3Spawn1TurnFlag, A3Reinforce1, 1, 255) //bottom left fort spawn
+TurnEventPlayer(A3Spawn2TurnFlag, A3Reinforce2, 1, 255)
+TurnEventPlayer(A3Spawn3TurnFlag, A3Reinforce3, 1, 255)
+Survive(GameOverYeaaaaah,12)
 END_MAIN
+
+A3Explanation:
+CAMERA_CENTERED [18,14]
+STAL 30
+CenterTextbox(ChA3ObjectiveExplanation)
+PanToTileThenFlashCursorForXSeconds(18, 0, 30)
+PanToTileThenFlashCursorForXSeconds(10, 9, 30)
+PanToTileThenFlashCursorForXSeconds(0, 14, 30)
+CenterTextbox(ChA3SideObjectiveExplanation)
+NoFade
+ENDA
+
+GameOverYeaaaaah:
+CALL GameOverStart
+NoFade
+ENDA
+
+A3Reinforce1:
+SpawnReinforcements(Reinforce1)
+NoFade
+ENDA
+
+Reinforce1:
+UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [16,7] 0 0 1 REDA16R7 [Onigiri] PursueWithoutHeedAI
+UNIT
+
+A3Reinforce2:
+SpawnReinforcements(Reinforce2)
+NoFade
+ENDA
+
+Reinforce2:
+UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [7,14] 0 0 1 REDA7R14 [SteelLance] PursueWithoutHeedAI
+UNIT
+
+A3Reinforce3:
+SpawnReinforcements(Reinforce3)
+NoFade
+ENDA
+
+Reinforce3:
+UNIT RiojaReaper Fighter 0 Level(3, Enemy, True) [15,14] 0 0 1 REDA14R14 [SteelAxe] PursueWithoutHeedAI
+UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [15,14] 0 0 1 REDA15R13 [SteelSword] PursueWithoutHeedAI
+UNIT
 
 CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Escape(18,13)
+Escape(18,14)
+Escape(18,15)
 END_MAIN
 
 MiscBasedEvents:
+AREA A3Spawn1AreaFlag CheckIfTimeForSpawn1 [12, 2] [18,9]
+AREA A3Spawn2AreaFlag CheckIfTimeForSpawn2 [4, 12] [9,16]
+AREA A3Spawn3AreaFlag CheckIfTimeForSpawn3 [11, 11] [18,16]
+AFEV A3LogFlag CheckIfLogsInPlace 0
 CauseGameOverIfLordDies
+AFEV 0x0 CheckNoUnits 0x0
 END_MAIN
 
+CheckIfTimeForSpawn1:
+CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(1, 2, A3Spawn1AreaFlag, A3Spawn1TurnFlag)
+NoFade
+ENDA
+
+CheckIfTimeForSpawn2:
+CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(1, 2, A3Spawn2AreaFlag, A3Spawn2TurnFlag)
+NoFade
+ENDA
+
+CheckIfTimeForSpawn3:
+CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(1, 2, A3Spawn3AreaFlag, A3Spawn3TurnFlag)
+NoFade
+ENDA
+
+CheckIfLogsInPlace:
+BranchIfNotUnitAtCoords(0, 14, A3Log, 1)
+BranchIfNotUnitAtCoords(10, 9, A3Log, 1)
+BranchIfNotUnitAtCoords(18, 0, A3Log, 1)
+CALL ForestFriendEvent //if all 3 logs at the specified tiles, call forest friend event
+GOTO 2
+LABEL 1
+ENUF A3LogFlag
+LABEL 2
+NoFade
+ENDA
+
+ForestFriendEvent:
+//texto
+RemoveAllThreeLogs
+//texto
+GiveItemWithDurability(SkillScroll,ForestFriendID,0xFFFF)
+NoFade
+ENDA
+
+CheckNoUnits:
+GotoEndingSceneIfNoPlayers
+NoFade
+ENDA
+
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [2,6] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Ondeh Hunter 0 Level(4,Ally,False) [1,5] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
-UNIT Biko Soldier 0 Level(1,Ally,False) [3,5] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [2,5] 0 0 0 0 [Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [1,4] 0 0 0 0 [Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [2,4] 0 0 0 0 [Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [3,4] 0 0 0 0 [Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [1,3] 0 0 0 0 [Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [2,3] 0 0 0 0 [Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(8,Ally,False) [3,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua 0 0 Level(10,Ally,False) [2,6] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Ondeh 0 0 Level(4,Ally,False) [1,5] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,Ally,False) [3,5] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [2,5] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [1,4] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [2,4] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [3,4] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [1,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [2,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [3,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT
+
+Units2:
+UNIT Lua 0 0 Level(10,Ally,False) [2,6] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Ondeh 0 0 Level(4,Ally,False) [1,5] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,Ally,False) [3,5] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [2,5] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [1,4] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [2,4] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [3,4] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [1,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [2,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [3,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [0,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Pilar 0 0 Level(8,Ally,False) [4,3] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 NewPlayerUnits:
-UNIT Ondeh Hunter 0 Level(4,Ally,False) [1,5] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
-UNIT Biko Soldier 0 Level(1,Ally,False) [3,5] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
+UNIT Ondeh 0 0 Level(4,Ally,False) [1,5] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,Ally,False) [3,5] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
 UNIT
 
 
 Traps1:
+BlueSigil(18,13)
+BlueSigil(18,14)
+BlueSigil(18,15)
 ENDTRAP
 ALIGN 4
 
@@ -53,22 +176,70 @@ ENDTRAP
 ALIGN 4
 
 EnemyGroup:
-UNIT Sargargala Mercenary 0 Level(5,Enemy,False) [17,14] 0 0 0 0 [SteelSword] BossAI
-UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [17,13] 0 0 0 0 [SteelLance] AttackInTwoAI
-UNIT RiojaReaper Hunter 0 Level(3, Enemy, True) [17,15] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT Sargargala 0 0 Level(7,Enemy,True) [17,14] 0 0 0 0 [KillerLance, LightBrand] BossAI
+UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,13] 0 0 0 0 [HandAxe] BossAI
+UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,15] 0 0 0 0 [HandAxe] BossAI
+
+UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [4,8] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+
+UNIT RiojaReaper Archer 0 Level(3, Enemy, True) [10,9] 0 0 0 0 [Longbow, TealGem] AttackInRangeAI
+
+UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [10,14] 0 0 0 0 [HandAxe] BossAI
+UNIT RiojaReaper Shaman 0 Level(3, Enemy, True) [10,15] 0 0 0 0 [Elfire] BossAI
+
+UNIT RiojaReaper Shaman 0 Level(3, Enemy, True) [16,10] 0 0 0 0 [Elfire] BossAI
+UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [17,10] 0 0 0 0 [Javelin] BossAI
+
+UNIT RiojaReaper Fighter 0 Level(3, Enemy, True) [2,11] 0 0 0 0 [SteelAxe] GroupOneAI
+UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [0,13] 0 0 0 0 [Pursuer, Longbow] GroupOneAI
+UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [Onigiri] GroupOneAI
+UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackInRangeAI
+
+UNIT RiojaReaper Mage 0 Level(3, Enemy, True) [6,0] 0 0 0 0 [Fire] GroupTwoAI
+UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [10,4] 0 0 0 0 [Pike, Pitchfork] GroupTwoAI
+UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [6,6] 0 0 0 0 [SteelSword] GroupTwoAI
+UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [IronAxe] GroupTwoAI
+
+UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [15,5] 0 0 0 0 [SteelLance] GroupThreeAI
+UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [12,9] 0 0 0 0 [SteelBow, MiniBow] GroupThreeAI
+UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [IronLance] GroupThreeAI
+
+UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [18,12] 0 0 0 0 [SteelSword] GroupFourAI
+UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [18,16] 0 0 0 0 [SteelLance] GroupFiveAI
+UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [11,12] 0 0 0 0 [IronLance] GroupFourAI
+UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [11,16] 0 0 0 0 [IronSword] GroupFiveAI
+UNIT RiojaReaper DragonRider 0 Level(4, Enemy, True) [15,14] 0 0 0 0 [SteelAxe, Hammer] AttackInRangeAI
+UNIT
+
+LogGroup:
+UNIT A3Log 0 0 Level(1,NPC, False) [1,8] 0 0 0 0 [0x0] BossAI
+UNIT A3Log 0 0 Level(1,NPC, False) [3,10] 0 0 0 0 [0x0] BossAI
+UNIT A3Log 0 0 Level(1,NPC, False) [6,9] 0 0 0 0 [0x0] BossAI
 UNIT
 
 BeginningScene:
 LOAD1 1 NewPlayerUnits
 LOAD1 1 EnemyGroup
+LOAD1 1 LogGroup
 ENUN
+ENUT A3Spawn1TurnFlag
+ENUT A3Spawn2TurnFlag
+ENUT A3Spawn3TurnFlag
+ENUT LordMustEscapeLastFlag
 GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
+PlayEventIfEventIDSet(A3LogFlag, 1, AshArrowItemEvent)
+ENUF LordMustEscapeLastFlag
 NoFade
 MNC2 HubA
+ENDA
+
+AshArrowItemEvent:
+GiveItem(AshArrow, Lua)
+NoFade
 ENDA
 
 Dunno1: //down here because nothing here is really used

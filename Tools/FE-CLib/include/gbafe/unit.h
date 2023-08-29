@@ -362,6 +362,11 @@ enum {
 #define UNIT_CON(aUnit) (UNIT_CON_BASE(aUnit) + (aUnit)->conBonus)
 #define UNIT_MOV(aUnit) ((aUnit)->movBonus + UNIT_MOV_BASE(aUnit))
 
+enum {
+	CLASS_GORGONEGG = 0x34,
+	CLASS_GORGONEGG2 = 0x62
+};
+
 #define UNIT_IS_GORGON_EGG(aUnit) (((aUnit)->pClassData->number == CLASS_GORGONEGG) || ((aUnit)->pClassData->number == CLASS_GORGONEGG2))
 #define UNIT_IS_PHANTOM(aUnit) ((aUnit)->pClassData->number == CLASS_PHANTOM)
 
@@ -409,7 +414,7 @@ void UnitLoadItemsFromDefinition(struct Unit*, const struct UnitDefinition*); //
 void UnitLoadStatsFromChracter(struct Unit*, const struct CharacterData*); //! FE8U = 0x8017E35
 void FixROMUnitStructPtr(struct Unit*); //! FE8U = 0x8017EBD
 void UnitLoadSupports(struct Unit*); //! FE8U = 0x8017EF5
-void UnitAutolevelWExp(struct Unit*); //! FE8U = 0x8017F21
+void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef); //! FE8U = 0x8017F21
 void UnitAutolevelCore(struct Unit*, int, int); //! FE8U = 0x8017FC5
 void UnitAutolevelPenalty(struct Unit*, int, int); //! FE8U = 0x8018065
 void UnitApplyBonusLevels(struct Unit*, int); //! FE8U = 0x80180CD

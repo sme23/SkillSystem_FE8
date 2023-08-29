@@ -1646,9 +1646,9 @@ can consume an item without using[N]
 their action. +2 STR/SKL/SPD (decays).[X]
 
 ## SD_ArmsMastery
-Arms Mastery: If the weapon rank of[N]
-unit's currently equipped weapon is[N]
-higher than foe's, unit's attack is brave.[X]
+Arms Mastery: If this unit initiates[N]
+with a weapon of higher rank than[N]
+the foe's, perform a followup attack.[X]
 
 ## SD_AstralBlessing
 Astral Blessing: At start of turn,[N]
@@ -1668,7 +1668,7 @@ Reavers have no effect.[X]
 ## SD_Panache
 Panache: Unit can initiate combat[N]
 with guns in melee, gaining WTA[N]
-and ignoring weapon weight.[X]
+and +5 AS.[X]
 
 ## SD_Canter
 Canter: Unit can move 2[N]
@@ -1703,8 +1703,8 @@ When unit isn't deployed for a chapter,[N]
 -1 MOV (cannot go below base).[X]
 
 ## SD_ForestFriend
-Forest Friend: Unit can walk through[N]
-Thickets for 2 MOV and Forests for 1 MOV.[X]
+Forest Friend: Unit can traverse[N]
+Thickets/Forests for 2/1 MOV.[X]
 
 ## SD_Dogfight
 Dogfight: If unit's AS > foe's AS, unit[N]
@@ -1716,7 +1716,7 @@ tiles add foe's level - their level[N]
 (cannot go below 0) to their damage.[X]
 
 ## SD_Fuse
-Countdown: Gain one HP each turn.[N]
-Game over at max HP! Attack at melee[N]
+Countdown: Lose one HP each turn.[N]
+Game over at zero HP! Attack at melee[N]
 to disarm (sword/lance/axe/knife only).[X]
 

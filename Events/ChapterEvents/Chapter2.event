@@ -84,6 +84,7 @@ FADU 10
 Text(HubABeginningScene3)
 ENUT PortToDocks
 ENUF WentToPortGreagorDocks //sets the temp flag version and allows global to be triggered
+GiveGold(5000)
 MUSC PortGreagorID
 NoFade
 ENDA

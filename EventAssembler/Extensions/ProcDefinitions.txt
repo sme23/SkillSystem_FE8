@@ -32,4 +32,7 @@
 
 #define PROC_YIELD "PROC_SLEEP(0)"
 
+// this one is a bit embarrassing (misspelled)
+#define PROC_YEILD "PROC_SLEEP(0)"
+
 #endif // HAX_PROC_DEFINITIONS_EVENT

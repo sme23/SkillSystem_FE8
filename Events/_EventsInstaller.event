@@ -3,3 +3,9 @@
 #include "ChapterEvents/_Installer.event"
 #include "WorldMapEvents.event"
 #include "Escape_Points.event"
+
+ALIGN 4
+GameOverStart:
+ASMC 0x800D391
+NoFade
+ENDB

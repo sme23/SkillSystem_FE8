@@ -34,6 +34,7 @@
 //#define Axereaver $1e
 #define Harpoon $d6
 #define Sidepierce $d9
+#define Pitchfork $df
 
 //AXES
 //#define IronAxe $1f
@@ -123,3 +124,6 @@
 #define FliersPermit $67
 #define MagesRing $68
 #define RidersBadge $97
+#define TealGem $e0
+#define Eyepatch $e1
+#define AshArrow $e2
