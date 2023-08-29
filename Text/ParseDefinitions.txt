@@ -84,6 +84,7 @@
 
 [CurrentPortrait] = [0xFF][0xFF]
 [LoadCurrent] = [LoadFace][CurrentPortrait]
+[LoadActive] = [LoadCurent]
 
 
 [LoadLua] = [LoadFace][0x2][0x1]

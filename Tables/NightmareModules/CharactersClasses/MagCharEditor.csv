@@ -16,7 +16,7 @@ None,0,0
 0x0E Leonor,0,20
 0x0F Ondeh,3,40
 0x10 Biko,0,20
-0x11 AChapterUnit7,0,10
+0x11 Tangyuan,2,25
 0x12 AChapterUnit8,2,25
 0x13 Matteo,1,20
 0x14 Suzanne,3,35
@@ -71,44 +71,44 @@ None,0,0
 0x45 Bartz,0,15
 0x46 Khazhak,0,5
 0x47 Blackheart,0,5
-0x48 Dragz Armor Boss 1,1,10
-Entombed (Ch 4),1,5
-Saar (Ch 5),1,5
-Novala (Ch 6),8,50
-Murray (Ch 7),2,5
-Tirado (Ch 8),3,15
-Binks (Ch 9A),2,10
-Pablo (Ch 10A),8,50
-Slicer,1,10
-Dicer,1,5
-Santiago,2,30
-Felipe,0,5
-Incendivis,0,5
-Rebel,0,5
-IncendivisHP,0,5
+0x48 Buzu,1,10
+0x49 Bozo,1,5
+0x4A Geraldo,1,5
+0x4B Yurena,8,50
+0x4C Sanz,2,5
+0x4D Contractor,3,15
+0x4E Sentinel,2,10
+0x4F Scoundrel,8,50
+0x50 Slicer,1,10
+0x51 Dicer,1,5
+0x52 Santiago,2,30
+0x53 Felipe,0,5
+0x54 Incendivis,0,5
+0x55 Rebel,0,5
+0x56 IncendivisHP,0,5
 0x57 Bomb,0,45
-0,0,0
-0,0,0
-Gheb (Ch 9B),2,5
-Beran (Ch 10B),3,15
-Cyclops (Ch 12B),2,5
-Wight (Ch 11A),2,5
-Deathgoyle (Ch 11B),3,5
-Entombed (Monster Boss),3,5
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-#NAME?,0,0
-Lyon's Summon,0,0
-#NAME?,0,0
-#NAME?,0,0
-Knoll's Summon,0,0
-Ewan's Summon,0,0
-Lyon (Ch 17),13,50
+0x58 Log,0,0
+0x59 -,0,0
+0x5A Gunsmith,2,5
+0x5B Sargargala,7,50
+0x5C Log Pirate,0,0
+0x5D Wight (Ch 11A),2,5
+0x5E Big Brick,3,5
+0x5F Hakman,3,5
+0x60 MrMist,8,0
+0x61 Yaoguai,0,0
+0x62 TheDuke,0,0
+0x63 TheDukes,0,0
+0x64 Guard,0,0
+0x65 Jozef,0,0
+0x66 TheCloser,0,0
+0x67 BrickBoys,0,0
+0x68 O'Neill (Prologue),0,0
+0x69 Glen (Cutscene),0,0
+0x6A Zonta (Ch 5x),0,0
+0x6B Vigarde (Ch 14B),0,0
+0x6C Lyon (Ch Final),0,0
+0x6D Orson (Ch 16),13,50
 Morva (Ch 20),6,85
 Orson (Ch 5x),3,10
 Valter (Ch 15),2,5

@@ -395,12 +395,6 @@ POIN SkillTester
 WORD UnderhandedID
 
 ALIGN 4
-ArmsMastery:
-#incbin "ArmsMastery/ArmsMastery.dmp"
-POIN SkillTester
-WORD ArmsMasteryID
-
-ALIGN 4
 CatchingUp:
 #incbin "CatchingUp/CatchingUp.dmp"
 POIN SkillTester

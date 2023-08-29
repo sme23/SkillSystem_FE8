@@ -38,7 +38,7 @@ POP
 
 ALIGN 4
 Smaller_Clouds:
-#incext Png2Dmp "cloudy.png" --lz77
+#incbin "cloudy.dmp"
 
 ALIGN 4
 Cloudy_Sprite_Attributes:

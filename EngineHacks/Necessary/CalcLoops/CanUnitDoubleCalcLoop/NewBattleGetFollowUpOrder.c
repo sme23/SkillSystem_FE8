@@ -31,7 +31,8 @@ extern int VengefulFighterID_Link;
 extern int QuickLearnerID_Link; 
 extern int PassionsFlowID_Link; 
 extern int QuickRiposteID_Link; 
-extern int BidingBlowID_Link; 
+extern int BidingBlowID_Link;
+extern int ArmsMasteryID_Link;
 
 struct UnitDoubleCalcLoop_Struct { 
 	int(*function)(struct BattleUnit* attacker, struct BattleUnit* defender);
@@ -48,6 +49,21 @@ ForceDouble = 1,
 NoChange = 2,
 }; 
 
+int ArmsMastery(struct BattleUnit* bunitA, struct BattleUnit* bUnitB) {
+	if (gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE)) {
+		if (SkillTester(&bunitA->unit, ArmsMasteryID_Link)) {
+			if (bunitA == &gBattleActor) { //if unit has skill and is initiating
+				int actorWeaponRank = GetItemData(GetItemIndex(gBattleActor.weaponBefore))->weaponRank;
+				int targetWeaponRank = GetItemData(GetItemIndex(gBattleTarget.weaponBefore))->weaponRank;
+				if (actorWeaponRank > targetWeaponRank){
+					return ForceDouble; //if unit has a weapon with higher rank, always double
+				}
+			} 
+		}
+	}
+	return NoChange;
+}
+
 int BidingBlow(struct BattleUnit* bunitA, struct BattleUnit* bunitB) { 
 	if (gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE)) {
 		if (SkillTester(&bunitA->unit, BidingBlowID_Link)) { 
@@ -59,7 +75,7 @@ int BidingBlow(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
 		}
 	}
 	return NoChange; 
-} 
+}
 
 int PassionsFlow(struct BattleUnit* bunitA, struct BattleUnit* bunitB) { 
 	if (SkillTester(&bunitA->unit, PassionsFlowID_Link)) { 

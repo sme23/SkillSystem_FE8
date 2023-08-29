@@ -99,3 +99,5 @@ POIN BattleQuoteTable
 POP
 
 #include "ExternalTables/ItemStatBoosts.event"
+
+#include "ExternalTables/BossMusicTable.event"

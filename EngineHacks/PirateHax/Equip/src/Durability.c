@@ -1,10 +1,10 @@
 #include "Durability.h"
 
-int GetItemDurability(Item item){
+int GetItemDurability(u16 item){
 	return (item >> 8); //right shifted twice should mean we're left with only durability
 }
 
-bool IsItemDefenseEquipment(Item item){
+bool IsItemDefenseEquipment(u16 item){
 	extern u8 DefenseEquipmentList[];
 
 	if (GetItemIndex(item) == 0) {
@@ -23,7 +23,7 @@ bool IsItemDefenseEquipment(Item item){
 	return false;
 }
 
-bool IsItemOffenseEquipment(Item item){
+bool IsItemOffenseEquipment(u16 item){
 	extern u8 OffenseEquipmentList[];
 
 	if (GetItemIndex(item) == 0) {
@@ -42,14 +42,14 @@ bool IsItemOffenseEquipment(Item item){
 	return false;
 }
 
-bool CheckIfDefenseEquipmentBroke(BattleUnit* battleUnit, Item item){
+bool CheckIfDefenseEquipmentBroke(BattleUnit* battleUnit, u16 item){
 	if (GetItemDurability(item) <= battleUnit->hitsTaken){
 		return true;
 	}
 	return false;
 }
 
-bool CheckIfOffenseEquipmentBroke(BattleUnit* battleUnit, Item item){
+bool CheckIfOffenseEquipmentBroke(BattleUnit* battleUnit, u16 item){
 	if (GetItemDurability(item) <= battleUnit->attacksMade){
 		return true;
 	}
@@ -61,7 +61,7 @@ bool CheckIfEquipmentBroke(BattleUnit* battleUnit){
 		return false; // no popups for npcs
 	}
 
-	Item item = GetUnitEquippedItem(&battleUnit->unit);
+	u16 item = GetUnitEquippedItem(&battleUnit->unit);
 
 	if (GetItemIndex(item) == 0){
 		return false;
@@ -78,7 +78,7 @@ bool CheckIfEquipmentBroke(BattleUnit* battleUnit){
 }
 
 void DecrementItemSlotDurability(Unit* unit, int itemSlot, int amount){
-	Item item = unit->items[itemSlot];
+	u16 item = unit->items[itemSlot];
 	if (GetItemDurability(item) > amount){
 		item -= (amount << 8);
 	}
@@ -107,7 +107,6 @@ bool PopR_InitEquipmentBroke(void) {
 void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 
 	extern u8 idkAddr; // 3003060
-	extern u8 SynchronizeIDLink;
 
 	unit->level = battleUnit->unit.level;
 	unit->exp   = battleUnit->unit.exp;
@@ -116,26 +115,6 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 
 	// (state>>11) & 7 placed at 3003060??
 	idkAddr = ((battleUnit->unit.state>>11) & 7);
-
-	// Skillsys modification
-	// Hooks at 0x2C214
-
-	// Synchronize
-	if (gSkillTester(&gBattleActor.unit, SynchronizeIDLink)){
-		if(gBattleActor.statusOut > 0){
-			if(gBattleTarget.statusOut != 0xFF){
-				gBattleTarget.statusOut = gBattleActor.statusOut;
-			}
-		}
-	}
-	if (gSkillTester(&gBattleTarget.unit, SynchronizeIDLink)){
-		if(gBattleTarget.statusOut > 0){
-			if(gBattleActor.statusOut != 0xFF){
-				gBattleActor.statusOut = gBattleTarget.statusOut;
-			}
-		}
-	}
-	// Synchronize
 
 	if (battleUnit->statusOut > 0){
 		SetUnitNewStatus(unit, battleUnit->statusOut);
@@ -172,7 +151,7 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 	unit->items[4] = battleUnit->unit.items[4];
 
 	// Equipment
-	Item item = GetUnitEquippedItem(unit);
+	u16 item = GetUnitEquippedItem(unit);
 
 	if (GetItemIndex(item) != 0){
 		int itemSlot = GetUnitEquippedItemSlot(unit);

@@ -164,6 +164,14 @@ Gunslinger[N]
 A hotheaded mercenary whose talents[N]
 are only rivaled by her ego.[X]
 
+## TangyuanName
+Tangyuan[X]
+
+## TangyuanDesc
+Drifter[N]
+A former carpenter that abandoned her[N]
+wife and children to seek "adventure".[X]
+
 ## KhazhakName
 Khazhak[X]
 
@@ -294,6 +302,13 @@ R. Reaper[X]
 ## LogPirateDesc
  [X]
 
+## A3LogName
+Trunk[X]
+
+## A3LogDesc
+A mysterious, heavy piece of wood.[N]
+Magic emanates from its surface.[X]
+
 ## SlicerName
 Slicer[X]
 
@@ -312,3 +327,88 @@ Santiago[X]
 Commander[N]
 A rebel leader zealously devoted to the[N]
 cause. Respected by his subordinates.[X]
+
+## GunsmithName
+Gunsmith[X]
+
+## GunsmithDesc
+Skilled artisans whose superior talents[N]
+have signed their death sentences.[X]
+
+## BrickBoysName
+Brick Boys[X]
+
+## BrickBoysDesc
+A gang turned construction crew. Rivals[N]
+were permanently removed from the market.[X]
+
+## BigBrickName
+Big Brick[X]
+
+## BigBrickDesc
+Big Builder[N]
+The brain of the Brick Boys. He pushed for[N]
+the new direction of leaving crime behind.[X]
+
+## HakmanName
+Hakman[X]
+
+## HakmanDesc
+Builder[N]
+The puppet leader of the Brick Boys.[N]
+Listens to whatever Big Brick says.[X]
+
+## MrMistName
+Mr Mist[X]
+
+## MrMistDesc
+Spy[N]
+A spy from the empire whose mission is to[N]
+recover the schematics for the Mincemaker.[X]
+
+## YaoguaiName
+Yaoguai[X]
+
+## YaoguaiDesc
+Spy[N]
+A spy from the rebels whose mission is to[N]
+recover the schematics for the Mincemaker.[X]
+
+## TheDukeName
+The Duke[X]
+
+## TheDukeDesc
+Security[N]
+The leader of a small-time mercenary[N]
+group. Obviously not an actual duke.[X]
+
+## TheDukesName
+The Dukes[X]
+
+## TheDukesDesc
+A fresh mercenary band ready to make[N]
+big money. Obviously not actual dukes.[X]
+
+## GuardName
+Guard[X]
+
+## GuardDesc
+The finest guards around. Only actually[N]
+helps those that pay them beforehand.[X]
+
+## JozefName
+Jozef[X]
+
+## JozefDesc
+Entrepreneur[N]
+An arms dealer who is heavily profiting[N]
+from conflicts between rebel and empire.[X]
+
+## TheCloserName
+The Closer[X]
+
+## TheCloserDesc
+Legend[N]
+The Closer is known for being able to [N]
+close down any problem. For a price.[X]
+

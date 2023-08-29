@@ -20,6 +20,41 @@ int GetNPCStatIncrease(int growth);
 #define S_RANK 6
 
 
+void SetUnitLeaderCharId(struct Unit* unit, int charId);
+
+struct ChapterEventGroup
+{
+    /* 00 */ void *turnBasedEvents;
+    /* 04 */ void *characterBasedEvents; // must be 32-Aligned?
+    /* 08 */ void *locationBasedEvents;
+    /* 0C */ void *miscBasedEvents;
+
+    // select unit -> select destination -> move unit to destination
+    /* 10 */ void *specialEventsWhenUnitSelected;
+    /* 14 */ void *specialEventsWhenDestSelected;
+    /* 18 */ void *specialEventsAfterUnitMoved;
+
+    /* 1C */ void *tutorialEvents;
+
+    /* 20 */ void *traps;
+    /* 24 */ void *extraTrapsInHard;
+
+    /* 28 */ void *playerUnitsInNormal;
+    /* 2C */ void *playerUnitsInHard;
+
+    /* 30 */ void *playerUnitsChoice1InEncounter;
+    /* 34 */ void *playerUnitsChoice2InEncounter;
+    /* 38 */ void *playerUnitsChoice3InEncounter;
+
+    /* 3C */ void *enemyUnitsChoice1InEncounter;
+    /* 40 */ void *enemyUnitsChoice2InEncounter;
+    /* 44 */ void *enemyUnitsChoice3InEncounter;
+
+    /* 48 */ void *beginningSceneEvents;
+    /* 4C */ void *endingSceneEvents;
+};
+
+const struct ChapterEventGroup* GetChapterEventDataPointer(unsigned chIndex);
 
 struct CharacterMagicData {
 	/* 00 */ s8 baseMag;
@@ -64,3 +99,30 @@ static const struct ProcInstruction sProcScr_BattleAnimSimpleLock[] = {
     PROC_CALL_ROUTINE(UpdateActorFromBattle),
     PROC_END
 };
+
+int GenUnitDefinitionFinalPosition(const struct UnitDefinition* uDef, s8* xOut, s8* yOut, s8 findNearest);
+void SetUnitAiFromDefinition(struct Unit* unit, const struct UnitDefinition* uDef);
+
+int ReturnNumberOfHubChaptersVisited();
+
+int GetBattleMapType(void);
+
+enum ChapterData_chapterStateBits {
+    PLAY_FLAG_STATSCREENPAGE0 = (1 << 0),
+    PLAY_FLAG_STATSCREENPAGE1 = (1 << 1),
+    PLAY_FLAG_POSTGAME        = (1 << 2),
+    PLAY_FLAG_TUTORIAL        = (1 << 3),
+    PLAY_FLAG_PREPSCREEN      = (1 << 4),
+    PLAY_FLAG_COMPLETE        = (1 << 5),
+    PLAY_FLAG_HARD            = (1 << 6),
+    PLAY_FLAG_7               = (1 << 7),
+
+    PLAY_FLAG_STATSCREENPAGE_SHIFT = 0,
+    PLAY_FLAG_STATSCREENPAGE_MASK = PLAY_FLAG_STATSCREENPAGE0 | PLAY_FLAG_STATSCREENPAGE1,
+};
+
+s8 IsUnitEnemyWithActiveUnit(struct Unit* unit);
+
+s8 AreUnitsAllied(int left, int right);
+
+extern u8 A3LogIDLink;

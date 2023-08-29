@@ -54,6 +54,12 @@ Lua only. Doubles attacks dealt.[X]
 ## EstocName
 Estoc[X]
 
+## PeacekeeperName
+Peacekeeper[X]
+
+## PeacekeeperDesc
+Can't be countered.[X]
+
 //LANCES
 
 ## SaunionName
@@ -83,6 +89,18 @@ Harpoon[X]
 ## HarpoonDesc
 Eff. vs. horses and fliers.[X]
 
+## SidepierceName
+Needle[X]
+
+## SidepierceDesc
+Move 2 tiles after combat.[X]
+
+## PitchforkName
+Pitchfork[X]
+
+## PitchforkDesc
+Cannot counter/be countered.[X]
+
 //AXES
 
 ## BloodaxeName
@@ -108,6 +126,12 @@ A metal heap with unparalleled might.[X]
 
 ## SlimAxeName
 Slim Axe[X]
+
+## OversizeName
+Oversize[X]
+
+## OversizeDesc
+Cannot double or be doubled.[X]
 
 //BOWS
 
@@ -148,7 +172,13 @@ Slimshot[X]
 Shining Bow[X]
 
 ## ShiningBowDesc
-Uses Mag. Can counter at melee.[X]
+Uses Mag. Can attack at melee.[X]
+
+## SnapshotName
+Snapshot[X]
+
+## SnapshotDesc
+Allows canto after attack.[X]
 
 //TOMES
 
@@ -187,6 +217,13 @@ Ignores enemy resistance.[X]
 
 ## NosferatuDesc
 Restores HP equal to damage dealt.[X]
+
+## GalestrikeName
+GaleStrike[X]
+
+## GalestrikeDesc
+Refreshes once per turn on a kill.[X]
+
 
 //KNIVES
 
@@ -232,6 +269,12 @@ Baselard[X]
 ## HeartpiercerName
 Heartpiercer[X]
 
+## CompassName
+Compass[X]
+
+## CompassDesc
+Brave/Magic/IgnoreRes/x2first.[X]
+
 // GUNS
 
 ## IronMusketName
@@ -264,6 +307,12 @@ Mortar[X]
 ## MortarDesc
 Extremely long-ranged artillery.[X]
 
+## MincemakerName
+Mincemaker[X]
+
+## MincemakerDesc
+Does exactly as advertised.[X]
+
 // EQUIPS
 
 ## HideShieldName
@@ -283,3 +332,16 @@ Shove Glove[X]
 
 ## ShoveGloveDesc
 Allows the holder to shove units 1 tile.[X]
+
+## TealGemName
+Teal Gem[X]
+
+## TealGemDesc
+A common gemstone. Worth 1000 Gold.[X]
+
+## AshArrowName
+Ash Arrow[X]
+
+## AshArrowDesc
+Can only be equipped with Bows.[N]
+Gives all attacks 100% Hit.[X]

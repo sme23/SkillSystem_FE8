@@ -1,0 +1,20 @@
+## ChA5Title
+Ch A-5: The Big Gun[X]
+
+## ChA5GoalWindow
+Kill / Escape[X]
+
+## ChA5StatusObjective
+Kill gunsmiths,[N]
+then escape top.[X]
+
+## InfoText
+You have two objectives.[N]
+First, you must kill all 4 gunners.[N]
+Only then, can you escape at top.[A][X]
+
+## TargetDead
+Target pacified.[A][X]
+
+## EscapeTime
+Time to go![A][X]

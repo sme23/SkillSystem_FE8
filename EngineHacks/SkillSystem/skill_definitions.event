@@ -158,7 +158,7 @@
 
 // _ Taker: After attacking and defeating an enemy, gain +4 _. (Max +10) 
 // Author: Vesly 
-#define StrTakerID 255
+//#define StrTakerID 255
 #define SklTakerID 255 
 #define SpdTakerID 255 
 #define DefTakerID 255 
@@ -353,7 +353,7 @@
 
 //Canto+: Can move again after attacking and other actions.
 //By Tequila
-#define CantoPlusID 255
+//#define CantoPlusID 255
 
 //Despoil: Obtain a Red Gem after attacking and defeating an enemy. (Luck % activation)
 //Author Unknown (Initial Commit)
@@ -365,7 +365,7 @@
 
 //Galeforce: Move again after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
-#define GaleforceID 255
+//#define GaleforceID 255
 
 //Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
@@ -516,7 +516,7 @@
 
 //Hawkeye: User will always hit the enemy.
 //By SD9k
-#define HawkeyeID 255
+//#define HawkeyeID 255
 
 //Heavy Strikes: Add weapon weight to critical chance.
 //By Datagne
@@ -898,7 +898,7 @@
 
 //Dazzle: Opponents cannot counterattack this unit.
 //By circleseverywhere
-#define DazzleID 255
+//#define DazzleID 255
 
 //Desperation: If HP < 50%, double attacks occur immediately.
 //By ??? (Initial Commit)
@@ -925,7 +925,7 @@
 
 //Wary Fighter: Unit cannot double or be doubled.
 //By Tequila
-#define WaryFighterID 255
+//#define WaryFighterID 255
 
 // Last Word: When doubled, this unit also doubles.
 // By Vesly 
