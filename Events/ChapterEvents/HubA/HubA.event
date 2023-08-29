@@ -60,7 +60,18 @@ CharacterEvent(MrYodsenRecruitFlag, TalkToMrYodsen, Lua, MrYodsen)
 END_MAIN
 
 LocationBasedEvents:
+Armory(HubAArmory,16,13)
+Vendor(HubAVendor,24,13)
 END_MAIN
+
+ALIGN 4
+HubAArmory:
+SHLI IronSword SteelSword IronLance SteelLance IronAxe SteelAxe IronBow SteelBow IronKnife SteelKnife IronDagger SteelDagger
+
+ALIGN 4
+HubAVendor:
+SHLI Fire Elfire Heal Mend Vulnerary (HPTonic << 8)|Tonic (StrTonic << 8)|Tonic (MagTonic << 8)|Tonic (SklTonic << 8)|Tonic (SpdTonic << 8)|Tonic (LuckTonic << 8)|Tonic  (DefTonic << 8)|Tonic (ResTonic << 8)|Tonic
+ALIGN 4
 
 MiscBasedEvents:
 AREA PortToDocks PortGreagorDocks [29,15] [29,16]
