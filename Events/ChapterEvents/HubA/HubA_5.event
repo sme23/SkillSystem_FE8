@@ -35,8 +35,14 @@ END_MAIN
 
 MiscBasedEvents:
 AFEV 0 Counter 9
+AFEV 0x0 CheckNoUnits 0x0
 CauseGameOverIfLordDies
 END_MAIN
+
+CheckNoUnits:
+GotoEndingSceneIfNoPlayers
+NoFade
+ENDA
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI

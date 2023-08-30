@@ -59,7 +59,7 @@ void UnsetAllHubChapterFlagsASMC(){
 
 
 bool LuaIsInHub(Unit* unit){
-    if (CheckEventId(0xA0)){ //the "in a hub" flag
+    if (gChapterData.chapterIndex == 1){ //list of hub chapters
         return true; //give 15 move
     }
     return false;
