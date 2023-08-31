@@ -85,6 +85,7 @@ MiscBasedEvents:
 AREA A3Spawn1AreaFlag CheckIfTimeForSpawn1 [12, 2] [18,9]
 AREA A3Spawn2AreaFlag CheckIfTimeForSpawn2 [4, 12] [9,16]
 AREA A3Spawn3AreaFlag CheckIfTimeForSpawn3 [11, 11] [18,16]
+AFEV 0 CheckIfLogDroppedOnCorrectTile 0
 AFEV A3LogFlag CheckIfLogsInPlace 0
 CauseGameOverIfLordDies
 AFEV 0x0 CheckNoUnits 0x0
@@ -122,6 +123,24 @@ ForestFriendEvent:
 RemoveAllThreeLogs
 //texto
 GiveItemWithDurability(SkillScroll,ForestFriendID,0xFFFF)
+NoFade
+ENDA
+
+CheckIfLogDroppedOnCorrectTile:
+A3ReturnLogDroppedStatus
+BEQ 1 s0 sC
+    SVAL s1 1
+    BNE 2 s1 sC
+        Text(A3FirstLogDropped)
+        GOTO 1
+    LABEL 2
+    SVAL s1 2
+    BNE 3 s1 sC
+        Text(A3SecondLogDropped)
+        GOTO 1
+    LABEL 3
+    Text(A3ThirdLogDropped)
+LABEL 1
 NoFade
 ENDA
 
@@ -191,7 +210,7 @@ UNIT RiojaReaper Shaman 0 Level(3, Enemy, True) [16,10] 0 0 0 0 [Elfire] BossAI
 UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [17,10] 0 0 0 0 [Javelin] BossAI
 
 UNIT RiojaReaper Fighter 0 Level(3, Enemy, True) [2,11] 0 0 0 0 [SteelAxe] GroupOneAI
-UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [0,13] 0 0 0 0 [Pursuer, Longbow] GroupOneAI
+UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [0,13] 0 0 0 0 [Tomereaver, Longbow] GroupOneAI
 UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [Onigiri] GroupOneAI
 UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackInRangeAI
 

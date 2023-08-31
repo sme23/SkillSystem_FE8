@@ -157,10 +157,7 @@ When initiating, grants an extra strike.[X]
 A bow with above-average range.[X]
 
 ## MagekillerName
-Magekiller[X]
-
-## MagekillerDesc
-Reverses WTA and is eff. vs. tome users.[X]
+Tomereaver[X]
 
 ## GreatbowName
 Greatbow[X]

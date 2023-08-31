@@ -76,8 +76,8 @@
 #include "Music/MusicAsmInstaller.event"
 //7743
 
-#include "ASMCs/ASMCInstaller.event"
-//Miscellaneous
+#include "ASMCs/Installer.event"
+//Loog
 
 #include "ShopUnit/ShopUnit.event"
 //Sme

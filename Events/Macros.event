@@ -20,8 +20,8 @@
 #define GiveGold(money) "SVAL 3 money; GIVEMONEY Lua"
 #define TakeGold(money) "SVAL 3 money; TAKEMONEY Lua"
 
-#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
-#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; ENUF LuaInAHubFlag; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); ENUF LuaInAHubFlag; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
