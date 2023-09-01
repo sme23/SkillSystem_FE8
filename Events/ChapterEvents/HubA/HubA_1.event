@@ -23,8 +23,9 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0, InformObjective, 1)
 TurnEventEnemy(0, GeraldoLeaves, 1)
-TurnEventPlayer(0, TimerWarning, 4)
-TurnEventEnemy(0, SuperbossesAppear, 2)
+TurnEventPlayer(0, TimerWarning, 5)
+TurnEventEnemy(0, SuperbossesAppear, 8)
+TurnEventPlayer(0, AlarmRaised, 7)
 END_MAIN
 
 CharacterBasedEvents:
@@ -49,15 +50,15 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
-UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [5,3] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [25,8] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [27,8] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [26,7] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [28,7] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Lua
+UNIT Indio Shaman 0 Level(1, Ally, False) [25,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Indio
+UNIT Indio Shaman 0 Level(1, Ally, False) [27,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Desiderio
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Pilar
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,3] 0 0 0 0 [Surge, Vulnerary] NoAI // Razvan
+UNIT Indio Shaman 0 Level(1, Ally, False) [28,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Carmen
+UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Ximo
+UNIT Indio Shaman 0 Level(1, Ally, False) [26,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Estelle
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
 UNIT
 
 LuaDesiderioCutsceneUnits:
@@ -71,15 +72,15 @@ UNIT
 
 ContractorInitialEnemies:
 UNIT Leandra Fighter Geraldo Level(5, Enemy, False) [11, 5] 0 0 0 0 [Bloodaxe, HandAxe, Vulnerary] AttackInTwoAI
-UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] AttackInRangeAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [23, 10] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [23, 12] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [22, 9] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [22, 11] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [5, 8] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [7, 8] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 11] 0 0 0 0 [IronBow] AttackInTwoAI
+UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 9] 0 0 0 0 [IronBow] AttackInTwoAI
 UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] AttackInRangeAI
@@ -95,6 +96,22 @@ UNIT Sentinel Warden Sanz Level(4, Enemy, True) [17, 4] 0 0 0 0 [Javelin] BossAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 7] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 13] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [16, 10] 0 0 0 0 [IronLance] AttackInRangeAI
+// these aren't sentinels but i ran out of space in the first unit group
+UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [7, 16] 0 0 0 0 [IronAxe] AttackInTwoAI
+UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [8, 15] 0 0 0 0 [IronAxe] AttackInTwoAI
+UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [21, 5] 0 0 0 0 [IronLance] AttackInTwoAI
+UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronLance] AttackInTwoAI
+UNIT
+
+UndergroundReinforcements:
+UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Sentinel Archer Sanz Level(4, Enemy, True) [3, 10] 0 0 0 0 [IronBow] ChargeAI
+UNIT Sentinel Archer Sanz Level(4, Enemy, True) [21, 12] 0 0 0 0 [IronBow] ChargeAI
+UNIT Contractor Brigand Sanz Level(3, Enemy, True) [5, 16] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Contractor Myrmidon Sanz Level(3, Enemy, True) [7, 17] 0 0 0 0 [IronSword] ChargeAI
+UNIT Contractor Brigand Sanz Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Contractor Myrmidon Sanz Level(3, Enemy, True) [23, 5] 0 0 0 0 [IronSword] ChargeAI
+UNIT Contractor Thief Sanz Level(3, Enemy, True) [23, 17] DropItem 0 0 0 [IronKnife, Swordreaver] BossAI
 UNIT
 
 SuperbossGang:
@@ -245,6 +262,13 @@ STAL 30
 LOAD1 1 SuperbossGang
 ENUN
 Text(ChA1SanzOrlandoAppearDialogue)
+NoFade
+ENDA
+
+ALIGN 4
+AlarmRaised:
+Text(ChA1AlarmRaisedDialogue)
+LOAD1 1 UndergroundReinforcements
 NoFade
 ENDA
 
