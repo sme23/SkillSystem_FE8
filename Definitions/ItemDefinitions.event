@@ -64,6 +64,7 @@
 #define Pursuer $33
 //#define Longbow $34
 #define MagekillerBow $35
+#define Tomereaver MagekillerBow
 #define Greatbow $36
 #define Slimshot $37
 #define ShiningBow $d4

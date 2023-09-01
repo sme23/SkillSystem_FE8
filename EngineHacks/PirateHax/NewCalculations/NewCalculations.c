@@ -307,9 +307,15 @@ void GetWeaponExpProgressState(int wrank, int* valOut, int* maxOut) {
 
 int CanUnitRescue(const struct Unit* actor, const struct Unit* target){
     
+    if (target->pClassData->attributes & CA_MOUNTEDAID){ //is this unit a mount
+        return false; //cannot be rescued
+    }
+
+    
     int actorAid  = GetUnitAid(actor);
     int targetCon = UNIT_CON(target);
 
+    
     return (actorAid >= targetCon) ? TRUE : FALSE;
 }
 
