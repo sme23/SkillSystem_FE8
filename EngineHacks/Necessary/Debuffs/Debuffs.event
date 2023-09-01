@@ -165,10 +165,8 @@ LiquidCourageBitOffset_Link:
 WORD MiscOffset+10
 StudiousBlowBitOffset_Link:
 WORD MiscOffset+11
-WellRestedBitOffset_Link: // stores value -15 to 15, 5 bits
-WORD MiscOffset+12
 HardworkingBitOffset_Link: // stores value 0-5, 3 bits
-WORD MiscOffset+17
+WORD MiscOffset+12
 
 
 ALIGN 4 
