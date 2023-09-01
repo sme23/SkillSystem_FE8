@@ -1,0 +1,8 @@
+#include "WellRested.lyn.event"
+
+WellRestedIDLink:
+BYTE WellRestedID
+
+ALIGN 4
+WellRestedRAMLoc:
+WORD $203F600
