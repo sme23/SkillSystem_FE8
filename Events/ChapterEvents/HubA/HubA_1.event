@@ -1,11 +1,12 @@
 EventPointerTable(HubA_1EventsID, PointerList)
 
 #define CarmenIndioTalkSeen 0x7
-#define LeandraTalkSeen 0x8
-#define LeandraRecruited 0x9
-#define RelicRecovered 0xA
-#define ObjectiveSwitched 0xB
-#define EscapeDisallowed 0xC
+#define PilarRazvanTalkSeen 0x8
+#define LeandraTalkSeen 0x9
+#define LeandraRecruited 0xA
+#define RelicRecovered 0xB
+#define ObjectiveSwitched 0xC
+#define EscapeDisallowed 0xD
 
 PointerList:
 POIN TurnBasedEvents
@@ -28,6 +29,7 @@ END_MAIN
 
 CharacterBasedEvents:
 CharacterEventBothWays(CarmenIndioTalkSeen, CarmenIndioTalk, Carmen, Indio)
+CharacterEventBothWays(PilarRazvanTalkSeen, PilarRazvanTalk, Pilar, Razvan)
 CharacterEventBothWays(LeandraRecruited, LuaRecruitLeandra, Lua, Leandra)
 CharacterEventBothWays(LeandraRecruited, DesiderioRecruitLeandra, Desiderio, Leandra)
 END_MAIN
@@ -59,8 +61,8 @@ UNIT Indio Shaman 0 Level(1, Ally, False) [28,7] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT
 
 LuaDesiderioCutsceneUnits:
-UNIT Lua Captain 0 Level(1, Ally, False) [0,3] 0 0 1 REDA6R2 [0, 0, 0, 0] NoAI
-UNIT Desiderio Vanguard 0 Level(1, Ally, False) [0,4] 0 0 1 REDA5R2 [0, 0, 0, 0] NoAI
+UNIT Lua Captain 0 Level(1, Ally, False) [0,3] 0 0 0 0 [0, 0, 0, 0] NoAI
+UNIT Desiderio Vanguard 0 Level(1, Ally, False) [0,4] 0 0 0 0 [0, 0, 0, 0] NoAI
 UNIT
 
 IndioCutsceneUnit:
@@ -70,21 +72,39 @@ UNIT
 ContractorInitialEnemies:
 UNIT Leandra Fighter Geraldo Level(5, Enemy, False) [11, 5] 0 0 0 0 [Bloodaxe, HandAxe, Vulnerary] AttackInTwoAI
 UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, False) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, False) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, False) [23, 10] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, False) [23, 12] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [23, 10] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [23, 12] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [22, 9] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [5, 8] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [7, 8] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 11] 0 0 0 0 [IronBow] AttackInTwoAI
+UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [15, 16] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT
 
 SentinelInitialEnemies:
 UNIT Buzu Vanguard Sanz Level(5, Enemy, False) [17, 7] 0 0 0 0 [HandAxe, Pike] BossAI
 UNIT Bozo Warden Sanz Level(5, Enemy, False) [19, 7] 0 0 0 0 [FlameSword, Onigiri] BossAI
+UNIT Sentinel Warden Sanz Level(4, Enemy, True) [6, 15] 0 0 0 0 [Javelin] BossAI
+UNIT Sentinel Warden Sanz Level(4, Enemy, True) [22, 15] 0 0 0 0 [Javelin] BossAI
+UNIT Sentinel Warden Sanz Level(4, Enemy, True) [17, 4] 0 0 0 0 [Javelin] BossAI
+UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 7] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 13] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [16, 10] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT
 
 SuperbossGang:
 UNIT Yurena Champion Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] BossAI
 UNIT Sanz Sage Sanz Level(20, Enemy, False) [13, 21] 0 0 1 REDA13R20 [Tornado, Warp] BossAI
 UNIT Orlando Captain Orlando Level(1, Enemy, False) [14, 21] 0 0 1 REDA14R20 [0] BossAI
+UNIT
+
+YurenaGaming:
+UNIT Yurena Champion Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] ChargeAI
 UNIT
 
 Traps1:
@@ -96,8 +116,13 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-EVBIT_F 8
+EVBIT_F 8 // For camera moving stuff
+FADU 16
+STAL 30
 LOAD2 1 LuaDesiderioCutsceneUnits
+ENUN
+MOVE 20 Desiderio [5, 2]
+MOVE 20 Lua [6, 2]
 ENUN
 Text(ChA1BeginningScene1)
 CAMERA [26, 9]
@@ -137,6 +162,12 @@ ENDA
 ALIGN 4
 CarmenIndioTalk:
 Text(ChA1CarmenIndioTalkDialogue)
+NoFade
+ENDA
+
+ALIGN 4
+PilarRazvanTalk:
+Text(ChA1PilarRazvanTalkDialogue)
 NoFade
 ENDA
 
