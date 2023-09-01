@@ -25,7 +25,7 @@ TurnEventPlayer(0, A3Explanation, 1)
 TurnEventPlayer(A3Spawn1TurnFlag, A3Reinforce1, 1, 255) //bottom left fort spawn
 TurnEventPlayer(A3Spawn2TurnFlag, A3Reinforce2, 1, 255)
 TurnEventPlayer(A3Spawn3TurnFlag, A3Reinforce3, 1, 255)
-Survive(GameOverYeaaaaah,12)
+Survive(GameOverYeaaaaah,13)
 END_MAIN
 
 A3Explanation:
@@ -220,13 +220,12 @@ UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [6,6] 0 0 0 0 [SteelSword] Gr
 UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [IronAxe] GroupTwoAI
 
 UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [15,5] 0 0 0 0 [SteelLance] GroupThreeAI
-UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [12,9] 0 0 0 0 [SteelBow, MiniBow] GroupThreeAI
-UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [IronLance] GroupThreeAI
+UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [12,9] 0 0 0 0 [MiniBow, SteelBow] GroupThreeAI
 
 UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [18,12] 0 0 0 0 [SteelSword] GroupFourAI
 UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [18,16] 0 0 0 0 [SteelLance] GroupFiveAI
-UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [11,12] 0 0 0 0 [IronLance] GroupFourAI
-UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [11,16] 0 0 0 0 [IronSword] GroupFiveAI
+UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronLance] GroupFourAI
+UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [12,16] 0 0 0 0 [IronSword] GroupFiveAI
 UNIT RiojaReaper DragonRider 0 Level(4, Enemy, True) [15,14] 0 0 0 0 [SteelAxe, Hammer] AttackInRangeAI
 UNIT
 
