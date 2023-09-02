@@ -251,8 +251,8 @@ ENDA
 EndingScene:
 PlayEventIfEventIDSet(A3LogFlag, 1, AshArrowItemEvent)
 ENUF LordMustEscapeLastFlag
+GoToHubChapter(HubA)
 NoFade
-MNC2 HubA
 ENDA
 
 AshArrowItemEvent:

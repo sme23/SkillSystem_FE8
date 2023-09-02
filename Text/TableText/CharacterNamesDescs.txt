@@ -164,7 +164,7 @@ Gunslinger[N]
 A hotheaded mercenary whose talents[N]
 are only rivaled by her ego.[X]
 
-## TangyuanName
+## TangyuanName ^
 Tangyuan[X]
 
 ## TangyuanDesc
@@ -362,16 +362,16 @@ Mr Mist[X]
 
 ## MrMistDesc
 Spy[N]
-A spy from the empire whose mission is to[N]
-recover the schematics for the Mincemaker.[X]
+A spy from the empire with a mission to[N]
+recover the Mincemaker's schematics.[X]
 
 ## YaoguaiName
 Yaoguai[X]
 
 ## YaoguaiDesc
 Spy[N]
-A spy from the rebels whose mission is to[N]
-recover the schematics for the Mincemaker.[X]
+A spy from the empire with a mission to[N]
+recover the Mincemaker's schematics.[X]
 
 ## TheDukeName
 The Duke[X]
