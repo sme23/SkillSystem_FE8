@@ -63,9 +63,6 @@ POP
   //HP Bars (and effective weapon warning)
   #include "QualityOfLife/HpBars/HpBars.event"
 
-  //Improved Sound Mixer
-  #include "QualityOfLife/ImprovedSoundMixer/SoundMixer.event"
-
   //Danger Zone (select button)
   #include "QualityOfLife/DangerZone/DangerZone.event"
 
@@ -228,7 +225,6 @@ POP
   #include "Necessary/CalcLoops/CalcLoops.event"
 
   // Save/Suspend Expansion
-    MESSAGE "Using EMS Save/Suspend Expansion"
-    #include "Necessary/ExpandedModularSave/ExModularSave.event"
+  #include "Necessary/ExpandedModularSave/ExModularSave.event"
 
   #include "PirateHax/_PirateHaxInstaller.event"

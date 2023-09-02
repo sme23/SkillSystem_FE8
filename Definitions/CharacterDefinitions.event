@@ -25,7 +25,7 @@
 #define Leonor $e
 #define Ondeh $f
 #define Biko $10
-#define AChapterUnit7 $11
+#define Tangyuan $11
 #define AChapterUnit8 $12
 #define Matteo $13
 #define Suzanne $14
@@ -64,10 +64,25 @@
 #define Sargargala $5B
 #define LogPirate $5C
 #define RiojaReaper LogPirate
+#define A3Log $58
+
+//A5
+#define Gunsmith $5A
+#define BigBrick $5E
+#define Hakman $5F
+#define MrMist $60
+#define Yaoguai $61
+#define TheDuke $62
+#define TheDukes $63
+#define Guard $64
+#define Jozef $65
+#define TheCloser $66
+#define BrickBoys $67
 
 //Hub A6
 #define Slicer 0x50
 #define Dicer 0x51
 #define Santiago 0x52
-
 #define Bomb 0x57
+#define Rochefort 0x68
+#define A6Pirate 0x69

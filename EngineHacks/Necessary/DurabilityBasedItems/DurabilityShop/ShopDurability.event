@@ -15,5 +15,6 @@ POP
 ALIGN 4
 FixedPriceItemList:
 BYTE SkillScroll
+BYTE Tonic
 BYTE 0
 

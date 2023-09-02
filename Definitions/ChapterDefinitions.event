@@ -9,6 +9,7 @@
 #define HubA_5 6
 #define HubA_6 7
 #define Chapter2 8
+#define HubALibrary 9
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
 #define Chapter1MapID 0x4
@@ -47,12 +48,16 @@
 #define Chapter2MapChangesID 0x26
 #define Chapter2EventsID 0x27
 
+#define HubALibraryMapID 0x98
+#define HubALibraryMapChangesID 0x99
+#define HubALibraryEventsID 0x9A
 
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88
 #define FlasubanVillageSkyPaletteID 0x89
 #define FlasubanVillageSkyConfigID 0x8A
 #define FlasubanVillageTileAnimationsID 0x8B
+#define FlasubanVillageOurplePaletteID 0x97
 
 #define DesertBastionNightSkyObjectID 0x8C
 #define DesertBastionNightSkyPaletteID 0x8D
@@ -73,3 +78,7 @@
 #define FF5CaveExpandedPaletteID 0x95
 #define FF5CaveExpandedConfigID 0x96
 #define FF5CaveExpandedTileAnimationsID FF5CaveTileAnimationsID
+
+#define N426ImprovedCastleObjectID 0x9B
+#define N426ImprovedCastlePaletteID 0x9C
+#define N426ImprovedCastleConfigID 0x9D

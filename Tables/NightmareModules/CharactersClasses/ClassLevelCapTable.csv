@@ -1,5 +1,5 @@
 INLINE Class_Level_Cap_Table,Level Cap
-0x00 Separator/Nothing,20
+None,20
 Ephraim Lord,30
 Eirika Lord,30
 Ephraim Master Lord,30
@@ -9,7 +9,7 @@ Lance Cav (F),30
 Paladin,30
 Paladin (F),30
 Warden,30
-Armour Knight (F),30
+Warden (F),30
 General,30
 General (F),30
 Thief,30
@@ -52,8 +52,8 @@ Summoner,30
 Summoner (F),30
 Rogue,30
 Gorgon Egg,30
-Great Knight,30
-Great Knight (F),30
+Cataphract,30
+Cataphract (F),30
 Recruit (2),30
 Journeyman (3),30
 Pupil (3),30
@@ -137,14 +137,14 @@ Gunner,30
 SwordCav,30
 AxeCav,30
 GriffinRider,30
-NULL,30
-NULL,30
-NULL,30
-NULL,30
-NULL,30
-NULL,30
-NULL,30
-NULL,30
+Hunter_F,30
+Champion,30
+Log,30
+Master Ninja,30
+Dreadnought,30
+Seraph,30
+Bombardier,30
+Bomb,30
 NULL,30
 NULL,30
 NULL,30

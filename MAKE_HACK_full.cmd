@@ -11,7 +11,7 @@ set "source_rom=%~dp0FE8_clean.gba"
 set "main_event=%~dp0ROMBuildfile.event"
 
 set "target_rom=%~dp0PirateProject.gba"
-set "target_ups=%~dp0PirateProject_v0.01.ups"
+set "target_ups=%~dp0PirateProject_v0.02.ups"
 set "target_sym=%~dp0PirateProject.sym"
 
 @rem defining tools
@@ -61,7 +61,7 @@ echo:
 echo Assembling
 
 cd "%base_dir%EventAssembler"
-ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%" --nocash-sym
+ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%" --nocash-sym --build-times
 
 if /I not [%1]==[quick] (
 

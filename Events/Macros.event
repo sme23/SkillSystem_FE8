@@ -1,6 +1,13 @@
 #define EraseBackground "CALL $9EE2C4"
 #define SpawnReinforcements(UnitGroup) "CamOn; LOAD1 0x1 UnitGroup; ENUN; CamOff; RefreshSMS; ENUN; STAL 30"
+#define LoadPlayerUnits(unitPtr) "LOAD1 0x0 unitPtr; ENUN"
+#define LoadUnit(x,y) "UNIT 0x2 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for units in player placement with prep menu
+#define LoadUnit(x,y,unitID) "UNIT unitID 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for loading specific force deployed units
+#define LoadEnemies(unitPtr) "LOAD1 0x1 unitPtr; ENUN"
 #define CameraCursor(character) "CAM1 character; STAL 20; FlashCursor(character,60)"
+#define CameraCursor(x,y) "CAM1 [x,y]; STAL 20; FlashCursor(x,y,60)"
+#define CameraCursorFast(character) "CAM1 character; STAL 20; FlashCursor(character,32)"
+#define CameraCursorFast(x,y) "CAM1 [x,y]; STAL 20; FlashCursor(x,y,32)"
 #define SetAI(unitid,ai1,ai2,ai3,ai4) "SVAL 0x1 ai1|(ai2<<8)|(ai3<<16)|(ai4<<24); CHAI unitid"
 #define CamOn "EVBIT_T 0x9"
 #define CamOff "EVBIT_F 0x9"
@@ -8,25 +15,47 @@
 #define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; REMA"
 #define TutorialYesNoText(textid) "EVBIT_MODIFY 1; CenterTextbox(textid); EVBIT_MODIFY 0"
 #define RemoveAll "REMOVEALL_BLUE; REMOVEALL_GREEN; REMOVEALL_RED"
+#define GiveItem(Item,Character) "CALL $591F40; SMOV 0x3 Item ; GIVEITEMTO Character"
+#define SilentGiveItem(item,unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItemFunc|1"
+#define GiveGold(money) "SVAL 3 money; GIVEMONEY Lua"
+#define TakeGold(money) "SVAL 3 money; TAKEMONEY Lua"
 
-#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; SetHubChapterFlagAndGo(labelId, chapterId); LABEL labelId"
-#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); SetHubChapterFlagAndGo(labelId, chapterId); LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; ENUF LuaInAHubFlag; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); ENUF LuaInAHubFlag; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 
-#define SkipEventIfTileChangeDone(labelId, tileChangeId, eventId) "CALL eventId"
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
+#define CheckHowManyHubChaptersCompleted "ASMC CheckHowManyHubChaptersCompletedASMC"
+
 #define BranchIfHubNotVisited(labelId, eventId) "CheckIfHubVisited; BNE labelId s0 sC; CALL eventId; LABEL labelId"
+#define CheckIfHubAChapterCompleted "ASMC CheckIfOneHubAChapterCompletedASMC"
 
-
-#define SetHubChapterFlag(flagId) "SVAL s1 flagId; ASMC SetHubChapterFlagASMC"
+#define HubFirstTimeTalkToUnit(firstTalkEID, labelID, textID) "CHECK_EVENTID firstTalkEID; BNE labelID s0 sC; Text(textID); ENUT firstTalkEID"
+#define RecruitThenHideCharacter(charID, textID) "Text(textID); CUSA charID; FlashCursor(charID, 60); FADI 10; SVAL s1 0x1; SET_CONDITION charID; FADU 10"
+#define HubRecruitUnit(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); GOTO finalLabelID"
+#define HubRejectUnit(rejectedTextID, convoEID) "Text(rejectedTextID); ENUF convoEID"
 #define UnsetAllHubChapterFlags "ASMC UnsetAllHubChapterFlagsASMC"
-#define SetHubChapterFlagAndGo(flagId, chapterId) "SetHubChapterFlag(flagId); MNC2 chapterId"
 
-// bpat macros
-#define LoadPlayerUnits(unitPtr) "LOAD1 0x0 unitPtr; ENUN"
-#define LoadUnit(x,y) "UNIT 0x2 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for units in player placement with prep menu
-#define LoadUnit(x,y,unitID) "UNIT unitID 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for loading specific force deployed units
-#define LoadEnemies(unitPtr) "LOAD1 0x1 unitPtr; ENUN"
+#define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+#define InitiateTileRevertInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILEREVERT tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+#define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); LABEL labelId"
+
+#define CalculateYodsenPrice "ASMC CalculateYodsenPriceASMC"
+#define GetTextFromMemSlot1 "ASMC GetTextFromMemorySlot1ASMC"
+
+#define GoToHubChapter(chapterId) "ASMC EyeForAnEyeResetASMC; MNC2 chapterId"
+
+
+//A3 macros
+#define BranchIfNotUnitAtCoords(xcoord, ycoord, unitId, labelId) "CHECK_AT [xcoord, ycoord]; SVAL s1 unitId; BNE labelId s1 sC"
+#define CheckIfTimeForTurnSpawnEnabledByAreaEventPlayer(label1, label2, areaFlag, turnFlag) "CHECK_ALLEGIANCE (-1); BEQ label1 s0 sC; ENUF areaFlag; GOTO label2; LABEL label1; ENUF turnFlag; LABEL label2"
+#define PanToTileThenFlashCursorForXSeconds(xcoord, ycoord, time) "CAMERA_CENTERED [xcoord,ycoord]; FlashCursor(xcoord,ycoord,time)"
+#define PlayEventIfEventIDSet(flagId, labelId, offset) "CHECK_EVENTID flagId; BEQ labelId s0 sC; CALL offset; LABEL labelId"
+#define RemoveAllThreeLogs "FAWI 10; TILECHANGE 0; REMOVEALL_GREEN; STAL 15; FAWU 10"
+#define GotoEndingSceneIfNoPlayers "ASMC GetBlueUnitCountASMC; BNE 1 s0 sC; ENUT 3; CALL EndingScene; LABEL 1"
+
 
 //SetUnitItemDurability(xcoord, ycoord, itemslot, durability)
 //SetUnitItemDurability(unitid, itemslot, durability)
+
+#define InAHubFlag 0xA0

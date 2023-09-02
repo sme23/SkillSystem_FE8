@@ -122,8 +122,8 @@ SetBackground(Ship)
 Text(Ch1EndingScene1)
 Text(Ch1EndingScene2)
 Text(Ch1EndingScene3)
+GoToHubChapter(HubA)
 NoFade
-MNC2 HubA
 ENDA
 
 Dunno1: //down here because nothing here is really used
