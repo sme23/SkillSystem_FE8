@@ -52,10 +52,10 @@ END_MAIN
 Units1:
 UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Lua
 UNIT Indio Shaman 0 Level(1, Ally, False) [25,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Indio
-UNIT Indio Shaman 0 Level(1, Ally, False) [27,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Desiderio
+UNIT Indio Shaman 0 Level(1, Ally, False) [26,9] 0 0 0 0 [Surge, Vulnerary] NoAI // Desiderio
 UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Pilar
 UNIT Indio Shaman 0 Level(1, Ally, False) [5,3] 0 0 0 0 [Surge, Vulnerary] NoAI // Razvan
-UNIT Indio Shaman 0 Level(1, Ally, False) [28,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Carmen
+UNIT Indio Shaman 0 Level(1, Ally, False) [27,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Carmen
 UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Ximo
 UNIT Indio Shaman 0 Level(1, Ally, False) [26,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Estelle
 UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
@@ -75,16 +75,17 @@ UNIT Leandra Fighter Geraldo Level(5, Enemy, False) [11, 5] 0 0 0 0 [Bloodaxe, H
 UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] AttackInRangeAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [23, 10] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [23, 12] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [22, 11] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 10] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 12] 0 0 0 0 [IronSword] AttackInTwoAI
+UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [23, 11] 0 0 0 0 [IronBow] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [5, 8] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [7, 8] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 9] 0 0 0 0 [IronBow] AttackInTwoAI
-UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [15, 16] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [IronLance] GroupOneAI
+UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [IronLance] GroupOneAI
+UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] GroupOneAI
+UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [15, 16] 0 0 0 0 [IronAxe] GroupOneAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [14, 16] 0 0 0 0 [Elfire] GroupOneAI
 UNIT
 
 SentinelInitialEnemies:
@@ -96,11 +97,15 @@ UNIT Sentinel Warden Sanz Level(4, Enemy, True) [17, 4] 0 0 0 0 [Javelin] BossAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 7] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 13] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [16, 10] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Sentinel Mage Sanz Level(4, Enemy, True) [17, 10] 0 0 0 0 [Elfire] AttackInTwoAI
+UNIT Sentinel Mage Sanz Level(4, Enemy, True) [19, 10] 0 0 0 0 [Elfire] AttackInTwoAI
 // these aren't sentinels but i ran out of space in the first unit group
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [7, 16] 0 0 0 0 [IronAxe] AttackInTwoAI
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [8, 15] 0 0 0 0 [IronAxe] AttackInTwoAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [3, 14] 0 0 0 0 [Elfire] AttackInTwoAI
 UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [21, 5] 0 0 0 0 [IronLance] AttackInTwoAI
 UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronLance] AttackInTwoAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [20, 4] 0 0 0 0 [Elfire] AttackInTwoAI
 UNIT
 
 UndergroundReinforcements:
