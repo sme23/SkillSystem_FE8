@@ -43,6 +43,8 @@
 #define CalculateYodsenPrice "ASMC CalculateYodsenPriceASMC"
 #define GetTextFromMemSlot1 "ASMC GetTextFromMemorySlot1ASMC"
 
+#define GoToHubChapter(chapterId) "ASMC EyeForAnEyeResetASMC; MNC2 chapterId"
+
 
 //A3 macros
 #define BranchIfNotUnitAtCoords(xcoord, ycoord, unitId, labelId) "CHECK_AT [xcoord, ycoord]; SVAL s1 unitId; BNE labelId s1 sC"

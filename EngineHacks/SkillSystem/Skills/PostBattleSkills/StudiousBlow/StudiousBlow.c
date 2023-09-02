@@ -16,10 +16,12 @@ void StudiousBlow() {
 
 void StudiousBlowAtkBonus(BattleUnit* bunitA, BattleUnit* bunitB) {
 	//if bunitA's allegiance is the current phase, add studious blow byte to atk
-	if (( (bunitA->unit.index & 0xC0) == (gChapterData.currentPhase) ) &&
-		( CheckBit(GetUnitDebuffEntry(GetUnit(bunitB->unit.index)), StudiousBlowBitOffset_Link) )
-	   ) {
-		bunitA->battleAttack += *StudiousBlowByteLoc;
+	
+	
+	if (( (bunitA->unit.index & 0xC0) == (gChapterData.currentPhase) ) && ( CheckBit(GetUnitDebuffEntry(GetUnit(bunitB->unit.index)), StudiousBlowBitOffset_Link) )) {
+		if (bunitB->unit.pClassData != 0){ //is this a real fight
+			bunitA->battleAttack += *StudiousBlowByteLoc;
+		}
 	}
 }
 
@@ -30,7 +32,7 @@ void ClearStudiousBlow() {
 	//loop through every unit of relevant allegiance and unset the studious blow target bit
 	int faction = gChapterData.currentPhase;
 	int unitID = faction+1;
-	int maxCount;
+	int maxCount = 0;
 	
 	switch (faction) {
 		case UA_BLUE:

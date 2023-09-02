@@ -1,5 +1,7 @@
 #include "gbafe.h"
 
+#define DesiderioCharId 3
+
 void A3ReturnLogDroppedStatusASMC(){
 
     gEventSlot[0xC] = 0;
@@ -48,4 +50,14 @@ void A3ReturnLogDroppedStatusASMC(){
     }
     
     gEventSlot[0xC] = logNum;
+}
+
+void EyeForAnEyeResetASMC(){
+    Unit* unit = GetUnitByCharId(DesiderioCharId);
+    if (unit->state & US_UNAVAILABLE){
+        //don't do anything because he's goneski
+    }
+    else{
+        unit->supports[5] = 0; //last support byte set to be 0
+    }
 }
