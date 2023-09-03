@@ -282,12 +282,14 @@ TeamDebuffTables:
   ALIGN 4
   MapMainClearProc:
     WORD $02; POIN (ClearAllDebuffs|1)
+	WORD $02; POIN (ClearAllChapterKillCounters)
     WORD $02 $80155C5
     WORD $0D $859A310
 
   ALIGN 4
   GameCtrlClearProc:
     WORD $02; POIN (ClearAllDebuffs|1)
+	WORD $02; POIN (ClearAllChapterKillCounters)
     WORD $02 $8009D99
     WORD $0D $8591924
 
