@@ -10,3 +10,4 @@ int GetUnitConstitution(Unit* unit);
 
 //bool gSkillTester(Unit* unit, int skillID);
 extern bool gSkillTester(Unit* unit, int skillID);
+extern u8 DesiderioCharIDLink;
