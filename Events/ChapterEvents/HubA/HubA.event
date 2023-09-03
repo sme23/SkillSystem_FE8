@@ -35,6 +35,7 @@ EventPointerTable(HubAEventsID, PointerList)
 #define HubASamsonArranRecruitFlag 0x97
 #define FirstTimeInTavern 0x98
 #define MrYodsenRecruitFlag 0x99
+#define LuaInAHubFlag 0xA0
 
 PointerList:
 POIN TurnBasedEvents
@@ -60,7 +61,18 @@ CharacterEvent(MrYodsenRecruitFlag, TalkToMrYodsen, Lua, MrYodsen)
 END_MAIN
 
 LocationBasedEvents:
+Armory(HubAArmory,16,13)
+Vendor(HubAVendor,24,13)
 END_MAIN
+
+ALIGN 4
+HubAArmory:
+SHLI IronSword SteelSword IronLance SteelLance IronAxe SteelAxe IronBow SteelBow IronKnife SteelKnife IronDagger SteelDagger
+
+ALIGN 4
+HubAVendor:
+SHLI Fire Elfire Heal Mend Vulnerary (HPTonic << 8)|Tonic (StrTonic << 8)|Tonic (MagTonic << 8)|Tonic (SklTonic << 8)|Tonic (SpdTonic << 8)|Tonic (LuckTonic << 8)|Tonic  (DefTonic << 8)|Tonic (ResTonic << 8)|Tonic
+ALIGN 4
 
 MiscBasedEvents:
 AREA PortToDocks PortGreagorDocks [29,15] [29,16]
@@ -114,12 +126,12 @@ UNIT
 
 BeginningScene:
 // only here for chapter A1 testing
-ENUT InAHubFlag
+ENUT LuaInAHubFlag
 ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
-GotoPrepScreen
+GotoPrepScreenHub
 ENUN
 NoFade
 ENDA

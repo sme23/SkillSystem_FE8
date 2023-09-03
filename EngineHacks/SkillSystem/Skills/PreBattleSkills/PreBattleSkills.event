@@ -414,6 +414,12 @@ FusePreBattle:
 POIN SkillTester
 WORD FuseID
 
+ALIGN 4
+EyeForAnEyeApply:
+#incbin "EyeForAnEye/EyeForAnEye.dmp"
+POIN SkillTester
+WORD EyeForAnEyeID
+
 
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	ALIGN 4

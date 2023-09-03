@@ -35,8 +35,14 @@ END_MAIN
 
 MiscBasedEvents:
 AFEV 0 Counter 9
+AFEV 0x0 CheckNoUnits 0x0
 CauseGameOverIfLordDies
 END_MAIN
+
+CheckNoUnits:
+GotoEndingSceneIfNoPlayers
+NoFade
+ENDA
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -63,30 +69,30 @@ UNIT Lua Captain 0 Level(10,Ally,False) [15,18] 0 0 0 0 [Cutlass, IronSword, Iro
 UNIT
 
 TheBads:
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [8,5] 0 0 0 0 [IronMusket] BossAI
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [0,7] 0 0 0 0 [IronMusket] AttackInRangeAI
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [14,1] 0 0 0 0 [Pistol] AttackInRangeAI
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [13,11] 0 0 0 0 [Blunderbuss] AttackInRangeAI
-UNIT BrickBoys Thief 0 Level(2, Enemy, True) [3,12] 0 0 0 0 [IronDagger] AttackInTwoAI
-UNIT BrickBoys Thief 0 Level(2, Enemy, True) [6,3] 0 0 0 0 [IronKnife] AttackInRangeAI
-UNIT BrickBoys Thief 0 Level(2, Enemy, True) [12,7] 0 0 0 0 [IronKnife] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(2, Enemy, True) [7,17] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(2, Enemy, True) [5,3] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(2, Enemy, True) [17,1] 0 0 0 0 [SteelLance] AttackInTwoAI
-UNIT BrickBoys Brigand 0 Level(2, Enemy, True) [8,10] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT BrickBoys Brigand 0 Level(2, Enemy, True) [11,2] 0 0 0 0 [HandAxe] AttackInRangeAI
-UNIT BrickBoys Brigand 0 Level(2, Enemy, True) [5,0] 0 0 0 0 [SteelAxe] AttackInRangeAI
-UNIT BrickBoys Warden 0 Level(2, Enemy, True) [9,5] 0 0 0 0 [SteelSword, SteelLance] BossAI
-UNIT BrickBoys Vanguard 0 Level(2, Enemy, True) [0,15] 0 0 0 0 [IronAxe, IronLance] ChargeAI
-UNIT TheDukes Mercenary 0 Level(2, Enemy, True) [10,17] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT TheDukes Mercenary 0 Level(2, Enemy, True) [4,7] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT TheDukes Mercenary 0 Level(2, Enemy, True) [15,0] 0 0 0 0 [SteelSword] AttackInRangeAI
-UNIT TheDukes Hunter 0 Level(2, Enemy, True) [13,10] 0 0 0 0 [Greatbow] ChargeAI
-UNIT TheDukes Hunter 0 Level(2, Enemy, True) [4,6] 0 0 0 0 [IronBow] AttackInRangeAI
-UNIT TheDukes Hunter 0 Level(2, Enemy, True) [11,3] 0 0 0 0 [MiniBow] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(2, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(2, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(2, Enemy, True) [2,0] 0 0 0 0 [Thani] AttackInTwoAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [8,5] 0 0 0 0 [IronMusket] BossAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [0,7] 0 0 0 0 [IronMusket] AttackInRangeAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [14,1] 0 0 0 0 [Pistol] AttackInRangeAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [13,11] 0 0 0 0 [Blunderbuss] AttackInRangeAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [3,12] 0 0 0 0 [IronDagger] AttackInTwoAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [6,3] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [12,7] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [7,17] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [5,3] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [8,10] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [HandAxe] AttackInRangeAI
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [5,0] 0 0 0 0 [SteelAxe] AttackInRangeAI
+UNIT BrickBoys Warden 0 Level(3, Enemy, True) [9,5] 0 0 0 0 [SteelSword, SteelLance] BossAI
+UNIT BrickBoys Vanguard 0 Level(3, Enemy, True) [0,15] 0 0 0 0 [IronAxe, IronLance] ChargeAI
+UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [10,17] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [4,7] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [SteelSword] AttackInRangeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [13,10] 0 0 0 0 [Greatbow] ChargeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [4,6] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [11,3] 0 0 0 0 [MiniBow] AttackInRangeAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [2,0] 0 0 0 0 [Thani] AttackInTwoAI
 UNIT BigBrick Fighter 0 Level(5, Enemy, True) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
 UNIT Hakman Myrmidon 0 Level(5, Enemy, True) [1,4] 0 0 0 0 [Peacekeeper] AttackInRangeAI
 UNIT MrMist Mage 0 Level(6, Enemy, True) [10,11] 0 0 0 0 [Galestrike] AttackInRangeAI
@@ -132,7 +138,7 @@ NoFade
 ENDA
 
 EndingScene:
-MNC2 HubA
+GoToHubChapter(HubA)
 NoFade
 ENDA
 
@@ -178,6 +184,9 @@ CURSOR [10,0]
 STAL 45
 REMOVE_CURSORS
 CenterTextbox(EscapeTime)
+AddTrap(BlueSigilTrapID,8, 0)
+AddTrap(BlueSigilTrapID,9, 0)
+AddTrap(BlueSigilTrapID,10, 0)
 STAL 15
 LABEL 0
 NoFade

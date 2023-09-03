@@ -52,6 +52,17 @@
     FlasubanOurpleVillagePalette:
     #incbin "Dmp/Palette/FlasubanVillageSkyOurple_pal.dmp"
 
+    ALIGN 4
+    N426ImprovedCastleObject:
+    #incbin "Dmp/Object/Improved Castle Object_Palette 4.dmp"
+
+    ALIGN 4
+    N426ImprovedCastlePalette:
+    #incbin "Dmp/Palette/Improved Castle Object_Palette 4_pal.dmp"
+
+    ALIGN 4
+    N426ImprovedCastleConfig:
+    #incbin "Dmp/Config/Castle Update Config_comp.dmp"
 
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
@@ -70,5 +81,7 @@
     EventPointerTable(FF5CaveExpandedPaletteID, FF5CaveExpandedPalette)
     EventPointerTable(FF5CaveExpandedConfigID, FF5CaveExpandedMapchipConfig)
 
-    
+    EventPointerTable(N426ImprovedCastleObjectID, N426ImprovedCastleObject)
+    EventPointerTable(N426ImprovedCastlePaletteID, N426ImprovedCastlePalette)
+    EventPointerTable(N426ImprovedCastleConfigID, N426ImprovedCastleConfig)
     

@@ -150,6 +150,11 @@ void New_SaveUnitFromBattle(Unit* unit, BattleUnit* battleUnit){
 	unit->items[3] = battleUnit->unit.items[3];
 	unit->items[4] = battleUnit->unit.items[4];
 
+	if (unit->pCharacterData->number == DesiderioCharIDLink){ //only unit with this skill so being lazy
+		unit->supports[5] = battleUnit->unit.supports[5]; //take half of damage and put it in supports
+	}
+	
+
 	// Equipment
 	u16 item = GetUnitEquippedItem(unit);
 

@@ -143,7 +143,11 @@ gGameSaveChunks:
 
 	// $1128
 	DeclSaveChunk($1128, TonicTableSize, SUD_SaveTonic, SUD_LoadTonic)
+	
 	// $1168
+	DeclSaveChunk($1168, 4, WellRested_SaveByte, WellRested_LoadByte)
+	
+	// $116C
 
 	// free up to $1344
 
@@ -199,9 +203,11 @@ gSuspendSaveChunks:
 	// Permanent eids (moved here because of a mistake in the previous allocation)
 	DeclSaveChunk($2DA8, $0019, $0A3150+1, $0A3198+1)
 	DeclSaveChunk($2DC1, TonicTableSize, SUD_SaveTonic, SUD_LoadTonic)
+	
+	DeclSaveChunk($2E02, 2, WellRested_SaveByte, WellRested_LoadByte)
 
-	// ends at $2E01
-	// free up to $2E78 ($77 free bytes)
+	// ends at $2E04
+	// free up to $2E78 ($74 free bytes)
 
 	DeclSaveChunk(0, 0, 0, MSu_LoadClaimFlagsFromParentSave) // Load Bonus Claim flags from parent save
 
