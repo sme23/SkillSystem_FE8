@@ -5,4 +5,4 @@ BYTE WellRestedID
 
 ALIGN 4
 WellRestedRAMLoc:
-WORD $203F600
+WORD $203FA00
