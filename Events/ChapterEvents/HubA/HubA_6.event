@@ -241,9 +241,9 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+DurabilityChest(SkillScroll,KleptomaniaID,18,12)
 DurabilityChest(SkillScroll,ProtectorID,11,3)
-DurabilityChest(SkillScroll,KleptomaniaID,15,3)
-Chest(Eyepatch,18,12)
+Chest(Eyepatch,15,3)
 END_MAIN
 
 MiscBasedEvents:
@@ -402,6 +402,8 @@ NoFade
 ENDA
 
 EndingScene:
+SetBackground(0x28)
+Text(ChA6End1)
 GiveItem(Mine,Lua)
 NoFade
 MNC2 HubA
