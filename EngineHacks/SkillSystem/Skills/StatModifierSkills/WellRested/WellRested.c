@@ -71,8 +71,14 @@ void PostPrep_WellRestedBonus() {
 }
 
 WellRestedData* WellRested_SaveByte(WellRestedData* saveData) {
-	saveData->wellRestedBoost = WellRestedRAMLoc->wellRestedBoost;
-	saveData->wellRestedFlag = WellRestedRAMLoc->wellRestedFlag;
+	if (saveData->wellRestedFlag != 0xFF) {
+		saveData->wellRestedBoost = WellRestedRAMLoc->wellRestedBoost;
+		saveData->wellRestedFlag = WellRestedRAMLoc->wellRestedFlag;
+	}
+	else {
+		saveData->wellRestedBoost = 0;
+		saveData->wellRestedFlag = 0;
+	}
 }
 
 Unit* WellRested_LoadByte(WellRestedData* saveData) {
