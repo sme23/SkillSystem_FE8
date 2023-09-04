@@ -20,11 +20,17 @@ bool IsItemEquipment (Item item){
 }
 
 bool CanUnitEquipItem (Unit* unit, Item item){
-	if (!IsItemEquipment(item)){
+	if (IsItemEquipment(item) != true){
 		return false;
 	}
 
 	// Can add extra conditionals here
+
+	if (GetItemIndex(item) == 0xE2){
+		if (GetItemData(GetItemIndex(GetUnitEquippedWeapon(unit)))->weaponType != ITYPE_BOW){
+			return false;
+		}
+	}
 
 	return true;
 }

@@ -121,5 +121,4 @@
 #define DreadnoughtMapSprite 0x7E
 #define SeraphMapSprite 0x7F
 #define BombardierMapSprite 0x80
-
-#define BombMapSprite 0x6a
+#define BombMapSprite 0x81

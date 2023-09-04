@@ -84,7 +84,7 @@
 
 [CurrentPortrait] = [0xFF][0xFF]
 [LoadCurrent] = [LoadFace][CurrentPortrait]
-[LoadActive] = [LoadCurent]
+[LoadActive] = [LoadCurrent]
 
 
 [LoadLua] = [LoadFace][0x2][0x1]
@@ -106,8 +106,8 @@
 [LoadLeonor] = [LoadFace][0xf][0x1]
 [LoadOndeh] = [LoadFace][0x10][0x1]
 [LoadBiko] = [LoadFace][0x11][0x1]
-[LoadMatteo] = [LoadFace][0x1a][0x1]
-[LoadSuzanne] = [LoadFace][0x1b][0x1]
+[LoadMatteo] = [LoadFace][0x14][0x1]
+[LoadSuzanne] = [LoadFace][0x15][0x1]
 
 [LoadRedSoldier] = [LoadFace][0x6B][0x1]
 [LoadRedFighter] = [LoadFace][0x6D][0x1]

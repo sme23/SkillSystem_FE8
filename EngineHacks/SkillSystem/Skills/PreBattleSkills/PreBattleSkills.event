@@ -395,12 +395,6 @@ POIN SkillTester
 WORD UnderhandedID
 
 ALIGN 4
-ArmsMastery:
-#incbin "ArmsMastery/ArmsMastery.dmp"
-POIN SkillTester
-WORD ArmsMasteryID
-
-ALIGN 4
 CatchingUp:
 #incbin "CatchingUp/CatchingUp.dmp"
 POIN SkillTester
@@ -419,6 +413,12 @@ FusePreBattle:
 #incbin "Fuse/Fuse.dmp"
 POIN SkillTester
 WORD FuseID
+
+ALIGN 4
+EyeForAnEyeApply:
+#incbin "EyeForAnEye/EyeForAnEye.dmp"
+POIN SkillTester
+WORD EyeForAnEyeID
 
 
 #ifdef MODULAR_PRE_BATTLE_SKILLS

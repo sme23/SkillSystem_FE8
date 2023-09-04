@@ -1,2 +1,166 @@
+// Chapter A-3 by Loog & pandan
+
+// Plot Premise
+// Ondeh and Biko want to find a hidden treasure, but they need help.
+// Ondeh owes a debt to a group of pirates, and she can't pay them back.
+// Tries to convince Lua and co. to help her collect a hidden treasure.
+// At the tomb, the treasure turns out to be a sham, only a few logs in the tomb.
+// The pirates show up and reveal it was a trap.
+// The group escapes. After their exit, Lua tells Ondeh the debt is now transferred to her. And now it is absolved.
+// Ondeh says she'll work to repay Lua's kindness. Biko agrees too.
+
+## Selection_Text
+[FL][LoadBiko]
+[L][LoadOndeh]
+[MR][LoadLua]
+[FL][2LB]
+Ondeh[Beat] Are you sure you[N]
+want to go through with-[AN]
+[L][1LB]
+Not now, Biko![AN]
+[MR][2LB]
+Hm?[N]
+Am I interrupting something?[AN]
+[L]
+Not at all. But you may be[N]
+the one we're looking for.[AN]
+[MR][3LB]
+You're coming on a bit strong[N]
+for my taste. Not that I don't[N]
+admire women who are direct.[AN]
+[L]
+N-no, nothing like that.[N]
+Look, I'm Ondeh, and this is[N]
+my little brother, Biko.[AN]
+We got wind of the location[N]
+of a treasure deeper into the[N]
+jungle, but we need help.[AN]
+[FL]
+T-that's right![N]
+You ever hear of the[N]
+Tomb of San Torino?[AN]
+[MR]
+"San Torino, San Torino,[N]
+the woman king from Pellegrino,[N]
+like their face hidden,[AN]
+buried with their eight kittens,[N]
+gold and silver, blades and[N]
+baubles, legends say,[AN]
+with treasures from before the[N]
+land was in the sky,[N]
+few may try, many may die,[AN]
+as they search for the key,[N]
+the tomb, and the truth,[N]
+about the legend of San Torino."[AN]
+[FL][2LB]
+Wow! Did you just come up[N]
+with that, Miss?[AN]
+[MR]
+Call me Lua.[N]
+No, it's an old rhyme.[AN]
+You're saying San Torino's[N]
+tomb is on this island?[AN]
+[L]
+Mm. But we can't go alone.[N]
+Will you help us?[A][X]
+
+## Sys_Text_Mission_Select
+A-3: Under Log and Key (Escape)[N]
+Units: Ondeh (Hunter), Biko (Soldier)[N]
+Loot: Bow and lance users will benefit.[N]
+Will you help the two find treasure?[No][X]
+
+## Selection_Yes
+[FL][LoadBiko]
+[L][LoadOndeh]
+[MR][LoadLua]
+[MR][3LB]
+I'm in. We'll sort out terms[N]
+for the loot on the way there.[N]
+Do we have a deal?[AN]
+[L][2LB]
+You don't waste much time.[N]
+Yes, we have a deal.[N]
+We're ready to depart.[AN]
+If you're ready, we can go now.[N]
+It'll take us a few days,[N]
+so best ensure you have provisions.[AN]
+Biko, you have everything, right?[N]
+I'm not trying to hunt in that[N]
+jungle because you forgot to bring food.[AN]
+[FL]
+Sigh[Beat] You never let me forget.[N]
+Yes, I've got the food.[N]
+Nothing fancy, but it'll do.[AN]
+[L][1LB]
+And water?[AN]
+[FL]
+Yes, Ondeh. And water.[AN]
+[L]
+Bandages?[AN]
+[FL][2LB]
+Hrm, um[Beat][N]
+I thought those were with you.[AN]
+[L]
+Good. I was testing you.[N]
+Let's go.[AN]
+[MR]
+You're a good sister.[N]
+We have our own supplies as well.[AN]
+Don't hesitate to ask us[N]
+if you need something to eat.[AN]
+[L]
+That's kind of you to offer[Beat][N]
+Anyhow, let's get moving.[A][X]
+
+## Selection_No
+[FL][LoadBiko]
+[L][LoadOndeh]
+[MR][LoadLua]
+[MR][2LB]
+Sorry, chief, maybe later.[N]
+Let me think about it.[AN]
+[L]
+Hmm[Beat] Alright.[N]
+We'll see if we can[AN]
+find someone else for[N]
+the expedition, then.[A][X]
+
 ## ChA3Title
 Ch. A-3: Under Log and Key[X]
+
+## ChA3GoalWindow
+Escape[X]
+
+## ChA3StatusObjective
+Escape before the[N]
+  spirit wakes.[X]
+
+## ChA3ObjectiveExplanation
+Escape the forest with all units[N]
+within 12 turns to beat this map.[N]
+Lua must be the last unit to leave[N]
+through the bottom right bridge.[A][X]
+
+## ChA3SideObjectiveExplanation
+As a side-objective, try to Drop[N]
+the logs onto the Ruins tiles.[N]
+If all of them are escorted there,[N]
+then you will get a reward at the end.[N]
+Enemies will not attack the logs.[A][X]
+
+## A3FirstLogDropped
+[MidRight][LoadLua]
+One log down,[N]
+two to go.[A][X]
+
+## A3SecondLogDropped
+[MidRight][LoadLua]
+That's two[Beat][N]
+Still nothing?[A][X]
+
+## A3ThirdLogDropped
+[MidRight][LoadLua]
+[Beat]Nothing happened,[N]
+even with all three of them?[AN]
+What a waste of our ti-[A][X]

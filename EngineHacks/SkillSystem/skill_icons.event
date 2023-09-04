@@ -1079,16 +1079,42 @@ ORG SkillIcon(PassionsFlowID)
 ORG SkillIcon(BidingBlowID)
 #incbin "SkillIcons/BidingBlow.dmp"
 
+//done
 ORG SkillIcon(SuppressiveFireID)
 #incbin "SkillIcons/SuppressiveFire.dmp"
 ORG SkillIcon(LiquidCourageID)
 #incbin "SkillIcons/LiquidCourage.dmp"
+ORG SkillIcon(SurpriseAttackID)
+#incbin "SkillIcons/SurpriseAttack.dmp"
+ORG SkillIcon(EyeForAnEyeID)
+#incbin "SkillIcons/EyeForAnEye.dmp"
+ORG SkillIcon(HangoverID)
+#incbin "SkillIcons/Hangover.dmp"
+ORG SkillIcon(UnderhandedID)
+#incbin "SkillIcons/Underhanded.dmp"
 
+//placeholder
 ORG SkillIcon(PanacheID)
-#incbin "SkillIcons/SuppressiveFire.dmp" // Placeholder
+#incbin "SkillIcons/SuppressiveFire.dmp" 
 ORG SkillIcon(AdaptableID)
-#incbin "SkillIcons/SpectrumStance.dmp" // Placeholder
+#incbin "SkillIcons/SpectrumStance.dmp" 
+ORG SkillIcon(SeaShantyID)
+#incbin "SkillIcons/ReMove.dmp"
+ORG SkillIcon(RunningStartID)
+#incbin "SkillIcons/SpurSpd.dmp"
+ORG SkillIcon(ArmsMasteryID)
+#incbin "SkillIcons/SpurStr.dmp"
+ORG SkillIcon(StudiousBlowID)
+#incbin "SkillIcons/HoneMag.dmp"
+ORG SkillIcon(ResoluteSacrificeID)
+#incbin "SkillIcons/LiveToServe.dmp"
+ORG SkillIcon(AstralBlessingID)
+#incbin "SkillIcons/LullLck.dmp"
+ORG SkillIcon(WellRestedID)
+#incbin "SkillIcons/DriveSpd.dmp"
 
+
+//don't need them
 ORG SkillIcon(ProtectorID)
 #incbin "SkillIcons/Savior.dmp"
 ORG SkillIcon(KleptomaniaID)

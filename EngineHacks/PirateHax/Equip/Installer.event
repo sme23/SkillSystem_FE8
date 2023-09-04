@@ -1,23 +1,25 @@
 
 ALIGN 4
-
-#include "Equip.lyn.event"
+#include "src/Equip.lyn.event"
 
 ALIGN 4
 EquipmentList:
 BYTE HideShield
 BYTE GlassShield
+BYTE AshArrow
 BYTE 0x00 //terminator
 
 // Defense equipment loses durability on each hit taken
 ALIGN 4
 DefenseEquipmentList:
 BYTE GlassShield
+BYTE HideShield
 BYTE 0x00 // terminator
 
 // Offense equipment loses durability on each attack made
 ALIGN 4
 OffenseEquipmentList:
+BYTE AshArrow
 BYTE 0x00 // terminator
 
 // Equipment in neither list doesn't decrement durability
@@ -76,16 +78,6 @@ PopRBattlePopup(PopR_InitEquipmentBroke, 0x592420, 96)
 
 PUSH
 ORG 0x2C1EC
-
-// NEW for Eye for an Eye. This is a hack of a hack
-// I don't feel like risking breaking this hack by recompiling using my weird setups
-// so I'm just prepending the hook with what I need
-// =) -nat/stan
-SHORT $2337 // mov r3, #0x37 @ support_exp+5
-SHORT $5CCA // ldrb r2, [r0, r3]
-SHORT $54C2 // strb r2, [r1, r3]
-SHORT $46C0 // nop @ for alignment
-
 jumpToHack(New_SaveUnitFromBattle)
 PROTECT 0x2C1EC
 POP
@@ -99,6 +91,11 @@ POP
 ALIGN 4
 gSkillTester:
 POIN SkillTester
+
+
+ALIGN 4
+DesiderioCharIDLink:
+BYTE Desiderio
 
 #include "_UnitMenuDefs.event"
 #include "_ItemUnitMenuDefs.event"

@@ -41,6 +41,13 @@
 ## Ch1Title
 Ch 1 - Sky Skirmish[X]
 
+## Ch1StatusObjective
+ Defeat Blackhearts[N]
+ by felling Khazhak.[X]
+
+## Ch1GoalWindow
+Defeat boss[X]
+
 ## Ch1BeginningScene1
 [FarLeft][LoadDesiderio]
 [Left][LoadPilar]

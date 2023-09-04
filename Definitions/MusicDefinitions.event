@@ -1,1 +1,5 @@
 #define PortGreagorID 0x6
+#define BeatToQuartersID 0x7
+#define DistantSkiesID 0x8
+#define ScalleywagsOnDeckID 0x9
+#define FoolsBoldID 0xa

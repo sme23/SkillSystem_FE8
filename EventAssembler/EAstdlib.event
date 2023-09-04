@@ -21,10 +21,10 @@
 /****************************************************************\
 Version 3.4 
 
-How to use EA standard library:
+How to use EAStandardLibrary:
  Include this file, EAstdlib.event, to your code.
  Then use macro's and definitions you see in 
- EA Standard library folder.
+ EAStandardLibrary folder.
 
 Changes:
 V 1.1:

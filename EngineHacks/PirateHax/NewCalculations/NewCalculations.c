@@ -66,10 +66,14 @@ int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target){
 		}
 		// killed
 		if (target->unit.curHP == 0){		
-            int initialKillExp = (30 + 3 * levelDiff) * bossFactor;
+            int expFromLevelDiff = 3 * levelDiff;
+            if (expFromLevelDiff > 30){
+                expFromLevelDiff = 30;
+            }
+            int initialKillExp = (30 + expFromLevelDiff) * bossFactor;
 
-			if(initialKillExp <= 3){
-				return 3;
+			if(initialKillExp <= 5){
+				return 5;
 			}
 			else if(initialKillExp >= 100){
 				return 100;
@@ -85,8 +89,8 @@ int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target){
 			if(initialHitExp <= 1){
 				return 1;
 			}
-			else if(initialHitExp >= 33){
-				return 33;
+			else if(initialHitExp >= 20){
+				return 20;
 			}
 			else{
 				return initialHitExp;
@@ -181,13 +185,12 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
 
     int levelDiff = GetLevelDifference(actor, &gBattleTarget);
 
-    exp += levelDiff * 2;
-
-    if (exp >= 50){
-        return 50;
+    if (levelDiff < 0){ //if the target is lower level than actor, reduce exp by 2 * level diff
+        exp += levelDiff * 2;
     }
-    else if (exp <= 2){
-        return 2;
+   
+    if (exp <= 3){
+        return 3;
     }
     else{
         return exp;
@@ -246,8 +249,8 @@ int GetStealExpValue(int item){
     
     int stealExp = totalCost / 50 + GetLevelDifference(&gBattleActor, &gBattleTarget);
 
-    if (stealExp >= 33){
-        return 33;
+    if (stealExp >= 20){
+        return 20;
     }
     else if (stealExp <= 1){
         return 1;
@@ -255,49 +258,6 @@ int GetStealExpValue(int item){
     else{
         return stealExp;
     }
-}
-
-// makes autolevels fixed
-int GetAutoleveledStatIncrease(int growth, int levelCount) {
-    return GetNPCStatIncrease(growth * (levelCount));
-}
-
-int GetNPCStatIncrease(int growth){
-	int result = 0;
-	
-	while (growth >= 100) {
-        result++;
-        growth -= 100;
-    }
-
-	return result;
-}
-
-void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* character) {
-    int i;
-    
-    unit->maxHP = character->baseHP + unit->pClassData->baseHP;
-    unit->pow   = character->basePow + unit->pClassData->basePow;
-	unit->mag   = MagCharTable[character->number].baseMag + MagClassTable[unit->pClassData->number].baseMag;
-    unit->skl   = character->baseSkl + unit->pClassData->baseSkl;
-    unit->spd   = character->baseSpd + unit->pClassData->baseSpd;
-    unit->def   = character->baseDef + unit->pClassData->baseDef;
-    unit->res   = character->baseRes + unit->pClassData->baseRes;
-    unit->lck   = character->baseLck + unit->pClassData->baseLck;
-
-    unit->conBonus = 0;
-
-    for (i = 0; i < 8; ++i) {
-        unit->ranks[i] = unit->pClassData->baseRanks[i];
-
-        if (unit->pCharacterData->baseRanks[i])
-            unit->ranks[i] = unit->pCharacterData->baseRanks[i];
-    }
-
-    if (UNIT_FACTION(unit) == FACTION_BLUE && (unit->level != UNIT_LEVEL_MAX))
-        unit->exp = 0;
-    else
-        unit->exp = UNIT_EXP_DISABLED;
 }
 
 int GetWeaponLevelFromExp(int wexp) {
@@ -350,38 +310,16 @@ void GetWeaponExpProgressState(int wrank, int* valOut, int* maxOut) {
 
 int CanUnitRescue(const struct Unit* actor, const struct Unit* target){
     
+    if (target->pClassData->attributes & CA_MOUNTEDAID){ //is this unit a mount
+        return false; //cannot be rescued
+    }
+
+    
     int actorAid  = GetUnitAid(actor);
     int targetCon = UNIT_CON(target);
 
+    
     return (actorAid >= targetCon) ? TRUE : FALSE;
-}
-
-void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
-    if (uDef->autolevel) {
-        int i;
-
-        for (i = 0; i < GetUnitItemCount(unit); ++i) {
-            int wType, item = unit->items[i];
-
-            if (!(GetItemAttributes(item) & IA_REQUIRES_WEXP))
-                continue;
-
-            if (GetItemAttributes(item) & IA_WEAPON)
-                if (CanUnitUseWeapon(unit, item))
-                    continue;
-
-            if (GetItemAttributes(item) & IA_STAFF)
-                if (CanUnitUseStaff(unit, item))
-                    continue;
-
-            wType = GetItemType(item);
-
-            if (unit->ranks[wType] == 0)
-                item = 0;
-
-            unit->ranks[wType] = GetItemRequiredExp(item);
-        }
-    }
 }
 
 void ApplyUnitDefaultPromotion(struct Unit* unit) {
@@ -632,4 +570,228 @@ int CanUnitUseWeapon(struct Unit* unit, int item) {
     int uRank = (unit->ranks[GetItemType(item)]);
 
     return (uRank >= wRank) ? TRUE : FALSE;
+}
+
+// makes autolevels fixed
+int GetAutoleveledStatIncrease(int growth, int levelCount) {
+    return GetNPCStatIncrease(growth * (levelCount + 1));
+}
+
+int GetNPCStatIncrease(int growth){
+	int result = 0;
+	
+	while (growth >= 100) {
+        result++;
+        growth -= 100;
+    }
+
+	return result;
+}
+
+struct Unit* LoadUnit(const struct UnitDefinition* uDef) {
+
+    struct Unit* unit = NULL;
+
+    switch (uDef->allegiance) {
+        // TODO: unit definition faction constants
+        case 0:
+            unit = GetFreeBlueUnit(uDef);
+            break;
+
+        case 2:
+            unit = GetFreeUnit(FACTION_RED);
+            break;
+
+        case 1:
+            unit = GetFreeUnit(FACTION_GREEN);
+            break;
+    }
+
+    if (!unit)
+        return NULL;
+
+    ClearUnit(unit);
+
+    UnitInitFromDefinition(unit, uDef);
+    UnitLoadStatsFromChracter(unit, unit->pCharacterData);
+    HideIfUnderRoof(unit);
+
+    if (uDef->autolevel) {
+        if (UNIT_FACTION(unit) != FACTION_BLUE) {
+            SetUnitLeaderCharId(unit, uDef->leaderCharIndex);
+        }
+        UnitAutolevel(unit);
+        UnitAutolevelWExp(unit, uDef);
+
+    }
+
+    FixROMUnitStructPtr(unit);
+    UnitLoadSupports(unit);
+
+    UnitCheckStatCaps(unit);
+
+    unit->curHP = GetUnitMaxHp(unit);
+
+    return unit;
+}
+
+void UnitInitFromDefinition(struct Unit* unit, const struct UnitDefinition* uDef) {
+    unit->pCharacterData = GetCharacterData(uDef->charIndex);
+
+    if (uDef->classIndex){
+        unit->pClassData = GetClassData(uDef->classIndex);
+    }  
+    else{
+        unit->pClassData = GetClassData(unit->pCharacterData->defaultClass);
+    }
+
+    unit->level = uDef->level;
+
+    if (uDef->autolevel){
+        unit->level += ReturnNumberOfHubChaptersVisited();
+    }
+
+    GenUnitDefinitionFinalPosition(uDef, &unit->xPos, &unit->yPos, FALSE);
+        
+    int i;
+
+    for (i = 0; (i < UNIT_DEFINITION_ITEM_COUNT) && (uDef->items[i]); ++i){
+        UnitAddItem(unit, MakeNewItem(uDef->items[i]));
+    }
+
+    SetUnitAiFromDefinition(unit, uDef);
+}
+
+void UnitLoadStatsFromChracter(struct Unit* unit, const struct CharacterData* character) {
+    int i;
+    
+    unit->maxHP = character->baseHP + unit->pClassData->baseHP;
+    unit->pow   = character->basePow + unit->pClassData->basePow;
+	unit->mag   = MagCharTable[character->number].baseMag + MagClassTable[unit->pClassData->number].baseMag;
+    unit->skl   = character->baseSkl + unit->pClassData->baseSkl;
+    unit->spd   = character->baseSpd + unit->pClassData->baseSpd;
+    unit->def   = character->baseDef + unit->pClassData->baseDef;
+    unit->res   = character->baseRes + unit->pClassData->baseRes;
+    unit->lck   = character->baseLck + unit->pClassData->baseLck;
+
+    unit->conBonus = 0;
+
+    for (i = 0; i < 8; ++i) {
+        unit->ranks[i] = unit->pClassData->baseRanks[i];
+
+        if (unit->pCharacterData->baseRanks[i])
+            unit->ranks[i] = unit->pCharacterData->baseRanks[i];
+    }
+
+    if (UNIT_FACTION(unit) == FACTION_BLUE && (unit->level != UNIT_LEVEL_MAX))
+        unit->exp = 0;
+    else
+        unit->exp = UNIT_EXP_DISABLED;
+}
+
+
+void UnitAutolevel(struct Unit* unit) {
+    UnitAutolevelCore(unit, unit->pClassData->number, unit->level - unit->pCharacterData->baseLevel);
+}
+
+void UnitAutolevelCore(struct Unit* unit, int classId, int levelCount) {
+    bool isUnitPlayer = (unit->pCharacterData->number <= 0x45);
+    bool IsUnitBoss = (unit->pCharacterData->attributes & CA_BOSS);
+    if (levelCount) {
+        if (isUnitPlayer || IsUnitBoss){
+            unit->maxHP += GetAutoleveledStatIncrease(unit->pCharacterData->growthHP,  levelCount);
+            unit->pow   += GetAutoleveledStatIncrease(unit->pCharacterData->growthPow, levelCount);
+            unit->mag   += GetAutoleveledStatIncrease(MagCharTable[unit->pCharacterData->number].growthMag, levelCount);
+            unit->skl   += GetAutoleveledStatIncrease(unit->pCharacterData->growthSkl, levelCount);
+            unit->spd   += GetAutoleveledStatIncrease(unit->pCharacterData->growthSpd, levelCount);
+            unit->def   += GetAutoleveledStatIncrease(unit->pCharacterData->growthDef, levelCount);
+            unit->res   += GetAutoleveledStatIncrease(unit->pCharacterData->growthRes, levelCount);
+            unit->lck   += GetAutoleveledStatIncrease(unit->pCharacterData->growthLck, levelCount);
+        }
+        else{
+            unit->maxHP += GetAutoleveledStatIncrease(unit->pClassData->growthHP,  levelCount);
+            unit->pow   += GetAutoleveledStatIncrease(unit->pClassData->growthPow, levelCount);
+            unit->mag   += GetAutoleveledStatIncrease(MagCharTable[unit->pClassData->number].growthMag, levelCount);
+            unit->skl   += GetAutoleveledStatIncrease(unit->pClassData->growthSkl, levelCount);
+            unit->spd   += GetAutoleveledStatIncrease(unit->pClassData->growthSpd, levelCount);
+            unit->def   += GetAutoleveledStatIncrease(unit->pClassData->growthDef, levelCount);
+            unit->res   += GetAutoleveledStatIncrease(unit->pClassData->growthRes, levelCount);
+            unit->lck   += GetAutoleveledStatIncrease(unit->pClassData->growthLck, levelCount);
+        }
+        
+    }
+}
+
+void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
+    if (uDef->autolevel) {
+        int i;
+
+        for (i = 0; i < GetUnitItemCount(unit); ++i) {
+            int wType, item = unit->items[i];
+
+            if (!(GetItemAttributes(item) & IA_REQUIRES_WEXP))
+                continue;
+
+            if (GetItemAttributes(item) & IA_WEAPON)
+                if (CanUnitUseWeapon(unit, item))
+                    continue;
+
+            if (GetItemAttributes(item) & IA_STAFF)
+                if (CanUnitUseStaff(unit, item))
+                    continue;
+
+            wType = GetItemType(item);
+
+            if (unit->ranks[wType] == 0)
+                item = 0;
+
+            unit->ranks[wType] = GetItemRequiredExp(item);
+        }
+
+        int j;
+        
+        bool isUnitPlayer = (unit->pCharacterData->number <= 0x45);
+        if (isUnitPlayer){ //if player unit, autolevel their wexp too
+            for (j = 0; j < 8; j++){
+                if (unit->ranks[j] > 1 && unit->ranks[j] < 251){ //if it is an existent rank that is not S rank
+                    if (unit->ranks[j] >= 246){
+                        unit->ranks[j] = 251; //if it would go above 251, just set it to be 251 (S rank)
+                    }
+                    else{
+                        unit->ranks[j] += 5; //increase wexp by 5 in all ranks the unit has
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+void* GetChapterAllyUnitDefinitions(void) {
+    const struct ChapterEventGroup* evGroup = GetChapterEventDataPointer(gChapterData.chapterIndex);
+
+    if (gChapterData.chapterIndex <= 7 && gChapterData.chapterIndex >= 2 && ReturnNumberOfHubChaptersVisited() >= 1) {
+        return evGroup->playerUnitsInHard; //if we're in Hub A and more than one hub chapter has been visited, bigger unit group (+2 deploy)
+    }
+    
+    return evGroup->playerUnitsInNormal;
+}
+
+s8 AreUnitsAllied(int left, int right) {
+    int a = left & 0x80;
+    int b = right & 0x80;
+    return (a == b);
+}
+
+s8 IsUnitEnemyWithActiveUnit(struct Unit* unit) {
+
+    if (AreUnitsAllied(gActiveUnit->index, unit->index)) {
+        return 0;
+    }
+
+    if (unit->pCharacterData->number == A3LogIDLink){
+        return 0; //do not attack the a3 logs, as they aren't enemies
+    }
+
+    return 1;
 }

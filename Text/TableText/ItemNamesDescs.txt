@@ -95,6 +95,12 @@ Needle[X]
 ## SidepierceDesc
 Move 2 tiles after combat.[X]
 
+## PitchforkName
+Pitchfork[X]
+
+## PitchforkDesc
+Cannot counter/be countered.[X]
+
 //AXES
 
 ## BloodaxeName
@@ -151,10 +157,7 @@ When initiating, grants an extra strike.[X]
 A bow with above-average range.[X]
 
 ## MagekillerName
-Magekiller[X]
-
-## MagekillerDesc
-Reverses WTA and is eff. vs. tome users.[X]
+Tomereaver[X]
 
 ## GreatbowName
 Greatbow[X]
@@ -166,7 +169,7 @@ Slimshot[X]
 Shining Bow[X]
 
 ## ShiningBowDesc
-Uses Mag. Can counter at melee.[X]
+Uses Mag. Can attack at melee.[X]
 
 ## SnapshotName
 Snapshot[X]
@@ -326,3 +329,22 @@ Shove Glove[X]
 
 ## ShoveGloveDesc
 Allows the holder to shove units 1 tile.[X]
+
+## TealGemName
+Teal Gem[X]
+
+## TealGemDesc
+A common gemstone. Worth 1000 Gold.[X]
+
+## EyepatchName
+Eyepatch[X]
+
+## EyepatchDesc
+Grants +30 crit, but reduces hit by 30.[X]
+
+## AshArrowName
+Ash Arrow[X]
+
+## AshArrowDesc
+Can only be equipped with Bows.[N]
+Gives all attacks 100% Hit.[X]

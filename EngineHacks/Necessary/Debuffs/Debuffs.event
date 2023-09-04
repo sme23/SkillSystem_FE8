@@ -71,7 +71,7 @@ MovRallyAmount_Link:
 WORD 2 
 
 
-#define DebuffEntrySize 9 // Number of bytes 
+#define DebuffEntrySize 12 // Number of bytes 
 
 // NOTE: If you wish to use more bits in the debuff table, please use the provided functions for ease of use. 
 /*
@@ -165,6 +165,9 @@ LiquidCourageBitOffset_Link:
 WORD MiscOffset+10
 StudiousBlowBitOffset_Link:
 WORD MiscOffset+11
+HardworkingBitOffset_Link: // stores value 0-5, 3 bits
+WORD MiscOffset+12
+
 
 ALIGN 4 
 RalliesNumberOfBits_Link:
@@ -279,12 +282,14 @@ TeamDebuffTables:
   ALIGN 4
   MapMainClearProc:
     WORD $02; POIN (ClearAllDebuffs|1)
+	WORD $02; POIN (ClearAllChapterKillCounters)
     WORD $02 $80155C5
     WORD $0D $859A310
 
   ALIGN 4
   GameCtrlClearProc:
     WORD $02; POIN (ClearAllDebuffs|1)
+	WORD $02; POIN (ClearAllChapterKillCounters)
     WORD $02 $8009D99
     WORD $0D $8591924
 

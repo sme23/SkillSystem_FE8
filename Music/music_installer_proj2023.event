@@ -18,8 +18,32 @@
 
 // 6 - Port Greagor
 {
-SongTable(PortGreagorID,PortGreagor,1)
+SongTable(PortGreagorID,PortGreagor,MapMusicGroup)
 #include "songs/map/PortGreagor.event"
+}
+
+// 7 - Beat To Quarters
+{
+SongTable(BeatToQuartersID,BeatToQuarters,MapMusicGroup)
+#include "songs/preps/BeatToQuarters.event"
+}
+
+// 8 - Distant Skies
+{
+SongTable(DistantSkiesID,DistantSkies,MapMusicGroup)
+#include "songs/map/DistantSkies.event"
+}
+
+// 9 - Scalleywags On Deck
+{
+SongTable(ScalleywagsOnDeckID,ScalleywagsOnDeck,MapMusicGroup)
+#include "songs/map/ScalleywagsOnDeck.event"
+}
+
+// 10 - Fool's Bold
+{
+SongTable(FoolsBoldID,FoolsBold,MapMusicGroup)
+#include "songs/boss/FoolsBold.event"
 }
 
 

@@ -7,7 +7,7 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno1 Dunno2 Dunno3 Tutorial
 POIN Traps1 Traps2
-POIN Units1 Units1
+POIN Units1 Units2
 POIN $0 $0 $0 
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
@@ -35,8 +35,14 @@ END_MAIN
 
 MiscBasedEvents:
 AFEV 0 Counter 9
+AFEV 0x0 CheckNoUnits 0x0
 CauseGameOverIfLordDies
 END_MAIN
+
+CheckNoUnits:
+GotoEndingSceneIfNoPlayers
+NoFade
+ENDA
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -49,36 +55,49 @@ UNIT Lua Captain 0 Level(10,Ally,False) [13,19] 0 0 0 0 [Cutlass, IronSword, Iro
 UNIT Lua Captain 0 Level(10,Ally,False) [14,19] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
+Units2:
+UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [14,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [13,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [14,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [13,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [14,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [13,19] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [14,19] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [15,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [15,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
 TheBads:
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [8,5] 0 0 0 0 [IronMusket] BossAI
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [0,7] 0 0 0 0 [IronMusket] AttackInRangeAI
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [14,1] 0 0 0 0 [Pistol] AttackInRangeAI
-UNIT Gunsmith Gunner 0 Level(2, Enemy, True) [13,11] 0 0 0 0 [Blunderbuss] AttackInRangeAI
-UNIT BrickBoys Thief 0 Level(2, Enemy, True) [3,12] 0 0 0 0 [IronDagger] AttackInTwoAI
-UNIT BrickBoys Thief 0 Level(2, Enemy, True) [6,3] 0 0 0 0 [IronKnife] AttackInRangeAI
-UNIT BrickBoys Thief 0 Level(2, Enemy, True) [12,7] 0 0 0 0 [IronKnife] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(2, Enemy, True) [7,17] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(2, Enemy, True) [5,3] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(2, Enemy, True) [17,1] 0 0 0 0 [SteelLance] AttackInTwoAI
-UNIT BrickBoys Brigand 0 Level(2, Enemy, True) [8,10] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT BrickBoys Brigand 0 Level(2, Enemy, True) [11,2] 0 0 0 0 [HandAxe] AttackInRangeAI
-UNIT BrickBoys Brigand 0 Level(2, Enemy, True) [5,0] 0 0 0 0 [SteelAxe] AttackInRangeAI
-UNIT BrickBoys Warden 0 Level(2, Enemy, True) [9,5] 0 0 0 0 [SteelSword, SteelLance] BossAI
-UNIT BrickBoys Vanguard 0 Level(2, Enemy, True) [0,15] 0 0 0 0 [IronAxe, IronLance] ChargeAI
-UNIT TheDukes Mercenary 0 Level(2, Enemy, True) [10,17] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT TheDukes Mercenary 0 Level(2, Enemy, True) [4,7] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT TheDukes Mercenary 0 Level(2, Enemy, True) [15,0] 0 0 0 0 [SteelSword] AttackInRangeAI
-UNIT TheDukes Hunter 0 Level(2, Enemy, True) [13,10] 0 0 0 0 [Greatbow] ChargeAI
-UNIT TheDukes Hunter 0 Level(2, Enemy, True) [4,6] 0 0 0 0 [IronBow] AttackInRangeAI
-UNIT TheDukes Hunter 0 Level(2, Enemy, True) [11,3] 0 0 0 0 [MiniBow] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(2, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(2, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(2, Enemy, True) [2,0] 0 0 0 0 [Thani] AttackInTwoAI
-UNIT BigBrick Fighter 0 Level(5, Enemy, False) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
-UNIT Hakman Myrmidon 0 Level(5, Enemy, False) [1,4] 0 0 0 0 [Peacekeeper] AttackInRangeAI
-UNIT MrMist Mage 0 Level(6, Enemy, False) [10,11] 0 0 0 0 [Galestrike] AttackInRangeAI
-UNIT Yaoguai Ninja 0 Level(6, Enemy, False) [8,6] 0 0 0 0 [Compass] BossAI
-UNIT TheDuke Archer 0 Level(4, Enemy, False) [16,4] 0 0 0 0 [MiniBow, Snapshot] AttackInRangeAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [8,5] 0 0 0 0 [IronMusket] BossAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [0,7] 0 0 0 0 [IronMusket] AttackInRangeAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [14,1] 0 0 0 0 [Pistol] AttackInRangeAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [13,11] 0 0 0 0 [Blunderbuss] AttackInRangeAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [3,12] 0 0 0 0 [IronDagger] AttackInTwoAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [6,3] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [12,7] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [7,17] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [5,3] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [SteelLance] AttackInTwoAI
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [8,10] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [HandAxe] AttackInRangeAI
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [5,0] 0 0 0 0 [SteelAxe] AttackInRangeAI
+UNIT BrickBoys Warden 0 Level(3, Enemy, True) [9,5] 0 0 0 0 [SteelSword, SteelLance] BossAI
+UNIT BrickBoys Vanguard 0 Level(3, Enemy, True) [0,15] 0 0 0 0 [IronAxe, IronLance] ChargeAI
+UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [10,17] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [4,7] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [SteelSword] AttackInRangeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [13,10] 0 0 0 0 [Greatbow] ChargeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [4,6] 0 0 0 0 [IronBow] AttackInRangeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [11,3] 0 0 0 0 [MiniBow] AttackInRangeAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [2,0] 0 0 0 0 [Thani] AttackInTwoAI
+UNIT BigBrick Fighter 0 Level(5, Enemy, True) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
+UNIT Hakman Myrmidon 0 Level(5, Enemy, True) [1,4] 0 0 0 0 [Peacekeeper] AttackInRangeAI
+UNIT MrMist Mage 0 Level(6, Enemy, True) [10,11] 0 0 0 0 [Galestrike] AttackInRangeAI
+UNIT Yaoguai Ninja 0 Level(6, Enemy, True) [8,6] 0 0 0 0 [Compass] BossAI
+UNIT TheDuke Archer 0 Level(4, Enemy, True) [16,4] 0 0 0 0 [MiniBow, Snapshot] AttackInRangeAI
 UNIT
 
 TheSads:
@@ -88,12 +107,12 @@ UNIT Guard Soldier 0 Level(20, Enemy, True) [14,19] 0 0 0x1 REDA14R18 [SilverLan
 UNIT Guard Mage 0 Level(20, Enemy, True) [12,19] 0 0 0x1 REDA12R19 [Thunder] ChargeAI
 UNIT Guard Mage 0 Level(20, Enemy, True) [13,19] 0 0 0x1 REDA13R19  [Thunder] ChargeAI
 UNIT Guard Mage 0 Level(20, Enemy, True) [14,19] 0 0 0x1 REDA14R19 [Thunder] ChargeAI
-UNIT TheCloser Champion 0 Level(10, Enemy, False) [16,19] 0 0 0x1 REDA16R18 [Spear, Sidepierce] ChargeAI
-UNIT Jozef Gunner 0 Level(10, Enemy, False) [16,19] 0 0 0x1 REDA16R19 [SilverMusket, Blunderbuss, Mincemaker] ChargeAI
+UNIT TheCloser Champion 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R18 [Spear, Sidepierce] ChargeAI
+UNIT Jozef Gunner 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R19 [SilverMusket, Blunderbuss, Mincemaker] ChargeAI
 UNIT
 
 TheLad:
-UNIT Tangyuan DragonRider_F 0 Level(3,NPC,False) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
+UNIT Tangyuan DragonRider_F 0 Level(3,NPC,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
 UNIT
 
 Traps1:
@@ -119,7 +138,7 @@ NoFade
 ENDA
 
 EndingScene:
-MNC2 HubA
+GoToHubChapter(HubA)
 NoFade
 ENDA
 
@@ -165,6 +184,9 @@ CURSOR [10,0]
 STAL 45
 REMOVE_CURSORS
 CenterTextbox(EscapeTime)
+AddTrap(BlueSigilTrapID,8, 0)
+AddTrap(BlueSigilTrapID,9, 0)
+AddTrap(BlueSigilTrapID,10, 0)
 STAL 15
 LABEL 0
 NoFade

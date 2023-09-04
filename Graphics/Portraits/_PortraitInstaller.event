@@ -65,3 +65,11 @@ TrianaMugData:
 #incbin "Dmp/Triana_palette.dmp"
 #incbin "Dmp/Triana_minimug.dmp"
 setMugEntry(TrianaMug, TrianaMugData, 3, 5, 3, 3)
+
+ALIGN 16
+EstelleMugData:
+#incbin "Dmp/Estelle_mug.dmp"
+#incbin "Dmp/Estelle_frames.dmp"
+#incbin "Dmp/Estelle_palette.dmp"
+#incbin "Dmp/Estelle_minimug.dmp"
+setMugEntry(EstelleMug, EstelleMugData, 3, 5, 3, 3)

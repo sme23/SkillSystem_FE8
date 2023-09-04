@@ -1,18 +1,9 @@
 //FE8 Text engine rework
 //By Tequila, with help from Zahlman
 
-#ifndef _FE8_
-	ERROR This isn't FE8
-#endif
-
 #include EAStdlib.event
 #include "Extensions/Hack Installation.txt"
 #include "Extensions/6CDefinitions.txt"
-
-#ifndef FreeSpace
-	#define FreeSpace 0xB2B000
-	ORG FreeSpace
-#endif
 
 PUSH
 

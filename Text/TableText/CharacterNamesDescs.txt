@@ -153,8 +153,8 @@ Matteo[X]
 
 ## MatteoDesc
 Swashbuckler[N]
-An intrepid sellsword skilled with a blade,[N]
-but not as skilled as he thinks he is.[X]
+An intrepid sellsword skilled with a blade.[N]
+A bit too confident in his abilities.[X]
 
 ## SuzanneName
 Suzanne[X]
@@ -164,7 +164,7 @@ Gunslinger[N]
 A hotheaded mercenary whose talents[N]
 are only rivaled by her ego.[X]
 
-## TangyuanName
+## TangyuanName ^
 Tangyuan[X]
 
 ## TangyuanDesc
@@ -302,6 +302,13 @@ R. Reaper[X]
 ## LogPirateDesc
  [X]
 
+## A3LogName
+Trunk[X]
+
+## A3LogDesc
+A mysterious, heavy piece of wood.[N]
+Magic emanates from its surface.[X]
+
 ## SlicerName
 Slicer[X]
 
@@ -320,6 +327,17 @@ Santiago[X]
 Commander[N]
 A rebel leader zealously devoted to the[N]
 cause. Respected by his subordinates.[X]
+
+## RochefortName
+Rochefort[X]
+
+## RochefortDesc
+Merchant[N]
+A trader from the distant reaches of[N]
+the empire. Seems a little shady.[X]
+
+## A6PirateName
+Pirate[X]
 
 ## GunsmithName
 Gunsmith[X]
@@ -356,16 +374,16 @@ Mr Mist[X]
 
 ## MrMistDesc
 Spy[N]
-A spy from the empire whose mission is to[N]
-recover the schematics for the Mincemaker.[X]
+A spy from the empire with a mission to[N]
+recover the Mincemaker's schematics.[X]
 
 ## YaoguaiName
 Yaoguai[X]
 
 ## YaoguaiDesc
 Spy[N]
-A spy from the rebels whose mission is to[N]
-recover the schematics for the Mincemaker.[X]
+A spy from the empire with a mission to[N]
+recover the Mincemaker's schematics.[X]
 
 ## TheDukeName
 The Duke[X]
@@ -404,3 +422,4 @@ The Closer[X]
 Legend[N]
 The Closer is known for being able to [N]
 close down any problem. For a price.[X]
+
