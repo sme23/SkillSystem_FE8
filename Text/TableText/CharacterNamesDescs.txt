@@ -196,6 +196,30 @@ Lieutenant[N]
 An imperial noble with great[N]
 confidence in his combat skills.[X]
 
+## SierraName
+Sierra[X]
+
+## SierraDesc
+Guardian[N]
+A soldier paid by Felipe's[N]
+parents to make sure he survives.[X]
+
+## ManfredName
+Manfred[X]
+
+## ManfredDesc
+Captain[N]
+The leader of the Crimson Hearts,[N]
+an infamous band of mercenaries.[X]
+
+## CrimsonHeartName
+C. Heart[X]
+
+## CrimsonHeartDesc
+Sellsword[N]
+A member of the feared Crimson[N]
+Hearts, led by Manfred.[X]
+
 ## IncendivisName
 Incendivis[X]
 
