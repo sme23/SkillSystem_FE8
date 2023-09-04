@@ -17,7 +17,7 @@ None,0,0
 0x0F Ondeh,3,40
 0x10 Biko,0,20
 0x11 Tangyuan,2,25
-0x12 AChapterUnit8,2,25
+0x12 Juan,2,25
 0x13 Matteo,1,20
 0x14 Suzanne,6,35
 0x15 Tethys,0,5
@@ -106,8 +106,8 @@ None,0,0
 0x68 O'Neill (Prologue),0,0
 0x69 Glen (Cutscene),0,0
 0x6A Zonta (Ch 5x),0,0
-0x6B Vigarde (Ch 14B),0,0
-0x6C Lyon (Ch Final),0,0
+0x6B A4PirateBoss,(-1),0
+0x6C A4RebelBoss,6,35
 0x6D Orson (Ch 16),13,50
 Morva (Ch 20),6,85
 Orson (Ch 5x),3,10

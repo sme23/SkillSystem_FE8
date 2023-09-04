@@ -111,6 +111,9 @@
 #define Mortar $d1
 #define Mincemaker $de
 
+// STAVES
+#define TakeAim $e3
+
 // EQUIPS
 #define HideShield $ca
 #define GlassShield $d2

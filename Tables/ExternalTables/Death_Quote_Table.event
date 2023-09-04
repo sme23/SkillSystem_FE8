@@ -8,5 +8,7 @@ DeathQuote(Khazhak,Chapter1, 2, 0)
 DeathQuote(Felipe,HubA_2, 2, 0)
 DeathQuote(Lua, AllChapters, 0x65, 0)
 DeathQuote(Gunsmith, HubA_5, 0x9, 0)
+DeathQuote(A4PirateBoss, HubA_4, 10, 0)
+DeathQuote(A4RebelBoss, HubA_4, 11, 0)
 
 DeathQuote(0xFFFF,0,0,0) // terminator
