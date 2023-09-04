@@ -70,5 +70,11 @@ POIN SkillTester
 WORD AdaptableID
 
 ALIGN 4
+ShiftUsability2:
+#incbin "Shift/ShiftUsability2.dmp"
+POIN SkillTester
+WORD AdaptableID
+
+ALIGN 4
 ShiftEffect:
 #incbin "Shift/ShiftEffect.dmp"
