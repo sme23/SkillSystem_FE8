@@ -1688,7 +1688,10 @@ command to swap Str with Spd.[N]
 Growths remain the same.[X]
 
 ## UM_Shift
- Shift[X]
+ Shift Str[X]
+
+## UM_Shift2
+ Shift Spd[X]
 
 ## UM_ShiftDesc
 Swap Str with Spd.[X]

@@ -1,4 +1,4 @@
-@ Str > Spd
+@ Spd > Str
 
 .equ ShiftID, SkillTester+4
 .thumb
@@ -23,14 +23,14 @@ bne True
 b False
 
 True:
-@check if Str > Spd
+@check if Spd > Str
 mov r0, r4
 mov r3, #0x16
 ldrb  r1, [r0,r3]
 mov r3, #0x14
 ldrb  r2, [r0,r3]
 cmp r1, r2
-ble False
+bge False
 
 mov r0,#1
 b End
