@@ -76,8 +76,8 @@
 #include "Music/MusicAsmInstaller.event"
 //7743
 
-#include "ASMCs/ASMCInstaller.event"
-//Miscellaneous
+#include "ASMCs/Installer.event"
+//Loog
 
 #include "ShopUnit/ShopUnit.event"
 //Sme
@@ -129,3 +129,18 @@ ORG 0x26B42
 BYTE 0x00 0x20	//
 POP
 
+PUSH // prep screen markup gone
+ORG 0xB5237
+BYTE 0xE0
+POP
+
+PUSH //prep screen item name stuff (thanks Contro)
+ORG 0x99554 //Prep screen item menu selected pixel width
+BYTE 0x2B
+ORG 0x9878C //Prep screen item menu selected tile width
+BYTE 0x6
+ORG 0x9A820 //Prep screen item menu tile width
+BYTE 0x6
+ORG 0x98728 //Prep screen pick units tile width
+BYTE 0x6
+POP

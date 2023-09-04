@@ -1613,9 +1613,9 @@ amount is increased by this unit's[N]
 missing HP.[X]
 
 ## SD_EyeForAnEye
-Eye For An Eye: If this unit is[N]
-damaged, next attack's might[N]
-increases by damage taken.[X]
+Eye For An Eye: At the start of combat,[N]
+this unit's Atk increases by Damage / 2[N]
+from the last attack that they took.[X]
 
 ## SD_SeaShanty
 Sea Shanty: When an ally adjacent to[N]
@@ -1631,9 +1631,9 @@ Hangover: For the first two turns,[N]
 unit's Hit and Avo are reduced by 15.[X]
 
 ## SD_StudiousBlow
-Studious Blow: After combat, all allies[N]
-add this unit's MAG to damage against[N]
-that target until the end of turn.[X]
+Studious Blow: After this unit initiates[N]
+combat, next ally's Atk against the same[N]
+target this turn increases by unit Mag.[X]
 
 ## SD_Underhanded
 Underhanded: When unit has weapon[N]
@@ -1688,7 +1688,10 @@ command to swap Str with Spd.[N]
 Growths remain the same.[X]
 
 ## UM_Shift
- Shift[X]
+ Shift Str[X]
+
+## UM_Shift2
+ Shift Spd[X]
 
 ## UM_ShiftDesc
 Swap Str with Spd.[X]

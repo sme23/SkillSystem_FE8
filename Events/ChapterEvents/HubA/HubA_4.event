@@ -259,8 +259,8 @@ ENDA
 
 EndingScene:
 Text(ChA4EndText)
+GoToHubChapter(HubA)
 NoFade
-MNC2 HubA
 ENDA
 
 Dunno1: //down here because nothing here is really used

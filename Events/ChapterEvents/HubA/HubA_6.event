@@ -28,7 +28,7 @@ TurnBasedEvents:
 TurnEventPlayer(0, LeftThiefEvent, 5)
 TurnEventPlayer(0, RightThiefEvent, 6)
 
-TurnEventPlayer(0, BombWarningEvent, 2)
+TurnEventPlayer(0, BombWarningEvent, 1)
 
 TurnEventEnemy(0, Turn1EP, 1)
 TurnEventEnemy(0, Turn2EP, 2)
@@ -54,6 +54,7 @@ CameraCursorFast(14,12)
 CameraCursorFast(21,16)
 CameraCursor(Lua)
 Text(ChA6BombWarning)
+CenterTextbox(ChA6BombInfoBox)
 NoFade
 ENDA
 
@@ -241,9 +242,9 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+DurabilityChest(SkillScroll,KleptomaniaID,18,12)
 DurabilityChest(SkillScroll,ProtectorID,11,3)
-DurabilityChest(SkillScroll,KleptomaniaID,15,3)
-Chest(Eyepatch,18,12)
+Chest(Eyepatch,15,3)
 END_MAIN
 
 MiscBasedEvents:
@@ -402,9 +403,11 @@ NoFade
 ENDA
 
 EndingScene:
+SetBackground(0x28)
+Text(ChA6End1)
 GiveItem(Mine,Lua)
+GoToHubChapter(HubA)
 NoFade
-MNC2 HubA
 ENDA
 
 Dunno1: //down here because nothing here is really used

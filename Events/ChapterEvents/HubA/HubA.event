@@ -35,6 +35,7 @@ EventPointerTable(HubAEventsID, PointerList)
 #define HubASamsonArranRecruitFlag 0x97
 #define FirstTimeInTavern 0x98
 #define MrYodsenRecruitFlag 0x99
+#define LuaInAHubFlag 0xA0
 
 PointerList:
 POIN TurnBasedEvents
@@ -125,12 +126,12 @@ UNIT
 
 BeginningScene:
 // only here for chapter A1 testing
-ENUT InAHubFlag
+ENUT LuaInAHubFlag
 ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
-GotoPrepScreen
+GotoPrepScreenHub
 ENUN
 NoFade
 ENDA

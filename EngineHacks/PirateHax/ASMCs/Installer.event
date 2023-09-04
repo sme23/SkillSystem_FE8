@@ -1,0 +1,3 @@
+#include "ASMCs.lyn.event"
+
+#define A3ReturnLogDroppedStatus "ASMC A3ReturnLogDroppedStatusASMC"

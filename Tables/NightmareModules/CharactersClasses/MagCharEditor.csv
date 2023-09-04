@@ -14,7 +14,7 @@ None,0,0
 0x0C Leandra,0,14
 0x0D Jaime,1,30
 0x0E Leonor,0,20
-0x0F Ondeh,3,40
+0x0F Ondeh,5,40
 0x10 Biko,0,20
 0x11 Tangyuan,2,25
 0x12 Juan,2,25
@@ -90,7 +90,7 @@ None,0,0
 0x58 Log,0,0
 0x59 -,0,0
 0x5A Gunsmith,2,5
-0x5B Sargargala,7,50
+0x5B Sargargala,7,45
 0x5C Log Pirate,0,0
 0x5D Wight (Ch 11A),2,5
 0x5E Big Brick,3,5

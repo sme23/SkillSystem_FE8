@@ -42,7 +42,7 @@
 Ch 1 - Sky Skirmish[X]
 
 ## Ch1StatusObjective
-Defeat the Blackhearts[N]
+ Defeat Blackhearts[N]
  by felling Khazhak.[X]
 
 ## Ch1GoalWindow

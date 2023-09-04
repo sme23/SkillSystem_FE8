@@ -1,0 +1,15 @@
+
+#include "ChapterKillCounter.lyn.event"
+
+HardworkingIDLink:
+BYTE HardworkingID
+
+StrTakerStatCapLink:
+BYTE 5
+
+HardworkingStatCapLink:
+BYTE 5
+
+StrTakerIDLink:
+BYTE StrTakerID
+

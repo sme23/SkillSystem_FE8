@@ -1112,9 +1112,10 @@ ORG SkillIcon(ResoluteSacrificeID)
 #incbin "SkillIcons/LiveToServe.dmp"
 ORG SkillIcon(AstralBlessingID)
 #incbin "SkillIcons/LullLck.dmp"
+ORG SkillIcon(WellRestedID)
+#incbin "SkillIcons/DriveSpd.dmp"
 ORG SkillIcon(DeftHandsID)
 #incbin "SkillIcons/Galeforce.dmp"
-
 ORG SkillIcon(ProtectorID)
 #incbin "SkillIcons/Savior.dmp"
 ORG SkillIcon(KleptomaniaID)
