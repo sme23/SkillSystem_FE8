@@ -127,3 +127,9 @@
 
 //Eyepatch: Grants +30 crit, but reduces hit by 30. (bpat)
 #define EyepatchID 39
+
+//Armsthrift: +15 crit. Unit's crits no longer deal extra damage, but durability isn't used up during crits.
+#define CritthriftID 40
+
+//Deft Hands: Unit can act, but not move after stealing. (repeatedly)
+#define DeftHandsID 41

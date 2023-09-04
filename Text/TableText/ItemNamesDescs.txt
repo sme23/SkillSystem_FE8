@@ -310,6 +310,13 @@ Mincemaker[X]
 ## MincemakerDesc
 Does exactly as advertised.[X]
 
+## TakeAimName
+Take Aim![X]
+
+## TakeAimDesc
++30 hit to an ally for 1 turn.[N]
+(currently doesn't work!)[X]
+
 // EQUIPS
 
 ## HideShieldName

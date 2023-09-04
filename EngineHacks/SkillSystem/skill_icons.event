@@ -1092,6 +1092,8 @@ ORG SkillIcon(HangoverID)
 #incbin "SkillIcons/Hangover.dmp"
 ORG SkillIcon(UnderhandedID)
 #incbin "SkillIcons/Underhanded.dmp"
+ORG SkillIcon(CritthriftID)
+#incbin "SkillIcons/Armsthrift.dmp"
 
 //placeholder
 ORG SkillIcon(PanacheID)
@@ -1112,9 +1114,8 @@ ORG SkillIcon(AstralBlessingID)
 #incbin "SkillIcons/LullLck.dmp"
 ORG SkillIcon(WellRestedID)
 #incbin "SkillIcons/DriveSpd.dmp"
-
-
-//don't need them
+ORG SkillIcon(DeftHandsID)
+#incbin "SkillIcons/Galeforce.dmp"
 ORG SkillIcon(ProtectorID)
 #incbin "SkillIcons/Savior.dmp"
 ORG SkillIcon(KleptomaniaID)
