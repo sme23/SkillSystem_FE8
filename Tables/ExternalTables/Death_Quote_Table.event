@@ -5,7 +5,9 @@
 // Bosses
 
 DeathQuote(Khazhak,Chapter1, 2, 0)
-DeathQuote(Felipe,HubA_2, 2, 0)
+DeathQuote(Felipe,HubA_2, 0xA, 0)
+DeathQuote(Sierra,HubA_2, 0xB, 0)
+DeathQuote(Manfred,HubA_2, 0xC, 0)
 DeathQuote(Lua, AllChapters, 0x65, 0)
 DeathQuote(Gunsmith, HubA_5, 0x9, 0)
 

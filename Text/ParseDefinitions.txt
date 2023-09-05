@@ -79,6 +79,7 @@
 [OQ] = [OpenQuote]
 [CQ] = [CloseQuote]
 [ó] = [0xf3]
+[á] = [0xe1]
 
 [TS] = [ToggleSmile]
 
@@ -128,6 +129,8 @@
 [LoadSanz] = [LoadFace][0x31][0x1]
 [ilike0x31asourplaceholderportraitidlol] = [LoadFace][0x31][0x1]
 [LoadFelipe] = [LoadFace][0x36][0x1]
+[LoadSierra] = [LoadFace][0x37][0x1]
+[LoadManfred] = [LoadFace][0x38][0x1]
 
 [LoadIda] = [LoadFace][0x51][0x1]
 [LoadSailor] = [LoadFace][0x6B][0x1]
