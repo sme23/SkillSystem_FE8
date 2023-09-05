@@ -276,17 +276,12 @@ Disarm it if you hope to survive.[X]
 ## BuzuName
 Buzu[X]
 
-## BuzuDesc
-Guardshelm[N]
-One half of House Sanz's guardian duo,[N]
-who were selected by an arena victory.[X]
-
 ## BozoName
 Bozo[X]
 
-## BozoDesc
+## GuardhelmDesc
 Guardshelm[N]
-The other half of House Sanz's guardian duo,[N]
+One half of House Sanz's guardian duo,[N]
 who were selected by an arena victory.[X]
 
 ## GeraldoName
@@ -294,8 +289,8 @@ Geraldo[X]
 
 ## GeraldoDesc
 Rehabilitator[N]
-An honorable and complacent merc known for[N]
-reforming and taking in hardened criminals.[X]
+An honorable merc known for giving[N]
+hardened criminals second chances.[X]
 
 ## YurenaName
 Yurena[X]
@@ -328,13 +323,6 @@ Sentinel[X]
 Guardsman[N]
 A full-time officer of House Sanz's[N]
 ever-increasing guard regime.[X]
-
-## ScoundrelName
-Scoundrel[X]
-
-## ScoundrelDesc
-An independent thief using the chaos[N]
-of battle to line their pockets.[X]
 
 ## SargargalaName
 Sargargala[X]

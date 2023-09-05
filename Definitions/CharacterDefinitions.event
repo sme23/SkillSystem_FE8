@@ -53,7 +53,6 @@
 #define Sanz $4c
 #define Contractor $4d
 #define Sentinel $4e
-#define Scoundrel $4f
 
 //Hub A2
 #define Felipe $53
