@@ -11,7 +11,7 @@
 // HUB A
 #define Estelle $7
 #define Hermenegildo $8
-#define MrYodsen $9 
+#define MrYodsen $9
 #define Durgham $A
 //Samson/Arrans
 #define Triana $43
@@ -33,6 +33,7 @@
 // CHAPTER 2
 #define Mentor $15
 #define Orlando Mentor
+#define Rahel $16
 
 // ENEMY/NPC ($46 through $FF)
 

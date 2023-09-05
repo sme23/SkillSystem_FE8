@@ -178,6 +178,22 @@ Drifter[N]
 A former carpenter that abandoned her[N]
 wife and children to seek "adventure".[X]
 
+## OrlandoName
+Orlando[X]
+
+## OrlandoDesc
+Merchant[N]
+Rich with gold, his bluster obfuscates[N]
+keen bladework and endless desire.[X]
+
+## RahelName
+Rahel[X]
+
+## RahelDesc
+Carpenter[N]
+As skilled with her bow as her hammer,[N]
+she repairs ships with a curt nod.[X]
+
 ## KhazhakName
 Khazhak[X]
 

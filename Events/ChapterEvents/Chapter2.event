@@ -36,69 +36,69 @@ CauseGameOverIfLordDies
 END_MAIN
 
 GotoLuasQuarters:
-CALL ClearChapter2Traps
 NoFade
 ENDA
 
 GotoLibrary:
-CALL ClearChapter2Traps
 NoFade
 ENDA
 
 GotoBarracksAndTreasureRoom:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILECHANGE 1
-CALL ClearChapter2Traps
-LoadPlayerUnits(LuaInDaTreasureRoom)
-CALL AddTreasureRoomTraps
+InitiateTileChangeInHub(ClearChapter2Traps, AddTreasureRoomTraps, 1, LuaInDaTreasureRoom, TreasureRoomSpawnEvent)
 ENUF TreasureRoomToMainRoom
-CAMERA_CENTERED Lua
-FADU 10
+NoFade
+ENDA
+
+TreasureRoomSpawnEvent:
 NoFade
 ENDA
 
 GoBackToMainRoomFromTreasureRoom:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 1
-CALL ClearTreasureRoomTraps
-LoadPlayerUnits(LuaOnDaStairs)
-CALL AddChapter2Traps
-CAMERA_CENTERED Lua
+InitiateTileRevertInHub(ClearTreasureRoomTraps, AddChapter2Traps, 1, LuaOnDaStairs, MainRoomSpawnEvent)
 ENUF MainRoomToOtherRooms
-FADU 10
+NoFade
+ENDA
+
+MainRoomSpawnEvent:
+LoadPlayerUnits(OrlandoRahelUnitGroup)
 NoFade
 ENDA
 
 GotoPortGreagorFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-LOMA HubA
-LoadPlayerUnits(LuaInDaHubFirstTime)
-CAMERA_CENTERED Lua
-FADU 10
+InitiateLoadMapHub(HubA, LuaInDaHubFirstTime, PortGreagorSpawnEvent)
 Text(HubABeginningScene3)
 ENUT PortToDocks
 ENUF WentToPortGreagorDocks //sets the temp flag version and allows global to be triggered
-GiveGold(5000)
+GiveGold(3000)
 MUSC PortGreagorID
 NoFade
 ENDA
 
 GotoPortGreagor:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-LOMA HubA
-LoadPlayerUnits(LuaInDaHub) 
-CAMERA_CENTERED Lua
-FADU 10
+InitiateLoadMapHub(HubA, LuaInDaHubFirstTime, PortGreagorSpawnEvent)
 NoFade
 ENDA
+
+PortGreagorSpawnEvent:
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup)
+NoFade
+ENDA
+
+OrlandoRahelUnitGroup:
+UNIT Orlando 0 0 Level(12,NPC,False) [6,16] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [6,18] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+
+OndehBikoUnitGroup:
+UNIT Ondeh 0 0 Level(4,NPC,True) [23,19] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,NPC,True) [24,19] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
+UNIT
+
+RochefortUnitGroup:
+UNIT Rochefort 0 0 Level(1,NPC,False) [20,14] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
 
 LuaInDaHub:
 UNIT Lua Captain 0 Level(10,Ally,False) [20,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI

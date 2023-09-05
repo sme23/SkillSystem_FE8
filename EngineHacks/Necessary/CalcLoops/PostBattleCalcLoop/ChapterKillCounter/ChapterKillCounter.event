@@ -5,7 +5,7 @@ HardworkingIDLink:
 BYTE HardworkingID
 
 StrTakerStatCapLink:
-BYTE 5
+BYTE 10
 
 HardworkingStatCapLink:
 BYTE 5

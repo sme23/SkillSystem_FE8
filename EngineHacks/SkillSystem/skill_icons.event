@@ -1114,8 +1114,14 @@ ORG SkillIcon(AstralBlessingID)
 #incbin "SkillIcons/LullLck.dmp"
 ORG SkillIcon(WellRestedID)
 #incbin "SkillIcons/DriveSpd.dmp"
+ORG SkillIcon(HardworkingID)
+#incbin "SkillIcons/DriveStr.dmp"
 ORG SkillIcon(DeftHandsID)
 #incbin "SkillIcons/Galeforce.dmp"
+
+
+
+//don't need them
 ORG SkillIcon(ProtectorID)
 #incbin "SkillIcons/Savior.dmp"
 ORG SkillIcon(KleptomaniaID)
