@@ -85,6 +85,9 @@
 #include "FE8-Walking_Sounds_Fix/FE8-Walking_Sounds_EA.event"
 //Tequila
 
+#include "ChangeChapterObjective/Installer.event"
+//Zeta/Gilgamesh
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0

@@ -177,6 +177,12 @@ Snapshot[X]
 ## SnapshotDesc
 Allows canto after attack.[X]
 
+## ScorpioName
+Scorpio[X]
+
+## ScorpioDesc
+A long-range crossbow.[X]
+
 //TOMES
 
 ## BoltingDesc

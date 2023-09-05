@@ -58,7 +58,9 @@
 #define Felipe $53
 #define Incendivis $54
 #define Rebel $55
-#define IncendivisHP $56
+#define Sierra $56
+#define Manfred $6D
+#define CrimsonHeart $6E
 
 //Hub A3
 #define Sargargala $5B
