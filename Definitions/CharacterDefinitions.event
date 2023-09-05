@@ -26,7 +26,7 @@
 #define Ondeh $f
 #define Biko $10
 #define Tangyuan $11
-#define AChapterUnit8 $12
+#define Juan $12
 #define Matteo $13
 #define Suzanne $14
 
@@ -67,6 +67,11 @@
 #define LogPirate $5C
 #define RiojaReaper LogPirate
 #define A3Log $58
+
+//Hub A4
+#define A4Pirate $6A
+#define A4PirateBoss $6B
+#define A4RebelBoss $6C
 
 //A5
 #define Gunsmith $5A

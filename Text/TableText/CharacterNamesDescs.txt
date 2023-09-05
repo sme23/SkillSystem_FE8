@@ -148,6 +148,12 @@ Biko[X]
 A young man trying to find[N]
 his confidence. Ondeh's brother.[X]
 
+## JuanName
+Juan[X]
+
+## JuanDesc
+ [X]
+
 ## MatteoName
 Matteo[X]
 
@@ -446,4 +452,22 @@ The Closer[X]
 Legend[N]
 The Closer is known for being able to [N]
 close down any problem. For a price.[X]
+
+## A4PirateName
+Pirate[X]
+
+## A4PirateDesc
+ [X]
+
+## A4PirateBossName
+Pirate Boss[X]
+
+## A4PirateBossDesc
+ [X]
+
+## A4RebelBossName
+Rebel Boss[X]
+
+## A4RebelBossDesc
+ [X]
 
