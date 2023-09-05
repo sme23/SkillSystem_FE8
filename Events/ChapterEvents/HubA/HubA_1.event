@@ -75,12 +75,15 @@ UNIT Leandra Fighter Geraldo Level(5, Enemy, False) [11, 5] 0 0 0 0 [Bloodaxe, H
 UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] AttackInRangeAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI
+
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 10] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 12] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [23, 11] 0 0 0 0 [IronBow] AttackInTwoAI
+
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [5, 8] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [7, 8] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 9] 0 0 0 0 [IronBow] AttackInTwoAI
+
 UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [IronLance] GroupOneAI
 UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [IronLance] GroupOneAI
 UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] GroupOneAI
@@ -91,18 +94,22 @@ UNIT
 SentinelInitialEnemies:
 UNIT Buzu Vanguard Sanz Level(5, Enemy, False) [17, 7] 0 0 0 0 [HandAxe, Pike] BossAI
 UNIT Bozo Warden Sanz Level(5, Enemy, False) [19, 7] 0 0 0 0 [FlameSword, Onigiri] BossAI
+
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [6, 15] 0 0 0 0 [Javelin] BossAI
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [22, 15] 0 0 0 0 [Javelin] BossAI
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [17, 4] 0 0 0 0 [Javelin] BossAI
+
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 7] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 13] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [16, 10] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT Sentinel Mage Sanz Level(4, Enemy, True) [17, 10] 0 0 0 0 [Elfire] AttackInTwoAI
 UNIT Sentinel Mage Sanz Level(4, Enemy, True) [19, 10] 0 0 0 0 [Elfire] AttackInTwoAI
+
 // these aren't sentinels but i ran out of space in the first unit group
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [7, 16] 0 0 0 0 [IronAxe] AttackInTwoAI
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [8, 15] 0 0 0 0 [IronAxe] AttackInTwoAI
 UNIT Contractor Mage Geraldo Level(3, Enemy, True) [3, 14] 0 0 0 0 [Elfire] AttackInTwoAI
+
 UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [21, 5] 0 0 0 0 [IronLance] AttackInTwoAI
 UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronLance] AttackInTwoAI
 UNIT Contractor Mage Geraldo Level(3, Enemy, True) [20, 4] 0 0 0 0 [Elfire] AttackInTwoAI
@@ -143,7 +150,7 @@ FADU 16
 STAL 30
 LOAD2 1 LuaDesiderioCutsceneUnits
 ENUN
-MOVE 20 Desiderio [5, 2]
+MOVE 20 Desiderio [5, 2] // Because dark before initial event sucks
 MOVE 20 Lua [6, 2]
 ENUN
 Text(ChA1BeginningScene1)
