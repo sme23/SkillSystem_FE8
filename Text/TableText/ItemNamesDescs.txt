@@ -90,10 +90,10 @@ Harpoon[X]
 Eff. vs. horses and fliers.[X]
 
 ## SidepierceName
-Needle[X]
+Sidepierce[X]
 
 ## SidepierceDesc
-Move 2 tiles after combat.[X]
+Allows canto after attack.[X]
 
 ## PitchforkName
 Pitchfork[X]
@@ -175,7 +175,7 @@ Uses Mag. Can attack at melee.[X]
 Snapshot[X]
 
 ## SnapshotDesc
-Allows canto after attack.[X]
++2 speed. Cannot miss.[X]
 
 ## ScorpioName
 Scorpio[X]

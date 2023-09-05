@@ -3,6 +3,7 @@ EventPointerTable(HubAEventsID, PointerList)
 // temp flags
 #define SeenHubA1Pitch 0x7
 #define SeenHubA2Pitch 0x8
+#define SeenHubA5Pitch 0xB
 #define SeenHubA6Pitch 0xc
 
 //hub maneuvering flags
@@ -357,8 +358,15 @@ NoFade
 ENDA
 
 GotoChapter5:
-TutorialYesNoText(HubA5Prompt) 
-GotoHubChapterIfYes(1, HubA_5)
+CHECK_EVENTID SeenHubA5Pitch
+BNE 7 sC s0
+Text(HubA5Pitch)
+LABEL 7
+EVBIT_MODIFY 4
+Text(HubA5Prompt) 
+ENUT SeenHubA5Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_5, HubA5Accepted)
 ENUF WentToHubA5
 NoFade
 ENDA
