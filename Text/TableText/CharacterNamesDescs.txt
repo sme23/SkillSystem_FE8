@@ -170,7 +170,7 @@ Tangyuan[X]
 ## TangyuanDesc
 Drifter[N]
 A former carpenter that abandoned her[N]
-wife and children to seek "adventure".[X]
+wife and children to seek [OpenQuote]adventure[CloseQuote].[X]
 
 ## KhazhakName
 Khazhak[X]
@@ -358,8 +358,8 @@ Big Brick[X]
 
 ## BigBrickDesc
 Big Builder[N]
-The brain of the Brick Boys. He pushed for[N]
-the new direction of leaving crime behind.[X]
+The brain of the Brick Boys. He pushed[N]
+the gang into leaving crime behind.[X]
 
 ## HakmanName
 Hakman[X]
@@ -374,16 +374,16 @@ Mr Mist[X]
 
 ## MrMistDesc
 Spy[N]
-A spy from the empire with a mission to[N]
-recover the Mincemaker's schematics.[X]
+A spy from the empire with the mission[N]
+to recover the Mincemaker's schematics.[X]
 
 ## YaoguaiName
 Yaoguai[X]
 
 ## YaoguaiDesc
 Spy[N]
-A spy from the empire with a mission to[N]
-recover the Mincemaker's schematics.[X]
+A mole from the rebels with the objective[N]
+to steal the Mincemaker's designs.[X]
 
 ## TheDukeName
 The Duke[X]
