@@ -20,8 +20,8 @@
 #define GiveGold(money) "SVAL 3 money; GIVEMONEY Lua"
 #define TakeGold(money) "SVAL 3 money; TAKEMONEY Lua"
 
-#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; ENUF LuaInAHubFlag; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
-#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); ENUF LuaInAHubFlag; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
@@ -38,6 +38,10 @@
 
 #define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 #define InitiateTileRevertInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILEREVERT tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+
+#define InitiateLoadMapHub(chapterId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; LOMA chapterId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+
+
 #define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); LABEL labelId"
 
 #define CalculateYodsenPrice "ASMC CalculateYodsenPriceASMC"

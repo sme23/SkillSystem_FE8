@@ -1,5 +1,4 @@
-@Gamble Check
-@true if unit has Gamble skill AND attack is available
+@ Str > Spd
 
 .equ ShiftID, SkillTester+4
 .thumb
@@ -13,7 +12,7 @@ and r0,r1
 cmp r0,#0
 bne False
 
-@check if active unit has Gamble
+@check if active unit has the skill
 mov r0, r4 @test
 ldr r1, ShiftID
 ldr r2, SkillTester
@@ -24,6 +23,15 @@ bne True
 b False
 
 True:
+@check if Str > Spd
+mov r0, r4
+mov r3, #0x16
+ldrb  r1, [r0,r3]
+mov r3, #0x14
+ldrb  r2, [r0,r3]
+cmp r1, r2
+ble False
+
 mov r0,#1
 b End
 

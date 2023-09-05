@@ -28,7 +28,7 @@ TurnBasedEvents:
 TurnEventPlayer(0, LeftThiefEvent, 5)
 TurnEventPlayer(0, RightThiefEvent, 6)
 
-TurnEventPlayer(0, BombWarningEvent, 2)
+TurnEventPlayer(0, BombWarningEvent, 1)
 
 TurnEventEnemy(0, Turn1EP, 1)
 TurnEventEnemy(0, Turn2EP, 2)
@@ -54,6 +54,7 @@ CameraCursorFast(14,12)
 CameraCursorFast(21,16)
 CameraCursor(Lua)
 Text(ChA6BombWarning)
+CenterTextbox(ChA6BombInfoBox)
 NoFade
 ENDA
 

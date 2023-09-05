@@ -69,6 +69,7 @@
 #define Slimshot $37
 #define ShiningBow $d4
 #define Snapshot $db
+#define Scorpio $e4
 
 //TOMES
 
@@ -111,6 +112,9 @@
 #define Blunderbuss $d0
 #define Mortar $d1
 #define Mincemaker $de
+
+// STAVES
+#define TakeAim $e3
 
 // EQUIPS
 #define HideShield $ca

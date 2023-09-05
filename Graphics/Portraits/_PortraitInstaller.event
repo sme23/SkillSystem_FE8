@@ -73,3 +73,11 @@ EstelleMugData:
 #incbin "Dmp/Estelle_palette.dmp"
 #incbin "Dmp/Estelle_minimug.dmp"
 setMugEntry(EstelleMug, EstelleMugData, 3, 5, 3, 3)
+
+ALIGN 16
+XimoMugData:
+#incbin "Dmp/Ximo_mug.dmp"
+#incbin "Dmp/Ximo_frames.dmp"
+#incbin "Dmp/Ximo_palette.dmp"
+#incbin "Dmp/Ximo_minimug.dmp"
+setMugEntry(XimoMug, XimoMugData, 4, 5, 4, 3)

@@ -165,3 +165,18 @@ Bombardier[X]
 
 ## BombardierDesc
  [X]
+
+## MonkDesc
+ [X]
+
+## TricksterName
+Trickster[X]
+
+## TricksterDesc
+ [X]
+
+## BowCavName
+Bow Cav[X]
+
+## BowCavDesc
+ [X]

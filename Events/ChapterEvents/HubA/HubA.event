@@ -122,7 +122,7 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [20,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [13,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 BeginningScene:
@@ -264,17 +264,7 @@ NoFade
 ENDA
 
 PortGreagorDocksFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-CALL ClearHubATraps
-STAL 1
-CALL AddDockTraps
-STAL 1
-TILECHANGE 0
-LoadPlayerUnits(LuaAtDaDocks)
-CAMERA_CENTERED Lua
-FADU 15
+InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEvent)
 ENUT DocksToPort
 ENUF CameBackFromDocks
 Text(HubABeginningScene4)
@@ -283,35 +273,13 @@ NoFade
 ENDA
 
 PortGreagorDocks:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-CALL ClearHubATraps
-STAL 10
-CALL AddDockTraps
-STAL 10
-TILECHANGE 0
-LoadPlayerUnits(LuaAtDaDocks)
-CAMERA_CENTERED Lua
-CALL DurghamSpawnEvent
-FADU 15
+InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEvent)
 ENUF DocksToPort
 NoFade
 ENDA
 
 CameBackFromDocksFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 0
-STAL 10
-CALL ClearDockTraps
-STAL 10
-CALL AddHubATraps
-STAL 10
-LoadPlayerUnits(LuaBackFromDaDocks)
-CAMERA_CENTERED Lua
-FADU 15
+InitiateTileRevertInHub(ClearDockTraps, AddHubATraps, 0, LuaBackFromDaDocks, PortSpawnEvent)
 ENUT PortToBase
 ENUF WentToBaseAgain
 ENUF PortToDocks
@@ -319,18 +287,7 @@ NoFade
 ENDA
 
 GotoPortFromDocks:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 0
-STAL 10
-CALL ClearDockTraps
-STAL 10
-CALL AddHubATraps
-STAL 10
-LoadPlayerUnits(LuaBackFromDaDocks)
-CAMERA_CENTERED Lua
-FADU 15
+InitiateTileRevertInHub(ClearDockTraps, AddHubATraps, 0, LuaBackFromDaDocks, PortSpawnEvent)
 ENUF PortToDocks
 NoFade
 ENDA
@@ -490,6 +447,20 @@ MrYodsenUnitGroup:
 UNIT MrYodsen Gunner 0 Level(3,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
 UNIT
 
+OndehBikoUnitGroup:
+UNIT Ondeh 0 0 Level(4,NPC,True) [23,19] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,NPC,True) [24,19] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
+UNIT
+
+RochefortUnitGroup:
+UNIT Rochefort 0 0 Level(1,NPC,False) [20,14] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+DocksSpawnEvent:
+CALL DurghamSpawnEvent
+NoFade
+ENDA
+
 DurghamSpawnEvent:
 CHECK_EVENTID DurghamRecruitFlag
 BNE 776 s0 sC //if durgham recruited, do not spawn him in
@@ -507,9 +478,10 @@ NoFade
 ENDA
 
 PortSpawnEvent:
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup)
 NoFade
 ENDA
-
 
 AddHubATraps:
 AddTrap(BlueSigilTrapID,0, 11)
@@ -545,6 +517,7 @@ RemoveTrapAtCoords(14, 9)
 RemoveTrapAtCoords(18, 9)
 RemoveTrapAtCoords(20, 9)
 RemoveTrapAtCoords(20, 13)
+RemoveTrapAtCoords(20, 14)
 NoFade
 ENDA
 
@@ -566,6 +539,7 @@ ENDA
 
 ClearDockTraps:
 RemoveTrapAtCoords(0, 13)
+RemoveTrapAtCoords(0, 14)
 RemoveTrapAtCoords(0, 14)
 NoFade
 ENDA

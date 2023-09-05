@@ -62,7 +62,7 @@ u32 HardworkingBuff(u32 stat, Unit* unit) {
 
 u32 StrTakerBuff(u32 stat, Unit* unit) {
 	if (SkillTester(unit,StrTakerIDLink)) {
-		int buff = GetChapterKillCounter(unit);
+		int buff = GetChapterKillCounter(unit) * 2;
 		if (buff > StrTakerStatCapLink) buff = StrTakerStatCapLink;
 		return stat+buff;
 	}
