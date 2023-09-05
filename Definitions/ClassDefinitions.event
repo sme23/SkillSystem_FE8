@@ -36,6 +36,7 @@
 //#define Assassin_F 0x18
 //#define Sniper 0x1b
 //#define Sniper_F 0x1c
+#define Trickster 0x92
 
 //ARMOR
 
@@ -51,6 +52,7 @@
 #define LanceCav 0x5
 #define LanceCav_F 0x6
 #define AxeCav 0x88
+#define BowCav 0x93
 //#define Troubadour 0x4b
 
 //FLIER
@@ -69,6 +71,8 @@
 
 //#define Shaman 0x2d
 //#define Shaman_F 0x2e
+
+//#define Monk
 
 //#define Priest 0x45
 //#define Cleric 0x4a
@@ -122,3 +126,5 @@
 #define SeraphMapSprite 0x7F
 #define BombardierMapSprite 0x80
 #define BombMapSprite 0x81
+#define TricksterMapSprite 0x82
+#define BowCavMapSprite 0x83

@@ -148,6 +148,12 @@ Biko[X]
 A young man trying to find[N]
 his confidence. Ondeh's brother.[X]
 
+## JuanName
+Juan[X]
+
+## JuanDesc
+ [X]
+
 ## MatteoName
 Matteo[X]
 
@@ -172,6 +178,22 @@ Drifter[N]
 A former carpenter that abandoned her[N]
 wife and children to seek "adventure".[X]
 
+## OrlandoName
+Orlando[X]
+
+## OrlandoDesc
+Merchant[N]
+Rich with gold, his bluster obfuscates[N]
+keen bladework and endless desire.[X]
+
+## RahelName
+Rahel[X]
+
+## RahelDesc
+Carpenter[N]
+As skilled with her bow as her hammer,[N]
+she repairs ships with a curt nod.[X]
+
 ## KhazhakName
 Khazhak[X]
 
@@ -195,6 +217,30 @@ Felipe[X]
 Lieutenant[N]
 An imperial noble with great[N]
 confidence in his combat skills.[X]
+
+## SierraName
+Sierra[X]
+
+## SierraDesc
+Guardian[N]
+A soldier paid by Felipe's[N]
+parents to make sure he survives.[X]
+
+## ManfredName
+Manfred[X]
+
+## ManfredDesc
+Captain[N]
+The leader of the Crimson Hearts,[N]
+an infamous band of mercenaries.[X]
+
+## CrimsonHeartName
+C. Heart[X]
+
+## CrimsonHeartDesc
+Sellsword[N]
+A member of the feared Crimson[N]
+Hearts, led by Manfred.[X]
 
 ## IncendivisName
 Incendivis[X]
@@ -410,4 +456,22 @@ The Closer[X]
 Legend[N]
 The Closer is known for being able to [N]
 close down any problem. For a price.[X]
+
+## A4PirateName
+Pirate[X]
+
+## A4PirateDesc
+ [X]
+
+## A4PirateBossName
+Pirate Boss[X]
+
+## A4PirateBossDesc
+ [X]
+
+## A4RebelBossName
+Rebel Boss[X]
+
+## A4RebelBossDesc
+ [X]
 

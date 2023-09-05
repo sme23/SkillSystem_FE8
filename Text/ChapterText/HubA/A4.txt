@@ -1,0 +1,38 @@
+## ChA4Title
+Chapter A-4[X]
+
+## ChA4GoalWindow
+Defeat Boss[X]
+
+## ChA4StatusObjective
+   Defeat the boss![N]
+...and any interlopers.[X]
+
+
+##ChA4StartText
+[R][LoadLua]
+placeholder1[AN][X]
+
+##ChA4JuanRecruitText
+[R][LoadLua]
+placeholder2[AN][X]
+
+##ChA4RebelPremonitionText1
+[R][LoadLua]
+placeholder3[AN][X]
+
+##ChA4RebelPremonitionText2
+[R][LoadLua]
+placeholder3b[AN][X]
+
+##ChA4RebelWarningText
+[R][LoadLua]
+enemies are showing up soon[AN][X]
+
+##ChA4RebelArrivalText
+[R][LoadLua]
+placeholder4[AN][X]
+
+##ChA4EndText
+[R][LoadLua]
+ placeholder5[AN][X]

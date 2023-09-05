@@ -8,7 +8,9 @@
 .equ GetUnit, 0x8019431
 .equ gActionData, 0x203A958
 
-push {lr}
+push {r4-r5, lr}
+mov  r4, r0
+mov  r5, r1
 
 @Get target struct
 ldr  r0, =gActionData
@@ -26,6 +28,10 @@ strb  r2, [r0,r3]
 @mov r2, #0x0
 @strb r2, [r0, #0x1d]     @r0 = gActionData.unitActionType
 
-mov r0, #0x4
+mov  r0, r4
+mov  r1, r5
+blh 0x08022861, r2
+mov r0, #0x6
+pop {r4-r5}
 pop {r1}
 bx r1

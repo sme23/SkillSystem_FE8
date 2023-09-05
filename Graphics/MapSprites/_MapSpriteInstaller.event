@@ -296,3 +296,25 @@ BombSMS:
 ALIGN 4
 BombMMS:
 #incbin "Dmp/Crates (U) {Primefusion}-walk.dmp"
+
+StandingMapSprite(TricksterMapSprite,MapSprite16x16,TricksterSMS)
+MovingMapSprite(Trickster, $1C3D7C, TricksterMMS)
+
+ALIGN 4
+TricksterSMS:
+#incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-stand.dmp"
+
+ALIGN 4
+TricksterMMS:
+#incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-walk.dmp"
+
+StandingMapSprite(BowCavMapSprite,MapSprite16x16,BowCavSMS)
+MovingMapSprite(BowCav, $1C3D7C, BowCavMMS)
+
+ALIGN 4
+BowCavSMS:
+#incbin "Dmp/Cavalier (M) Bow {FungusCaesar}-stand.dmp"
+
+ALIGN 4
+BowCavMMS:
+#incbin "Dmp/Cavalier (M) Bow {FungusCaesar}-walk.dmp"

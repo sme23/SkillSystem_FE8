@@ -11,7 +11,7 @@
 // HUB A
 #define Estelle $7
 #define Hermenegildo $8
-#define MrYodsen $9 
+#define MrYodsen $9
 #define Durgham $A
 //Samson/Arrans
 #define Triana $43
@@ -26,13 +26,14 @@
 #define Ondeh $f
 #define Biko $10
 #define Tangyuan $11
-#define AChapterUnit8 $12
+#define Juan $12
 #define Matteo $13
 #define Suzanne $14
 
 // CHAPTER 2
 #define Mentor $15
 #define Orlando Mentor
+#define Rahel $16
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -57,13 +58,20 @@
 #define Felipe $53
 #define Incendivis $54
 #define Rebel $55
-#define IncendivisHP $56
+#define Sierra $56
+#define Manfred $6D
+#define CrimsonHeart $6E
 
 //Hub A3
 #define Sargargala $5B
 #define LogPirate $5C
 #define RiojaReaper LogPirate
 #define A3Log $58
+
+//Hub A4
+#define A4Pirate $6A
+#define A4PirateBoss $6B
+#define A4RebelBoss $6C
 
 //A5
 #define Gunsmith $5A

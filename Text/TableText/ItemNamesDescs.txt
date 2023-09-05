@@ -177,6 +177,12 @@ Snapshot[X]
 ## SnapshotDesc
 Allows canto after attack.[X]
 
+## ScorpioName
+Scorpio[X]
+
+## ScorpioDesc
+A long-range crossbow.[X]
+
 //TOMES
 
 ## BoltingDesc
@@ -309,6 +315,13 @@ Mincemaker[X]
 
 ## MincemakerDesc
 Does exactly as advertised.[X]
+
+## TakeAimName
+Take Aim![X]
+
+## TakeAimDesc
++30 hit to an ally for 1 turn.[N]
+(currently doesn't work!)[X]
 
 // EQUIPS
 
