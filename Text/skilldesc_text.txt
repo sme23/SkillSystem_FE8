@@ -1730,6 +1730,5 @@ no longer deal extra damage, but[N]
 durability isn't used up during crits.[X]
 
 ## SD_DeftHands
-Deft Hands: Unit can act,[N]
-but not move, after stealing.[N]
-(not currently functional)[X]
+Deft Hands: Unit can act again,[N]
+but not move, after stealing.[X]

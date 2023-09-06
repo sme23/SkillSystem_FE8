@@ -13,6 +13,7 @@ pMovModifiers: // Movement
 	POIN StairsMoveDebuff
 	#endif
 	POIN prNullifyIfFreeze prNullifyIfGuardAI
+	POIN prDeftHandsCheck
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -50,6 +51,11 @@ prLuaHubMovement:
 	rIfUnitHasSkill(SuppressiveFireID)
 		rIf(prCheckIfLuaInHub)
 			rConstant(15)
+
+prDeftHandsCheck:
+	rIfUnitHasState(0x400)
+		rIfUnitHasSkill(DeftHandsID)
+			rConstant(0)
 
 ALIGN 4
 prAddEquipMov:
