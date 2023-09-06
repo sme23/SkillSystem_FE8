@@ -165,7 +165,10 @@ lsl r0,r0,#16
 lsr r0,r0,#16 @r0 = x coord
 lsr r1,r1,#16 @r1 = y coord
 blh GetTrapAt @r0 = pointer to trap data
+cmp r0,#0
+beq RemoveTrapAtCoordsASMC_End
 blh RemoveTrap
+RemoveTrapAtCoordsASMC_End:
 pop {r0}
 bx r0
 
