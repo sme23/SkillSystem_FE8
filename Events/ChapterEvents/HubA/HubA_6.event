@@ -281,7 +281,7 @@ LoadUnit(9,25)
 UNIT
 
 NewUnits:
-UNIT Matteo Mercenary 0 Level(4,Ally,True) [6,23] 0 0 0 0 [SteelSword, Estoc, ShoveGlove, Vulnerary] NoAI
+UNIT Matteo Mercenary 0 Level(4,Ally,True) [6,23] 0 0 0 0 [SteelSword, IronBlade, ShoveGlove, Vulnerary] NoAI
 UNIT Suzanne Gunner 0 Level(4,Ally,True) [9,23] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
 UNIT
 
@@ -313,13 +313,13 @@ UNIT A6Pirate Brigand 0 Level(A6PirateLevel, Enemy, True) [19,17] 0 0 0 0 [SlimA
 // Left rebels
 UNIT Rebel Mage 0 Level(A6RebelLevel, Enemy, True) [9,20] 0 0 0 0 [Fire] AttackInRangeAI
 UNIT Rebel Myrmidon 0 Level(A6RebelLevel, Enemy, True) [10,17] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT Rebel Ninja 0 Level(A6RebelLevel, Enemy, True) [11,15] 0 0 0 0 [SteelDagger] AttackInRangeAI
+UNIT Rebel Ninja 0 Level(A6RebelLevel, Enemy, True) [11,15] 0 0 0 0 [IronDagger] AttackInRangeAI
 
 UNIT Rebel Vanguard 0 Level(A6RebelLevel, Enemy, True) [4,12] 0 0 0 0 [Javelin, SlimAxe] AttackInRangeAI
-UNIT Rebel Warden 0 Level(A6RebelLevel, Enemy, True) [10,11] 0 0 0 0 [Harpoon, SteelSword] AttackInRangeAI
+UNIT Rebel Warden 0 Level(A6RebelLevel, Enemy, True) [10,11] 0 0 0 0 [Harpoon, Estoc] AttackInRangeAI
 
-UNIT Rebel Archer 0 Level(A6RebelLevel, Enemy, True) [4,7] 0 0 0 0 [SteelBow,MiniBow] AttackInRangeAI
-UNIT Rebel Ninja 0 Level(A6RebelLevel, Enemy, True) [6,5] 0 0 0 0 [IronKnife,IronDagger] AttackInRangeAI
+UNIT Rebel Archer 0 Level(A6RebelLevel, Enemy, True) [4,7] 0 0 0 0 [IronBow, MiniBow] AttackInRangeAI
+UNIT Rebel Ninja 0 Level(A6RebelLevel, Enemy, True) [6,5] 0 0 0 0 [IronKnife, IronDagger] AttackInRangeAI
 UNIT
 
 EnemyUnits3:
@@ -334,14 +334,14 @@ UNIT Rebel Soldier 0 Level(A6RebelLevel, Enemy, True) [18,9] 0 0 0 0 [IronLance]
 
 // Top rebels
 UNIT Rebel Myrmidon 0 Level(A6RebelLevel, Enemy, True) [17,8] 0 0 0 0 [Estoc] AttackInRangeAI
-UNIT Rebel Ninja 0 Level(A6RebelLevel, Enemy, True) [19,7] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT Rebel Ninja 0 Level(A6RebelLevel, Enemy, True) [19,7] 0 0 0 0 [IronKnife] AttackInRangeAI
 
 UNIT Rebel Gunner 0 Level(A6RebelLevel, Enemy, True) [9,6] 0 0 0 0 [Pistol] AttackInRangeAI
-UNIT Rebel Fighter 0 Level(A6RebelLevel, Enemy, True) [11,9] 0 0 0 0 [SteelAxe] AttackInRangeAI
+UNIT Rebel Fighter 0 Level(A6RebelLevel, Enemy, True) [11,9] 0 0 0 0 [IronAxe] AttackInRangeAI
 
 UNIT Rebel Archer 0 Level(A6RebelLevel, Enemy, True) [13,6] 0 0 0 0 [SteelBow] AttackInRangeAI
-UNIT Rebel Vanguard 0 Level(A6RebelLevel, Enemy, True) [11,4] 0 0 0 0 [HandAxe,IronLance] AttackInRangeAI
-UNIT Rebel Warden 0 Level(A6RebelLevel, Enemy, True) [15,4] 0 0 0 0 [LightBrand,IronLance] AttackInRangeAI
+UNIT Rebel Vanguard 0 Level(A6RebelLevel, Enemy, True) [11,4] 0 0 0 0 [HandAxe, IronLance] AttackInRangeAI
+UNIT Rebel Warden 0 Level(A6RebelLevel, Enemy, True) [15,4] 0 0 0 0 [LightBrand, IronLance] AttackInRangeAI
 UNIT
 
 EnemyUnitsBombs:
@@ -360,7 +360,7 @@ UNIT A6Pirate Thief 0 Level(2, Enemy, True) [0,15] 0 0 0 0 [IronKnife, ChestKey]
 UNIT
 
 RightThiefUnits:
-UNIT A6Pirate Thief 0 Level(2, Enemy, True) [21,11] 0 0 0 0 [IronDagger, ChestKey, ChestKey] ThiefAI
+UNIT A6Pirate Thief 0 Level(2, Enemy, True) [21,11] 0 0 0x1 REDA21R11 [IronDagger, ChestKey, ChestKey] ThiefAI
 UNIT
 
 
