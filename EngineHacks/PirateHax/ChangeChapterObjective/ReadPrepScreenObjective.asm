@@ -4,7 +4,7 @@
 .equ returnPoint,			0x8095AB7
 .equ String_GetFromIndex,	0x800A241
 
-mov		r0, #0x1 @long chapter objective
+mov		r0, #0x0 @short chapter objective
 ldr 	r3, =GetChapterObjective @and this gives us the textid in r0
 bl		BXR3
 

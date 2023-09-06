@@ -748,6 +748,10 @@ void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
             unit->ranks[wType] = GetItemRequiredExp(item);
         }
 
+        if (LuaIsInHub(unit)){ //actual unit passed in doesn't matter
+            return; //don't autolevel their wexp if player
+        }
+
         int j;
         
         bool isUnitPlayer = (unit->pCharacterData->number <= 0x45);

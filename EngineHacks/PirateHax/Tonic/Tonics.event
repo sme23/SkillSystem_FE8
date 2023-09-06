@@ -5,6 +5,7 @@
 
 // Custom
 #define TonicStatBonus 2
+#define TonicBadStatBonus 3
 #define TonicHPBonus 5
 #define TonicEffectID 0x42
 #define rTonicBonus(stat) "rAdd; rWithConstant(stat); rCallExternal(AddTonicBonus^1)"
@@ -63,6 +64,10 @@ TonicHPBonusWord:
 WORD TonicHPBonus
 TonicHPBonusPointer:
 POIN TonicHPBonusWord
+TonicBadStatBonusWord:
+WORD TonicBadStatBonus
+TonicBadStatBonusPointer:
+POIN TonicBadStatBonusWord
 
 ALIGN 4
 TonicChapterExclusionTablePointer:

@@ -109,8 +109,8 @@ SUD_LoadTonic:
 	.align
 
 GetTonicByte:
-	// r0 - unit address
-	// ret r0 - tonic byte
+	@ r0 - unit address
+	@ ret r0 - tonic byte
 
 	push {lr}
 
@@ -131,8 +131,8 @@ GetTonicByte:
 	.align
 
 SetTonicByte:
-	// r0 - unit address
-	// r1 - tonic byte
+	@ r0 - unit address
+	@ r1 - tonic byte
 
 	push {lr}
 	push {r4}
@@ -157,9 +157,9 @@ SetTonicByte:
 	.align
 
 CheckTonicBit:
-	// r0 - unit address
-	// r1 - bit to check
-	// ret r0 - true if set
+	@ r0 - unit address
+	@ r1 - bit to check
+	@ ret r0 - true if set
 
 	push {lr}
 	push {r4,r5}
@@ -190,8 +190,8 @@ CheckTonicBit:
 	.align
 
 SetTonicBit:
-	// r0 - unit address
-	// r1 - bit to set
+	@ r0 - unit address
+	@ r1 - bit to set
 
 	push {lr}
 	push {r4,r5}
@@ -217,8 +217,8 @@ SetTonicBit:
 	.align
 
 GetTonicBitFromDurability:
-	// r0 - durability
-	// ret r0 - tonic bit
+	@ r0 - durability
+	@ ret r0 - tonic bit
 
 	push {lr}
 
@@ -240,12 +240,12 @@ GetTonicBitFromDurability:
 	.align
 
 GetTonicBitFromStat:
-	// r0 - stat
-	// ret r0 - tonic bit
+	@ r0 - stat
+	@ ret r0 - tonic bit
 
 	push {lr}
 
-	cmp r0, #9 // mag
+	cmp r0, #9 @ mag
 	bne getTonicBitFromStat
 	mov r0, #7
 
@@ -262,9 +262,9 @@ GetTonicBitFromStat:
 	.align
 
 AddTonicBonus:
-	// r0 - unit pointer
-	// r1 - stat
-	// ret r0 - stat bonus
+	@ r0 - unit pointer
+	@ r1 - stat
+	@ ret r0 - stat bonus
 
 	push {lr}
 	push {r4, r5}
@@ -284,7 +284,19 @@ AddTonicBonus:
 	cmp r5, #0x0
 	beq addTonicHPBonus
 
+	cmp r5, #0x5	@ res
+	beq addBadStatBonus
+	
+	cmp r5, #0x6	@ luck
+	beq addBadStatBonus
+
 	ldr r0, =TonicStatBonusPointer
+	ldr r0, [r0]
+	ldr r0, [r0]
+	b addTonicBonusEnd
+
+	addBadStatBonus:
+	ldr r0, =TonicBadStatBonusPointer
 	ldr r0, [r0]
 	ldr r0, [r0]
 	b addTonicBonusEnd
@@ -305,17 +317,17 @@ AddTonicBonus:
 	.align
 
 TonicEffectFunc:
-	// r4 - action data
+	@ r4 - action data
 
 	push {lr}
 
 	ldr r0, =gActiveUnit
 	ldr r0, [r0]
 
-	ldrb r1, [r4, #0x12] // item slot used
-	lsl r1, #1 // x2
-	add r1, #1 // durability
-	add r1, #0x1E // items
+	ldrb r1, [r4, #0x12] @ item slot used
+	lsl r1, #1 @ x2
+	add r1, #1 @ durability
+	add r1, #0x1E @ items
 	ldrb r0, [r0, r1]
 
 	cmp r0, #9
@@ -337,12 +349,12 @@ TonicEffectFunc:
 
 	tonicEffectEnd:
 
-	// set item to 0 and clear it
+	@ set item to 0 and clear it
 	ldr r0, =gActiveUnit
 	ldr r0, [r0]
-	ldrb r1, [r4, #0x12] // item slot used
-	lsl r1, #1 // x2
-	add r1, #0x1E // items
+	ldrb r1, [r4, #0x12] @ item slot used
+	lsl r1, #1 @ x2
+	add r1, #0x1E @ items
 	mov r2, #0
 	strh r2, [r0, r1]
 
@@ -356,18 +368,18 @@ TonicEffectFunc:
 	.align
 
 TonicUsabilityFunc:
-	// r4 - active unit
-	// ret r0 - true if can be used
+	@ r4 - active unit
+	@ ret r0 - true if can be used
 
 	push {lr}
 
 	mov r0, r4
 	ldr r2, =gActionData
 
-	ldrb r1, [r2, #0x12] // item slot used
-	lsl r1, #1 // x2
-	add r1, #1 // durability
-	add r1, #0x1E // items
+	ldrb r1, [r2, #0x12] @ item slot used
+	lsl r1, #1 @ x2
+	add r1, #1 @ durability
+	add r1, #0x1E @ items
 	ldrb r0, [r0, r1]
 
 	cmp r0, #9
@@ -409,7 +421,7 @@ TonicEffectLadder:
 
 	bl TonicEffectFunc
 
-	ldr r3, =#0x802FF76 + 1
+	ldr r3, =0x802FF76 + 1
 	bx r3
 
 	.pool
@@ -422,7 +434,7 @@ TonicUsabilityLadder:
 
 	bl TonicUsabilityFunc
 
-	ldr r3, =#0x8028BFE + 1
+	ldr r3, =0x8028BFE + 1
 	bx r3
 
 	.pool
@@ -434,7 +446,7 @@ ClearTonicTable:
 	push {lr}
 
 	ldr r0, =gChapterData
-	ldrb r0, [r0, #0xE] // chapter id
+	ldrb r0, [r0, #0xE] @ chapter id
 
 	ldr r1, =TonicChapterExclusionTablePointer
 	ldr r1, [r1]
@@ -470,15 +482,15 @@ ClearTonicTable:
 
 ClearTonicTableHook:
 
-	// Hook to A4354
+	@ Hook to A4354
 
 	bl ClearTonicTable
 
-	// vanilla code
+	@ vanilla code
 	blh 0x80A42BC+1
 	blh 0x80A429C+1
 
-	ldr r3, =#0x80A435C+1
+	ldr r3, =0x80A435C+1
 	bx r3
 
 	.pool
@@ -486,11 +498,11 @@ ClearTonicTableHook:
 	.align
 
 TonicPrepScreenUsabilityFunc:
-	// r4 - item and uses
-	// r5 - unit pointer
-	// ret r0 - true if can be used
+	@ r4 - item and uses
+	@ r5 - unit pointer
+	@ ret r0 - true if can be used
 
-	lsr r4, #8 // get top byte
+	lsr r4, #8 @ get top byte
 	cmp r4, #9
 	beq tonicPrepScreenUsabilityRainbowTonic
 
@@ -518,7 +530,7 @@ TonicPrepScreenUsabilityFunc:
 
 	tonicPrepScreenUsabilityEnd:
 
-	// we didnt push but this is necessary apparently?
+	@ we didnt push but this is necessary apparently?
 	pop {r4-r5}
 	pop {r1}
 	bx r1
@@ -528,12 +540,12 @@ TonicPrepScreenUsabilityFunc:
 	.align
 
 TonicPrepScreenEffectFunc:
-	// r4 - unit pointer
-	// r6 - item and uses
-	// r7 - item slot
-	// ret r0 - text to display
+	@ r4 - unit pointer
+	@ r6 - item and uses
+	@ r7 - item slot
+	@ ret r0 - text to display
 
-	lsr r6, #8 // get top byte
+	lsr r6, #8 @ get top byte
 	cmp r6, #9
 	beq tonicPrepScreenEffectRainbowTonic
 
@@ -552,19 +564,19 @@ TonicPrepScreenEffectFunc:
 
 	tonicPrepScreenEffectEnd:
 
-	// set item to 0 and clear it
+	@ set item to 0 and clear it
 	mov r0, r4
 	mov r1, r7
-	lsl r1, #1 // x2
-	add r1, #0x1E // items
+	lsl r1, #1 @ x2
+	add r1, #0x1E @ items
 	mov r2, #0
 	strh r2, [r0, r1]
 
 	blh RemoveUnitBlankItems
 
-	// restore hp to max
+	@ restore hp to max
 	mov r0, r4
-	ldrb r1, [r0, #0x13] // current hp
+	ldrb r1, [r0, #0x13] @ current hp
 	ldr r2, =TonicHPBonusPointer
 	ldr r2, [r2]
 	ldr r2, [r2]
@@ -575,7 +587,7 @@ TonicPrepScreenEffectFunc:
 	ldr r0, [r0]
 	ldr r0, [r0]
 
-	// we didnt push but this is necessary apparently?
+	@ we didnt push but this is necessary apparently?
 	pop {r4-r7}
 	pop {r1}
 	bx r1
