@@ -62,7 +62,7 @@ Servant[N]
 A castaway noble bookworm forced into[N]
 servitude by pirates, rescued by Lua.[X]
 
-## MrYodsenName
+## MrYodsenName ^
 Mr. Yodsen[X]
 
 ## MrYodsenDesc
