@@ -360,6 +360,11 @@ TonicEffectFunc:
 
 	blh RemoveUnitBlankItems
 
+	ldr r0, =gActionData
+	mov r2, #0x11
+	mov r1, #0x1A
+	strb r1, [r0, r2] @ should store 0x1A in the 0x11 place
+
 	pop {r0}
 	bx r0
 
