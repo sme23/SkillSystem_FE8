@@ -359,6 +359,9 @@ TonicEffectFunc:
 	strh r2, [r0, r1]
 
 	blh RemoveUnitBlankItems
+	
+	mov r0,#0x1A
+	strb r0,[r4,#0x11] @set action to use item
 
 	ldr r0, =gActionData
 	mov r2, #0x11
