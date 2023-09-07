@@ -7,7 +7,7 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno1 Dunno2 Dunno3 Tutorial
 POIN Traps1 Traps2
-POIN Units1 Units1
+POIN Units1 Units2
 POIN $0 $0 $0 
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
@@ -56,8 +56,21 @@ UNIT Lua Captain 0x0 Level(1, Ally, False) [6,2] 0 0 0 0 [Vulnerary] NoAI
 UNIT Lua Captain 0x0 Level(1, Ally, False) [5,3] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
+Units2:
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [7,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [7,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,2] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,2] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [4,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT
+
 NPCGroup:
-UNIT Juan Thief 0 Level(4, NPC, False) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim, Vulnerary] BossAI
+UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim, Vulnerary] BossAI
 UNIT
 
 EnemyGroup:
@@ -72,7 +85,7 @@ UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackIn
 //turn 2
 UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Flux] ChargeAI
+UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Flux, Vulnerary, TealGem] ChargeAI
 UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3
 UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING

@@ -170,6 +170,7 @@ ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
+CALL PortSpawnEvent
 GotoPrepScreenHub
 ENUN
 NoFade
@@ -482,7 +483,7 @@ UNIT Bartz Deserter 0 Level(8,NPC,False) [7,14] 0 0 0 0 [SteelLance, Vulnerary] 
 UNIT
 
 MrYodsenUnitGroup:
-UNIT MrYodsen Gunner 0 Level(3,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
+UNIT MrYodsen Gunner 0 Level(6,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
 UNIT
 
 JaimeUnitGroup:

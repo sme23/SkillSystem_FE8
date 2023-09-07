@@ -762,7 +762,7 @@ void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
                         unit->ranks[j] = 251; //if it would go above 251, just set it to be 251 (S rank)
                     }
                     else{
-                        unit->ranks[j] += 5; //increase wexp by 5 in all ranks the unit has
+                        unit->ranks[j] += (5 * (unit-> level - uDef->level)); //increase wexp by 5 in all ranks the unit has by however many levels they've gotten
                     }
                 }
             }

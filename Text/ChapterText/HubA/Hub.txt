@@ -176,7 +176,7 @@ Thank you! I'll lead you to the island,[N]
 and then you can do your thing.[AN]
 [Beat]By the way, who are you?[AN]
 [MidLeft][1LB]
-I'm Captain Lua. I lead a pirate crew.[N]
+I'm Captain Lua. I lead a pirate crew.[AN]
 [MidRight][2LB]
 You're a pirate, huh? Well, I suppose[N]
 Leonor'll have to make do[Beat][AN]
@@ -1239,11 +1239,11 @@ Placeholder Text 1![A][X]
 Placeholder Text 1![A][X]
 
 ## MrYodsenFirstTimeFreeText
-[MidRight][LoadLua]
+[MidRight][LoadMrYodsen]
 I'm free for hire![A][X]
 
 ## MrYodsenFirstTimeText
-[MidRight][LoadLua]
+[MidRight][LoadMrYodsen]
 Pay me![A][X]
 
 ## RecruitMrYodsenChoice
@@ -1252,15 +1252,15 @@ Is this Mr. Yodsen[N]
 worth [G] gold?[No][X]
 
 ## MrYodsenRecruitedText
-[MidRight][LoadLua]
+[MidRight][LoadMrYodsen]
 You paid me![A][X]
 
 ## MrYodsenRejectedText
-[MidRight][LoadLua]
+[MidRight][LoadMrYodsen]
 You didn't pay me![A][X]
 
 ## MrYodsenTellsLuaShesBrokeText
-[MidRight][LoadLua]
+[MidRight][LoadMrYodsen]
 You're broke![A][X]
 
 //Base Scene 1; Characters: Carmen and Ximo

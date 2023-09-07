@@ -7,6 +7,7 @@ EquipmentList:
 BYTE HideShield
 BYTE GlassShield
 BYTE AshArrow
+BYTE Eyepatch
 BYTE 0x00 //terminator
 
 // Defense equipment loses durability on each hit taken
@@ -20,6 +21,7 @@ BYTE 0x00 // terminator
 ALIGN 4
 OffenseEquipmentList:
 BYTE AshArrow
+BYTE Eyepatch
 BYTE 0x00 // terminator
 
 // Equipment in neither list doesn't decrement durability
