@@ -361,3 +361,15 @@ Ash Arrow[X]
 ## AshArrowDesc
 Can only be equipped with Bows.[N]
 Gives all attacks 100% Hit.[X]
+
+## StatuetteName
+Statuette[X]
+
+## StatuetteDesc
+The Balinokans' prized relic. Said[N]
+to possess miraculous properties.[X]
+
+## StatuetteUseDesc
+You feel more able[N]
+to withstand any[N]
+blow.[X]
