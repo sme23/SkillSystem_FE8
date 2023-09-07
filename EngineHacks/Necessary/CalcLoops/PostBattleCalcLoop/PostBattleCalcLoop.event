@@ -17,7 +17,8 @@ POIN Kleptomania
 POIN ChapterKillCounter
 // POIN StrTaker SklTaker SpdTaker DefTaker ResTaker LukTaker MagTaker MovTaker Hardworking // these should be replaced with versions using the kill counter and be placed in stat getters
 POIN Canto CantoPlus SeaShanty Canter Galeforce ReMove Powerstaff CulturedPostCombat Gridmaster LiquidCourage  //this order for canto and friends is the only one I tested
-POIN DeftHands
+POIN DeftHands 
+POIN DelayedTonicDeletion //this goes last
 WORD 0 //Terminator
 
 PROTECT $1D308 $1D314
