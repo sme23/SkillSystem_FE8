@@ -15,6 +15,6 @@ LiquidCourageSpdLink:
 BYTE 2
 
 LiquidCourageConsumables:
-BYTE Vulnerary Elixir PureWater
+BYTE Vulnerary Elixir PureWater Tonic
 BYTE 0
 

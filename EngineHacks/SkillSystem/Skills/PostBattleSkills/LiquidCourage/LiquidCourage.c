@@ -35,6 +35,8 @@ bool AlwaysTrueFunc() {
 }
 
 bool IsLiquidCourageConsumable(u16 item) {
+	if (item == 0) return true; //this means it's a tonic
+	
 	u8 id = (item & 0xFF);
 	
 	u8* listPos = &LiquidCourageConsumables;

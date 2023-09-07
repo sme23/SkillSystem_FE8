@@ -62,7 +62,7 @@ Servant[N]
 A castaway noble bookworm forced into[N]
 servitude by pirates, rescued by Lua.[X]
 
-## MrYodsenName
+## MrYodsenName ^
 Mr. Yodsen[X]
 
 ## MrYodsenDesc
@@ -176,7 +176,23 @@ Tangyuan[X]
 ## TangyuanDesc
 Drifter[N]
 A former carpenter that abandoned her[N]
-wife and children to seek "adventure".[X]
+wife and children to seek [OpenQuote]adventure[CloseQuote].[X]
+
+## OrlandoName
+Orlando[X]
+
+## OrlandoDesc
+Merchant[N]
+Rich with gold, his bluster obfuscates[N]
+keen bladework and endless desire.[X]
+
+## RahelName
+Rahel[X]
+
+## RahelDesc
+Carpenter[N]
+As skilled with her bow as her hammer,[N]
+she repairs ships with a curt nod.[X]
 
 ## KhazhakName
 Khazhak[X]
@@ -201,6 +217,30 @@ Felipe[X]
 Lieutenant[N]
 An imperial noble with great[N]
 confidence in his combat skills.[X]
+
+## SierraName
+Sierra[X]
+
+## SierraDesc
+Guardian[N]
+A soldier paid by Felipe's[N]
+parents to make sure he survives.[X]
+
+## ManfredName
+Manfred[X]
+
+## ManfredDesc
+Captain[N]
+The leader of the Crimson Hearts,[N]
+an infamous band of mercenaries.[X]
+
+## CrimsonHeartName
+C. Heart[X]
+
+## CrimsonHeartDesc
+Sellsword[N]
+A member of the feared Crimson[N]
+Hearts, led by Manfred.[X]
 
 ## IncendivisName
 Incendivis[X]
@@ -236,17 +276,12 @@ Disarm it if you hope to survive.[X]
 ## BuzuName
 Buzu[X]
 
-## BuzuDesc
-Guardshelm[N]
-One half of House Sanz's guardian duo,[N]
-who were selected by an arena victory.[X]
-
 ## BozoName
 Bozo[X]
 
-## BozoDesc
+## GuardhelmDesc
 Guardshelm[N]
-The other half of House Sanz's guardian duo,[N]
+One half of House Sanz's guardian duo,[N]
 who were selected by an arena victory.[X]
 
 ## GeraldoName
@@ -254,8 +289,8 @@ Geraldo[X]
 
 ## GeraldoDesc
 Rehabilitator[N]
-An honorable and complacent merc known for[N]
-reforming and taking in hardened criminals.[X]
+An honorable merc known for giving[N]
+hardened criminals second chances.[X]
 
 ## YurenaName
 Yurena[X]
@@ -288,13 +323,6 @@ Sentinel[X]
 Guardsman[N]
 A full-time officer of House Sanz's[N]
 ever-increasing guard regime.[X]
-
-## ScoundrelName
-Scoundrel[X]
-
-## ScoundrelDesc
-An independent thief using the chaos[N]
-of battle to line their pockets.[X]
 
 ## SargargalaName
 Sargargala[X]
@@ -364,8 +392,8 @@ Big Brick[X]
 
 ## BigBrickDesc
 Big Builder[N]
-The brain of the Brick Boys. He pushed for[N]
-the new direction of leaving crime behind.[X]
+The brain of the Brick Boys. He pushed[N]
+the gang into leaving crime behind.[X]
 
 ## HakmanName
 Hakman[X]
@@ -380,16 +408,16 @@ Mr Mist[X]
 
 ## MrMistDesc
 Spy[N]
-A spy from the empire with a mission to[N]
-recover the Mincemaker's schematics.[X]
+A spy from the empire with the mission[N]
+to recover the Mincemaker's schematics.[X]
 
 ## YaoguaiName
 Yaoguai[X]
 
 ## YaoguaiDesc
 Spy[N]
-A spy from the empire with a mission to[N]
-recover the Mincemaker's schematics.[X]
+A mole from the rebels with the objective[N]
+to steal the Mincemaker's designs.[X]
 
 ## TheDukeName
 The Duke[X]

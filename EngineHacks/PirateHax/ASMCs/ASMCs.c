@@ -54,7 +54,7 @@ void A3ReturnLogDroppedStatusASMC(){
 
 void EyeForAnEyeResetASMC(){
     Unit* unit = GetUnitByCharId(DesiderioCharId);
-    if (unit->state & US_UNAVAILABLE){
+    if (unit->state & US_DEAD){
         //don't do anything because he's goneski
     }
     else{

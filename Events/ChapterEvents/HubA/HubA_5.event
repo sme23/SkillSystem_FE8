@@ -14,6 +14,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0, TangyuanGreen, 1)
+TurnEventPlayer(0, HomiesHere, 5)
 TurnEventPlayer(0, HereTheyCome, 9)
 END_MAIN
 
@@ -68,36 +69,43 @@ UNIT Lua Captain 0 Level(10,Ally,False) [15,17] 0 0 0 0 [Cutlass, IronSword, Iro
 UNIT Lua Captain 0 Level(10,Ally,False) [15,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
+TheLads:
+UNIT Lua Captain 0 Level(10,Ally,False) [14,19] 0 0 0x1 REDA14R16  [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Desiderio Vanguard 0 Level(6,Ally,False) [15,19] 0 0 0x1 REDA15R16  [SteelAxe, IronLance, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(8,Ally,False) [14,19] 0 0 0x1 REDA14R17  [IronDagger, IronKnife, Vulnerary] NoAI
+UNIT Razvan Curate 0 Level(3,Ally,False) [15,19] 0 0 0x1 REDA15R17  [Mend, Heal, Vulnerary] NoAI
+UNIT
+
 TheBads:
-UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [8,5] 0 0 0 0 [IronMusket] BossAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [8,5] 0 0 0 0 [IronMusket, Blunderbuss] BossAI
 UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [0,7] 0 0 0 0 [IronMusket] AttackInRangeAI
 UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [14,1] 0 0 0 0 [Pistol] AttackInRangeAI
-UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [13,11] 0 0 0 0 [Blunderbuss] AttackInRangeAI
+UNIT Gunsmith Gunner 0 Level(3, Enemy, True) [13,11] 0 0 0 0 [Blunderbuss] BossAI
 UNIT BrickBoys Thief 0 Level(3, Enemy, True) [3,12] 0 0 0 0 [IronDagger] AttackInTwoAI
-UNIT BrickBoys Thief 0 Level(3, Enemy, True) [6,3] 0 0 0 0 [IronKnife] AttackInRangeAI
+UNIT BrickBoys Thief 0 Level(3, Enemy, True) [6,2] 0 0 0 0 [IronKnife] AttackInRangeAI
 UNIT BrickBoys Thief 0 Level(3, Enemy, True) [12,7] 0 0 0 0 [IronKnife] AttackInRangeAI
 UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [7,17] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [5,3] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [5,2] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [17,1] 0 0 0 0 [SteelLance] AttackInTwoAI
-UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [8,10] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [8,9] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [HandAxe] AttackInRangeAI
 UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [5,0] 0 0 0 0 [SteelAxe] AttackInRangeAI
-UNIT BrickBoys Warden 0 Level(3, Enemy, True) [9,5] 0 0 0 0 [SteelSword, SteelLance] BossAI
-UNIT BrickBoys Vanguard 0 Level(3, Enemy, True) [0,15] 0 0 0 0 [IronAxe, IronLance] ChargeAI
+UNIT BrickBoys Warden 0 Level(3, Enemy, True) [0,15] 0 0 0 0 [IronLance, SteelSword] ChargeAI
+UNIT BrickBoys Vanguard 0 Level(3, Enemy, True) [9,5] 0 0 0 0 [HandAxe, SteelLance] BossAI
 UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [10,17] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [4,7] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT TheDukes Mercenary 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [SteelSword] AttackInRangeAI
-UNIT TheDukes Hunter 0 Level(3, Enemy, True) [13,10] 0 0 0 0 [Greatbow] ChargeAI
+UNIT TheDukes Hunter 0 Level(3, Enemy, True) [13,10] 0 0 0 0 [Greatbow] BossAI
 UNIT TheDukes Hunter 0 Level(3, Enemy, True) [4,6] 0 0 0 0 [IronBow] AttackInRangeAI
 UNIT TheDukes Hunter 0 Level(3, Enemy, True) [11,3] 0 0 0 0 [MiniBow] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [2,0] 0 0 0 0 [Thani] AttackInTwoAI
 UNIT BigBrick Fighter 0 Level(5, Enemy, True) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
-UNIT Hakman Myrmidon 0 Level(5, Enemy, True) [1,4] 0 0 0 0 [Peacekeeper] AttackInRangeAI
-UNIT MrMist Mage 0 Level(6, Enemy, True) [10,11] 0 0 0 0 [Galestrike] AttackInRangeAI
+UNIT Hakman Myrmidon 0 Level(5, Enemy, True) [8,1] 0 0 0 0 [Peacekeeper] AttackInRangeAI
+UNIT MrMist Mage 0 Level(6, Enemy, True) [12,17] 0 0 0 0 [Galestrike] AttackInRangeAI
 UNIT Yaoguai Ninja 0 Level(6, Enemy, True) [8,6] 0 0 0 0 [Compass] BossAI
-UNIT TheDuke Archer 0 Level(4, Enemy, True) [16,4] 0 0 0 0 [MiniBow, Snapshot] AttackInRangeAI
+UNIT TheDuke Archer 0 Level(4, Enemy, True) [10,1] 0 0 0 0 [Snapshot] AttackInRangeAI
 UNIT
 
 TheSads:
@@ -111,8 +119,17 @@ UNIT TheCloser Champion 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R18 [Spea
 UNIT Jozef Gunner 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R19 [SilverMusket, Blunderbuss, Mincemaker] ChargeAI
 UNIT
 
-TheLad:
+TheCad:
 UNIT Tangyuan DragonRider_F 0 Level(3,NPC,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
+UNIT
+
+TheMads:
+UNIT BrickBoys Brigand 0 Level(3, Enemy, True) [8,0] 0 0 0 0 [IronAxe] [0x0,0x12,0x4,0x0]
+UNIT BrickBoys Deserter 0 Level(3, Enemy, True) [10,0] 0 0 0 0 [IronLance] [0x0,0x12,0x4,0x0]
+UNIT
+
+TheGlad:
+UNIT Jozef Gunner 0 Level(10, Enemy, True) [15,19] 0 0 0x1 REDA15R17 [SilverMusket, Blunderbuss, Mincemaker] ChargeAI
 UNIT
 
 Traps1:
@@ -124,20 +141,83 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+SetBackground(Ship)
+Text(ThePlan)
+FADI 15
+Clean
+WEATHER 4 
 LOAD1 1 Units1
 ENUN
 LOAD1 1 TheBads
 ENUN
-LOAD1 1 TheLad
+LOAD1 1 TheCad
+FADU 15
+STAL 30
+CAMERA Tangyuan
+CURSOR Tangyuan
+STAL 45
+REMOVE_CURSORS
+Text(Tangyuan1)
+STAL 30
+CAMERA MrMist
+LOAD1 0 TheLads
+ENUN
+STAL 20
+CURSOR MrMist
+STAL 45
+REMOVE_CURSORS
+Text(ThePlan2)
+MOVE 20 MrMist [10, 11]
+ENUN
+STAL 20
+CAMERA Tangyuan
+CURSOR Tangyuan
+STAL 45
+REMOVE_CURSORS
+Text(Tangyuan2)
+STAL 20
+CAMERA Hakman
+CURSOR Hakman
+STAL 45
+REMOVE_CURSORS
+Text(Hakman1)
+MOVE 20 TheDuke [16, 4]
+ENUN
+STAL 20
+Text(Hakman2)
+MOVE 20 Hakman [1, 4]
+ENUN
+STAL 20
+CAMERA TheDuke
+CURSOR TheDuke
+STAL 45
+REMOVE_CURSORS
+Text(TheDuke1)
+STAL 20
+CAMERA MrMist
+CURSOR MrMist
+STAL 45
+REMOVE_CURSORS
+Text(MrMist1)
+STAL 20
+CAMERA Yaoguai
+CURSOR Yaoguai
+STAL 45
+REMOVE_CURSORS
+Text(Yaoguai1)
 ENUN
 ENUT 0x8
-FADU 15
 CenterTextbox(InfoText)
 GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
+SetBackground(Fort_Ruins)
+Text(Jozef3)
+SetBackground(Ship)
+Text(WeWin)
+GiveGold(500)
 GoToHubChapter(HubA)
 NoFade
 ENDA
@@ -152,11 +232,24 @@ REMOVE_CURSORS
 NoFade
 ENDA
 
+HomiesHere:
+SpawnReinforcements(TheMads)
+STAL 20
+SpawnReinforcements(TheGlad)
+STAL 20
+Text(Jozef1)
+MOVE 15 Jozef [15, 19]
+ENUN
+REMOVEUNIT Jozef
+NoFade
+ENDA
+
 HereTheyCome:
 CAMERA [13, 19]
 STAL 30
 LOAD1 1 TheSads
-STAL 30
+STAL 45
+Text(Jozef2)
 NoFade
 ENDA
 
@@ -183,7 +276,7 @@ REMOVE_CURSORS
 CURSOR [10,0]
 STAL 45
 REMOVE_CURSORS
-CenterTextbox(EscapeTime)
+Text(EscapeTime)
 AddTrap(BlueSigilTrapID,8, 0)
 AddTrap(BlueSigilTrapID,9, 0)
 AddTrap(BlueSigilTrapID,10, 0)

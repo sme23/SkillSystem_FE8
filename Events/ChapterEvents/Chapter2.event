@@ -16,7 +16,22 @@ TurnBasedEvents:
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(WentToHubA1, GotoChapter1, Lua, Orlando)
 END_MAIN
+
+GotoChapter1:
+CHECK_EVENTID SeenHubA1Pitch
+BNE 7 sC s0
+Text(HubA1Pitch)
+LABEL 7
+EVBIT_MODIFY 4
+Text(HubA1Prompt)
+ENUT SeenHubA1Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
+ENUF WentToHubA1
+NoFade
+ENDA
 
 LocationBasedEvents:
 END_MAIN
@@ -27,6 +42,8 @@ AREA MainRoomToOtherRooms GotoLibrary [0,17] [0,18]
 AREA MainRoomToOtherRooms GotoBarracksAndTreasureRoom [5,13] [5,13]
 
 AREA TreasureRoomToMainRoom GoBackToMainRoomFromTreasureRoom [29,23] [29,24]
+AREA LuaQuartersToMainRoom GoBackToMainRoomFromLuaQuarters [7,4] [7,4]
+AREA LibraryToMainRoom GoBackToMainRoomFromLibrary [18,7] [18,8]
 
 AREA WentToPortGreagor GotoPortGreagorFirstTime [1,0] [3,0]
 AREA MainRoomToPort GotoPortGreagor [1,0] [3,0]
@@ -36,76 +53,119 @@ CauseGameOverIfLordDies
 END_MAIN
 
 GotoLuasQuarters:
-CALL ClearChapter2Traps
+ENUF MainRoomToOtherRooms
+NoFade
+ENDA
+
+GoBackToMainRoomFromLuaQuarters:
+ENUF LuaQuartersToMainRoom
 NoFade
 ENDA
 
 GotoLibrary:
-CALL ClearChapter2Traps
+InitiateLoadMapHub(HubALibrary, LuaInDaHubLibrary, LibrarySpawnEvent)
 NoFade
 ENDA
 
+LibrarySpawnEvent:
+NoFade
+ENDA
+
+LuaInDaHubLibrary:
+UNIT Lua Captain 0 Level(10,Ally,False) [18,8] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+GoBackToMainRoomFromLibrary:
+InitiateLoadMapHub(Chapter2, LuaFromDaLibrary, MainRoomSpawnEvent)
+NoFade
+ENDA
+
+LuaFromDaLibrary:
+UNIT Lua Captain 0 Level(10,Ally,False) [0,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
 GotoBarracksAndTreasureRoom:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILECHANGE 1
-CALL ClearChapter2Traps
-LoadPlayerUnits(LuaInDaTreasureRoom)
-CALL AddTreasureRoomTraps
+InitiateTileChangeInHub(ClearChapter2Traps, AddTreasureRoomTraps, 1, LuaInDaTreasureRoom, TreasureRoomSpawnEvent)
 ENUF TreasureRoomToMainRoom
-CAMERA_CENTERED Lua
-FADU 10
+NoFade
+ENDA
+
+TreasureRoomSpawnEvent:
 NoFade
 ENDA
 
 GoBackToMainRoomFromTreasureRoom:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 1
-CALL ClearTreasureRoomTraps
-LoadPlayerUnits(LuaOnDaStairs)
-CALL AddChapter2Traps
-CAMERA_CENTERED Lua
+InitiateTileRevertInHub(ClearTreasureRoomTraps, AddChapter2Traps, 1, LuaOnDaStairs, MainRoomSpawnEvent)
 ENUF MainRoomToOtherRooms
-FADU 10
+NoFade
+ENDA
+
+MainRoomSpawnEvent:
+LoadPlayerUnits(OrlandoRahelUnitGroup)
 NoFade
 ENDA
 
 GotoPortGreagorFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-LOMA HubA
-LoadPlayerUnits(LuaInDaHubFirstTime)
-CAMERA_CENTERED Lua
-FADU 10
+InitiateLoadMapHub(HubA, ClearHubATraps, LuaInDaHubFirstTime, PortGreagorSpawnEvent)
 Text(HubABeginningScene3)
+SetAllHubChapterFlags
 ENUT PortToDocks
+ENUT TavernToPort
+ENUT PortToDocks
+ENUT PortToTavern
+ENUT PortToOtherAreas
+ENUT DocksToPort
+ENUT PortToBase
 ENUF WentToPortGreagorDocks //sets the temp flag version and allows global to be triggered
-GiveGold(5000)
-MUSC PortGreagorID
+GiveGold(3000)
+ENUF 4
+NoFade
+ENDA
+
+ClearHubATraps:
+RemoveTrapAtCoords(0, 11)
+RemoveTrapAtCoords(0, 12)
+RemoveTrapAtCoords(0, 13)
+RemoveTrapAtCoords(20, 4)
+RemoveTrapAtCoords(21, 4)
+RemoveTrapAtCoords(8, 20)
+
+RemoveTrapAtCoords(12, 5)
+RemoveTrapAtCoords(18, 9)
 NoFade
 ENDA
 
 GotoPortGreagor:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-LOMA HubA
-LoadPlayerUnits(LuaInDaHub) 
-CAMERA_CENTERED Lua
-FADU 10
+InitiateLoadMapHub(HubA, LuaInDaHub, PortGreagorSpawnEvent)
 NoFade
 ENDA
+
+PortGreagorSpawnEvent:
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup)
+NoFade
+ENDA
+
+OrlandoRahelUnitGroup:
+UNIT Orlando 0 0 Level(12,NPC,False) [6,16] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [6,18] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+OndehBikoUnitGroup:
+UNIT Ondeh 0 0 Level(4,NPC,True) [23,19] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,NPC,True) [24,19] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
+UNIT
+
+RochefortUnitGroup:
+UNIT Rochefort 0 0 Level(1,NPC,False) [20,14] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
 
 LuaInDaHub:
 UNIT Lua Captain 0 Level(10,Ally,False) [20,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 LuaInDaHubFirstTime:
-UNIT Lua Captain 0 Level(10,Ally,False) [20,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [16,9] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 LuaInDaTreasureRoom:

@@ -69,6 +69,7 @@
 #define Slimshot $37
 #define ShiningBow $d4
 #define Snapshot $db
+#define Scorpio $e4
 
 //TOMES
 
@@ -128,6 +129,7 @@
 #define FliersPermit $67
 #define MagesRing $68
 #define RidersBadge $97
+#define Tonic 0xCB // a durability based item 
 #define TealGem $e0
 #define Eyepatch $e1
 #define AshArrow $e2

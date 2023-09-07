@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="24" height="26" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="24" height="26" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
  <tileset firstgid="1" name="FlasubanVillage" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../../../../Desktop/FE Stuff/tilesets/FlasubanVillage.png" width="512" height="512"/>
+  <image source="Tilesets/FlasubanVillage.png" width="512" height="512"/>
  </tileset>
  <layer id="1" name="Tile Layer 1" width="24" height="26">
   <properties>
@@ -74,7 +74,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,604,605,605,606,607,607,1
 </data>
  </layer>
- <layer id="3" name="Planks" width="24" height="26">
+ <layer id="3" name="Planks" width="24" height="26" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -104,7 +104,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="4" name="BoatDocking1" width="24" height="26">
+ <layer id="4" name="BoatDocking1" width="24" height="26" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -164,7 +164,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,411,444,351,447,447,351
 </data>
  </layer>
- <layer id="6" name="Chest" width="24" height="26">
+ <layer id="6" name="Chest" width="24" height="26" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

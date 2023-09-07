@@ -3,14 +3,14 @@ None,0,0
 0x01 Lua,0,15
 0x02 Pilar,2,20
 0x03 Desiderio,1,5
-0x04 Razvan,2,60
-0x05 Carmen,0,55
+0x04 Razvan,2,65
+0x05 Carmen,0,60
 0x06 Ximo,0,25
 0x07 Estelle,1,40
 0x08 Hermenegildo,7,55
-0x09 MrYodsen,3,40
+0x09 MrYodsen,4,25
 0x0A Durgham,0,5
-0x0B Indio,(-1),49
+0x0B Indio,1,49
 0x0C Leandra,0,14
 0x0D Jaime,1,30
 0x0E Leonor,0,20
@@ -108,8 +108,8 @@ None,0,0
 0x6A Zonta (Ch 5x),0,0
 0x6B A4PirateBoss,(-1),0
 0x6C A4RebelBoss,6,35
-0x6D Orson (Ch 16),13,50
-Morva (Ch 20),6,85
+0x6D Manfred,4,20
+0x6E CrimsonHeart,0,5
 Orson (Ch 5x),3,10
 Valter (Ch 15),2,5
 Selena (Ch 10B +ACY- 13B),10,40

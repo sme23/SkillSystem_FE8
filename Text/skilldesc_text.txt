@@ -1284,9 +1284,9 @@ defeating an enemy, gain +4 Mag.[N]
 (Max +10)[X]
 
 ## SD_StrTaker
-Strength Taker: After attacking and[N]
-defeating an enemy, gain +4 Str.[N]
-(Max +10)[X]
+Strengthtaker: When this unit initiates[N]
+and kills an enemy, +2 Str (Max +10).[N]
+Lasts until end of chapter.[X]
 
 ## SD_SklTaker
 Skill Taker: After attacking and[N]
@@ -1697,8 +1697,9 @@ Growths remain the same.[X]
 Swap Str with Spd.[X]
 
 ## SD_Hardworking
-Hardworking: For every kill unit gets,[N]
-+1 STR/MAG until end of chapter (max 5).[X]
+Hardworking: When this unit initiates[N]
+and kills an enemy, +1 Str and +1 Mag[N]
+(Max +5). Lasts until end of chapter.[X]
 
 ## SD_WellRested
 When unit isn't deployed for a chapter,[N]
@@ -1729,6 +1730,5 @@ no longer deal extra damage, but[N]
 durability isn't used up during crits.[X]
 
 ## SD_DeftHands
-Deft Hands: Unit can act,[N]
-but not move, after stealing.[N]
-(not currently functional)[X]
+Deft Hands: Unit can act again,[N]
+but not move, after stealing.[X]

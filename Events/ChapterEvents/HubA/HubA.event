@@ -3,9 +3,13 @@ EventPointerTable(HubAEventsID, PointerList)
 // temp flags
 #define SeenHubA1Pitch 0x7
 #define SeenHubA2Pitch 0x8
+#define SeenHubA3Pitch 0x9
+#define SeenHubA5Pitch 0xB
 #define SeenHubA6Pitch 0xc
 
 //hub maneuvering flags
+#define LibraryToMainRoom 25
+#define LuaQuartersToMainRoom 26
 #define MrYodsenSpokeToOnce 27
 #define TavernToPort 28
 #define PortToTavern 29
@@ -21,12 +25,6 @@ EventPointerTable(HubAEventsID, PointerList)
 #define MedwynSpokeToOnce 39
 #define BartzSpokeToOnce 40
 //global flags
-#define WentToHubA1 0x83
-#define WentToHubA2 0x8B
-#define WentToHubA3 0x8C
-#define WentToHubA4 0x8D
-#define WentToHubA5 0x8E
-#define WentToHubA6 0x8F
 #define WentToPortGreagor 0x92
 #define WentToPortGreagorDocks 0x93
 #define WentToBaseAgain 0x94
@@ -35,7 +33,7 @@ EventPointerTable(HubAEventsID, PointerList)
 #define HubASamsonArranRecruitFlag 0x97
 #define FirstTimeInTavern 0x98
 #define MrYodsenRecruitFlag 0x99
-#define LuaInAHubFlag 0xA0
+#define TavernFirstTime 0xA1
 
 PointerList:
 POIN TurnBasedEvents
@@ -53,12 +51,62 @@ TurnBasedEvents:
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(WentToHubA2, GotoChapter2, Lua, Jaime)
+CharacterEvent(WentToHubA3, GotoChapter3, Lua, Ondeh)
+CharacterEvent(WentToHubA5, GotoChapter5, Lua, Desiderio)
+CharacterEvent(WentToHubA6, GotoChapter6, Lua, Rochefort)
 CharacterEvent(HubASamsonArranRecruitFlag, TalkToTriana, Lua, Triana)
 CharacterEvent(HubASamsonArranRecruitFlag, TalkToMedwyn, Lua, Medwyn)
 CharacterEvent(HubASamsonArranRecruitFlag, TalkToBartz, Lua, Bartz)
 CharacterEvent(DurghamRecruitFlag, TalkToDurgham, Lua, Durgham)
 CharacterEvent(MrYodsenRecruitFlag, TalkToMrYodsen, Lua, MrYodsen)
 END_MAIN
+
+GotoChapter1:
+HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
+Text(HubA1Prompt)
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
+ENUF WentToHubA1
+NoFade
+ENDA
+
+GotoChapter2:
+HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
+Text(HubA2Prompt)
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
+ENUF WentToHubA2
+NoFade
+ENDA
+
+GotoChapter3:
+HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
+TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
+Text(HubA3Selection_No)
+ENUF WentToHubA3
+NoFade
+ENDA
+
+GotoChapter5:
+HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
+Text(HubA5Prompt) 
+ENUT SeenHubA5Pitch
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(2, HubA_5, HubA5Accepted)
+ENUF WentToHubA5
+NoFade
+ENDA
+
+GotoChapter6:
+HubChapterFirstTimeEvent(1, SeenHubA6Pitch, HubA6Pitch)
+Text(HubA6Prompt) 
+EVBIT_MODIFY 0
+GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
+ENUF WentToHubA6
+NoFade
+ENDA
 
 LocationBasedEvents:
 Armory(HubAArmory,16,13)
@@ -67,7 +115,7 @@ END_MAIN
 
 ALIGN 4
 HubAArmory:
-SHLI IronSword SteelSword IronLance SteelLance IronAxe SteelAxe IronBow SteelBow IronKnife SteelKnife IronDagger SteelDagger
+SHLI IronSword SteelSword IronLance SteelLance IronAxe SteelAxe IronBow SteelBow IronKnife SteelKnife IronDagger SteelDagger IronMusket SteelMusket
 
 ALIGN 4
 HubAVendor:
@@ -77,22 +125,17 @@ ALIGN 4
 MiscBasedEvents:
 AREA PortToDocks PortGreagorDocks [29,15] [29,16]
 AREA WentToPortGreagorDocks PortGreagorDocksFirstTime [29,15] [29,16]
-
 AREA DocksToPort GotoPortFromDocks [0,13] [0,14]
 AREA CameBackFromDocks CameBackFromDocksFirstTime [0,13] [0,14]
 
-AREA PortToBase BackToLuaBase [20,4] [21,4]
+//AREA PortToBase BackToLuaBase [20,4] [21,4]
 AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
 
 AREA PortToTavern FromPortToTavern [8,20] [8,20]
 AREA TavernToPort ToPortFromTavern [8,20] [8,20] 
 
-AREA WentToHubA1 GotoChapter1 [12, 5] [12, 5]
-AREA WentToHubA2 GotoChapter2 [12, 9] [12, 9]
-AREA WentToHubA3 GotoChapter3 [14, 9] [14, 9]
+AREA WentToHubA1 GotoChapter1 [12,5] [12,5]
 AREA WentToHubA4 GotoChapter4 [18, 9] [18, 9]
-AREA WentToHubA5 GotoChapter5 [20, 9] [20, 9]
-AREA WentToHubA6 GotoChapter6 [20, 13] [20, 13]
 AFEV 0 RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
@@ -107,12 +150,8 @@ BlueSigil(29, 15)
 BlueSigil(29, 16)
 BlueSigil(8, 20)
 
-RedSigil(12, 5)
-RedSigil(12, 9)
-RedSigil(14, 9)
+RedSigil(12,5)
 RedSigil(18, 9)
-RedSigil(20, 9)
-RedSigil(20, 13)
 ENDTRAP
 ALIGN 4
 
@@ -121,7 +160,7 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [20,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [13,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 BeginningScene:
@@ -131,6 +170,7 @@ ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
+CALL PortSpawnEvent
 GotoPrepScreenHub
 ENUN
 NoFade
@@ -231,15 +271,14 @@ LABEL 4
     CalculateYodsenPrice
     SADD s1 s0 sC
     CHECK_MONEY
-    BLT 1 s1 sC //if you have more money than the cost, branch to 1
+    BLE 1 s1 sC //if you have more money than the cost, branch to 1
         Text(MrYodsenTellsLuaShesBrokeText)
         GOTO 5
 LABEL 1
     GetTextFromMemSlot1
     Text(RecruitMrYodsenChoice)
-    SADD s3 s1 s0 //moves how much gold to take to s3
-    TAKEMONEY 
-    HubRecruitUnit(MrYodsen, 2, MrYodsenRecruitedText, 3)
+    SADD s3 s1 s0 //moves how much gold to take to s3 
+    HubRecruitYodsen(MrYodsen, 2, MrYodsenRecruitedText, 3)
 LABEL 2
 Text(MrYodsenRejectedText)
 LABEL 5
@@ -263,17 +302,9 @@ NoFade
 ENDA
 
 PortGreagorDocksFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-CALL ClearHubATraps
-STAL 1
-CALL AddDockTraps
-STAL 1
-TILECHANGE 0
-LoadPlayerUnits(LuaAtDaDocks)
-CAMERA_CENTERED Lua
-FADU 15
+UnsetAllHubChapterFlags
+InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEvent)
+RemoveTrapAtCoords(8,22)
 ENUT DocksToPort
 ENUF CameBackFromDocks
 Text(HubABeginningScene4)
@@ -282,113 +313,90 @@ NoFade
 ENDA
 
 PortGreagorDocks:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-CALL ClearHubATraps
-STAL 10
-CALL AddDockTraps
-STAL 10
-TILECHANGE 0
-LoadPlayerUnits(LuaAtDaDocks)
-CAMERA_CENTERED Lua
-CALL DurghamSpawnEvent
-FADU 15
+InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEvent)
 ENUF DocksToPort
 NoFade
 ENDA
 
 CameBackFromDocksFirstTime:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 0
-STAL 10
-CALL ClearDockTraps
-STAL 10
-CALL AddHubATraps
-STAL 10
-LoadPlayerUnits(LuaBackFromDaDocks)
-CAMERA_CENTERED Lua
-FADU 15
+InitiateTileRevertInHub(CUSADockBlues, ClearDockTraps, AddHubABackToBaseTraps, 0, LuaBackFromDaDocks, PortSpawnEventFirstTime)
+SetAllHubChapterFlags
 ENUT PortToBase
 ENUF WentToBaseAgain
-ENUF PortToDocks
+NoFade
+ENDA
+
+CUSADockBlues:
+CUSA Desiderio
+CUSA Pilar
+NoFade
+ENDA
+
+AddHubABackToBaseTraps:
+AddTrap(BlueSigilTrapID,20, 4)
+AddTrap(BlueSigilTrapID,21, 4)
 NoFade
 ENDA
 
 GotoPortFromDocks:
-FADI 10
-SET_ACTIVE 0
-RemoveAll
-TILEREVERT 0
-STAL 10
-CALL ClearDockTraps
-STAL 10
-CALL AddHubATraps
-STAL 10
-LoadPlayerUnits(LuaBackFromDaDocks)
-CAMERA_CENTERED Lua
-FADU 15
+InitiateTileRevertInHub(CUSADockBlues, ClearDockTraps, AddHubATraps, 0, LuaBackFromDaDocks, PortSpawnEvent)
 ENUF PortToDocks
 NoFade
 ENDA
 
 BackToLuaBase:
+InitiateLoadMapHub(Chapter2, ClearHubATraps, LuaFromDaPortInDaBase, MainRoomSpawnEvent)
 NoFade
 ENDA
+
+MainRoomSpawnEvent:
+LoadPlayerUnits(OrlandoRahelUnitGroup)
+NoFade
+ENDA
+
+LuaFromDaPortInDaBase:
+LoadPlayerUnits(LuaBackFromPortGroup)
+NoFade
+ENDA
+
+OrlandoRahelUnitGroup:
+UNIT Orlando 0 0 Level(12,NPC,False) [6,16] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [6,18] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+LuaBackFromPortGroup:
+UNIT Lua Captain 0 Level(10,Ally,False) [2,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
 
 BackToLuaBaseFirstTime:
 FADI 10
 SET_ACTIVE 0
+LoadPlayerUnits(NewUnits)
+STAL 10
 RemoveAll
+UnsetAllHubChapterFlags
+ENUF PortToDocks
+ENUF PortToBase
+ENUF PortToTavern
+CALL PortSpawnEvent  //unset all chapter flags and port flags so you can walk around
+CALL AddHubATraps
+LoadPlayerUnits(LuaInDaHub)
+CAMERA_CENTERED Lua
 SetBackground(Fort)
 Text(HubABeginningScene6)
 Text(HubABeginningScene6_2)
-FADI 10
-CAMERA_CENTERED [20,14]
-GotoPrepScreen
+EraseBackground
+MUSC PortGreagorID
 NoFade
 ENDA
+
+LuaInDaHub:
+UNIT Lua Captain 0 Level(10,Ally,False) [20,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
 
 RefreshLua:
 SVAL s1 0x42
 UNSET_CONDITION Lua
-NoFade
-ENDA
-
-GotoChapter1:
-CHECK_EVENTID SeenHubA1Pitch
-BNE 7 sC s0
-Text(HubA1Pitch)
-LABEL 7
-EVBIT_MODIFY 4
-Text(HubA1Prompt)
-ENUT SeenHubA1Pitch
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
-ENUF WentToHubA1
-NoFade
-ENDA
-
-GotoChapter2:
-CHECK_EVENTID SeenHubA2Pitch
-BNE 7 sC s0
-Text(HubA2Pitch)
-LABEL 7
-EVBIT_MODIFY 4
-Text(HubA2Prompt) 
-ENUT SeenHubA2Pitch
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_2, HubA2Accepted)
-ENUF WentToHubA2
-NoFade
-ENDA
-
-GotoChapter3:
-TutorialYesNoText(HubA3Prompt) 
-GotoHubChapterIfYes(1, HubA_3)
-ENUF WentToHubA3
 NoFade
 ENDA
 
@@ -399,26 +407,7 @@ ENUF WentToHubA4
 NoFade
 ENDA
 
-GotoChapter5:
-TutorialYesNoText(HubA5Prompt) 
-GotoHubChapterIfYes(1, HubA_5)
-ENUF WentToHubA5
-NoFade
-ENDA
 
-GotoChapter6:
-CHECK_EVENTID SeenHubA6Pitch
-BNE 7 sC s0
-Text(HubA6Pitch)
-LABEL 7
-EVBIT_MODIFY 4
-Text(HubA6Prompt) 
-ENUT SeenHubA6Pitch
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_6, HubA6Accepted)
-ENUF WentToHubA6
-NoFade
-ENDA
 
 LuaFirstTripCaveGroup:
 UNIT Lua Captain 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -431,21 +420,36 @@ SetBackground(Ship)
 Text(HubABeginningScene1)
 SetBackground(Fort)
 Text(HubABeginningScene2)
+
 ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
 ENUT WentToPortGreagorDocks //sets future global flag events that I don't want triggered yet
 ENUT CameBackFromDocks
-ENUT WentToBaseAgain 
+ENUT WentToBaseAgain
+ENUT MainRoomToOtherRooms
+ENUT TreasureRoomToMainRoom
+ENUT LuaQuartersToMainRoom
+ENUT LibraryToMainRoom
+
 FADI 10
 LOMA Chapter2
-LOAD1 1 NewUnits
-ENUN
 RemoveAll
+CAMERA_CENTERED [9,12]
+CALL ClearChapter2Traps
 EraseBackground
 LOAD1 0 LuaFirstTripCaveGroup
 ENUN
 ENUT 4
+CenterTextbox(HubTutorial)
 NoFade
 ENDB
+
+ClearChapter2Traps:
+RemoveTrapAtCoords(7,4)
+RemoveTrapAtCoords(5,13)
+RemoveTrapAtCoords(0,17)
+RemoveTrapAtCoords(0,18)
+NoFade
+ENDA
 
 LuaAtDaDocks:
 UNIT Lua Captain 0 Level(10,Ally,False) [0,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -479,8 +483,45 @@ UNIT Bartz Deserter 0 Level(8,NPC,False) [7,14] 0 0 0 0 [SteelLance, Vulnerary] 
 UNIT
 
 MrYodsenUnitGroup:
-UNIT MrYodsen Gunner 0 Level(3,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
+UNIT MrYodsen Gunner 0 Level(6,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
 UNIT
+
+JaimeUnitGroup:
+UNIT Jaime PegasusRider 0 Level(2,NPC,False) [11,20] 0 0 0 0 [SteelSword, IronSword] NoAI
+UNIT
+
+OndehBikoUnitGroup:
+UNIT Ondeh 0 0 Level(4,NPC,True) [23,19] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,NPC,True) [24,19] 0x0 0x0 0 0 [IronLance,Vulnerary] NoAI
+UNIT
+
+RochefortUnitGroup:
+UNIT Rochefort 0 0 Level(1,NPC,False) [20,14] 0x0 0x0 0 0 [SteelMusket] NoAI
+UNIT
+
+DesiderioPilarGroup:
+UNIT Desiderio 0 0 Level(4,Ally,True) [8,22] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [4,12] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+DocksSpawnEvent:
+CALL DocksSpawners
+CALL DurghamSpawnEvent
+NoFade
+ENDA
+
+DocksSpawners:
+LoadCutsceneUnits(DesiderioPilarGroup)
+CUSN Desiderio
+CUSN Pilar
+CHECK_EVENTID WentToHubA6
+BNE 1 s0 sC
+    AddTrap(RedSigilTrapID, 8, 22) //add the indicator under desiderio
+LABEL 1
+NoFade
+ENDA
+
+
 
 DurghamSpawnEvent:
 CHECK_EVENTID DurghamRecruitFlag
@@ -499,9 +540,36 @@ NoFade
 ENDA
 
 PortSpawnEvent:
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA2, 3, JaimeUnitGroup, A2Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup, A3Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup, A6Indicator)
 NoFade
 ENDA
 
+PortSpawnEventFirstTime:
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA2, 3, JaimeUnitGroup, A2Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup, A3Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup, A6Indicator)
+RemoveTrapAtCoords(11,20)
+RemoveTrapAtCoords(23,19)
+RemoveTrapAtCoords(20,14)
+NoFade
+ENDA
+
+A2Indicator:
+AddTrap(RedSigilTrapID, 11, 20)
+NoFade
+ENDA
+
+A3Indicator:
+AddTrap(RedSigilTrapID, 23, 19)
+NoFade
+ENDA
+
+A6Indicator:
+AddTrap(RedSigilTrapID, 20, 14)
+NoFade
+ENDA
 
 AddHubATraps:
 AddTrap(BlueSigilTrapID,0, 11)
@@ -513,11 +581,7 @@ AddTrap(BlueSigilTrapID,29, 15)
 AddTrap(BlueSigilTrapID,29, 16)
 AddTrap(BlueSigilTrapID,8, 20)
 AddTrap(RedSigilTrapID,12, 5)
-AddTrap(RedSigilTrapID,12, 9)
-AddTrap(RedSigilTrapID,14, 9)
 AddTrap(RedSigilTrapID,18, 9)
-AddTrap(RedSigilTrapID,20, 9)
-AddTrap(RedSigilTrapID,20, 13)
 NoFade
 ENDA
 
@@ -531,12 +595,13 @@ RemoveTrapAtCoords(29, 15)
 RemoveTrapAtCoords(29, 16)
 RemoveTrapAtCoords(8, 20)
 
+RemoveTrapAtCoords(20,4)
+RemoveTrapAtCoords(21,4)
 RemoveTrapAtCoords(12, 5)
-RemoveTrapAtCoords(12, 9)
-RemoveTrapAtCoords(14, 9)
 RemoveTrapAtCoords(18, 9)
-RemoveTrapAtCoords(20, 9)
-RemoveTrapAtCoords(20, 13)
+RemoveTrapAtCoords(11, 20)
+RemoveTrapAtCoords(23, 19)
+RemoveTrapAtCoords(20, 14)
 NoFade
 ENDA
 
@@ -559,6 +624,8 @@ ENDA
 ClearDockTraps:
 RemoveTrapAtCoords(0, 13)
 RemoveTrapAtCoords(0, 14)
+RemoveTrapAtCoords(0, 14)
+RemoveTrapAtCoords(8, 22) //remove red tile if it's there
 NoFade
 ENDA
 
