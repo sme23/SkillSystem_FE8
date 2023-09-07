@@ -67,11 +67,11 @@ UNIT Desiderio Vanguard 0 Level(1, Ally, False) [0,4] 0 0 0 0 [0, 0, 0, 0] NoAI
 UNIT
 
 IndioCutsceneUnit:
-UNIT Indio Shaman 0 Level(1, Ally, False) [0,4] 0 0 1 REDA4R2 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, True) [0,4] 0 0 1 REDA4R2 [Surge, Vulnerary] NoAI
 UNIT
 
 ContractorInitialEnemies:
-UNIT Leandra Fighter Geraldo Level(5, Enemy, False) [11, 5] 0 0 0 0 [Bloodaxe, HandAxe, Vulnerary] AttackInTwoAI
+UNIT Leandra Fighter Geraldo Level(5, Enemy, True) [11, 5] 0 0 0 0 [IronAxe, HandAxe, Vulnerary] AttackInTwoAI
 UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] AttackInRangeAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI

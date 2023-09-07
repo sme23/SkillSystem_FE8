@@ -1118,6 +1118,10 @@ ORG SkillIcon(HardworkingID)
 #incbin "SkillIcons/DriveStr.dmp"
 ORG SkillIcon(DeftHandsID)
 #incbin "SkillIcons/Galeforce.dmp"
+ORG SkillIcon(CatchingUpID)
+#incbin "SkillIcons/SpurSpd.dmp"
+ORG SkillIcon(NonconformingID)
+#incbin "SkillIcons/TriAdept.dmp"
 
 
 
