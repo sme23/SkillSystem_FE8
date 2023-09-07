@@ -37,10 +37,13 @@ END_MAIN
 
 LocationBasedEvents:
 Escape(EscapeDisallowed, EscapeEventCheck, 5, 2)
+Escape(EscapeDisallowed, EscapeEventCheck, 6, 2)
+Escape(EscapeDisallowed, EscapeEventCheck, 26, 8)
+Escape(EscapeDisallowed, EscapeEventCheck, 27, 8)
 DurabilityChest(SkillScroll, CanterID, 17, 4)
-ChestMoney(3000, 6, 15)
+ChestMoney(1500, 6, 15)
 Chest(Bloodletter, 22, 15)
-CHES RelicRecovered IronSword [18, 7] 0x14 // Macro can't set a flag so this is the objective chest 
+CHES RelicRecovered Statuette [18, 7] 0x14 // Macro can't set a flag so this is the objective chest 
 END_MAIN
 
 MiscBasedEvents:
@@ -88,12 +91,12 @@ UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [IronLan
 UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [IronLance] GroupOneAI
 UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] GroupOneAI
 UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [15, 16] 0 0 0 0 [IronAxe] GroupOneAI
-UNIT Contractor Mage Geraldo Level(3, Enemy, True) [14, 16] 0 0 0 0 [Elfire] GroupOneAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [14, 16] 0 0 0 0 [Fire] GroupOneAI
 UNIT
 
 SentinelInitialEnemies:
-UNIT Buzu Vanguard Sanz Level(5, Enemy, False) [17, 7] 0 0 0 0 [HandAxe, Pike] BossAI
-UNIT Bozo Warden Sanz Level(5, Enemy, False) [19, 7] 0 0 0 0 [FlameSword, Onigiri] BossAI
+UNIT Buzu Vanguard Sanz Level(5, Enemy, True) [17, 7] 0 0 0 0 [HandAxe, Pike] BossAI
+UNIT Bozo Warden Sanz Level(5, Enemy, True) [19, 7] 0 0 0 0 [FlameSword, Onigiri] BossAI
 
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [6, 15] 0 0 0 0 [Javelin] BossAI
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [22, 15] 0 0 0 0 [Javelin] BossAI
@@ -108,22 +111,22 @@ UNIT Sentinel Mage Sanz Level(4, Enemy, True) [19, 10] 0 0 0 0 [Elfire] AttackIn
 // these aren't sentinels but i ran out of space in the first unit group
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [7, 16] 0 0 0 0 [IronAxe] AttackInTwoAI
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [8, 15] 0 0 0 0 [IronAxe] AttackInTwoAI
-UNIT Contractor Mage Geraldo Level(3, Enemy, True) [3, 14] 0 0 0 0 [Elfire] AttackInTwoAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [3, 14] 0 0 0 0 [Fire] AttackInTwoAI
 
 UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [21, 5] 0 0 0 0 [IronLance] AttackInTwoAI
 UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronLance] AttackInTwoAI
-UNIT Contractor Mage Geraldo Level(3, Enemy, True) [20, 4] 0 0 0 0 [Elfire] AttackInTwoAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [20, 4] 0 0 0 0 [Fire] AttackInTwoAI
 UNIT
 
 UndergroundReinforcements:
-UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Geraldo Mercenary Geraldo Level(5, Enemy, True) [4, 4] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Sentinel Archer Sanz Level(4, Enemy, True) [3, 10] 0 0 0 0 [IronBow] ChargeAI
 UNIT Sentinel Archer Sanz Level(4, Enemy, True) [21, 12] 0 0 0 0 [IronBow] ChargeAI
 UNIT Contractor Brigand Sanz Level(3, Enemy, True) [5, 16] 0 0 0 0 [IronAxe] ChargeAI
 UNIT Contractor Myrmidon Sanz Level(3, Enemy, True) [7, 17] 0 0 0 0 [IronSword] ChargeAI
 UNIT Contractor Brigand Sanz Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronAxe] ChargeAI
 UNIT Contractor Myrmidon Sanz Level(3, Enemy, True) [23, 5] 0 0 0 0 [IronSword] ChargeAI
-UNIT Contractor Thief Sanz Level(3, Enemy, True) [23, 17] DropItem 0 0 0 [IronKnife, Swordreaver] BossAI
+UNIT Contractor Brigand Sanz Level(3, Enemy, True) [23, 17] DropItem 0 0 0 [Bloodaxe] ChargeAI
 UNIT
 
 SuperbossGang:
@@ -220,14 +223,14 @@ BNE 1 sC s0
 Text(ChA1LuaLeandraTalkDialogue)
 ENUT LeandraTalkSeen
 LABEL 1
-SVAL s1 3000
+SVAL s1 1000
 CHECK_MONEY
 BLT 2 sC s1
 Text(ChA1LeandraRecruitPrompt)
 SVAL s1 0x1
 BNE 2 s1 sC
 Text(ChA1LeandraRecruitedDialogue)
-SVAL s3 3000
+SVAL s3 1000
 TAKEMONEY
 CUSA Leandra
 GOTO 3
@@ -243,7 +246,7 @@ CHECK_EVENTID LeandraTalkSeen
 BNE 4 sC s0
 Text(ChA1DesiderioLeandraTalkDialogue)
 ENUT LeandraTalkSeen
-SVAL s1 3000
+SVAL s1 1000
 CHECK_MONEY
 BLT 5 sC s1
 LABEL 4
@@ -251,7 +254,7 @@ Text(ChA1LeandraRecruitPrompt)
 SVAL s1 0x1
 BNE 5 s1 sC
 Text(ChA1LeandraRecruitedDialogue)
-SVAL s3 3000
+SVAL s3 1000
 TAKEMONEY 
 CUSA Leandra
 GOTO 6
