@@ -82,6 +82,14 @@ WellRestedData* WellRested_SaveByte(WellRestedData* saveData) {
 }
 
 Unit* WellRested_LoadByte(WellRestedData* saveData) {
-	WellRestedRAMLoc->wellRestedBoost = saveData->wellRestedBoost;
-	WellRestedRAMLoc->wellRestedFlag = saveData->wellRestedFlag;	
+	if (saveData->wellRestedFlag != 0xFF) {
+		WellRestedRAMLoc->wellRestedBoost = saveData->wellRestedBoost;
+		WellRestedRAMLoc->wellRestedFlag = saveData->wellRestedFlag;	
+	}
+	else {
+		saveData->wellRestedBoost = 0;
+		saveData->wellRestedFlag = 0;
+		WellRestedRAMLoc->wellRestedFlag = 0;
+		WellRestedRAMLoc->wellRestedBoost = 0; 
+	}
 }
