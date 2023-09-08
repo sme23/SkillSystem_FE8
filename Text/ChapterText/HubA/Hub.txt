@@ -102,9 +102,10 @@ So what do you say, Lua? Will you[N]
 take the job?[A][X]
 
 ## HubA1Prompt
-[ML][LoadOrlando]
-[MR][LoadLua]
-[MR]Should I accept Orlando's job for us?[AN]
+A-1: Rights to Own (Loot, Escape)[N]
+Units: Indio (Shaman), Leandra (Fighter)[N]
+Loot: Axe and knife users will benefit.[N]
+Will Lua take Orlando's job?[N]
 [No][X]
 
 ## HubA1Accepted

@@ -279,11 +279,11 @@ It'll be just like old times.[AN]
 [MR]Old times don't pay the tab, Desiderio.[AN]
 You want my services, I'll need a bit of[N]
 insurance in case this job goes south.[AN]
-3000 gold'll suffice.[A][X]
+1000 gold'll suffice.[A][X]
 
 ## ChA1LeandraRecruitPrompt
 [ML][LoadCurrent][MR][LoadLeandra]
-[ML]Should I hire Leandra for 3000 gold?[AN]
+[ML]Should I hire Leandra for 1000 gold?[AN]
 [Yes][X]
 
 ## ChA1LeandraRecruitedDialogue
@@ -294,11 +294,24 @@ to the crew, Leandra.[AN]
 Now, if you don't mind I simply must[N]
 break the news to my old boss.[A][X]
 
-## ChA1TimerWarningDialogue
+## ChA1SanzOrlandoCameoDialogue
+[FL][LoadYurena][L][LoadSanz][MR][LoadOrlando]
+[L]Whoa. This dialogue is unfinished.[AN]
+[MR]You don't say.[A][X]
+
+## ChA1FirstTimerWarningDialogue
 [ML][LoadLua]
 [ML]I hear voices from the underground tunnels.[AN]
 Pick up the pace, men! As soon as the alarm[N]
 goes off, we'll be surrounded.[A][X]
+
+## ChA1SecondTimerWarningDialogue
+[ML][LoadLua]
+[ML]I hear the guards below getting restless.[AN]
+They know something's fishy; the second[N]
+they come up they'll raise the alarm.[AN]
+Steel yourselves, men! Ready or not,[N]
+they'll be coming up soon![A][X]
 
 ## ChA1RelicRecoveredDialogue
 [ML][LoadLua]
@@ -357,11 +370,13 @@ Yurena, prepare yourself![AN]
 [MR]Sir? Sir, what are you doing?![AN]
 I told you it wasn't safe to open[N]
 the door and send Yurena inside![AN]
-//[L]I could open the door, or I[N]
-//could use the Warp staff![AN]
 [L]Ah, but I'm not going to open the door.[AN]
 With the arcane power of this Warp staff[N]
 I own, I can remain safe here.[AN]
 [MR]Yes, but-[AN]
-[L]Yurena! Hope you beat[N]
-your old record![A][X]
+[L]Go, Yurena! I'm positive you[N]
+can beat your old record![A][X]
+
+## ChA1EndingDialogue
+[ML][LoadIndio]
+[ML]That's all folks![A][X]
