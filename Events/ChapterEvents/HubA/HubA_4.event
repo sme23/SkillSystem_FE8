@@ -70,7 +70,7 @@ UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 NPCGroup:
-UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim, Vulnerary] BossAI
+UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim] BossAI
 UNIT
 
 EnemyGroup:
@@ -98,26 +98,27 @@ UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTw
 //turn 5
 UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [13,19] 0 0 0 0 [IronBow] GroupTwoAI
+UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
 //turn 6
-UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [8,19] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Flux] GroupThreeAI
+UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
+UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Flux, Vulnerary] GroupThreeAI
 UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
-UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Flux] GroupFourAI
+UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
 //turn 7
 UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
 UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
 UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
-UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [9,22] 0 0 0 0 [SteelLance, Javelin] GroupFiveAI
+UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
 UNIT
 
 RebelSpawn:
-UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [19,16] 0 0 0 0 [FlameSword] ChargeAI
+UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
 UNIT Rebel Soldier 0 Level(4, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Rebel Warden 0 Level(4, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
 UNIT Rebel Warden 0 Level(4, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
 UNIT Rebel Archer 0 Level(4, Enemy, True) [22,15] 0 0 0 0 [Longbow] ChargeAI
 UNIT Rebel Fighter 0 Level(4, Enemy, True) [20,19] 0 0 0 0 [IronAxe, HandAxe] ChargeAI
+UNIT Rebel GriffinRider 0 Level(4, Enemy, True) [21,10] 0 0 0 0 [Pike] ChargeAI
 UNIT
 
 RebelScoutSpawn:
@@ -272,6 +273,7 @@ ENDA
 
 EndingScene:
 Text(ChA4EndText)
+GiveGold(1200)
 GoToHubChapter(HubA)
 NoFade
 ENDA
