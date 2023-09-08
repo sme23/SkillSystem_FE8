@@ -307,6 +307,7 @@ InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpaw
 RemoveTrapAtCoords(8,22)
 ENUT DocksToPort
 ENUF CameBackFromDocks
+ENUT WentToHubA5
 Text(HubABeginningScene4)
 Text(HubABeginningScene5)
 NoFade
@@ -319,6 +320,7 @@ NoFade
 ENDA
 
 CameBackFromDocksFirstTime:
+ENUF WentToHubA5
 InitiateTileRevertInHub(CUSADockBlues, ClearDockTraps, AddHubABackToBaseTraps, 0, LuaBackFromDaDocks, PortSpawnEventFirstTime)
 SetAllHubChapterFlags
 ENUT PortToBase

@@ -15,7 +15,7 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno1 Dunno2 Dunno3 Tutorial
 POIN Traps1 Traps2
-POIN Units1 Units1
+POIN Units1 Units2
 POIN $0 $0 $0 
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
@@ -56,7 +56,7 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
-UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Lua
+UNIT Lua Captain 0 Level(1, Ally, False) [7,5] 0 0 0 0 [0, 0, 0, 0] NoAI 
 UNIT Indio Shaman 0 Level(1, Ally, False) [25,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Indio
 UNIT Indio Shaman 0 Level(1, Ally, False) [26,9] 0 0 0 0 [Surge, Vulnerary] NoAI // Desiderio
 UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Pilar
@@ -65,6 +65,20 @@ UNIT Indio Shaman 0 Level(1, Ally, False) [27,8] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Ximo
 UNIT Indio Shaman 0 Level(1, Ally, False) [26,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Estelle
 UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
+UNIT
+
+Units2:
+UNIT Lua Captain 0 Level(1, Ally, False) [7,5] 0 0 0 0 [0, 0, 0, 0] NoAI 
+UNIT Indio Shaman 0 Level(1, Ally, False) [25,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Indio
+UNIT Indio Shaman 0 Level(1, Ally, False) [26,9] 0 0 0 0 [Surge, Vulnerary] NoAI // Desiderio
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Pilar
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,3] 0 0 0 0 [Surge, Vulnerary] NoAI // Razvan
+UNIT Indio Shaman 0 Level(1, Ally, False) [27,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Carmen
+UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Ximo
+UNIT Indio Shaman 0 Level(1, Ally, False) [26,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Estelle
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
+UNIT Indio Shaman 0 Level(1, Ally, False) [28,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Estelle
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,2] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
 UNIT
 
 LuaDesiderioCutsceneUnits:
@@ -134,7 +148,7 @@ UNIT
 SuperbossGang:
 UNIT Yurena Champion Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] BossAI
 UNIT Sanz Sage Sanz Level(20, Enemy, False) [13, 21] 0 0 1 REDA13R20 [Tornado, Warp] BossAI
-UNIT Orlando Captain Orlando Level(1, Enemy, False) [14, 21] 0 0 1 REDA14R20 [0] BossAI
+UNIT Orlando 0 Orlando Level(12, Enemy, False) [14, 21] 0 0 1 REDA14R20 [0] BossAI
 UNIT
 
 YurenaGaming:

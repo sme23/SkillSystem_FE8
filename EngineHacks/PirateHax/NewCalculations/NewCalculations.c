@@ -66,7 +66,7 @@ int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target){
 		}
 		// killed
 		if (target->unit.curHP == 0){		
-            int expFromLevelDiff = 3 * levelDiff;
+            int expFromLevelDiff = 6 * levelDiff;
             if (expFromLevelDiff > 30){
                 expFromLevelDiff = 30;
             }
@@ -84,7 +84,7 @@ int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target){
 		}
 
 		// hit
-		int initialHitExp = 10 + 1 * levelDiff;
+		int initialHitExp = 10 + 2 * levelDiff;
 
 			if(initialHitExp <= 1){
 				return 1;
@@ -171,22 +171,22 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
         exp += 15;
     }
     else if (staffRank == C_WEXP){
-        exp += 20;
+        exp += 18;
     }
     else if (staffRank == B_WEXP){
-        exp += 25;
+        exp += 21;
     }
     else if (staffRank == A_WEXP){
-        exp += 30;
+        exp += 24;
     }
     else{
-        exp += 40;
+        exp += 30;
     }
 
     int levelDiff = GetLevelDifference(actor, &gBattleTarget);
 
     if (levelDiff < 0){ //if the target is lower level than actor, reduce exp by 2 * level diff
-        exp += levelDiff * 2;
+        exp += levelDiff * 3;
     }
    
     if (exp <= 3){
@@ -247,7 +247,7 @@ int GetStealExpValue(int item){
     u8 durability = item >> 8;
     int totalCost = costPerUse * durability; 
     
-    int stealExp = totalCost / 50 + GetLevelDifference(&gBattleActor, &gBattleTarget);
+    int stealExp = totalCost / 50 + GetLevelDifference(&gBattleActor, &gBattleTarget) * 2;
 
     if (stealExp >= 20){
         return 20;
