@@ -79,6 +79,10 @@ POIN TonicUseBoxTextWord
 TonicUseBoxTextWord:
 WORD TonicUseBoxText
 
+ALIGN 4
+TonicItemID:
+WORD Tonic
+
 PUSH
 	ORG 0xA4354
 	jumpToHack(ClearTonicTableHook)
