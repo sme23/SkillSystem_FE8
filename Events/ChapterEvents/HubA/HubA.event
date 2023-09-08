@@ -64,7 +64,7 @@ END_MAIN
 
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
-Text(HubA1Prompt)
+TutorialYesNoText(HubA1Prompt)
 EVBIT_MODIFY 0
 GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
 ENUF WentToHubA1

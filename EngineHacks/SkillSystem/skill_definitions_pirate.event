@@ -133,3 +133,6 @@
 
 //Deft Hands: Unit can act, but not move after stealing. (repeatedly)
 #define DeftHandsID 41
+
+//Miracle: Survive a lethal attack if HP > 50%.
+#define MiracleID 42
