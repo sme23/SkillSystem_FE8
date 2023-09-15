@@ -37,8 +37,8 @@ closer to my final escape![A][X]
 
 ## IndioEscapeQuote
 [ML][LoadIndio]
-[ML]*Huff*[Beat] *Puff*[Beat] I made it in record time![N]
-Let's keep this up for next time, Indio![A][X]
+[ML]*Huff*[Beat] *Puff*[Beat] Just beat my old record![N]
+Let's keep this pace up, Indio![A][X]
 
 ## LeandraEscapeQuote
 [ML][LoadLeandra]
