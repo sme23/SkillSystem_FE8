@@ -185,6 +185,7 @@ CAMERA Lua
 LOAD1 0 IndioCutsceneUnit
 ENUN
 Text(ChA1BeginningScene4)
+POPUP ChA1IndioRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 ENUT EscapeDisallowed
 ENUT AllUnitsMustEscapeFlag
 LOAD1 1 ContractorInitialEnemies
@@ -252,6 +253,7 @@ CUSA Leandra
 GOTO 3
 LABEL 2
 ENUF LeandraRecruited
+POPUP ChA1LeandraRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 LABEL 3
 NoFade
 ENDA
@@ -276,6 +278,7 @@ CUSA Leandra
 GOTO 6
 LABEL 5
 ENUF LeandraRecruited
+POPUP ChA1LeandraRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 LABEL 6
 NoFade
 ENDA
@@ -286,7 +289,10 @@ CAMERA_CENTERED [13, 20]
 STAL 30
 LOAD1 1 SuperbossGang
 ENUN
-Text(ChA1SanzOrlandoCameoDialogue)
+Text(ChA1SanzOrlandoCameoDialogue1)
+MOVE 60 Yurena [12, 19]
+ENUN
+Text(ChA1SanzOrlandoCameoDialogue2)
 MOVE 60 Yurena [12, 21]
 MOVE 60 Sanz [13, 21]
 MOVE 60 Orlando [14, 21]
@@ -294,7 +300,8 @@ ENUN
 DISA Yurena
 DISA Sanz
 DISA Orlando
-
+NoFade
+ENDA
 
 ALIGN 4
 FirstTimerWarning:
@@ -373,6 +380,20 @@ NoFade
 ENDA
 
 EndingScene:
+SetBackground(Ship)
+CHECK_ALIVE Indio
+BEQ 8 0x0 0xC
+Text(ChA1EndingDialogue1IndioAlive)
+GOTO 9
+LABEL 8
+Text(ChA1EndingDialogue1IndioDead)
+LABEL 9
+CHECK_ALIVE Leandra
+BEQ 10 0x0 0xC
+Text(ChA1EndingDialogueLeandraRecruited)
+LABEL 10
+Text(ChA1EndingDialogue2)
+EraseBackground
 GoToHubChapter(HubA)
 NoFade
 ENDA

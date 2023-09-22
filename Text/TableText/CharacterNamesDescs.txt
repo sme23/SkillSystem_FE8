@@ -83,16 +83,16 @@ Indio[X]
 
 ## IndioDesc
 Wayfarer[N]
-A shaman islander making the most[N]
-of their short time on earth.[X]
+A Balinokan shaman making the[N]
+most of their short time on Earth.[X]
 
 ## LeandraName
 Leandra[X]
 
 ## LeandraDesc
 Stevedore[N]
-A jaded wanderer believing money[N]
-is the grease that turns the world.[X]
+Former Roseblade, current jaded wanderer[N]
+only looking to fill her coinpurse.[X]
 
 ## TrianaName
 Triana[X]
