@@ -81,3 +81,19 @@ XimoMugData:
 #incbin "Dmp/Ximo_palette.dmp"
 #incbin "Dmp/Ximo_minimug.dmp"
 setMugEntry(XimoMug, XimoMugData, 4, 5, 4, 3)
+
+ALIGN 16
+OndehMugData:
+#incbin "Dmp/Ondeh_mug.dmp"
+#incbin "Dmp/Ondeh_frames.dmp"
+#incbin "Dmp/Ondeh_palette.dmp"
+#incbin "Dmp/Ondeh_minimug.dmp"
+setMugEntry(OndehMug, OndehMugData, 3, 5, 3, 3)
+
+ALIGN 16
+MatteoMugData:
+#incbin "Dmp/Matteo_mug.dmp"
+#incbin "Dmp/Matteo_frames.dmp"
+#incbin "Dmp/Matteo_palette.dmp"
+#incbin "Dmp/Matteo_minimug.dmp"
+setMugEntry(MatteoMug, MatteoMugData, 3, 5, 3, 3)
