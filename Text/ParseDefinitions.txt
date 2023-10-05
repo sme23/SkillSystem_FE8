@@ -19,6 +19,7 @@
 [CSS] = [CloseSpeechSlow]
 [CF] = [ClearFace]
 [CSSCF] = [CSS][CF]
+[Clear] = [2NL]
 
 [,] = ,[.4]
 [5.] = .[.5]
@@ -124,6 +125,8 @@
 [LoadSantiago] = [LoadFace][0x31][0x1]
 [LoadSlicer] = [LoadFace][0x31][0x1]
 [LoadDicer] = [LoadFace][0x31][0x1]
+
+[LoadAlonzo] = [LoadFace][0x31][0x1]
 
 [LoadGeraldo] = [LoadFace][0x31][0x1]
 [LoadYurena] = [LoadFace][0x31][0x1]
