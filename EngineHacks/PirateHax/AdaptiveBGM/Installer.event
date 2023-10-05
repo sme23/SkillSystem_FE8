@@ -3,3 +3,5 @@
 
 //Adaptive BGM (credit: Huichelaar)
 #include "FE8-CalmFlow/CalmFlow.txt"
+#include "CalmFlowList.event"
+
