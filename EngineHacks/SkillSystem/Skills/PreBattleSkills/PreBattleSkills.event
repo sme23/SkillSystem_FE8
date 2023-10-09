@@ -420,6 +420,11 @@ EyeForAnEyeApply:
 POIN SkillTester
 WORD EyeForAnEyeID
 
+ALIGN 4
+Critthrift:
+#incbin "Critthrift/Critthrift.dmp"
+POIN SkillTester
+WORD CritthriftID
 
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	ALIGN 4

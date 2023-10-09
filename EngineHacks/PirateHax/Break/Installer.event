@@ -31,3 +31,7 @@ ALIGN 4
 DazzleIDLink:
 BYTE DazzleID
 ALIGN 4
+
+CritthriftIDLink:
+BYTE CritthriftID
+ALIGN 4

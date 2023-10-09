@@ -167,6 +167,8 @@ StudiousBlowBitOffset_Link:
 WORD MiscOffset+11
 HardworkingBitOffset_Link: // stores value 0-5, 3 bits
 WORD MiscOffset+12
+FortuneStaffBitOffset_Link:
+WORD MiscOffset+15
 
 
 ALIGN 4 
