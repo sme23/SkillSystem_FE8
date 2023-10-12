@@ -129,27 +129,6 @@ UNIT Incendivis Dreadnought 0 Level(1,Enemy,True) [21,7] 0 0 0 0 [SilverLance] B
 UNIT Incendivis Dreadnought 0 Level(1,Enemy,True) [21,8] 0 0 0 0 [SilverLance] BossAI
 UNIT
 
-/*Reinforcements1:
-UNIT Incendivis PegasusRider 0 Level(3,Enemy,True) [11,18] 0 0 0 0 [FlameSword] ChargeAI
-UNIT Incendivis DragonRider 0 Level(3,Enemy,True) [12,18] 0 0 0 0 [Crusher] ChargeAI
-UNIT Incendivis GriffinRider 0 Level(3,Enemy,True) [13,18] 0 0 0 0 [Impaler] ChargeAI
-UNIT
-
-Reinforcements2:
-UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [0,0] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [0,1] 0 0 0 0 [SteelAxe] ChargeAI
-UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [0,2] 0 0 0 0 [SteelSword] ChargeAI
-UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [21,0] 0 0 0 0 [Pike] ChargeAI
-UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [21,1] 0 0 0 0 [Bloodaxe] ChargeAI
-UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [21,2] 0 0 0 0 [Onigiri] ChargeAI
-UNIT
-
-Reinforcements3:
-UNIT Incendivis Gunner 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [Blunderbuss] ChargeAI
-UNIT Incendivis Shaman 0 Level(4,Enemy,True) [21,7] 0 0 0 0 [Nosferatu] ChargeAI
-UNIT Incendivis Hunter 0 Level(3,Enemy,True) [21,8] 0 0 0 0 [Pursuer] ChargeAI
-UNIT*/
-
 Traps1:
 ENDTRAP
 ALIGN 4
@@ -188,40 +167,6 @@ CarmenJaimeTalk:
 NoFade
 Text(CarmenJaimeConvo)
 ENDA
-
-/*Reinforcements1Event:
-NoFade
-SpawnReinforcements(Reinforcements1)
-ENDA
-
-Reinforcements2Event:
-NoFade
-SpawnReinforcements(Reinforcements2)
-ENDA
-
-Reinforcements3Event:
-NoFade
-SpawnReinforcements(Reinforcements3)
-ENDA
-
-AllReinforcements:
-NoFade
-CHECK_FLAG 0x8
-BNE 0x1 0xC 0x0
-SpawnReinforcements(Reinforcements1)
-FLAG_T 0x8
-LABEL 0x1
-CHECK_FLAG 0x9
-BNE 0x2 0xC 0x0
-SpawnReinforcements(Reinforcements2)
-FLAG_T 0x9
-LABEL 0x2
-CHECK_FLAG 0xA
-BNE 0x3 0xC 0x0
-SpawnReinforcements(Reinforcements3)
-FLAG_T 0xA
-LABEL 0x3
-ENDA*/
 
 MoreCrimsonHearts:
 NoFade

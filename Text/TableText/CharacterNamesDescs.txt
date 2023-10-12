@@ -475,3 +475,40 @@ Rebel Boss[X]
 ## A4RebelBossDesc
  [X]
 
+## TorchUnitName
+T.O.R.C.H.[X]
+
+## TorchUnitDesc
+ [X]
+
+## IgniswordsName
+Igniswords[X]
+
+## IgniswordsDesc
+ [X]
+
+## IgnacioName
+Ignacio[X]
+
+## IgnacioDesc
+ [X]
+
+## ElodiaName
+Elodia[X]
+
+## ElodiaDesc
+Commander[N]
+A senior member of T.O.R.C.H.[N]
+known as the [OQ]Pirate Hunter.[CQ][X]
+
+## HugoName
+Hugo[X]
+
+## HugoDesc
+ [X]
+
+## JulianaName
+Juliana[X]
+
+## JulianaDesc
+ [X]

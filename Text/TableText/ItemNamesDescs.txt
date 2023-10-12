@@ -373,3 +373,10 @@ to possess miraculous properties.[X]
 You feel more able[N]
 to withstand any[N]
 blow.[X]
+
+## KnightRingName
+Knight Ring[X]
+
+## KnightRingDesc
+Allows this unit to move again after[N]
+an action with remaining movement.[X]

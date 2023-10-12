@@ -1,8 +1,8 @@
 INLINE MagCharTable,Base Magic,Magic Growth
 None,0,0
-0x01 Lua,0,15
-0x02 Pilar,2,20
-0x03 Desiderio,1,5
+0x01 Lua,0,20
+0x02 Pilar,5,30
+0x03 Desiderio,1,10
 0x04 Razvan,2,65
 0x05 Carmen,0,60
 0x06 Ximo,0,25
@@ -14,14 +14,14 @@ None,0,0
 0x0C Leandra,0,14
 0x0D Jaime,1,30
 0x0E Leonor,0,20
-0x0F Ondeh,4,35
+0x0F Ondeh,3,30
 0x10 Biko,0,20
 0x11 Tangyuan,2,25
 0x12 Juan,2,25
 0x13 Matteo,1,20
 0x14 Suzanne,6,35
-0x15 Tethys,0,5
-0x16 Marisa,1,10
+0x15 Orlando,(-2),30
+0x16 Rahel,(-1),20
 0x17 Saleh,11,30
 0x18 Ewan,2,45
 0x19 L'Arachel,5,50
@@ -103,20 +103,20 @@ None,0,0
 0x65 Jozef,0,0
 0x66 TheCloser,0,0
 0x67 BrickBoys,0,0
-0x68 O'Neill (Prologue),0,0
-0x69 Glen (Cutscene),0,0
-0x6A Zonta (Ch 5x),0,0
+0x68 Rochefort,0,0
+0x69 A6 Pirate,0,0
+0x6A A4Pirate,0,0
 0x6B A4PirateBoss,(-1),0
 0x6C A4RebelBoss,6,35
 0x6D Manfred,4,20
-0x6E CrimsonHeart,0,5
-Orson (Ch 5x),3,10
-Valter (Ch 15),2,5
-Selena (Ch 10B +ACY- 13B),10,40
-Valter (Prologue),2,5
-Breguet (Ch 1),0,5
-Bone (Ch 2),0,5
-Bazba (Ch 3),1,10
+0x6E CrimsonHeart,0,0
+0x6F TorchUnit,0,0
+0x70 Igniswords,0,0
+0x71 Ignacio,9,40
+0x72 TorchUnit2,2,5
+0x73 Hugo,0,5
+0x74 Juliana,5,60
+0x75 Elodia,1,10
 Entombed (Ch 4),1,5
 Saar (Ch 5),1,5
 Novala (Ch 6),8,50

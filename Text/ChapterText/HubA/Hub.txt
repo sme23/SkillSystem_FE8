@@ -30,6 +30,9 @@ have one more chance to prepare,[N]
 and after that, they'll move on.[AN]
 For now, follow the blue tiles![A][X]
 
+## HubAGoTime
+Navigate onto the green tile[N]
+in order to start Chapter 2.[X]
 
 ## HubA1Pitch
 [ML][LoadOrlando]

@@ -19,6 +19,8 @@ ALIGN 4
 BreakExemptClassList:
 BYTE Warden
 BYTE Vanguard
+BYTE General
+BYTE Baron
 BYTE 0
 
 //skillsys stuff; comment out if you have it elsewhere

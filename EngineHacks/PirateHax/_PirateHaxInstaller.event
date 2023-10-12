@@ -150,3 +150,8 @@ BYTE 0x6
 ORG 0x98728 //Prep screen pick units tile width
 BYTE 0x6
 POP
+
+PUSH //stops the hang when check_alive on npcs
+	ORG $1027C
+	BYTE 0x00 0x20 0x02 
+POP

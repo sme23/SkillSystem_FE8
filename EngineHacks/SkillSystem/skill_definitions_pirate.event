@@ -136,3 +136,7 @@
 
 //Miracle: Survive a lethal attack if HP > 50%.
 #define MiracleID 42
+
+//Acrobat: All traversable terrain costs 1 movement.
+//By Tequila
+#define AcrobatID 43

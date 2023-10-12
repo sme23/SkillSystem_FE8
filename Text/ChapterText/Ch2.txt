@@ -1,0 +1,54 @@
+## Ch2Title
+Ch 2: Flight of the Hunted[X]
+
+## Ch2GoalWindow
+Hijack/Defend[X]
+
+## Ch2StatusObjective
+  Protect Lua's boat[N]
+while taking Ignacio's.[X]
+
+## Chapter2Explanation
+Orlando's group is in charge of hijacking[N]
+Ignacio's boat as quickly as possible,[N]
+doing so by routing every enemy on it.[AN]
+After it is seized, it will take an[N]
+additional [Red]3 Turns[Red] to ready for takeoff,[N]
+so try to do this as soon as possible.[AN]
+During this time, Lua's group must prevent[N]
+enemies from reaching their own boat.[N]
+If an enemy stands on it, [Red]Game Over.[Red][AN]
+Units with blue diamonds will prioritize[N]
+standing on it above all else, so make[N]
+sure to not let them pass your forces.[AN]
+The bosses will not move immediately,[N]
+but they and their groups will charge[N]
+after enough time has passed.[A][X]
+
+## Ch2_3MinutesLeft
+[MR][LoadLua]
+3 minutes[A][X]
+
+## Ch2_2MinutesLeft
+[MR][LoadLua]
+2 minutes[A][X]
+
+## Ch2_1MinutesLeft
+[MR][LoadLua]
+1 minute[A][X]
+
+## Ch2_0MinutesLeft
+[MR][LoadLua]
+map cleared[A][X]
+
+## Ch2AllIgniswordsDefeated
+[MR][LoadOrlando]
+boat captured[A][X]
+
+## Ch2ElodiasCharge
+[ML][LoadLua]
+Wolf Knights incoming[A][X]
+
+## Ch2GriffinsShowUp
+[ML][LoadLua]
+Griffins here[A][X]

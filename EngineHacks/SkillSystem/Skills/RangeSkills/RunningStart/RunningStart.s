@@ -36,7 +36,7 @@ ldrb r0, [r1]
 
 GiveBonus:
 strb r0, [r1] @store normal number of tiles moved at end of RAM
-mov r1, #0x3
+mov r1, #0x2
 swi #0x6 @stores quotient in r0
 mov r3, r0
 mov 	r2, sp

@@ -308,7 +308,7 @@ ALIGN 4
 TricksterMMS:
 #incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-walk.dmp"
 
-StandingMapSprite(BowCavMapSprite,MapSprite16x16,BowCavSMS)
+StandingMapSprite(BowCavMapSprite,MapSprite16x32,BowCavSMS)
 MovingMapSprite(BowCav, $1C3D7C, BowCavMMS)
 
 ALIGN 4
@@ -318,3 +318,25 @@ BowCavSMS:
 ALIGN 4
 BowCavMMS:
 #incbin "Dmp/Cavalier (M) Bow {FungusCaesar}-walk.dmp"
+
+StandingMapSprite(BaronMapSprite,MapSprite32x32,BaronSMS)
+MovingMapSprite(Baron, $1C3D7C, BaronMMS)
+
+ALIGN 4
+BaronSMS:
+#incbin "Dmp/Baron (U) +Cape and Shield Lance Crusader Helm {Nuramon, Jay, Ryn}-stand.dmp"
+
+ALIGN 4
+BaronMMS:
+#incbin "Dmp/Baron (U) +Cape and Shield Lance Crusader Helm {Nuramon, Jay, Ryn}-walk.dmp"
+
+StandingMapSprite(WolfKnightMapSprite,MapSprite16x32,WolfKnightSMS)
+MovingMapSprite(WolfKnight, $1C3D7C, WolfKnightMMS)
+
+ALIGN 4
+WolfKnightSMS:
+#incbin "Dmp/Brigand (F) Wolf Rider Sword {Zoramine}-stand.dmp"
+
+ALIGN 4
+WolfKnightMMS:
+#incbin "Dmp/Brigand (F) Wolf Rider Sword {Zoramine}-walk.dmp"
