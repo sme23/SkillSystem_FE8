@@ -4,4 +4,4 @@ BossMusicTable:
 POIN BossBGMTable
 
 BossMusicActiveFlagID:
-BYTE 
+BYTE 0xEE //free global flag
