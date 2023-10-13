@@ -1,0 +1,7 @@
+#include "BossChangeBGM.lyn.event"
+
+BossMusicTable:
+POIN BossBGMTable
+
+BossMusicActiveFlagID:
+BYTE 

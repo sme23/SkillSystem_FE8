@@ -17,6 +17,15 @@
 
 .equ MapBGM,						0x3006650 @ Start of second musicplayer, contains address to the map's BGM
 .equ MusicID,						0x3DD @ Desire Below's ID, alter if necessary
+.equ BossBGMFunction, CalmFlowList+4
+
+@only the value in r0 is needed, r1-r3 are not
+@let's pass it to another function that will return the relevant thing
+
+ldr r3, BossBGMFunction
+mov lr, r3
+.short 0xf800
+
 
 @ldr   r3,=0x02024E5C   @ FE8J (BGMSTRUCT@BGM.音楽関係のフラグ1 )
 ldr   r3,=0x02024E5C  @ FE8U (BGMSTRUCT@BGM.音楽関係のフラグ1 )
@@ -37,6 +46,8 @@ b     LoopStart
 
 LoopEnd:
 ldrh  r6,[r4,#2] @r6 = # of tracks to avoid
+
+
 
 	@Disable/Enable tracks for Flow version of song
 	ldr 	r0,=MapBGM
@@ -91,3 +102,5 @@ bx r0
 
 CalmFlowList:
 @POIN CalmFlowList
+@POIN BossBGMFunction
+

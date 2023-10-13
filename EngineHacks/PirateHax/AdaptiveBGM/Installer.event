@@ -5,3 +5,4 @@
 #include "FE8-CalmFlow/CalmFlow.txt"
 #include "CalmFlowList.event"
 
+#include "BossChangeBGM/BossChangeBGM.event"
