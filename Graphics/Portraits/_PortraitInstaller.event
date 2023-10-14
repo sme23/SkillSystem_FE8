@@ -10,6 +10,14 @@ CarmenMugData:
 setMugEntryExtend(CarmenMug, CarmenMugData, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 16
+RazvanMugData:
+#incbin "Dmp/Razvan_mug.dmp"
+#incbin "Dmp/Razvan_frames.dmp"
+#incbin "Dmp/Razvan_palette.dmp"
+#incbin "Dmp/Razvan_minimug.dmp"
+setMugEntryExtend(RazvanMug, RazvanMugData, 3, 5, 3, 3, 10, 4, 0, 0)
+
+ALIGN 16
 LuaMugData:
 #incbin "Dmp/Lua_mug.dmp"
 #incbin "Dmp/Lua_frames.dmp"

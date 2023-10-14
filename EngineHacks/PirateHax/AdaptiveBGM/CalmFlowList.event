@@ -4,6 +4,7 @@
 
 ALIGN 4
 CalmFlowSongList:
-//CalmFlowSong(DistantSkiesID,4)
+CalmFlowSong(DistantSkiesID,6)
+CalmFlowSong(ScalleywagsOnDeckID,6)
 
 CalmFlowSongListEnd

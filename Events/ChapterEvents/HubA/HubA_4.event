@@ -17,23 +17,109 @@ POIN BeginningScene EndingScene
 //10 - pirate boss death quote flag
 //11 - rebel boss death quote flag
 //12 - early arrival flag (if pirate boss is killed before rebels show up)
-//13 - second early arrival flag that stops itself from existing
 //14 - turned on by PirateBossDefeat misc event
 //15 - turned on by RebelBossDefeat misc event
 
 TurnBasedEvents:
 TurnEventPlayer(0, RebelPremonition, 2)
-TurnEventPlayer(13, RebelEarlyArrival, 2, 5)
 TurnEventPlayer(0, ThiefArrival, 4)
+TurnEventPlayer(12, RebelArrival, 3, 5)
 TurnEventPlayer(12, RebelWarning1, 4)
 TurnEventPlayer(12, RebelWarning2, 5)
 TurnEventPlayer(12, RebelWarning3, 6)
-TurnEventPlayer(13, RebelArrival, 7)
 END_MAIN
+
+RebelPremonition:
+SpawnReinforcements(RebelScoutSpawn)
+ENUN
+MOVE 10 Rebel [20,6]
+ENUN
+CameraCursor(Rebel)
+Text(ChA4RebelPremonitionText1)
+MOVE 20 Rebel [23,11]
+ENUN
+REMOVEUNIT Rebel
+CameraCursor(Lua)
+Text(ChA4RebelPremonitionText2)
+NoFade
+ENDA
+
+ThiefArrival:
+SpawnReinforcements(ThiefSpawn)
+AddTrap(RedSigilTrapID,0,22)
+NoFade
+ENDA
+
+RebelArrival:
+CHECK_TURNS
+SVAL s1 7
+BEQ 1 s1 sC  //if the turn count is 7, then we branch to the rebel spawn event
+	CHECK_EVENTID 10 
+	BNE 1 s0 sC //if the pirate boss is dead, play the even early
+	ENUF 12 //unset the rebel arrival flag if neither of these are true
+	GOTO 2
+LABEL 1
+	CAMERA_CENTERED [23,16]
+	TILECHANGE 0
+	STAL 30
+	TILECHANGE 1
+	SOUN 0x02D7 //snag falling sound effect
+	STAL 15
+	FADI 15
+	SpawnReinforcements(RebelSpawn)
+	FADU 15
+	ENUN
+	Text(ChA4RebelArrivalText)
+	SetAI(A4Pirate,0,0,4,0)
+LABEL 2
+NoFade
+ENDA
+
+RebelWarning1:
+ENUF 12 //turn this off, as the player could still potentially kill the boss early
+CHECK_EVENTID 10 //play this event if the boss hasn't been killed
+BNE 4 s0 sC
+	CAMERA_CENTERED [23,25]
+	STAL 30
+	TILECHANGE 2
+	CameraCursor(Lua)
+	Text(ChA4RebelWarningText)
+LABEL 4
+NoFade
+ENDA
+
+RebelWarning2:
+ENUF 12 //turn this off, as the player could still potentially kill the boss early
+CHECK_EVENTID 10 //play this event if the boss hasn't been killed
+BNE 5 s0 sC
+	CAMERA_CENTERED [23,20]
+	STAL 30
+	TILECHANGE 3
+LABEL 5
+NoFade
+ENDA
+
+RebelWarning3:
+ENUF 12 //turn this off, as the player could still potentially kill the boss early
+CHECK_EVENTID 10 //play this event if the boss hasn't been killed
+BNE 6 s0 sC
+	CAMERA_CENTERED [23,16]
+	STAL 30
+	TILECHANGE 0
+LABEL 6
+NoFade
+ENDA
 
 CharacterBasedEvents:
 CharacterEventBothWays(9, JuanRecruitment, Lua, Juan)
 END_MAIN
+
+JuanRecruitment:
+SetAI(Juan,0,0,0,0)
+Text(ChA4JuanRecruitText)
+CUSA Juan
+NoFade
+ENDA
 
 LocationBasedEvents:
 DurabilityChest(SkillScroll,CritthriftID,12,22)
@@ -44,6 +130,22 @@ AFEV 14 PirateBossDefeat 10
 AFEV 15 RebelBossDefeat 11
 CauseGameOverIfLordDies
 END_MAIN
+
+PirateBossDefeat:
+CHECK_EVENTID 11 //check if the rebelBoss death quote has been played
+BEQ 1 s0 sC
+	CALL EndingScene
+LABEL 1
+NoFade
+ENDA
+
+RebelBossDefeat:
+CHECK_EVENTID 10 //check if the pirateBoss death quote has been played
+BEQ 1 s0 sC
+	CALL EndingScene
+LABEL 1
+NoFade
+ENDA
 
 Units1:
 UNIT Lua Captain 0x0 Level(1, Ally, False) [6,0] 0 0 0 0 [Vulnerary] NoAI
@@ -74,10 +176,6 @@ UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, Tak
 UNIT
 
 EnemyGroup:
-//boss debug, delete later!
-//UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [3,2] 0 0 0 0 [Vulnerary] GroupFiveAI
-//UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [3,3] 0 0 0 0 [Vulnerary] ChargeAI
-//UNIT A4Pirate Thief 0 Level(4, Enemy, True) [12,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
 //turn 1
 UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
@@ -128,129 +226,6 @@ UNIT
 ThiefSpawn:
 UNIT A4Pirate Thief 0 Level(4, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
 UNIT
-
-JuanRecruitment:
-SetAI(Juan,0,0,4,0)
-Text(ChA4JuanRecruitText)
-CUSA Juan
-NoFade
-ENDA
-
-ThiefArrival:
-SpawnReinforcements(ThiefSpawn)
-AddTrap(RedSigilTrapID,0,22)
-NoFade
-ENDA
-
-RebelPremonition:
-SpawnReinforcements(RebelScoutSpawn)
-ENUN
-MOVE 10 Rebel [20,6]
-ENUN
-CameraCursor(Rebel)
-Text(ChA4RebelPremonitionText1)
-MOVE 20 Rebel [23,11]
-ENUN
-REMOVEUNIT Rebel
-CameraCursor(Lua)
-Text(ChA4RebelPremonitionText2)
-NoFade
-ENDA
-
-RebelWarning1:
-ENUF 12 //turn this off, as the player could still potentially kill the boss early
-CHECK_EVENTID 10 //play this event if the boss hasn't been killed
-BNE 4 s0 sC
-	CAMERA_CENTERED [23,25]
-	STAL 30
-	TILECHANGE 2
-	CameraCursor(Lua)
-	Text(ChA4RebelWarningText)
-LABEL 4
-NoFade
-ENDA
-
-RebelWarning2:
-ENUF 12 //turn this off, as the player could still potentially kill the boss early
-CHECK_EVENTID 10 //play this event if the boss hasn't been killed
-BNE 5 s0 sC
-	CAMERA_CENTERED [23,20]
-	STAL 30
-	TILECHANGE 3
-LABEL 5
-NoFade
-ENDA
-
-RebelWarning3:
-ENUF 12 //turn this off, as the player could still potentially kill the boss early
-CHECK_EVENTID 10 //play this event if the boss hasn't been killed
-BNE 6 s0 sC
-	CAMERA_CENTERED [23,16]
-	STAL 30
-	TILECHANGE 0
-LABEL 6
-NoFade
-ENDA
-
-RebelArrival:
-ENUF 10 //turn the pirateBoss deathquote back off, as he is still alive if this is playing
-CAMERA_CENTERED [23,16]
-STAL 30
-TILECHANGE 1
-SOUN 0x02D7 //snag falling sound effect
-STAL 15
-FADI 15
-SpawnReinforcements(RebelSpawn)
-FADU 15
-ENUN
-Text(ChA4RebelArrivalText)
-SetAI(A4PirateBoss,0,0,4,0)
-SetAI(A4Pirate,0,0,4,0)
-NoFade
-ENDA
-
-RebelEarlyArrival:
-ENUF 12
-ENUF 13
-CHECK_EVENTID 10 //play this event if the boss has been killed
-BEQ 3 s0 sC
-CHECK_EVENTID 12 //play this event if it HASN'T been played yet
-BNE 3 s0 sC
-CHECK_EVENTID 13 //then, play this event if it HASN'T been played yet
-BNE 3 s0 sC
-	ENUT 12 //turn on flag 12 to prevent this (and some other events) from playing in the future
-	ENUT 13 //turn on flag 12 to prevent this (and some other events) from playing in the future	
-	CAMERA_CENTERED [23,16]
-	TILECHANGE 0
-	STAL 30
-	TILECHANGE 1
-	SOUN 0x02D7 //snag falling sound effect
-	STAL 15
-	FADI 15
-	SpawnReinforcements(RebelSpawn)
-	FADU 15
-	ENUN
-	Text(ChA4RebelArrivalText)
-	SetAI(A4Pirate,0,0,4,0)
-LABEL 3
-NoFade
-ENDA
-
-PirateBossDefeat:
-CHECK_EVENTID 11 //check if the rebelBoss death quote has been played
-BEQ 1 s0 sC
-	CALL EndingScene
-LABEL 1
-NoFade
-ENDA
-
-RebelBossDefeat:
-CHECK_EVENTID 10 //check if the pirateBoss death quote has been played
-BEQ 2 s0 sC
-	CALL EndingScene
-LABEL 2
-NoFade
-ENDA
 
 Traps1:
 ENDTRAP

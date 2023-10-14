@@ -1,5 +1,15 @@
 EventPointerTable(HubAEventsID, PointerList)
 
+//flags for Chapter 2: cannot overlap with ones used for hub A when on this map
+#define EnemyGotOnBoat 7
+#define WindUpFlag1 8
+#define WindUpFlag2 9
+#define WindUpFlag3 10
+#define ReadyForTakeoffFlag 11
+#define Ch2ThisIsAChapter 12
+#define IgniswordsDead 13
+#define Ch2ReinforcementFlags 14
+
 // temp flags
 #define SeenHubA1Pitch 0x7
 #define SeenHubA2Pitch 0x8
@@ -197,7 +207,7 @@ ENUT TavernToPort
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
 SVAL s1 6 //if 5 chapters completed
-BLT 2 s1 sC 
+BLT 2 sC s1 
     AddTrap(GreenSigilTrapID, 16, 10) //green means go
     CenterTextbox(HubAGoTime)
     ENUF GotoChapter2Flag
@@ -411,6 +421,11 @@ UnsetAllHubChapterFlags
 ENUF PortToDocks
 ENUF PortToBase
 ENUF PortToTavern
+ENUF WindUpFlag1
+ENUF WindUpFlag2
+ENUF WindUpFlag3
+ENUF ReadyForTakeoffFlag
+ENUF IgniswordsDead
 CALL PortSpawnEvent  //unset all chapter flags and port flags so you can walk around
 CALL AddHubATraps
 LoadPlayerUnits(LuaInDaHub)
@@ -455,13 +470,18 @@ SetBackground(Fort)
 Text(HubABeginningScene2)
 
 ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
-ENUT WentToPortGreagorDocks //sets future global flag events that I don't want triggered yet
+ENUT WentToPortGreagorDocks //sets future flag EIDs that I don't want triggered yet
 ENUT CameBackFromDocks
 ENUT WentToBaseAgain
 ENUT MainRoomToOtherRooms
 ENUT TreasureRoomToMainRoom
 ENUT LuaQuartersToMainRoom
 ENUT LibraryToMainRoom
+ENUT WindUpFlag1
+ENUT WindUpFlag2
+ENUT WindUpFlag3
+ENUT ReadyForTakeoffFlag
+ENUT IgniswordsDead
 
 FADI 10
 LOMA Chapter2

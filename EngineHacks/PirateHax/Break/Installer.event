@@ -20,7 +20,8 @@ BreakExemptClassList:
 BYTE Warden
 BYTE Vanguard
 BYTE General
-BYTE Baron
+BYTE Runeshield
+BYTE Cataphract
 BYTE 0
 
 //skillsys stuff; comment out if you have it elsewhere

@@ -90,6 +90,7 @@
 
 
 [LoadLua] = [LoadFace][0x2][0x1]
+[LoadLuaHatless] = [LoadFace][0x46][0x1]
 [LoadPilar] = [LoadFace][0x3][0x1]
 [LoadDesiderio] = [LoadFace][0x4][0x1]
 [LoadRazvan] = [LoadFace][0x5][0x1]

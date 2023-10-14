@@ -12,18 +12,6 @@ POIN $0 $0 $0
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
-//flags for Chapter 2: cannot overlap with ones used for hub A when on this map
-#define EnemyGotOnBoat 7
-#define WindUpFlag1 8
-#define WindUpFlag2 9
-#define WindUpFlag3 10
-#define ReadyForTakeoffFlag 11
-#define Ch2ThisIsAChapter 12
-#define IgniswordsDead 13
-#define Ch2ReinforcementFlags 14
-
-//dev note: I kill ignacio on Turn 6, have some fliers come on Turn 8 from bottom right
-
 TurnBasedEvents:
 TurnEventPlayer(0, ElodiaDecidesToCharge, 7)
 TurnEventPlayer(LuaInAHubFlag, ObjectiveExplanation, 1)
