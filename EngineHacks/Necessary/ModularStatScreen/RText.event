@@ -379,7 +379,7 @@
 #endif // ONLY_SHOW_USED_RANKS
 
   ST_Supports:
-  RMenu_Cond(ST_WRank2,ST_Name3,ST_Name3,0,0x80,0x40,0x569,SupportsConditional) 
+  RMenu_Cond(ST_WRank1,ST_Name3,ST_Name3,0,0x80,0x40,0x569,SupportsConditional) 
 
 
   ST_Name3:
