@@ -222,7 +222,7 @@ Ignores enemy resistance.[X]
 Restores HP equal to damage dealt.[X]
 
 ## GalestrikeName
-GaleStrike[X]
+Gale Strike[X]
 
 ## GalestrikeDesc
 Refreshes once per turn on a kill.[X]
@@ -320,8 +320,7 @@ Does exactly as advertised.[X]
 Take Aim![X]
 
 ## TakeAimDesc
-+30 hit to an ally for 1 turn.[N]
-(currently doesn't work!)[X]
++30 hit to an ally for 1 turn.[X]
 
 // EQUIPS
 

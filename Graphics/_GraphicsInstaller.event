@@ -2,3 +2,4 @@
 #include "MapSprites/_MapSpriteInstaller.event"
 #include "ItemIcons/_ItemIconsInstaller.event"
 #include "Portraits/_PortraitInstaller.event"
+#include "BattleAnims/_MasterAnimationInstaller.event"

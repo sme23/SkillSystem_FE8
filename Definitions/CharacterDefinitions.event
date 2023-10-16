@@ -66,6 +66,7 @@
 
 //Hub A3
 #define Sargargala $5B
+#define Sagargala Sargargala
 #define LogPirate $5C
 #define RiojaReaper LogPirate
 #define A3Log $58

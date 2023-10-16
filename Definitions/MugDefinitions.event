@@ -30,6 +30,7 @@
 
 #define IdaMug $51
 #define SargargalaMug $52
+#define SagargalaMug SargargalaMug
 
 // A-6 placeholders, these are all Khazhak
 #define SlicerMug $31

@@ -340,3 +340,14 @@ WolfKnightSMS:
 ALIGN 4
 WolfKnightMMS:
 #incbin "Dmp/Brigand (F) Wolf Rider Sword {Zoramine}-walk.dmp"
+
+StandingMapSprite(WardenMapSprite,MapSprite16x32,WardenSMS)
+MovingMapSprite(Warden, $1C3D7C, WardenMMS)
+
+ALIGN 4
+WardenSMS:
+#incbin "Dmp/Knight (U) Sword {SALVAGED}-stand.dmp"
+
+ALIGN 4
+WardenMMS:
+#incbin "Dmp/Knight (U) Sword {SALVAGED}-walk.dmp"

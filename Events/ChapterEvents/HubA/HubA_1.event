@@ -107,7 +107,7 @@ UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 9] 0 0 0 0 [IronBow] At
 UNIT Contractor Shaman Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [Fire] GroupOneAI
 UNIT Contractor Shaman Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [Fire] GroupOneAI
 UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] GroupOneAI
-UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [15, 16] 0 0 0 0 [IronAxe] GroupOneAI
+UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [15, 16] 0 0 0 0 [IronLance] GroupOneAI
 UNIT
 
 SentinelInitialEnemies:
