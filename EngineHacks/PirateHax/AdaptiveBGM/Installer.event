@@ -5,4 +5,5 @@
 #include "FE8-CalmFlow/CalmFlow.txt"
 #include "CalmFlowList.event"
 
+//Boss BGM persists until boss dies (credit: Sme)
 #include "BossChangeBGM/BossChangeBGM.event"

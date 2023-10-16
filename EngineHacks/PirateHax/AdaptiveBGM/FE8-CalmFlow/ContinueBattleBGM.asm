@@ -22,9 +22,9 @@
 @only the value in r0 is needed, r1-r3 are not
 @let's pass it to another function that will return the relevant thing
 
-ldr r3, BossBGMFunction
-mov lr, r3
-.short 0xf800
+@ldr r3, BossBGMFunction
+@mov lr, r3
+@.short 0xf800
 
 
 @ldr   r3,=0x02024E5C   @ FE8J (BGMSTRUCT@BGM.音楽関係のフラグ1 )
