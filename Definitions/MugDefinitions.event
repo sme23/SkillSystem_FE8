@@ -46,3 +46,13 @@
 #define TheCloserMug $31
 #define YaoguaiMug $31
 #define MrMistMug $31
+
+
+//CLASS CARDS
+
+#define WardenClassCard 0xAD
+#define VanguardClassCard 0xAE
+#define HunterMClassCard 0xAF
+#define HunterFClassCard 0xB0
+#define DeserterClassCard 0xB1
+#define NinjaClassCard 0xB2

@@ -1,0 +1,51 @@
+#define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
+
+
+
+ALIGN 4
+WardenClassCardData:
+#incbin "Dmp/Knight (M) SALVAGED Sword {SALVAGED}.dmp"
+ALIGN 4
+WardenClassCardPal:
+#incbin "Dmp/Knight (M) SALVAGED Sword {SALVAGED}.png_pal.dmp"
+setCardEntry(WardenClassCard, WardenClassCardData, WardenClassCardPal)
+
+ALIGN 4
+VanguardClassCardData:
+#incbin "Dmp/Knight (M) SALVAGED Axe {SALVAGED}.dmp"
+ALIGN 4
+VanguardClassCardPal:
+#incbin "Dmp/Knight (M) SALVAGED Axe {SALVAGED}.png_pal.dmp"
+setCardEntry(VanguardClassCard, VanguardClassCardData, VanguardClassCardPal)
+
+ALIGN 4
+HunterMClassCardData:
+#incbin "Dmp/Hunter (M) {Spud}.dmp"
+ALIGN 4
+HunterMClassCardPal:
+#incbin "Dmp/Hunter (M) {Spud}.png_pal.dmp"
+setCardEntry(HunterMClassCard, HunterMClassCardData, HunterMClassCardPal)
+
+ALIGN 4
+HunterFClassCardData:
+#incbin "Dmp/Hunter (F) {Spud, Jj09}.dmp"
+ALIGN 4
+HunterFClassCardPal:
+#incbin "Dmp/Hunter (F) {Spud, Jj09}.png_pal.dmp"
+setCardEntry(HunterFClassCard, HunterFClassCardData, HunterFClassCardPal)
+
+ALIGN 4
+DeserterClassCardData:
+#incbin "Dmp/Militia (M) Deserter Lance Helmet {Rasdel, Epicer}.dmp"
+ALIGN 4
+DeserterClassCardPal:
+#incbin "Dmp/Militia (M) Deserter Lance Helmet {Rasdel, Epicer}.png_pal.dmp"
+setCardEntry(DeserterClassCard, DeserterClassCardData, DeserterClassCardPal)
+
+ALIGN 4
+NinjaClassCardData:
+#incbin "Dmp/Ninja {Der}.dmp"
+ALIGN 4
+NinjaClassCardPal:
+#incbin "Dmp/Ninja {Der}.png_pal.dmp"
+setCardEntry(NinjaClassCard, NinjaClassCardData, NinjaClassCardPal)

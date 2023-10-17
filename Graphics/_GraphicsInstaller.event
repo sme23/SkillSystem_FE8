@@ -3,3 +3,4 @@
 #include "ItemIcons/_ItemIconsInstaller.event"
 #include "Portraits/_PortraitInstaller.event"
 #include "BattleAnims/_MasterAnimationInstaller.event"
+#include "ClassCards/_MasterClassCardInstaller.event"
