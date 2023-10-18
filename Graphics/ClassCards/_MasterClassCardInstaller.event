@@ -49,3 +49,27 @@ ALIGN 4
 NinjaClassCardPal:
 #incbin "Dmp/Ninja {Der}.png_pal.dmp"
 setCardEntry(NinjaClassCard, NinjaClassCardData, NinjaClassCardPal)
+
+ALIGN 4
+DragonRiderClassCardData:
+#incbin "Dmp/Wyvern Lord (U) Axe {topazlight}.dmp"
+ALIGN 4
+DragonRiderClassCardPal:
+#incbin "Dmp/Wyvern Lord (U) Axe {topazlight}.png_pal.dmp"
+setCardEntry(DragonRiderClassCard, DragonRiderClassCardData, DragonRiderClassCardPal)
+
+ALIGN 4
+PegasusRiderClassCardData:
+#incbin "Dmp/Pegasus Knight (F) Sword {Flasuban, ArcaneEli}.dmp"
+ALIGN 4
+PegasusRiderClassCardPal:
+#incbin "Dmp/Pegasus Knight (F) Sword {Flasuban, ArcaneEli}.png_pal.dmp"
+setCardEntry(PegasusRiderClassCard, PegasusRiderClassCardData, PegasusRiderClassCardPal)
+
+ALIGN 4
+GriffinRiderClassCardData:
+#incbin "Dmp/Arbalest (F) Lance {EldritchAbomination, Jj09}.dmp"
+ALIGN 4
+GriffinRiderClassCardPal:
+#incbin "Dmp/Arbalest (F) Lance {EldritchAbomination, Jj09}.png_pal.dmp"
+setCardEntry(GriffinRiderClassCard, GriffinRiderClassCardData, GriffinRiderClassCardPal)

@@ -1702,9 +1702,9 @@ and kills an enemy, +1 Str and +1 Mag[N]
 (Max +5). Lasts until end of chapter.[X]
 
 ## SD_WellRested
-Well-rested: When unit isn't deployed for one[N]
-chapter, +1 MOV. If deployed two maps in a row,[N]
--1 MOV (Min: Base MOV, Max: 15).[X]
+Well-rested: When unit isn't deployed for[N]
+a chapter, +1 MOV. If deployed two maps[N]
+in a row, -1 MOV (Min: Base, Max: 15).[X]
 
 ## SD_ForestFriend
 Forest Friend: Unit can traverse[N]

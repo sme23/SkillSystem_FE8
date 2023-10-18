@@ -138,7 +138,7 @@ is always looking for new opportunities.[X]
 Ondeh[X]
 
 ## OndehDesc
-Hunter.[N]
+Hunter[N]
 A young woman forced to grow up[N]
 too soon. Biko's elder sister.[X]
 
@@ -146,7 +146,7 @@ too soon. Biko's elder sister.[X]
 Biko[X]
 
 ## BikoDesc
-Laborer.[N]
+Laborer[N]
 A young man trying to find[N]
 his confidence. Ondeh's brother.[X]
 

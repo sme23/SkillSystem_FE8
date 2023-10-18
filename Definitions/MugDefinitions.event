@@ -50,9 +50,12 @@
 
 //CLASS CARDS
 
-#define WardenClassCard 0xAD
-#define VanguardClassCard 0xAE
-#define HunterMClassCard 0xAF
-#define HunterFClassCard 0xB0
-#define DeserterClassCard 0xB1
-#define NinjaClassCard 0xB2
+#define WardenClassCard 0x100
+#define VanguardClassCard 0x101
+#define HunterMClassCard 0x102
+#define HunterFClassCard 0x103
+#define DeserterClassCard 0x104
+#define NinjaClassCard 0x105
+#define DragonRiderClassCard 0x106
+#define PegasusRiderClassCard 0x107
+#define GriffinRiderClassCard 0x108
