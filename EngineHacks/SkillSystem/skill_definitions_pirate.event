@@ -140,3 +140,15 @@
 //Acrobat: All traversable terrain costs 1 movement.
 //By Tequila
 #define AcrobatID 43
+
+//Faith's Aegis
+#define FaithsAegisID 44
+
+//Shuffle
+#define ShuffleID 45
+
+//Analyze
+#define AnalyzeID 46
+
+//Nailed Down
+#define NailedDownID 47

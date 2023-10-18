@@ -1732,3 +1732,22 @@ durability isn't used up during crits.[X]
 ## SD_DeftHands
 Deft Hands: Unit can act again,[N]
 but not move, after stealing.[X]
+
+## SD_FaithsAegis
+Miraclemaker: If this unit uses a staff[N]
+on an ally, ally can survive fatal damage[N]
+once (lasts until end of turn).[X]
+
+## SD_Shuffle
+Shuffle: Command. Equips target with a[N]
+weapon in their inventory and allows[N]
+this unit to act, but not move, again.[X]
+
+## SD_NailedDown
+Nailed Down: When this unit initiates[N]
+battle, target's Mov = 0 for a turn.[X]
+
+## SD_Analyze
+Analyze: Foes adjacent to this unit[N]
+gain WTD against this unit's allies.[N]
+Does not trigger Break.[X]

@@ -74,8 +74,10 @@ WEATHER 7
 SetBackground(Inn)
 Text(Ch1BeginningScene1)
 SetBackground(Ship)
+
 Text(Ch1BeginningScene2)
 Text(Ch1BeginningScene3)
+MUSC AvastMeHeartiesID
 Text(Ch1BeginningScene4)
 Text(Ch1BeginningScene5)
 Text(Ch1BeginningScene6)
@@ -117,8 +119,9 @@ UNIT Blackheart Fighter 0 Level(2, Enemy, True) [19,9] 0 0 0 0 [IronAxe] AttackI
 UNIT
 
 EndingScene:
-MUSC 0x7FFF
+FadeOutMusic
 SetBackground(Ship)
+MUSC ABlackheartsPrideID
 Text(Ch1EndingScene1)
 Text(Ch1EndingScene2)
 Text(Ch1EndingScene3)

@@ -46,6 +46,30 @@ SongTable(FoolsBoldID,FoolsBold,MapMusicGroup)
 #include "songs/boss/FoolsBold.event"
 }
 
+// 11 - A Blackheart's Pride
+{
+SongTable(ABlackheartsPrideID,ABlackheartsPride,MapMusicGroup)
+#include "songs/event/ABlackheartsPride.event"
+}
+
+// 12 - Avast Me Hearties
+{
+SongTable(AvastMeHeartiesID,AvastMeHearties,MapMusicGroup)
+#include "songs/event/AvastMeHearties.event"
+}
+
+// 13 - Still Zephyrs
+{
+SongTable(StillZephyrsID,StillZephyrs,MapMusicGroup)
+#include "songs/event/StillZephyrs.event"
+}
+
+//14 - The Rebel's Knife
+{
+SongTable(TheRebelsKnifeID,The_Rebels_Knife,MapMusicGroup)
+#include "songs/map/The_Rebels_Knife.event"
+}
+
 
 // --------------- SONGS: GUI AND SFX ---------------
 

@@ -465,6 +465,7 @@ UNIT
 
 BeginningSceneFirstTimeCave:
 SetBackground(Ship)
+MUSC StillZephyrsID
 Text(HubABeginningScene1)
 SetBackground(Fort)
 Text(HubABeginningScene2)
