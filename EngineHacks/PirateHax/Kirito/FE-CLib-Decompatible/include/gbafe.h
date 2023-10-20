@@ -41,7 +41,6 @@ extern "C" {
 #include "hardware.h"
 #include "icon.h"
 #include "m4a.h"
-#include "mapselect.h"
 #include "mu.h"
 #include "packed_data_block.h"
 #include "portrait_pointer.h"
@@ -55,8 +54,14 @@ extern "C" {
 #include "unit_icon_data.h"
 #include "unit_icon_pointer.h"
 
+#include "uiselecttarget.h"
+#include "menu_def.h"
+#include "bmtarget.h"
+#include "bmphase.h"
+#include "bb.h"
+
 // #define CONST_DATA __attribute__((section(".data")))
-#define CONST_DATA const
+//#define CONST_DATA const
 
 #include "types.h"
 #include "variables.h"
@@ -72,8 +77,8 @@ extern "C" {
 
 #define ABS(aValue) ((aValue) >= 0 ? (aValue) : -(aValue))
 
-#define SIN(aAngle) (gSinLookup[(aAngle&0xFF)])
-#define COS(aAngle) (gSinLookup[0x40 + (aAngle&0xFF)])
+//#define SIN(aAngle) (gSinLookup[(aAngle&0xFF)])
+//#define COS(aAngle) (gSinLookup[0x40 + (aAngle&0xFF)])
 
 #define RECT_DISTANCE(aXA, aYA, aXB, aYB) (ABS((aXA) - (aXB)) + ABS((aYA) - (aYB)))
 
