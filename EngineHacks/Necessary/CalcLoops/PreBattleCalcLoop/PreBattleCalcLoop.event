@@ -34,7 +34,7 @@ POIN DefendingCheck
 #endif //BIORHYTHM
 POIN SpurStr SpurMag SpurSpd SpurDef SpurRes
 POIN DriveStr DriveMag DriveSpd DriveDef DriveRes
-POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn Hangover
+POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn Hangover Analyze
 POIN Demoiselle Gentilhomme MaleficAura Intimidate Tantivy Focus Inspiration DivinelyInspiring Charm Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty Infiltrator
 POIN ElbowRoom NaturalCover Gamble FieryBlood LifeAndDeath WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Thunderstorm Outrider HeavyStrikes Charge Vanity KnightAspirant AssassinateDamageBonus ArcaneBlade Underhanded CatchingUp EyeForAnEyeApply
 POIN Daunt BloodTide WhitePool NightTide Insight Prescience Vigilance DefiantAvo DefiantCrit TowerShield ShortShield IndoorFighter OutdoorFighter Deadeye Fortune ChaosStyle StunningSmile HeavyBlade SurpriseAttack SuppressiveFire Equalizer
@@ -109,6 +109,7 @@ AuraSkillEntry(WhitePoolID)
 AuraSkillEntry(NightTideID)
 AuraSkillEntry(SuppressiveFireID)
 AuraSkillEntry(EqualizerID)
+AuraSkillEntry(AnalyzeID)
 
 PUSH
 ORG 0x2a3f8
