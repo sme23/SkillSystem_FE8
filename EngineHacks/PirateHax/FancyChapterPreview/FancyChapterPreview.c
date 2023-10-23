@@ -115,7 +115,7 @@ u8 FancyChapterPreviewMenu_SelectYes(MenuProc* menu, MenuCommandProc* item) {
 	//Yes selected, store true to sC
 	gEventSlot[0xC] = 1;
 	//end menu w/ confirm sound
-	return ME_DISABLE | ME_END | ME_PLAY_BEEP;
+	return ME_END | ME_PLAY_BEEP;
 }
 
 
@@ -124,7 +124,7 @@ u8 FancyChapterPreviewMenu_SelectNo(MenuProc* menu, MenuCommandProc* item) {
 	//No selected, store false to sC
 	gEventSlot[0xC] = 0;
 	//end menu w/ cancel sound
-	return ME_DISABLE | ME_END | ME_PLAY_BOOP;	
+	return ME_END | ME_PLAY_BOOP;	
 }
 
 

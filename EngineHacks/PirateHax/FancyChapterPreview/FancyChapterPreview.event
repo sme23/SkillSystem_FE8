@@ -33,7 +33,7 @@ WORD $202F0FF
 #define ChapterPreviewEntry(chapterID, chapterNameTextID, objectiveTextID, unitsTextID, lootTextID, chapterConfirmTextID) "PUSH; ORG ChapterPreviewTable+(chapterID*10); SHORT chapterNameTextID objectiveTextID unitsTextID lootTextID chapterConfirmTextID; POP"
 
 //use this in events; at the end, the yes/no result is 1/0 in sC
-#define FancyChapterPreview(chapterID, backgroundID, currentChapterID) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; LOMA currentChapterID; FADI 10; EraseBackground;"
+#define FancyChapterPreview(chapterID, backgroundID, currentChapterID) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; FADI 10; LOMA currentChapterID; CAMERA_CENTERED Lua; EraseBackground;"
 
 ChapterPreviewEntry(HubA_1, HubA1Title, HubA1Objective, HubA1Units, HubA1Loot, HubA1Confirm)
 ChapterPreviewEntry(HubA_2, HubA2Title, HubA2Objective, HubA2Units, HubA2Loot, HubA2Confirm)
