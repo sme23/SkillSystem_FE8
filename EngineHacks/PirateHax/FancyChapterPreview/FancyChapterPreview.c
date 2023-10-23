@@ -22,6 +22,17 @@ void FancyChapterPreviewMenu_OnInit(MenuProc* proc) {
 	
 	*TextDrawnFlagLoc_Link = 0;
 	
+	//make bg2, bg3 slightly transparent so they're darker
+	SetColorEffectsFirstTarget(0, 0, 1, 1, 0);
+    SetColorEffectsSecondTarget(0, 0, 1, 1, 1);
+
+	//SetColorEffectBackdropSecondTarget(1);
+
+	SetColorEffectsParameters(3, 16, 0, 8);
+
+	gLCDIOBuffer.blendControl.target1_enableBg2 = 1;
+    gLCDIOBuffer.blendControl.target1_enableBg3 = 1;
+    gLCDIOBuffer.blendControl.target2_backdrop = 1;
 }
 
 int FancyChapterPreviewMenu_OnHover(MenuProc* proc) {		
@@ -104,7 +115,7 @@ u8 FancyChapterPreviewMenu_SelectYes(MenuProc* menu, MenuCommandProc* item) {
 	//Yes selected, store true to sC
 	gEventSlot[0xC] = 1;
 	//end menu w/ confirm sound
-	return ME_DISABLE | ME_END | ME_CLEAR_GFX | ME_PLAY_BEEP;
+	return ME_DISABLE | ME_END | ME_PLAY_BEEP;
 }
 
 
@@ -113,7 +124,7 @@ u8 FancyChapterPreviewMenu_SelectNo(MenuProc* menu, MenuCommandProc* item) {
 	//No selected, store false to sC
 	gEventSlot[0xC] = 0;
 	//end menu w/ cancel sound
-	return ME_DISABLE | ME_END | ME_CLEAR_GFX | ME_PLAY_BOOP;	
+	return ME_DISABLE | ME_END | ME_PLAY_BOOP;	
 }
 
 

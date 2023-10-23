@@ -75,9 +75,9 @@ CharacterEvent(MrYodsenRecruitFlag, TalkToMrYodsen, Lua, MrYodsen)
 END_MAIN
 
 GotoChapter1:
-HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
+//HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
 //TutorialYesNoText(HubA1Prompt)
-FancyChapterPreview(HubA_1, Town_Day, HubA)
+FancyChapterPreview(HubA_1, Castle_Hall_Night, HubA)
 EVBIT_MODIFY 0
 GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
 ENUF WentToHubA1
@@ -87,7 +87,7 @@ ENDA
 GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
 //Text(HubA2Prompt)
-FancyChapterPreview(HubA_2, Town_Day, HubA)
+FancyChapterPreview(HubA_2, Castle_Hall_Night, HubA)
 EVBIT_MODIFY 0
 GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
 ENUF WentToHubA2
@@ -97,7 +97,7 @@ ENDA
 GotoChapter3:
 HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
 //TutorialYesNoText(HubA3Sys_Text_Mission_Select)
-FancyChapterPreview(HubA_3, Town_Day, HubA)
+FancyChapterPreview(HubA_3, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
 Text(HubA3Selection_No)
 ENUF WentToHubA3
@@ -107,7 +107,7 @@ ENDA
 GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
 //Text(HubA5Prompt) 
-FancyChapterPreview(HubA_5, Town_Day, HubA)
+FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA)
 ENUT SeenHubA5Pitch
 EVBIT_MODIFY 0
 SVAL s1 0x1
@@ -130,7 +130,7 @@ ENDA
 GotoChapter6:
 HubChapterFirstTimeEvent(1, SeenHubA6Pitch, HubA6Pitch)
 //Text(HubA6Prompt) 
-FancyChapterPreview(HubA_6, Town_Day, HubA)
+FancyChapterPreview(HubA_6, Castle_Hall_Night, HubA)
 EVBIT_MODIFY 0
 GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
 ENUF WentToHubA6
@@ -455,7 +455,7 @@ ENDA
 
 GotoChapter4:
 //TutorialYesNoText(HubA4Prompt) 
-FancyChapterPreview(HubA_4, Town_Day, HubA)
+FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(1, HubA_4)
 ENUF WentToHubA4
 NoFade
