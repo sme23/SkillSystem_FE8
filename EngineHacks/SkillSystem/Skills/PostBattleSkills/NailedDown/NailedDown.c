@@ -43,31 +43,33 @@ long long NailedDownMovPenalty(u8 stat, Unit* unit) {
 
 void ClearNailedDownPenalty() {
 	int faction = gChapterData.currentPhase;
-	int unitID = faction+1;
-	int maxCount;
-	
-	switch (faction) {
-		case UA_BLUE:
-		maxCount = 62;
-		break;
+	if (faction == FACTION_BLUE) {
+		faction = FACTION_RED;
+		int unitID = faction+1;
+		int maxCount;
 		
-		case UA_RED:
-		maxCount = 50;
-		break;
+		switch (faction) {
+			case UA_BLUE:
+			maxCount = 62;
+			break;
+			
+			case UA_RED:
+			maxCount = 50;
+			break;
+			
+			case UA_GREEN:
+			maxCount = 20;
+			break;
+		}
 		
-		case UA_GREEN:
-		maxCount = 20;
-		break;
+		while ((unitID - faction) < maxCount) {
+			Unit* curUnit = GetUnit(unitID);
+			
+			u32* entry = GetUnitDebuffEntry(curUnit);
+			
+			UnsetBit(entry, NailedDownBitOffset_Link);
+			
+			unitID++;
+		}		
 	}
-	
-	while ((unitID - faction) < maxCount) {
-
-		Unit* curUnit = GetUnit(unitID);
-		
-		u32* entry = GetUnitDebuffEntry(curUnit);
-		
-		UnsetBit(entry, NailedDownBitOffset_Link);
-		
-		unitID++;
-	}	
 }
