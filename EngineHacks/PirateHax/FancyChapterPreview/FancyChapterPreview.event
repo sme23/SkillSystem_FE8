@@ -8,7 +8,7 @@ BYTE 6			//height (irrelevant)
 WORD 3 			//style
 POIN FancyChapterPreviewMenu_Commands
 POIN FancyChapterPreviewMenu_OnInit
-POIN FancyChapterPreviewMenu_OnEnd
+POIN 0			//OnEnd
 POIN 0x234FD	//NoCommandEffect (this is OnBPress)
 WORD 0			//OnRPress
 WORD 0			//OnHelpBox
@@ -33,6 +33,11 @@ WORD $202F0FF
 #define ChapterPreviewEntry(chapterID, chapterNameTextID, objectiveTextID, unitsTextID, lootTextID, chapterConfirmTextID) "PUSH; ORG ChapterPreviewTable+(chapterID*10); SHORT chapterNameTextID objectiveTextID unitsTextID lootTextID chapterConfirmTextID; POP"
 
 //use this in events; at the end, the yes/no result is 1/0 in sC
-#define FancyChapterPreview(chapterID, backgroundID, currentChapterID) "SVAL s1 chapterID; SetBackground(backgroundID); ASMC ChapterPreviewASMC; LOMA currentChapterID; FADI 10; EraseBackground;"
+#define FancyChapterPreview(chapterID, backgroundID, currentChapterID) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; LOMA currentChapterID; FADI 10; EraseBackground;"
 
-ChapterPreviewEntry(0, ChMenuTestString, ChMenuTestString, ChMenuTestString, ChMenuTestString, ChMenuTestString)
+ChapterPreviewEntry(HubA_1, HubA1Title, HubA1Objective, HubA1Units, HubA1Loot, HubA1Confirm)
+ChapterPreviewEntry(HubA_2, HubA2Title, HubA2Objective, HubA2Units, HubA2Loot, HubA2Confirm)
+ChapterPreviewEntry(HubA_3, HubA3Title, HubA3Objective, HubA3Units, HubA3Loot, HubA3Confirm)
+ChapterPreviewEntry(HubA_4, HubA4Title, HubA4Objective, HubA4Units, HubA4Loot, HubA4Confirm)
+ChapterPreviewEntry(HubA_5, HubA5Title, HubA5Objective, HubA5Units, HubA5Loot, HubA5Confirm)
+ChapterPreviewEntry(HubA_6, HubA6Title, HubA6Objective, HubA6Units, HubA6Loot, HubA6Confirm)

@@ -76,7 +76,8 @@ END_MAIN
 
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
-TutorialYesNoText(HubA1Prompt)
+//TutorialYesNoText(HubA1Prompt)
+FancyChapterPreview(HubA_1, Town_Day, HubA)
 EVBIT_MODIFY 0
 GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
 ENUF WentToHubA1
@@ -85,7 +86,8 @@ ENDA
 
 GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
-Text(HubA2Prompt)
+//Text(HubA2Prompt)
+FancyChapterPreview(HubA_2, Town_Day, HubA)
 EVBIT_MODIFY 0
 GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
 ENUF WentToHubA2
@@ -94,7 +96,8 @@ ENDA
 
 GotoChapter3:
 HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
-TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+//TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+FancyChapterPreview(HubA_3, Town_Day, HubA)
 GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
 Text(HubA3Selection_No)
 ENUF WentToHubA3
@@ -103,7 +106,8 @@ ENDA
 
 GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
-Text(HubA5Prompt) 
+//Text(HubA5Prompt) 
+FancyChapterPreview(HubA_5, Town_Day, HubA)
 ENUT SeenHubA5Pitch
 EVBIT_MODIFY 0
 SVAL s1 0x1
@@ -125,7 +129,8 @@ ENDA
 
 GotoChapter6:
 HubChapterFirstTimeEvent(1, SeenHubA6Pitch, HubA6Pitch)
-Text(HubA6Prompt) 
+//Text(HubA6Prompt) 
+FancyChapterPreview(HubA_6, Town_Day, HubA)
 EVBIT_MODIFY 0
 GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
 ENUF WentToHubA6
@@ -449,7 +454,8 @@ NoFade
 ENDA
 
 GotoChapter4:
-TutorialYesNoText(HubA4Prompt) 
+//TutorialYesNoText(HubA4Prompt) 
+FancyChapterPreview(HubA_4, Town_Day, HubA)
 GotoHubChapterIfYes(1, HubA_4)
 ENUF WentToHubA4
 NoFade

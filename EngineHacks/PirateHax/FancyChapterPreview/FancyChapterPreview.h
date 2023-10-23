@@ -35,4 +35,6 @@ extern void InitMapForMinimap(int chapterId);
 extern u16* GetMinimapTerrainCellAt(int x, int y);
 
 #define TILEMAP_INDEX(aX, aY) (0x20 * (aY) + (aX))
-
+#define PlaySoundEffect(id) \
+    if (gChapterData.muteSfxOption) \
+        m4aSongNumStart((id))

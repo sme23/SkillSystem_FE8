@@ -26,6 +26,7 @@ void FancyChapterPreviewMenu_OnInit(MenuProc* proc) {
 
 int FancyChapterPreviewMenu_OnHover(MenuProc* proc) {		
 	//this function draws all the BG0 stuff
+	if (!gChapterData.muteSfxOption) m4aSongNumStart(0x66);
 
 	if (*TextDrawnFlagLoc_Link == 1) return 0;
 	*TextDrawnFlagLoc_Link = 1;
@@ -34,63 +35,56 @@ int FancyChapterPreviewMenu_OnHover(MenuProc* proc) {
 	ChapterPreviewEntry entry = ChapterPreviewTable[chID];
 	
 	//prep strings from table
+		
 	TextHandle chNameHandle = {
 		.tileIndexOffset = gpCurrentFont->tileNext,
 		.tileWidth = 16
 		};
- 	TextHandle objectiveHandle = {
-		.tileIndexOffset = gpCurrentFont->tileNext,
-		.tileWidth = 12
-		};
 		
-	TextHandle unitsHandle = {
-		.tileIndexOffset = gpCurrentFont->tileNext,
-		.tileWidth = 12
+	const char* textID1 = GetStringFromIndex(entry.chapterNameTextID);
+	Text_Clear(&chNameHandle);
+	Text_DrawString(&chNameHandle, textID1);
+	Text_Display(&chNameHandle, &gBg0MapBuffer[TILEMAP_INDEX(6,0)]);
+	
+	TextHandle objectiveHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+16,
+		.tileWidth = 24
 		};
+	
+	const char* textID2 = GetStringFromIndex(entry.objectiveTextID);
+	Text_Clear(&objectiveHandle);
+	Text_DrawString(&objectiveHandle, textID2);
+	Text_Display(&objectiveHandle, &gBg0MapBuffer[TILEMAP_INDEX(1,4)]);
+	
+	TextHandle unitsHandle = {
+		.tileIndexOffset = gpCurrentFont->tileNext+40,
+		.tileWidth = 24
+		};
+	
+	const char* textID3 = GetStringFromIndex(entry.unitsTextID);
+	Text_Clear(&unitsHandle);
+	Text_DrawString(&unitsHandle, textID3);
+	Text_Display(&unitsHandle, &gBg0MapBuffer[TILEMAP_INDEX(1,8)]);
 	
 	TextHandle lootHandle = {
-		.tileIndexOffset = gpCurrentFont->tileNext,
-		.tileWidth = 12
+		.tileIndexOffset = gpCurrentFont->tileNext+64,
+		.tileWidth = 24
 		};
+	
+	const char* textID4 = GetStringFromIndex(entry.lootTextID);
+	Text_Clear(&lootHandle);
+	Text_DrawString(&lootHandle, textID4);
+	Text_Display(&lootHandle, &gBg0MapBuffer[TILEMAP_INDEX(1,12)]);
 	
 	TextHandle confirmHandle = {
-		.tileIndexOffset = gpCurrentFont->tileNext,
+		.tileIndexOffset = gpCurrentFont->tileNext+88,
 		.tileWidth = 12
 		};
-		
-		const char* textID1 = GetStringFromIndex(entry.chapterNameTextID);
-		Text_Clear(&chNameHandle);
-		Text_DrawString(&chNameHandle, textID1);
-		Text_Display(&chNameHandle, &gBg0MapBuffer[TILEMAP_INDEX(6,0)]);
-		
-		const char* textID2 = GetStringFromIndex(entry.chapterNameTextID);
-		Text_Clear(&objectiveHandle);
-		Text_DrawString(&objectiveHandle, textID2);
-		Text_Display(&objectiveHandle, &gBg0MapBuffer[TILEMAP_INDEX(1,4)]);
-		
-		const char* textID3 = GetStringFromIndex(entry.chapterNameTextID);
-		Text_Clear(&unitsHandle);
-		Text_DrawString(&unitsHandle, textID3);
-		Text_Display(&unitsHandle, &gBg0MapBuffer[TILEMAP_INDEX(1,8)]);
-		
-		const char* textID4 = GetStringFromIndex(entry.chapterNameTextID);
-		Text_Clear(&lootHandle);
-		Text_DrawString(&lootHandle, textID4);
-		Text_Display(&lootHandle, &gBg0MapBuffer[TILEMAP_INDEX(1,12)]);
-		
-		const char* textID5 = GetStringFromIndex(entry.chapterNameTextID);
-		Text_Clear(&confirmHandle);
-		Text_DrawString(&confirmHandle, textID5);
-		Text_Display(&confirmHandle, &gBg0MapBuffer[TILEMAP_INDEX(11,16)]);
-		
-		
-		
-		
 	
-	//prep label strings
-	
-	
-	//draw all strings
+	const char* textID5 = GetStringFromIndex(entry.chapterConfirmTextID);
+	Text_Clear(&confirmHandle);
+	Text_DrawString(&confirmHandle, textID5);
+	Text_Display(&confirmHandle, &gBg0MapBuffer[TILEMAP_INDEX(11,16)]);
 	
 	return 0;
 }
@@ -106,8 +100,6 @@ void FancyChapterPreviewMenu_OnEnd(MenuProc* proc) {
 
 
 
-
-
 u8 FancyChapterPreviewMenu_SelectYes(MenuProc* menu, MenuCommandProc* item) {
 	//Yes selected, store true to sC
 	gEventSlot[0xC] = 1;
@@ -115,12 +107,17 @@ u8 FancyChapterPreviewMenu_SelectYes(MenuProc* menu, MenuCommandProc* item) {
 	return ME_DISABLE | ME_END | ME_CLEAR_GFX | ME_PLAY_BEEP;
 }
 
+
+
 u8 FancyChapterPreviewMenu_SelectNo(MenuProc* menu, MenuCommandProc* item) {
-		//No selected, store false to sC
+	//No selected, store false to sC
 	gEventSlot[0xC] = 0;
 	//end menu w/ cancel sound
 	return ME_DISABLE | ME_END | ME_CLEAR_GFX | ME_PLAY_BOOP;	
 }
+
+
+
 
 void SetMinimapPosition() {
     int x = (240 - (gMapSize.x * 4) + 80) >> 1;
@@ -129,6 +126,8 @@ void SetMinimapPosition() {
     BG_SetPosition(2, -x, -y);
 
 }
+
+
 
 void DrawMinimap_BG2(int chapterId, u16* vram, int palId) {
     FillBgMap(gBg2MapBuffer, 0);
