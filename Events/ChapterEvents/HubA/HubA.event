@@ -77,18 +77,19 @@ END_MAIN
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
 //TutorialYesNoText(HubA1Prompt)
+FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_1, Castle_Hall_Night, HubA)
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
+GotoHubChapterIfYes(2, HubA_1, HubA1Accepted)
 ENUF WentToHubA1
+EVBIT_MODIFY 0
 NoFade
 ENDA
 
 GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
 //Text(HubA2Prompt)
+FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_2, Castle_Hall_Night, HubA)
-EVBIT_MODIFY 0
 GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
 ENUF WentToHubA2
 NoFade
@@ -97,6 +98,7 @@ ENDA
 GotoChapter3:
 HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
 //TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_3, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
 Text(HubA3Selection_No)
@@ -107,11 +109,12 @@ ENDA
 GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
 //Text(HubA5Prompt) 
-FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA, PortGreagorCallback)
 ENUT SeenHubA5Pitch
-EVBIT_MODIFY 0
 SVAL s1 0x1
 BNE 2 s1 sC
+EVBIT_MODIFY 0
 Text(HubA5Accepted)
 ENUF LuaInAHubFlag
 FADI 10
@@ -127,11 +130,22 @@ ENUF WentToHubA5
 NoFade
 ENDA
 
+PortGreagorCallback:
+//this does similar to PortGreagorDocks but without most things, for the preview callback
+TILECHANGE 0
+CALL ClearHubATraps
+CALL AddDockTraps
+AddTrap(RedSigilTrapID, 8, 22) //add the indicator under desiderio
+//CALL DocksSpawnEvent
+NoFade
+ENDA
+
+
 GotoChapter6:
 HubChapterFirstTimeEvent(1, SeenHubA6Pitch, HubA6Pitch)
 //Text(HubA6Prompt) 
+FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_6, Castle_Hall_Night, HubA)
-EVBIT_MODIFY 0
 GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
 ENUF WentToHubA6
 NoFade
@@ -455,6 +469,7 @@ ENDA
 
 GotoChapter4:
 //TutorialYesNoText(HubA4Prompt) 
+FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(1, HubA_4)
 ENUF WentToHubA4

@@ -33,7 +33,13 @@ WORD $202F0FF
 #define ChapterPreviewEntry(chapterID, chapterNameTextID, objectiveTextID, unitsTextID, lootTextID, chapterConfirmTextID) "PUSH; ORG ChapterPreviewTable+(chapterID*10); SHORT chapterNameTextID objectiveTextID unitsTextID lootTextID chapterConfirmTextID; POP"
 
 //use this in events; at the end, the yes/no result is 1/0 in sC
-#define FancyChapterPreview(chapterID, backgroundID, currentChapterID) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; FADI 10; LOMA currentChapterID; CAMERA_CENTERED Lua; EraseBackground;"
+#define FancyChapterPreview(chapterID, backgroundID, currentChapterID) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; FADI 10; LOMA currentChapterID; CAMERA_CENTERED Lua; TEXTSTART; CLEAN; FADU 10;"
+
+#define FancyChapterPreview(chapterID, backgroundID, currentChapterID, callbackEvent) "SVAL s1 chapterID; FADI 10; CLEAN; SetBackground(backgroundID); ASMC ChapterPreviewASMC; FADI 10; LOMA currentChapterID; CAMERA_CENTERED Lua; SADD s9 sC s0; CALL callbackEvent; TEXTSTART; CLEAN; SADD sC s9 s0; FADU 10;"
+
+//use this just before the previous one to set offset of the map preview from the center of the screen.
+//-1,-1 defaults to 
+#define FancyChapterMapOffset(xOffset,yOffset) "SVAL sB ((yOffset) << 16)|(xOffset)"
 
 ChapterPreviewEntry(HubA_1, HubA1Title, HubA1Objective, HubA1Units, HubA1Loot, HubA1Confirm)
 ChapterPreviewEntry(HubA_2, HubA2Title, HubA2Objective, HubA2Units, HubA2Loot, HubA2Confirm)
@@ -41,3 +47,4 @@ ChapterPreviewEntry(HubA_3, HubA3Title, HubA3Objective, HubA3Units, HubA3Loot, H
 ChapterPreviewEntry(HubA_4, HubA4Title, HubA4Objective, HubA4Units, HubA4Loot, HubA4Confirm)
 ChapterPreviewEntry(HubA_5, HubA5Title, HubA5Objective, HubA5Units, HubA5Loot, HubA5Confirm)
 ChapterPreviewEntry(HubA_6, HubA6Title, HubA6Objective, HubA6Units, HubA6Loot, HubA6Confirm)
+

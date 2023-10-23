@@ -131,8 +131,14 @@ u8 FancyChapterPreviewMenu_SelectNo(MenuProc* menu, MenuCommandProc* item) {
 
 
 void SetMinimapPosition() {
-    int x = (240 - (gMapSize.x * 4) + 80) >> 1;
-    int y = (160 - (gMapSize.y * 4) - 16) >> 1;
+	s16 xOffset = gEventSlot[0xB] & 0xFFFF;
+	s16 yOffset = gEventSlot[0xB] >> 16;
+	
+	if (xOffset == -1) xOffset = 80;
+	if (yOffset == -1) yOffset = -16;
+	
+    int x = (240 - (gMapSize.x * 4) + xOffset) >> 1;
+    int y = (160 - (gMapSize.y * 4) + yOffset) >> 1;
 
     BG_SetPosition(2, -x, -y);
 
