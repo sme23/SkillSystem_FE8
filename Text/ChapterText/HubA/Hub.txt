@@ -111,6 +111,21 @@ Loot: Axe and knife users will benefit.[N]
 Will Lua take Orlando's job?[N]
 [No][X]
 
+## HubA1Title
+A-1: Rights to Own[X]
+
+## HubA1Objective
+Objective: Loot, Escape[X]
+
+## HubA1Units
+Units: Indio (Shaman), Leandra (Fighter)[X]
+
+## HubA1Loot
+Loot: Axe and knife users will benefit.[X]
+
+## HubA1Confirm
+Take Orlando's job?[X]
+
 ## HubA1Accepted
 [ML][LoadOrlando]
 [MR][LoadLua]
@@ -170,6 +185,21 @@ aren't you?[AN]
 [MidLeft][LoadLua][MidRight][LoadJaime]
 [MidLeft]Should I accept this job?[AN]
 [No][X]
+
+## HubA2Title
+A-2: The Rebels' Incendiv[X]
+
+## HubA2Objective
+Objective: Defeat bosses[X]
+
+## HubA2Units
+A-2 units[X]
+
+## HubA2Loot
+A-2 loot[X]
+
+## HubA2Confirm
+Accept this job?[X]
 
 ## HubA2Accepted
 [MidLeft][LoadLua][MidRight][LoadJaime]
@@ -312,9 +342,39 @@ the expedition, then.[A][X]
 Go to Chapter A3?[N]
 [No][X]
 
+## HubA3Title
+A-3: Under Log and Key[X]
+
+## HubA3Objective
+Objective: Escape[X]
+
+## HubA3Units
+A-3 units[X]
+
+## HubA3Loot
+A-3 loot[X]
+
+## HubA3Confirm
+Go to Chapter A3?[X]
+
 ## HubA4Prompt
 Go to Chapter A4?[N]
 [No][X]
+
+## HubA4Title
+A-4: title here[X]
+
+## HubA4Objective
+A-4 objective[X]
+
+## HubA4Units
+A-4 units[X]
+
+## HubA4Loot
+A-4 loot[X]
+
+## HubA4Confirm
+Go to Chapter A4?[X]
 
 ## HubA5Pitch
 [ML][LoadLua][MR][LoadDesiderio]
@@ -374,6 +434,21 @@ a formality.[AN][X]
 [ML][LoadLua][MR][LoadDesiderio]
 [ML]Worth the risk?[AN]
 [No][X]
+
+## HubA5Title
+A-5: The Big Gun[X]
+
+## HubA5Objective
+Objective: Kill / Escape[X]
+
+## HubA5Units
+A-5 units[X]
+
+## HubA5Loot
+A-5 loot[X]
+
+## HubA5Confirm
+Worth the risk?[X]
 
 ## HubA5Accepted
 [ML][LoadLua][MR][LoadDesiderio]
@@ -454,6 +529,21 @@ and double-cross me.[AN]
 [ML][LoadLua][MR][LoadRochefort]
 [ML]Should I accept this job?[AN]
 [No][X]
+
+## HubA6Title
+A-6: title here[X]
+
+## HubA6Objective
+A-6 objective[X]
+
+## HubA6Units
+A-6 units[X]
+
+## HubA6Loot
+A-6 loot[X]
+
+## HubA6Confirm
+Accept this job?[X]
 
 
 ## HubA6Accepted
@@ -1254,6 +1344,8 @@ You didn't pay me![A][X]
 ## MrYodsenTellsLuaShesBrokeText
 [MidRight][LoadMrYodsen]
 You're broke![A][X]
+
+
 
 //Base Scene 1; Characters: Carmen and Ximo
 
