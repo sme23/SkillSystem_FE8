@@ -39,3 +39,16 @@
 
 #define ThiefKnifeAnim 0xD9
 #define ThiefUnarmedAnim 0xDA
+
+#define PegasusRiderSwordAnim 0xDB
+#define PegasusRiderUnarmedAnim 0xDC
+
+#define DragonRiderAxeAnim 0xDD
+#define DragonRiderHandAxeAnim 0xDE
+#define DragonRiderUnarmedAnim 0xDF
+
+#define GriffinRiderLanceAnim 0xE0
+#define GriffinRiderUnarmedAnim 0xE1
+
+#define SoldierLanceAnim 0xE2
+#define SoldierUnarmedAnim 0xE3

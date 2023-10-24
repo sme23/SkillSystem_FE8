@@ -49,3 +49,28 @@ ThiefAnims:
 KnifeAnim(ThiefKnifeAnim)
 UnarmedAnim(ThiefUnarmedAnim)
 EndAnim
+
+ALIGN 4
+DragonRiderAnims:
+AxeAnim(DragonRiderAxeAnim)
+HandAxeAnim(DragonRiderHandAxeAnim)
+UnarmedAnim(DragonRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+GriffinRiderAnims:
+LanceAnim(GriffinRiderLanceAnim)
+UnarmedAnim(GriffinRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+PegasusRiderAnims:
+SwordAnim(PegasusRiderSwordAnim)
+UnarmedAnim(PegasusRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SoldierAnims:
+LanceAnim(SoldierLanceAnim)
+UnarmedAnim(SoldierUnarmedAnim)
+EndAnim

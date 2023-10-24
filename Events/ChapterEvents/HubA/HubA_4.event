@@ -183,7 +183,7 @@ UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackIn
 //turn 2
 UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Flux, Vulnerary, TealGem] ChargeAI
+UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Elfire, Vulnerary, TealGem] ChargeAI
 UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3
 UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
@@ -199,7 +199,7 @@ UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupT
 UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
 //turn 6
 UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Flux, Vulnerary] GroupThreeAI
+UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Elfire, Vulnerary] GroupThreeAI
 UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
 UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
 //turn 7

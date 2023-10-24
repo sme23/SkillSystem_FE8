@@ -35,3 +35,24 @@
     #include "Animations/Thief_M/Knife Installer.event"
     #include "Animations/Thief_M/Unarmed Installer.event"
 }
+
+{
+    #include "Animations/Soldier/Lance Installer.event"
+    #include "Animations/Soldier/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/GriffinRider/Lance Installer.event"
+    #include "Animations/GriffinRider/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/PegasusRider/Sword Installer.event"
+    #include "Animations/PegasusRider/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/DragonRider/Axe Installer.event"
+    #include "Animations/DragonRider/Handaxe Installer.event"
+    #include "Animations/DragonRider/Unarmed Installer.event"
+}

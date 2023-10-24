@@ -26,8 +26,15 @@ TurnEventPlayer(0, A3Explanation, 1)
 TurnEventPlayer(A3Spawn1TurnFlag, A3Reinforce1, 1, 255) //bottom left fort spawn
 TurnEventPlayer(A3Spawn2TurnFlag, A3Reinforce2, 1, 255)
 TurnEventPlayer(A3Spawn3TurnFlag, A3Reinforce3, 1, 255)
+TurnEventPlayer(0, SpiritWarning, 7)
 Survive(GameOverYeaaaaah,13)
 END_MAIN
+
+SpiritWarning:
+CameraCursor(Lua)
+Text(A3_MidBattle_PhantomWarn)
+NoFade
+ENDA
 
 A3Explanation:
 CAMERA_CENTERED [18,14]
