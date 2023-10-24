@@ -26,13 +26,22 @@ pop {r0-r3}
 ldr r6, =0x202BCF0 @chapter data
 ldrb r0,[r6,#0xE] @chapter ID
 blh GetROMChapterStruct
-add r0,#28
-lsl r2,r1,#25
-bmi ret72704
-ldrh r6,[r0,#2]
-lsl r1,r1,#24
-bmi retNormal
-ldrh r6,[r0,#0]
+add r0,#28 @offset of player phase music
+ldrb r1,[r6,#0xF] @current phase
+
+cmp r1,#0
+bne CheckEnemyPhase
+ldrh r6,[r0] @load player phase battle bgm
+b retNormal
+
+CheckEnemyPhase:
+cmp r1,#0x80
+bne OtherPhase
+ldrh r6,[r0,#2] @load enemy phase battle bgm
+b retNormal
+
+OtherPhase:
+ldrh r6,[r0,#4] @load npc phase battle bgm
 b retNormal
 
 .ltorg
@@ -47,13 +56,6 @@ ldrh r6,[r6]
 retNormal:
 ldr r0,=0x80726E3
 bx r0
-
-.ltorg
-.align
-
-ret72704:
-ldr r1,=0x8072705
-bx r1
 
 .ltorg
 .align
