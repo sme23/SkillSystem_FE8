@@ -143,6 +143,7 @@
 
 //Faith's Aegis
 #define FaithsAegisID 44
+#define MiraclemakerID FaithsAegisID
 
 //Shuffle
 #define ShuffleID 45
