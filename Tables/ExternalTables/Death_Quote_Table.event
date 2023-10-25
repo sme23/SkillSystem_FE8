@@ -4,7 +4,14 @@
 
 // Bosses
 
-DeathQuote(Lua, AllChapters, 0x65, 0)
+DeathQuote(Lua, AllChapters, 0x65, LuaDQ)
+DeathQuote(Pilar, AllChapters, 0, PilarDQ)
+DeathQuote(Desiderio, AllChapters, 0, DesiderioDQ)
+DeathQuote(Razvan, AllChapters, 0, RazvanDQ)
+DeathQuote(Carmen, AllChapters, 0, CarmenDQ)
+DeathQuote(Ximo, AllChapters, 0, XimoDQ)
+DeathQuote(Hermenegildo, AllChapters, 0, HermenegildoDQ)
+DeathQuote(Estelle, AllChapters, 0, EstelleDQ)
 
 DeathQuote(Khazhak,Chapter1, 2, 0)
 

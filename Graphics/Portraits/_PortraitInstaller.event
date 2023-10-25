@@ -129,3 +129,19 @@ OrlandoMugData:
 #incbin "Dmp/Orlando_palette.dmp"
 #incbin "Dmp/Orlando_minimug.dmp"
 setMugEntry(OrlandoMug, OrlandoMugData, 3, 5, 3, 3)
+
+ALIGN 16
+RahelMugData:
+#incbin "Dmp/Rahel_mug.dmp"
+#incbin "Dmp/Rahel_frames.dmp"
+#incbin "Dmp/Rahel_palette.dmp"
+#incbin "Dmp/Rahel_minimug.dmp"
+setMugEntry(RahelMug, RahelMugData, 3, 5, 3, 3)
+
+ALIGN 16
+LeonorMugData:
+#incbin "Dmp/Leonor_mug.dmp"
+#incbin "Dmp/Leonor_frames.dmp"
+#incbin "Dmp/Leonor_palette.dmp"
+#incbin "Dmp/Leonor_minimug.dmp"
+setMugEntry(LeonorMug, LeonorMugData, 3, 5, 3, 3)

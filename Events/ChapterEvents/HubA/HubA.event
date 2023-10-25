@@ -490,7 +490,7 @@ MUSC StillZephyrsID
 Text(HubABeginningScene1)
 SetBackground(Fort)
 Text(HubABeginningScene2)
-
+ENUT 4
 ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
 ENUT WentToPortGreagorDocks //sets future flag EIDs that I don't want triggered yet
 ENUT CameBackFromDocks

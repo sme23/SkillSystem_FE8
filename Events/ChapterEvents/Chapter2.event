@@ -111,7 +111,7 @@ UNIT
 
 IgnacioBoatReinforcementsGroup2:
 UNIT Igniswords Warden Ignacio Level(8,Enemy,True) [34,5] 0 0 1 REDA34R5 [IronBlade, Javelin] GroupFourAI
-UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,6] 0 0 1 REDA30R6 [Fire] AttackInRangeAI
+UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,6] 0 0 1 REDA30R6 [Fire] AttackWhenInRangeAI
 UNIT
 
 CharacterBasedEvents:
@@ -438,7 +438,7 @@ UNIT Igniswords Shaman Ignacio Level(8,Enemy,True) [37,8] 0 0 0 0 [Elfire] BossA
 UNIT
 
 TORCHGroupLeft:
-UNIT Hugo 0 Hugo Level(12, Enemy, True) [2,1] 0 0 0 0 [SilverSword, BravesCrest] AttackInRangeAI
+UNIT Hugo 0 Hugo Level(12, Enemy, True) [2,1] 0 0 0 0 [SilverSword, BravesCrest] AttackWhenInRangeAI
 UNIT TorchUnit Soldier Hugo Level(9,Enemy,True) [2,0] 0 0 0 0 [Pike] AttackInTwoAI
 
 UNIT TorchUnit2 GriffinRider Hugo Level(9, Enemy, True) [11,4] 0 0 0 0 [IronLance] GoForThroneAI
