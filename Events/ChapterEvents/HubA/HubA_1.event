@@ -1,5 +1,6 @@
 EventPointerTable(HubA_1EventsID, PointerList)
 
+// temporary flags
 #define CarmenIndioTalkSeen 0x7
 #define PilarRazvanTalkSeen 0x8
 #define LeandraTalkSeen 0x9
@@ -7,6 +8,17 @@ EventPointerTable(HubA_1EventsID, PointerList)
 #define RelicRecovered 0xB
 #define ObjectiveSwitched 0xC
 #define EscapeDisallowed 0xD
+
+#define GeraldoLuaBattleQuoteSeen 0xE
+#define GeraldoPilarBattleQuoteSeen 0xF
+#define GeraldoDesiderioBattleQuoteSeen 0x10
+#define GeraldoRazvanBattleQuoteSeen 0x11
+#define GeraldoCarmenBattleQuoteSeen 0x12
+#define GeraldoXimoBattleQuoteSeen 0x13
+#define GeraldoEstelleBattleQuoteSeen 0x14
+#define GeraldoHermeneBattleQuoteSeen 0x15
+
+#define GeraldoGenericBattleQuoteSeen 0x28
 
 PointerList:
 POIN TurnBasedEvents
@@ -205,6 +217,16 @@ CURSOR_FLASHING [18, 7]
 STAL 60
 REMOVE_CURSORS
 Text(ChA1InformObjectiveDialogue)
+CAMERA_CENTERED [5, 3]
+CURSOR_FLASHING [5, 2]
+CURSOR_FLASHING [6, 3]
+STAL 60
+REMOVE_CURSORS
+CAMERA_CENTERED [26, 8]
+CURSOR_FLASHING [26, 8]
+CURSOR_FLASHING [27, 8]
+STAL 60
+REMOVE_CURSORS
 NoFade
 ENDA
 
