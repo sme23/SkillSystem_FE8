@@ -1122,7 +1122,14 @@ ORG SkillIcon(CatchingUpID)
 #incbin "SkillIcons/SpurSpd.dmp"
 ORG SkillIcon(NonconformingID)
 #incbin "SkillIcons/TriAdept.dmp"
-
+ORG SkillIcon(FaithsAegisID)
+#incbin "SkillIcons/HolyAura.dmp"
+ORG SkillIcon(ShuffleID)
+#incbin "SkillIcons/StealPlus.dmp"
+ORG SkillIcon(AnalyzeID)
+#incbin "SkillIcons/TriangleAdeptB.dmp"
+ORG SkillIcon(NailedDownID)
+#incbin "SkillIcons/Anathema.dmp"
 
 
 //don't need them

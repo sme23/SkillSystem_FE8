@@ -120,6 +120,6 @@ MountTypeIcons:
 ALIGN 4
 WRankIcons:
 // #incext Png2Dmp "bin/WRankIcons.png"
-#incbin "bin/WRankIcons.dmp"
+#incbin "bin/image.dmp"
 
 #endif // HAX_ICON_REWORK_INTERNAL

@@ -3,3 +3,7 @@
 #define DistantSkiesID 0x8
 #define ScalleywagsOnDeckID 0x9
 #define FoolsBoldID 0xa
+#define ABlackheartsPrideID 0xb
+#define AvastMeHeartiesID 0xc
+#define StillZephyrsID 0xd
+#define TheRebelsKnifeID 0xe

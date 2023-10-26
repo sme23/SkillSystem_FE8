@@ -30,6 +30,9 @@ have one more chance to prepare,[N]
 and after that, they'll move on.[AN]
 For now, follow the blue tiles![A][X]
 
+## HubAGoTime
+Navigate onto the green tile[N]
+in order to start Chapter 2.[X]
 
 ## HubA1Pitch
 [ML][LoadOrlando]
@@ -108,6 +111,21 @@ Loot: Axe and knife users will benefit.[N]
 Will Lua take Orlando's job?[N]
 [No][X]
 
+## HubA1Title
+A-1: Rights to Own[X]
+
+## HubA1Objective
+Objective: Loot, Escape[X]
+
+## HubA1Units
+Units: Indio (Shaman), Leandra (Fighter)[X]
+
+## HubA1Loot
+Loot: Axe and knife users will benefit.[X]
+
+## HubA1Confirm
+Take Orlando's job?[X]
+
 ## HubA1Accepted
 [ML][LoadOrlando]
 [MR][LoadLua]
@@ -167,6 +185,21 @@ aren't you?[AN]
 [MidLeft][LoadLua][MidRight][LoadJaime]
 [MidLeft]Should I accept this job?[AN]
 [No][X]
+
+## HubA2Title
+A-2: The Rebels' Incendiv[X]
+
+## HubA2Objective
+Objective: Defeat bosses[X]
+
+## HubA2Units
+A-2 units[X]
+
+## HubA2Loot
+A-2 loot[X]
+
+## HubA2Confirm
+Accept this job?[X]
 
 ## HubA2Accepted
 [MidLeft][LoadLua][MidRight][LoadJaime]
@@ -309,9 +342,39 @@ the expedition, then.[A][X]
 Go to Chapter A3?[N]
 [No][X]
 
+## HubA3Title
+A-3: Under Log and Key[X]
+
+## HubA3Objective
+Objective: Escape[X]
+
+## HubA3Units
+A-3 units[X]
+
+## HubA3Loot
+A-3 loot[X]
+
+## HubA3Confirm
+Go to Chapter A3?[X]
+
 ## HubA4Prompt
 Go to Chapter A4?[N]
 [No][X]
+
+## HubA4Title
+A-4: title here[X]
+
+## HubA4Objective
+A-4 objective[X]
+
+## HubA4Units
+A-4 units[X]
+
+## HubA4Loot
+A-4 loot[X]
+
+## HubA4Confirm
+Go to Chapter A4?[X]
 
 ## HubA5Pitch
 [ML][LoadLua][MR][LoadDesiderio]
@@ -339,7 +402,7 @@ side project ever since news of this[N]
 new weapon factory came on the wind.[AN]
 As for the payment... My winnings from[N]
 our last poker game? Pursestrings are[N]
-rather tight from keeping us afloft.[AN]
+rather tight from keeping us aloft.[AN]
 [1LB][MR]
 ... 500 gold?[AN]
 [2LB][ML]
@@ -357,10 +420,10 @@ Those wealthy elites really like staying[N]
 alive, and they have gold to spare.[AN]
 [MR]
 You ask me to jump, and I ask how[N]
-high. Your perogative, Boss.[AN]
+high. Your perogative, Boss.[A]
 [ML]
 No further input? Wouldn't feel right[N]
-if I was to just approve my own contract.[AN] 
+if I was to just approve my own contract.[A]
 [MR]
 I'm sure you don't keep[N]
 me around for my wits.[AN]
@@ -371,6 +434,21 @@ a formality.[AN][X]
 [ML][LoadLua][MR][LoadDesiderio]
 [ML]Worth the risk?[AN]
 [No][X]
+
+## HubA5Title
+A-5: The Big Gun[X]
+
+## HubA5Objective
+Objective: Kill / Escape[X]
+
+## HubA5Units
+A-5 units[X]
+
+## HubA5Loot
+A-5 loot[X]
+
+## HubA5Confirm
+Worth the risk?[X]
 
 ## HubA5Accepted
 [ML][LoadLua][MR][LoadDesiderio]
@@ -452,6 +530,21 @@ and double-cross me.[AN]
 [ML]Should I accept this job?[AN]
 [No][X]
 
+## HubA6Title
+A-6: title here[X]
+
+## HubA6Objective
+A-6 objective[X]
+
+## HubA6Units
+A-6 units[X]
+
+## HubA6Loot
+A-6 loot[X]
+
+## HubA6Confirm
+Accept this job?[X]
+
 
 ## HubA6Accepted
 [ML][LoadLua][MR][LoadRochefort]
@@ -477,12 +570,14 @@ This better be worth it...[AN]
 We'll arrive at Port Greagor soon.[N]
 You two, how's our prize looking?[N]
 Presentable? We can't sell it otherwise.[AN]
-[FL]Good enough. There may be questions,[N]
-but no evidence to warrant them.[N]
-We've cleaned the ship thoroughly.[AN]
-[MR][2LB]Is that right? Even with all those[Beat][N]
+[FL][2LB]
+Good enough. There may be questions,[N]
+but no evidence to warrant them.[AN]
+[MR]
+Is that right? Even with all those[Beat][N]
 bodies, aboard? That's not an easy clean.[AN]
-[L][3LB]You really haven't been piratin' long,[N]
+[L][3LB]
+You really haven't been piratin' long,[N]
 boss. We got rid of those leagues ago.[N]
 Bet they're halfway down to the surface.[AN]
 [MR]
@@ -782,16 +877,14 @@ wish, I will leave without delay.[A][CSSCF][MR][CF]
 Looks like that girl's trying to gain[N]
 passage[Beat] Well, none of our concern.[AN]
 [ML]
-I'm afraid it is, Lua.[N]
-She approaches us as we speak.[AN]
+Unlikely, Lua.[N]
+She seems to have spotted us.[AN]
 [MR]
 Hm[Beat] Any chance that you'll[N]
 deal with it for me, Pilar?[AN]
 [ML]
 None. You represent the crew,[N]
-so you should hear her out.[AN]
-If it seems not worth our while,[N]
-then turn her down if you must.[AN]
+not me. The call is yours.[AN]
 [MR]
 Fair enough.[AN]
 [ML][MoL]
@@ -815,14 +908,8 @@ I'm assuming it isn't just[N]
 sailing the skies, right?[AN]
 [FL]
 [Beat]What do you think of the stars?[AN]
-[MR]
-Huh? How does that answer my question?[AN]
-[L]
-Just humor the girl, Lua.[N]
-I'm sure it will make sense.[AN]
 [MR][3LB]
-Well[Beat] They look nice at night?[AN]
-I've passed many evening watches[N]
+Well[Beat] I've passed many evening watches[N]
 looking up at the stars in the sky.[N]
 I imagine most sailors have.[AN]
 Beyond that, I can't say I have[N]
@@ -850,7 +937,7 @@ Were you to let me join your merry band,[N]
 I could use my ability as you command[Beat][N]
 Though I admit, it is not always reliable.[AN]
 [MR][2LB]
-I admit that I'm having a hard time[N]
+And I admit that I'm having a hard time[N]
 believing your claims, but[Beat][AN]
 What do you think of them, Pilar?[AN]
 [L]
@@ -859,7 +946,7 @@ the lens of one raised in the Empire.[AN]
 Out in these isles, and even beyond,[N]
 the impossible can become very real[Beat][AN]
 [L]
-[MR]
+[MR][1LB]
 Hm[Beat] What's your name, lass?[AN]
 [ML]
 You may call me Estelle.[AN]
@@ -870,25 +957,26 @@ Anyone that's tried has crashed first.[AN]
 If you still want to join us knowing that,[N]
 then I'll let you, on one condition.[AN]
 You'll have to pull your own weight,[N]
-with or without your divinations.[AN]
+with or without your divinations.[N]
 Pilar, can you show her the ropes?[A]
 [L]
 Of course. Listen to me, Estelle.[N]
-While common sense may dictate your[N]
-dream impossible, do not give up yet.[AN]
-Anything can happen in this wide world.[N]
-Take it from me, one who has lived long[N]
-enough to see such things firsthand.[A]
+The captain may doubt your goals,[N]
+but anything can happen in this world.[AN]
+Many of the outer isles still remain
+unexplored... Perhaps even one similar
+to your dream lies waiting for you.
+But to get there, y
 [FL]
 I[Beat] Thank you so much, Miss Pilar![N]
 And you as well, Miss[Beat] Captain Lua![AN]
 I promise that I will be of service.[N]
 In fact, I had payment in mind, but[Beat][N][MoFL][MoFL]
 Oh, I just cannot find it anywhere![AN]
-[MR]
-Well, you can give it to me later.[N]
+[MR][ToggleSmile]
+Well, you'll pay plenty in elbow grease.[N]
 I've got some business to take care of,[N]
-so we can talk more later, Estelle.[AN]
+but welcome to the crew, Estelle.[AN]
 [FL][2LB]
 Y-Yes. Thank you again![A][X]
 
@@ -944,25 +1032,23 @@ It wasn't a compliment.[AN]
 Uh, boss?[N]
 Mind filling me in?[AN]
 [FR]
-[Beat]The short of it is that this man[N]
-is a dog of the Merchant's Guild.[AN]
+[Beat]The short of it is that he's[N]
+a dog of the Merchant's Guild.[AN]
 His name is Orlando Felicitas,[N]
-and you'll find no one more pompous.[AN]
+and you'll find no man more pompous.[AN]
 [ML]
 I'm quite a bit more than a dog now,[N]
 you know[Beat][A] And it was not so long ago[N]
 that you were one of us, as well.[AN]
 [FR]
-[Beat]Enough. What do you want of me,[N]
-and why do you want my ship?[AN]
+[Beat]Enough. You wouldn't come this far[N]
+for pleasantries. What do you want?[AN]
 [ML][3LB]
 I hoped that we could discuss old times[N]
 and what brought you to these lawless[N]
 isles. Perhaps over drinks, like always?[AN]
-I really am interested in that ship,[N]
-though, as an addition to my fleet.[AN]
-Ah, but such talk should be discrete,[N]
-yes? No offense to your servant here,[N]
+Ah, but such talk should be discrete.[N]
+No disrespect to your servant here,[N]
 but I don't trust him as I do you.[AN]
 [R]
 Servant? You've got the wrong idea, pal.[N]
@@ -996,7 +1082,7 @@ anywhere that I can't see you.[AN]
 Ha! A demon like you certainly[N]
 has eyes in the back of her head.[AN]
 But worry not, I will refrain.[N]
-Is that girl one of yours?[AN]
+Is that girl in your employ?[AN]
 [R]
 Never seen her in my life,[N]
 so she must be one of Ida's.[AN]
@@ -1048,27 +1134,24 @@ Oh? Well, for starters, I would like[N]
 to purchase that merchant galleon.[N]
 Say[Beat] For five thousand gold, perhaps?[AN]
 You could sell it a bit higher,[N]
-but any observant individual would[N]
-notice the recent battle upon it.[AN]
-That knocks the price down a peg,[N]
-but my associates can clean it quite[N]
-thoroughly and make a tidy profit.[AN]
+but any observant individual will notice[N]
+its[Beat] former uses, and ask questions.[AN]
 [MR]
 Seems like a fair price to me.[N]
 But I asked why you're really here,[N]
-and that isn't the real answer, is it?[AN]
-[ML]
+and that isn't the answer, is it?[AN]
+[ML][ToggleSmile]
 Sharp as always. To tell the truth,[N]
 I heard tales of a swashbuckling pirate[N]
-captain targeting merchants recently.[AN]
-But not just any merchants, mind you,[N]
-she targeted those deep in bed[N]
-with the Imperial Marines.[AN]
+captain targeting merchants recently.[AN][ToggleSmile]
+But not just any merchants, mind you.[N]
+Reports say she targeted those deep[N]
+in bed with the Imperial Marines.[AN]
 When I think of pirates, I typically[N]
 do not imagine them choosy about their[N]
 targets, let alone as selective as that.[AN]
 Well, perhaps one with a grievance[Beat][AN]
-[MR][2LB]
+[MR][1LB]
 So you thought of me?[A]
 [ML][3LB]
 Admittedly a bit of a reach,[N]
@@ -1077,7 +1160,7 @@ In any case, I come on guild business.[AN]
 Your absence the past few months greatly[N]
 impacted our operations, says the chief.[N]
 He asked that you return to the fold.[AN]
-[MR][2LB]
+[MR][1LB]
 No.[AN]
 [ML][3LB]
 And I told him you would say that.[N]
@@ -1102,17 +1185,16 @@ but are you truly satisfied with this?[AN]
 The pirates in bedtime stories journey[N]
 on grand adventures and find great[N]
 treasure. But you[Beat] hunt merchants?[AN]
-[MR][2LB]
+[MR][1LB]
 What are you getting at?[AN]
 [ML][3LB]
-A grand adventure, of course.[N]
 As it happens, quite a few interesting[N]
 occurrences have manifested, as of late.[AN]
 All related to mysterious movements[N]
 of the Imperial Marines that you hate,[N]
 in the direction of these very isles,[AN]
 and further. It is rare enough to see[N]
-a marine vessel at all out here[Beat][N]
+a marine vessel out in these parts[Beat][N]
 But as many as the rumors say?[AN]
 They seek something, Lua.[N]
 Perhaps even[Beat] the Fire Emblem.[A]
@@ -1135,13 +1217,12 @@ I get the idea, so shut it already.[AN]
 [Beat]I'll have to ask the crew and mull[N]
 it over before deciding whether we[N]
 should go further into the outskirts.[AN]
-We'll need more crewmates at the least,[N]
+We'll need more crewmates anyway,[N]
 and the coin to pay and feed them.[AN]
 [ML]
-Take all the time you like.[AN]
+Take all the time you like.[N]
 I can provide coin, so long as you[N]
-help me in return. As it happens,[N]
-I require lodging during my stay.[AN]
+help me in return with my lodging.[AN]
 [MR]
 I doubt they're what you're used to,[N]
 but I've got a few empty rooms down[N]
@@ -1263,6 +1344,8 @@ You didn't pay me![A][X]
 ## MrYodsenTellsLuaShesBrokeText
 [MidRight][LoadMrYodsen]
 You're broke![A][X]
+
+
 
 //Base Scene 1; Characters: Carmen and Ximo
 

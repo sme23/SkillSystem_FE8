@@ -17,130 +17,17 @@ POIN BeginningScene EndingScene
 //10 - pirate boss death quote flag
 //11 - rebel boss death quote flag
 //12 - early arrival flag (if pirate boss is killed before rebels show up)
-//13 - second early arrival flag that stops itself from existing
 //14 - turned on by PirateBossDefeat misc event
 //15 - turned on by RebelBossDefeat misc event
 
 TurnBasedEvents:
 TurnEventPlayer(0, RebelPremonition, 2)
-TurnEventPlayer(13, RebelEarlyArrival, 2, 5)
 TurnEventPlayer(0, ThiefArrival, 4)
+TurnEventPlayer(12, RebelArrival, 3, 5)
 TurnEventPlayer(12, RebelWarning1, 4)
 TurnEventPlayer(12, RebelWarning2, 5)
 TurnEventPlayer(12, RebelWarning3, 6)
-TurnEventPlayer(13, RebelArrival, 7)
 END_MAIN
-
-CharacterBasedEvents:
-CharacterEventBothWays(9, JuanRecruitment, Lua, Juan)
-END_MAIN
-
-LocationBasedEvents:
-DurabilityChest(SkillScroll,CritthriftID,12,22)
-END_MAIN
-
-MiscBasedEvents:
-AFEV 14 PirateBossDefeat 10
-AFEV 15 RebelBossDefeat 11
-CauseGameOverIfLordDies
-END_MAIN
-
-Units1:
-UNIT Lua Captain 0x0 Level(1, Ally, False) [6,0] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [7,0] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [5,1] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [6,1] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [7,1] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [5,2] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [6,2] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [5,3] 0 0 0 0 [Vulnerary] NoAI
-UNIT
-
-Units2:
-UNIT Lua Captain 0x0 Level(1, Ally, False) [6,0] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [7,0] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [5,1] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [6,1] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [7,1] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [5,2] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [6,2] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [5,3] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [4,3] 0 0 0 0 [Vulnerary] NoAI
-UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
-UNIT
-
-NPCGroup:
-UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim] BossAI
-UNIT
-
-EnemyGroup:
-//boss debug, delete later!
-//UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [3,2] 0 0 0 0 [Vulnerary] GroupFiveAI
-//UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [3,3] 0 0 0 0 [Vulnerary] ChargeAI
-//UNIT A4Pirate Thief 0 Level(4, Enemy, True) [12,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
-//turn 1
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
-//turn 2
-UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Flux, Vulnerary, TealGem] ChargeAI
-UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
-//turn 3
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
-UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
-UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
-//turn 4
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
-UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,17] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
-//turn 5
-UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
-//turn 6
-UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Flux, Vulnerary] GroupThreeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
-UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
-//turn 7
-UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
-UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
-UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
-UNIT
-
-RebelSpawn:
-UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
-UNIT Rebel Soldier 0 Level(4, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Rebel Warden 0 Level(4, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
-UNIT Rebel Warden 0 Level(4, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
-UNIT Rebel Archer 0 Level(4, Enemy, True) [22,15] 0 0 0 0 [Longbow] ChargeAI
-UNIT Rebel Fighter 0 Level(4, Enemy, True) [20,19] 0 0 0 0 [IronAxe, HandAxe] ChargeAI
-UNIT Rebel GriffinRider 0 Level(4, Enemy, True) [21,10] 0 0 0 0 [Pike] ChargeAI
-UNIT
-
-RebelScoutSpawn:
-UNIT Rebel GriffinRider 0 Level(4, NPC, True) [20,0] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT
-
-ThiefSpawn:
-UNIT A4Pirate Thief 0 Level(4, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
-UNIT
-
-JuanRecruitment:
-SetAI(Juan,0,0,4,0)
-Text(ChA4JuanRecruitText)
-CUSA Juan
-NoFade
-ENDA
-
-ThiefArrival:
-SpawnReinforcements(ThiefSpawn)
-AddTrap(RedSigilTrapID,0,22)
-NoFade
-ENDA
 
 RebelPremonition:
 SpawnReinforcements(RebelScoutSpawn)
@@ -154,6 +41,37 @@ ENUN
 REMOVEUNIT Rebel
 CameraCursor(Lua)
 Text(ChA4RebelPremonitionText2)
+NoFade
+ENDA
+
+ThiefArrival:
+SpawnReinforcements(ThiefSpawn)
+AddTrap(RedSigilTrapID,0,22)
+NoFade
+ENDA
+
+RebelArrival:
+CHECK_TURNS
+SVAL s1 7
+BEQ 1 s1 sC  //if the turn count is 7, then we branch to the rebel spawn event
+	CHECK_EVENTID 10 
+	BNE 1 s0 sC //if the pirate boss is dead, play the even early
+	ENUF 12 //unset the rebel arrival flag if neither of these are true
+	GOTO 2
+LABEL 1
+	CAMERA_CENTERED [23,16]
+	TILECHANGE 0
+	STAL 30
+	TILECHANGE 1
+	SOUN 0x02D7 //snag falling sound effect
+	STAL 15
+	FADI 15
+	SpawnReinforcements(RebelSpawn)
+	FADU 15
+	ENUN
+	Text(ChA4RebelArrivalText)
+	SetAI(A4Pirate,0,0,4,0)
+LABEL 2
 NoFade
 ENDA
 
@@ -192,49 +110,26 @@ LABEL 6
 NoFade
 ENDA
 
-RebelArrival:
-ENUF 10 //turn the pirateBoss deathquote back off, as he is still alive if this is playing
-CAMERA_CENTERED [23,16]
-STAL 30
-TILECHANGE 1
-SOUN 0x02D7 //snag falling sound effect
-STAL 15
-FADI 15
-SpawnReinforcements(RebelSpawn)
-FADU 15
-ENUN
-Text(ChA4RebelArrivalText)
-SetAI(A4PirateBoss,0,0,4,0)
-SetAI(A4Pirate,0,0,4,0)
+CharacterBasedEvents:
+CharacterEventBothWays(9, JuanRecruitment, Lua, Juan)
+END_MAIN
+
+JuanRecruitment:
+SetAI(Juan,0,0,0,0)
+Text(ChA4JuanRecruitText)
+CUSA Juan
 NoFade
 ENDA
 
-RebelEarlyArrival:
-ENUF 12
-ENUF 13
-CHECK_EVENTID 10 //play this event if the boss has been killed
-BEQ 3 s0 sC
-CHECK_EVENTID 12 //play this event if it HASN'T been played yet
-BNE 3 s0 sC
-CHECK_EVENTID 13 //then, play this event if it HASN'T been played yet
-BNE 3 s0 sC
-	ENUT 12 //turn on flag 12 to prevent this (and some other events) from playing in the future
-	ENUT 13 //turn on flag 12 to prevent this (and some other events) from playing in the future	
-	CAMERA_CENTERED [23,16]
-	TILECHANGE 0
-	STAL 30
-	TILECHANGE 1
-	SOUN 0x02D7 //snag falling sound effect
-	STAL 15
-	FADI 15
-	SpawnReinforcements(RebelSpawn)
-	FADU 15
-	ENUN
-	Text(ChA4RebelArrivalText)
-	SetAI(A4Pirate,0,0,4,0)
-LABEL 3
-NoFade
-ENDA
+LocationBasedEvents:
+DurabilityChest(SkillScroll,CritthriftID,12,22)
+END_MAIN
+
+MiscBasedEvents:
+AFEV 14 PirateBossDefeat 10
+AFEV 15 RebelBossDefeat 11
+CauseGameOverIfLordDies
+END_MAIN
 
 PirateBossDefeat:
 CHECK_EVENTID 11 //check if the rebelBoss death quote has been played
@@ -246,11 +141,91 @@ ENDA
 
 RebelBossDefeat:
 CHECK_EVENTID 10 //check if the pirateBoss death quote has been played
-BEQ 2 s0 sC
+BEQ 1 s0 sC
 	CALL EndingScene
-LABEL 2
+LABEL 1
 NoFade
 ENDA
+
+Units1:
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [7,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [7,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,2] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,2] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT
+
+Units2:
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [7,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [7,1] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,2] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [6,2] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [5,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [4,3] 0 0 0 0 [Vulnerary] NoAI
+UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
+UNIT
+
+NPCGroup:
+UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim] BossAI
+UNIT
+
+EnemyGroup:
+//turn 1
+UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
+//turn 2
+UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
+UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Elfire, Vulnerary, TealGem] ChargeAI
+UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
+//turn 3
+UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
+UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
+UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
+//turn 4
+UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
+UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,17] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
+UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
+//turn 5
+UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
+UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
+//turn 6
+UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
+UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Elfire, Vulnerary] GroupThreeAI
+UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
+UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
+//turn 7
+UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
+UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
+UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
+UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
+UNIT
+
+RebelSpawn:
+UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
+UNIT Rebel Soldier 0 Level(4, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Warden 0 Level(4, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
+UNIT Rebel Warden 0 Level(4, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
+UNIT Rebel Archer 0 Level(4, Enemy, True) [22,15] 0 0 0 0 [Longbow] ChargeAI
+UNIT Rebel Fighter 0 Level(4, Enemy, True) [20,19] 0 0 0 0 [IronAxe, HandAxe] ChargeAI
+UNIT Rebel GriffinRider 0 Level(4, Enemy, True) [21,10] 0 0 0 0 [Pike] ChargeAI
+UNIT
+
+RebelScoutSpawn:
+UNIT Rebel GriffinRider 0 Level(4, NPC, True) [20,0] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT
+
+ThiefSpawn:
+UNIT A4Pirate Thief 0 Level(4, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
+UNIT
 
 Traps1:
 ENDTRAP

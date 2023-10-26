@@ -222,7 +222,7 @@ Ignores enemy resistance.[X]
 Restores HP equal to damage dealt.[X]
 
 ## GalestrikeName
-GaleStrike[X]
+Gale Strike[X]
 
 ## GalestrikeDesc
 Refreshes once per turn on a kill.[X]
@@ -320,8 +320,7 @@ Does exactly as advertised.[X]
 Take Aim![X]
 
 ## TakeAimDesc
-+30 hit to an ally for 1 turn.[N]
-(currently doesn't work!)[X]
++30 hit to an ally for 1 turn.[X]
 
 // EQUIPS
 
@@ -373,3 +372,10 @@ to possess miraculous properties.[X]
 You feel more able[N]
 to withstand any[N]
 blow.[X]
+
+## KnightRingName
+Knight Ring[X]
+
+## KnightRingDesc
+Allows this unit to move again after[N]
+an action with remaining movement.[X]

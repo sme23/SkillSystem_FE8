@@ -1,11 +1,23 @@
 EventPointerTable(HubAEventsID, PointerList)
 
+//flags for Chapter 2: cannot overlap with ones used for hub A when on this map
+#define EnemyGotOnBoat 7
+#define WindUpFlag1 8
+#define WindUpFlag2 9
+#define WindUpFlag3 10
+#define ReadyForTakeoffFlag 11
+#define Ch2ThisIsAChapter 12
+#define IgniswordsDead 13
+#define Ch2ReinforcementFlags 14
+
 // temp flags
 #define SeenHubA1Pitch 0x7
 #define SeenHubA2Pitch 0x8
 #define SeenHubA3Pitch 0x9
 #define SeenHubA5Pitch 0xB
 #define SeenHubA6Pitch 0xc
+
+#define GotoChapter2Flag 0xe
 
 //hub maneuvering flags
 #define LibraryToMainRoom 25
@@ -64,17 +76,20 @@ END_MAIN
 
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
-TutorialYesNoText(HubA1Prompt)
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
+//TutorialYesNoText(HubA1Prompt)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_1, Castle_Hall_Night, HubA)
+GotoHubChapterIfYes(2, HubA_1, HubA1Accepted)
 ENUF WentToHubA1
+EVBIT_MODIFY 0
 NoFade
 ENDA
 
 GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
-Text(HubA2Prompt)
-EVBIT_MODIFY 0
+//Text(HubA2Prompt)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_2, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
 ENUF WentToHubA2
 NoFade
@@ -82,7 +97,9 @@ ENDA
 
 GotoChapter3:
 HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
-TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+//TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_3, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
 Text(HubA3Selection_No)
 ENUF WentToHubA3
@@ -91,18 +108,44 @@ ENDA
 
 GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
-Text(HubA5Prompt) 
+//Text(HubA5Prompt) 
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA, PortGreagorCallback)
 ENUT SeenHubA5Pitch
+SVAL s1 0x1
+BNE 2 s1 sC
 EVBIT_MODIFY 0
-GotoHubChapterIfYes(2, HubA_5, HubA5Accepted)
+Text(HubA5Accepted)
+ENUF LuaInAHubFlag
+FADI 10
+CUSA Desiderio
+CUSA Pilar
+ENUN
+ASMC EyeForAnEyeResetASMC
+MNC2 HubA_5
+NoFade
+ENDB
+LABEL 2
 ENUF WentToHubA5
 NoFade
 ENDA
 
+PortGreagorCallback:
+//this does similar to PortGreagorDocks but without most things, for the preview callback
+TILECHANGE 0
+CALL ClearHubATraps
+CALL AddDockTraps
+AddTrap(RedSigilTrapID, 8, 22) //add the indicator under desiderio
+//CALL DocksSpawnEvent
+NoFade
+ENDA
+
+
 GotoChapter6:
 HubChapterFirstTimeEvent(1, SeenHubA6Pitch, HubA6Pitch)
-Text(HubA6Prompt) 
-EVBIT_MODIFY 0
+//Text(HubA6Prompt) 
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_6, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
 ENUF WentToHubA6
 NoFade
@@ -134,11 +177,20 @@ AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
 AREA PortToTavern FromPortToTavern [8,20] [8,20]
 AREA TavernToPort ToPortFromTavern [8,20] [8,20] 
 
+AREA GotoChapter2Flag AllDoneWithHubA [16,10] [16,10]
+
 AREA WentToHubA1 GotoChapter1 [12,5] [12,5]
 AREA WentToHubA4 GotoChapter4 [18, 9] [18, 9]
 AFEV 0 RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
+
+AllDoneWithHubA:
+SET_ACTIVE 0
+FADI 10
+MNC2 Chapter2 
+NoFade
+ENDA
 
 Traps1:
 BlueSigil(0, 11)
@@ -165,15 +217,23 @@ UNIT
 
 BeginningScene:
 // only here for chapter A1 testing
+ENUT GotoChapter2Flag
 ENUT LuaInAHubFlag
 ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
 CALL PortSpawnEvent
+CheckHowManyHubChaptersCompleted
+SVAL s1 6 //if 5 chapters completed
+BLT 2 sC s1 
+    AddTrap(GreenSigilTrapID, 16, 10) //green means go
+    CenterTextbox(HubAGoTime)
+    ENUF GotoChapter2Flag
+LABEL 2
 GotoPrepScreenHub
 ENUN
-NoFade
+NoFade 
 ENDA
 
 EndingScene:
@@ -380,6 +440,11 @@ UnsetAllHubChapterFlags
 ENUF PortToDocks
 ENUF PortToBase
 ENUF PortToTavern
+ENUF WindUpFlag1
+ENUF WindUpFlag2
+ENUF WindUpFlag3
+ENUF ReadyForTakeoffFlag
+ENUF IgniswordsDead
 CALL PortSpawnEvent  //unset all chapter flags and port flags so you can walk around
 CALL AddHubATraps
 LoadPlayerUnits(LuaInDaHub)
@@ -403,7 +468,9 @@ NoFade
 ENDA
 
 GotoChapter4:
-TutorialYesNoText(HubA4Prompt) 
+//TutorialYesNoText(HubA4Prompt) 
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(1, HubA_4)
 ENUF WentToHubA4
 NoFade
@@ -419,18 +486,24 @@ UNIT
 
 BeginningSceneFirstTimeCave:
 SetBackground(Ship)
+MUSC StillZephyrsID
 Text(HubABeginningScene1)
 SetBackground(Fort)
 Text(HubABeginningScene2)
-
+ENUT 4
 ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
-ENUT WentToPortGreagorDocks //sets future global flag events that I don't want triggered yet
+ENUT WentToPortGreagorDocks //sets future flag EIDs that I don't want triggered yet
 ENUT CameBackFromDocks
 ENUT WentToBaseAgain
 ENUT MainRoomToOtherRooms
 ENUT TreasureRoomToMainRoom
 ENUT LuaQuartersToMainRoom
 ENUT LibraryToMainRoom
+ENUT WindUpFlag1
+ENUT WindUpFlag2
+ENUT WindUpFlag3
+ENUT ReadyForTakeoffFlag
+ENUT IgniswordsDead
 
 FADI 10
 LOMA Chapter2

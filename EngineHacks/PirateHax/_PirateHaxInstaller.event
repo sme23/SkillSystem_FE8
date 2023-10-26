@@ -91,6 +91,15 @@
 #include "FortuneStaff/FortuneStaff.event"
 //Sme
 
+#include "Kirito/Extern.event"
+//Pikmin1211
+
+#include "FancyChapterPreview/FancyChapterPreview.event"
+//Sme
+
+#include "prep_shop_each_chapter2/Installer.event"
+//7743
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0
@@ -149,4 +158,9 @@ ORG 0x9A820 //Prep screen item menu tile width
 BYTE 0x6
 ORG 0x98728 //Prep screen pick units tile width
 BYTE 0x6
+POP
+
+PUSH //stops the hang when check_alive on npcs
+	ORG $1027C
+	BYTE 0x00 0x20 0x02 
 POP

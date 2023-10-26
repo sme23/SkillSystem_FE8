@@ -20,9 +20,10 @@
 #define SilentGiveItem(item,unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItemFunc|1"
 #define GiveGold(money) "SVAL 3 money; GIVEMONEY Lua"
 #define TakeGold(money) "SVAL 3 money; TAKEMONEY Lua"
+#define FadeOutMusic "MUSCMID 0x7FFF"
 
-#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
-#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 
 #define HubChapterFirstTimeEvent(labelId, seenEID, selectionText) "EVBIT_MODIFY 4; CHECK_EVENTID seenEID; BNE labelId s0 sC; Text(selectionText); ENUT seenEID; LABEL labelId"
 

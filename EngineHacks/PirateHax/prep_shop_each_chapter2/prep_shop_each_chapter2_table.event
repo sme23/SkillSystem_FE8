@@ -1,0 +1,15 @@
+#define PrepShopPointer(shop_pointer) "WORD shop_pointer; "
+
+PrepShop_Table:
+PrepShopPointer(PrepShop1|IsPointer) //chapter 1
+PrepShopPointer(PrepShop1|IsPointer) // chapter 2
+PrepShopPointer(PrepShop1|IsPointer) // chapter 3
+PrepShopPointer(PrepShop1|IsPointer) // chapter 4
+PrepShopPointer(PrepShop1|IsPointer) // chapter 5
+PrepShopPointer(PrepShop1|IsPointer) // chapter 6
+PrepShopPointer(PrepShop1|IsPointer) // chapter 7
+PrepShopPointer(PrepShop1|IsPointer) // chapter 8
+PrepShopPointer(PrepShop1|IsPointer) // chapter 9
+PrepShopPointer(PrepShop1|IsPointer) // chapter 10
+PrepShopPointer(0)
+

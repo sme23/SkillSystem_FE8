@@ -45,6 +45,16 @@ Let's keep this pace up, Indio![A][X]
 [ML]You're telling me to pull out already?[N]
 You better not cheapen out on my cut![A][X]
 
+## BikoEscapeQuote
+[ML][LoadBiko]
+[ML]Whew, we made it[Beat][N]
+Can't wait to take a break![A][X]
+
+## OndehEscapeQuote
+[ML][LoadOndeh]
+[ML]Can't stop here. Need to[N]
+keep up the pace. Follow me![A][X]
+
 ## PlaceholderEscapeQuote
 [ML][LoadCurrent]
 [ML]Dragz says hi. This character[N]

@@ -90,6 +90,7 @@
 
 
 [LoadLua] = [LoadFace][0x2][0x1]
+[LoadLuaHatless] = [LoadFace][0x46][0x1]
 [LoadPilar] = [LoadFace][0x3][0x1]
 [LoadDesiderio] = [LoadFace][0x4][0x1]
 [LoadRazvan] = [LoadFace][0x5][0x1]
@@ -120,6 +121,8 @@
 [LoadRahel] = [LoadFace][0x17][0x1]
 
 [LoadKhazhak] = [LoadFace][0x31][0x1]
+
+[LoadSagargala] = [LoadFace][0x52][0x1]
 
 [LoadRochefort] = [LoadFace][0x31][0x1]
 [LoadSantiago] = [LoadFace][0x31][0x1]

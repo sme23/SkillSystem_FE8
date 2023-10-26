@@ -1,0 +1,58 @@
+#include "BattleAnimPointers.event"
+
+{
+    #include "Animations/Armors/Sword Installer.event"
+    #include "Animations/Armors/Axe Installer.event"
+    #include "Animations/Armors/Lance Installer.event"
+    #include "Animations/Armors/Handaxe Installer.event"
+    #include "Animations/Armors/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Deserter/Lance Installer.event"
+    #include "Animations/Deserter/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Hunter_F/Bow Installer.event"
+    #include "Animations/Hunter_F/Unarmed Installer.event"
+}
+{
+    #include "Animations/Hunter_M/Bow Installer.event"
+    #include "Animations/Hunter_M/Unarmed Installer.event"
+}
+{
+    #include "Animations/Ninja/Knife Installer.event"
+    #include "Animations/Ninja/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Curate/Staff Installer.event"
+    #include "Animations/Curate/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Thief_M/Knife Installer.event"
+    #include "Animations/Thief_M/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Soldier/Lance Installer.event"
+    #include "Animations/Soldier/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/GriffinRider/Lance Installer.event"
+    #include "Animations/GriffinRider/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/PegasusRider/Sword Installer.event"
+    #include "Animations/PegasusRider/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/DragonRider/Axe Installer.event"
+    #include "Animations/DragonRider/Handaxe Installer.event"
+    #include "Animations/DragonRider/Unarmed Installer.event"
+}

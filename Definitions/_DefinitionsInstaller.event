@@ -9,3 +9,4 @@
 #include "MugDefinitions.event"
 #include "EventDefinitions.event"
 #include "MusicDefinitions.event"
+#include "BattleAnimDefinitions.event"

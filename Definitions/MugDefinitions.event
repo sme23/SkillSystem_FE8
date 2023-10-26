@@ -8,26 +8,29 @@
 #define HermenegildoMug $9
 #define MrYodsenMug $a
 #define DurghamMug $b
-#define TrianaMug $43
-#define MedwynMug $44
-#define BartzMug $45
 #define IndioMug $c
 #define LeandraMug $d
 #define JaimeMug $e
 #define LeonorMug $f
 #define OndehMug $10
 #define BikoMug $11
+
 #define MatteoMug $14
 #define SuzanneMug $15
-
 #define OrlandoMug $16
 #define RahelMug $17
 #define TangyuanMug $18
 
 #define KhazhakMug $31
 
+#define TrianaMug $43
+#define MedwynMug $44
+#define BartzMug $45
+#define LuaHatlessMug $46
+
 #define IdaMug $51
 #define SargargalaMug $52
+#define SagargalaMug SargargalaMug
 
 // A-6 placeholders, these are all Khazhak
 #define SlicerMug $31
@@ -43,3 +46,16 @@
 #define TheCloserMug $31
 #define YaoguaiMug $31
 #define MrMistMug $31
+
+
+//CLASS CARDS
+
+#define WardenClassCard 0x100
+#define VanguardClassCard 0x101
+#define HunterMClassCard 0x102
+#define HunterFClassCard 0x103
+#define DeserterClassCard 0x104
+#define NinjaClassCard 0x105
+#define DragonRiderClassCard 0x106
+#define PegasusRiderClassCard 0x107
+#define GriffinRiderClassCard 0x108

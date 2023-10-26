@@ -180,3 +180,15 @@ Bow Cav[X]
 
 ## BowCavDesc
  [X]
+
+## RuneshieldName
+Runeshield[X]
+
+## RuneshieldDesc
+ [X]
+
+## WolfKnightName
+Wolfrider[X]
+
+## WolfKnightDesc
+ [X]

@@ -2,9 +2,9 @@
 Symbol table '.symtab' contains 18 entries:
    Num:    Value  Size Type    Bind   Vis      Ndx Name
      0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
-     1: 00000000     0 SECTION LOCAL  DEFAULT    1 .text
-     2: 00000000     0 SECTION LOCAL  DEFAULT    2 .data
-     3: 00000000     0 SECTION LOCAL  DEFAULT    3 .bss
+     1: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 00000000     0 SECTION LOCAL  DEFAULT    2 
+     3: 00000000     0 SECTION LOCAL  DEFAULT    3 
      4: 08017548     0 NOTYPE  LOCAL  DEFAULT  ABS GetWeaponType
      5: 00000000     0 NOTYPE  LOCAL  DEFAULT    1 $t
      6: 0000000c     0 NOTYPE  LOCAL  DEFAULT    1 $d
@@ -13,9 +13,9 @@ Symbol table '.symtab' contains 18 entries:
      9: 0000001e     0 NOTYPE  LOCAL  DEFAULT    1 GiveBonus
     10: 00000032     0 NOTYPE  LOCAL  DEFAULT    1 NotOverMax
     11: 0000003c     0 NOTYPE  LOCAL  DEFAULT    1 $d
-    12: 00000000     0 SECTION LOCAL  DEFAULT    6 .debug_info
-    13: 00000000     0 SECTION LOCAL  DEFAULT    8 .debug_abbrev
-    14: 00000000     0 SECTION LOCAL  DEFAULT    4 .debug_line
-    15: 00000000     0 SECTION LOCAL  DEFAULT   11 .debug_str
-    16: 00000000     0 SECTION LOCAL  DEFAULT    9 .debug_aranges
-    17: 00000000     0 SECTION LOCAL  DEFAULT   12 .ARM.attributes
+    12: 00000000     0 SECTION LOCAL  DEFAULT    7 
+    13: 0000000c     0 NOTYPE  LOCAL  DEFAULT   10 $d
+    14: 00000000     0 SECTION LOCAL  DEFAULT    9 
+    15: 00000000     0 SECTION LOCAL  DEFAULT    5 
+    16: 00000000     0 SECTION LOCAL  DEFAULT   10 
+    17: 00000000     0 SECTION LOCAL  DEFAULT    4 

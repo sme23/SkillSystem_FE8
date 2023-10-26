@@ -1,0 +1,76 @@
+
+ALIGN 4
+WardenAnims:
+LanceAnim(ArmorLanceAnim)
+SwordAnim(ArmorSwordAnim)
+UnarmedAnim(ArmorUnarmedAnim)
+EndAnim
+
+ALIGN 4
+VanguardAnims:
+AxeAnim(ArmorAxeAnim)
+HandAxeAnim(ArmorHandAxeAnim)
+LanceAnim(ArmorLanceAnim)
+UnarmedAnim(ArmorUnarmedAnim)
+EndAnim
+
+ALIGN 4
+DeserterAnims:
+LanceAnim(DeserterLanceAnim)
+UnarmedAnim(DeserterUnarmedAnim)
+EndAnim
+
+ALIGN 4
+HunterFAnims:
+BowAnim(HunterFBowAnim)
+UnarmedAnim(HunterFUnarmedAnim)
+EndAnim
+
+ALIGN 4
+HunterMAnims:
+BowAnim(HunterMBowAnim)
+UnarmedAnim(HunterMUnarmedAnim)
+EndAnim
+
+ALIGN 4
+NinjaAnims:
+KnifeAnim(NinjaKnifeAnim)
+UnarmedAnim(NinjaUnarmedAnim)
+EndAnim
+
+ALIGN 4
+CurateAnims:
+StaffAnim(CurateStaffAnim)
+UnarmedAnim(CurateUnarmedAnim)
+EndAnim
+
+ALIGN 4
+ThiefAnims:
+KnifeAnim(ThiefKnifeAnim)
+UnarmedAnim(ThiefUnarmedAnim)
+EndAnim
+
+ALIGN 4
+DragonRiderAnims:
+AxeAnim(DragonRiderAxeAnim)
+HandAxeAnim(DragonRiderHandAxeAnim)
+UnarmedAnim(DragonRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+GriffinRiderAnims:
+LanceAnim(GriffinRiderLanceAnim)
+UnarmedAnim(GriffinRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+PegasusRiderAnims:
+SwordAnim(PegasusRiderSwordAnim)
+UnarmedAnim(PegasusRiderUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SoldierAnims:
+LanceAnim(SoldierLanceAnim)
+UnarmedAnim(SoldierUnarmedAnim)
+EndAnim
