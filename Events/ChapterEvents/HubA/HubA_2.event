@@ -14,29 +14,31 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0,JaimeConvo,1)
-TurnEventPlayer(0,MoreCrimsonHearts,3)
+TurnEventPlayer(0,MoreCrimsonHearts,2)
+TurnEventPlayer(0,TopGuys,3)
 TurnEventPlayer(0,EvenMoreCrimsonHearts,4)
-TurnEventPlayer(0x8,EnemiesCharge,5)
-TurnEventPlayer(0,ReinforcementCounter,1,255)
+TurnEventPlayer(0,Fliers,5)
+TurnEventPlayer(0,EnemiesCharge,6)
+TurnEventPlayer(0,ManfredEvent,9)
+TurnEventPlayer(0,EndingScene,11)
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEvent(0x7,LeonorRecruitment,Jaime,Leonor)
 CharacterEventBothWays(0xF,CarmenJaimeTalk,Carmen,Jaime)
 END_MAIN
 
 LocationBasedEvents:
 Village(0xD,RescueVillage,6,13)
-Escape(0xE,Escape,9,18)
-Escape(0xE,Escape,10,18)
-Escape(0xE,Escape,12,18)
+// Escape(0xE,Escape,9,18)
+// Escape(0xE,Escape,10,18)
+// Escape(0xE,Escape,12,18)
 END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
-AFEV 0x0 CheckAllBosses 0x0
-AREA 0x8 EnemiesChargeArea [19,0] [21,8]
-AREA 0x8 EnemiesChargeArea [12,0] [21,3]
+//AFEV 0x0 CheckAllBosses 0x0
+// AREA 0x8 EnemiesChargeArea [19,0] [21,8]
+// AREA 0x8 EnemiesChargeArea [12,0] [21,3]
 END_MAIN
 
 Units1:
@@ -72,16 +74,15 @@ UNIT
 NPCs:
 UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Heal, Vulnerary] BossAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [10,11] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Rebel Deserter 0 Level(1,NPC,True) [12,11] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Rebel Deserter 0 Level(1,NPC,True) [11,10] 0 0 0 0 [SteelLance] ChargeAI
 UNIT
 
 Enemies:
 UNIT Felipe Soldier 0 Level(6,Enemy,True) [20,1] 0 0 0 0 [Pike,Javelin] BossAI
 UNIT Sierra Vanguard 0 Level(6,Enemy,True) [1,1] 0 0 0 0 [Bloodaxe,HandAxe] BossAI
-UNIT Manfred Trickster 0 Level(13,Enemy,True) [5,4] 0 0 0 0 [SilverSword,FlameSword,GlassShield] GroupOneAI
-UNIT CrimsonHeart Mercenary 0 Level(4,Enemy,True) [6,4] 0 0 0 0 [SteelSword] AttackInRangeAI
-UNIT CrimsonHeart Mercenary 0 Level(4,Enemy,True) [4,4] 0 0 0 0 [SteelSword] AttackInRangeAI
+UNIT Manfred Mercenary 0 Level(6,Enemy,True) [5,4] 0 0 0 0 [SteelSword,GlassShield] ChargeAI
+UNIT CrimsonHeart Mercenary 0 Level(4,Enemy,True) [6,4] 0 0 0 0 [IronBlade] ChargeAI
+UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [4,4] 0 0 0 0 [IronSword] ChargeAI
+UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [5,3] 0 0 0 0 [IronAxe] ChargeAI
 UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [6,10] 0 0 0 0 [IronSword] ChargeAI
 UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [11,7] 0 0 0 0 [IronLance] ChargeAI
 UNIT CrimsonHeart Fighter 0 Level(3,Enemy,True) [14,9] 0 0 0 0 [IronAxe] ChargeAI
@@ -92,15 +93,37 @@ UNIT Incendivis Soldier 0 Level(4,Enemy,True) [21,0] 0 0 0 0 [SteelLance] Charge
 UNIT
 
 CrimsonHearts:
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [0,9] 0 0 0 0 [SteelSword] ChargeAI
-UNIT CrimsonHeart Brigand 0 Level(3,Enemy,True) [0,10] 0 0 0 0 [SteelAxe] BrigandAI
-UNIT CrimsonHeart Brigand 0 Level(3,Enemy,True) [0,11] 0 0 0 0 [HandAxe] BrigandAI
+UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [0,9] 0 0 0 0 [IronSword] ChargeAI
+UNIT CrimsonHeart Brigand 0 Level(3,Enemy,True) [0,10] 0 0 0 0 [IronAxe] BrigandAI
+UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [IronLance] ChargeAI
 UNIT
 
 CrimsonHearts2:
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [21,5] 0 0 0 0 [SteelSword] ChargeAI
-UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [SteelLance] ChargeAI
-UNIT CrimsonHeart Fighter 0 Level(3,Enemy,True) [21,7] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [21,5] 0 0 0 0 [IronSword] ChargeAI
+UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [IronLance] ChargeAI
+UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [0,10] 0 0 0 0 [IronBlade,TealGem] ChargeAI
+UNIT
+
+TopReinforcements:
+UNIT Incendivis BowCav 0 Level(3,Enemy,True) [4,0] 0 0 0 0 [IronBow] ChargeAI
+UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [6,0] 0 0 0 0 [IronAxe] ChargeAI
+UNIT
+
+FlierReinforcements:
+UNIT Incendivis PegasusRider 0 Level(3,Enemy,True) [0,14] 0 0 0 0 [IronSword,LightBrand] ChargeAI
+UNIT Incendivis DragonRider 0 Level(3,Enemy,True) [21,12] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Incendivis GriffinRider 0 Level(3,Enemy,True) [12,0] 0 0 0 0 [IronLance] ChargeAI
+UNIT Incendivis GriffinRider 0 Level(3,Enemy,True) [13,0] 0 0 0 0 [Javelin] ChargeAI
+UNIT Rebel Brigand 0 Level(1,NPC,True) [14,6] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT
+
+ManfredGroup:
+UNIT CrimsonHeart Fighter 0 Level(3,Enemy,True) [21,5] 0 0 0 0 [IronAxe] ChargeAI
+UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [IronLance] ChargeAI
+UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [IronSword] ChargeAI
+UNIT CrimsonHeart Hunter 0 Level(3,Enemy,True) [6,0] 0 0 0 0 [IronBow] ChargeAI
+UNIT Manfred Mercenary 0 Level(6,Enemy,True) [0,10] 0 0 0 0 [SteelSword,GlassShield] ChargeAI
 UNIT
 
 ReinforcementsEnd:
@@ -115,6 +138,9 @@ UNIT Incendivis Dreadnought 0 Level(1,Enemy,True) [21,8] 0 0 0 0 [SilverLance] B
 UNIT
 
 Traps1:
+GreenSigil(9,18)
+GreenSigil(10,18)
+GreenSigil(12,18)
 ENDTRAP
 ALIGN 4
 
@@ -138,16 +164,16 @@ SetBackground(Outside_Village_Day)
 Text(A2PrePrepsCutscene2)
 SetBackground(Outside_Village_Day)
 Text(A2PrePrepsCutscene3)
+SetBackground(Outside_Village_Day)
+Text(A2JaimeJoins)
 GotoPrepScreen
 ENDA
 
 JaimeConvo:
 CameraCursor(Jaime)
-Text(A2JaimeJoins)
 CameraCursor(Felipe)
 Text(A2FelipeTurn1)
 EVBIT_T 9
-MOVE 0 Manfred [10,18]
 DISA Manfred
 ENDA
 
@@ -166,6 +192,21 @@ NoFade
 SpawnReinforcements(CrimsonHearts2)
 ENDA
 
+TopGuys:
+NoFade
+SpawnReinforcements(TopReinforcements)
+ENDA
+
+Fliers:
+NoFade
+SpawnReinforcements(FlierReinforcements)
+ENDA
+
+ManfredEvent:
+NoFade
+SpawnReinforcements(ManfredGroup)
+ENDA
+
 EnemiesChargeArea:
 ContinueIfFactionMatch(Ally)
 CALL EnemiesCharge
@@ -175,17 +216,12 @@ EnemiesCharge:
 NoFade
 CameraCursor(Felipe)
 Text(A2ReinforcementWarning)
-SVAL 0xB 0x10015 // idk how this works but it's what febuilder gives
-MOVE 0 UnitAtCoords [21,0]
-ENUN
-SVAL 0xB 0x15
 DISA UnitAtCoords
 SetAI(Felipe,0,0,4,0)
 SetAI(Incendivis,0,0,4,0)
 SetAI(Sierra,0,0,4,0)
 SetAI(Manfred,0,0,4,0)
 SetAI(CrimsonHeart,0,0,4,0)
-FLAG_T 0x9
 ENDA
 
 ReinforcementCounter:
@@ -251,7 +287,8 @@ GotoEndingSceneIfNoPlayers
 ENDA
 
 RescueVillage:
-VillageEventItem(A2Village,HouseBG,Rescue)
+// VillageEventItem(A2Village,HouseBG,Rescue)
+GiveItemWithDurability(SkillScroll,ResoluteSacrificeID,0xFFFF)
 ENDA
 
 LeonorRecruitment:
