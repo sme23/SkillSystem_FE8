@@ -68,13 +68,19 @@ sub r0, #1
 strh r0, [r7,#4] @final damage
 
 @finally, we unset the miraclemaker bit if it procced
-push {r0-r3}
+
+@if this isn't a real battle, skip this part
+ldrh r0,[r7] @battle stats config
+mov r1,#1
+and r0,r1
+cmp r0,#0
+beq End
+
 mov r0,r5
 bl GetUnitDebuffEntry
 ldr r1, =MiraclemakerBitOffset_Link
 ldr r1, [r1]
 bl UnsetBit
-pop {r0-r3}
 
 End:
 pop {r4-r7}

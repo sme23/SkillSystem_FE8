@@ -9,10 +9,64 @@ extern void SetBit(u32* address, u8 bitOffset);
 extern void UnsetBit(u32* address, u8 bitOffset);
 extern bool CheckBit(u32* address, u8 bitOffset);
 extern u32* GetUnitDebuffEntry(Unit* unit);
+extern bool IsUnitOnField(Unit* unit);
 
 void Miraclemaker(Unit* unit) {
 	if(gActionData.unitActionType == UNIT_ACTION_STAFF && SkillTester(unit, MiraclemakerID_Link)) {
 		u32* entry = GetUnitDebuffEntry(GetUnit(gActionData.targetIndex));
 		SetBit(entry, MiraclemakerBitOffset_Link);
 	}
+}
+
+void Miraclemaker_BitReset() {
+	//this runs in start of turn calc loop
+	//for each unit of the previous phase, look for one having AstralBlessing
+	
+	int faction = gChapterData.currentPhase;
+	switch (faction) {
+		case UA_BLUE:
+		faction = UA_GREEN;
+		break;
+		
+		case UA_RED:
+		faction = UA_BLUE;
+		break;
+		
+		case UA_GREEN:
+		faction = UA_RED;
+		break;
+	}
+	
+	int unitID = faction+1;
+	int maxCount;
+	
+	switch (faction) {
+		case UA_BLUE:
+		maxCount = 62;
+		break;
+		
+		case UA_RED:
+		maxCount = 50;
+		break;
+		
+		case UA_GREEN:
+		maxCount = 20;
+		break;
+	}
+	
+	while ((unitID - faction) < maxCount) {
+		//get the unit unitID
+		Unit* curUnit = GetUnit(unitID);
+		
+		//are they on the map?
+		if (IsUnitOnField(curUnit)) {
+
+			//clear miraclemaker bit
+			u32* entry = GetUnitDebuffEntry(curUnit);
+			UnsetBit(entry,MiraclemakerBitOffset_Link);
+			
+		}
+		
+		unitID++;
+	}	
 }
