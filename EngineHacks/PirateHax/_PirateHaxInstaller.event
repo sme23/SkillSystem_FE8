@@ -164,3 +164,15 @@ PUSH //stops the hang when check_alive on npcs
 	ORG $1027C
 	BYTE 0x00 0x20 0x02 
 POP
+
+//let's remove throne/floor res and reduce throne/gate avoid
+PUSH
+ORG 0x80C513 //goodbye res!
+BYTE 0
+ORG 0x80C51A
+BYTE 0
+ORG 0x80C498
+BYTE 20
+ORG 0x80C49C
+BYTE 20
+POP
