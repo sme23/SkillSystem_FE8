@@ -2,7 +2,8 @@
 Captain[X]
 
 ## CaptainDesc
- [X]
+Feet steady amidst the crashing waves,[N]
+a true captain must lead by example.[X]
 
 ## NinjaName
 Ninja[X]
