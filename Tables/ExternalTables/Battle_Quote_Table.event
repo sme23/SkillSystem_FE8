@@ -5,15 +5,20 @@
 UnspecifiedBattleConvo(Khazhak, Chapter1, 1, 0)
 
 // Chapter A-1
-SpecifiedBattleConvo(Geraldo, Lua, 			HubA_1, GeraldoLuaBattleQuoteSeen, 			GeraldoLuaBattleQuote)
-SpecifiedBattleConvo(Geraldo, Pilar, 		HubA_1, GeraldoPilarBattleQuoteSeen, 		GeraldoPilarBattleQuote)
-SpecifiedBattleConvo(Geraldo, Desiderio, 	HubA_1, GeraldoDesiderioBattleQuoteSeen, 	GeraldoDesiderioBattleQuote)
-SpecifiedBattleConvo(Geraldo, Razvan, 		HubA_1, GeraldoRazvanBattleQuoteSeen, 		GeraldoRazvanBattleQuote)
-SpecifiedBattleConvo(Geraldo, Carmen, 		HubA_1, GeraldoCarmenBattleQuoteSeen, 		GeraldoCarmenBattleQuote)
-SpecifiedBattleConvo(Geraldo, Ximo, 		HubA_1, GeraldoXimoBattleQuoteSeen, 		GeraldoXimoBattleQuote)
-SpecifiedBattleConvo(Geraldo, Estelle, 		HubA_1, GeraldoEstelleBattleQuoteSeen, 		GeraldoEstelleBattleQuote)
-SpecifiedBattleConvo(Geraldo, Hermenegildo, HubA_1, GeraldoHermeneBattleQuoteSeen, 		GeraldoHermeneBattleQuote)
-UnspecifiedBattleConvo(Geraldo, HubA_1, GeraldoGenericBattleQuoteSeen, GeraldoGenericBattleQuote)
+SpecifiedBattleConvo(Geraldo, Lua, 			HubA_1, A1_GeraldoLuaBattleQuoteSeen, 			GeraldoLuaBattleQuote)
+SpecifiedBattleConvo(Geraldo, Pilar, 		HubA_1, A1_GeraldoPilarBattleQuoteSeen, 		GeraldoPilarBattleQuote)
+SpecifiedBattleConvo(Geraldo, Desiderio, 	HubA_1, A1_GeraldoDesiderioBattleQuoteSeen, 	GeraldoDesiderioBattleQuote)
+SpecifiedBattleConvo(Geraldo, Razvan, 		HubA_1, A1_GeraldoRazvanBattleQuoteSeen, 		GeraldoRazvanBattleQuote)
+SpecifiedBattleConvo(Geraldo, Carmen, 		HubA_1, A1_GeraldoCarmenBattleQuoteSeen, 		GeraldoCarmenBattleQuote)
+SpecifiedBattleConvo(Geraldo, Ximo, 		HubA_1, A1_GeraldoXimoBattleQuoteSeen, 		GeraldoXimoBattleQuote)
+SpecifiedBattleConvo(Geraldo, Estelle, 		HubA_1, A1_GeraldoEstelleBattleQuoteSeen, 		GeraldoEstelleBattleQuote)
+SpecifiedBattleConvo(Geraldo, Hermenegildo, HubA_1, A1_GeraldoHermeneBattleQuoteSeen, 		GeraldoHermeneBattleQuote)
+UnspecifiedBattleConvo(Geraldo, HubA_1, A1_GeraldoGenericBattleQuoteSeen, GeraldoGenericBattleQuote)
+
+UnspecifiedBattleConvo(Buzu, HubA_1, A1_GuardshelmGenericBattleQuoteSeen, GuardshelmGenericBattleQuote)
+UnspecifiedBattleConvo(Bozo, HubA_1, A1_GuardshelmGenericBattleQuoteSeen, GuardshelmGenericBattleQuote)
+
+UnspecifiedBattleConvo(Yurena, HubA_1, A1_YurenaGenericBattleQuoteSeen, YurenaGenericBattleQuote)
 
 // Chapter A-3
 SpecifiedBattleConvo(Sagargala,Hermenegildo,HubA_3,14,A3_BossQuote_Hermen)

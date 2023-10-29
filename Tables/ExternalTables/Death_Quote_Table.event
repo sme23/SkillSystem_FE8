@@ -8,6 +8,11 @@ DeathQuote(Lua, AllChapters, 0x65, 0)
 
 DeathQuote(Khazhak,Chapter1, 2, 0)
 
+DeathQuote(Geraldo, HubA_1, 0x0, GeraldoDeathQuote)
+DeathQuote(Bozo, HubA_1, 0x0, BozoDeathQuote)
+DeathQuote(Buzu, HubA_1, 0x0, BuzuDeathQuote)
+DeathQuote(Yurena, HubA_1, 0x0, YurenaDeathQuote)
+
 DeathQuote(Felipe,HubA_2, 0xA, 0)
 DeathQuote(Sierra,HubA_2, 0xB, 0)
 DeathQuote(Manfred,HubA_2, 0xC, 0)
