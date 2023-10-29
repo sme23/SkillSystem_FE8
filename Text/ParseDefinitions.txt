@@ -132,6 +132,8 @@
 [LoadAlonso] = [LoadFace][0x31][0x1]
 
 [LoadGeraldo] = [LoadFace][0x31][0x1]
+[LoadBozo] = [LoadFace][0x31][0x1]
+[LoadBuzu] = [LoadFace][0x31][0x1]
 [LoadYurena] = [LoadFace][0x31][0x1]
 [LoadSanz] = [LoadFace][0x31][0x1]
 [ilike0x31asourplaceholderportraitidlol] = [LoadFace][0x31][0x1]

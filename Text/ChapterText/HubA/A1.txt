@@ -753,10 +753,12 @@ guys[Beat] finish last[Beat][A][X]
 on the Bruising Brothers?[A][X]
 
 ## BuzuDeathQuote
+[ML][LoadBozo]
 [ML]Bozo! Carry on[Beat][N]
 the Bruising Brothers[Beat][A][X]
 
 ## BozoDeathQuote
+[ML][LoadBuzu]
 [ML]Buzu! Carry on[Beat][N]
 the Bruising Brothers[Beat][A][X]
 
