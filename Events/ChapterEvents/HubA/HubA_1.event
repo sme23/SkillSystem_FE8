@@ -1,6 +1,7 @@
 EventPointerTable(HubA_1EventsID, PointerList)
 
 // temporary flags
+/*
 #define CarmenIndioTalkSeen 0x7
 #define PilarRazvanTalkSeen 0x8
 #define LeandraTalkSeen 0x9
@@ -19,7 +20,7 @@ EventPointerTable(HubA_1EventsID, PointerList)
 #define GeraldoHermeneBattleQuoteSeen 0x15
 
 #define GeraldoGenericBattleQuoteSeen 0x28
-
+*/
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
