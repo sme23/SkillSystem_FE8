@@ -54,6 +54,7 @@ ForcedDeploymentList: //Vanilla list at 0x9ED64C
 ForcedDeployment(Lua,UnlockedPosition,AllModes,AllChapters)
 ForcedDeployment(Indio,UnlockedPosition,AllModes,HubA_1)
 ForcedDeployment(Jaime,UnlockedPosition,AllModes,HubA_2)
+ForcedDeployment(Leonor,UnlockedPosition,AllModes,HubA_2)
 ForcedDeployment(Ondeh,UnlockedPosition,AllModes,HubA_3)
 ForcedDeployment(Biko,UnlockedPosition,AllModes,HubA_3)
 ForcedDeployment(Matteo,UnlockedPosition,AllModes,HubA_6)
