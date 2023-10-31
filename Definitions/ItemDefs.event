@@ -1,0 +1,8 @@
+
+// Item IDs
+
+#define SolarBrace SolarBracelet
+#define LunarBrace LunarBracelet
+#define Speedwing Speedwings
+#define EnergyDrop EnergyRing
+#define SpiritDust 0xBD

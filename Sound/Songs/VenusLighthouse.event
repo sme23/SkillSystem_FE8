@@ -1,0 +1,3015 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    VenusLighthouse_grp  StarfallVoices
+        #define    VenusLighthouse_pri  0
+        #define    VenusLighthouse_rev  0
+        #define    VenusLighthouse_key  0
+
+        // .rodata
+        // VenusLighthouse
+        ALIGN  4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+VenusLighthouse_0:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   128/2
+VenusLighthouse_0_LOOP:
+        BYTE           VOICE   61
+        BYTE           VOL     73
+        BYTE           MOD     3
+        BYTE           LFOS    40
+        BYTE           LFODL   60
+        BYTE           N44     Fs3   v064
+        BYTE   W48
+        BYTE           N10     Gs3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+// 001   ----------------------------------------
+        BYTE           N90     Cs4
+        BYTE   W96
+// 002   ----------------------------------------
+VenusLighthouse_0_2:
+        BYTE           N32     Dn4   v064
+        BYTE   W36
+        BYTE           N05     En4
+        BYTE   W06
+        BYTE                   Fs4
+        BYTE   W06
+        BYTE           N20     En4
+        BYTE   W24
+        BYTE                   Bn3
+        BYTE   W24
+        BYTE   PEND
+// 003   ----------------------------------------
+        BYTE           N90     Cs4
+        BYTE   W96
+// 004   ----------------------------------------
+VenusLighthouse_0_4:
+        BYTE           N10     Bn3   v064
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE           N30     Fs3
+        BYTE   W36
+        BYTE           N10     En3
+        BYTE   W12
+        BYTE           N20     Fs3
+        BYTE   W24
+        BYTE   PEND
+// 005   ----------------------------------------
+VenusLighthouse_0_5:
+        BYTE           N10     Bn3   v064
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE           N30     Fs3
+        BYTE   W36
+        BYTE           N10     En3
+        BYTE   W12
+        BYTE                   Fs3
+        BYTE   W12
+        BYTE                   Gs3
+        BYTE   W12
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE           N90     Fs3
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE           N44
+        BYTE   W48
+        BYTE           N17
+        BYTE   W18
+        BYTE                   Gs3
+        BYTE   W18
+        BYTE           N11     An3
+        BYTE   W12
+// 008   ----------------------------------------
+VenusLighthouse_0_8:
+        BYTE           N44     Fs3   v064
+        BYTE   W48
+        BYTE           N10     Gs3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE   PEND
+// 009   ----------------------------------------
+        BYTE           N90     Cs4
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_2
+// 011   ----------------------------------------
+        BYTE           N90     Cs4   v064
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_4
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_5
+// 014   ----------------------------------------
+        BYTE           N90     Fs3   v064
+        BYTE   W96
+// 015   ----------------------------------------
+VenusLighthouse_0_15:
+        BYTE           N44     Fs3   v064
+        BYTE   W48
+        BYTE                   En3
+        BYTE   W48
+        BYTE   PEND
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_8
+// 025   ----------------------------------------
+        BYTE           N90     Cs4   v064
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_2
+// 027   ----------------------------------------
+        BYTE           N90     Cs4   v064
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_4
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_5
+// 030   ----------------------------------------
+        BYTE           N90     Fs3   v064
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_0_15
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE           N44     Cs4   v064
+        BYTE           N44     En4
+        BYTE   W48
+        BYTE           N15     Cs4
+        BYTE           N15     En4
+        BYTE   W18
+        BYTE                   Bn3
+        BYTE           N15     Ds4
+        BYTE   W18
+        BYTE           N10     Cs4
+        BYTE           N10     En4
+        BYTE   W12
+// 041   ----------------------------------------
+        BYTE           N92     Ds4
+        BYTE           N92     Fs4
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE           N44     Cn4
+        BYTE           N44     An4
+        BYTE   W48
+        BYTE           N15     Cn4
+        BYTE           N15     An4
+        BYTE   W18
+        BYTE                   Cn4
+        BYTE           N15     Gn4
+        BYTE   W18
+        BYTE           N10     Cn4
+        BYTE           N10     An4
+        BYTE   W12
+// 043   ----------------------------------------
+        BYTE           N44     Dn4
+        BYTE           N44     Bn4
+        BYTE   W48
+        BYTE                   En4
+        BYTE           N44     Bn4
+        BYTE   W48
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+VenusLighthouse_1:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_1_LOOP:
+        BYTE           VOICE   52
+        BYTE           VOL     54
+        BYTE           MOD     3
+        BYTE           LFOS    40
+        BYTE           LFODL   60
+        BYTE           N44     An2   v104
+        BYTE           N44     Cs3
+        BYTE   W48
+        BYTE                   Gs2
+        BYTE           N44     Bn2
+        BYTE   W48
+// 001   ----------------------------------------
+VenusLighthouse_1_1:
+        BYTE           N44     Fs2   v104
+        BYTE           N44     An2
+        BYTE   W48
+        BYTE                   Gs2
+        BYTE           N44     Bn2
+        BYTE   W48
+        BYTE   PEND
+// 002   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_1
+// 003   ----------------------------------------
+VenusLighthouse_1_3:
+        BYTE           N44     Fs2   v104
+        BYTE           N44     Cs3
+        BYTE   W48
+        BYTE                   Fn2
+        BYTE           N44     Cs3
+        BYTE   W48
+        BYTE   PEND
+// 004   ----------------------------------------
+VenusLighthouse_1_4:
+        BYTE           N92     Dn2   v104
+        BYTE           N92     An2
+        BYTE   W96
+        BYTE   PEND
+// 005   ----------------------------------------
+VenusLighthouse_1_5:
+        BYTE           N92     En2   v104
+        BYTE           N92     Bn2
+        BYTE   W96
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE                   Cs2
+        BYTE           N92     An2
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE           N44     Dn2
+        BYTE           N44     An2
+        BYTE   W48
+        BYTE                   Fs2
+        BYTE           N44     Dn3
+        BYTE   W48
+// 008   ----------------------------------------
+VenusLighthouse_1_8:
+        BYTE           N44     An2   v104
+        BYTE           N44     Cs3
+        BYTE   W48
+        BYTE                   Gs2
+        BYTE           N44     Bn2
+        BYTE   W48
+        BYTE   PEND
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_1
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_1
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_4
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_5
+// 014   ----------------------------------------
+VenusLighthouse_1_14:
+        BYTE           N92     Cs2   v104
+        BYTE           N92     As2
+        BYTE   W96
+        BYTE   PEND
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_5
+// 016   ----------------------------------------
+VenusLighthouse_1_16:
+        BYTE           N44     Cs3   v127
+        BYTE   W48
+        BYTE                   Dn3
+        BYTE   W48
+        BYTE   PEND
+// 017   ----------------------------------------
+VenusLighthouse_1_17:
+        BYTE           N44     En3   v127
+        BYTE   W48
+        BYTE                   Bn2
+        BYTE   W48
+        BYTE   PEND
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_16
+// 019   ----------------------------------------
+        BYTE           N44     En3   v127
+        BYTE   W48
+        BYTE           N23     Fs3
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W24
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_16
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_17
+// 022   ----------------------------------------
+        BYTE           N44     Cs3   v127
+        BYTE   W48
+        BYTE                   Bn2
+        BYTE   W48
+// 023   ----------------------------------------
+        BYTE                   Gs2
+        BYTE   W48
+        BYTE                   Cs3
+        BYTE   W48
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_8
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_1
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_4
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_5
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_14
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_5
+// 032   ----------------------------------------
+VenusLighthouse_1_32:
+        BYTE           TIE     An2   v104
+        BYTE           TIE     Fn3
+        BYTE   W96
+        BYTE   PEND
+// 033   ----------------------------------------
+VenusLighthouse_1_33:
+        BYTE   W92
+        BYTE   W03
+        BYTE           EOT     An2
+        BYTE                   Fn3
+        BYTE   W01
+        BYTE   PEND
+// 034   ----------------------------------------
+VenusLighthouse_1_34:
+        BYTE           N92     Gn2   v104
+        BYTE           N92     Dn3
+        BYTE   W96
+        BYTE   PEND
+// 035   ----------------------------------------
+VenusLighthouse_1_35:
+        BYTE           N92     Bn2   v104
+        BYTE           N92     Gn3
+        BYTE   W96
+        BYTE   PEND
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_32
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_33
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_34
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_1_35
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+VenusLighthouse_2:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_2_LOOP:
+        BYTE           VOICE   33
+        BYTE           MOD     3
+        BYTE           VOL     61
+        BYTE           LFOS    40
+        BYTE           LFODL   60
+        BYTE           N08     Fs1   v120
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+// 001   ----------------------------------------
+VenusLighthouse_2_1:
+        BYTE           N08     Fs1   v120
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+VenusLighthouse_2_2:
+        BYTE           N08     Dn1   v120
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE           N05     En1
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE   PEND
+// 003   ----------------------------------------
+VenusLighthouse_2_3:
+        BYTE           N08     Fs1   v120
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N05     Cs1
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08     Cs2
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+VenusLighthouse_2_4:
+        BYTE           N08     Dn1   v120
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE   PEND
+// 005   ----------------------------------------
+VenusLighthouse_2_5:
+        BYTE           N08     En1   v120
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_1
+// 007   ----------------------------------------
+        BYTE           N08     Dn1   v120
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_1
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_1
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_2
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_4
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_5
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_1
+// 015   ----------------------------------------
+VenusLighthouse_2_15:
+        BYTE           N08     En1   v120
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE           N08
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE                   En1
+        BYTE   W06
+        BYTE                   En1
+        BYTE   W06
+        BYTE                   En2
+        BYTE   W06
+        BYTE                   En2
+        BYTE   W06
+        BYTE   PEND
+// 016   ----------------------------------------
+        BYTE           N80     Dn1
+        BYTE   W84
+        BYTE           N05     Dn2
+        BYTE   W06
+        BYTE                   Dn2
+        BYTE   W06
+// 017   ----------------------------------------
+        BYTE           N23     En1
+        BYTE   W24
+        BYTE                   En1
+        BYTE   W24
+        BYTE                   En1
+        BYTE   W24
+        BYTE           N11
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+// 018   ----------------------------------------
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W24
+        BYTE           N05
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N11
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+// 019   ----------------------------------------
+VenusLighthouse_2_19:
+        BYTE           N11     En1   v120
+        BYTE   W12
+        BYTE                   Bn1
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE                   Bn1
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE                   Bn1
+        BYTE   W12
+        BYTE                   En1
+        BYTE   W12
+        BYTE                   Bn1
+        BYTE   W12
+        BYTE   PEND
+// 020   ----------------------------------------
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_19
+// 022   ----------------------------------------
+        BYTE           N11     Fs1   v120
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+// 023   ----------------------------------------
+        BYTE                   Cs1
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_1
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_4
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_5
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_1
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_15
+// 032   ----------------------------------------
+VenusLighthouse_2_32:
+        BYTE           N10     Fn1   v120
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE   PEND
+// 033   ----------------------------------------
+VenusLighthouse_2_33:
+        BYTE           N10     Fn1   v120
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Cn2
+        BYTE   W12
+        BYTE   PEND
+// 034   ----------------------------------------
+VenusLighthouse_2_34:
+        BYTE           N10     Gn1   v120
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE   PEND
+// 035   ----------------------------------------
+VenusLighthouse_2_35:
+        BYTE           N10     Gn1   v120
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE   PEND
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_32
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_33
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_34
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_2_35
+// 040   ----------------------------------------
+        BYTE           N32     An1   v120
+        BYTE   W36
+        BYTE           N10
+        BYTE   W12
+        BYTE           N17     An2
+        BYTE   W18
+        BYTE                   En2
+        BYTE   W18
+        BYTE           N11     An2
+        BYTE   W12
+// 041   ----------------------------------------
+        BYTE           N44     Bn1
+        BYTE   W48
+        BYTE           N23     Fs1
+        BYTE   W24
+        BYTE                   Bn1
+        BYTE   W24
+// 042   ----------------------------------------
+        BYTE           N32     Fn1
+        BYTE   W36
+        BYTE           N05
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE           N17     Fn2
+        BYTE   W18
+        BYTE                   Cn2
+        BYTE   W18
+        BYTE           N11     Fn2
+        BYTE   W12
+// 043   ----------------------------------------
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Gn1
+        BYTE   W12
+        BYTE                   Gs1
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE   W12
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+VenusLighthouse_3:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_3_LOOP:
+        BYTE           VOICE   8
+        BYTE           VOL     62
+        BYTE           MOD     3
+        BYTE           LFOS    40
+        BYTE           LFODL   60
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+VenusLighthouse_3_16:
+        BYTE           N32     Fs3   v104
+        BYTE   W36
+        BYTE           N23     Fs4
+        BYTE   W24
+        BYTE           N10     En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE   PEND
+// 017   ----------------------------------------
+VenusLighthouse_3_17:
+        BYTE           N44     Bn3   v104
+        BYTE   W48
+        BYTE           N17
+        BYTE   W18
+        BYTE                   Cs4
+        BYTE   W18
+        BYTE           N11     Dn4
+        BYTE   W12
+        BYTE   PEND
+// 018   ----------------------------------------
+        BYTE           N32     Cs4
+        BYTE   W36
+        BYTE           TIE     Fs3
+        BYTE   W60
+// 019   ----------------------------------------
+        BYTE   W44
+        BYTE   W03
+        BYTE           EOT
+        BYTE   W01
+        BYTE           N17
+        BYTE   W18
+        BYTE                   Gs3
+        BYTE   W18
+        BYTE           N11     An3
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_3_16
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_3_17
+// 022   ----------------------------------------
+        BYTE           N32     Cs4   v127
+        BYTE   W36
+        BYTE           N56     Fs4
+        BYTE   W60
+// 023   ----------------------------------------
+        BYTE           N32     Fn4
+        BYTE   W36
+        BYTE                   Fs4
+        BYTE   W36
+        BYTE           N23     Gs4
+        BYTE   W24
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE           N05     En2   v100
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE   W06
+        BYTE                   En3
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Cs4
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   An4
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE                   Cs4
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE                   Cs4
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   En3
+        BYTE   W06
+// 041   ----------------------------------------
+        BYTE                   Fs2
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE   W06
+        BYTE                   Ds3
+        BYTE   W06
+        BYTE                   Fs3
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE                   Ds3
+        BYTE   W06
+        BYTE                   Fs3
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE                   Fs4
+        BYTE   W06
+        BYTE                   Ds4
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE                   Fs3
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE                   Fs3
+        BYTE   W06
+        BYTE                   Ds3
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE   W06
+// 042   ----------------------------------------
+        BYTE                   Fn2
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Cn3
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Cn3
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   An4
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE   W06
+        BYTE                   Cn4
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE   W06
+        BYTE                   Cn4
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE   W06
+// 043   ----------------------------------------
+        BYTE                   Gn2
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE                   Dn4
+        BYTE   W06
+        BYTE                   Gn4
+        BYTE   W06
+        BYTE                   Bn4
+        BYTE   W06
+        BYTE                   Gs4
+        BYTE   W06
+        BYTE                   En5
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE                   Bn4
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE   W06
+        BYTE                   Gs4
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+VenusLighthouse_4:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_4_LOOP:
+        BYTE           VOICE   48
+        BYTE           VOL     65
+        BYTE           MOD     3
+        BYTE           PAN     c_v-9
+        BYTE           LFOS    40
+        BYTE           LFODL   60
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+VenusLighthouse_4_16:
+        BYTE           N32     Fs3   v100
+        BYTE   W36
+        BYTE           N23     Fs4
+        BYTE   W24
+        BYTE           N11     En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE   PEND
+// 017   ----------------------------------------
+VenusLighthouse_4_17:
+        BYTE           N44     Bn3   v100
+        BYTE   W48
+        BYTE           N17
+        BYTE   W18
+        BYTE                   Cs4
+        BYTE   W18
+        BYTE           N11     Dn4
+        BYTE   W12
+        BYTE   PEND
+// 018   ----------------------------------------
+        BYTE           N32     Cs4
+        BYTE   W36
+        BYTE           TIE     Fs3
+        BYTE   W60
+// 019   ----------------------------------------
+        BYTE   W64
+        BYTE   W01
+        BYTE           EOT
+        BYTE   W01
+        BYTE           N17     Gs3   v076
+        BYTE   W18
+        BYTE           N11     An3
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_4_16
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_4_17
+// 022   ----------------------------------------
+        BYTE           N32     Cs4   v100
+        BYTE   W36
+        BYTE           N56     Fs4
+        BYTE   W60
+// 023   ----------------------------------------
+        BYTE           N32     Fn4
+        BYTE   W36
+        BYTE                   Fs4
+        BYTE   W36
+        BYTE           N23     Gs4
+        BYTE   W24
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE           N44     An4
+        BYTE   W48
+        BYTE                   Gn4
+        BYTE   W48
+// 033   ----------------------------------------
+        BYTE                   Fn4
+        BYTE   W48
+        BYTE                   En4
+        BYTE   W48
+// 034   ----------------------------------------
+        BYTE           N32     Dn4
+        BYTE   W36
+        BYTE                   En4
+        BYTE   W36
+        BYTE           N23     Fn4
+        BYTE   W24
+// 035   ----------------------------------------
+        BYTE           N32     Dn4
+        BYTE           N32     Gn4
+        BYTE   W36
+        BYTE                   Fn4
+        BYTE           N32     An4
+        BYTE   W36
+        BYTE           N23     Gn4
+        BYTE           N23     Bn4
+        BYTE   W24
+// 036   ----------------------------------------
+        BYTE           N44     An4
+        BYTE           N44     Cn5
+        BYTE   W48
+        BYTE                   Gn4
+        BYTE           N44     Bn4
+        BYTE   W48
+// 037   ----------------------------------------
+        BYTE                   Fn4
+        BYTE           N44     An4
+        BYTE   W48
+        BYTE                   En4
+        BYTE           N44     Gn4
+        BYTE   W48
+// 038   ----------------------------------------
+        BYTE           N32     Bn3
+        BYTE           N32     Dn4
+        BYTE   W36
+        BYTE                   Cn4
+        BYTE           N32     En4
+        BYTE   W36
+        BYTE           N23     Dn4
+        BYTE           N23     Fn4
+        BYTE   W24
+// 039   ----------------------------------------
+        BYTE           N44     Dn4
+        BYTE           N44     An4
+        BYTE   W48
+        BYTE                   Dn4
+        BYTE           N44     Gn4
+        BYTE   W48
+// 040   ----------------------------------------
+        BYTE           N92     Cs4
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE           N44     Bn3
+        BYTE   W48
+        BYTE                   Ds4
+        BYTE   W48
+// 042   ----------------------------------------
+        BYTE                   Fn4
+        BYTE   W48
+        BYTE                   An4
+        BYTE   W48
+// 043   ----------------------------------------
+        BYTE           N92     Bn4
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_4_LOOP
+        BYTE   FINE
+
+//****************** Track 5 (Midi-Chn.5) ******************//
+
+VenusLighthouse_5:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_5_LOOP:
+        BYTE           VOICE   49
+        BYTE           MOD     3
+        BYTE           VOL     47
+        BYTE           PAN     c_v+6
+        BYTE           LFOS    40
+        BYTE           LFODL   60
+        BYTE           N08     Fs2   v127
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Dn3
+        BYTE   W12
+// 001   ----------------------------------------
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     En3
+        BYTE   W12
+// 002   ----------------------------------------
+        BYTE                   Fs2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+// 003   ----------------------------------------
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Gs2
+        BYTE           N08     Cs3
+        BYTE   W12
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE           VOL     0
+        BYTE           TIE     Cs4
+        BYTE   W02
+        BYTE           VOL     1
+        BYTE   W02
+        BYTE                   2
+        BYTE   W06
+        BYTE                   4
+        BYTE   W06
+        BYTE                   5
+        BYTE   W02
+        BYTE                   6
+        BYTE   W02
+        BYTE                   7
+        BYTE   W04
+        BYTE                   8
+        BYTE   W04
+        BYTE                   9
+        BYTE   W02
+        BYTE                   10
+        BYTE   W04
+        BYTE                   11
+        BYTE   W02
+        BYTE                   12
+        BYTE   W04
+        BYTE                   13
+        BYTE   W02
+        BYTE                   14
+        BYTE   W04
+        BYTE                   15
+        BYTE   W02
+        BYTE                   16
+        BYTE   W06
+        BYTE                   18
+        BYTE   W04
+        BYTE                   19
+        BYTE   W04
+        BYTE                   21
+        BYTE   W04
+        BYTE                   22
+        BYTE   W04
+        BYTE                   23
+        BYTE   W02
+        BYTE                   24
+        BYTE   W02
+        BYTE                   25
+        BYTE   W06
+        BYTE                   27
+        BYTE   W06
+        BYTE                   28
+        BYTE   W02
+        BYTE                   29
+        BYTE   W04
+        BYTE                   30
+        BYTE   W02
+        BYTE                   31
+        BYTE   W02
+// 007   ----------------------------------------
+        BYTE   W02
+        BYTE                   32
+        BYTE   W02
+        BYTE                   33
+        BYTE   W04
+        BYTE                   34
+        BYTE   W02
+        BYTE                   35
+        BYTE   W04
+        BYTE                   36
+        BYTE   W02
+        BYTE                   37
+        BYTE   W04
+        BYTE                   38
+        BYTE   W02
+        BYTE                   39
+        BYTE   W06
+        BYTE                   41
+        BYTE   W02
+        BYTE                   42
+        BYTE   W06
+        BYTE                   43
+        BYTE   W02
+        BYTE                   44
+        BYTE   W04
+        BYTE                   45
+        BYTE   W02
+        BYTE                   46
+        BYTE   W02
+        BYTE           EOT
+        BYTE           VOL     47
+        BYTE   W02
+        BYTE           N44     Bn3
+        BYTE   W48
+// 008   ----------------------------------------
+VenusLighthouse_5_8:
+        BYTE           N05     Cs4   v127
+        BYTE           N05     Fs4
+        BYTE   W06
+        BYTE                   An3
+        BYTE           N05     Cs4
+        BYTE   W06
+        BYTE                   Fs3
+        BYTE           N05     An3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fs3
+        BYTE   W06
+        BYTE                   An2
+        BYTE           N05     Cs3
+        BYTE   W06
+        BYTE                   Fs2
+        BYTE           N05     An2
+        BYTE   W06
+        BYTE           N08     Cs2
+        BYTE           N08     Fs2
+        BYTE   W60
+        BYTE   PEND
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_8
+// 010   ----------------------------------------
+VenusLighthouse_5_10:
+        BYTE           N05     Dn4   v127
+        BYTE           N05     Fs4
+        BYTE   W06
+        BYTE                   An3
+        BYTE           N05     Dn4
+        BYTE   W06
+        BYTE                   Fs3
+        BYTE           N05     An3
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE           N05     Fs3
+        BYTE   W06
+        BYTE                   An2
+        BYTE           N05     Dn3
+        BYTE   W06
+        BYTE                   Fs2
+        BYTE           N05     An2
+        BYTE   W06
+        BYTE                   An2
+        BYTE           N05     Dn3
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE           N05     Fs3
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE           N05     En4
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE           N05     Bn3
+        BYTE   W06
+        BYTE                   En3
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE           N05     En3
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     Bn2
+        BYTE   W06
+        BYTE                   En2
+        BYTE           N05     Gs2
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     Bn2
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE           N05     En3
+        BYTE   W06
+        BYTE   PEND
+// 011   ----------------------------------------
+VenusLighthouse_5_11:
+        BYTE           N05     Cs4   v127
+        BYTE           N05     Fs4
+        BYTE   W06
+        BYTE                   An3
+        BYTE           N05     Cs4
+        BYTE   W06
+        BYTE                   Fs3
+        BYTE           N05     An3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fs3
+        BYTE   W06
+        BYTE                   An2
+        BYTE           N05     Cs3
+        BYTE   W06
+        BYTE                   Fs2
+        BYTE           N05     An2
+        BYTE   W06
+        BYTE                   Fn2
+        BYTE           N05     Gs2
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     Cs3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fn3
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fn3
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE           N05     Cs4
+        BYTE   W06
+        BYTE                   Cs4
+        BYTE           N05     Fn4
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE           N05     Gs4
+        BYTE   W06
+        BYTE                   Cs4
+        BYTE           N05     Fn4
+        BYTE   W06
+        BYTE   PEND
+// 012   ----------------------------------------
+VenusLighthouse_5_12:
+        BYTE           N08     An2   v127
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N08     Dn3
+        BYTE   W12
+        BYTE   PEND
+// 013   ----------------------------------------
+VenusLighthouse_5_13:
+        BYTE           N08     Bn2   v127
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE           N08     En3
+        BYTE   W12
+        BYTE   PEND
+// 014   ----------------------------------------
+VenusLighthouse_5_14:
+        BYTE           N08     As2   v127
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   As2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   As2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   As2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   As2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   As2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   As2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   As2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE   PEND
+// 015   ----------------------------------------
+VenusLighthouse_5_15:
+        BYTE           N05     En2   v127
+        BYTE           N05     Bn2
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     En3
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   En3
+        BYTE           N05     Bn3
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     En3
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   En3
+        BYTE           N05     Bn3
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE           N05     En4
+        BYTE   W06
+        BYTE                   Bn3
+        BYTE           N05     Gs4
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE           N05     En4
+        BYTE   W06
+        BYTE                   En3
+        BYTE           N05     Bn3
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   En3
+        BYTE           N05     Bn3
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     En3
+        BYTE   W06
+        BYTE                   En2
+        BYTE           N05     Bn2
+        BYTE   W06
+        BYTE   PEND
+// 016   ----------------------------------------
+VenusLighthouse_5_16:
+        BYTE           N08     Dn2   v127
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N08     An2
+        BYTE   W12
+        BYTE   PEND
+// 017   ----------------------------------------
+VenusLighthouse_5_17:
+        BYTE           N08     En2   v127
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N08     Bn2
+        BYTE   W12
+        BYTE   PEND
+// 018   ----------------------------------------
+VenusLighthouse_5_18:
+        BYTE           N08     Fs2   v127
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE           N08     Cs3
+        BYTE   W12
+        BYTE   PEND
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_17
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_16
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_17
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_18
+// 023   ----------------------------------------
+        BYTE           N05     Cs2   v127
+        BYTE           N05     Fn2
+        BYTE   W06
+        BYTE                   Fn2
+        BYTE           N05     Gs2
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     Cs3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fn3
+        BYTE   W06
+        BYTE                   Fn2
+        BYTE           N05     Gs2
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     Cs3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fn3
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   Gs3
+        BYTE           N05     Cs4
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fn3
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     Cs3
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE           N05     Gs3
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE           N05     Fn3
+        BYTE   W06
+        BYTE                   Gs2
+        BYTE           N05     Cs3
+        BYTE   W06
+        BYTE                   Fn2
+        BYTE           N05     Gs2
+        BYTE   W06
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_8
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_8
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_10
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_11
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_12
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_13
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_14
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_5_15
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_5_LOOP
+        BYTE   FINE
+
+//****************** Track 6 (Midi-Chn.6) ******************//
+
+VenusLighthouse_6:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_6_LOOP:
+        BYTE           VOICE   73
+        BYTE           VOL     60
+        BYTE           MOD     3
+        BYTE           LFOS    40
+        BYTE           LFODL   60
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+VenusLighthouse_6_32:
+        BYTE           N06     An3   v104
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE           N06     Dn4
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE           N06     Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE           N20     Bn3
+        BYTE           N20     Dn4
+        BYTE   W24
+        BYTE           N06     An3
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE           N06     Dn4
+        BYTE   W12
+        BYTE   PEND
+// 033   ----------------------------------------
+VenusLighthouse_6_33:
+        BYTE           N06     Gn3   v104
+        BYTE           N06     Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE           N20     Bn3
+        BYTE           N20     Dn4
+        BYTE   W24
+        BYTE           N06     An3
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE           N06     Dn4
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE           N06     Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE   PEND
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_6_32
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_6_33
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_6_32
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_6_33
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_6_32
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_6_33
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_6_LOOP
+        BYTE   FINE
+
+//****************** Track 7 (Midi-Chn.7) ******************//
+
+VenusLighthouse_7:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_7_LOOP:
+        BYTE           VOICE   124
+        BYTE           VOL     50
+        BYTE           N10     Bn0   v120
+        BYTE           N48     Cs2
+        BYTE   W24
+        BYTE           N10     Dn1
+        BYTE   W24
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W24
+// 001   ----------------------------------------
+VenusLighthouse_7_1:
+        BYTE           N10     Bn0   v120
+        BYTE   W24
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W18
+        BYTE           N05
+        BYTE   W06
+        BYTE           N10     Dn1
+        BYTE   W24
+        BYTE   PEND
+// 002   ----------------------------------------
+VenusLighthouse_7_2:
+        BYTE           N10     Bn0   v120
+        BYTE   W24
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE   PEND
+// 003   ----------------------------------------
+VenusLighthouse_7_3:
+        BYTE           N10     Bn0   v120
+        BYTE   W24
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE           N05     Bn0
+        BYTE   W06
+        BYTE                   Bn0
+        BYTE   W06
+        BYTE           N10
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_2
+// 005   ----------------------------------------
+VenusLighthouse_7_5:
+        BYTE           N10     Bn0   v120
+        BYTE   W24
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W18
+        BYTE           N05
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_2
+// 007   ----------------------------------------
+        BYTE           N10     Bn0   v120
+        BYTE   W18
+        BYTE           N05
+        BYTE   W06
+        BYTE           N10     Dn1
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE           N05     Cn2
+        BYTE   W06
+        BYTE                   Cn2
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+// 008   ----------------------------------------
+VenusLighthouse_7_8:
+        BYTE           N10     Bn0   v120
+        BYTE           N92     Cs2
+        BYTE   W24
+        BYTE           N10     Dn1
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE   PEND
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_1
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_2
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_3
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_2
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_5
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_8
+// 015   ----------------------------------------
+VenusLighthouse_7_15:
+        BYTE           N10     Bn0   v120
+        BYTE   W18
+        BYTE           N05
+        BYTE   W06
+        BYTE           N10     Dn1
+        BYTE           N68     Cs2
+        BYTE   W12
+        BYTE           N10     Bn0
+        BYTE   W12
+        BYTE           N05     Cn2
+        BYTE   W06
+        BYTE                   Dn1   v076
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   An1   v120
+        BYTE   W06
+        BYTE                   Dn1   v076
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Fn1   v120
+        BYTE   W06
+        BYTE                   Dn1   v076
+        BYTE   W06
+        BYTE   PEND
+// 016   ----------------------------------------
+        BYTE           N32     Bn0   v120
+        BYTE           N92     Cs2
+        BYTE   W36
+        BYTE           N11     Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W36
+        BYTE           N05     Fs1   v084
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+// 017   ----------------------------------------
+        BYTE           N11     Bn0   v120
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+// 018   ----------------------------------------
+        BYTE           N32     Bn0
+        BYTE   W36
+        BYTE           N11
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W36
+        BYTE           N05     Fs1   v084
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+// 019   ----------------------------------------
+        BYTE           N11     Bn0   v120
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_8
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_1
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_2
+// 023   ----------------------------------------
+        BYTE           N10     Bn0   v120
+        BYTE   W24
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE           N05     Bn0
+        BYTE   W06
+        BYTE                   Bn0
+        BYTE   W06
+        BYTE           N10
+        BYTE   W12
+        BYTE           N05     Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_8
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_2
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_5
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_8
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_15
+// 032   ----------------------------------------
+VenusLighthouse_7_32:
+        BYTE           N11     Bn0   v120
+        BYTE           N92     Cs2
+        BYTE   W24
+        BYTE           N11     Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE   PEND
+// 033   ----------------------------------------
+VenusLighthouse_7_33:
+        BYTE   W12
+        BYTE           N11     Bn0   v120
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W36
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE           N05
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE   PEND
+// 034   ----------------------------------------
+VenusLighthouse_7_34:
+        BYTE           N11     Bn0   v120
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W24
+        BYTE   PEND
+// 035   ----------------------------------------
+        BYTE   W12
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W36
+        BYTE                   Bn0
+        BYTE   W12
+        BYTE           N05     Cn2
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_32
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_33
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_34
+// 039   ----------------------------------------
+        BYTE           N05     Cn2   v120
+        BYTE   W06
+        BYTE                   Cn2
+        BYTE   W06
+        BYTE                   Cn2
+        BYTE   W06
+        BYTE                   Cn2
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W06
+// 040   ----------------------------------------
+VenusLighthouse_7_40:
+        BYTE           N11     Bn0   v120
+        BYTE           N44     Cs2
+        BYTE   W48
+        BYTE           N11     Bn0
+        BYTE           N17     Cs2   v096
+        BYTE   W18
+        BYTE           N11     Bn0   v120
+        BYTE           N17     Cs2   v104
+        BYTE   W18
+        BYTE           N11     Dn1   v120
+        BYTE           N11     Cs2
+        BYTE   W12
+        BYTE   PEND
+// 041   ----------------------------------------
+        BYTE                   Bn0
+        BYTE           N44     Cs2
+        BYTE   W48
+        BYTE           N11     Bn0
+        BYTE           N44     Cs2
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE   W24
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_7_40
+// 043   ----------------------------------------
+        BYTE           N05     Cn2   v120
+        BYTE   W06
+        BYTE                   Cn2
+        BYTE   W06
+        BYTE                   Cn2
+        BYTE   W06
+        BYTE                   Cn2
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE           N11     Dn1
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE   W12
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_7_LOOP
+        BYTE   FINE
+
+//****************** Track 8 (Midi-Chn.8) ******************//
+
+VenusLighthouse_8:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_8_LOOP:
+        BYTE           VOICE   61
+        BYTE           VOL     28
+        BYTE           MOD     3
+        BYTE           LFOS    40
+        BYTE           TUNE    c_v-6
+        BYTE           LFODL   60
+        BYTE   W11
+        BYTE           N44     Fs3   v112
+        BYTE   W48
+        BYTE           N10     Gs3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W01
+// 001   ----------------------------------------
+VenusLighthouse_8_1:
+        BYTE   W11
+        BYTE           N90     Cs4   v112
+        BYTE   W84
+        BYTE   W01
+        BYTE   PEND
+// 002   ----------------------------------------
+VenusLighthouse_8_2:
+        BYTE   W11
+        BYTE           N32     Dn4   v112
+        BYTE   W36
+        BYTE           N05     En4
+        BYTE   W06
+        BYTE                   Fs4
+        BYTE   W06
+        BYTE           N20     En4
+        BYTE   W24
+        BYTE                   Bn3
+        BYTE   W13
+        BYTE   PEND
+// 003   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_1
+// 004   ----------------------------------------
+VenusLighthouse_8_4:
+        BYTE   W11
+        BYTE           N10     Bn3   v112
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE           N30     Fs3
+        BYTE   W36
+        BYTE           N10     En3
+        BYTE   W12
+        BYTE           N20     Fs3
+        BYTE   W13
+        BYTE   PEND
+// 005   ----------------------------------------
+VenusLighthouse_8_5:
+        BYTE   W11
+        BYTE           N10     Bn3   v112
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE           N30     Fs3
+        BYTE   W36
+        BYTE           N10     En3
+        BYTE   W12
+        BYTE                   Fs3
+        BYTE   W12
+        BYTE                   Gs3
+        BYTE   W01
+        BYTE   PEND
+// 006   ----------------------------------------
+VenusLighthouse_8_6:
+        BYTE   W11
+        BYTE           N90     Fs3   v112
+        BYTE   W84
+        BYTE   W01
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE   W11
+        BYTE           N44
+        BYTE   W48
+        BYTE           N17
+        BYTE   W18
+        BYTE                   Gs3
+        BYTE   W18
+        BYTE           N11     An3
+        BYTE   W01
+// 008   ----------------------------------------
+VenusLighthouse_8_8:
+        BYTE   W11
+        BYTE           N44     Fs3   v112
+        BYTE   W48
+        BYTE           N10     Gs3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W01
+        BYTE   PEND
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_1
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_2
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_1
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_4
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_5
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_6
+// 015   ----------------------------------------
+VenusLighthouse_8_15:
+        BYTE   W11
+        BYTE           N44     Fs3   v112
+        BYTE   W48
+        BYTE                   En3
+        BYTE   W36
+        BYTE   W01
+        BYTE   PEND
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_8
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_1
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_4
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_5
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_6
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_8_15
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_8_LOOP
+        BYTE   FINE
+
+//***************** Track 9 (Midi-Chn.10) ******************//
+
+VenusLighthouse_9:
+        BYTE   KEYSH   VenusLighthouse_key+0
+// 000   ----------------------------------------
+VenusLighthouse_9_LOOP:
+        BYTE           VOICE   8
+        BYTE           VOL     22
+        BYTE           MOD     3
+        BYTE           LFOS    40
+        BYTE           TUNE    c_v-9
+        BYTE           LFODL   60
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+VenusLighthouse_9_16:
+        BYTE   W11
+        BYTE           N32     Fs3   v104
+        BYTE   W36
+        BYTE           N23     Fs4
+        BYTE   W24
+        BYTE           N10     En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W01
+        BYTE   PEND
+// 017   ----------------------------------------
+VenusLighthouse_9_17:
+        BYTE   W11
+        BYTE           N44     Bn3   v104
+        BYTE   W48
+        BYTE           N17
+        BYTE   W18
+        BYTE                   Cs4
+        BYTE   W18
+        BYTE           N11     Dn4
+        BYTE   W01
+        BYTE   PEND
+// 018   ----------------------------------------
+        BYTE   W11
+        BYTE           N32     Cs4
+        BYTE   W36
+        BYTE           TIE     Fs3
+        BYTE   W48
+        BYTE   W01
+// 019   ----------------------------------------
+        BYTE   W56
+        BYTE   W02
+        BYTE           EOT
+        BYTE   W01
+        BYTE           N17
+        BYTE   W18
+        BYTE                   Gs3
+        BYTE   W18
+        BYTE           N11     An3
+        BYTE   W01
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_9_16
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  VenusLighthouse_9_17
+// 022   ----------------------------------------
+        BYTE   W11
+        BYTE           N32     Cs4   v127
+        BYTE   W36
+        BYTE           N56     Fs4
+        BYTE   W48
+        BYTE   W01
+// 023   ----------------------------------------
+        BYTE   W11
+        BYTE           N32     Fn4
+        BYTE   W36
+        BYTE                   Fs4
+        BYTE   W36
+        BYTE           N23     Gs4
+        BYTE   W13
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   GoTo
+         POIN2  VenusLighthouse_9_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN  4
+VenusLighthouse:
+        BYTE   10                      // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   VenusLighthouse_pri     // Priority
+        BYTE   VenusLighthouse_rev     // Reverb
+
+        POIN2   VenusLighthouse_grp    
+
+        POIN2   VenusLighthouse_0
+        POIN2   VenusLighthouse_1
+        POIN2   VenusLighthouse_2
+        POIN2   VenusLighthouse_3
+        POIN2   VenusLighthouse_4
+        POIN2   VenusLighthouse_5
+        POIN2   VenusLighthouse_6
+        POIN2   VenusLighthouse_7
+        POIN2   VenusLighthouse_8
+        POIN2   VenusLighthouse_9
+
+        
