@@ -1,0 +1,35 @@
+#include "Harvesting.lyn.event"
+
+//there is a table that points to a harvest result table
+//traps on maps contain indices for this table for their harvest results
+//harvest result table points to harvest result weights
+
+ALIGN 4
+HarvestTable: //pointers to sets of pointers
+FILL (256*4)
+
+#define HarvestTableEntry(id,harvestSet) "PUSH; ORG HarvestTable+(id*4); POIN harvestSet; POP"
+
+// each HarvestSet pointed to from HarvestTable entries
+// contains pointers indexed by tool ID
+// no need for entries beyond what tools there are
+
+ALIGN 4
+ExampleHarvestSet:
+POIN ExampleHarvestResult
+
+HarvestTableEntry(0,ExampleHarvestSet)
+
+// each HarvestResult pointed to from a HarvestSet
+// contains a list of ingredientID - weight byte pairs
+// each set should have weights adding up to 100; anything beyond that is ignored
+// this is why it doesn't need a terminator despite being variable-length
+
+ALIGN 4
+ExampleHarvestResult:
+BYTE 0 80
+BYTE 1 10
+BYTE 2 5
+BYTE 3 4
+BYTE 4 1
+

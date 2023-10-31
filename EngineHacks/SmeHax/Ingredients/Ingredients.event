@@ -1,0 +1,9 @@
+#include "Ingredients.lyn.event"
+
+//todo: csv this one
+ALIGN 4
+IngredientAttributesTable:
+FILL (256*16)
+
+IngredientQuantityTable:
+WORD 0x2031D00
