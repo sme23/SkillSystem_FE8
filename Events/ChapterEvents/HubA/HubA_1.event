@@ -45,25 +45,25 @@ TurnEventPlayer(0, YurenaDropping, 13)
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEventBothWays(CarmenIndioTalkSeen, CarmenIndioTalk, Carmen, Indio)
-CharacterEventBothWays(PilarRazvanTalkSeen, PilarRazvanTalk, Pilar, Razvan)
-CharacterEventBothWays(LeandraRecruited, LuaRecruitLeandra, Lua, Leandra)
-CharacterEventBothWays(LeandraRecruited, DesiderioRecruitLeandra, Desiderio, Leandra)
+CharacterEventBothWays(A1_CarmenIndioTalkSeen, CarmenIndioTalk, Carmen, Indio)
+CharacterEventBothWays(A1_PilarRazvanTalkSeen, PilarRazvanTalk, Pilar, Razvan)
+CharacterEventBothWays(A1_LeandraRecruited, LuaRecruitLeandra, Lua, Leandra)
+CharacterEventBothWays(A1_LeandraRecruited, DesiderioRecruitLeandra, Desiderio, Leandra)
 END_MAIN
 
 LocationBasedEvents:
-Escape(EscapeDisallowed, EscapeEventCheck, 5, 2)
-Escape(EscapeDisallowed, EscapeEventCheck, 6, 2)
-Escape(EscapeDisallowed, EscapeEventCheck, 26, 8)
-Escape(EscapeDisallowed, EscapeEventCheck, 27, 8)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 5, 2)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 6, 2)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 26, 8)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 27, 8)
 DurabilityChest(SkillScroll, CanterID, 17, 4)
 ChestMoney(1500, 6, 15)
 Chest(Bloodletter, 22, 15)
-CHES RelicRecovered Statuette [18, 7] 0x14 // Macro can't set a flag so this is the objective chest 
+CHES A1_RelicRecovered Statuette [18, 7] 0x14 // Macro can't set a flag so this is the objective chest 
 END_MAIN
 
 MiscBasedEvents:
-AFEV ObjectiveSwitched SwitchObjective RelicRecovered
+AFEV A1_ObjectiveSwitched SwitchObjective A1_RelicRecovered
 AFEV 0x0 CheckNoUnits 0x0
 CauseGameOverIfLordDies
 END_MAIN
@@ -199,7 +199,7 @@ LOAD1 0 IndioCutsceneUnit
 ENUN
 Text(ChA1BeginningScene4)
 POPUP ChA1IndioRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
-ENUT EscapeDisallowed
+ENUT A1_EscapeDisallowed
 ENUT AllUnitsMustEscapeFlag
 LOAD1 1 ContractorInitialEnemies
 ENUN
@@ -258,10 +258,10 @@ ENDA
 
 ALIGN 4
 LuaRecruitLeandra:
-CHECK_EVENTID LeandraTalkSeen
+CHECK_EVENTID A1_LeandraTalkSeen
 BNE 1 sC s0
 Text(ChA1LuaLeandraTalkDialogue)
-ENUT LeandraTalkSeen
+ENUT A1_LeandraTalkSeen
 LABEL 1
 SVAL s1 1000
 CHECK_MONEY
@@ -275,7 +275,7 @@ TAKEMONEY
 CUSA Leandra
 GOTO 3
 LABEL 2
-ENUF LeandraRecruited
+ENUF A1_LeandraRecruited
 POPUP ChA1LeandraRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 LABEL 3
 NoFade
@@ -283,10 +283,10 @@ ENDA
 
 ALIGN 4
 DesiderioRecruitLeandra:
-CHECK_EVENTID LeandraTalkSeen
+CHECK_EVENTID A1_LeandraTalkSeen
 BNE 4 sC s0
 Text(ChA1DesiderioLeandraTalkDialogue)
-ENUT LeandraTalkSeen
+ENUT A1_LeandraTalkSeen
 SVAL s1 1000
 CHECK_MONEY
 BLT 5 sC s1
@@ -300,7 +300,7 @@ TAKEMONEY
 CUSA Leandra
 GOTO 6
 LABEL 5
-ENUF LeandraRecruited
+ENUF A1_LeandraRecruited
 POPUP ChA1LeandraRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 LABEL 6
 NoFade
@@ -382,13 +382,13 @@ AddTrap(BlueSigilTrapID, 5, 2)
 AddTrap(BlueSigilTrapID, 6, 2)
 AddTrap(BlueSigilTrapID, 26, 8)
 AddTrap(BlueSigilTrapID, 27, 8)
-ENUF EscapeDisallowed
+ENUF A1_EscapeDisallowed
 NoFade
 ENDA
 
 ALIGN 4
 EscapeEventCheck:
-ENUF EscapeDisallowed
+ENUF A1_EscapeDisallowed
 NoFade
 ENDA
 
