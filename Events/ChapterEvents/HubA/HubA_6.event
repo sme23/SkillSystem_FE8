@@ -403,6 +403,7 @@ NoFade
 ENDA
 
 EndingScene:
+FadeOutMusic
 SetBackground(0x28)
 Text(ChA6End1)
 GiveItem(Mine,Lua)
