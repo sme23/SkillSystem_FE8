@@ -2,6 +2,7 @@ ALIGN 4
 LungeUpdate:
 #incbin "LungeUpdate/lunge_updaterescuee.dmp"
 
+ALIGN 4
 MiraclemakerID_Link:
 WORD MiraclemakerID
 

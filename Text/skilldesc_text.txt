@@ -1662,8 +1662,7 @@ above the doubling threshold.[X]
 
 ## SD_Nonconforming
 Nonconforming: Unit reverses the[N]
-weapon triangle in all combats.[N]
-Reavers have no effect.[X]
+weapon triangle in all combats.[X]
 
 ## SD_Panache
 Panache: Unit can initiate combat[N]

@@ -20,6 +20,9 @@ Tome mastery level.[X]
 # 0x566
 Knife mastery level.[X]
 
+# 0x4EE
+Lck[X]
+
 # 0x055D
 Chance that the attack will hit.[NL]
 Skl x 3 + Weapon Hit + Triangle Adv.[X]
