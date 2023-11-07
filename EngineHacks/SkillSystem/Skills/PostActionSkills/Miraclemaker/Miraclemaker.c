@@ -20,25 +20,11 @@ void Miraclemaker(Unit* unit) {
 
 void Miraclemaker_BitReset() {
 	//this runs in start of turn calc loop
-	//for each unit of the previous phase, look for one having AstralBlessing
+	//for each unit of the current phase, clear miraclemaker bit
 	
 	int faction = gChapterData.currentPhase;
-	switch (faction) {
-		case UA_BLUE:
-		faction = UA_GREEN;
-		break;
-		
-		case UA_RED:
-		faction = UA_BLUE;
-		break;
-		
-		case UA_GREEN:
-		faction = UA_RED;
-		break;
-	}
-	
 	int unitID = faction+1;
-	int maxCount;
+	int maxCount = 0;
 	
 	switch (faction) {
 		case UA_BLUE:
