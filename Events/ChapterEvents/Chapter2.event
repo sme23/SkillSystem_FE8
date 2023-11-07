@@ -389,6 +389,7 @@ UnsetAllHubChapterFlags
 ENUF LuaInAHubFlag
 CALL ClearChapter2Traps
 TILECHANGE 0
+TILECHANGE 3
 ENUT MainRoomToOtherRooms
 ENUT TreasureRoomToMainRoom
 ENUT LuaQuartersToMainRoom

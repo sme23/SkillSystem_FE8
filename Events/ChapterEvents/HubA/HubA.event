@@ -171,7 +171,7 @@ AREA WentToPortGreagorDocks PortGreagorDocksFirstTime [29,15] [29,16]
 AREA DocksToPort GotoPortFromDocks [0,13] [0,14]
 AREA CameBackFromDocks CameBackFromDocksFirstTime [0,13] [0,14]
 
-//AREA PortToBase BackToLuaBase [20,4] [21,4]
+AREA PortToBase BackToLuaBase [20,4] [21,4]
 AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
 
 AREA PortToTavern FromPortToTavern [8,20] [8,20]
@@ -245,12 +245,6 @@ ENDA
 //CHARACTER EVENTS HERE
 
 TalkToTriana:
-CheckHowManyHubChaptersCompleted
-SVAL s1 1
-BLE 1 sC s1 //if 1 or less hub chapters completed, triana recruitable so branch to that
-    Text(TrianaUnrecruitableText) //triana's statement that she's found work and isn't interested anymore
-    GOTO 5
-LABEL 1
 HubFirstTimeTalkToUnit(TrianaSpokeToOnce, 2, TrianaFirstTimeText)
 LABEL 2
 TutorialYesNoText(RecruitTrianaChoice)
@@ -264,17 +258,6 @@ NoFade
 ENDA
 
 TalkToMedwyn:
-CheckHowManyHubChaptersCompleted
-SVAL s1 3
-BLE 1 sC s1 //if less than 4, part of medwyn's time
-    Text(MedwynUnrecruitableText) //medwyn's statement that he's drunk off his ass so he's unintelligible
-    GOTO 5
-LABEL 1
-SVAL s1 2
-BGE 0 sC s1 //if 2 or 3, then it's medwyn's rare moment of clarity, so skip
-    Text(MedwynUnrecruitableText) 
-    GOTO 5
-LABEL 0
 HubFirstTimeTalkToUnit(MedwynSpokeToOnce, 2, MedwynFirstTimeText)
 LABEL 2
 TutorialYesNoText(RecruitMedwynChoice)
@@ -288,12 +271,6 @@ NoFade
 ENDA
 
 TalkToBartz:
-CheckHowManyHubChaptersCompleted
-SVAL s1 4
-BGE 1 sC s1 //if 4 hub chapters completed, bartz available for recruit so skip
-    Text(BartzUnrecruitableText) //bartz's statement that he's waiting for a job
-    GOTO 5
-LABEL 1
 HubFirstTimeTalkToUnit(BartzSpokeToOnce, 2, BartzFirstTimeText)
 LABEL 2
 TutorialYesNoText(RecruitBartzChoice)
@@ -352,6 +329,21 @@ ENDA
 FromPortToTavern:
 InitiateTileChangeInHub(ClearHubATraps, AddTavernTraps, 1, LuaInDaTavern, TavernGreensSpawnEvent)
 ENUF TavernToPort
+CallEventIfEIDNotSet(TavernFirstTime, 1, BarGangIntro)
+NoFade
+ENDA
+
+BarGangIntro:
+Text(BarGangIntroText1)
+CamOn
+MOVE 15 Lua [5,15]
+ENUN
+CamOff
+CAMERA_CENTERED Lua
+FlashCursor(Triana,20)
+FlashCursor(Medwyn,20)
+FlashCursor(Bartz,20)
+Text(BarGangIntroText2)
 NoFade
 ENDA
 
@@ -407,17 +399,12 @@ NoFade
 ENDA
 
 BackToLuaBase:
-InitiateLoadMapHub(Chapter2, ClearHubATraps, LuaFromDaPortInDaBase, MainRoomSpawnEvent)
+InitiateLoadMapHub(Chapter2, ClearHubATraps, LuaBackFromPortGroup, MainRoomSpawnEvent)
 NoFade
 ENDA
 
 MainRoomSpawnEvent:
 LoadPlayerUnits(OrlandoRahelUnitGroup)
-NoFade
-ENDA
-
-LuaFromDaPortInDaBase:
-LoadPlayerUnits(LuaBackFromPortGroup)
 NoFade
 ENDA
 
@@ -552,9 +539,9 @@ UNIT Durgham LanceCav 0 Level(5,NPC,False) [1,20] 0 0 0 0 [IronLance, SteelLance
 UNIT
 
 SamsonArranUnitGroup:
-UNIT Triana Shaman_F 0 Level(4,NPC,False) [3,14] 0 0 0 0 [Surge, Elfire, Vulnerary] NoAI
-UNIT Medwyn Warden 0 Level(6,NPC,False) [5,14] 0 0 0 0 [SteelSword, Javelin, PureWater] NoAI
-UNIT Bartz Deserter 0 Level(8,NPC,False) [7,14] 0 0 0 0 [SteelLance, Vulnerary] NoAI
+UNIT Triana Shaman_F 0 Level(4,NPC,True) [3,14] 0 0 0 0 [Surge, Elfire, Vulnerary] NoAI
+UNIT Medwyn Warden 0 Level(5,NPC,True) [5,14] 0 0 0 0 [SteelSword, Javelin, PureWater] NoAI
+UNIT Bartz Deserter 0 Level(6,NPC,True) [7,14] 0 0 0 0 [SteelLance, Vulnerary] NoAI
 UNIT
 
 MrYodsenUnitGroup:

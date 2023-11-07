@@ -14,6 +14,7 @@
 #define LeonorMug $f
 #define OndehMug $10
 #define BikoMug $11
+#define JuanMug $12
 
 #define MatteoMug $14
 #define SuzanneMug $15
@@ -22,6 +23,15 @@
 #define TangyuanMug $18
 
 #define KhazhakMug $31
+#define GeraldoMug $32
+#define BozoMug $33
+#define BuzuMug $34
+#define YurenaMug $35
+#define FelipeMug $36
+#define SierraMug $37
+#define ManfredMug $38
+#define SanzMug $39
+
 
 #define TrianaMug $43
 #define MedwynMug $44

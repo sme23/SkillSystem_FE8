@@ -172,59 +172,59 @@ UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 NPCGroup:
-UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim] BossAI
+UNIT Juan Thief 0 Level(3, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim] BossAI
 UNIT
 
 EnemyGroup:
 //turn 1
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT A4Pirate Mercenary 0 Level(3, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
 //turn 2
-UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [9,11] 0 0 0 0 [Elfire, Vulnerary, TealGem] ChargeAI
-UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
+UNIT A4Pirate Brigand 0 Level(3, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
+UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, Vulnerary, TealGem] ChargeAI
+UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
-UNIT A4Pirate Mercenary 0 Level(4, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
-UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
+UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
+UNIT A4Pirate Mercenary 0 Level(3, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
+UNIT A4Pirate Fighter 0 Level(3, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
 //turn 4
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
-UNIT A4Pirate Ninja 0 Level(4, Enemy, True) [5,17] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
+UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
+UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,17] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
+UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
 //turn 5
-UNIT A4Pirate Brigand 0 Level(4, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Deserter 0 Level(4, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
+UNIT A4Pirate Brigand 0 Level(3, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
+UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
 //turn 6
-UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(4, Enemy, True) [6,21] 0 0 0 0 [Elfire, Vulnerary] GroupThreeAI
-UNIT A4Pirate Vanguard 0 Level(4, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
+UNIT A4Pirate Myrmidon 0 Level(3, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
+UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [6,21] 0 0 0 0 [Elfire, Vulnerary] GroupThreeAI
+UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
 UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
 //turn 7
-UNIT A4Pirate Fighter 0 Level(4, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
-UNIT A4Pirate Myrmidon 0 Level(4, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
-UNIT A4Pirate Hunter 0 Level(4, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
-UNIT A4PirateBoss Deserter 0 Level(5,Enemy,False) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
+UNIT A4Pirate Fighter 0 Level(3, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
+UNIT A4Pirate Myrmidon 0 Level(3, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
+UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
+UNIT A4PirateBoss Deserter 0 Level(5,Enemy,True) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
 UNIT
 
 RebelSpawn:
-UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, False) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
-UNIT Rebel Soldier 0 Level(4, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Rebel Warden 0 Level(4, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
-UNIT Rebel Warden 0 Level(4, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
-UNIT Rebel Archer 0 Level(4, Enemy, True) [22,15] 0 0 0 0 [Longbow] ChargeAI
-UNIT Rebel Fighter 0 Level(4, Enemy, True) [20,19] 0 0 0 0 [IronAxe, HandAxe] ChargeAI
-UNIT Rebel GriffinRider 0 Level(4, Enemy, True) [21,10] 0 0 0 0 [Pike] ChargeAI
+UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, True) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
+UNIT Rebel Soldier 0 Level(3, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Warden 0 Level(3, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
+UNIT Rebel Warden 0 Level(3, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
+UNIT Rebel Archer 0 Level(3, Enemy, True) [22,15] 0 0 0 0 [Longbow] ChargeAI
+UNIT Rebel Fighter 0 Level(3, Enemy, True) [20,19] 0 0 0 0 [IronAxe, HandAxe] ChargeAI
+UNIT Rebel GriffinRider 0 Level(3, Enemy, True) [21,10] 0 0 0 0 [Pike] ChargeAI
 UNIT
 
 RebelScoutSpawn:
-UNIT Rebel GriffinRider 0 Level(4, NPC, True) [20,0] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Rebel GriffinRider 0 Level(3, NPC, True) [20,0] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT
 
 ThiefSpawn:
-UNIT A4Pirate Thief 0 Level(4, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
+UNIT A4Pirate Thief 0 Level(3, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
 UNIT
 
 Traps1:

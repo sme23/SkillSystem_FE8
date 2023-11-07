@@ -1270,7 +1270,7 @@ its new owner: Orlando Felicitas.[AN]
 [ML]Guh! Felicitas, you say[Beat][AN]
 [MR]You know the man?[AN]
 [ML]It doesn't matter. Here, new offer.[AN]
-For 750 gold I'll come aboard your[N]
+For 500 gold I'll come aboard your[N]
 ship, any size, and help man it.[AN]
 Just don't tell Orlando I'm here.[A][X]
 
@@ -1310,17 +1310,17 @@ can loosen some lips here.[AN]
 Hm, what's that racket?[A][X]
 
 ## BarGangIntroText2
-[FR][LoadLua][L][LoadTriana][R][LoadMedwyn][FR][LoadBartz]
+[FL][LoadLua][L][LoadTriana][R][LoadMedwyn][FR][LoadBartz]
 [FR]Hells, look what you've done, Triana.[AN]
 You've dragged an innocent bystander[N]
 into our wreck of an argument.[AN]
 [L]I'd sooner call this an opportunity![AN]
 Excuse me, woman in the cool hat![N]
-We need you help setting a dispute.[AN]
+We need your help setting a dispute.[AN]
 [FL]A dispute, you say. Well, I can[N]
 hardly without knowing you all.[AN]
 What do you say to a round of[N]
-drinks? All of me, of course.[AN]
+drinks? All on me, of course.[AN]
 [R]Wuh-Wuzzat? Someone say drinks?[AN]
 [FR]Careful, stranger, you alerted Medwyn.[N]
 Better not let him empty your coffers.[AN]
@@ -1329,7 +1329,7 @@ I've got a whole fortune stowed[N]
 away on an outskirt island[Beat][AN]
 all I need is that blasted cargo[N]
 captain' tell me where it is[Beat][AN]
-[FL]If the barkeep didn't believe you the[N]
+[L]If the barkeep didn't believe you the[N]
 first time, he's sure as hell not now.[AN]
 This is Medwyn del Miron, and he lost[N]
 his entire fortune to a scam artist.[AN]
@@ -1348,9 +1348,10 @@ beg to feed and clothe yourself.[AN]
 you three were talkin about?[AN]
 [L]As I'm sure you can glean, the[N]
 three of us are[Beat] down on our luck.[AN]
-[R]Maybe you two plebians are, but me[Beat][AN]
+[R]Maybe you two plebeians are, but me[Beat][AN]
 Any day now, that ship'll come by[N]
-and bring me 100x the gold I paid[Beat][AN]
+and bring me a hundred times[N]
+the gold I paid[Beat][AN]
 [FR]To dull the pain of our situations,[N]
 the three of us created a wager.[AN]
 Whichever of us can land a steady[N]
@@ -1363,18 +1364,14 @@ of sight-seeing and high thrills![AN]
 [R]It must be one of opulence and[N]
 great fortune for one's exploits![AN]
 [FR]And it must be one that doesn't[N]
-dare to lick Incendivis' boots.[AN]
+dare to lick Incendivis's boots.[AN]
 Well, you've heard our dispute,[N]
 stranger. What say you to it?[AN]
 [L][CF][R][CF][FR][CF]
-[FR]If nothing else, these three are[N]
+[FL]If nothing else, these three are[N]
 well-traveled and knowledgeable.[AN]
 It may be worth settling their[N]
 wager[Beat][A][X]
-
-## TrianaUnrecruitableText
-[MidRight][LoadLua]
-Placeholder Text 1![A][X]
 
 ## TrianaFirstTimeText
 [ML][LoadLua][MR][LoadTriana]
@@ -1383,7 +1380,7 @@ Unlike your two friends, you[N]
 seem way more put-together.[AN]
 [MR]Alas, I'm afraid my story[N]
 isn't very interesting.[AN]
-Graduated from one of Incendivis'[N]
+Graduated from one of Incendivis's[N]
 business colleges with top marks,[AN]
 then went into the merchant's[N]
 guild as a low-level clerk.[AN]
@@ -1414,9 +1411,6 @@ I got your name yet, Captain.[AN]
 Out here, we're all in this together.[AN]
 [MR]Noted! Thank you so much, Lua![A][X]
 
-## TrianaRecruitedPopup
-Triana came aboard![X]
-
 ## TrianaRejectedText
 [ML][LoadLua][MR][LoadTriana]
 [ML]Well then, I'm off.[AN]
@@ -1427,13 +1421,28 @@ not going to offer?[AN]
 Sounded like you were[N]
 considering it[Beat][A][X]
 
-## MedwynUnrecruitableText
-[MidRight][LoadLua]
-Placeholder Text 1![A][X]
-
 ## MedwynFirstTimeText
-[MidRight][LoadLua]
-Placeholder Text 1![A][X]
+[ML][LoadLua][MR][LoadMedwyn]
+[ML]
+I've heard of the del Mirons,
+and their love of a good time.
+How did you go from lavish partying
+to downing your misery with ale?
+[MR]
+Hic... All's that captain's fault.
+I was plying his hands with coin
+for some luxurious silks, you see.
+Can't find em anywhere else, he said,
+but out here in these islands,
+spun by some fancy worms, he says.
+Well, he asked me if I wanted to
+be the one making money, instead.
+With a bit of gold for a voyage,
+he said I'd be a richer man than
+any del Miron could hope to be...
+How could I say no? He told me to meet
+up in Port Greagor, so -urp- here I am.
+Not much to do but drown my sorrows.[A][X]
 
 ## RecruitMedwynChoice
 Recruit Medwyn?[N]
@@ -1450,17 +1459,13 @@ Medwyn came aboard![X]
 [MidRight][LoadLua]
 Placeholder Text 1![A][X]
 
-## BartzUnrecruitableText
-[MidRight][LoadLua]
-Placeholder Text 1![A][X]
-
 ## BartzFirstTimeText
 [ML][LoadLua][MR][LoadBartz]
 [ML]So what's a former Incendivis soldier[N]
 doing out in the Greagor sticks?[AN]
 [MR]Better the sticks than the steel.[AN]
 Rebel activity's on the up and up,[N]
-and Incendivis' getting desperate.[AN]
+and Incendivis is getting desperate.[AN]
 You know the imperial privateers?[AN]
 [ML]I don't. Tell me more.[AN]
 [MR]The empire's stretched thin trying to[N]
@@ -1495,9 +1500,6 @@ You keep me fed and don't get in[N]
 my way, my lance is yours.[AN]
 [ML]Glad to hear it. Welcome[N]
 to the crew, Bartz.[A][X]
-
-## BartzRecruitedPopup
-Bartz came aboard![X]
 
 ## BartzRejectedText
 [ML][LoadLua][MR][LoadBartz]

@@ -3,12 +3,12 @@ None,0,0
 0x01 Lua,0,20
 0x02 Pilar,5,30
 0x03 Desiderio,1,10
-0x04 Razvan,4,70
+0x04 Razvan,5,70
 0x05 Carmen,0,60
 0x06 Ximo,0,25
 0x07 Estelle,1,40
 0x08 Hermenegildo,6,55
-0x09 MrYodsen,4,25
+0x09 MrYodsen,5,25
 0x0A Durgham,0,5
 0x0B Indio,1,49
 0x0C Leandra,0,14
@@ -17,7 +17,7 @@ None,0,0
 0x0F Ondeh,3,30
 0x10 Biko,1,15
 0x11 Tangyuan,2,25
-0x12 Juan,2,25
+0x12 Juan,1,15
 0x13 Matteo,1,20
 0x14 Suzanne,6,35
 0x15 Orlando,(-2),30
@@ -68,7 +68,7 @@ None,0,0
 0x42 Orson (Ch 5x),3,10
 0x43 Triana,2,65
 0x44 Medwyn,4,35
-0x45 Bartz,0,15
+0x45 Bartz,2,15
 0x46 Khazhak,0,5
 0x47 Blackheart,0,5
 0x48 Buzu,1,10
