@@ -170,3 +170,10 @@ ManfredMugData:
 #incbin "Dmp/Manfred_minimug.dmp"
 setMugEntry(ManfredMug, ManfredMugData, 3, 5, 3, 3)
 
+ALIGN 16
+TangyuanMugData:
+#incbin "Dmp/Tangyuan_mug.dmp"
+#incbin "Dmp/Tangyuan_frames.dmp"
+#incbin "Dmp/Tangyuan_palette.dmp"
+#incbin "Dmp/Tangyuan_minimug.dmp"
+setMugEntry(TangyuanMug, TangyuanMugData, 3, 5, 3, 3)

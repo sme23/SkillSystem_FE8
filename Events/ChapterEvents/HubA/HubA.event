@@ -171,8 +171,8 @@ AREA WentToPortGreagorDocks PortGreagorDocksFirstTime [29,15] [29,16]
 AREA DocksToPort GotoPortFromDocks [0,13] [0,14]
 AREA CameBackFromDocks CameBackFromDocksFirstTime [0,13] [0,14]
 
-AREA PortToBase BackToLuaBase [20,4] [21,4]
 AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
+//AREA PortToBase BackToLuaBase [20,4] [21,4]
 
 AREA PortToTavern FromPortToTavern [8,20] [8,20]
 AREA TavernToPort ToPortFromTavern [8,20] [8,20] 
@@ -287,8 +287,15 @@ ENDA
 TalkToDurgham:
 HubFirstTimeTalkToUnit(DurghamSpokeToOnce, 1, DurghamFirstTimeText)
 LABEL 1
+SVAL s1 500
+CHECK_MONEY
+BLE 4 s1 sC //if you have more money than the cost, branch to 4
+    Text(DurghamTellsLuaShesBrokeText)
+    GOTO 3
+LABEL 4
 TutorialYesNoText(RecruitDurghamChoice)
-HubRecruitUnit(Durgham, 2, DurghamRecruitedText, 3)
+SVAL s3 500
+HubRecruitMoney(Durgham, 2, DurghamRecruitedText, 3)
 LABEL 2
 HubRejectUnit(DurghamRejectedText, DurghamRecruitFlag) //unsets this flag if you decided not to recruit
 LABEL 3
@@ -303,7 +310,13 @@ BNE 0 s1 sC //if not all hub chapters have been completed, branch to 0
     SVAL s1 0
     GOTO 1
 LABEL 0
-    HubFirstTimeTalkToUnit(MrYodsenSpokeToOnce, 4, MrYodsenFirstTimeText)
+    CHECK_EVENTID MrYodsenSpokeToOnce
+    BNE 4 s0 sC
+        CalculateYodsenPrice
+        SADD s1 s0 sC
+        GetTextFromMemSlot1
+        Text(MrYodsenFirstTimeText)
+        ENUT MrYodsenSpokeToOnce
 LABEL 4
     CalculateYodsenPrice
     SADD s1 s0 sC
@@ -315,7 +328,7 @@ LABEL 1
     GetTextFromMemSlot1
     Text(RecruitMrYodsenChoice)
     SADD s3 s1 s0 //moves how much gold to take to s3 
-    HubRecruitYodsen(MrYodsen, 2, MrYodsenRecruitedText, 3)
+    HubRecruitMoney(MrYodsen, 2, MrYodsenRecruitedText, 3)
 LABEL 2
 Text(MrYodsenRejectedText)
 LABEL 5
@@ -344,6 +357,7 @@ FlashCursor(Triana,20)
 FlashCursor(Medwyn,20)
 FlashCursor(Bartz,20)
 Text(BarGangIntroText2)
+ENUT TavernFirstTime
 NoFade
 ENDA
 

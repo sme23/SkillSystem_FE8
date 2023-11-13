@@ -31,12 +31,16 @@
 #define SierraMug $37
 #define ManfredMug $38
 #define SanzMug $39
+#define IgnacioMug $3A
 
 
 #define TrianaMug $43
 #define MedwynMug $44
 #define BartzMug $45
 #define LuaHatlessMug $46
+#define ElodiaMug $47
+#define AlonsoMug $48
+#define RebelLeaderMug $49
 
 #define IdaMug $51
 #define SargargalaMug $52

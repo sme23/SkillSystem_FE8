@@ -37,7 +37,7 @@
 #define HubFirstTimeTalkToUnit(firstTalkEID, labelID, textID) "CHECK_EVENTID firstTalkEID; BNE labelID s0 sC; Text(textID); ENUT firstTalkEID"
 #define RecruitThenHideCharacter(charID, textID) "Text(textID); CUSA charID; FlashCursor(charID, 60); FADI 10; SVAL s1 0x1; SET_CONDITION charID; FADU 10"
 #define HubRecruitUnit(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); GOTO finalLabelID"
-#define HubRecruitYodsen(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); TAKEMONEY; GOTO finalLabelID"
+#define HubRecruitMoney(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); TAKEMONEY; GOTO finalLabelID"
 #define HubRejectUnit(rejectedTextID, convoEID) "Text(rejectedTextID); ENUF convoEID"
 #define UnsetAllHubChapterFlags "ASMC UnsetAllHubChapterFlagsASMC"
 
