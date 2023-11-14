@@ -17,12 +17,23 @@
 push 	{lr}
 add 	sp, #-0x4
 str 	r2, [sp]
+
+ldr     r3,=0x203a4ec @attacker
+ldr	r3, [r3]
+ldrb	r3, [r3, #0x4]
+ldr	r0, [r0]
+ldrb	r0, [r0, #0x4]
+cmp     r0,r3
+bne     End @skip if unit isn't the attacker
+
 mov 	r0, r1
 
 @check that unit is wielding a bow
 _blh GetWeaponType
 cmp 	r0, #0x3 @bow
 bne End
+
+
 
 @get number of spaces moved
 ldr r0,=0x203a968

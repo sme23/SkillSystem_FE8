@@ -269,6 +269,7 @@ NoFade
 ENDA
 
 EndingScene:
+FadeoutMusic
 SetBackground(Forest_2)
 Text(A3_Ending_AllAlive)
 PlayEventIfEventIDSet(A3LogFlag, 1, AshArrowItemEvent)

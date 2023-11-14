@@ -100,6 +100,9 @@
 #include "prep_shop_each_chapter2/Installer.event"
 //7743
 
+#include "StealWithFullInv/Installer.event"
+//Vesly
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0

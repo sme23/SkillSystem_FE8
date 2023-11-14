@@ -330,7 +330,7 @@ ever-increasing guard regime.[X]
 Sagargala[X]
 
 ## SargargalaDesc
-First Mate
+First Mate[N]
 2nd in command of the Rioja Reapers.[N]
 Wary of change.[X]
 
@@ -338,7 +338,9 @@ Wary of change.[X]
 R. Reaper[X]
 
 ## LogPirateDesc
- [X]
+Grunt[N]
+Ne'er-do-wells that buy and sell humans.[N]
+Use the profits for fine wine.[X]
 
 ## A3LogName
 Trunk[X]
