@@ -70,6 +70,17 @@ SongTable(TheRebelsKnifeID,The_Rebels_Knife,MapMusicGroup)
 #include "songs/map/The_Rebels_Knife.event"
 }
 
+//15 - Orlando's Theme
+{
+SongTable(OrlandoThemeID,OrlandoTheme,MapMusicGroup)
+#include "songs/event/OrlandoTheme.event"
+}
+
+//16 - Swabbie Talk
+{
+SongTable(SwabbieTalkID,SwabbieTalk,MapMusicGroup)
+#include "songs/event/SwabbieTalk.event"
+}
 
 // --------------- SONGS: GUI AND SFX ---------------
 

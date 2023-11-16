@@ -176,4 +176,4 @@ TangyuanMugData:
 #incbin "Dmp/Tangyuan_frames.dmp"
 #incbin "Dmp/Tangyuan_palette.dmp"
 #incbin "Dmp/Tangyuan_minimug.dmp"
-setMugEntry(TangyuanMug, TangyuanMugData, 3, 5, 3, 3)
+setMugEntry(TangyuanMug, TangyuanMugData, 4, 5, 4, 3)

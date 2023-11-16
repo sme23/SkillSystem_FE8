@@ -452,6 +452,7 @@ LoadPlayerUnits(LuaInDaHub)
 CAMERA_CENTERED Lua
 SetBackground(Fort)
 Text(HubABeginningScene6)
+MUSC OrlandoThemeID
 Text(HubABeginningScene6_2)
 EraseBackground
 MUSC PortGreagorID
