@@ -120,6 +120,7 @@
 #define HideShield $ca
 #define GlassShield $d2
 #define ShoveGlove $d3
+#define Statuette $e5
 
 //Items
 
@@ -133,3 +134,4 @@
 #define TealGem $e0
 #define Eyepatch $e1
 #define AshArrow $e2
+#define KnightRing $e6

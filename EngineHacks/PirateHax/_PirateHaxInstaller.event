@@ -88,6 +88,21 @@
 #include "ChangeChapterObjective/Installer.event"
 //Zeta/Gilgamesh
 
+#include "FortuneStaff/FortuneStaff.event"
+//Sme
+
+#include "Kirito/Extern.event"
+//Pikmin1211
+
+#include "FancyChapterPreview/FancyChapterPreview.event"
+//Sme
+
+#include "prep_shop_each_chapter2/Installer.event"
+//7743
+
+#include "StealWithFullInv/Installer.event"
+//Vesly
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0
@@ -146,4 +161,28 @@ ORG 0x9A820 //Prep screen item menu tile width
 BYTE 0x6
 ORG 0x98728 //Prep screen pick units tile width
 BYTE 0x6
+POP
+
+PUSH //stops the hang when check_alive on npcs
+	ORG $1027C
+	BYTE 0x00 0x20 0x02 
+POP
+
+//let's remove throne/floor res and reduce throne/gate avoid
+PUSH
+ORG 0x80C513 //goodbye res!
+BYTE 0
+ORG 0x80C51A
+BYTE 0
+ORG 0x80C498
+BYTE 20
+ORG 0x80C49C
+BYTE 20
+POP
+
+PUSH //fixes level reset in prep screen - Pikmin1211
+	//ORG 0x736D0
+	//SHORT 0x1840 0x81D0 0x491C 0x2008 0x5628 0x8008
+	ORG 0x736C4
+	SHORT 0x7A28
 POP

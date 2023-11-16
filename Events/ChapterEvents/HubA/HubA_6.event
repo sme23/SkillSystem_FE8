@@ -375,20 +375,18 @@ ALIGN 4
 
 BeginningScene:
 SetBackground(0x28)
+MUSC SwabbieTalkID
 Text(ChA6Pre1)
-ClearBackground
 SetBackground(0x34)
+MUSC AvastMeHeartiesID
 Text(ChA6Pre2)
 FADI 15
-
 LoadPlayerUnits(NewUnits)
-
 LoadEnemies(EnemyUnitsBosses)
 LoadEnemies(EnemyUnits1)
 LoadEnemies(EnemyUnits2)
 LoadEnemies(EnemyUnits3)
 LoadEnemies(EnemyUnitsBombs)
-
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb2Timer,AnyDeployed,AnyArmy,AnyClass,Area(5,8,5,8),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem)
@@ -397,13 +395,14 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb5Timer,AnyDeployed,AnyArmy,AnyClass,Area(3,1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer,AnyDeployed,AnyArmy,AnyClass,Area(11,14,11,14),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
-
 GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
+FadeOutMusic
 SetBackground(0x28)
+MUSC SwabbieTalkID
 Text(ChA6End1)
 GiveItem(Mine,Lua)
 GoToHubChapter(HubA)

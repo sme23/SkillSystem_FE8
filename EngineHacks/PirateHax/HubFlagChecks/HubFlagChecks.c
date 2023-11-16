@@ -72,7 +72,7 @@ int ReturnNumberOfHubChaptersVisited(){
         hubChapters++;
     }
 
-    if (hubChapters < 0){
+    if (hubChapters <= 0){
         return 0;
     }
     else{

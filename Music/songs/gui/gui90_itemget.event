@@ -17,7 +17,7 @@ gui90_itemget_0:
 // 000   ----------------------------------------
         BYTE   TEMPO   160/2
         BYTE           VOICE   10
-        BYTE           VOL     72
+        BYTE           VOL     84
         BYTE           MOD     3
         BYTE           PAN     c_v+10
         BYTE           N04     Cn4   v100
@@ -67,7 +67,7 @@ gui90_itemget_2:
         BYTE   KEYSH   gui90_itemget_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   11
-        BYTE           VOL     52
+        BYTE           VOL     58
         BYTE           PAN     c_v+20
         BYTE           N30     Fn3   v100
         BYTE   W36
@@ -81,7 +81,7 @@ gui90_itemget_3:
         BYTE   KEYSH   gui90_itemget_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   11
-        BYTE           VOL     52
+        BYTE           VOL     58
         BYTE           PAN     c_v-20
         BYTE           N24     Bn2   v100
         BYTE   W36

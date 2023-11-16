@@ -46,6 +46,8 @@
 
 //T2
 #define Dreadnought 0x8E
+#define Runeshield 0x94
+#define Baron Runeshield
 
 //CAVALIER
 #define SwordCav 0x87
@@ -54,6 +56,10 @@
 #define AxeCav 0x88
 #define BowCav 0x93
 //#define Troubadour 0x4b
+
+//T2
+#define WolfKnight 0x95
+#define Wolfrider WolfKnight
 
 //FLIER
 #define PegasusRider 0x48
@@ -128,3 +134,7 @@
 #define BombMapSprite 0x81
 #define TricksterMapSprite 0x82
 #define BowCavMapSprite 0x83
+#define RuneshieldMapSprite 0x84
+#define BaronMapSprite RuneshieldMapSprite
+#define WolfKnightMapSprite 0x85
+#define WardenMapSprite 0x86

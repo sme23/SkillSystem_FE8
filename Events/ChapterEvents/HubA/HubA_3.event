@@ -5,6 +5,7 @@
 #define A3Spawn2TurnFlag 11
 #define A3Spawn3TurnFlag 12
 #define A3Spawn3AreaFlag 13
+// 14, 15, 16, 17 are battle quotes
 
 EventPointerTable(HubA_3EventsID, PointerList)
 
@@ -25,8 +26,15 @@ TurnEventPlayer(0, A3Explanation, 1)
 TurnEventPlayer(A3Spawn1TurnFlag, A3Reinforce1, 1, 255) //bottom left fort spawn
 TurnEventPlayer(A3Spawn2TurnFlag, A3Reinforce2, 1, 255)
 TurnEventPlayer(A3Spawn3TurnFlag, A3Reinforce3, 1, 255)
+TurnEventPlayer(0, SpiritWarning, 7)
 Survive(GameOverYeaaaaah,13)
 END_MAIN
+
+SpiritWarning:
+CameraCursor(Lua)
+Text(A3_MidBattle_PhantomWarn)
+NoFade
+ENDA
 
 A3Explanation:
 CAMERA_CENTERED [18,14]
@@ -40,6 +48,8 @@ NoFade
 ENDA
 
 GameOverYeaaaaah:
+CameraCursor(Lua)
+Text(A3_SanTorino_Appears)
 CALL GameOverStart
 NoFade
 ENDA
@@ -201,7 +211,7 @@ UNIT RiojaReaper Vanguard 0 Level(3, Enemy, True) [17,15] 0 0 0 0 [HandAxe] Boss
 
 UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [4,8] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
 
-UNIT RiojaReaper Archer 0 Level(3, Enemy, True) [10,9] 0 0 0 0 [Longbow, TealGem] AttackInRangeAI
+UNIT RiojaReaper Archer 0 Level(3, Enemy, True) [10,9] 0 0 0 0 [Longbow, TealGem] AttackWhenInRangeAI
 
 UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [10,14] 0 0 0 0 [HandAxe] BossAI
 UNIT RiojaReaper Shaman 0 Level(3, Enemy, True) [10,15] 0 0 0 0 [Elfire] BossAI
@@ -212,7 +222,7 @@ UNIT RiojaReaper Deserter 0 Level(3, Enemy, True) [17,10] 0 0 0 0 [Javelin] Boss
 UNIT RiojaReaper Fighter 0 Level(3, Enemy, True) [2,11] 0 0 0 0 [SteelAxe] GroupOneAI
 UNIT RiojaReaper Archer 0 Level(4, Enemy, True) [0,13] 0 0 0 0 [Tomereaver, Longbow] GroupOneAI
 UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [Onigiri] GroupOneAI
-UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackWhenInRangeAI
 
 UNIT RiojaReaper Mage 0 Level(3, Enemy, True) [6,0] 0 0 0 0 [Fire] GroupTwoAI
 UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [10,4] 0 0 0 0 [Pike, Pitchfork] GroupTwoAI
@@ -226,7 +236,7 @@ UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [18,12] 0 0 0 0 [SteelSwor
 UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [18,16] 0 0 0 0 [SteelLance] GroupFiveAI
 UNIT RiojaReaper GriffinRider 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronLance] GroupFourAI
 UNIT RiojaReaper PegasusRider 0 Level(3, Enemy, True) [12,16] 0 0 0 0 [IronSword] GroupFiveAI
-UNIT RiojaReaper DragonRider 0 Level(4, Enemy, True) [15,14] 0 0 0 0 [SteelAxe, Hammer] AttackInRangeAI
+UNIT RiojaReaper DragonRider 0 Level(4, Enemy, True) [15,14] 0 0 0 0 [SteelAxe, Hammer] AttackWhenInRangeAI
 UNIT
 
 LogGroup:
@@ -236,6 +246,16 @@ UNIT A3Log 0 0 Level(1,NPC, False) [6,9] 0 0 0 0 [0x0] BossAI
 UNIT
 
 BeginningScene:
+SetBackground(Forest)
+Text(A3_Scene1_HeadToTemple)
+SetBackground(Temple_Gate)
+Text(A3_Scene2_TempleEntrance)
+SetBackground(Temple_Ruins_Inside)
+Text(A3_Scene3_InTheTomb)
+SetBackground(Forest_2)
+Text(A3_Scene4_Sagargala)
+Text(A3_Scene5_ReadyForBattle)
+FADI 15
 LOAD1 1 NewPlayerUnits
 LOAD1 1 EnemyGroup
 LOAD1 1 LogGroup
@@ -249,6 +269,9 @@ NoFade
 ENDA
 
 EndingScene:
+FadeoutMusic
+SetBackground(Forest_2)
+Text(A3_Ending_AllAlive)
 PlayEventIfEventIDSet(A3LogFlag, 1, AshArrowItemEvent)
 ENUF LordMustEscapeLastFlag
 GoToHubChapter(HubA)

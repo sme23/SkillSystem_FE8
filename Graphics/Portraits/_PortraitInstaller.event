@@ -10,6 +10,30 @@ CarmenMugData:
 setMugEntryExtend(CarmenMug, CarmenMugData, 3, 5, 3, 3, 0, 4, 0, 0)
 
 ALIGN 16
+RazvanMugData:
+#incbin "Dmp/Razvan_mug.dmp"
+#incbin "Dmp/Razvan_frames.dmp"
+#incbin "Dmp/Razvan_palette.dmp"
+#incbin "Dmp/Razvan_minimug.dmp"
+setMugEntryExtend(RazvanMug, RazvanMugData, 3, 5, 3, 3, 10, 4, 0, 0)
+
+ALIGN 16
+LuaMugData:
+#incbin "Dmp/Lua_mug.dmp"
+#incbin "Dmp/Lua_frames.dmp"
+#incbin "Dmp/Lua_palette.dmp"
+#incbin "Dmp/Lua_minimug.dmp"
+setMugEntry(LuaMug, LuaMugData, 3, 5, 3, 3)
+
+ALIGN 16
+LuaHatlessMugData:
+#incbin "Dmp/LuaHatless_mug.dmp"
+#incbin "Dmp/LuaHatless_frames.dmp"
+#incbin "Dmp/LuaHatless_palette.dmp"
+#incbin "Dmp/LuaHatless_minimug.dmp"
+setMugEntry(LuaHatlessMug, LuaHatlessMugData, 3, 5, 3, 3)
+
+ALIGN 16
 DesiderioMugData:
 #incbin "Dmp/Desiderio_mug.dmp"
 #incbin "Dmp/Desiderio_frames.dmp"
@@ -81,3 +105,75 @@ XimoMugData:
 #incbin "Dmp/Ximo_palette.dmp"
 #incbin "Dmp/Ximo_minimug.dmp"
 setMugEntry(XimoMug, XimoMugData, 4, 5, 4, 3)
+
+ALIGN 16
+OndehMugData:
+#incbin "Dmp/Ondeh_mug.dmp"
+#incbin "Dmp/Ondeh_frames.dmp"
+#incbin "Dmp/Ondeh_palette.dmp"
+#incbin "Dmp/Ondeh_minimug.dmp"
+setMugEntry(OndehMug, OndehMugData, 3, 5, 3, 3)
+
+ALIGN 16
+MatteoMugData:
+#incbin "Dmp/Matteo_mug.dmp"
+#incbin "Dmp/Matteo_frames.dmp"
+#incbin "Dmp/Matteo_palette.dmp"
+#incbin "Dmp/Matteo_minimug.dmp"
+setMugEntry(MatteoMug, MatteoMugData, 3, 5, 3, 3)
+
+ALIGN 16
+OrlandoMugData:
+#incbin "Dmp/Orlando_mug.dmp"
+#incbin "Dmp/Orlando_frames.dmp"
+#incbin "Dmp/Orlando_palette.dmp"
+#incbin "Dmp/Orlando_minimug.dmp"
+setMugEntry(OrlandoMug, OrlandoMugData, 3, 5, 3, 3)
+
+ALIGN 16
+RahelMugData:
+#incbin "Dmp/Rahel_mug.dmp"
+#incbin "Dmp/Rahel_frames.dmp"
+#incbin "Dmp/Rahel_palette.dmp"
+#incbin "Dmp/Rahel_minimug.dmp"
+setMugEntry(RahelMug, RahelMugData, 3, 5, 3, 3)
+
+ALIGN 16
+LeonorMugData:
+#incbin "Dmp/Leonor_mug.dmp"
+#incbin "Dmp/Leonor_frames.dmp"
+#incbin "Dmp/Leonor_palette.dmp"
+#incbin "Dmp/Leonor_minimug.dmp"
+setMugEntry(LeonorMug, LeonorMugData, 3, 5, 3, 3)
+
+ALIGN 16
+JuanMugData:
+#incbin "Dmp/Juan_mug.dmp"
+#incbin "Dmp/Juan_frames.dmp"
+#incbin "Dmp/Juan_palette.dmp"
+#incbin "Dmp/Juan_minimug.dmp"
+setMugEntry(JuanMug, JuanMugData, 3, 5, 3, 3)
+
+ALIGN 16
+GeraldoMugData:
+#incbin "Dmp/Geraldo_mug.dmp"
+#incbin "Dmp/Geraldo_frames.dmp"
+#incbin "Dmp/Geraldo_palette.dmp"
+#incbin "Dmp/Geraldo_minimug.dmp"
+setMugEntry(GeraldoMug, GeraldoMugData, 3, 5, 3, 3)
+
+ALIGN 16
+ManfredMugData:
+#incbin "Dmp/Manfred_mug.dmp"
+#incbin "Dmp/Manfred_frames.dmp"
+#incbin "Dmp/Manfred_palette.dmp"
+#incbin "Dmp/Manfred_minimug.dmp"
+setMugEntry(ManfredMug, ManfredMugData, 3, 5, 3, 3)
+
+ALIGN 16
+TangyuanMugData:
+#incbin "Dmp/Tangyuan_mug.dmp"
+#incbin "Dmp/Tangyuan_frames.dmp"
+#incbin "Dmp/Tangyuan_palette.dmp"
+#incbin "Dmp/Tangyuan_minimug.dmp"
+setMugEntry(TangyuanMug, TangyuanMugData, 4, 5, 4, 3)

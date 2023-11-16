@@ -61,6 +61,9 @@
 	.global TonicPrepScreenEffectFunc
 	.type 	TonicPrepScreenEffectFunc, function
 
+	.global DelayedTonicDeletion
+	.type DelayedTonicDeletion, %function
+
 	.macro blh to, reg = r3
     ldr \reg, =\to
     mov lr, \reg
@@ -349,6 +352,53 @@ TonicEffectFunc:
 
 	tonicEffectEnd:
 
+	@ set item to 0 and clear it - relocated to be done later to allow for some other checks to work
+	@ldr r0, =gActiveUnit
+	@ldr r0, [r0]
+	@ldrb r1, [r4, #0x12] @ item slot used
+	@lsl r1, #1 @ x2
+	@add r1, #0x1E @ items
+	@mov r2, #0
+	@strh r2, [r0, r1]
+
+	blh RemoveUnitBlankItems
+	
+	mov r0,#0x1A
+	strb r0,[r4,#0x11] @set action to use item
+
+	pop {r0}
+	bx r0
+
+	.pool
+
+	.align
+	
+	
+DelayedTonicDeletion:
+	@no params, no return val
+	push {r4,r14}
+	ldr r4,=gActionData
+	
+	@is the action type use item?
+	ldrb r0,[r4,#0x11]
+	cmp r0,#0x1A
+	bne DelayedTonicDeletion_End
+	
+	@is the item used a tonic?
+	ldrb r0, [r4, #0x12] @ item slot used
+	lsl r0,#1 @ *2
+	add r0,#0x1E @items offset
+	ldr r1,=gActiveUnit
+	ldr r1,[r1]
+	add r0,r1
+	ldrh r0,[r0]
+	mov r1,#0xFF
+	and r0,r1
+	ldr r1,=TonicItemID
+	ldrb r1,[r1]
+	cmp r0,r1
+	bne DelayedTonicDeletion_End
+	
 	@ set item to 0 and clear it
 	ldr r0, =gActiveUnit
 	ldr r0, [r0]
@@ -360,20 +410,15 @@ TonicEffectFunc:
 
 	blh RemoveUnitBlankItems
 	
-	mov r0,#0x1A
-	strb r0,[r4,#0x11] @set action to use item
-
-	ldr r0, =gActionData
-	mov r2, #0x11
-	mov r1, #0x1A
-	strb r1, [r0, r2] @ should store 0x1A in the 0x11 place
-
+	DelayedTonicDeletion_End:
+	pop {r4}
 	pop {r0}
 	bx r0
-
+	
 	.pool
-
+	
 	.align
+
 
 TonicUsabilityFunc:
 	@ r4 - active unit

@@ -1,5 +1,7 @@
 EventPointerTable(HubA_1EventsID, PointerList)
 
+// temporary flags
+/*
 #define CarmenIndioTalkSeen 0x7
 #define PilarRazvanTalkSeen 0x8
 #define LeandraTalkSeen 0x9
@@ -8,6 +10,17 @@ EventPointerTable(HubA_1EventsID, PointerList)
 #define ObjectiveSwitched 0xC
 #define EscapeDisallowed 0xD
 
+#define GeraldoLuaBattleQuoteSeen 0xE
+#define GeraldoPilarBattleQuoteSeen 0xF
+#define GeraldoDesiderioBattleQuoteSeen 0x10
+#define GeraldoRazvanBattleQuoteSeen 0x11
+#define GeraldoCarmenBattleQuoteSeen 0x12
+#define GeraldoXimoBattleQuoteSeen 0x13
+#define GeraldoEstelleBattleQuoteSeen 0x14
+#define GeraldoHermeneBattleQuoteSeen 0x15
+
+#define GeraldoGenericBattleQuoteSeen 0x28
+*/
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -15,7 +28,7 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno1 Dunno2 Dunno3 Tutorial
 POIN Traps1 Traps2
-POIN Units1 Units1
+POIN Units1 Units2
 POIN $0 $0 $0 
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
@@ -23,34 +36,40 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0, InformObjective, 1)
 TurnEventEnemy(0, GeraldoLeaves, 1)
-TurnEventPlayer(0, TimerWarning, 5)
-TurnEventEnemy(0, SuperbossesAppear, 8)
-TurnEventPlayer(0, AlarmRaised, 7)
+TurnEventEnemy(0, SuperbossCameo, 3)
+TurnEventPlayer(0, FirstTimerWarning, 5)
+TurnEventPlayer(0, SecondTimerWarning, 7)
+TurnEventPlayer(0, AlarmRaised, 9)
+TurnEventEnemy(0, SuperbossesAppear, 11)
+TurnEventPlayer(0, YurenaDropping, 13)
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEventBothWays(CarmenIndioTalkSeen, CarmenIndioTalk, Carmen, Indio)
-CharacterEventBothWays(PilarRazvanTalkSeen, PilarRazvanTalk, Pilar, Razvan)
-CharacterEventBothWays(LeandraRecruited, LuaRecruitLeandra, Lua, Leandra)
-CharacterEventBothWays(LeandraRecruited, DesiderioRecruitLeandra, Desiderio, Leandra)
+CharacterEventBothWays(A1_CarmenIndioTalkSeen, CarmenIndioTalk, Carmen, Indio)
+CharacterEventBothWays(A1_PilarRazvanTalkSeen, PilarRazvanTalk, Pilar, Razvan)
+CharacterEventBothWays(A1_LeandraRecruited, LuaRecruitLeandra, Lua, Leandra)
+CharacterEventBothWays(A1_LeandraRecruited, DesiderioRecruitLeandra, Desiderio, Leandra)
 END_MAIN
 
 LocationBasedEvents:
-Escape(EscapeDisallowed, EscapeEventCheck, 5, 2)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 5, 2)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 6, 2)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 26, 8)
+Escape(A1_EscapeDisallowed, EscapeEventCheck, 27, 8)
 DurabilityChest(SkillScroll, CanterID, 17, 4)
-ChestMoney(3000, 6, 15)
+ChestMoney(1500, 6, 15)
 Chest(Bloodletter, 22, 15)
-CHES RelicRecovered IronSword [18, 7] 0x14 // Macro can't set a flag so this is the objective chest 
+CHES A1_RelicRecovered Statuette [18, 7] 0x14 // Macro can't set a flag so this is the objective chest 
 END_MAIN
 
 MiscBasedEvents:
-AFEV ObjectiveSwitched SwitchObjective RelicRecovered
+AFEV A1_ObjectiveSwitched SwitchObjective A1_RelicRecovered
 AFEV 0x0 CheckNoUnits 0x0
 CauseGameOverIfLordDies
 END_MAIN
 
 Units1:
-UNIT Indio Shaman 0 Level(1, Ally, False) [7,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Lua
+UNIT Lua Captain 0 Level(1, Ally, False) [7,5] 0 0 0 0 [0, 0, 0, 0] NoAI 
 UNIT Indio Shaman 0 Level(1, Ally, False) [25,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Indio
 UNIT Indio Shaman 0 Level(1, Ally, False) [26,9] 0 0 0 0 [Surge, Vulnerary] NoAI // Desiderio
 UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Pilar
@@ -61,22 +80,36 @@ UNIT Indio Shaman 0 Level(1, Ally, False) [26,7] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
 UNIT
 
+Units2:
+UNIT Lua Captain 0 Level(1, Ally, False) [7,5] 0 0 0 0 [0, 0, 0, 0] NoAI 
+UNIT Indio Shaman 0 Level(1, Ally, False) [25,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Indio
+UNIT Indio Shaman 0 Level(1, Ally, False) [26,9] 0 0 0 0 [Surge, Vulnerary] NoAI // Desiderio
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Pilar
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,3] 0 0 0 0 [Surge, Vulnerary] NoAI // Razvan
+UNIT Indio Shaman 0 Level(1, Ally, False) [27,8] 0 0 0 0 [Surge, Vulnerary] NoAI // Carmen
+UNIT Indio Shaman 0 Level(1, Ally, False) [4,4] 0 0 0 0 [Surge, Vulnerary] NoAI // Ximo
+UNIT Indio Shaman 0 Level(1, Ally, False) [26,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Estelle
+UNIT Indio Shaman 0 Level(1, Ally, False) [5,5] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
+UNIT Indio Shaman 0 Level(1, Ally, False) [28,7] 0 0 0 0 [Surge, Vulnerary] NoAI // Estelle
+UNIT Indio Shaman 0 Level(1, Ally, False) [6,2] 0 0 0 0 [Surge, Vulnerary] NoAI // Hermene
+UNIT
+
 LuaDesiderioCutsceneUnits:
 UNIT Lua Captain 0 Level(1, Ally, False) [0,3] 0 0 0 0 [0, 0, 0, 0] NoAI
 UNIT Desiderio Vanguard 0 Level(1, Ally, False) [0,4] 0 0 0 0 [0, 0, 0, 0] NoAI
 UNIT
 
 IndioCutsceneUnit:
-UNIT Indio Shaman 0 Level(1, Ally, False) [0,4] 0 0 1 REDA4R2 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, True) [0,4] 0 0 1 REDA4R2 [Surge, Vulnerary] NoAI
 UNIT
 
 ContractorInitialEnemies:
-UNIT Leandra Fighter Geraldo Level(5, Enemy, False) [11, 5] 0 0 0 0 [Bloodaxe, HandAxe, Vulnerary] AttackInTwoAI
+UNIT Leandra Fighter Geraldo Level(5, Enemy, True) [11, 5] 0 0 0 0 [IronAxe, HandAxe, Vulnerary] AttackInTwoAI
 UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] AttackInRangeAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 10] 0 0 0 0 [IronSword] AttackInTwoAI
+//UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 10] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 12] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [23, 11] 0 0 0 0 [IronBow] AttackInTwoAI
 
@@ -84,56 +117,55 @@ UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [5, 8] 0 0 0 0 [IronSword
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [7, 8] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 9] 0 0 0 0 [IronBow] AttackInTwoAI
 
-UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [IronLance] GroupOneAI
-UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [14, 17] 0 0 0 0 [IronLance] GroupOneAI
-UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 16] 0 0 0 0 [IronAxe] GroupOneAI
-UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [15, 16] 0 0 0 0 [IronAxe] GroupOneAI
-UNIT Contractor Mage Geraldo Level(3, Enemy, True) [14, 16] 0 0 0 0 [Elfire] GroupOneAI
+UNIT Contractor Shaman Geraldo Level(3, Enemy, True) [14, 15] 0 0 0 0 [Fire] GroupOneAI
+//UNIT Contractor Shaman Geraldo Level(3, Enemy, True) [14, 16] 0 0 0 0 [Fire] GroupOneAI
+UNIT Contractor AxeCav Geraldo Level(3, Enemy, True) [13, 17] 0 0 0 0 [IronAxe] GroupOneAI
+UNIT Contractor LanceCav Geraldo Level(3, Enemy, True) [15, 17] 0 0 0 0 [IronLance] GroupOneAI
 UNIT
 
 SentinelInitialEnemies:
-UNIT Buzu Vanguard Sanz Level(5, Enemy, False) [17, 7] 0 0 0 0 [HandAxe, Pike] BossAI
-UNIT Bozo Warden Sanz Level(5, Enemy, False) [19, 7] 0 0 0 0 [FlameSword, Onigiri] BossAI
+UNIT Buzu Vanguard Sanz Level(5, Enemy, True) [17, 7] 0 0 0 0 [HandAxe, Pike] BossAI
+UNIT Bozo Warden Sanz Level(5, Enemy, True) [19, 7] 0 0 0 0 [FlameSword, Onigiri] BossAI
 
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [6, 15] 0 0 0 0 [Javelin] BossAI
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [22, 15] 0 0 0 0 [Javelin] BossAI
 UNIT Sentinel Warden Sanz Level(4, Enemy, True) [17, 4] 0 0 0 0 [Javelin] BossAI
 
-UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 7] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [14, 13] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT Sentinel Soldier Sanz Level(4, Enemy, True) [16, 10] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Sentinel Mercenary Sanz Level(4, Enemy, True) [14, 7] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Sentinel Mercenary Sanz Level(4, Enemy, True) [14, 13] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Sentinel Mercenary Sanz Level(4, Enemy, True) [16, 10] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT Sentinel Mage Sanz Level(4, Enemy, True) [17, 10] 0 0 0 0 [Elfire] AttackInTwoAI
 UNIT Sentinel Mage Sanz Level(4, Enemy, True) [19, 10] 0 0 0 0 [Elfire] AttackInTwoAI
 
 // these aren't sentinels but i ran out of space in the first unit group
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [7, 16] 0 0 0 0 [IronAxe] AttackInTwoAI
 UNIT Contractor Brigand Geraldo Level(3, Enemy, True) [8, 15] 0 0 0 0 [IronAxe] AttackInTwoAI
-UNIT Contractor Mage Geraldo Level(3, Enemy, True) [3, 14] 0 0 0 0 [Elfire] AttackInTwoAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [3, 14] 0 0 0 0 [Fire] AttackInTwoAI
 
 UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [21, 5] 0 0 0 0 [IronLance] AttackInTwoAI
-UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronLance] AttackInTwoAI
-UNIT Contractor Mage Geraldo Level(3, Enemy, True) [20, 4] 0 0 0 0 [Elfire] AttackInTwoAI
+//UNIT Contractor Deserter Geraldo Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronLance] AttackInTwoAI
+UNIT Contractor Mage Geraldo Level(3, Enemy, True) [20, 4] 0 0 0 0 [Fire] AttackInTwoAI
 UNIT
 
 UndergroundReinforcements:
-UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Geraldo Mercenary Geraldo Level(5, Enemy, True) [4, 4] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Sentinel Archer Sanz Level(4, Enemy, True) [3, 10] 0 0 0 0 [IronBow] ChargeAI
 UNIT Sentinel Archer Sanz Level(4, Enemy, True) [21, 12] 0 0 0 0 [IronBow] ChargeAI
 UNIT Contractor Brigand Sanz Level(3, Enemy, True) [5, 16] 0 0 0 0 [IronAxe] ChargeAI
 UNIT Contractor Myrmidon Sanz Level(3, Enemy, True) [7, 17] 0 0 0 0 [IronSword] ChargeAI
 UNIT Contractor Brigand Sanz Level(3, Enemy, True) [22, 4] 0 0 0 0 [IronAxe] ChargeAI
 UNIT Contractor Myrmidon Sanz Level(3, Enemy, True) [23, 5] 0 0 0 0 [IronSword] ChargeAI
-UNIT Contractor Thief Sanz Level(3, Enemy, True) [23, 17] DropItem 0 0 0 [IronKnife, Swordreaver] BossAI
+UNIT Contractor Brigand Sanz Level(3, Enemy, True) [23, 17] DropItem 0 0 0 [Bloodaxe] ChargeAI
 UNIT
 
 SuperbossGang:
 UNIT Yurena Champion Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] BossAI
 UNIT Sanz Sage Sanz Level(20, Enemy, False) [13, 21] 0 0 1 REDA13R20 [Tornado, Warp] BossAI
-UNIT Orlando Captain Orlando Level(1, Enemy, False) [14, 21] 0 0 1 REDA14R20 [0] BossAI
+UNIT Orlando 0 Orlando Level(12, Enemy, False) [14, 21] 0 0 1 REDA14R20 [0] BossAI
 UNIT
 
 YurenaGaming:
-UNIT Yurena Champion Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] ChargeAI
+UNIT Yurena Champion Sanz Level(20, Enemy, False) [14, 8] 0 0 0 0 [BraveLance, Saunion] ChargeAI
 UNIT
 
 Traps1:
@@ -166,7 +198,8 @@ CAMERA Lua
 LOAD1 0 IndioCutsceneUnit
 ENUN
 Text(ChA1BeginningScene4)
-ENUT EscapeDisallowed
+POPUP ChA1IndioRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
+ENUT A1_EscapeDisallowed
 ENUT AllUnitsMustEscapeFlag
 LOAD1 1 ContractorInitialEnemies
 ENUN
@@ -185,6 +218,16 @@ CURSOR_FLASHING [18, 7]
 STAL 60
 REMOVE_CURSORS
 Text(ChA1InformObjectiveDialogue)
+CAMERA_CENTERED [5, 3]
+CURSOR_FLASHING [5, 2]
+CURSOR_FLASHING [6, 3]
+STAL 60
+REMOVE_CURSORS
+CAMERA_CENTERED [26, 8]
+CURSOR_FLASHING [26, 8]
+CURSOR_FLASHING [27, 8]
+STAL 60
+REMOVE_CURSORS
 NoFade
 ENDA
 
@@ -215,35 +258,36 @@ ENDA
 
 ALIGN 4
 LuaRecruitLeandra:
-CHECK_EVENTID LeandraTalkSeen
+CHECK_EVENTID A1_LeandraTalkSeen
 BNE 1 sC s0
 Text(ChA1LuaLeandraTalkDialogue)
-ENUT LeandraTalkSeen
+ENUT A1_LeandraTalkSeen
 LABEL 1
-SVAL s1 3000
+SVAL s1 1000
 CHECK_MONEY
 BLT 2 sC s1
 Text(ChA1LeandraRecruitPrompt)
 SVAL s1 0x1
 BNE 2 s1 sC
 Text(ChA1LeandraRecruitedDialogue)
-SVAL s3 3000
+SVAL s3 1000
 TAKEMONEY
 CUSA Leandra
 GOTO 3
 LABEL 2
-ENUF LeandraRecruited
+ENUF A1_LeandraRecruited
+POPUP ChA1LeandraRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 LABEL 3
 NoFade
 ENDA
 
 ALIGN 4
 DesiderioRecruitLeandra:
-CHECK_EVENTID LeandraTalkSeen
+CHECK_EVENTID A1_LeandraTalkSeen
 BNE 4 sC s0
 Text(ChA1DesiderioLeandraTalkDialogue)
-ENUT LeandraTalkSeen
-SVAL s1 3000
+ENUT A1_LeandraTalkSeen
+SVAL s1 1000
 CHECK_MONEY
 BLT 5 sC s1
 LABEL 4
@@ -251,19 +295,46 @@ Text(ChA1LeandraRecruitPrompt)
 SVAL s1 0x1
 BNE 5 s1 sC
 Text(ChA1LeandraRecruitedDialogue)
-SVAL s3 3000
+SVAL s3 1000
 TAKEMONEY 
 CUSA Leandra
 GOTO 6
 LABEL 5
-ENUF LeandraRecruited
+ENUF A1_LeandraRecruited
+POPUP ChA1LeandraRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 LABEL 6
 NoFade
 ENDA
 
 ALIGN 4
-TimerWarning:
-Text(ChA1TimerWarningDialogue)
+SuperbossCameo:
+CAMERA_CENTERED [13, 20]
+STAL 30
+LOAD1 1 SuperbossGang
+ENUN
+Text(ChA1SanzOrlandoCameoDialogue1)
+MOVE 60 Yurena [12, 19]
+ENUN
+Text(ChA1SanzOrlandoCameoDialogue2)
+MOVE 60 Yurena [12, 21]
+MOVE 60 Sanz [13, 21]
+MOVE 60 Orlando [14, 21]
+ENUN
+DISA Yurena
+DISA Sanz
+DISA Orlando
+NoFade
+ENDA
+
+ALIGN 4
+FirstTimerWarning:
+Text(ChA1FirstTimerWarningDialogue)
+NoFade
+ENDA
+
+ALIGN 4
+SecondTimerWarning:
+Text(ChA1SecondTimerWarningDialogue)
 NoFade
 ENDA
 
@@ -281,6 +352,26 @@ ALIGN 4
 AlarmRaised:
 Text(ChA1AlarmRaisedDialogue)
 LOAD1 1 UndergroundReinforcements
+CAMERA_CENTERED [4, 4]
+CURSOR_FLASHING [4, 4]
+STAL 60
+REMOVE_CURSORS
+Text(ChA1GeraldoReappearsDialogue)
+NoFade
+ENDA
+
+ALIGN 4
+YurenaDropping:
+CAMERA_CENTERED [13, 20]
+STAL 30
+Text(ChA1YurenaWarpDialogue)
+WARPOUT [12, 20]
+DISA Yurena
+ENDWARP
+CAMERA_CENTERED [14, 8]
+WARPIN [14, 8]
+LOAD1 1 YurenaGaming
+ENUN
 NoFade
 ENDA
 
@@ -291,13 +382,13 @@ AddTrap(BlueSigilTrapID, 5, 2)
 AddTrap(BlueSigilTrapID, 6, 2)
 AddTrap(BlueSigilTrapID, 26, 8)
 AddTrap(BlueSigilTrapID, 27, 8)
-ENUF EscapeDisallowed
+ENUF A1_EscapeDisallowed
 NoFade
 ENDA
 
 ALIGN 4
 EscapeEventCheck:
-ENUF EscapeDisallowed
+ENUF A1_EscapeDisallowed
 NoFade
 ENDA
 
@@ -312,6 +403,20 @@ NoFade
 ENDA
 
 EndingScene:
+SetBackground(Ship)
+CHECK_ALIVE Indio
+BEQ 8 0x0 0xC
+Text(ChA1EndingDialogue1IndioAlive)
+GOTO 9
+LABEL 8
+Text(ChA1EndingDialogue1IndioDead)
+LABEL 9
+CHECK_ALIVE Leandra
+BEQ 10 0x0 0xC
+Text(ChA1EndingDialogueLeandraRecruited)
+LABEL 10
+Text(ChA1EndingDialogue2)
+EraseBackground
 GoToHubChapter(HubA)
 NoFade
 ENDA

@@ -34,6 +34,8 @@
 #define Mentor $15
 #define Orlando Mentor
 #define Rahel $16
+#define Alonso $41
+#define Elodia $42
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -64,6 +66,7 @@
 
 //Hub A3
 #define Sargargala $5B
+#define Sagargala Sargargala
 #define LogPirate $5C
 #define RiojaReaper LogPirate
 #define A3Log $58
@@ -93,3 +96,12 @@
 #define Bomb 0x57
 #define Rochefort 0x68
 #define A6Pirate 0x69
+
+//Chapter 2
+#define TorchUnit $6f
+#define Igniswords $70
+#define Ignacio $71
+#define TorchUnit2 $72
+#define Hugo $73
+#define Juliana $74
+#define ElodiaBoss $75

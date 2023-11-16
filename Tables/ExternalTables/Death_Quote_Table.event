@@ -4,13 +4,30 @@
 
 // Bosses
 
+DeathQuote(Lua, AllChapters, 0x65, LuaDQ)
+DeathQuote(Pilar, AllChapters, 0, PilarDQ)
+DeathQuote(Desiderio, AllChapters, 0, DesiderioDQ)
+DeathQuote(Razvan, AllChapters, 0, RazvanDQ)
+DeathQuote(Carmen, AllChapters, 0, CarmenDQ)
+DeathQuote(Ximo, AllChapters, 0, XimoDQ)
+DeathQuote(Hermenegildo, AllChapters, 0, HermenegildoDQ)
+DeathQuote(Estelle, AllChapters, 0, EstelleDQ)
+
 DeathQuote(Khazhak,Chapter1, 2, 0)
+
+DeathQuote(Geraldo, HubA_1, 0x0, GeraldoDeathQuote)
+DeathQuote(Bozo, HubA_1, 0x0, BozoDeathQuote)
+DeathQuote(Buzu, HubA_1, 0x0, BuzuDeathQuote)
+DeathQuote(Yurena, HubA_1, 0x0, YurenaDeathQuote)
+
 DeathQuote(Felipe,HubA_2, 0xA, 0)
 DeathQuote(Sierra,HubA_2, 0xB, 0)
 DeathQuote(Manfred,HubA_2, 0xC, 0)
-DeathQuote(Lua, AllChapters, 0x65, 0)
-DeathQuote(Gunsmith, HubA_5, 0x9, 0)
+
 DeathQuote(A4PirateBoss, HubA_4, 10, 0)
 DeathQuote(A4RebelBoss, HubA_4, 11, 0)
+
+DeathQuote(Gunsmith, HubA_5, 0x9, 0)
+
 
 DeathQuote(0xFFFF,0,0,0) // terminator

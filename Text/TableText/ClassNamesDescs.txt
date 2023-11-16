@@ -2,7 +2,8 @@
 Captain[X]
 
 ## CaptainDesc
- [X]
+Feet steady amidst the crashing waves,[N]
+a true captain must lead by example.[X]
 
 ## NinjaName
 Ninja[X]
@@ -179,4 +180,16 @@ Trickster[X]
 Bow Cav[X]
 
 ## BowCavDesc
+ [X]
+
+## RuneshieldName
+Runeshield[X]
+
+## RuneshieldDesc
+ [X]
+
+## WolfKnightName
+Wolfrider[X]
+
+## WolfKnightDesc
  [X]

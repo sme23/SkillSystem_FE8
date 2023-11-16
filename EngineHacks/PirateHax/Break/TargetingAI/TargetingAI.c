@@ -17,7 +17,7 @@ void ComputeAiAttackWeight(struct AiCombatSimulationSt* st) {
         score = (40 * gBattleActor.battleEffectiveHitRate); 
         score /= 100; //make enemies always want to break, unless they can kill (110 + 60) or hitrates are bad
     }
-    if (gBattleTarget.weapon == 0 && (gBattleActor.battleAttack - gBattleTarget.battleDefense) >= 0) {
+    if (gBattleTarget.weapon == 0 && (gBattleActor.battleAttack - gBattleTarget.battleDefense) > 0) {
         score = (50 * gBattleActor.battleEffectiveHitRate); 
         score /= 100; //guaranteed no counter + damage slightly higher priority than break
     }

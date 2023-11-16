@@ -83,16 +83,16 @@ Indio[X]
 
 ## IndioDesc
 Wayfarer[N]
-A shaman islander making the most[N]
-of their short time on earth.[X]
+A Balinokan shaman making the[N]
+most of their short time on Earth.[X]
 
 ## LeandraName
 Leandra[X]
 
 ## LeandraDesc
 Stevedore[N]
-A jaded wanderer believing money[N]
-is the grease that turns the world.[X]
+Former Roseblade, current jaded wanderer[N]
+only looking to fill her coinpurse.[X]
 
 ## TrianaName
 Triana[X]
@@ -138,6 +138,7 @@ is always looking for new opportunities.[X]
 Ondeh[X]
 
 ## OndehDesc
+Hunter[N]
 A young woman forced to grow up[N]
 too soon. Biko's elder sister.[X]
 
@@ -145,6 +146,7 @@ too soon. Biko's elder sister.[X]
 Biko[X]
 
 ## BikoDesc
+Laborer[N]
 A young man trying to find[N]
 his confidence. Ondeh's brother.[X]
 
@@ -325,16 +327,20 @@ A full-time officer of House Sanz's[N]
 ever-increasing guard regime.[X]
 
 ## SargargalaName
-Sargargala[X]
+Sagargala[X]
 
 ## SargargalaDesc
- [X]
+First Mate[N]
+2nd in command of the Rioja Reapers.[N]
+Wary of change.[X]
 
 ## LogPirateName
 R. Reaper[X]
 
 ## LogPirateDesc
- [X]
+Grunt[N]
+Ne'er-do-wells that buy and sell humans.[N]
+Use the profits for fine wine.[X]
 
 ## A3LogName
 Trunk[X]
@@ -475,3 +481,40 @@ Rebel Boss[X]
 ## A4RebelBossDesc
  [X]
 
+## TorchUnitName
+T.O.R.C.H.[X]
+
+## TorchUnitDesc
+ [X]
+
+## IgniswordsName
+Igniswords[X]
+
+## IgniswordsDesc
+ [X]
+
+## IgnacioName
+Ignacio[X]
+
+## IgnacioDesc
+ [X]
+
+## ElodiaName
+Elodia[X]
+
+## ElodiaDesc
+Commander[N]
+A senior member of T.O.R.C.H.[N]
+known as the [OQ]Pirate Hunter.[CQ][X]
+
+## HugoName
+Hugo[X]
+
+## HugoDesc
+ [X]
+
+## JulianaName
+Juliana[X]
+
+## JulianaDesc
+ [X]

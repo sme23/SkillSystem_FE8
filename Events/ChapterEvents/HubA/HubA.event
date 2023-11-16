@@ -1,11 +1,23 @@
 EventPointerTable(HubAEventsID, PointerList)
 
+//flags for Chapter 2: cannot overlap with ones used for hub A when on this map
+#define EnemyGotOnBoat 7
+#define WindUpFlag1 8
+#define WindUpFlag2 9
+#define WindUpFlag3 10
+#define ReadyForTakeoffFlag 11
+#define Ch2ThisIsAChapter 12
+#define IgniswordsDead 13
+#define Ch2ReinforcementFlags 14
+
 // temp flags
 #define SeenHubA1Pitch 0x7
 #define SeenHubA2Pitch 0x8
 #define SeenHubA3Pitch 0x9
 #define SeenHubA5Pitch 0xB
 #define SeenHubA6Pitch 0xc
+
+#define GotoChapter2Flag 0xe
 
 //hub maneuvering flags
 #define LibraryToMainRoom 25
@@ -64,17 +76,20 @@ END_MAIN
 
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
-Text(HubA1Prompt)
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
+//TutorialYesNoText(HubA1Prompt)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_1, Castle_Hall_Night, HubA)
+GotoHubChapterIfYes(2, HubA_1, HubA1Accepted)
 ENUF WentToHubA1
+EVBIT_MODIFY 0
 NoFade
 ENDA
 
 GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
-Text(HubA2Prompt)
-EVBIT_MODIFY 0
+//Text(HubA2Prompt)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_2, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
 ENUF WentToHubA2
 NoFade
@@ -82,7 +97,9 @@ ENDA
 
 GotoChapter3:
 HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
-TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+//TutorialYesNoText(HubA3Sys_Text_Mission_Select)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_3, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
 Text(HubA3Selection_No)
 ENUF WentToHubA3
@@ -91,18 +108,44 @@ ENDA
 
 GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
-Text(HubA5Prompt) 
+//Text(HubA5Prompt) 
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA, PortGreagorCallback)
 ENUT SeenHubA5Pitch
+SVAL s1 0x1
+BNE 2 s1 sC
 EVBIT_MODIFY 0
-GotoHubChapterIfYes(2, HubA_5, HubA5Accepted)
+Text(HubA5Accepted)
+ENUF LuaInAHubFlag
+FADI 10
+CUSA Desiderio
+CUSA Pilar
+ENUN
+ASMC EyeForAnEyeResetASMC
+MNC2 HubA_5
+NoFade
+ENDB
+LABEL 2
 ENUF WentToHubA5
 NoFade
 ENDA
 
+PortGreagorCallback:
+//this does similar to PortGreagorDocks but without most things, for the preview callback
+TILECHANGE 0
+CALL ClearHubATraps
+CALL AddDockTraps
+AddTrap(RedSigilTrapID, 8, 22) //add the indicator under desiderio
+//CALL DocksSpawnEvent
+NoFade
+ENDA
+
+
 GotoChapter6:
 HubChapterFirstTimeEvent(1, SeenHubA6Pitch, HubA6Pitch)
-Text(HubA6Prompt) 
-EVBIT_MODIFY 0
+//Text(HubA6Prompt) 
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_6, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
 ENUF WentToHubA6
 NoFade
@@ -128,17 +171,26 @@ AREA WentToPortGreagorDocks PortGreagorDocksFirstTime [29,15] [29,16]
 AREA DocksToPort GotoPortFromDocks [0,13] [0,14]
 AREA CameBackFromDocks CameBackFromDocksFirstTime [0,13] [0,14]
 
-//AREA PortToBase BackToLuaBase [20,4] [21,4]
 AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
+//AREA PortToBase BackToLuaBase [20,4] [21,4]
 
 AREA PortToTavern FromPortToTavern [8,20] [8,20]
 AREA TavernToPort ToPortFromTavern [8,20] [8,20] 
+
+AREA GotoChapter2Flag AllDoneWithHubA [16,10] [16,10]
 
 AREA WentToHubA1 GotoChapter1 [12,5] [12,5]
 AREA WentToHubA4 GotoChapter4 [18, 9] [18, 9]
 AFEV 0 RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
+
+AllDoneWithHubA:
+SET_ACTIVE 0
+FADI 10
+MNC2 Chapter2 
+NoFade
+ENDA
 
 Traps1:
 BlueSigil(0, 11)
@@ -165,15 +217,23 @@ UNIT
 
 BeginningScene:
 // only here for chapter A1 testing
+ENUT GotoChapter2Flag
 ENUT LuaInAHubFlag
 ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
 CALL PortSpawnEvent
+CheckHowManyHubChaptersCompleted
+SVAL s1 6 //if 5 chapters completed
+BLT 2 sC s1 
+    AddTrap(GreenSigilTrapID, 16, 10) //green means go
+    CenterTextbox(HubAGoTime)
+    ENUF GotoChapter2Flag
+LABEL 2
 GotoPrepScreenHub
 ENUN
-NoFade
+NoFade 
 ENDA
 
 EndingScene:
@@ -185,12 +245,6 @@ ENDA
 //CHARACTER EVENTS HERE
 
 TalkToTriana:
-CheckHowManyHubChaptersCompleted
-SVAL s1 1
-BLE 1 sC s1 //if 1 or less hub chapters completed, triana recruitable so branch to that
-    Text(TrianaUnrecruitableText) //triana's statement that she's found work and isn't interested anymore
-    GOTO 5
-LABEL 1
 HubFirstTimeTalkToUnit(TrianaSpokeToOnce, 2, TrianaFirstTimeText)
 LABEL 2
 TutorialYesNoText(RecruitTrianaChoice)
@@ -204,17 +258,6 @@ NoFade
 ENDA
 
 TalkToMedwyn:
-CheckHowManyHubChaptersCompleted
-SVAL s1 3
-BLE 1 sC s1 //if less than 4, part of medwyn's time
-    Text(MedwynUnrecruitableText) //medwyn's statement that he's drunk off his ass so he's unintelligible
-    GOTO 5
-LABEL 1
-SVAL s1 2
-BGE 0 sC s1 //if 2 or 3, then it's medwyn's rare moment of clarity, so skip
-    Text(MedwynUnrecruitableText) 
-    GOTO 5
-LABEL 0
 HubFirstTimeTalkToUnit(MedwynSpokeToOnce, 2, MedwynFirstTimeText)
 LABEL 2
 TutorialYesNoText(RecruitMedwynChoice)
@@ -228,12 +271,6 @@ NoFade
 ENDA
 
 TalkToBartz:
-CheckHowManyHubChaptersCompleted
-SVAL s1 4
-BGE 1 sC s1 //if 4 hub chapters completed, bartz available for recruit so skip
-    Text(BartzUnrecruitableText) //bartz's statement that he's waiting for a job
-    GOTO 5
-LABEL 1
 HubFirstTimeTalkToUnit(BartzSpokeToOnce, 2, BartzFirstTimeText)
 LABEL 2
 TutorialYesNoText(RecruitBartzChoice)
@@ -250,8 +287,15 @@ ENDA
 TalkToDurgham:
 HubFirstTimeTalkToUnit(DurghamSpokeToOnce, 1, DurghamFirstTimeText)
 LABEL 1
+SVAL s1 500
+CHECK_MONEY
+BLE 4 s1 sC //if you have more money than the cost, branch to 4
+    Text(DurghamTellsLuaShesBrokeText)
+    GOTO 3
+LABEL 4
 TutorialYesNoText(RecruitDurghamChoice)
-HubRecruitUnit(Durgham, 2, DurghamRecruitedText, 3)
+SVAL s3 500
+HubRecruitMoney(Durgham, 2, DurghamRecruitedText, 3)
 LABEL 2
 HubRejectUnit(DurghamRejectedText, DurghamRecruitFlag) //unsets this flag if you decided not to recruit
 LABEL 3
@@ -266,7 +310,13 @@ BNE 0 s1 sC //if not all hub chapters have been completed, branch to 0
     SVAL s1 0
     GOTO 1
 LABEL 0
-    HubFirstTimeTalkToUnit(MrYodsenSpokeToOnce, 4, MrYodsenFirstTimeText)
+    CHECK_EVENTID MrYodsenSpokeToOnce
+    BNE 4 s0 sC
+        CalculateYodsenPrice
+        SADD s1 s0 sC
+        GetTextFromMemSlot1
+        Text(MrYodsenFirstTimeText)
+        ENUT MrYodsenSpokeToOnce
 LABEL 4
     CalculateYodsenPrice
     SADD s1 s0 sC
@@ -278,7 +328,7 @@ LABEL 1
     GetTextFromMemSlot1
     Text(RecruitMrYodsenChoice)
     SADD s3 s1 s0 //moves how much gold to take to s3 
-    HubRecruitYodsen(MrYodsen, 2, MrYodsenRecruitedText, 3)
+    HubRecruitMoney(MrYodsen, 2, MrYodsenRecruitedText, 3)
 LABEL 2
 Text(MrYodsenRejectedText)
 LABEL 5
@@ -292,6 +342,22 @@ ENDA
 FromPortToTavern:
 InitiateTileChangeInHub(ClearHubATraps, AddTavernTraps, 1, LuaInDaTavern, TavernGreensSpawnEvent)
 ENUF TavernToPort
+CallEventIfEIDNotSet(TavernFirstTime, 1, BarGangIntro)
+NoFade
+ENDA
+
+BarGangIntro:
+Text(BarGangIntroText1)
+CamOn
+MOVE 15 Lua [5,15]
+ENUN
+CamOff
+CAMERA_CENTERED Lua
+FlashCursor(Triana,20)
+FlashCursor(Medwyn,20)
+FlashCursor(Bartz,20)
+Text(BarGangIntroText2)
+ENUT TavernFirstTime
 NoFade
 ENDA
 
@@ -307,6 +373,7 @@ InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpaw
 RemoveTrapAtCoords(8,22)
 ENUT DocksToPort
 ENUF CameBackFromDocks
+ENUT WentToHubA5
 Text(HubABeginningScene4)
 Text(HubABeginningScene5)
 NoFade
@@ -319,6 +386,7 @@ NoFade
 ENDA
 
 CameBackFromDocksFirstTime:
+ENUF WentToHubA5
 InitiateTileRevertInHub(CUSADockBlues, ClearDockTraps, AddHubABackToBaseTraps, 0, LuaBackFromDaDocks, PortSpawnEventFirstTime)
 SetAllHubChapterFlags
 ENUT PortToBase
@@ -345,17 +413,12 @@ NoFade
 ENDA
 
 BackToLuaBase:
-InitiateLoadMapHub(Chapter2, ClearHubATraps, LuaFromDaPortInDaBase, MainRoomSpawnEvent)
+InitiateLoadMapHub(Chapter2, ClearHubATraps, LuaBackFromPortGroup, MainRoomSpawnEvent)
 NoFade
 ENDA
 
 MainRoomSpawnEvent:
 LoadPlayerUnits(OrlandoRahelUnitGroup)
-NoFade
-ENDA
-
-LuaFromDaPortInDaBase:
-LoadPlayerUnits(LuaBackFromPortGroup)
 NoFade
 ENDA
 
@@ -378,12 +441,18 @@ UnsetAllHubChapterFlags
 ENUF PortToDocks
 ENUF PortToBase
 ENUF PortToTavern
+ENUF WindUpFlag1
+ENUF WindUpFlag2
+ENUF WindUpFlag3
+ENUF ReadyForTakeoffFlag
+ENUF IgniswordsDead
 CALL PortSpawnEvent  //unset all chapter flags and port flags so you can walk around
 CALL AddHubATraps
 LoadPlayerUnits(LuaInDaHub)
 CAMERA_CENTERED Lua
 SetBackground(Fort)
 Text(HubABeginningScene6)
+MUSC OrlandoThemeID
 Text(HubABeginningScene6_2)
 EraseBackground
 MUSC PortGreagorID
@@ -401,7 +470,9 @@ NoFade
 ENDA
 
 GotoChapter4:
-TutorialYesNoText(HubA4Prompt) 
+//TutorialYesNoText(HubA4Prompt) 
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(1, HubA_4)
 ENUF WentToHubA4
 NoFade
@@ -417,18 +488,24 @@ UNIT
 
 BeginningSceneFirstTimeCave:
 SetBackground(Ship)
+MUSC StillZephyrsID
 Text(HubABeginningScene1)
 SetBackground(Fort)
 Text(HubABeginningScene2)
-
+ENUT 4
 ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
-ENUT WentToPortGreagorDocks //sets future global flag events that I don't want triggered yet
+ENUT WentToPortGreagorDocks //sets future flag EIDs that I don't want triggered yet
 ENUT CameBackFromDocks
 ENUT WentToBaseAgain
 ENUT MainRoomToOtherRooms
 ENUT TreasureRoomToMainRoom
 ENUT LuaQuartersToMainRoom
 ENUT LibraryToMainRoom
+ENUT WindUpFlag1
+ENUT WindUpFlag2
+ENUT WindUpFlag3
+ENUT ReadyForTakeoffFlag
+ENUT IgniswordsDead
 
 FADI 10
 LOMA Chapter2
@@ -477,9 +554,9 @@ UNIT Durgham LanceCav 0 Level(5,NPC,False) [1,20] 0 0 0 0 [IronLance, SteelLance
 UNIT
 
 SamsonArranUnitGroup:
-UNIT Triana Shaman_F 0 Level(4,NPC,False) [3,14] 0 0 0 0 [Surge, Elfire, Vulnerary] NoAI
-UNIT Medwyn Warden 0 Level(6,NPC,False) [5,14] 0 0 0 0 [SteelSword, Javelin, PureWater] NoAI
-UNIT Bartz Deserter 0 Level(8,NPC,False) [7,14] 0 0 0 0 [SteelLance, Vulnerary] NoAI
+UNIT Triana Shaman_F 0 Level(4,NPC,True) [3,14] 0 0 0 0 [Surge, Elfire, Vulnerary] NoAI
+UNIT Medwyn Warden 0 Level(5,NPC,True) [5,14] 0 0 0 0 [SteelSword, Javelin, PureWater] NoAI
+UNIT Bartz Deserter 0 Level(6,NPC,True) [7,14] 0 0 0 0 [SteelLance, Vulnerary] NoAI
 UNIT
 
 MrYodsenUnitGroup:
@@ -487,7 +564,7 @@ UNIT MrYodsen Gunner 0 Level(6,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, 
 UNIT
 
 JaimeUnitGroup:
-UNIT Jaime PegasusRider 0 Level(2,NPC,False) [11,20] 0 0 0 0 [SteelSword, IronSword] NoAI
+UNIT Jaime PegasusRider 0 Level(2,NPC,False) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
 UNIT
 
 OndehBikoUnitGroup:

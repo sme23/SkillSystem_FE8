@@ -19,7 +19,7 @@ gui92_weaponbroke_0:
         BYTE           VOICE   9
         BYTE           PAN     c_v+8
         BYTE           MOD     1
-        BYTE           VOL     82
+        BYTE           VOL     92
         BYTE           N05     Fn4   v100
         BYTE   W06
         BYTE                   Cn4
@@ -44,7 +44,7 @@ gui92_weaponbroke_1:
         BYTE   KEYSH   gui92_weaponbroke_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   22
-        BYTE           VOL     56
+        BYTE           VOL     48
         BYTE           PAN     c_v-12
         BYTE           MOD     1
         BYTE           N05     Cn4   v100
@@ -72,7 +72,7 @@ gui92_weaponbroke_2:
 // 000   ----------------------------------------
         BYTE           VOICE   8
         BYTE           PAN     c_v-8
-        BYTE           VOL     60
+        BYTE           VOL     64
         BYTE           MOD     4
         BYTE           N10     Gs2   v100
         BYTE   W12

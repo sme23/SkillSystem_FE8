@@ -306,7 +306,7 @@
 
 //Acrobat: All traversable terrain costs 1 movement.
 //By Tequila
-#define AcrobatID 255
+//#define AcrobatID 255
 
 //Armor March: At start of turn, if unit is adjacent to an armor ally, unit and adjacent armor allies gain +2 Mov.
 //By Leonarth
@@ -833,7 +833,7 @@
 
 //Miracle: Survive a lethal attack if HP > 50%.
 //Author Unknown (Initial Commit)
-#define MiracleID 255
+//#define MiracleID 255
 
 //Moonbow: Enemy Def/Res is reduced by 25%. Charge: 2
 //Author Unknown (Initial Commit)

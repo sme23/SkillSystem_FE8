@@ -6,14 +6,14 @@ void ChapterKillCounter() {
 	
 	//is attacker dead?
 	BattleUnit* bunit = &gBattleActor;
-	if (bunit->hpInitial != 0 && bunit->unit.curHP == 0) {
+	if (bunit->hpInitial != 0 && bunit->unit.curHP == 0 && gBattleTarget.unit.pCharacterData->number == gActiveUnit->pCharacterData->number) {
 		//if so, increment the other unit's kill counter
 		IncrementChapterKillCounter(GetUnit(gBattleTarget.unit.index));
 	}
 	
 	//is defender dead?
 	bunit = &gBattleTarget;
-	if (bunit->hpInitial != 0 && bunit->unit.curHP == 0) {
+	if (bunit->hpInitial != 0 && bunit->unit.curHP == 0 && gBattleActor.unit.pCharacterData->number == gActiveUnit->pCharacterData->number) {
 		//if so, increment the other unit's kill counter
 		IncrementChapterKillCounter(GetUnit(gBattleActor.unit.index));
 	}

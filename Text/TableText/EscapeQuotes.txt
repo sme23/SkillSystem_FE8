@@ -1,0 +1,61 @@
+## LuaEscapeQuote
+ [A][X]
+ 
+## PilarEscapeQuote
+[ML][LoadPilar]
+[ML]Another successful infiltration. I'll[N]
+see you on the other side, Captain.[A][X]
+
+## DesiderioEscapeQuote
+[ML][LoadDesiderio]
+[ML][A][X]
+
+## RazvanEscapeQuote
+[ML][LoadRazvan]
+[ML]Thank the Maker I'm safe! May[N]
+They see us all to safety[Beat][A][X]
+
+## CarmenEscapeQuote
+[ML][LoadCarmen]
+[ML]Aw, am I to bow out so soon? Just[N]
+when I had my encore prepared![A][X]
+
+## XimoEscapeQuote
+[ML][LoadXimo]
+[ML]All in a hard day's work. I did[N]
+my job serviceably, I'd say.[A][X]
+
+## EstelleEscapeQuote
+[ML][LoadEstelle]
+[ML]The stars foretold my safe escape.[N]
+Truly, this is a blessed day![A][X]
+
+## HermenegildoEscapeQuote
+[ML][LoadHermenegildo]
+[ML]Freedom! I smell freedom! One step[N]
+closer to my final escape![A][X]
+
+## IndioEscapeQuote
+[ML][LoadIndio]
+[ML]*Huff*[Beat] *Puff*[Beat] Just beat my old record![N]
+Let's keep this pace up, Indio![A][X]
+
+## LeandraEscapeQuote
+[ML][LoadLeandra]
+[ML]You're telling me to pull out already?[N]
+You better not cheapen out on my cut![A][X]
+
+## BikoEscapeQuote
+[ML][LoadBiko]
+[ML]Whew, we made it[Beat][N]
+Can't wait to take a break![A][X]
+
+## OndehEscapeQuote
+[ML][LoadOndeh]
+[ML]Can't stop here. Need to[N]
+keep up the pace. Follow me![A][X]
+
+## PlaceholderEscapeQuote
+[ML][LoadCurrent]
+[ML]Dragz says hi. This character[N]
+needs an escape quote.[A][X]

@@ -127,7 +127,7 @@ Cyclops,0,0,21,0
 Elder Bael,0,0,22,0
 Journeyman (2),0,0,20,0
 Pupil (2),2,55,20,1
-Captain,2,20,30,0
+Captain,5,20,30,0
 Ninja,3,30,20,0
 Vanguard,1,20,20,0
 Curate,8,55,20,0
@@ -145,10 +145,10 @@ Dreadnought,1,20,30,0
 Seraph,7,40,30,0
 Bombardier,2,25,20,0
 Bomb,0,10,20,0
-Trickster,9,45,20,0
+Trickster,9,45,30,0
 BowCav,1,20,20,0
-Ephraim Lord,1,10,20,0
-Ephraim Lord,1,10,20,0
+Baron,10,50,30,0
+Wolf Knight,1,20,30,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0
 Ephraim Lord,1,10,20,0

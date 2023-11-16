@@ -14,6 +14,8 @@ void ComputeBattleUnitHitRate(BattleUnit* bu) {
 void ComputeBattleUnitAvoidRate(BattleUnit* bu) {
     bu->battleAvoidRate = bu->terrainAvoid + (bu->unit.lck * 3);
 
+    bu->battleAvoidRate -=
+
     if (bu->battleAvoidRate < 0){
         bu->battleAvoidRate = 0;
     }
@@ -60,37 +62,29 @@ int GetBattleUnitExpGain(BattleUnit* actor, BattleUnit* target){
 		}
 
         int levelDiff = GetLevelDifference(actor, target);
-        int bossFactor = 1;
-        if (target->unit.pCharacterData->attributes & CA_BOSS){
-				bossFactor = 2;
-		}
 		// killed
 		if (target->unit.curHP == 0){		
-            int expFromLevelDiff = 3 * levelDiff;
-            if (expFromLevelDiff > 30){
-                expFromLevelDiff = 30;
-            }
-            int initialKillExp = (30 + expFromLevelDiff) * bossFactor;
+            int initialKillExp = 25 + 5 * levelDiff;
 
 			if(initialKillExp <= 5){
 				return 5;
 			}
-			else if(initialKillExp >= 100){
-				return 100;
-			}
+            else if (initialKillExp >= 50){
+                return 50;
+            }
 			else{
-				return initialKillExp;
+				return initialKillExp; //50 kill exp cap
 			}
 		}
 
 		// hit
-		int initialHitExp = 10 + 1 * levelDiff;
+		int initialHitExp = 5 + 1 * levelDiff;
 
 			if(initialHitExp <= 1){
 				return 1;
 			}
-			else if(initialHitExp >= 20){
-				return 20;
+			else if(initialHitExp >= 10){
+				return 10;
 			}
 			else{
 				return initialHitExp;
@@ -171,22 +165,22 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
         exp += 15;
     }
     else if (staffRank == C_WEXP){
-        exp += 20;
+        exp += 18;
     }
     else if (staffRank == B_WEXP){
-        exp += 25;
+        exp += 21;
     }
     else if (staffRank == A_WEXP){
-        exp += 30;
+        exp += 24;
     }
     else{
-        exp += 40;
+        exp += 30;
     }
 
     int levelDiff = GetLevelDifference(actor, &gBattleTarget);
 
     if (levelDiff < 0){ //if the target is lower level than actor, reduce exp by 2 * level diff
-        exp += levelDiff * 2;
+        exp += levelDiff * 3;
     }
    
     if (exp <= 3){
@@ -247,13 +241,13 @@ int GetStealExpValue(int item){
     u8 durability = item >> 8;
     int totalCost = costPerUse * durability; 
     
-    int stealExp = totalCost / 50 + GetLevelDifference(&gBattleActor, &gBattleTarget);
+    int stealExp = totalCost / 50 + GetLevelDifference(&gBattleActor, &gBattleTarget) * 2;
 
-    if (stealExp >= 20){
-        return 20;
+    if (stealExp >= 15){
+        return 15;
     }
-    else if (stealExp <= 1){
-        return 1;
+    else if (stealExp <= 2){
+        return 2;
     }
     else{
         return stealExp;
@@ -554,7 +548,7 @@ int CanUnitUseWeapon(struct Unit* unit, int item) {
     if (GetItemAttributes(item) & IA_LOCK_ANY) {
         // Check for item locks
 
-        if ((GetItemAttributes(item) & IA_LOCK_1) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_1))
+        if ((GetItemAttributes(item) & IA_LOCK_4) && !(UNIT_CATTRIBUTES(unit) & CA_LOCK_4))
             return FALSE;
 
         if (GetItemAttributes(item) & IA_UNUSABLE)
@@ -711,7 +705,7 @@ void UnitAutolevelCore(struct Unit* unit, int classId, int levelCount) {
         else{
             unit->maxHP += GetAutoleveledStatIncrease(unit->pClassData->growthHP,  levelCount);
             unit->pow   += GetAutoleveledStatIncrease(unit->pClassData->growthPow, levelCount);
-            unit->mag   += GetAutoleveledStatIncrease(MagCharTable[unit->pClassData->number].growthMag, levelCount);
+            unit->mag   += GetAutoleveledStatIncrease(MagClassTable[unit->pClassData->number].growthMag, levelCount);
             unit->skl   += GetAutoleveledStatIncrease(unit->pClassData->growthSkl, levelCount);
             unit->spd   += GetAutoleveledStatIncrease(unit->pClassData->growthSpd, levelCount);
             unit->def   += GetAutoleveledStatIncrease(unit->pClassData->growthDef, levelCount);
