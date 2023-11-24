@@ -115,19 +115,29 @@ UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,6] 0 0 1 REDA30R6 [Fire] At
 UNIT
 
 CharacterBasedEvents:
+CharacterEvent(OrlandoHubATalk, GotoChapter1, Lua, Orlando)
+CharacterEvent(RahelOrlandoHubATalkFlag, OrlandoRahelTalk, Lua, Orlando)
+CharacterEvent(RahelOrlandoHubATalkFlag, OrlandoRahelTalk, Lua, Rahel)
+CharacterEvent(CarmenXimoHubATalkFlag, CarmenXimoTalk, Lua, Carmen)
+CharacterEvent(CarmenXimoHubATalkFlag, CarmenXimoTalk, Lua, Ximo)
 END_MAIN
 
 GotoChapter1:
-CHECK_EVENTID SeenHubA1Pitch
-BNE 7 sC s0
-Text(HubA1Pitch)
-LABEL 7
-EVBIT_MODIFY 4
-Text(HubA1Prompt)
-ENUT SeenHubA1Pitch
-EVBIT_MODIFY 0
-GotoHubChapterIfYes(1, HubA_1, HubA1Accepted)
-ENUF WentToHubA1
+HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_1, Castle_Hall_Night, Chapter2)
+GotoHubChapterIfYes(2, HubA_1, HubA1Accepted)
+ENUF OrlandoHubATalk
+NoFade
+ENDA
+
+OrlandoRahelTalk:
+Text(RahelOrlandoBaseSceneText)
+NoFade
+ENDA
+
+CarmenXimoTalk:
+Text(CarmenXimoBaseSceneText)
 NoFade
 ENDA
 
@@ -231,12 +241,28 @@ ENDA
 
 MainRoomSpawnEvent:
 LoadPlayerUnits(OrlandoRahelUnitGroup)
+SpawnQuestSigil(WentToHubA1, 1, RedSigilTrapID, 6, 16)
 NoFade
 ENDA
 
+OrlandoRahelUnitGroup:
+UNIT Orlando 0 0 Level(12,NPC,False) [17,11] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
 GotoPortGreagorFirstTime:
 InitiateLoadMapHub(HubA, ClearHubATraps, LuaInDaHubFirstTime, PortGreagorSpawnEvent)
-Text(HubABeginningScene3)
+Text(HubABeginningScene3_1)
+CamOn
+LoadPlayerUnits(BeginningSceneIdaGroup)
+Text(HubABeginningScene3_2)
+MOVE 15 Ida [0,12]
+ENUN
+REMOVEUNIT Ida
+CamOff
+CAMERA_CENTERED Lua
+STAL 10
+Text(HubABeginningScene3_3)
 SetAllHubChapterFlags
 ENUT PortToDocks
 ENUT TavernToPort
@@ -251,6 +277,10 @@ ENUF 4
 MUSC PortGreagorID
 NoFade
 ENDA
+
+BeginningSceneIdaGroup:
+UNIT Ida 0 0 Level(20,NPC,False) [29,16] 0x0 0x0 1 REDA16R11 [0] NoAI
+UNIT
 
 ClearHubATraps:
 RemoveTrapAtCoords(0, 11)
@@ -267,19 +297,31 @@ ENDA
 
 GotoPortGreagor:
 InitiateLoadMapHub(HubA, LuaInDaHub, PortGreagorSpawnEvent)
+ENUF PortToBase
 NoFade
 ENDA
 
 PortGreagorSpawnEvent:
-LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup)
-LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA2, 3, JaimeUnitGroup, A2Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup, A3Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup, A6Indicator)
 NoFade
 ENDA
 
-OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(12,NPC,False) [6,16] 0x0 0x0 0 0 [SilverKnife, Thani] NoAI
-UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [6,18] 0x0 0x0 0 0 [0x0] NoAI
-UNIT
+A2Indicator:
+AddTrap(RedSigilTrapID, 11, 20)
+NoFade
+ENDA
+
+A3Indicator:
+AddTrap(RedSigilTrapID, 23, 19)
+NoFade
+ENDA
+
+A6Indicator:
+AddTrap(RedSigilTrapID, 20, 14)
+NoFade
+ENDA
 
 OndehBikoUnitGroup:
 UNIT Ondeh 0 0 Level(4,NPC,True) [23,19] 0x0 0x0 0 0 [ShiningBow,IronBow,Vulnerary] NoAI
@@ -288,6 +330,10 @@ UNIT
 
 RochefortUnitGroup:
 UNIT Rochefort 0 0 Level(1,NPC,False) [20,14] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+JaimeUnitGroup:
+UNIT Jaime PegasusRider 0 Level(2,NPC,False) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
 UNIT
 
 LuaInDaHub:
@@ -401,6 +447,8 @@ ENUT WindUpFlag2
 ENUT WindUpFlag3
 ENUT ReadyForTakeoffFlag
 ENUT Ch2ThisIsAChapter
+ENUT RahelOrlandoHubATalkFlag
+ENUT CarmenXimoHubATalkFlag
 FADI 10
 LoadPlayerUnits(NewPlayerGroup)
 LoadEnemies(IgniswordsGroup)

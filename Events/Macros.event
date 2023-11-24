@@ -33,6 +33,9 @@
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
 #define CheckHowManyHubChaptersCompleted "ASMC CheckHowManyHubChaptersCompletedASMC"
+#define SpawnQuestSigil(eventId, labelId, trapId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; AddTrap(trapId, xPos, yPos); LABEL labelId"
+#define RemoveQuestSigil(eventId, labelId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; RemoveTrapAtCoords(xPos, yPos); LABEL labelId"
+
 
 #define BranchIfHubNotVisited(labelId, eventId) "CheckIfHubVisited; BNE labelId s0 sC; CALL eventId; LABEL labelId"
 #define CheckIfHubAChapterCompleted "ASMC CheckIfOneHubAChapterCompletedASMC"

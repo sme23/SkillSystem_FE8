@@ -177,6 +177,7 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+ENUT WentToHubA1
 EVBIT_F 8 // For camera moving stuff
 FADU 16
 STAL 30

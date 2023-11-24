@@ -518,3 +518,19 @@ Juliana[X]
 
 ## JulianaDesc
  [X]
+
+## IdaName
+Ida[X]
+
+## IdaDesc
+Guildmaster[N]
+The boss of the Shipwright's Guild.[N]
+Has a soft spot for Lua's crew.[X]
+
+## DocksmanName
+Docksman[X]
+
+## DocksmanDesc
+Deckhand[N]
+Port crawlers who guard their crew's[N]
+airship from any nosy onlookers.[X]
