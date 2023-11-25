@@ -75,6 +75,7 @@
 #define A4Pirate $6A
 #define A4PirateBoss $6B
 #define A4RebelBoss $6C
+#define A4FunnyArcher $76
 
 //A5
 #define Gunsmith $5A

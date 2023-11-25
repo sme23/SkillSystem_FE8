@@ -27,4 +27,8 @@ SpecifiedBattleConvo(Sagargala,Ondeh,HubA_3,16,A3_BossQuote_Ondeh)
 SpecifiedBattleConvo(Sagargala,Lua,HubA_3,17,A3_BossQuote_Lua)
 UnspecifiedBattleConvo(Sagargala, HubA_3, 1, A3_BossQuote_All)
 
+// Chapter A-4
+UnspecifiedBattleConvo(A4PirateBoss, HubA_4, 16, A4_A4PirateCaptainBattleQuote)
+UnspecifiedBattleConvo(A4RebelBoss, HubA_4, 17, A4_A4RebelCaptainBattleQuote)
+
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

@@ -124,6 +124,12 @@
 [LoadRedSoldier] = [LoadFace][0x6B][0x1]
 [LoadRedFighter] = [LoadFace][0x6D][0x1]
 
+[LoadPirate] = [LoadFace][0x31][0x1]
+
+[LoadA4ImperialCaptain] = [LoadFace][0x31][0x1]
+[LoadA4ImperialRecruit] = [LoadFace][0x31][0x1]
+[LoadA4PirateCaptain] = [LoadFace][0x31][0x1]
+[LoadA4RebelCaptain] = [LoadFace][0x31][0x1]
 
 
 [LoadKhazhak] = [LoadFace][0x31][0x1]

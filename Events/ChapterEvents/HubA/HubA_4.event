@@ -17,17 +17,31 @@ POIN BeginningScene EndingScene
 //10 - pirate boss death quote flag
 //11 - rebel boss death quote flag
 //12 - early arrival flag (if pirate boss is killed before rebels show up)
+//13 - funny archer death quote flag
 //14 - turned on by PirateBossDefeat misc event
 //15 - turned on by RebelBossDefeat misc event
+//16 - pirate boss battle quote
+//17 - rebel boss battle quote
+//18 - turned on by JuanReaction misc event
 
 TurnBasedEvents:
+TurnEventPlayer(0, SurvivorsTalk, 1)
 TurnEventPlayer(0, RebelPremonition, 2)
 TurnEventPlayer(0, ThiefArrival, 4)
 TurnEventPlayer(12, RebelArrival, 3, 5)
-TurnEventPlayer(12, RebelWarning1, 4)
+TurnEventPlayer(12, RebelWarning1, 3)
 TurnEventPlayer(12, RebelWarning2, 5)
 TurnEventPlayer(12, RebelWarning3, 6)
 END_MAIN
+
+SurvivorsTalk:
+Music(ABlackheartsPrideID)
+CameraCursor(9,16)
+SetBackground(Inn)
+Text(A4_TurnEvent0)
+EraseBackground
+NoFade
+ENDA
 
 RebelPremonition:
 SpawnReinforcements(RebelScoutSpawn)
@@ -35,12 +49,12 @@ ENUN
 MOVE 10 Rebel [20,6]
 ENUN
 CameraCursor(Rebel)
-Text(ChA4RebelPremonitionText1)
+Text(A4_TurnEvent1_A)
 MOVE 20 Rebel [23,11]
 ENUN
 REMOVEUNIT Rebel
 CameraCursor(Lua)
-Text(ChA4RebelPremonitionText2)
+Text(A4_TurnEvent1_B)
 NoFade
 ENDA
 
@@ -54,36 +68,55 @@ RebelArrival:
 CHECK_TURNS
 SVAL s1 7
 BEQ 1 s1 sC  //if the turn count is 7, then we branch to the rebel spawn event
-	CHECK_EVENTID 10 
-	BNE 1 s0 sC //if the pirate boss is dead, play the even early
+	CHECK_EVENTID 10
+	BNE 1 s0 sC //if the pirate boss is dead, play the event early
 	ENUF 12 //unset the rebel arrival flag if neither of these are true
 	GOTO 2
 LABEL 1
 	CAMERA_CENTERED [23,16]
-	TILECHANGE 0
-	STAL 30
 	TILECHANGE 1
+	STAL 30
+	TILECHANGE 2
 	SOUN 0x02D7 //snag falling sound effect
 	STAL 15
 	FADI 15
 	SpawnReinforcements(RebelSpawn)
 	FADU 15
 	ENUN
-	Text(ChA4RebelArrivalText)
+	Text(A4_TurnEvent3_A)
+	//if pirate boss is still alive
+	CHECK_EXISTS A4PirateBoss //returns 1 if true (thus is still alive)
+	BEQ 8 s0 sC
+		Text(A4_TurnEvent3_B_A) //if he's alive, play this quote
+		GOTO 9
+	LABEL 8
+			Text(A4_TurnEvent3_B_B) //if he's dead, play this instead
+	LABEL 9
+	CameraCursor(A4RebelBoss)
+	Text(A4_TurnEvent4)
 	SetAI(A4Pirate,0,0,4,0)
+	CHECK_EXISTS A4PirateBoss //play this stuff if the pirate boss is still alive, else skip to label 10
+	BEQ 10 s0 sC
+		CameraCursor(A4PirateBoss)
+		Text(A4_TurnEvent4_B)
+		SetAI(A4PirateBoss,0,0,4,0)
+	LABEL 10
 LABEL 2
 NoFade
 ENDA
 
 RebelWarning1:
 ENUF 12 //turn this off, as the player could still potentially kill the boss early
+//Text(ch4placeholder)
 CHECK_EVENTID 10 //play this event if the boss hasn't been killed
 BNE 4 s0 sC
 	CAMERA_CENTERED [23,25]
 	STAL 30
-	TILECHANGE 2
+	TILECHANGE 3
 	CameraCursor(Lua)
-	Text(ChA4RebelWarningText)
+	Text(A4_TurnEvent2_A)
+	CameraCursor(A4PirateBoss)
+	Text(A4_TurnEvent2_B)
 LABEL 4
 NoFade
 ENDA
@@ -94,7 +127,7 @@ CHECK_EVENTID 10 //play this event if the boss hasn't been killed
 BNE 5 s0 sC
 	CAMERA_CENTERED [23,20]
 	STAL 30
-	TILECHANGE 3
+	TILECHANGE 4
 LABEL 5
 NoFade
 ENDA
@@ -105,7 +138,7 @@ CHECK_EVENTID 10 //play this event if the boss hasn't been killed
 BNE 6 s0 sC
 	CAMERA_CENTERED [23,16]
 	STAL 30
-	TILECHANGE 0
+	TILECHANGE 1
 LABEL 6
 NoFade
 ENDA
@@ -115,19 +148,36 @@ CharacterEventBothWays(9, JuanRecruitment, Lua, Juan)
 END_MAIN
 
 JuanRecruitment:
+//play recruitment theme
 SetAI(Juan,0,0,0,0)
 Text(ChA4JuanRecruitText)
 CUSA Juan
 NoFade
 ENDA
 
+JuanReaction:
+CHECK_ALLEGIANCE Juan //returns 0 if he's a player, 2 if an NPC
+BNE 7 s0 sC //skip to label 7 if Juan is not a player unit
+CHECK_TURNS
+SVAL s1 2
+BNE 7 s1 sC //skip if not turn 2
+CHECK_ACTIVEID Lua //returns 1 if Lua, 0 if not
+BEQ 7 s0 sC //skip if Lua is not the active unit
+	CameraCursor(Juan)
+	Text(A4_JuanReaction_Optional)
+LABEL 7
+NoFade
+ENDA
+
 LocationBasedEvents:
 DurabilityChest(SkillScroll,CritthriftID,12,22)
+Chest(TakeAim, 10, 1)
 END_MAIN
 
 MiscBasedEvents:
 AFEV 14 PirateBossDefeat 10
 AFEV 15 RebelBossDefeat 11
+AFEV 18 JuanReaction 13
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -172,18 +222,21 @@ UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 NPCGroup:
-UNIT Juan Thief 0 Level(3, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, TakeAim] BossAI
+UNIT Juan Thief 0 Level(3, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] BossAI
 UNIT
 
 EnemyGroup:
+//debug
+//UNIT A4PirateBoss Deserter 0 Level(5,Enemy,True) [9,0] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
+//UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, True) [10,0] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
 //turn 1
 UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
 UNIT A4Pirate Mercenary 0 Level(3, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
 //turn 2
 UNIT A4Pirate Brigand 0 Level(3, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
-UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, Vulnerary, TealGem] ChargeAI
+UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI //dies in a gag for Juan's recruitment convo
+UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, (HPTonic << 8)|Tonic, TealGem] ChargeAI //speed tonic guy
 UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3
 UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
@@ -199,9 +252,9 @@ UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupT
 UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
 //turn 6
 UNIT A4Pirate Myrmidon 0 Level(3, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [6,21] 0 0 0 0 [Elfire, Vulnerary] GroupThreeAI
+UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [6,21] 0 0 0 0 [Elfire, (HPTonic << 8)|Tonic] GroupThreeAI //def tonic
 UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
-UNIT A4Pirate Mage 0 Level(4, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
+UNIT A4Pirate Mage 0 Level(3, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
 //turn 7
 UNIT A4Pirate Fighter 0 Level(3, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
 UNIT A4Pirate Myrmidon 0 Level(3, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
@@ -227,6 +280,26 @@ ThiefSpawn:
 UNIT A4Pirate Thief 0 Level(3, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
 UNIT
 
+CutsceneGreens:
+UNIT Rebel Gunner 0 Level(3, NPC, True) [7,19] 0 0 0 0 [SteelLance] ChargeAI //imperial captain
+UNIT Rebel Soldier 0 Level(3, NPC, True) [8,18] 0 0 0 0 [SteelLance] ChargeAI //imperial recruit
+//first imperial who gets owned
+//second imperial who gets owned
+//
+//
+//
+//
+//
+UNIT
+
+CutsceneReds:
+UNIT A4PirateBoss Deserter 0 Level(5,Enemy,True) [0,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI //pirate captain
+//pirate who fights
+//second pirate who fights
+//lotsa pirates who will appear later on
+//
+UNIT
+
 Traps1:
 ENDTRAP
 ALIGN 4
@@ -237,8 +310,60 @@ ALIGN 4
 
 BeginningScene:
 WEATHER 7
-Text(ChA4StartText)
+SetBackground(Inn)
+Music(StillZephyrsID) //could probably use something else similar here once more event music gets added?
+TEXTSTART
+TEXTSHOW A4StartEventBase_1
+TEXTEND
+SOUN 0xA2 //armor knight footsteps
+SOUN 0xA3
+SOUN 0xA4
+TEXTCONT
+TEXTEND
+REMA
+SetBackground(Ship)
+MUSC 0x47 //windy day
+TEXTSTART
+TEXTSHOW A4StartEventBase_2
+TEXTEND
+Music(SwabbieTalkID)
+TEXTCONT
+TEXTEND
+REMA
+EraseBackground
+Music(ScalleywagsOnDeckID)
+//Cue a pair of scripted battles of green units getting beaten by red ones.
+//gonna need 8 different greens [capt, recruit, 5 generics who survive, 2 who get yeeted]
+//gonna need 3 different reds [2 who kill greens, capt] + a bunch more who just stand there [comprised of units who the player fights]
+SetBackground(Ship)
+TEXTSTART
+TEXTSHOW A4StartEventBase_3
+TEXTEND
+SOUN 0xF2 //"fire shoot", supposed to be a gunfire sfx. happens mid text
+TEXTCONT
+TEXTEND
+REMA
+EraseBackground
+Music(AvastMeHeartiesID)
+//have pirate captain walk up
+TEXTSTART
+TEXTSHOW A4StartEventBase_4
+TEXTEND
+FAWI 15
+SOUN 0xF8 //elfire sfx, supposed to be explosion
+FAWU 15
+TEXTCONT
+TEXTEND
+REMA
+//cutscene of green units managing to retreat into the hull, including the captain. door shuts just as the captain gets there.
+SOUN 0xB1 //lockpick sound
+Text(A4StartEventBase_5)
+SetBackground(Ship)
+Text(A4StartEventBase_6)
 FADI 15
+EraseBackground
+REMOVEALL_GREEN
+REMOVEALL_RED
 LOAD1 1 NPCGroup
 LOAD1 1 EnemyGroup
 ENUN
@@ -247,8 +372,12 @@ NoFade
 ENDA
 
 EndingScene:
-Text(ChA4EndText)
+Music(StillZephyrsID)
+SetBackground(Ship)
+Text(A4_EndEvent_1)
 GiveGold(1200)
+Music(ABlackheartsPrideID)
+Text(A4_EndEvent_2)
 GoToHubChapter(HubA)
 NoFade
 ENDA
