@@ -177,3 +177,19 @@ TangyuanMugData:
 #incbin "Dmp/Tangyuan_palette.dmp"
 #incbin "Dmp/Tangyuan_minimug.dmp"
 setMugEntry(TangyuanMug, TangyuanMugData, 4, 5, 4, 3)
+
+ALIGN 16
+BikoMugData:
+#incbin "Dmp/Biko_mug.dmp"
+#incbin "Dmp/Biko_frames.dmp"
+#incbin "Dmp/Biko_palette.dmp"
+#incbin "Dmp/Biko_minimug.dmp"
+setMugEntry(BikoMug, BikoMugData, 4, 5, 4, 3)
+
+ALIGN 16
+SuzanneMugData:
+#incbin "Dmp/Suzanne_mug.dmp"
+#incbin "Dmp/Suzanne_frames.dmp"
+#incbin "Dmp/Suzanne_palette.dmp"
+#incbin "Dmp/Suzanne_minimug.dmp"
+setMugEntry(SuzanneMug, SuzanneMugData, 3, 5, 3, 3)

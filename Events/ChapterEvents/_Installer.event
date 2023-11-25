@@ -23,5 +23,8 @@
     #include "HubA/HubA_6.event"
 }
 {
+    #include "HubA/HubALibrary.event"
+}
+{
     #include "Chapter2.event"
 }

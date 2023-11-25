@@ -33,6 +33,9 @@
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
 #define CheckHowManyHubChaptersCompleted "ASMC CheckHowManyHubChaptersCompletedASMC"
+#define SpawnQuestSigil(eventId, labelId, trapId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; AddTrap(trapId, xPos, yPos); LABEL labelId"
+#define RemoveQuestSigil(eventId, labelId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; RemoveTrapAtCoords(xPos, yPos); LABEL labelId"
+
 
 #define BranchIfHubNotVisited(labelId, eventId) "CheckIfHubVisited; BNE labelId s0 sC; CALL eventId; LABEL labelId"
 #define CheckIfHubAChapterCompleted "ASMC CheckIfOneHubAChapterCompletedASMC"
@@ -45,6 +48,9 @@
 #define UnsetAllHubChapterFlags "ASMC UnsetAllHubChapterFlagsASMC"
 
 #define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+#define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; FADU 15"
+
+
 #define InitiateTileRevertInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILEREVERT tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 
 #define InitiateTileRevertInHub(initialEvent, clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; CALL initialEvent; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILEREVERT tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
@@ -60,6 +66,10 @@
 
 #define CalculateYodsenPrice "ASMC CalculateYodsenPriceASMC"
 #define GetTextFromMemSlot1 "ASMC GetTextFromMemorySlot1ASMC"
+
+#define TurnUnitGreenIfAlive(charId, labelId) "CHECK_ALIVE charId; BEQ labelId s0 sC; CUSN charId; LABEL labelId"
+#define TurnUnitBlueIfAlive(charId, labelId) "CHECK_ALIVE charId; BEQ labelId s0 sC; CUSA charId; LABEL labelId"
+
 
 #define GoToHubChapter(chapterId) "ASMC EyeForAnEyeResetASMC; MNC2 chapterId"
 

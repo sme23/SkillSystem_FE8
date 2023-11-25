@@ -47,6 +47,12 @@ EventPointerTable(HubAEventsID, PointerList)
 #define FirstTimeInTavern 0x98
 #define MrYodsenRecruitFlag 0x99
 #define TavernFirstTime 0xA1
+#define OrlandoHubATalk 0xA2
+#define RahelOrlandoHubATalkFlag 0xA3
+#define CarmenXimoHubATalkFlag 0xA4
+#define PilarEstelleHubATalkFlag 0xA5
+#define DesiderioIdaHubATalkFlag 0xA6
+#define RazvanHermenegildoHubATalkFlag 0xA7
 
 PointerList:
 POIN TurnBasedEvents
@@ -66,6 +72,7 @@ END_MAIN
 CharacterBasedEvents:
 CharacterEvent(WentToHubA2, GotoChapter2, Lua, Jaime)
 CharacterEvent(WentToHubA3, GotoChapter3, Lua, Ondeh)
+CharacterEvent(WentToHubA4, GotoChapter4, Lua, Pilar)
 CharacterEvent(WentToHubA5, GotoChapter5, Lua, Desiderio)
 CharacterEvent(WentToHubA6, GotoChapter6, Lua, Rochefort)
 CharacterEvent(HubASamsonArranRecruitFlag, TalkToTriana, Lua, Triana)
@@ -73,11 +80,14 @@ CharacterEvent(HubASamsonArranRecruitFlag, TalkToMedwyn, Lua, Medwyn)
 CharacterEvent(HubASamsonArranRecruitFlag, TalkToBartz, Lua, Bartz)
 CharacterEvent(DurghamRecruitFlag, TalkToDurgham, Lua, Durgham)
 CharacterEvent(MrYodsenRecruitFlag, TalkToMrYodsen, Lua, MrYodsen)
+CharacterEvent(PilarEstelleHubATalkFlag, PilarEstelleHubATalk, Lua, Pilar)
+CharacterEvent(PilarEstelleHubATalkFlag, PilarEstelleHubATalk, Lua, Estelle)
+CharacterEvent(DesiderioIdaHubATalkFlag, DesiderioIdaHubATalk, Lua, Desiderio)
+CharacterEvent(DesiderioIdaHubATalkFlag, DesiderioIdaHubATalk, Lua, Ida)
 END_MAIN
 
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
-//TutorialYesNoText(HubA1Prompt)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_1, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_1, HubA1Accepted)
@@ -88,7 +98,6 @@ ENDA
 
 GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
-//Text(HubA2Prompt)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_2, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
@@ -98,7 +107,6 @@ ENDA
 
 GotoChapter3:
 HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
-//TutorialYesNoText(HubA3Sys_Text_Mission_Select)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_3, Castle_Hall_Night, HubA)
 GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
@@ -107,37 +115,87 @@ ENUF WentToHubA3
 NoFade
 ENDA
 
+GotoChapter4:
+HubChapterFirstTimeEvent(1, SeenHubA4Pitch, HubA4Pitch)
+//TutorialYesNoText(HubA4Prompt) 
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA, PortGreagorCallbackA4)
+ENUT SeenHubA4Pitch
+SVAL s1 0x1
+BNE 2 s1 sC
+    EVBIT_MODIFY 0
+    Text(HubA4Selection_Yes)
+    ENUF LuaInAHubFlag
+    FADI 10
+    CUSA Desiderio
+    CUSA Pilar
+    CHECK_ALIVE Estelle
+    BEQ 776 s0 sC
+        CUSA Estelle
+    LABEL 776
+    ENUN
+    MNC2 HubA_4
+    NoFade
+    ENDB
+LABEL 2
+Text(HubA4Selection_No)
+ENUF WentToHubA4
+NoFade
+ENDA
+
 GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
-//Text(HubA5Prompt) 
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA, PortGreagorCallback)
+FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA, PortGreagorCallbackA5)
 ENUT SeenHubA5Pitch
 SVAL s1 0x1
 BNE 2 s1 sC
-EVBIT_MODIFY 0
-Text(HubA5Accepted)
-ENUF LuaInAHubFlag
-FADI 10
-CUSA Desiderio
-CUSA Pilar
-ENUN
-ASMC EyeForAnEyeResetASMC
-MNC2 HubA_5
-NoFade
-ENDB
+    EVBIT_MODIFY 0
+    Text(HubA5Accepted)
+    ENUF LuaInAHubFlag
+    FADI 10
+    CUSA Desiderio
+    CUSA Pilar
+    CHECK_ALIVE Estelle
+    BEQ 776 s0 sC
+        CUSA Estelle
+    LABEL 776
+    ENUN
+    MNC2 HubA_5
+    NoFade
+    ENDB
 LABEL 2
 ENUF WentToHubA5
 NoFade
 ENDA
 
-PortGreagorCallback:
+PilarEstelleHubATalk:
+Text(PilarEstelleBaseSceneText)
+NoFade
+ENDA
+
+DesiderioIdaHubATalk:
+Text(DesiderioIdaBaseSceneText)
+NoFade
+ENDA
+
+PortGreagorCallbackA4:
 //this does similar to PortGreagorDocks but without most things, for the preview callback
 TILECHANGE 0
 CALL ClearHubATraps
 CALL AddDockTraps
-AddTrap(RedSigilTrapID, 8, 22) //add the indicator under desiderio
-//CALL DocksSpawnEvent
+AddTrap(RedSigilTrapID, 4, 12)
+SpawnQuestSigil(WentToHubA5, 1, RedSigilTrapID, 8, 22)
+NoFade
+ENDA
+
+PortGreagorCallbackA5:
+//this does similar to PortGreagorDocks but without most things, for the preview callback
+TILECHANGE 0
+CALL ClearHubATraps
+CALL AddDockTraps
+AddTrap(RedSigilTrapID, 8, 22)
+SpawnQuestSigil(WentToHubA4, 1, RedSigilTrapID, 4, 12)
 NoFade
 ENDA
 
@@ -173,15 +231,13 @@ AREA DocksToPort GotoPortFromDocks [0,13] [0,14]
 AREA CameBackFromDocks CameBackFromDocksFirstTime [0,13] [0,14]
 
 AREA WentToBaseAgain BackToLuaBaseFirstTime [20,4] [21,4]
-//AREA PortToBase BackToLuaBase [20,4] [21,4]
+AREA PortToBase BackToLuaBase [20,4] [21,4]
 
 AREA PortToTavern FromPortToTavern [8,20] [8,20]
 AREA TavernToPort ToPortFromTavern [8,20] [8,20] 
 
 AREA GotoChapter2Flag AllDoneWithHubA [16,10] [16,10]
 
-AREA WentToHubA1 GotoChapter1 [12,5] [12,5]
-AREA WentToHubA4 GotoChapter4 [18, 9] [18, 9]
 AFEV 0 RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
@@ -194,17 +250,11 @@ NoFade
 ENDA
 
 Traps1:
-BlueSigil(0, 11)
-BlueSigil(0, 12)
-BlueSigil(0, 13)
 BlueSigil(20, 4)
 BlueSigil(21, 4)
 BlueSigil(29, 15)
 BlueSigil(29, 16)
 BlueSigil(8, 20)
-
-RedSigil(12,5)
-RedSigil(18, 9)
 ENDTRAP
 ALIGN 4
 
@@ -218,7 +268,7 @@ UNIT
 
 BeginningScene:
 // only here for chapter A1 testing
-ENUT GotoChapter2Flag
+ENUT EyeForAnEyeResetASMC
 ENUT LuaInAHubFlag
 ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
@@ -226,7 +276,7 @@ ENUT DocksToPort
 ENUT TavernToPort
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
-SVAL s1 6 //if 5 chapters completed
+SVAL s1 6 //if 6 chapters completed
 BLT 2 sC s1 
     AddTrap(GreenSigilTrapID, 16, 10) //green means go
     CenterTextbox(HubAGoTime)
@@ -370,23 +420,42 @@ ENDA
 
 PortGreagorDocksFirstTime:
 UnsetAllHubChapterFlags
-InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEvent)
-RemoveTrapAtCoords(8,22)
+InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEventFirstTime)
 ENUT DocksToPort
 ENUF CameBackFromDocks
+ENUT WentToHubA4
 ENUT WentToHubA5
-Text(HubABeginningScene4)
-Text(HubABeginningScene5)
+Text(HubABeginningScene4_1)
+CameraCursor(Estelle)
+Text(HubABeginningScene4_2)
+Text(HubABeginningScene4_3)
+CamOn
+MOVE 15 Estelle [4,14]
+ENUN
+CAMERA_CENTERED Lua
+Text(HubABeginningScene4_4)
+MOVE 15 Lua [3,16]
+ENUN
+Text(HubABeginningScene5_1)
+Text(HubABeginningScene5_2)
+Text(HubABeginningScene5_3)
+MOVE 15 Lua [6,19]
+ENUN
+CAMERA_CENTERED Lua
+Text(HubABeginningScene5_4)
 NoFade
 ENDA
 
 PortGreagorDocks:
 InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEvent)
 ENUF DocksToPort
+ENUT PortToBase
+ENUT PortToTavern
 NoFade
 ENDA
 
 CameBackFromDocksFirstTime:
+ENUF WentToHubA4
 ENUF WentToHubA5
 InitiateTileRevertInHub(CUSADockBlues, ClearDockTraps, AddHubABackToBaseTraps, 0, LuaBackFromDaDocks, PortSpawnEventFirstTime)
 SetAllHubChapterFlags
@@ -408,24 +477,45 @@ NoFade
 ENDA
 
 GotoPortFromDocks:
-InitiateTileRevertInHub(CUSADockBlues, ClearDockTraps, AddHubATraps, 0, LuaBackFromDaDocks, PortSpawnEvent)
+InitiateTileRevertInHub(CUSADockBluesTwo, ClearDockTraps, AddHubATraps, 0, LuaBackFromDaDocks, PortSpawnEvent)
 ENUF PortToDocks
+ENUF PortToBase
+ENUF PortToTavern
+NoFade
+ENDA
+
+CUSADockBluesTwo:
+CUSA Desiderio
+CUSA Pilar
+CHECK_ALIVE Estelle
+BEQ 1 s0 sC //if she's dead, skip
+    CUSA Estelle
+LABEL 1
 NoFade
 ENDA
 
 BackToLuaBase:
 InitiateLoadMapHub(Chapter2, ClearHubATraps, LuaBackFromPortGroup, MainRoomSpawnEvent)
+ENUF MainRoomToOtherRooms
+ENUF MainRoomToPort
+ENUT WindUpFlag1
+ENUT WindUpFlag2
+ENUT WindUpFlag3
+ENUT ReadyForTakeoffFlag
+ENUT IgniswordsDead 
+SetChapterObjectiveText(HubAGoalWindow, HubAStatusObjective)
 NoFade
 ENDA
 
 MainRoomSpawnEvent:
 LoadPlayerUnits(OrlandoRahelUnitGroup)
+SpawnQuestSigil(WentToHubA1, 1, RedSigilTrapID, 17, 11)
 NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(12,NPC,False) [6,16] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
-UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [6,18] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Orlando 0 0 Level(12,NPC,False) [17,11] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 LuaBackFromPortGroup:
@@ -447,6 +537,8 @@ ENUF WindUpFlag2
 ENUF WindUpFlag3
 ENUF ReadyForTakeoffFlag
 ENUF IgniswordsDead
+ENUF PilarEstelleHubATalkFlag
+ENUF DesiderioIdaHubATalkFlag
 CALL PortSpawnEvent  //unset all chapter flags and port flags so you can walk around
 CALL AddHubATraps
 LoadPlayerUnits(LuaInDaHub)
@@ -470,24 +562,9 @@ UNSET_CONDITION Lua
 NoFade
 ENDA
 
-GotoChapter4:
-HubChapterFirstTimeEvent(1, SeenHubA4Pitch, HubA4Pitch)
-//TutorialYesNoText(HubA4Prompt)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA)
-GotoHubChapterIfYes(2, HubA_4, HubA4Selection_Yes)
-Text(HubA4Selection_No)
-ENUF WentToHubA4
-NoFade
-ENDA
-
-
-
 LuaFirstTripCaveGroup:
 UNIT Lua Captain 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
-
-
 
 BeginningSceneFirstTimeCave:
 SetBackground(Ship)
@@ -509,7 +586,8 @@ ENUT WindUpFlag2
 ENUT WindUpFlag3
 ENUT ReadyForTakeoffFlag
 ENUT IgniswordsDead
-
+ENUT PilarEstelleHubATalkFlag
+ENUT DesiderioIdaHubATalkFlag
 FADI 10
 LOMA Chapter2
 RemoveAll
@@ -520,6 +598,7 @@ LOAD1 0 LuaFirstTripCaveGroup
 ENUN
 ENUT 4
 CenterTextbox(HubTutorial)
+SetChapterObjectiveText(HubAGoalWindow, HubAStatusObjective)
 NoFade
 ENDB
 
@@ -582,6 +661,19 @@ UNIT
 DesiderioPilarGroup:
 UNIT Desiderio 0 0 Level(4,Ally,True) [8,22] 0x0 0x0 0 0 [0x0] NoAI
 UNIT Pilar 0 0 Level(1,Ally,True) [4,12] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Docksman 0 0 Level(3, NPC, True) [6,4] 0 0 0 0 [SteelLance] NoAI
+UNIT Docksman Fighter 0 Level(3, NPC, True) [12,2] 0 0 0 0 [IronAxe] NoAI
+UNIT Docksman Mercenary 0 Level(4, NPC, True) [18,13] 0 0 0 0 [KillingEdge] NoAI
+UNIT
+
+EstelleOrlandoDocksGroup:
+UNIT Estelle Troubadour 0 Level(3,NPC,False) [8,4] 0 0 0 0 [Heal, Torch] NoAI
+UNIT Orlando 0 0 Level(12,NPC,False) [8,20] 0x0 0x0 0 0 [SilverKnife, Thani] NoAI
+UNIT
+
+DocksGroup:
+UNIT Estelle Troubadour 0 Level(3,NPC,False) [4,14] 0 0 0 0 [Heal, Torch] NoAI
+UNIT Ida 0 0 Level(20, NPC, False) [8,21] 0 0 0 0 [SilverAxe] NoAI
 UNIT
 
 DocksSpawnEvent:
@@ -590,18 +682,27 @@ CALL DurghamSpawnEvent
 NoFade
 ENDA
 
+DocksSpawnEventFirstTime:
+LoadCutsceneUnits(DesiderioPilarGroup)
+CUSN Desiderio
+CUSN Pilar
+LoadPlayerUnits(EstelleOrlandoDocksGroup)
+NoFade
+ENDA
+
 DocksSpawners:
 LoadCutsceneUnits(DesiderioPilarGroup)
 CUSN Desiderio
 CUSN Pilar
-CHECK_EVENTID WentToHubA6
-BNE 1 s0 sC
-    AddTrap(RedSigilTrapID, 8, 22) //add the indicator under desiderio
-LABEL 1
+SpawnQuestSigil(WentToHubA5, 1, RedSigilTrapID, 8, 22)
+SpawnQuestSigil(WentToHubA4, 2, RedSigilTrapID, 4, 12)
+LoadPlayerUnits(DocksGroup)
+CHECK_ALIVE Estelle
+BEQ 776 s0 sC
+    CUSN Estelle
+LABEL 776
 NoFade
 ENDA
-
-
 
 DurghamSpawnEvent:
 CHECK_EVENTID DurghamRecruitFlag
@@ -627,12 +728,9 @@ NoFade
 ENDA
 
 PortSpawnEventFirstTime:
-LoadNPCUnitGroupIfEIDNotSet(WentToHubA2, 3, JaimeUnitGroup, A2Indicator)
-LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup, A3Indicator)
-LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup, A6Indicator)
-RemoveTrapAtCoords(11,20)
-RemoveTrapAtCoords(23,19)
-RemoveTrapAtCoords(20,14)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA2, 3, JaimeUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup)
 NoFade
 ENDA
 
@@ -652,36 +750,23 @@ NoFade
 ENDA
 
 AddHubATraps:
-AddTrap(BlueSigilTrapID,0, 11)
-AddTrap(BlueSigilTrapID,0, 12)
-AddTrap(BlueSigilTrapID,0, 13)
 AddTrap(BlueSigilTrapID,20, 4)
 AddTrap(BlueSigilTrapID,21, 4)
 AddTrap(BlueSigilTrapID,29, 15)
 AddTrap(BlueSigilTrapID,29, 16)
 AddTrap(BlueSigilTrapID,8, 20)
-AddTrap(RedSigilTrapID,12, 5)
-AddTrap(RedSigilTrapID,18, 9)
 NoFade
 ENDA
 
 ClearHubATraps:
-RemoveTrapAtCoords(0, 11)
-RemoveTrapAtCoords(0, 12)
-RemoveTrapAtCoords(0, 13)
 RemoveTrapAtCoords(20, 4)
 RemoveTrapAtCoords(21, 4)
 RemoveTrapAtCoords(29, 15)
 RemoveTrapAtCoords(29, 16)
 RemoveTrapAtCoords(8, 20)
-
-RemoveTrapAtCoords(20,4)
-RemoveTrapAtCoords(21,4)
-RemoveTrapAtCoords(12, 5)
-RemoveTrapAtCoords(18, 9)
-RemoveTrapAtCoords(11, 20)
-RemoveTrapAtCoords(23, 19)
-RemoveTrapAtCoords(20, 14)
+RemoveQuestSigil(WentToHubA2, 1, 11, 20) //red ones
+RemoveQuestSigil(WentToHubA3, 2, 23, 19)
+RemoveQuestSigil(WentToHubA6, 3, 20, 14)
 NoFade
 ENDA
 
@@ -704,8 +789,8 @@ ENDA
 ClearDockTraps:
 RemoveTrapAtCoords(0, 13)
 RemoveTrapAtCoords(0, 14)
-RemoveTrapAtCoords(0, 14)
-RemoveTrapAtCoords(8, 22) //remove red tile if it's there
+RemoveQuestSigil(WentToHubA4, 2, 4, 12)
+RemoveQuestSigil(WentToHubA5, 1, 8, 22)
 NoFade
 ENDA
 

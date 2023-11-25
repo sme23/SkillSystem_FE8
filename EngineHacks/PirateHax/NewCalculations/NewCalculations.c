@@ -14,8 +14,6 @@ void ComputeBattleUnitHitRate(BattleUnit* bu) {
 void ComputeBattleUnitAvoidRate(BattleUnit* bu) {
     bu->battleAvoidRate = bu->terrainAvoid + (bu->unit.lck * 3);
 
-    bu->battleAvoidRate -=
-
     if (bu->battleAvoidRate < 0){
         bu->battleAvoidRate = 0;
     }
@@ -308,11 +306,13 @@ int CanUnitRescue(const struct Unit* actor, const struct Unit* target){
         return false; //cannot be rescued
     }
 
-    
+    if (LuaIsInHub(gActiveUnit)){ //unit doesn't matter
+        return false;
+    }
+
     int actorAid  = GetUnitAid(actor);
     int targetCon = UNIT_CON(target);
 
-    
     return (actorAid >= targetCon) ? TRUE : FALSE;
 }
 

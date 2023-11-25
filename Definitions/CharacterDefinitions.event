@@ -43,6 +43,10 @@
 #define Khazhak $46
 #define Blackheart $47
 
+// HUB UNITS
+#define Ida $76
+#define Docksman $77
+
 // HUB A CHAPTER UNITS
 
 // HUB A CHAPTER ENEMIES + NPCS
