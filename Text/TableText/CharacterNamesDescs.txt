@@ -464,7 +464,7 @@ The Closer is known for being able to [N]
 close down any problem. For a price.[X]
 
 ## A4PirateName
-Pirate[X]
+Razorblood[X]
 
 ## A4PirateDesc
  [X]

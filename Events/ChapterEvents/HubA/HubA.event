@@ -14,7 +14,7 @@ EventPointerTable(HubAEventsID, PointerList)
 #define SeenHubA1Pitch 0x7
 #define SeenHubA2Pitch 0x8
 #define SeenHubA3Pitch 0x9
-#define SeenHubA4Pitch 0xa
+#define SeenHubA4Pitch 0xA
 #define SeenHubA5Pitch 0xB
 #define SeenHubA6Pitch 0xc
 
@@ -116,6 +116,7 @@ NoFade
 ENDA
 
 GotoChapter4:
+HubChapterFirstTimeEvent(1, SeenHubA4Pitch, HubA4Pitch)
 //TutorialYesNoText(HubA4Prompt) 
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA, PortGreagorCallbackA4)
@@ -123,7 +124,7 @@ ENUT SeenHubA4Pitch
 SVAL s1 0x1
 BNE 2 s1 sC
     EVBIT_MODIFY 0
-    //Text(HubA4Accepted)
+    Text(HubA4Selection_Yes)
     ENUF LuaInAHubFlag
     FADI 10
     CUSA Desiderio
@@ -137,6 +138,7 @@ BNE 2 s1 sC
     NoFade
     ENDB
 LABEL 2
+Text(HubA4Selection_No)
 ENUF WentToHubA4
 NoFade
 ENDA
@@ -563,8 +565,6 @@ ENDA
 LuaFirstTripCaveGroup:
 UNIT Lua Captain 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
-
-
 
 BeginningSceneFirstTimeCave:
 SetBackground(Ship)
