@@ -52,6 +52,7 @@ EventPointerTable(HubAEventsID, PointerList)
 #define CarmenXimoHubATalkFlag 0xA4
 #define PilarEstelleHubATalkFlag 0xA5
 #define DesiderioIdaHubATalkFlag 0xA6
+#define RazvanHermenegildoHubATalkFlag 0xA7
 
 PointerList:
 POIN TurnBasedEvents
@@ -438,6 +439,7 @@ Text(HubABeginningScene5_2)
 Text(HubABeginningScene5_3)
 MOVE 15 Lua [6,19]
 ENUN
+CAMERA_CENTERED Lua
 Text(HubABeginningScene5_4)
 NoFade
 ENDA

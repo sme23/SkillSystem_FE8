@@ -155,9 +155,8 @@ AREA MainRoomToOtherRooms GotoLuasQuarters [7,4] [7,4]
 AREA MainRoomToOtherRooms GotoLibrary [0,17] [0,18]
 AREA MainRoomToOtherRooms GotoBarracksAndTreasureRoom [5,13] [5,13]
 
-AREA TreasureRoomToMainRoom GoBackToMainRoomFromTreasureRoom [29,23] [29,24]
-AREA LuaQuartersToMainRoom GoBackToMainRoomFromLuaQuarters [7,4] [7,4]
-AREA LibraryToMainRoom GoBackToMainRoomFromLibrary [18,7] [18,8]
+AREA TreasureRoomToMainRoom GoBackToMainRoomFromTreasureRoom [39,23] [39,24]
+AREA LuaQuartersToMainRoom GoBackToMainRoomFromLuaQuarters [19,25] [19,25]
 
 AREA WentToPortGreagor GotoPortGreagorFirstTime [1,0] [3,0]
 AREA MainRoomToPort GotoPortGreagor [1,0] [3,0]
@@ -192,21 +191,40 @@ NoFade
 ENDA
 
 GotoLuasQuarters:
-ENUF MainRoomToOtherRooms
+InitiateTileChangeInHub(ClearChapter2Traps, AddLuaQuartersTraps, 4, LuaInHerQuarters)
+ENUT MainRoomToPort
+ENUF LuaQuartersToMainRoom
 NoFade
 ENDA
 
+AddLuaQuartersTraps:
+AddTrap(BlueSigilTrapID, 19, 25)
+NoFade
+ENDA
+
+ClearLuaQuartersTraps:
+RemoveTrapAtCoords(19, 25)
+NoFade
+ENDA
+
+LuaInHerQuarters:
+UNIT Lua Captain 0 Level(10,Ally,False) [19,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+LuaBackFromQuarters:
+UNIT Lua Captain 0 Level(10,Ally,False) [7,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
 GoBackToMainRoomFromLuaQuarters:
-ENUF LuaQuartersToMainRoom
+InitiateTileRevertInHub(ClearLuaQuartersTraps, AddChapter2Traps, 4, LuaBackFromQuarters, MainRoomSpawnEvent)
+ENUF MainRoomToOtherRooms
+ENUF MainRoomToPort
 NoFade
 ENDA
 
 GotoLibrary:
 InitiateLoadMapHub(HubALibrary, LuaInDaHubLibrary, LibrarySpawnEvent)
-NoFade
-ENDA
-
-LibrarySpawnEvent:
+ENUF LibraryToMainRoom
 NoFade
 ENDA
 
@@ -214,34 +232,57 @@ LuaInDaHubLibrary:
 UNIT Lua Captain 0 Level(10,Ally,False) [18,8] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
-GoBackToMainRoomFromLibrary:
-InitiateLoadMapHub(Chapter2, LuaFromDaLibrary, MainRoomSpawnEvent)
+LibrarySpawnEvent:
+LoadCutsceneUnits(HubALibraryRazvanGroup)
+LoadPlayerUnits(HubALibraryHermenegildoGroup)
+TurnUnitGreenIfAlive(Razvan, 1)
+TurnUnitGreenIfAlive(Hermenegildo, 2)
 NoFade
 ENDA
 
-LuaFromDaLibrary:
-UNIT Lua Captain 0 Level(10,Ally,False) [0,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+HubALibraryRazvanGroup:
+UNIT Razvan 0 0 Level(3,Ally,False) [7,3] 0 0 0 0 [Heal, Torch] NoAI
+UNIT
+
+HubALibraryHermenegildoGroup:
+UNIT Hermenegildo 0 0 Level(1,Ally,False) [9,3] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
 UNIT
 
 GotoBarracksAndTreasureRoom:
 InitiateTileChangeInHub(ClearChapter2Traps, AddTreasureRoomTraps, 1, LuaInDaTreasureRoom, TreasureRoomSpawnEvent)
 ENUF TreasureRoomToMainRoom
+ENUT MainRoomToPort
 NoFade
 ENDA
 
 TreasureRoomSpawnEvent:
+LoadPlayerUnits(CarmenXimoBaseGroup)
+TurnUnitGreenIfAlive(Carmen, 1)
+TurnUnitGreenIfAlive(Ximo, 2)
 NoFade
 ENDA
 
+CarmenXimoBaseGroup:
+UNIT Carmen Mage_F 0 Level(1,Ally,False) [28,24] 0 0 0 0 [Fire, Vulnerary] NoAI
+UNIT Ximo Archer 0 Level(1,Ally,False) [29,22] 0 0 0 0 [IronBow, Vulnerary] NoAI
+UNIT 
+
 GoBackToMainRoomFromTreasureRoom:
-InitiateTileRevertInHub(ClearTreasureRoomTraps, AddChapter2Traps, 1, LuaOnDaStairs, MainRoomSpawnEvent)
+InitiateTileRevertInHub(CUSAScrubDuo, ClearTreasureRoomTraps, AddChapter2Traps, 1, LuaOnDaStairs, MainRoomSpawnEvent)
 ENUF MainRoomToOtherRooms
+ENUF MainRoomToPort
+NoFade
+ENDA
+
+CUSAScrubDuo:
+TurnUnitBlueIfAlive(Carmen, 1)
+TurnUnitBlueIfAlive(Ximo, 2)
 NoFade
 ENDA
 
 MainRoomSpawnEvent:
 LoadPlayerUnits(OrlandoRahelUnitGroup)
-SpawnQuestSigil(WentToHubA1, 1, RedSigilTrapID, 6, 16)
+SpawnQuestSigil(WentToHubA1, 1, RedSigilTrapID, 17, 11)
 NoFade
 ENDA
 
@@ -345,7 +386,7 @@ UNIT Lua Captain 0 Level(10,Ally,False) [16,9] 0 0 0 0 [Cutlass, IronSword, Iron
 UNIT
 
 LuaInDaTreasureRoom:
-UNIT Lua Captain 0 Level(10,Ally,False) [29,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [39,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 LuaOnDaStairs:
@@ -407,8 +448,8 @@ NoFade
 ENDA
 
 AddTreasureRoomTraps:
-AddTrap(BlueSigilTrapID,29,23)
-AddTrap(BlueSigilTrapID,29,24)
+AddTrap(BlueSigilTrapID,39,23)
+AddTrap(BlueSigilTrapID,39,24)
 NoFade
 ENDA
 
@@ -420,12 +461,13 @@ RemoveTrapAtCoords(7,4)
 RemoveTrapAtCoords(5,13)
 RemoveTrapAtCoords(0,17)
 RemoveTrapAtCoords(0,18)
+RemoveQuestSigil(WentToHubA1, 1, 17, 11)
 NoFade
 ENDA
 
 ClearTreasureRoomTraps:
-RemoveTrapAtCoords(29,23)
-RemoveTrapAtCoords(29,24)
+RemoveTrapAtCoords(39,23)
+RemoveTrapAtCoords(39,24)
 NoFade
 ENDA
 
