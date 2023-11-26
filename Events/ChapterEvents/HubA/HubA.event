@@ -268,7 +268,7 @@ UNIT
 
 BeginningScene:
 // only here for chapter A1 testing
-ENUT EyeForAnEyeResetASMC
+ASMC EyeForAnEyeResetASMC
 ENUT LuaInAHubFlag
 ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
@@ -277,7 +277,7 @@ ENUT TavernToPort
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
 SVAL s1 6 //if 6 chapters completed
-BLT 2 sC s1 
+BNE 2 s1 sC 
     AddTrap(GreenSigilTrapID, 16, 10) //green means go
     CenterTextbox(HubAGoTime)
     ENUF GotoChapter2Flag
@@ -420,7 +420,7 @@ ENDA
 
 PortGreagorDocksFirstTime:
 UnsetAllHubChapterFlags
-InitiateTileChangeInHub(ClearHubATraps, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEventFirstTime)
+InitiateTileChangeInHub(ClearHubATrapsFirstTime, AddDockTraps, 0, LuaAtDaDocks, DocksSpawnEventFirstTime)
 ENUT DocksToPort
 ENUF CameBackFromDocks
 ENUT WentToHubA4
@@ -495,7 +495,7 @@ NoFade
 ENDA
 
 BackToLuaBase:
-InitiateLoadMapHub(Chapter2, ClearHubATraps, LuaBackFromPortGroup, MainRoomSpawnEvent)
+InitiateLoadMapHub(Chapter2, LuaBackFromPortGroup, MainRoomSpawnEvent)
 ENUF MainRoomToOtherRooms
 ENUF MainRoomToPort
 ENUT WindUpFlag1
@@ -539,8 +539,8 @@ ENUF ReadyForTakeoffFlag
 ENUF IgniswordsDead
 ENUF PilarEstelleHubATalkFlag
 ENUF DesiderioIdaHubATalkFlag
+CALL BackFromBaseTraps
 CALL PortSpawnEvent  //unset all chapter flags and port flags so you can walk around
-CALL AddHubATraps
 LoadPlayerUnits(LuaInDaHub)
 CAMERA_CENTERED Lua
 SetBackground(Fort)
@@ -549,6 +549,13 @@ MUSC OrlandoThemeID
 Text(HubABeginningScene6_2)
 EraseBackground
 MUSC PortGreagorID
+NoFade
+ENDA
+
+BackFromBaseTraps:
+AddTrap(BlueSigilTrapID,29, 15)
+AddTrap(BlueSigilTrapID,29, 16)
+AddTrap(BlueSigilTrapID,8, 20)
 NoFade
 ENDA
 
@@ -597,8 +604,11 @@ EraseBackground
 LOAD1 0 LuaFirstTripCaveGroup
 ENUN
 ENUT 4
+CAMERA_CENTERED [2,0]
 CenterTextbox(HubTutorial)
 SetChapterObjectiveText(HubAGoalWindow, HubAStatusObjective)
+CAMERA_CENTERED Lua
+STAL 5
 NoFade
 ENDB
 
@@ -755,6 +765,23 @@ AddTrap(BlueSigilTrapID,21, 4)
 AddTrap(BlueSigilTrapID,29, 15)
 AddTrap(BlueSigilTrapID,29, 16)
 AddTrap(BlueSigilTrapID,8, 20)
+CheckHowManyHubChaptersCompleted
+SVAL s1 6 //if 6 chapters completed
+BNE 2 s1 sC 
+    AddTrap(GreenSigilTrapID, 16, 10) //green means go
+LABEL 2
+NoFade
+ENDA
+
+ClearHubATrapsFirstTime:
+RemoveTrapAtCoords(20, 4)
+RemoveTrapAtCoords(21, 4)
+RemoveTrapAtCoords(29, 15)
+RemoveTrapAtCoords(29, 16)
+RemoveTrapAtCoords(8, 20)
+RemoveQuestSigil(WentToHubA2, 1, 11, 20) //red ones
+RemoveQuestSigil(WentToHubA3, 2, 23, 19)
+RemoveQuestSigil(WentToHubA6, 3, 20, 14)
 NoFade
 ENDA
 
@@ -767,6 +794,11 @@ RemoveTrapAtCoords(8, 20)
 RemoveQuestSigil(WentToHubA2, 1, 11, 20) //red ones
 RemoveQuestSigil(WentToHubA3, 2, 23, 19)
 RemoveQuestSigil(WentToHubA6, 3, 20, 14)
+CheckHowManyHubChaptersCompleted
+SVAL s1 6 //if 6 chapters completed
+BNE 5 s1 sC 
+    RemoveTrapAtCoords(16, 10) //green means go
+LABEL 5
 NoFade
 ENDA
 

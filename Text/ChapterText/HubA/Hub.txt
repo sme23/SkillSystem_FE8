@@ -428,7 +428,7 @@ Sure, merchants should be blathering[N]
 to the empire to do something about it[Beat][AN]
 [Beat]But, you know.[AN]
 [MR]
-Mmph[Beat]their incompetency is a blessing[N]
+Mm[Beat] their incompetency is a blessing[N]
 against these pompous bastards.[AN]
 Alright then.[A][X]
 
@@ -453,13 +453,12 @@ Loot: An assorted amount of treasure.[X]
 ## HubA4Confirm
 Set off for raiding?[X]
 
-
 ## HubA4Selection_Yes
 [MR][LoadLua]
 [ML][LoadPilar]
 [MR][2LB]
 Sounds like a plan, Pilar.[AN]
-Let's just hope there's no[N]
+Let's just hope for no[N]
 ambushes this time around.[AN] 
 [ML]
 I'll let the crew know.[AN]

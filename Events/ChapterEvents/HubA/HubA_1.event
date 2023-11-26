@@ -270,10 +270,12 @@ BLT 2 sC s1
 Text(ChA1LeandraRecruitPrompt)
 SVAL s1 0x1
 BNE 2 s1 sC
+MUSS EmergencyCrewmateID
 Text(ChA1LeandraRecruitedDialogue)
 SVAL s3 1000
 TAKEMONEY
 CUSA Leandra
+MURE 2
 GOTO 3
 LABEL 2
 ENUF A1_LeandraRecruited
@@ -295,10 +297,12 @@ LABEL 4
 Text(ChA1LeandraRecruitPrompt)
 SVAL s1 0x1
 BNE 5 s1 sC
+MUSS EmergencyCrewmateID
 Text(ChA1LeandraRecruitedDialogue)
 SVAL s3 1000
 TAKEMONEY 
 CUSA Leandra
+MURE 2
 GOTO 6
 LABEL 5
 ENUF A1_LeandraRecruited

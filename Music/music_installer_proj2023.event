@@ -82,6 +82,43 @@ SongTable(SwabbieTalkID,SwabbieTalk,MapMusicGroup)
 #include "songs/event/SwabbieTalk.event"
 }
 
+//17 - Emergency Crewmate
+{
+SongTable(EmergencyCrewmateID,EmergencyCrewmate,MapMusicGroup)
+#include "songs/event/EmergencyCrewmate.event"
+}
+
+//18 - Welcome Aboard, Matey
+{
+SongTable(WelcomeAboardMateyID,WelcomeAboardMatey,MapMusicGroup)
+#include "songs/event/WelcomeAboardMatey.event"
+}
+
+//19 - To The Crow's Nest
+{
+SongTable(ToTheCrowsNestID,ToTheCrowsNest,MapMusicGroup)
+#include "songs/event/ToTheCrowsNest.event"
+}
+
+//20 - Look At Me Wares
+{
+SongTable(LookAtMeWaresID,LookAtMeWares,MapMusicGroup)
+#include "songs/event/LookAtMeWares.event"
+}
+
+//21 - Sleepin' With The Sky Fishes
+{
+SongTable(SleepinWithTheSkyFishesID,SleepinWithTheSkyFishes,BattleMusicGroup)
+#include "songs/event/SleepinWithTheSkyFishes.event"
+}
+
+//22 - Drown In Good Intentions
+{
+SongTable(DrownInGoodIntentionsID,DrownInGoodIntentions,BattleMusicGroup)
+#include "songs/event/DrownInGoodIntentions.event"
+}
+
+
 // --------------- SONGS: GUI AND SFX ---------------
 
 // "GUI" refers to in-game jingles such as Level Up!
