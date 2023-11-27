@@ -33,7 +33,7 @@ Orlando's Theme[X]
 Swabbie Talk[X]
 
 ## SongName_EmergencyCrewmate
-Emergency Crewmate[X]
+New Hands On Deck[X]
 
 ## SongName_WelcomeAboardMatey
 Welcome Aboard, Matey[X]
