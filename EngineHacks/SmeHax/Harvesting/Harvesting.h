@@ -100,9 +100,12 @@ enum {
 };
 
 //EA literals
-extern u8* HarvestToolTiers[16];
+extern u8 HarvestToolTiers[16];
 extern HarvestTable HarvestingTable;
-extern u16* HarvestToolBuffer[16];
+extern u16 HarvestToolBuffer[16];
+extern u16 HarvestDescTableLink[16];
+
+extern void AddIngredientQuantity(u8 ingredientID, u8 val); //this is in Ingredients 
 
 //function prototypes
 u8 PickHarvestResult(HarvestResult* resultList);
@@ -113,6 +116,7 @@ int GetHarvestToolLevel(int tool);
 HarvestResult* GetHarvestResult(int id, int tool);
 void BuildToolList(u16* listPtr, Trap* harvestTile);
 void AddHarvestTile_ASMC(Proc* parent);
+
 u8 HarvestMenuHelpBox(MenuProc* menu, MenuCommandProc* menuItem);
 u8 HarvestMenu_ButtonBPressed(MenuProc* menu, MenuCommandProc* menuItem);
 u8 HarvestMenu_Usability(const MenuCommandDefinition* command, int number);
@@ -122,4 +126,7 @@ int HarvestMenu_SwitchIn(MenuProc* menu, MenuCommandProc* menuItem);
 int HarvestMenu_SwitchOut(MenuProc* menu, MenuCommandProc* menuItem);
 void StartHarvestHelpBox(int x, int y, int tool);
 void HbPopulate_AutoTool(HelpBoxProc* proc);
+void DoHarvest(Unit* unit, int tool);
 
+u8 UnitMenu_HarvestUsability(const MenuCommandDefinition* command, int number);
+u8 UnitMenu_HarvestEffect(MenuProc* menu, MenuCommandProc* menuItem);

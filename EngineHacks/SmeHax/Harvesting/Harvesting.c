@@ -13,20 +13,20 @@ u8 PickHarvestResult(HarvestResult* resultList) {
 
 void InitalizeHarvestToolLevels() {
 	for (int i = 0; i < 16; i++) {
-		*HarvestToolTiers[i] = 0;
+		HarvestToolTiers[i] = 0;
 	}
 }
 
 void SetHarvestToolLevel(int tool, int level) {
-	*HarvestToolTiers[tool] = level;
+	HarvestToolTiers[tool] = level;
 }
 
 void SetHarvestToolLevelIfHigher(int tool, int level) {
-	if (level > *HarvestToolTiers[tool]) SetHarvestToolLevel(tool, level);
+	if (level > HarvestToolTiers[tool]) SetHarvestToolLevel(tool, level);
 }
 
 int GetHarvestToolLevel(int tool) {
-	return *HarvestToolTiers[tool];
+	return HarvestToolTiers[tool];
 }
 
 HarvestResult* GetHarvestResult(int id, int tool) {
@@ -50,7 +50,7 @@ void BuildToolList(u16* listPtr, Trap* harvestTile) {
 		listPtr++;		
 	}
 	
-	*listPtr = 0;
+	*listPtr = 0xFFFF;
 	
 }
 
@@ -68,7 +68,7 @@ u8 HarvestMenuHelpBox(MenuProc* menu, MenuCommandProc* menuItem) {
 	//runs when the help box is being drawn.
 	//responsible for making the help box for this menu
 	
-	int tool = *HarvestToolBuffer[menuItem->commandDefinitionIndex - 1];
+	int tool = HarvestToolBuffer[menuItem->commandDefinitionIndex - 1];
 	
 	StartHarvestHelpBox(menuItem->xDrawTile << 3, menuItem->yDrawTile << 3, tool);
 	
@@ -98,6 +98,11 @@ void StartHarvestHelpBox(int x, int y, int tool) {
 void HbPopulate_AutoTool(HelpBoxProc* proc) {
 	//this will eventually be what's responsible for picking the thing to display
 	//which will be from a table based on the tool ID which is in proc->info->mid
+	
+	int tool = proc->info->mid;
+	proc->item = tool;
+	proc->mid = HarvestDescTableLink[tool];
+	
 }
 
 u8 HarvestMenu_ButtonBPressed(MenuProc* menu, MenuCommandProc* menuItem) {
@@ -116,10 +121,12 @@ u8 HarvestMenu_ButtonBPressed(MenuProc* menu, MenuCommandProc* menuItem) {
 
 u8 HarvestMenu_Usability(const MenuCommandDefinition* command, int number) {
 	//returns 1 if the # has a tool, otherwise returns 3
-	return 1;
+	if (HarvestToolBuffer[number]) return MCA_USABLE;
+	return MCA_NONUSABLE;
 }
+
 int HarvestMenu_TextDraw(MenuProc* menu, MenuCommandProc* menuItem) {
-	int tool = *HarvestToolBuffer[menuItem->commandDefinitionIndex - 1];
+	int tool = HarvestToolBuffer[menuItem->commandDefinitionIndex - 1];
 
 	//DrawItemMenuLine is not going to do the thing that its supposed to, it will draw the item of the tool's ID. need to copy this later
     DrawItemMenuLine(&menuItem->text, tool, 1, gBg0MapBuffer + TILEMAP_INDEX(menuItem->xDrawTile, menuItem->yDrawTile));
@@ -129,18 +136,80 @@ int HarvestMenu_TextDraw(MenuProc* menu, MenuCommandProc* menuItem) {
 
 u8 HarvestMenu_Effect(MenuProc* menu, MenuCommandProc* menuItem) {
 	//roll the harvest result, do a popup for it, set the action to wait
+	
+	ClearBG0BG1();
+	
+	DoHarvest(gActiveUnit, menu->commandIndex);
+
+    return ME_DISABLE | ME_END | ME_PLAY_BEEP;
+	
 }
 
 int HarvestMenu_SwitchIn(MenuProc* menu, MenuCommandProc* menuItem) {
 	//runs when you move the cursor and the menuItem index is the newly selected option
+	//this was copied from item menu but seems to only be used for the box that we don't have with the item use desc in it
 }
 
 int HarvestMenu_SwitchOut(MenuProc* menu, MenuCommandProc* menuItem) {
 	//runs when you move the cursor and the menuItem index is the previously selected option
 }
 
+void DoHarvest(Unit* unit, int tool) {
+	//get the trap at the location that the given unit is standing
+	Trap* trap = GetTrapAt(unit->xPos, unit->yPos);
+	
+	//get the first HarvestResult 
+	HarvestResult* result = GetHarvestResult(trap->data[0], tool);
+	
+	//get a random number from 1-100
+	int rand = NextRN_N(100) + 1;
+	
+	while (true) {
+		// is the current result's weight greater than the result?
+		if (result->weight > rand) break; // pick this result
+		
+		//otherwise, subtract weight from rand
+		rand -= result->weight;
+		
+		//and increment result
+		result++;
+		
+		//loop until if statement is true
+	}
+	
+	// result is now the chosen result
+	// figure out how much of resultID we're going to give
+	// at least for now we'll just give an amount equal to tool level
+	AddIngredientQuantity(result->resultID,  GetHarvestToolLevel(tool));
+	
+	//set trap as harvested
+	trap->data[1] = 1;
+	
+	//set action taken
+   gActionData.unitActionType = 0; //wait
 
+	//at this point we can do a popup for what you got and how much,
+	//need to make the popup first so NYI
+	
+}
 
-
-
-
+u8 UnitMenu_HarvestUsability(const MenuCommandDefinition* command, int number) {
+	// this is the one in the unit menu that lets us harvest
+	Trap* trap = GetSpecificTrapAt(gActiveUnit->xPos, gActiveUnit->yPos, TRAP_HARVEST_TILE);
+	
+	if (!trap) return MCA_NONUSABLE; //unusable if no harvest point beneath us
+	
+	bool haveTool = false;
+	BuildToolList(&HarvestToolBuffer[0], trap);
+	
+	u16* buffer = &HarvestToolBuffer[0];
+	
+	for (int i = 0; i < 16; i++) {
+		if (*buffer == 0xFFFF) break; //exit when end of buffer is reached
+		if (HarvestToolTiers[*buffer] != 0) haveTool = true;
+		buffer++;
+	}
+		
+	if (haveTool) return 1;
+	return 3;
+}

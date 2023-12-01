@@ -9,7 +9,10 @@ u8 GetIngredientQuantity(u8 ingredientID) {
 }
 
 void AddIngredientQuantity(u8 ingredientID, u8 val) {
-	IngredientQuantityTable[ingredientID].quantity += val;
+	int i = IngredientQuantityTable[ingredientID].quantity;
+	i += val;
+	if (i > 255) i = 255;
+	IngredientQuantityTable[ingredientID].quantity = i;
 }
 
 

@@ -70,6 +70,31 @@ POIN ExampleHarvestResult
 // each set should have weights adding up to 100; anything beyond that is ignored
 // this is why it doesn't need a terminator despite being variable-length
 
+HarvestingTable:
+POIN HarvestTable
+
+HarvestDescTableLink:
+POIN HarvestToolDescTable
+
+ALIGN 4
+HarvestToolDescTable:
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+SHORT 5
+
 ALIGN 4
 ExampleHarvestResult:
 BYTE 0 80
@@ -79,7 +104,7 @@ BYTE 3 4
 BYTE 4 1
 
 ALIGN 4
-HarvestingTable:
+HarvestTable:
 FILL (256 * 4)
 
 #define SetHarvestTable(id,ptr) "PUSH; ORG HarvestingTable+(id*4); POIN ptr; POP"
