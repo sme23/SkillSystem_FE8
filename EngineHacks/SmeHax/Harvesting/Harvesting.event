@@ -4,21 +4,66 @@
 //traps on maps contain indices for this table for their harvest results
 //harvest result table points to harvest result weights
 
-ALIGN 4
-HarvestTable: //pointers to sets of pointers
-FILL (256*4)
+HarvestMenuDef:
+BYTE 1  // X coord
+BYTE 1  // Y coord
+BYTE 14 // Width
+BYTE 0  // Height
+BYTE 0  // Style
+BYTE 0 0 0 // Padding
+POIN HarvestMenuCommands // Commands Pointer
 
-#define HarvestTableEntry(id,harvestSet) "PUSH; ORG HarvestTable+(id*4); POIN harvestSet; POP"
+POIN 0 // OnInit function; void
+POIN 0 // OnEnd function; void
+POIN 0 // unknown function; void
+POIN HarvestMenu_ButtonBPressed // OnBPress function; u8
+POIN $4F521 // OnRPress function; u8 MenuAutoHelpBoxSelect
+POIN HarvestMenuHelpBox // OnHelpBox function; u8
+
+#define HarvestMenuCommand " 	\
+	POIN $D7CB8;  				\
+	SHORT 0 0;  				\
+	WORD 0;  					\
+	POIN HarvestMenu_Usability; \
+	POIN HarvestMenu_TextDraw;	\
+	POIN HarvestMenu_Effect;	\
+	POIN 0; 					\
+	POIN HarvestMenu_SwitchIn; 	\
+	POIN HarvestMenu_SwitchOut; "
+	
+/*
+CONST_DATA struct MenuDef gItemMenuDef = {
+    {1, 1, 14, 0},
+    0,
+    gItemMenuItems,
+    0, 0, 0,
+    ItemMenu_ButtonBPressed,
+    MenuAutoHelpBoxSelect,
+    ItemMenuHelpBox
+};
+*/
+
+ALIGN 4
+HarvestMenuCommands: //no more than 5 options per harvest
+HarvestMenuCommand
+HarvestMenuCommand
+HarvestMenuCommand
+HarvestMenuCommand
+HarvestMenuCommand
 
 // each HarvestSet pointed to from HarvestTable entries
 // contains pointers indexed by tool ID
 // no need for entries beyond what tools there are
 
+HarvestToolTiers:
+WORD $203FE00
+
+HarvestToolBuffer:
+WORD $203FDF0
+
 ALIGN 4
 ExampleHarvestSet:
 POIN ExampleHarvestResult
-
-HarvestTableEntry(0,ExampleHarvestSet)
 
 // each HarvestResult pointed to from a HarvestSet
 // contains a list of ingredientID - weight byte pairs
@@ -32,4 +77,14 @@ BYTE 1 10
 BYTE 2 5
 BYTE 3 4
 BYTE 4 1
+
+ALIGN 4
+HarvestingTable:
+FILL (256 * 4)
+
+#define SetHarvestTable(id,ptr) "PUSH; ORG HarvestingTable+(id*4); POIN ptr; POP"
+
+SetHarvestTable(0,ExampleHarvestSet)
+
+
 
