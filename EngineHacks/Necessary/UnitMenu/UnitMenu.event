@@ -79,6 +79,7 @@ UnitMenuTable:
   //Color options: NormalText, GrayText, BlueText, OrangeText, GreenText (flashes), BlackText
   //MenuCommand(DualAtkTxtID,DualAtkDescId,0,DualAtkCheck,DualAtkSelected) 
   
+  MenuCommand(0x67A, 0x6CC, BlueText, UnitMenu_HarvestUsability, UnitMenu_HarvestEffect)
   
   MenuCommand(0x67A, 0x6CC, BlueText, $22FDC, $23020)
   // UM_Seize

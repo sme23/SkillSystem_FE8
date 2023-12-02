@@ -213,3 +213,13 @@ u8 UnitMenu_HarvestUsability(const MenuCommandDefinition* command, int number) {
 	if (haveTool) return 1;
 	return 3;
 }
+
+u8 UnitMenu_HarvestEffect(MenuProc* menu, MenuCommandProc* menuItem) {
+	
+}
+
+void InitToolsTest_ASMC() {
+	for (int i = 0; i < 16; i++) {
+		HarvestToolTiers[i] = 1;
+	}
+}

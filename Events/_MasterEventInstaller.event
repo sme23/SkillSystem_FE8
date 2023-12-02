@@ -1,3 +1,6 @@
 #include "REDAHelpers.event"
 #include "KillOpening.event"
 
+{
+	#include "testmap.event"
+}
