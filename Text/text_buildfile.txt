@@ -193,3 +193,5 @@ Unequip[X]
 
 ## UnequipEquipmentDescription
 Remove this equipment.[X]
+
+#include "soundroom_text.txt"
