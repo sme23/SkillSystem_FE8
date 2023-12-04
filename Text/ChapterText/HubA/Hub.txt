@@ -193,10 +193,10 @@ A-2: The Rebels' Incendiv[X]
 Objective: Defeat bosses[X]
 
 ## HubA2Units
-A-2 units[X]
+Units: Jaime (Peg. Rider), Leonor (Cleric)[X]
 
 ## HubA2Loot
-A-2 loot[X]
+Loot: A-2 loot[X]
 
 ## HubA2Confirm
 Accept this job?[X]
@@ -349,10 +349,10 @@ A-3: Under Log and Key[X]
 Objective: Escape[X]
 
 ## HubA3Units
-A-3 units[X]
+Units: Ondeh (Hunter), Biko (Soldier)[X]
 
 ## HubA3Loot
-A-3 loot[X]
+Loot: Bow and lance users will benefit.[X]
 
 ## HubA3Confirm
 Go to Chapter A3?[X]
@@ -542,10 +542,10 @@ A-5: The Big Gun[X]
 Objective: Kill / Escape[X]
 
 ## HubA5Units
-A-5 units[X]
+Units: Tangyuan (Dragon Rider)[X]
 
 ## HubA5Loot
-A-5 loot[X]
+Loot: A group of experimental weapons.[X]
 
 ## HubA5Confirm
 Worth the risk?[X]
@@ -631,16 +631,16 @@ and double-cross me.[AN]
 [No][X]
 
 ## HubA6Title
-A-6: title here[X]
+A-6: Race Against Time[X]
 
 ## HubA6Objective
-A-6 objective[X]
+Objective: Rout[X]
 
 ## HubA6Units
-A-6 units[X]
+Units: Suzanne (Gunner), Matteo (Merc.)[X]
 
 ## HubA6Loot
-A-6 loot[X]
+Loot: Powerful accessories and scrolls.[X]
 
 ## HubA6Confirm
 Accept this job?[X]

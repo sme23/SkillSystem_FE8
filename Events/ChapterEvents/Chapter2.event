@@ -503,6 +503,13 @@ AddTrap(RedSigilTrapID,18,12)
 AddTrap(RedSigilTrapID,25,10)
 AddTrap(RedSigilTrapID,25,11)
 AddTrap(RedSigilTrapID,25,12)
+SetBackground(Fort)
+Text(Ch2BeginningScene1)
+Text(Ch2BeginningScene2)
+Text(Ch2BeginningScene3)
+Text(Ch2BeginningScene4)
+Text(Ch2BeginningScene5)
+Text(Ch2BeginningScene6)
 GotoPrepScreen
 NoFade
 ENDA
@@ -575,6 +582,12 @@ UNIT
 
 
 EndingScene:
+SetBackground(Fort)
+Text(Ch2EndingScene1)
+Text(Ch2EndingScene2)
+Text(Ch2EndingScene3)
+Text(Ch2EndingScene4)
+Text(Ch2EndingScene5)
 GOTO_TITLE
 NoFade
 ENDA

@@ -760,8 +760,8 @@ three ships, then it's worth it![AN][X]
 
 //If the pirate captain is already dead
 ## A4_TurnEvent3_B_B
-[FFR][LoadA4RebelCaptain]
-Looks like a battle's just getting[N] 
+[FR][LoadA4RebelCaptain]
+Looks like a battle's just getting[N]
 wrapped up over there[Beat][AN]
 These guys clearing the crew[Beat][AN]
 They gotta be some sort of[N]
