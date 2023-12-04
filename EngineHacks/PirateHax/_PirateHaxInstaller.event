@@ -103,6 +103,9 @@
 //#include "StealWithFullInv/Installer.event"
 //Vesly
 
+#include "PortraitHeight/PortraitShiftTable(installthisone).event"
+//2WB
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0
@@ -201,4 +204,12 @@ ORG $837B8 //gameover
 BYTE SleepinWithTheSkyFishesID
 ORG $83628 //unit death
 BYTE DrownInGoodIntentionsID
+POP
+
+// Rescue Trade
+PUSH
+ORG 0x0229A8
+SHORT 0x1C00
+ORG 0x022A10
+SHORT 0x1C00
 POP

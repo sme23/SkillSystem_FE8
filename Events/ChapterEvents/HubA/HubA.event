@@ -642,7 +642,7 @@ UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [14,5] 0 0 0 0 [IronSword, Ligh
 UNIT
 
 DurghamUnitGroup:
-UNIT Durgham LanceCav 0 Level(5,NPC,False) [1,20] 0 0 0 0 [IronLance, SteelLance, Vulnerary] NoAI
+UNIT Durgham LanceCav 0 Level(4,NPC,True) [1,20] 0 0 0 0 [IronLance, SteelLance, Vulnerary] NoAI
 UNIT
 
 SamsonArranUnitGroup:

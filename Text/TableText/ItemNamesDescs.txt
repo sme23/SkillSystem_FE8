@@ -379,3 +379,13 @@ Knight Ring[X]
 ## KnightRingDesc
 Allows this unit to move again after[N]
 an action with remaining movement.[X]
+
+## MineName
+Mine[X]
+
+## MineDesc
+A trap that explodes when walked on.[X]
+
+## MineUseDesc
+Use this to place[N]
+down a mine.[X]
