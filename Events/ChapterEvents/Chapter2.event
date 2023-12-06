@@ -13,10 +13,10 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0, IgnacioBoatReinforcements, 3)
 TurnEventPlayer(0, ElodiaDecidesToCharge, 7)
 TurnEventPlayer(LuaInAHubFlag, ObjectiveExplanation, 1)
 TurnEventPlayer(Ch2ReinforcementFlags, BoatPursuerReinforcements, 1, 255)
-TurnEventPlayer(Ch2ReinforcementFlags, IgnacioBoatReinforcements, 3)
 TurnEventPlayer(ReadyForTakeoffFlag, TheGangTakesOff, 1, 255)
 TurnEventPlayer(WindUpFlag3, WindUpThirdTurn, 1, 255)
 TurnEventPlayer(WindUpFlag2, WindUpSecondTurn, 1, 255)
@@ -503,6 +503,13 @@ AddTrap(RedSigilTrapID,18,12)
 AddTrap(RedSigilTrapID,25,10)
 AddTrap(RedSigilTrapID,25,11)
 AddTrap(RedSigilTrapID,25,12)
+SetBackground(Fort)
+Text(Ch2BeginningScene1)
+Text(Ch2BeginningScene2)
+Text(Ch2BeginningScene3)
+Text(Ch2BeginningScene4)
+Text(Ch2BeginningScene5)
+Text(Ch2BeginningScene6)
 GotoPrepScreen
 NoFade
 ENDA
@@ -575,6 +582,12 @@ UNIT
 
 
 EndingScene:
+SetBackground(Fort)
+Text(Ch2EndingScene1)
+Text(Ch2EndingScene2)
+Text(Ch2EndingScene3)
+Text(Ch2EndingScene4)
+Text(Ch2EndingScene5)
 GOTO_TITLE
 NoFade
 ENDA

@@ -100,8 +100,11 @@
 #include "prep_shop_each_chapter2/Installer.event"
 //7743
 
-#include "StealWithFullInv/Installer.event"
+//#include "StealWithFullInv/Installer.event"
 //Vesly
+
+#include "PortraitHeight/PortraitShiftTable(installthisone).event"
+//2WB
 
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
@@ -185,4 +188,28 @@ PUSH //fixes level reset in prep screen - Pikmin1211
 	//SHORT 0x1840 0x81D0 0x491C 0x2008 0x5628 0x8008
 	ORG 0x736C4
 	SHORT 0x7A28
+POP
+
+//changing several vanilla songs to a different, not hardcoded ID
+PUSH
+ORG $7272A //promotion
+BYTE ToTheCrowsNestID
+ORG $B4C0C //vendor
+BYTE LookAtMeWaresID
+ORG $835FA 
+BYTE SleepinWithTheSkyFishesID
+ORG $212CA
+BYTE SleepinWithTheSkyFishesID
+ORG $837B8 //gameover 
+BYTE SleepinWithTheSkyFishesID
+ORG $83628 //unit death
+BYTE DrownInGoodIntentionsID
+POP
+
+// Rescue Trade
+PUSH
+ORG 0x0229A8
+SHORT 0x1C00
+ORG 0x022A10
+SHORT 0x1C00
 POP

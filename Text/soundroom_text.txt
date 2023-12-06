@@ -1,0 +1,51 @@
+
+## SongName_PortGreagor
+Port Greagor[X]
+
+## SongName_BeatToQuarters
+Beat to Quarters[X]
+
+## SongName_DistantSkies
+Distant Skies[X]
+
+## SongName_ScalleywagsOnDeck
+Scalleywags On Deck[X]
+
+## SongName_FoolsBold
+Fool's Bold[X]
+
+## SongName_ABlackheartsPride
+A Blackheart's Pride[X]
+
+## SongName_AvastMeHearties
+Avast Me Hearties[X]
+
+## SongName_StillZephyrs
+Still Zephyrs[X]
+
+## SongName_TheRebelsKnife
+The Rebel's Knife[X]
+
+## SongName_OrlandoTheme
+Orlando's Theme[X]
+
+## SongName_SwabbieTalk
+Swabbie Talk[X]
+
+## SongName_EmergencyCrewmate
+New Hands On Deck[X]
+
+## SongName_WelcomeAboardMatey
+Welcome Aboard, Matey[X]
+
+## SongName_ToTheCrowsNest
+To The Crow's Nest[X]
+
+## SongName_LookAtMeWares
+Look At Me Wares[X]
+
+## SongName_SleepinWithTheSkyFishes
+Sleepin' With the Sky Fishes[X]
+
+## SongName_DrownInGoodIntentions
+Drown in Good Intentions[X]

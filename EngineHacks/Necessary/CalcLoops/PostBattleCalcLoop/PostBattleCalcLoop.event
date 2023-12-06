@@ -15,9 +15,9 @@ POIN InitSkillBuffers //Refresh skill buffers so freshly learned post-battle ski
 POIN GroupAI BreakPostBattle SavageBlow StudiousBlow NailedDown BreathOfLife Despoil Lifetaker Fury PoisonStrike GrislyWound //lifetaker should probably go after any messages because it can mess with the palette a bit
 POIN Kleptomania
 POIN ChapterKillCounter
+POIN DeftHands
 // POIN StrTaker SklTaker SpdTaker DefTaker ResTaker LukTaker MagTaker MovTaker Hardworking // these should be replaced with versions using the kill counter and be placed in stat getters
 POIN Canto CantoPlus SeaShanty Canter Galeforce ReMove Powerstaff CulturedPostCombat Gridmaster LiquidCourage  //this order for canto and friends is the only one I tested
-POIN DeftHands 
 POIN DelayedTonicDeletion //this goes last
 WORD 0 //Terminator
 

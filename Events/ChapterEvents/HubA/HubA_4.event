@@ -23,12 +23,13 @@ POIN BeginningScene EndingScene
 //16 - pirate boss battle quote
 //17 - rebel boss battle quote
 //18 - turned on by JuanReaction misc event
+//19 - rebel arrival event flag (can't share with other turn based events for whatever reason)
 
 TurnBasedEvents:
 TurnEventPlayer(0, SurvivorsTalk, 1)
 TurnEventPlayer(0, RebelPremonition, 2)
 TurnEventPlayer(0, ThiefArrival, 4)
-TurnEventPlayer(12, RebelArrival, 3, 5)
+TurnEventPlayer(19, RebelArrival, 3, 5)
 TurnEventPlayer(12, RebelWarning1, 3)
 TurnEventPlayer(12, RebelWarning2, 5)
 TurnEventPlayer(12, RebelWarning3, 6)
@@ -70,8 +71,8 @@ SVAL s1 7
 BEQ 1 s1 sC  //if the turn count is 7, then we branch to the rebel spawn event
 	CHECK_EVENTID 10
 	BNE 1 s0 sC //if the pirate boss is dead, play the event early
-	ENUF 12 //unset the rebel arrival flag if neither of these are true
-	GOTO 2
+		ENUF 19 //unset the rebel arrival flag if neither of these are true
+		GOTO 2
 LABEL 1
 	CAMERA_CENTERED [23,16]
 	TILECHANGE 1
@@ -101,13 +102,14 @@ LABEL 1
 		Text(A4_TurnEvent4_B)
 		SetAI(A4PirateBoss,0,0,4,0)
 	LABEL 10
+	ENUT 12
+	SetChapterObjectiveText(ChA4GoalWindowB, ChA4StatusObjectiveB)
 LABEL 2
 NoFade
 ENDA
 
 RebelWarning1:
 ENUF 12 //turn this off, as the player could still potentially kill the boss early
-//Text(ch4placeholder)
 CHECK_EVENTID 10 //play this event if the boss hasn't been killed
 BNE 4 s0 sC
 	CAMERA_CENTERED [23,25]
@@ -148,23 +150,26 @@ CharacterEventBothWays(9, JuanRecruitment, Lua, Juan)
 END_MAIN
 
 JuanRecruitment:
-//play recruitment theme
+MUSS WelcomeAboardMateyID
 SetAI(Juan,0,0,0,0)
 Text(ChA4JuanRecruitText)
 CUSA Juan
+MURE 2
 NoFade
 ENDA
 
 JuanReaction:
+CHECK_ALIVE Juan
+BEQ 7 s0 sC //if he's dead, branch and don't check allegiance
 CHECK_ALLEGIANCE Juan //returns 0 if he's a player, 2 if an NPC
 BNE 7 s0 sC //skip to label 7 if Juan is not a player unit
-CHECK_TURNS
-SVAL s1 2
-BNE 7 s1 sC //skip if not turn 2
-CHECK_ACTIVEID Lua //returns 1 if Lua, 0 if not
-BEQ 7 s0 sC //skip if Lua is not the active unit
-	CameraCursor(Juan)
-	Text(A4_JuanReaction_Optional)
+	CHECK_TURNS
+	SVAL s1 2
+	BNE 7 s1 sC //skip if not turn 2
+		CHECK_ACTIVEID Lua //returns 1 if Lua, 0 if not
+		BEQ 7 s0 sC //skip if Lua is not the active unit
+			CameraCursor(Juan)
+			Text(A4_JuanReaction_Optional)
 LABEL 7
 NoFade
 ENDA
@@ -236,7 +241,7 @@ UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackIn
 //turn 2
 UNIT A4Pirate Brigand 0 Level(3, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
 UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI //dies in a gag for Juan's recruitment convo
-UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, (HPTonic << 8)|Tonic, TealGem] ChargeAI //speed tonic guy
+UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, Tonic, TealGem] ChargeAI //speed tonic guy
 UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3
 UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
@@ -244,7 +249,7 @@ UNIT A4Pirate Mercenary 0 Level(3, Enemy, True) [5,16] 0 0 0 0 [IronSword] Group
 UNIT A4Pirate Fighter 0 Level(3, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
 //turn 4
 UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
-UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,17] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
+UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
 UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
 //turn 5
 UNIT A4Pirate Brigand 0 Level(3, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
@@ -252,7 +257,7 @@ UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupT
 UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
 //turn 6
 UNIT A4Pirate Myrmidon 0 Level(3, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [6,21] 0 0 0 0 [Elfire, (HPTonic << 8)|Tonic] GroupThreeAI //def tonic
+UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [6,21] 0 0 0 0 [Elfire, Tonic] GroupThreeAI //def tonic
 UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
 UNIT A4Pirate Mage 0 Level(3, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
 //turn 7
@@ -367,6 +372,9 @@ REMOVEALL_RED
 LOAD1 1 NPCGroup
 LOAD1 1 EnemyGroup
 ENUN
+SetUnitItemDurability(9, 11, 1, SpdTonic) 
+SetUnitItemDurability(6, 21, 1, DefTonic) 
+STAL 1
 GotoPrepScreen
 NoFade
 ENDA

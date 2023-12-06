@@ -66,8 +66,8 @@ I won't leave a debt unpaid![A][X]
 
 ## XimoDQ
 [MidRight][LoadXimo]
-Guess they got too close, huh?[A]
-Sorry, Ma, you were right.[N]
+Guess they got too close, huh?[N]
+Sorry, Ma, you were right.[AN]
 I shoulda never left[Beat][N]
 Just got myself killed.[A][CloseEyes][X]
 

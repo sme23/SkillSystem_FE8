@@ -1130,6 +1130,8 @@ ORG SkillIcon(AnalyzeID)
 #incbin "SkillIcons/TriangleAdeptB.dmp"
 ORG SkillIcon(NailedDownID)
 #incbin "SkillIcons/Anathema.dmp"
+ORG SkillIcon(ForestFriendID)
+#incbin "SkillIcons/Resourceful.dmp"
 
 
 //don't need them
