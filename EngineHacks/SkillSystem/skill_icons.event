@@ -1132,6 +1132,8 @@ ORG SkillIcon(NailedDownID)
 #incbin "SkillIcons/Anathema.dmp"
 ORG SkillIcon(ForestFriendID)
 #incbin "SkillIcons/Resourceful.dmp"
+ORG SkillIcon(CanterID)
+#incbin "SkillIcons/Canto.dmp"
 
 
 //don't need them

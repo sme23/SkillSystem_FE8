@@ -57,7 +57,7 @@
 
 
 #define InitiateLoadMapHub(chapterId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; LOMA chapterId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
-#define InitiateLoadMapHub(chapterId, eventPointer, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; LOMA chapterId; STAL 10; CALL eventPointer; STAL 10; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
+#define InitiateLoadMapHub(chapterId, eventPointer, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; CALL eventPointer; STAL 10; RemoveAll; LOMA chapterId; STAL 10; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 
 #define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); LABEL labelId"
 #define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup, eventOffset) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); CALL eventOffset; LABEL labelId"

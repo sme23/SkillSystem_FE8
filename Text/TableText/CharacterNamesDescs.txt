@@ -154,9 +154,9 @@ his confidence. Ondeh's brother.[X]
 Juan[X]
 
 ## JuanDesc
-Conman
+Conman[N]
 A suave rogue who always finds his[N]
-pockets full, through words or action.[X]
+pockets full, whether by word or deed.[X]
 
 ## MatteoName
 Matteo[X]
