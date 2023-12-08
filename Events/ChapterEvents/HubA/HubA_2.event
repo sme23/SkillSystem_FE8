@@ -45,37 +45,37 @@ END_MAIN
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword] NoAI
-UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Heal, Vulnerary] NoAI
+UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Heal, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [12,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar 0 0 Level(10,Ally,False) [10,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar 0 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(10,Ally,False) [10,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(10,Ally,False) [12,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 Units2:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword] NoAI
-UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Heal, Vulnerary] NoAI
+UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Heal, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [12,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar 0 0 Level(10,Ally,False) [10,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar 0 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar 0 0 Level(10,Ally,False) [9,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [10,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [12,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(10,Ally,False) [9,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(10,Ally,False) [8,15] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(10,Ally,False) [11,15] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 NewUnits:
-UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword] NoAI
-UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Heal, Vulnerary] NoAI
+UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(5,Ally,True) [11,11] 0 0 0 0 [Rescue, Heal, Vulnerary] NoAI
 UNIT
 
 NPCs:
@@ -173,9 +173,9 @@ UNIT
 */
 
 Traps1:
-GreenSigil(9,18)
-GreenSigil(10,18)
-GreenSigil(12,18)
+RedSigil(9,18)
+RedSigil(10,18)
+RedSigil(12,18)
 ENDTRAP
 ALIGN 4
 
@@ -184,7 +184,6 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-NoFade
 WEATHER 7
 COUNTER_SET 0x1 0x0
 FLAG_T AllUnitsMustEscapeFlag
@@ -202,6 +201,7 @@ Text(A2PrePrepsCutscene3)
 SetBackground(Outside_Village_Day)
 Text(A2JaimeJoins)
 GotoPrepScreen
+NoFade
 ENDA
 
 JaimeConvo:
@@ -213,8 +213,8 @@ DISA Manfred
 ENDA
 
 CarmenJaimeTalk:
-NoFade
 Text(CarmenJaimeConvo)
+NoFade
 ENDA
 
 /*
@@ -324,13 +324,8 @@ GotoEndingSceneIfNoPlayers
 ENDA
 
 RescueVillage:
-// VillageEventItem(A2Village,HouseBG,Rescue)
+Text(A2Village)
 GiveItemWithDurability(SkillScroll,ResoluteSacrificeID,0xFFFF)
-ENDA
-
-LeonorRecruitment:
-Text(A2LeonorRecruitment)
-CUSA Leonor
 ENDA
 
 EndingScene:

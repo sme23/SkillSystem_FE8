@@ -1134,7 +1134,10 @@ ORG SkillIcon(ForestFriendID)
 #incbin "SkillIcons/Resourceful.dmp"
 ORG SkillIcon(CanterID)
 #incbin "SkillIcons/Canto.dmp"
-
+ORG SkillIcon(DogfightID)
+#incbin "SkillIcons/AirRaidSpd.dmp"
+ORG SkillIcon(EqualizerID)
+#incbin "SkillIcons/DarkBargain.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)
