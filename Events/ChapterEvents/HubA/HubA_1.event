@@ -104,7 +104,7 @@ UNIT Indio Shaman 0 Level(1, Ally, True) [0,4] 0 0 1 REDA4R2 [Surge, Vulnerary] 
 UNIT
 
 ContractorInitialEnemies:
-UNIT Leandra Fighter Geraldo Level(5, Enemy, True) [11, 5] 0 0 0 0 [IronAxe, HandAxe, Vulnerary] AttackInTwoAI
+UNIT Leandra Fighter Geraldo Level(5, Enemy, True) [11, 5] 0 0 0 0 [IronAxe, Swordreaver, Vulnerary] AttackInTwoAI
 UNIT Geraldo Mercenary Geraldo Level(5, Enemy, False) [12, 5] 0 0 0 0 [SteelSword] AttackInRangeAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [10, 4] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [12, 4] 0 0 0 0 [IronSword] AttackInTwoAI
@@ -408,6 +408,7 @@ NoFade
 ENDA
 
 EndingScene:
+MUSC 0x7FFF
 SetBackground(Ship)
 CHECK_ALIVE Indio
 BEQ 8 0x0 0xC
@@ -421,7 +422,6 @@ BEQ 10 0x0 0xC
 Text(ChA1EndingDialogueLeandraRecruited)
 LABEL 10
 Text(ChA1EndingDialogue2)
-EraseBackground
 GoToHubChapter(HubA)
 NoFade
 ENDA

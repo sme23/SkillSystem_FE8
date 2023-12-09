@@ -47,7 +47,7 @@ SoundRoomEntry(ToTheCrowsNestID,0,SongName_ToTheCrowsNest)
 SoundRoomEntry(LookAtMeWaresID,0,SongName_LookAtMeWares)
 SoundRoomEntry(SleepinWithTheSkyFishesID,0,SongName_SleepinWithTheSkyFishes)
 SoundRoomEntry(DrownInGoodIntentionsID,0,SongName_DrownInGoodIntentions)
-
+SoundRoomEntry(MeetTheCrewID, 0, SongName_MeetTheCrew)
 SoundRoomTerminator
 
 

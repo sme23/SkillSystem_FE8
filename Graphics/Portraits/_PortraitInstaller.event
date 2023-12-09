@@ -194,7 +194,21 @@ SuzanneMugData:
 #incbin "Dmp/Suzanne_minimug.dmp"
 setMugEntry(SuzanneMug, SuzanneMugData, 3, 5, 3, 3)
 
-//
+ALIGN 16
+DurghamMugData:
+#incbin "Dmp/Durgham_mug.dmp"
+#incbin "Dmp/Durgham_frames.dmp"
+#incbin "Dmp/Durgham_palette.dmp"
+#incbin "Dmp/Durgham_minimug.dmp"
+setMugEntry(DurghamMug, DurghamMugData, 2, 5, 2, 3)
+
+ALIGN 16
+BartzMugData:
+#incbin "Dmp/Bartz_mug.dmp"
+#incbin "Dmp/Bartz_frames.dmp"
+#incbin "Dmp/Bartz_palette.dmp"
+#incbin "Dmp/Bartz_minimug.dmp"
+setMugEntry(BartzMug, BartzMugData, 2, 5, 2, 3)
 
 ALIGN 16
 A4ImperialCaptainMugData:

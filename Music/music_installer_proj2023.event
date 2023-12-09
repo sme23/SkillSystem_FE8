@@ -118,6 +118,12 @@ SongTable(DrownInGoodIntentionsID,DrownInGoodIntentions,BattleMusicGroup)
 #include "songs/event/DrownInGoodIntentions.event"
 }
 
+//23 - Meet The Crew
+{
+SongTable(MeetTheCrewID,MeetTheCrew,BattleMusicGroup)
+#include "songs/event/MeetTheCrew.event"
+}
+
 
 // --------------- SONGS: GUI AND SFX ---------------
 
