@@ -24,8 +24,8 @@ DeathQuote(Felipe,HubA_2, 0xA, 0)
 DeathQuote(Sierra,HubA_2, 0xB, 0)
 DeathQuote(Manfred,HubA_2, 0xC, 0)
 
-DeathQuote(A4PirateBoss, HubA_4, 10, A4_A4PirateCaptainDefeated)
-DeathQuote(A4RebelBoss, HubA_4, 11, A4_A4RebelCaptainDefeated)
+DeathQuote(Stingray, HubA_4, 10, A4_StingrayDefeated)
+DeathQuote(Ramiro, HubA_4, 11, A4_RamiroDefeated)
 
 DeathQuote(Gunsmith, HubA_5, 0x9, 0)
 

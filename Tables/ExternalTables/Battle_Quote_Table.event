@@ -29,7 +29,7 @@ UnspecifiedBattleConvo(Sagargala, HubA_3, 1, A3_BossQuote_All)
 
 // Chapter A-4
 UnspecifiedBattleConvo(A4FunnyArcher, HubA_4, 13, 0)
-UnspecifiedBattleConvo(A4PirateBoss, HubA_4, 16, A4_A4PirateCaptainBattleQuote)
-UnspecifiedBattleConvo(A4RebelBoss, HubA_4, 17, A4_A4RebelCaptainBattleQuote)
+UnspecifiedBattleConvo(Stingray, HubA_4, 16, A4_StingrayBattleQuote)
+UnspecifiedBattleConvo(Ramiro, HubA_4, 17, A4_RamiroBattleQuote)
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator
