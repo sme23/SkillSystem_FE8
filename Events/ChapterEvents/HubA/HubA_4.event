@@ -74,6 +74,7 @@ BEQ 1 s1 sC  //if the turn count is 7, then we branch to the rebel spawn event
 		ENUF 19 //unset the rebel arrival flag if neither of these are true
 		GOTO 2
 LABEL 1
+	MUSC 0x7FFF
 	CAMERA_CENTERED [23,16]
 	TILECHANGE 1
 	STAL 30
@@ -85,22 +86,23 @@ LABEL 1
 	FADU 15
 	ENUN
 	Text(A4_TurnEvent3_A)
+	Music(AvastMeHeartiesID)
 	//if pirate boss is still alive
-	CHECK_EXISTS A4PirateBoss //returns 1 if true (thus is still alive)
+	CHECK_EXISTS Stingray //returns 1 if true (thus is still alive)
 	BEQ 8 s0 sC
 		Text(A4_TurnEvent3_B_A) //if he's alive, play this quote
 		GOTO 9
 	LABEL 8
 			Text(A4_TurnEvent3_B_B) //if he's dead, play this instead
 	LABEL 9
-	CameraCursor(A4RebelBoss)
+	CameraCursor(Ramiro)
 	Text(A4_TurnEvent4)
-	SetAI(A4Pirate,0,0,4,0)
-	CHECK_EXISTS A4PirateBoss //play this stuff if the pirate boss is still alive, else skip to label 10
+	SetAI(Razorblood,0,0,4,0)
+	CHECK_EXISTS Stingray //play this stuff if the pirate boss is still alive, else skip to label 10
 	BEQ 10 s0 sC
-		CameraCursor(A4PirateBoss)
+		CameraCursor(Stingray)
 		Text(A4_TurnEvent4_B)
-		SetAI(A4PirateBoss,0,0,4,0)
+		SetAI(Stingray,0,0,4,0)
 	LABEL 10
 	ENUT 12
 	SetChapterObjectiveText(ChA4GoalWindowB, ChA4StatusObjectiveB)
@@ -117,7 +119,7 @@ BNE 4 s0 sC
 	TILECHANGE 3
 	CameraCursor(Lua)
 	Text(A4_TurnEvent2_A)
-	CameraCursor(A4PirateBoss)
+	CameraCursor(Stingray)
 	Text(A4_TurnEvent2_B)
 LABEL 4
 NoFade
@@ -232,43 +234,43 @@ UNIT
 
 EnemyGroup:
 //debug
-//UNIT A4PirateBoss Deserter 0 Level(5,Enemy,True) [9,0] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
-//UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, True) [10,0] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
+//UNIT Stingray Deserter 0 Level(5,Enemy,True) [9,0] 0 0 0 0 [Javelin, SteelLance] BossAI
+//UNIT Ramiro SwordCav 0 Level(5, Enemy, True) [10,0] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
 //turn 1
-UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
-UNIT A4Pirate Mercenary 0 Level(3, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Razorblood Deserter 0 Level(3, Enemy, True) [6,5] 0 0 0 0 [IronLance] AttackInRangeAI
+UNIT Razorblood Mercenary 0 Level(3, Enemy, True) [8,4] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Razorblood Vanguard 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
 //turn 2
-UNIT A4Pirate Brigand 0 Level(3, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI //dies in a gag for Juan's recruitment convo
-UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, Tonic, TealGem] ChargeAI //speed tonic guy
-UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
+UNIT Razorblood Brigand 0 Level(3, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, False) [12,12] 0 0 0 0 [IronBow] ChargeAI //dies in a gag for Juan's recruitment convo
+UNIT Razorblood Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, Tonic, TealGem] ChargeAI //speed tonic guy
+UNIT Razorblood Ninja 0 Level(3, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3
-UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
-UNIT A4Pirate Mercenary 0 Level(3, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
-UNIT A4Pirate Fighter 0 Level(3, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
+UNIT Razorblood Hunter 0 Level(3, Enemy, True) [8,13] 0 0 0 0 [IronBow] GroupOneAI //KEEP AN EYE ON THIS GUY'S POSITIONING
+UNIT Razorblood Mercenary 0 Level(3, Enemy, True) [5,16] 0 0 0 0 [IronSword] GroupOneAI
+UNIT Razorblood Fighter 0 Level(3, Enemy, True) [12,13] 0 0 0 0 [IronAxe] GroupOneAI
 //turn 4
-UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
-UNIT A4Pirate Ninja 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
-UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
+UNIT Razorblood Deserter 0 Level(3, Enemy, True) [12,17] 0 0 0 0 [IronLance] GroupOneAI //grouped with the turn3 hunter
+UNIT Razorblood Ninja 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [IronDagger,IronKnife] AttackInRangeAI
+UNIT Razorblood Vanguard 0 Level(3, Enemy, True) [10,13] 0 0 0 0 [IronAxe] GroupTwoAI
 //turn 5
-UNIT A4Pirate Brigand 0 Level(3, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT A4Pirate Deserter 0 Level(3, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
-UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
+UNIT Razorblood Brigand 0 Level(3, Enemy, True) [11,17] 0 0 0 0 [IronAxe] AttackInRangeAI
+UNIT Razorblood Deserter 0 Level(3, Enemy, True) [8,17] 0 0 0 0 [IronLance] GroupTwoAI
+UNIT Razorblood Hunter 0 Level(3, Enemy, True) [13,19] 0 0 0 0 [IronBow, PureWater] GroupTwoAI
 //turn 6
-UNIT A4Pirate Myrmidon 0 Level(3, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
-UNIT A4Pirate Shaman 0 Level(3, Enemy, True) [6,21] 0 0 0 0 [Elfire, Tonic] GroupThreeAI //def tonic
-UNIT A4Pirate Vanguard 0 Level(3, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
-UNIT A4Pirate Mage 0 Level(3, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
+UNIT Razorblood Myrmidon 0 Level(3, Enemy, True) [7,20] 0 0 0 0 [IronSword] GroupThreeAI
+UNIT Razorblood Shaman 0 Level(3, Enemy, True) [6,21] 0 0 0 0 [Elfire, Tonic] GroupThreeAI //def tonic
+UNIT Razorblood Vanguard 0 Level(3, Enemy, True) [11,21] 0 0 0 0 [IronAxe] GroupFourAI
+UNIT Razorblood Mage 0 Level(3, Enemy, True) [11,22] 0 0 0 0 [Fire, Surge, Vulnerary] GroupFourAI
 //turn 7
-UNIT A4Pirate Fighter 0 Level(3, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
-UNIT A4Pirate Myrmidon 0 Level(3, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
-UNIT A4Pirate Hunter 0 Level(3, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
-UNIT A4PirateBoss Deserter 0 Level(5,Enemy,True) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
+UNIT Razorblood Fighter 0 Level(3, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI //first on the chopping block if the end is too much
+UNIT Razorblood Myrmidon 0 Level(3, Enemy, True) [10,22] 0 0 0 0 [SteelSword] GroupFiveAI
+UNIT Razorblood Hunter 0 Level(3, Enemy, True) [8,23] 0 0 0 0 [SteelBow] GroupFiveAI
+UNIT Stingray Deserter 0 Level(5,Enemy,True) [9,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI
 UNIT
 
 RebelSpawn:
-UNIT A4RebelBoss SwordCav 0 Level(5, Enemy, True) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
+UNIT Ramiro SwordCav 0 Level(5, Enemy, True) [20,16] 0 0 0 0 [FlameSword, GlassShield] ChargeAI
 UNIT Rebel Soldier 0 Level(3, Enemy, True) [18,20] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Rebel Warden 0 Level(3, Enemy, True) [18,14] 0 0 0 0 [Javelin, SteelSword] ChargeAI
 UNIT Rebel Warden 0 Level(3, Enemy, True) [20,12] 0 0 0 0 [Javelin, SteelSword] ChargeAI
@@ -282,25 +284,23 @@ UNIT Rebel GriffinRider 0 Level(3, NPC, True) [20,0] 0 0 0 0 [IronSword] AttackI
 UNIT
 
 ThiefSpawn:
-UNIT A4Pirate Thief 0 Level(3, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
+UNIT Razorblood Thief 0 Level(3, Enemy, True) [0,22] 0 0 0 0 [IronKnife, ChestKey] ThiefAI
 UNIT
 
 CutsceneGreens:
 UNIT Rebel Gunner 0 Level(3, NPC, True) [7,19] 0 0 0 0 [SteelLance] ChargeAI //imperial captain
 UNIT Rebel Soldier 0 Level(3, NPC, True) [8,18] 0 0 0 0 [SteelLance] ChargeAI //imperial recruit
-//first imperial who gets owned
+UNIT Incendivis Soldier 0 Level(3, NPC, True) [8,18] 0 0 0 0 [SteelLance] ChargeAI//first imperial who gets owned
 //second imperial who gets owned
-//
-//
 //
 //
 //
 UNIT
 
 CutsceneReds:
-UNIT A4PirateBoss Deserter 0 Level(5,Enemy,True) [0,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI //pirate captain
-//pirate who fights
-//second pirate who fights
+UNIT Stingray Deserter 0 Level(5,Enemy,True) [0,22] 0 0 0 0 [Javelin, SteelLance] GroupFiveAI //pirate captain
+UNIT Razorblood Fighter 0 Level(3, Enemy, True) [9,23] 0 0 0 0 [IronAxe] GroupFiveAI
+UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, True) [12,12] 0 0 0 0 [IronBow] ChargeAI
 //lotsa pirates who will appear later on
 //
 UNIT
@@ -335,7 +335,7 @@ Music(SwabbieTalkID)
 TEXTCONT
 TEXTEND
 REMA
-EraseBackground
+//EraseBackground
 Music(ScalleywagsOnDeckID)
 //Cue a pair of scripted battles of green units getting beaten by red ones.
 //gonna need 8 different greens [capt, recruit, 5 generics who survive, 2 who get yeeted]
@@ -348,7 +348,7 @@ SOUN 0xF2 //"fire shoot", supposed to be a gunfire sfx. happens mid text
 TEXTCONT
 TEXTEND
 REMA
-EraseBackground
+//EraseBackground
 Music(AvastMeHeartiesID)
 //have pirate captain walk up
 TEXTSTART

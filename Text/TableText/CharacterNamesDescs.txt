@@ -154,7 +154,7 @@ his confidence. Ondeh's brother.[X]
 Juan[X]
 
 ## JuanDesc
-Conman
+Conman[N]
 A suave rogue who always finds his[N]
 pockets full, through words or action.[X]
 
@@ -465,23 +465,29 @@ Legend[N]
 The Closer is known for being able to [N]
 close down any problem. For a price.[X]
 
-## A4PirateName
+## RazorbloodName
 Razorblood[X]
 
-## A4PirateDesc
- [X]
+## RazorbloodDesc
+Grunt[N]
+Even among pirates, the Razorbloods are[N]
+feared and reviled for their savagry.[X]
 
-## A4PirateBossName
-Pirate Boss[X]
+## StingrayName
+Stingray[X]
 
-## A4PirateBossDesc
- [X]
+## StingrayDesc
+Captain[N]
+The most vicious of the Razorbloods.[N]
+Enthusiatic about his cruel work.[X]
 
-## A4RebelBossName
-Rebel Boss[X]
+## RamiroName
+Ramiro[X]
 
-## A4RebelBossDesc
- [X]
+## RamiroDesc
+Commander[N]
+Leader of a rebel raiding party.[N]
+A zealot dedicated to the cause.[X]
 
 ## TorchUnitName
 T.O.R.C.H.[X]
