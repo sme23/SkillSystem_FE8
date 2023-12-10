@@ -10,14 +10,16 @@ EventPointerTable(HubAEventsID, PointerList)
 #define IgniswordsDead 13
 #define Ch2ReinforcementFlags 14
 #define GotoChapter2Flag 15
+#define ElodiaChargeFlag 16
 
 // temp flags
-#define SeenHubA1Pitch 0x7
-#define SeenHubA2Pitch 0x8
-#define SeenHubA3Pitch 0x9
-#define SeenHubA4Pitch 0xA
-#define SeenHubA5Pitch 0xB
-#define SeenHubA6Pitch 0xc
+#define SeenHubA1Pitch 17
+#define SeenHubA2Pitch 18
+#define SeenHubA3Pitch 19
+#define SeenHubA4Pitch 20
+#define SeenHubA5Pitch 21
+#define SeenHubA6Pitch 22
+
 
 //hub maneuvering flags
 #define LibraryToMainRoom 25
@@ -85,32 +87,38 @@ CharacterEvent(DesiderioIdaHubATalkFlag, DesiderioIdaHubATalk, Lua, Desiderio)
 CharacterEvent(DesiderioIdaHubATalkFlag, DesiderioIdaHubATalk, Lua, Ida)
 END_MAIN
 
-GotoChapter1:
-HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_1, Castle_Hall_Night, HubA)
-GotoHubChapterIfYes(2, HubA_1, HubA1Accepted)
-ENUF WentToHubA1
-EVBIT_MODIFY 0
-NoFade
-ENDA
-
 GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_2, Castle_Hall_Night, HubA)
+FancyChapterPreview(HubA_2, Town_Day, HubA, PortGreagorCallbackA2)
 GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
 ENUF WentToHubA2
+NoFade
+ENDA
+
+PortGreagorCallbackA2:
+//this does similar to PortGreagorDocks but without most things, for the preview callback
+SpawnQuestSigil(WentToHubA3, 1, RedSigilTrapID, 23, 19)
+AddTrap(RedSigilTrapID, 11, 20)
+SpawnQuestSigil(WentToHubA6, 2, RedSigilTrapID, 20, 14)
 NoFade
 ENDA
 
 GotoChapter3:
 HubChapterFirstTimeEvent(1, SeenHubA3Pitch, HubA3Selection_Text)
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_3, Castle_Hall_Night, HubA)
+FancyChapterPreview(HubA_3, Forest, HubA, PortGreagorCallbackA3)
 GotoHubChapterIfYes(2, HubA_3, HubA3Selection_Yes)
 Text(HubA3Selection_No)
 ENUF WentToHubA3
+NoFade
+ENDA
+
+PortGreagorCallbackA3:
+//this does similar to PortGreagorDocks but without most things, for the preview callback
+AddTrap(RedSigilTrapID, 23, 19)
+SpawnQuestSigil(WentToHubA2, 1, RedSigilTrapID, 11, 20)
+SpawnQuestSigil(WentToHubA6, 2, RedSigilTrapID, 20, 14)
 NoFade
 ENDA
 
@@ -118,7 +126,7 @@ GotoChapter4:
 HubChapterFirstTimeEvent(1, SeenHubA4Pitch, HubA4Pitch)
 //TutorialYesNoText(HubA4Prompt) 
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_4, Castle_Hall_Night, HubA, PortGreagorCallbackA4)
+FancyChapterPreview(HubA_4, Ship, HubA, PortGreagorCallbackA4)
 ENUT SeenHubA4Pitch
 SVAL s1 0x1
 BNE 2 s1 sC
@@ -145,7 +153,7 @@ ENDA
 GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_5, Castle_Hall_Night, HubA, PortGreagorCallbackA5)
+FancyChapterPreview(HubA_5, Fort_Ruins_Outside, HubA, PortGreagorCallbackA5)
 ENUT SeenHubA5Pitch
 SVAL s1 0x1
 BNE 2 s1 sC
@@ -198,12 +206,20 @@ SpawnQuestSigil(WentToHubA4, 1, RedSigilTrapID, 4, 12)
 NoFade
 ENDA
 
+PortGreagorCallbackA6:
+//this does similar to PortGreagorDocks but without most things, for the preview callback
+SpawnQuestSigil(WentToHubA3, 1, RedSigilTrapID, 23, 19)
+SpawnQuestSigil(WentToHubA2, 2, RedSigilTrapID, 11, 20)
+AddTrap(RedSigilTrapID, 20, 14)
+NoFade
+ENDA
+
 
 GotoChapter6:
 HubChapterFirstTimeEvent(1, SeenHubA6Pitch, HubA6Pitch)
 //Text(HubA6Prompt) 
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_6, Castle_Hall_Night, HubA)
+FancyChapterPreview(HubA_6, Fort_Ruins, HubA, PortGreagorCallbackA6)
 GotoHubChapterIfYes(2, HubA_6, HubA6Accepted)
 ENUF WentToHubA6
 NoFade
@@ -499,6 +515,7 @@ ENUT WindUpFlag2
 ENUT WindUpFlag3
 ENUT ReadyForTakeoffFlag
 ENUT IgniswordsDead
+ENUT ElodiaChargeFlag
 CHECK_EVENTID GotoChapter2Flag
 BNE 776 s0 sC
     RemoveTrapAtCoords(7,4)
@@ -597,6 +614,7 @@ ENUT IgniswordsDead
 ENUT PilarEstelleHubATalkFlag
 ENUT DesiderioIdaHubATalkFlag
 ENUT GotoChapter2Flag
+ENUT ElodiaChargeFlag
 FADI 10
 LOMA Chapter2
 RemoveAll

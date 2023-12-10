@@ -17,7 +17,7 @@ beq End
 @add 15 crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit
-add r0, #15
+add r0, #30
 strh r0, [r4,r1]
 
 End:

@@ -52,10 +52,10 @@ setCardEntry(NinjaClassCard, NinjaClassCardData, NinjaClassCardPal)
 
 ALIGN 4
 DragonRiderClassCardData:
-#incbin "Dmp/Wyvern Lord (U) Axe {topazlight}.dmp"
+#incbin "Dmp/Wyvern Rider (U) Axe {topazlight}.dmp"
 ALIGN 4
 DragonRiderClassCardPal:
-#incbin "Dmp/Wyvern Lord (U) Axe {topazlight}.png_pal.dmp"
+#incbin "Dmp/Wyvern Rider (U) Axe {topazlight}.png_pal.dmp"
 setCardEntry(DragonRiderClassCard, DragonRiderClassCardData, DragonRiderClassCardPal)
 
 ALIGN 4

@@ -14,7 +14,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0, IgnacioBoatReinforcements, 3)
-TurnEventPlayer(0x10, ElodiaDecidesToCharge, 1, 255)
+TurnEventPlayer(ElodiaChargeFlag, ElodiaDecidesToCharge, 1, 255)
 TurnEventPlayer(LuaInAHubFlag, ObjectiveExplanation, 1)
 TurnEventPlayer(Ch2ReinforcementFlags, BoatPursuerReinforcements, 1, 255)
 TurnEventPlayer(ReadyForTakeoffFlag, TheGangTakesOff, 1, 255)
@@ -125,9 +125,14 @@ END_MAIN
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubA_1, Castle_Hall_Night, Chapter2)
+FancyChapterPreview(HubA_1, Castle_Hall_Night, Chapter2, LuaBaseCallbackA1)
 GotoHubChapterIfYes(2, HubA_1, HubA1Accepted)
 ENUF OrlandoHubATalk
+NoFade
+ENDA
+
+LuaBaseCallbackA1:
+AddTrap(RedSigilTrapID, 17, 11)
 NoFade
 ENDA
 
@@ -182,7 +187,7 @@ BNE 1 s0 sC // if true, skip next line
     BNE 1 s0 sC
         Text(Ch2AllIgniswordsDefeated)
         ENUF WindUpFlag1
-        ENUF 0x10
+        ENUF ElodiaChargeFlag
         GOTO 2
 LABEL 1
 ENUF IgniswordsDead
@@ -202,7 +207,7 @@ NoFade
 ENDA
 
 GotoLuasQuarters:
-InitiateTileChangeInHub(ClearChapter2Traps, AddLuaQuartersTraps, 4, LuaInHerQuarters)
+InitiateTileChangeInHub(ClearChapter2Traps, AddLuaQuartersTraps, 2, LuaInHerQuarters)
 ENUT MainRoomToPort
 ENUF LuaQuartersToMainRoom
 NoFade
@@ -231,7 +236,7 @@ UNIT Lua Captain 0 Level(10,Ally,False) [7,4] 0 0 0 0 [Cutlass, IronSword, IronM
 UNIT
 
 GoBackToMainRoomFromLuaQuarters:
-InitiateTileRevertInHub(ClearLuaQuartersTraps, AddChapter2Traps, 4, LuaBackFromQuarters, MainRoomSpawnEvent)
+InitiateTileRevertInHub(ClearLuaQuartersTraps, AddChapter2Traps, 2, LuaBackFromQuarters, MainRoomSpawnEvent)
 ENUF MainRoomToOtherRooms
 ENUF MainRoomToPort
 NoFade
@@ -307,7 +312,7 @@ UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 GotoPortGreagorFirstTime:
-InitiateLoadMapHub(HubA, LuaInDaHubFirstTime, PortGreagorSpawnEvent)
+InitiateLoadMapHub(HubA, LuaInDaHubFirstTime, PortGreagorSpawnEventFirstTime)
 Text(HubABeginningScene3_1)
 CamOn
 LoadPlayerUnits(BeginningSceneIdaGroup)
@@ -361,6 +366,14 @@ PortGreagorSpawnEvent:
 LoadNPCUnitGroupIfEIDNotSet(WentToHubA2, 3, JaimeUnitGroup, A2Indicator)
 LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup, A3Indicator)
 LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup, A6Indicator)
+NoFade
+ENDA
+
+PortGreagorSpawnEventFirstTime:
+LOAD1 1 OndehBikoUnitGroup
+LOAD1 1 JaimeUnitGroup
+LOAD1 1 RochefortUnitGroup
+ENUN
 NoFade
 ENDA
 
@@ -511,7 +524,7 @@ ENUT ReadyForTakeoffFlag
 ENUT Ch2ThisIsAChapter
 ENUT RahelOrlandoHubATalkFlag
 ENUT CarmenXimoHubATalkFlag
-ENUT 0x10
+ENUT ElodiaChargeFlag
 TILECHANGE 0
 TILECHANGE 4
 LoadPlayerUnits(NewPlayerGroup)

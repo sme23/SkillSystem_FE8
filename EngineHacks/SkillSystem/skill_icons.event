@@ -1109,7 +1109,7 @@ ORG SkillIcon(ArmsMasteryID)
 ORG SkillIcon(StudiousBlowID)
 #incbin "SkillIcons/HoneMag.dmp"
 ORG SkillIcon(ResoluteSacrificeID)
-#incbin "SkillIcons/LiveToServe.dmp"
+#incbin "SkillIcons/ResoluteSacrifice.dmp"
 ORG SkillIcon(AstralBlessingID)
 #incbin "SkillIcons/LullLck.dmp"
 ORG SkillIcon(WellRestedID)

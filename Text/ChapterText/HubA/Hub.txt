@@ -339,10 +339,8 @@ Anyhow, let's get moving.[A][X]
 Sorry, chief, maybe later.[N]
 Let me think about it.[AN]
 [L]
-Hmm[Beat] Alright.[N]
-We'll see if we can[AN]
-find someone else for[N]
-the expedition, then.[A][X]
+Hmm[Beat] Alright. We'll see if we can find[N]
+someone else for the expedition, then.[A][X]
 
 ## HubA3Prompt
 Go to Chapter A3?[N]
