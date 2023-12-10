@@ -374,6 +374,7 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+WEATHER 7
 SetBackground(0x28)
 MUSC SwabbieTalkID
 Text(ChA6Pre1)

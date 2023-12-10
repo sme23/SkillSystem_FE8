@@ -101,10 +101,10 @@ Weapons: Axe[N]
 Traits: Steal, Locktouch[X]
 
 ## PegasusRiderName
-Pegasus Rider[X]
+Peg. Rider[X]
 
 ## PegasusRiderDesc
-Weapons: Axe[N]
+Weapons: Sword[N]
 Traits: Flight, Aid+[X]
 
 ## TroubadourDesc

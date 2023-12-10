@@ -31,8 +31,14 @@ and after that, they'll move on.[AN]
 For now, follow the blue tiles![A][X]
 
 ## HubAGoTime
-Navigate onto the green tile[N]
-in order to start Chapter 2.[X]
+With all of Lua's business finished,[N]
+she readies to move on from Port Greagor.[AN]
+Follow the green tiles to the staircase[N]
+in Lua's quarters to move onto Chapter 2.[AN]
+Before that, make sure you take care[N]
+of any remaining business in port;[AN]
+it cannot be visited again.[A][X]
+
 
 ## HubA1Pitch
 [ML][LoadOrlando]
@@ -196,7 +202,7 @@ Objective: Defeat bosses[X]
 Units: Jaime (Peg. Rider), Leonor (Cleric)[X]
 
 ## HubA2Loot
-Loot: A-2 loot[X]
+Loot: Sword and staff users will benefit.[X]
 
 ## HubA2Confirm
 Accept this job?[X]
@@ -396,13 +402,13 @@ deal with stingy clients.[AN]
 [Beat]I suppose it has to do with[Beat][AN]
 [ML][2LB]
 Sailing out to loot another ship.[AN]
-Catching onto the pirate's prerogative.[.....][N]
+Catching onto the pirate's prerogative.[.5][N]
 [ToggleSmile]Good, good.[AN][Clear]
 [ToggleSmile]You should know of the nearby[N]
 trade route due east of the port.[AN]
 [MR][3LB]
 The Fairwind Corridor?[AN]
-An unorthodox route for merchants--[.....][N]
+An unorthodox route for merchants--[.5][N]
 It can save time, but only if you're lucky[N]
 with the winds being on your side.[AN]
 [ML][2LB]
@@ -414,7 +420,7 @@ day to find a merchant to raid.[AN]
 And I won't need the [N]
 winds to see to that.[AN]
 [MR]
-A lucrative idea[Beat][.....][AN]
+A lucrative idea[Beat][.5][AN]
 But won't there be imperial[N]
 ships patrolling along the route?[AN]
 The merchant vessels would be[N]
@@ -1996,4 +2002,35 @@ I think we're in good hands.[A][X]
 // Lua says that all the work's dried up, and they've spent enough time in Port Greagor: She orders the crew to head back to base and wait for her there.
 // She reminds herself to survey the port one more time, buy whatever she needs, and then head back to base to see if Rahel's finished the repairs on the boat
 
-// Once they head back to the base, Lua mentions that she should finish her business in the base before checking to see if Rahel's done
+## HubALuaIsDone
+[MidRight][LoadLua][3LB]
+[Beat]That seems like enough odd jobs.[AN]
+Not all of them went as I'd hoped,[N]
+but we've got a real crew now[N]
+and built up a decent war chest.[AN]
+But what to do with it?[AN]
+Orlando's claims about the Imperial[N]
+Marines sailing into the outskirts[N]
+do smell like an opportunity,[AN]
+but with large gains come equal risks.[AN]
+I'll have to raise the issue with[N]
+the crew and see what they think[N]
+once the ship's repairs are done.[AN]
+But for now[Beat] I need some rest.[N]
+Time to kick my feet up and take[N]
+a nap back in my quarters.[AN]
+The future can wait a day.[A][X]
+
+## HubAFinalText
+[MidRight][LoadLuaHatless][3LB]
+Guess that's that, then.[N]
+I've done everything I need to in port,[N]
+so I won't be going back there again.[AN]
+[Beat]I'll miss it, but Orlando is right.[AN]
+Whether there's a Fire Emblem in the[N]
+outskirts waiting for us or not,[N]
+things have gotten stale around here.[AN]
+A bit of adventure will do me good.[N]
+But before adventure comes sleep[Beat][N]
+Rahel's report can wait til tomorrow.[A][X]
+

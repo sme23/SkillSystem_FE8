@@ -4,9 +4,14 @@
 ALIGN 4
 BossBGMTable:
 BossBGMEntry(Khazhak,FoolsBoldID)
-BossBGMEntry(Felipe,FoolsBoldID) 
-BossBGMEntry(Sargargala,FoolsBoldID) 
-BossBGMEntry(Santiago,FoolsBoldID) 
+BossBGMEntry(Sanz,FoolsBoldID)
+BossBGMEntry(Manfred, FoolsBoldID)
+BossBGMEntry(Sargargala,FoolsBoldID)
+BossBGMEntry(Stingray,FoolsBoldID)
+BossBGMEntry(Ramiro,FoolsBoldID)
+BossBGMEntry(BigBrick,FoolsBoldID)
+BossBGMEntry(Santiago,FoolsBoldID)
+BossBGMEntry(ElodiaBoss,FoolsBoldID)
 BossBGMTerminator
 
 PUSH

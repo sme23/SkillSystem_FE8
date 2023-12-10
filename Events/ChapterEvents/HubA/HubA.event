@@ -9,6 +9,7 @@ EventPointerTable(HubAEventsID, PointerList)
 #define Ch2ThisIsAChapter 12
 #define IgniswordsDead 13
 #define Ch2ReinforcementFlags 14
+#define GotoChapter2Flag 15
 
 // temp flags
 #define SeenHubA1Pitch 0x7
@@ -17,8 +18,6 @@ EventPointerTable(HubAEventsID, PointerList)
 #define SeenHubA4Pitch 0xA
 #define SeenHubA5Pitch 0xB
 #define SeenHubA6Pitch 0xc
-
-#define GotoChapter2Flag 0xe
 
 //hub maneuvering flags
 #define LibraryToMainRoom 25
@@ -236,18 +235,9 @@ AREA PortToBase BackToLuaBase [20,4] [21,4]
 AREA PortToTavern FromPortToTavern [8,20] [8,20]
 AREA TavernToPort ToPortFromTavern [8,20] [8,20] 
 
-AREA GotoChapter2Flag AllDoneWithHubA [16,10] [16,10]
-
 AFEV 0 RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
-
-AllDoneWithHubA:
-SET_ACTIVE 0
-FADI 10
-MNC2 Chapter2 
-NoFade
-ENDA
 
 Traps1:
 BlueSigil(20, 4)
@@ -274,16 +264,22 @@ ENUT PortToOtherAreas
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
+ENUT GotoChapter2Flag
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
 SVAL s1 6 //if 6 chapters completed
 BNE 2 s1 sC 
-    AddTrap(GreenSigilTrapID, 16, 10) //green means go
+    SetBackground(Ship)
+    MUSC MeetTheCrewID
+    Text(HubALuaIsDone)
     CenterTextbox(HubAGoTime)
     ENUF GotoChapter2Flag
+    RemoveTrapAtCoords(20,4)
+    RemoveTrapAtCoords(21,4)
+    AddTrap(GreenSigilTrapID,20, 4)
+    AddTrap(GreenSigilTrapID,21, 4)
 LABEL 2
 GotoPrepScreenHub
-ENUN
 NoFade 
 ENDA
 
@@ -502,7 +498,12 @@ ENUT WindUpFlag1
 ENUT WindUpFlag2
 ENUT WindUpFlag3
 ENUT ReadyForTakeoffFlag
-ENUT IgniswordsDead 
+ENUT IgniswordsDead
+CHECK_EVENTID GotoChapter2Flag
+BNE 776 s0 sC
+    RemoveTrapAtCoords(7,4)
+    AddTrap(GreenSigilTrapID,7, 4)
+LABEL 776
 SetChapterObjectiveText(HubAGoalWindow, HubAStatusObjective)
 NoFade
 ENDA
@@ -595,6 +596,7 @@ ENUT ReadyForTakeoffFlag
 ENUT IgniswordsDead
 ENUT PilarEstelleHubATalkFlag
 ENUT DesiderioIdaHubATalkFlag
+ENUT GotoChapter2Flag
 FADI 10
 LOMA Chapter2
 RemoveAll
@@ -760,16 +762,18 @@ NoFade
 ENDA
 
 AddHubATraps:
+CHECK_EVENTID GotoChapter2Flag
+BNE 776 s0 sC
+    AddTrap(GreenSigilTrapID,20, 4)
+    AddTrap(GreenSigilTrapID,21, 4)
+    GOTO 777
+LABEL 776
 AddTrap(BlueSigilTrapID,20, 4)
 AddTrap(BlueSigilTrapID,21, 4)
+LABEL 777
 AddTrap(BlueSigilTrapID,29, 15)
 AddTrap(BlueSigilTrapID,29, 16)
 AddTrap(BlueSigilTrapID,8, 20)
-CheckHowManyHubChaptersCompleted
-SVAL s1 6 //if 6 chapters completed
-BNE 2 s1 sC 
-    AddTrap(GreenSigilTrapID, 16, 10) //green means go
-LABEL 2
 NoFade
 ENDA
 

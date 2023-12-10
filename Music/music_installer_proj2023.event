@@ -124,6 +124,23 @@ SongTable(MeetTheCrewID,MeetTheCrew,BattleMusicGroup)
 #include "songs/event/MeetTheCrew.event"
 }
 
+//24 - Out Into The Open Sky
+{
+SongTable(OutIntoTheOpenSkyID,OutIntoTheOpenSky,MapMusicGroup)
+#include "songs/preps/OutIntoTheOpenSky.event"
+}
+
+// 25 - Last Dance, Sinking Ship
+{
+SongTable(LastDanceSinkingShipID,LastDanceSinkingShip,MapMusicGroup)
+#include "songs/map/LastDanceSinkingShip.event"
+}
+
+// 26 - Well and Truly Lost
+{
+SongTable(WellAndTrulyLostID,WellAndTrulyLost,MapMusicGroup)
+#include "songs/map/WellAndTrulyLost.event"
+}
 
 // --------------- SONGS: GUI AND SFX ---------------
 

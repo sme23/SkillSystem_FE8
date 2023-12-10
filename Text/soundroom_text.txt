@@ -51,4 +51,13 @@ Sleepin' With the Sky Fishes[X]
 Drown in Good Intentions[X]
 
 ## SongName_MeetTheCrew
-Meet The Crew[X]
+Meet the Crew[X]
+
+## SongName_OutIntoTheOpenSky
+Out Into the Open Sky[X]
+
+## SongName_LastDanceSinkingShip
+Last Dance, Sinking Ship[X]
+
+## SongName_WellAndTrulyLost
+Well and Truly Lost[X]

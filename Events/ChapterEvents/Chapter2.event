@@ -14,7 +14,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0, IgnacioBoatReinforcements, 3)
-TurnEventPlayer(0, ElodiaDecidesToCharge, 7)
+TurnEventPlayer(0x10, ElodiaDecidesToCharge, 1, 255)
 TurnEventPlayer(LuaInAHubFlag, ObjectiveExplanation, 1)
 TurnEventPlayer(Ch2ReinforcementFlags, BoatPursuerReinforcements, 1, 255)
 TurnEventPlayer(ReadyForTakeoffFlag, TheGangTakesOff, 1, 255)
@@ -25,9 +25,9 @@ END_MAIN
 
 BoatPursuerReinforcements:
 CHECK_TURNS //checks the turn and returns it
-SVAL s1 3 //makes s1 2
+SVAL s1 3 //makes s1 3
 SMOD s1 sC s1 // modulates sC by s1 and puts it in s1
-BNE 1 s0 s1 // checks if it's an even turn, if not, skip
+BNE 1 s0 s1 // checks if it's a turn divisible by 3, if not, skip
     SpawnReinforcements(BoatPursuerGriffin)
     SpawnReinforcements(BoatPursuerCavaliers)
 LABEL 1
@@ -161,9 +161,19 @@ AREA LuaQuartersToMainRoom GoBackToMainRoomFromLuaQuarters [19,25] [19,25]
 AREA WentToPortGreagor GotoPortGreagorFirstTime [1,0] [3,0]
 AREA MainRoomToPort GotoPortGreagor [1,0] [3,0]
 
+AREA GotoChapter2Flag AllDoneWithHubA [24,21] [24,21]
+
 AFEV Ch2ThisIsAChapter RefreshLua 0
 CauseGameOverIfLordDies
 END_MAIN
+
+AllDoneWithHubA:
+FADI 10
+SetBackground(Inn)
+Text(HubAFinalText)
+MNC2 Chapter2 
+NoFade
+ENDA
 
 CheckIfIgniswordsAllDead:
 CHECK_INAREA Ignacio [30,0] [8, 17]
@@ -172,6 +182,7 @@ BNE 1 s0 sC // if true, skip next line
     BNE 1 s0 sC
         Text(Ch2AllIgniswordsDefeated)
         ENUF WindUpFlag1
+        ENUF 0x10
         GOTO 2
 LABEL 1
 ENUF IgniswordsDead
@@ -198,6 +209,10 @@ NoFade
 ENDA
 
 AddLuaQuartersTraps:
+CHECK_EVENTID GotoChapter2Flag
+BNE 776 s0 sC
+    AddTrap(GreenSigilTrapID,24, 21)
+LABEL 776
 AddTrap(BlueSigilTrapID, 19, 25)
 NoFade
 ENDA
@@ -440,7 +455,13 @@ AddChapter2Traps:
 AddTrap(BlueSigilTrapID,1,0)
 AddTrap(BlueSigilTrapID,2,0)
 AddTrap(BlueSigilTrapID,3,0)
+CHECK_EVENTID GotoChapter2Flag
+BNE 776 s0 sC
+    AddTrap(GreenSigilTrapID,7, 4)
+    GOTO 777
+LABEL 776
 AddTrap(BlueSigilTrapID,7,4)
+LABEL 777
 AddTrap(BlueSigilTrapID,5,13)
 AddTrap(BlueSigilTrapID,0,17)
 AddTrap(BlueSigilTrapID,0,18)
@@ -476,13 +497,12 @@ BeginningScene:
 UnsetAllHubChapterFlags
 ENUF LuaInAHubFlag
 CALL ClearChapter2Traps
-TILECHANGE 0
-TILECHANGE 3
 ENUT MainRoomToOtherRooms
 ENUT TreasureRoomToMainRoom
 ENUT LuaQuartersToMainRoom
 ENUT LibraryToMainRoom
 ENUT MainRoomToPort
+ENUT GotoChapter2Flag
 //these are all set for the objective to work
 ENUT WindUpFlag1
 ENUT WindUpFlag2
@@ -491,7 +511,9 @@ ENUT ReadyForTakeoffFlag
 ENUT Ch2ThisIsAChapter
 ENUT RahelOrlandoHubATalkFlag
 ENUT CarmenXimoHubATalkFlag
-FADI 10
+ENUT 0x10
+TILECHANGE 0
+TILECHANGE 4
 LoadPlayerUnits(NewPlayerGroup)
 LoadEnemies(IgniswordsGroup)
 LoadEnemies(TORCHGroupBottom)
@@ -504,11 +526,15 @@ AddTrap(RedSigilTrapID,25,10)
 AddTrap(RedSigilTrapID,25,11)
 AddTrap(RedSigilTrapID,25,12)
 SetBackground(Fort)
+MUSC MeetTheCrewID
 Text(Ch2BeginningScene1)
+MUSC SwabbieTalkID
 Text(Ch2BeginningScene2)
 Text(Ch2BeginningScene3)
+MUSC AvastMeHeartiesID
 Text(Ch2BeginningScene4)
 Text(Ch2BeginningScene5)
+MUSC EmergencyCrewmateID
 Text(Ch2BeginningScene6)
 GotoPrepScreen
 NoFade
@@ -516,7 +542,7 @@ ENDA
 
 NewPlayerGroup:
 UNIT Orlando 0 0 Level(11,Ally,False) [15,11] 0 0 0 0 [SilverKnife, Thani, Vulnerary] NoAI
-UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [Longbow, IronBow, Vulnerary] NoAI
+UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
 IgniswordsGroup:
@@ -551,7 +577,6 @@ UNIT TorchUnit Mercenary Hugo Level(9,Enemy,True) [2,12] 0 0 0 0 [SteelSword] Gr
 UNIT TorchUnit Mercenary Hugo Level(9,Enemy,True) [1,0] 0 0 0 0 [SteelSword] GroupElevenAI
 UNIT TorchUnit Archer Hugo Level(9,Enemy,True) [4,5] 0 0 0 0 [IronBow] GroupElevenAI
 
-UNIT TorchUnit Fighter Hugo Level(9,Enemy,True) [3,0] 0 0 0 0 [SteelAxe] GroupTwoAI
 UNIT TorchUnit Archer Hugo Level(9,Enemy,True) [0,5] 0 0 0 0 [IronBow] GroupTwoAI
 UNIT
 
@@ -577,15 +602,17 @@ TORCHMagiDivisionGroup:
 UNIT Juliana 0 ElodiaBoss Level(12,Enemy,True) [0,24] 0 0 0 0 [Arcfire, MagesRing] GroupTwelveAI
 UNIT TorchUnit Monk ElodiaBoss Level(9,Enemy,True) [1,22] 0 0 0 0 [Luna] GroupTwelveAI
 UNIT TorchUnit Shaman ElodiaBoss Level(9,Enemy,True) [4,22] 0 0 0 0 [Nosferatu] GroupTwelveAI
-UNIT TorchUnit Mage ElodiaBoss Level(9,Enemy,True) [3,23] 0 0 0 0 [Elfire] GroupTwelveAI
+UNIT TorchUnit Mage ElodiaBoss Level(9,Enemy,True) [3,24] 0 0 0 0 [Elfire] GroupTwelveAI
 UNIT
 
 
 EndingScene:
 SetBackground(Fort)
 Text(Ch2EndingScene1)
+MUSC FoolsBoldID
 Text(Ch2EndingScene2)
 Text(Ch2EndingScene3)
+MUSC ABlackheartsPrideID
 Text(Ch2EndingScene4)
 Text(Ch2EndingScene5)
 GOTO_TITLE

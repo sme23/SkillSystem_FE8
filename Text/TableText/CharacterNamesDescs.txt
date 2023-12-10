@@ -490,42 +490,50 @@ Leader of a rebel raiding party.[N]
 A zealot dedicated to the cause.[X]
 
 ## TorchUnitName
-T.O.R.C.H.[X]
+TORCH[X]
 
 ## TorchUnitDesc
- [X]
+Members of an elite group tasked[N]
+with maintaining Incendivis order.[X]
 
 ## IgniswordsName
 Igniswords[X]
 
 ## IgniswordsDesc
- [X]
+Pirates who cast aside their pride,[N]
+becoming privateers of Incendivis.[X]
 
 ## IgnacioName
 Ignacio[X]
 
 ## IgnacioDesc
- [X]
+Captain[N]
+A greedy mage warrior clad in armor[N]
+who orders his crew around like minions.[X]
 
 ## ElodiaName
 Elodia[X]
 
 ## ElodiaDesc
 Commander[N]
-A senior member of T.O.R.C.H.[N]
+A senior member of TORCH[N]
 known as the [OQ]Pirate Hunter.[CQ][X]
 
 ## HugoName
 Hugo[X]
 
 ## HugoDesc
- [X]
+Sub-Commander[N]
+One of Elodia's chief subordinates.[N]
+Loves brawling, which led him to TORCH.[X]
 
 ## JulianaName
 Juliana[X]
 
 ## JulianaDesc
- [X]
+Sub-Commander[N]
+One of Elodia's chief subordinates.[N]
+Prefers slacking off over doing her job.[X]
 
 ## IdaName
 Ida[X]

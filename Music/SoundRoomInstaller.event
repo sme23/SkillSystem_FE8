@@ -48,6 +48,9 @@ SoundRoomEntry(LookAtMeWaresID,0,SongName_LookAtMeWares)
 SoundRoomEntry(SleepinWithTheSkyFishesID,0,SongName_SleepinWithTheSkyFishes)
 SoundRoomEntry(DrownInGoodIntentionsID,0,SongName_DrownInGoodIntentions)
 SoundRoomEntry(MeetTheCrewID, 0, SongName_MeetTheCrew)
+SoundRoomEntry(OutIntoTheOpenSkyID, 0, SongName_OutIntoTheOpenSky)
+SoundRoomEntry(LastDanceSinkingShipID, 0, SongName_LastDanceSinkingShip)
+SoundRoomEntry(WellAndTrulyLostID, 0, SongName_WellAndTrulyLost)
 SoundRoomTerminator
 
 

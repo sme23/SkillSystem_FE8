@@ -12,41 +12,63 @@ POIN $0 $0 $0
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
+// Flags - to 0xF, already used
+// 0x10 - Battle Quote with Felipe
+// 0x11 - Battle Quote with Sierra
+// 0x12 - Battle Quote with Manfred
+
 TurnBasedEvents:
 TurnEventPlayer(0,JaimeConvo,1)
-/*
-TurnEventPlayer(0,MoreCrimsonHearts,2)
-TurnEventPlayer(0,TopGuys,3)
-TurnEventPlayer(0,EvenMoreCrimsonHearts,4)
-TurnEventPlayer(0,Fliers,5)
-TurnEventPlayer(0,EnemiesCharge,6)
-TurnEventPlayer(0,ManfredEvent,9)
-TurnEventPlayer(0,EndingScene,11)
-*/
+TurnEventPlayer(0,Reinforcements1,3)
+TurnEventPlayer(0,Reinforcements1,5)
+TurnEventPlayer(0x13, SierraCharge, 1, 255)
 END_MAIN
+
+Reinforcements1:
+SpawnReinforcements(Turn3Reinforcements)
+NoFade
+ENDA 
+
+SierraCharge:
+CHECK_EXISTS Sierra
+BEQ 776 s0 sC 
+    CameraCursor(Sierra)
+    Text(Ch2SierraChargeText)
+    SetAI(Sierra,0,0,4,0)
+LABEL 776
+NoFade
+ENDA
+
+Turn3Reinforcements:
+UNIT Incendivis AxeCav 0 Level(3,Enemy,False) [0,10] 0 0 1 REDA0R10 [IronAxe] ChargeAI
+UNIT Incendivis SwordCav 0 Level(3,Enemy,False) [0,11] 0 0 1 REDA0R11 [IronSword] ChargeAI
+UNIT Incendivis LanceCav 0 Level(3,Enemy,False) [4,0] 0 0 1 REDA4R0 [IronLance] ChargeAI
+UNIT Incendivis AxeCav 0 Level(3,Enemy,False) [6,0] 0 0 1 REDA6R0 [IronAxe] ChargeAI
+UNIT
 
 CharacterBasedEvents:
 CharacterEventBothWays(0xF,CarmenJaimeTalk,Carmen,Jaime)
 END_MAIN
 
 LocationBasedEvents:
-//Village(0xD,RescueVillage,6,13)
-// Escape(0xE,Escape,9,18)
-// Escape(0xE,Escape,10,18)
-// Escape(0xE,Escape,12,18)
+Village(0xD,ScrollVillage,6,13)
 END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
-//AFEV 0x0 CheckAllBosses 0x0
-// AREA 0x8 EnemiesChargeArea [19,0] [21,8]
-// AREA 0x8 EnemiesChargeArea [12,0] [21,3]
+AFEV 0x0 CheckAllBosses 0x0
+AFEV 0x14 SierraChargeFlagUnset 0x10
 END_MAIN
+
+SierraChargeFlagUnset:
+ENUF 0x13
+NoFade
+ENDA
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Heal, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -60,7 +82,7 @@ UNIT
 Units2:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Heal, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -75,107 +97,72 @@ UNIT
 
 NewUnits:
 UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(5,Ally,True) [11,11] 0 0 0 0 [Rescue, Heal, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(5,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT
 
 NPCs:
-//UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Heal, Vulnerary] BossAI
-//UNIT Rebel Deserter 0 Level(1,NPC,True) [10,11] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [7,10] 0 0 0 0 [IronLance] ChargeAI
 UNIT Rebel Warden 0 Level(1,NPC,True) [10,8] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [12,9] 0 0 0 0 [IronLance] ChargeAI
-UNIT Rebel Shaman 0 Level(1,NPC,True) [9,10] 0 0 0 0 [Fire] BossAI
-UNIT Rebel Shaman 0 Level(1,NPC,True) [11,10] 0 0 0 0 [Fire] BossAI
+UNIT Rebel Shaman 0 Level(1,NPC,True) [9,10] 0 0 0 0 [Fire] ChargeAI
+UNIT Rebel Shaman 0 Level(1,NPC,True) [11,10] 0 0 0 0 [Fire] ChargeAI
 UNIT
 
 Enemies:
-UNIT Felipe Soldier 0 Level(6,Enemy,True) [20,6] 0 0 0 0 [Pike,Javelin] BossAI
-UNIT Sierra Vanguard 0 Level(6,Enemy,True) [5,2] 0 0 0 0 [Bloodaxe,HandAxe] BossAI
+// Bottom Left
+UNIT Incendivis Mage 0 Level(3,Enemy,True) [0,5] 0 0 0 0 [Bolting] BossAI
+
+UNIT Incendivis Fighter 0 Level(4,Enemy,True) [1,9] 0 0 0 0 [SteelAxe] GroupTwoAI
+UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [0,8] 0 0 0 0 [IronSword] GroupTwoAI
+UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [1,7] 0 0 0 0 [IronSword] GroupTwoAI
+
+UNIT Felipe Soldier 0 Level(5,Enemy,True) [3,13] 0 0 0 0 [Javelin, Pike] BossAI
+UNIT Incendivis Archer 0 Level(3,Enemy,True) [3,14] 0 0 0 0 [Longbow] BossAI
+UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [1,13] 0 0 0 0 [HandAxe] BossAI
+
+UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [5,11] 0 0 0 0 [IronSword] ChargeAI
+UNIT Incendivis Soldier 0 Level(4,Enemy,True) [4,10] 0 0 0 0 [SteelLance] ChargeAI
+
+UNIT Incendivis Warden 0 Level(3,Enemy,True) [2,9] 0 0 0 0 [Javelin] BossAI
+UNIT Incendivis Vanguard 0 Level(4,Enemy,True) [2,10] 0 0 0 0 [HandAxe] BossAI
+UNIT Incendivis Warden 0 Level(3,Enemy,True) [2,11] 0 0 0 0 [Javelin] BossAI
+
+//Top Left
+UNIT Incendivis Mage 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [Bolting] BossAI
+UNIT Sierra Vanguard 0 Level(6,Enemy,True) [5,1] 0 0 0 0 [Bloodaxe,HandAxe] BossAI
+UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [4,2] 0 0 0 0 [IronLance] ChargeAI
+UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [6,2] 0 0 0 0 [IronAxe] ChargeAI
+
+UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [4,3] 0 0 0 0 [HandAxe] BossAI
+UNIT Incendivis Warden 0 Level(4,Enemy,True) [5,3] 0 0 0 0 [Javelin] BossAI
+UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [6,3] 0 0 0 0 [HandAxe] BossAI
+
+// Top Right
+UNIT Manfred Mercenary 0 Level(4,Enemy,True) [21,0] 0 0 0 0 [SteelSword,KillingEdge] GroupThreeAI
+UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [21,2] 0 0 0 0 [IronAxe] GroupThreeAI
+UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [19,0] 0 0 0 0 [IronAxe] GroupThreeAI
+UNIT CrimsonHeart Deserter 0 Level(4,Enemy,True) [20,1] 0 0 0 0 [Javelin] GroupThreeAI
+
+UNIT Incendivis Mage 0 Level(3,Enemy,True) [15,0] 0 0 0 0 [Bolting] BossAI
+
+UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,5] 0 0 0 0 [IronLance] GroupOneAI
+UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [20,6] 0 0 0 0 [SteelAxe] GroupOneAI
+UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,7] 0 0 0 0 [IronLance] GroupOneAI
+
+UNIT CrimsonHeart Mercenary 0 Level(4,Enemy,True) [14,10] 0 0 0 0 [SteelSword] ChargeAI
+UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [13,7] 0 0 0 0 [IronLance] ChargeAI
+
+UNIT CrimsonHeart Brigand 0 Level(3,Enemy,True) [18,11] 0 0 0 0 [IronAxe] GroupFourAI
+UNIT CrimsonHeart Myrmidon 0 Level(4,Enemy,True) [17,12] 0 0 0 0 [IronSword, Onigiri] GroupFourAI
+
 // Left
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [6,9] 0 0 0 0 [SteelSword] ChargeAI
-UNIT CrimsonHeart Brigand 0 Level(3,Enemy,True) [5,11] 0 0 0 0 [IronAxe] ChargeAI
-UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [1,9] 0 0 0 0 [IronLance] ChargeAI
-UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [1,11] 0 0 0 0 [IronLance] ChargeAI
-// Top
-UNIT Incendivis Fighter 0 Level(3,Enemy,True) [9,7] 0 0 0 0 [SteelAxe] ChargeAI
-UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [4,3] 0 0 0 0 [IronAxe,TealGem] ChargeAI
-UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [6,3] 0 0 0 0 [IronLance] ChargeAI
-UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [5,4] 0 0 0 0 [IronSword] ChargeAI
-// Right
-UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [13,8] 0 0 0 0 [IronSword] ChargeAI
-UNIT Incendivis Soldier 0 Level(3,Enemy,True) [14,9] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Incendivis Gunner 0 Level(3,Enemy,True) [17,7] 0 0 0 0 [SteelMusket] ChargeAI
 UNIT
-
-/*
-Enemies:
-UNIT Felipe Soldier 0 Level(6,Enemy,True) [20,1] 0 0 0 0 [Pike,Javelin] BossAI
-UNIT Sierra Vanguard 0 Level(6,Enemy,True) [1,1] 0 0 0 0 [Bloodaxe,HandAxe] BossAI
-UNIT Manfred Mercenary 0 Level(6,Enemy,True) [5,4] 0 0 0 0 [SteelSword,GlassShield] ChargeAI
-UNIT CrimsonHeart Mercenary 0 Level(4,Enemy,True) [6,4] 0 0 0 0 [IronBlade] ChargeAI
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [4,4] 0 0 0 0 [IronSword] ChargeAI
-UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [5,3] 0 0 0 0 [IronAxe] ChargeAI
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [6,10] 0 0 0 0 [IronSword] ChargeAI
-UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [11,7] 0 0 0 0 [IronLance] ChargeAI
-UNIT CrimsonHeart Fighter 0 Level(3,Enemy,True) [14,9] 0 0 0 0 [IronAxe] ChargeAI
-UNIT
-*/
 
 SoldierGuy:
 UNIT Incendivis Soldier 0 Level(4,Enemy,True) [21,0] 0 0 0 0 [SteelLance] ChargeAI
 UNIT
 
-/*
-CrimsonHearts:
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [0,9] 0 0 0 0 [IronSword] ChargeAI
-UNIT CrimsonHeart Brigand 0 Level(3,Enemy,True) [0,10] 0 0 0 0 [IronAxe] BrigandAI
-UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [IronLance] ChargeAI
-UNIT
-
-CrimsonHearts2:
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [21,5] 0 0 0 0 [IronSword] ChargeAI
-UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [IronLance] ChargeAI
-UNIT Incendivis SwordCav 0 Level(3,Enemy,True) [0,10] 0 0 0 0 [IronBlade,TealGem] ChargeAI
-UNIT
-
-TopReinforcements:
-UNIT Incendivis BowCav 0 Level(3,Enemy,True) [4,0] 0 0 0 0 [IronBow] ChargeAI
-UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [IronAxe] ChargeAI
-UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [6,0] 0 0 0 0 [IronAxe] ChargeAI
-UNIT
-
-FlierReinforcements:
-UNIT Incendivis PegasusRider 0 Level(3,Enemy,True) [0,14] 0 0 0 0 [IronSword,LightBrand] ChargeAI
-UNIT Incendivis DragonRider 0 Level(3,Enemy,True) [21,12] 0 0 0 0 [IronAxe] ChargeAI
-UNIT Incendivis GriffinRider 0 Level(3,Enemy,True) [12,0] 0 0 0 0 [IronLance] ChargeAI
-UNIT Incendivis GriffinRider 0 Level(3,Enemy,True) [13,0] 0 0 0 0 [Javelin] ChargeAI
-UNIT Rebel Brigand 0 Level(1,NPC,True) [14,6] 0 0 0 0 [SteelAxe] ChargeAI
-UNIT
-
-ManfredGroup:
-UNIT CrimsonHeart Fighter 0 Level(3,Enemy,True) [21,5] 0 0 0 0 [IronAxe] ChargeAI
-UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,6] 0 0 0 0 [IronLance] ChargeAI
-UNIT CrimsonHeart Mercenary 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [IronSword] ChargeAI
-UNIT CrimsonHeart Hunter 0 Level(3,Enemy,True) [6,0] 0 0 0 0 [IronBow] ChargeAI
-UNIT Manfred Mercenary 0 Level(6,Enemy,True) [0,10] 0 0 0 0 [SteelSword,GlassShield] ChargeAI
-UNIT
-
-ReinforcementsEnd:
-UNIT Incendivis Cataphract 0 Level(1,Enemy,True) [0,8] 0 0 0 0 [SilverAxe] BossAI
-UNIT Incendivis Cataphract 0 Level(1,Enemy,True) [0,9] 0 0 0 0 [SilverAxe] BossAI
-UNIT Incendivis Cataphract 0 Level(1,Enemy,True) [0,10] 0 0 0 0 [SilverAxe] BossAI
-UNIT Incendivis Cataphract 0 Level(1,Enemy,True) [0,11] 0 0 0 0 [SilverAxe] BossAI
-UNIT Incendivis Dreadnought 0 Level(1,Enemy,True) [21,5] 0 0 0 0 [SilverLance] BossAI
-UNIT Incendivis Dreadnought 0 Level(1,Enemy,True) [21,6] 0 0 0 0 [SilverLance] BossAI
-UNIT Incendivis Dreadnought 0 Level(1,Enemy,True) [21,7] 0 0 0 0 [SilverLance] BossAI
-UNIT Incendivis Dreadnought 0 Level(1,Enemy,True) [21,8] 0 0 0 0 [SilverLance] BossAI
-UNIT
-*/
-
 Traps1:
-RedSigil(9,18)
-RedSigil(10,18)
-RedSigil(12,18)
 ENDTRAP
 ALIGN 4
 
@@ -186,19 +173,20 @@ ALIGN 4
 BeginningScene:
 WEATHER 7
 COUNTER_SET 0x1 0x0
-FLAG_T AllUnitsMustEscapeFlag
-FLAG_T 0xE
+ENUT 0x13
 LOAD1 1 NPCs
 LOAD1 1 Enemies
 LOAD1 1 NewUnits
 ENUN
 SetBackground(Town_Day)
+MUSC AvastMeHeartiesID
 Text(A2PrePrepsCutscene)
 SetBackground(Outside_Village_Day)
 Text(A2PrePrepsCutscene2)
 SetBackground(Outside_Village_Day)
 Text(A2PrePrepsCutscene3)
 SetBackground(Outside_Village_Day)
+MUSC EmergencyCrewmateID
 Text(A2JaimeJoins)
 GotoPrepScreen
 NoFade
@@ -206,10 +194,8 @@ ENDA
 
 JaimeConvo:
 CameraCursor(Jaime)
-CameraCursor(Felipe)
-Text(A2FelipeTurn1)
-EVBIT_T 9
-DISA Manfred
+Text(Ch2JaimeTip)
+NoFade
 ENDA
 
 CarmenJaimeTalk:
@@ -217,132 +203,30 @@ Text(CarmenJaimeConvo)
 NoFade
 ENDA
 
-/*
-MoreCrimsonHearts:
-NoFade
-SpawnReinforcements(CrimsonHearts)
-ENDA
-
-EvenMoreCrimsonHearts:
-NoFade
-SpawnReinforcements(CrimsonHearts2)
-ENDA
-
-TopGuys:
-NoFade
-SpawnReinforcements(TopReinforcements)
-ENDA
-
-Fliers:
-NoFade
-SpawnReinforcements(FlierReinforcements)
-ENDA
-
-ManfredEvent:
-NoFade
-SpawnReinforcements(ManfredGroup)
-ENDA
-
-EnemiesChargeArea:
-ContinueIfFactionMatch(Ally)
-CALL EnemiesCharge
-ENDA
-
-EnemiesCharge:
-NoFade
-CameraCursor(Felipe)
-Text(A2ReinforcementWarning)
-DISA UnitAtCoords
-SetAI(Felipe,0,0,4,0)
-SetAI(Incendivis,0,0,4,0)
-SetAI(Sierra,0,0,4,0)
-SetAI(Manfred,0,0,4,0)
-SetAI(CrimsonHeart,0,0,4,0)
-ENDA
-
-ReinforcementCounter:
-NoFade
-CHECK_FLAG 0x9
-BEQ 0x4 0xC 0x0
-COUNTER_CHECK 0x1
-SVAL 0x1 2
-BEQ 0x1 0xC 0x1
-SVAL 0x1 5
-BEQ 0x2 0xC 0x1
-GOTO 0x3
-LABEL 0x1
-CALL ReinforcementsSummoned
-GOTO 0x3
-LABEL 0x2
-CALL ReinforcementsArrive
-GOTO 0x3
-LABEL 0x3
-COUNTER_ADD 0x1 0x0
-LABEL 0x4
-ENDA
-
-ReinforcementsSummoned:
-NoFade
-SpawnReinforcements(SoldierGuy)
-CameraCursor(21,0)
-Text(A2ReinforcementWarning2)
-SetChapterObjectiveText(A2AltObjective1,A2AltObjective2)
-FLAG_F 0xE
-AddTrap(BlueSigilTrapID,9,18)
-AddTrap(BlueSigilTrapID,10,18)
-AddTrap(BlueSigilTrapID,12,18)
-CAM1 [10,14]
-ENDA
-
-Escape:
-NoFade
-FLAG_F 0xE
-ENDA
-
-ReinforcementsArrive:
-SpawnReinforcements(ReinforcementsEnd)
-CameraCursor(Lua)
-Text(A2GameOver)
-ASMC 0xD391
-FLAG_T 0x65
-ENDA
-*/
-
 CheckAllBosses:
-NoFade
-CHECK_FLAG 0xE
-BEQ 0x2 0xC 0x0
 CHECK_FLAG 0xA
 BEQ 0x2 0xC 0x0
-CHECK_FLAG 0xB
-BEQ 0x2 0xC 0x0
-CHECK_FLAG 0xC
-BEQ 0x2 0xC 0x0
-CALL EndingScene
+    CHECK_FLAG 0xB
+    BEQ 0x2 0xC 0x0
+        CHECK_FLAG 0xC
+        BEQ 0x2 0xC 0x0
+            CALL EndingScene
 LABEL 0x2
-GotoEndingSceneIfNoPlayers
+NoFade
 ENDA
 
-RescueVillage:
+ScrollVillage:
+SetBackground(HouseBG)
 Text(A2Village)
+EraseBackground
 GiveItemWithDurability(SkillScroll,ResoluteSacrificeID,0xFFFF)
+NoFade
 ENDA
 
 EndingScene:
-CHECK_FLAG 0x9
-BEQ 0x1 0xC 0x0
-CHECK_FLAG 0xE
-BEQ 0x2 0xC 0x0
-SpawnReinforcements(SoldierGuy)
-CameraCursor(21,0)
-Text(A2EndingSoldierGuy)
-SVAL 0xB 0x15
-DISA UnitAtCoords
-LABEL 0x1
 SetBackground(Town_Day)
+MUSC SwabbieTalkID
 Text(A2Ending1)
-GOTO 0x3
-LABEL 0x2
 SetBackground(Ship)
 CHECK_ALIVE Leonor
 BEQ 0x4 0xC 0x0
