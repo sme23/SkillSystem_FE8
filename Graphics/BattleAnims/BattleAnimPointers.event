@@ -74,3 +74,10 @@ SoldierAnims:
 LanceAnim(SoldierLanceAnim)
 UnarmedAnim(SoldierUnarmedAnim)
 EndAnim
+
+ALIGN 4
+Fighter_FAnims:
+AxeAnim(Fighter_FAxeAnim)
+HandAxeAnim(Fighter_FHandAxeAnim)
+UnarmedAnim(Fighter_FUnarmedAnim)
+EndAnim

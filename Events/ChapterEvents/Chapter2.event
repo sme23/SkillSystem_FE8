@@ -374,6 +374,11 @@ LOAD1 1 OndehBikoUnitGroup
 LOAD1 1 JaimeUnitGroup
 LOAD1 1 RochefortUnitGroup
 ENUN
+RemoveTrapAtCoords(20,4)
+RemoveTrapAtCoords(21,4)
+RemoveTrapAtCoords(8,20)
+ENUN
+STAL 10
 NoFade
 ENDA
 

@@ -17,6 +17,7 @@
 #define Deserter 0x84
 
 //#define Fighter 0x3f
+#define Fighter_F 0x96
 //#define Brigand 0x41
 
 //#define Archer 0x19
@@ -138,3 +139,4 @@
 #define BaronMapSprite RuneshieldMapSprite
 #define WolfKnightMapSprite 0x85
 #define WardenMapSprite 0x86
+#define Fighter_FMapSprite 0x87

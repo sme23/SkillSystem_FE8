@@ -351,3 +351,14 @@ WardenSMS:
 ALIGN 4
 WardenMMS:
 #incbin "Dmp/Knight (U) Sword {SALVAGED}-walk.dmp"
+
+StandingMapSprite(Fighter_FMapSprite,MapSprite16x16,Fighter_FSMS)
+MovingMapSprite(Fighter_F, $1C3D7C, Fighter_FMMS)
+
+ALIGN 4
+Fighter_FSMS:
+#incbin "Dmp/Fighter (F) Axe {Alusq}-stand.dmp"
+
+ALIGN 4
+Fighter_FMMS:
+#incbin "Dmp/Fighter (F) Axe {Alusq}-walk.dmp"

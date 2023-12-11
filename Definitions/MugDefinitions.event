@@ -79,3 +79,4 @@
 #define DragonRiderClassCard 0x106
 #define PegasusRiderClassCard 0x107
 #define GriffinRiderClassCard 0x108
+#define Fighter_FClassCard 0x109

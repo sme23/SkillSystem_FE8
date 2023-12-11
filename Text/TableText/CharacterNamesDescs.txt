@@ -274,8 +274,8 @@ in the vicinity with a fiery grave![X]
 Explosive[X]
 
 ## BombClassDesc
-No armor can withstand its power.[N]
-Disarm it if you hope to survive.[X]
+Weapons: None[N]
+Traits: Countdown[X]
 
 ## BuzuName
 Buzu[X]

@@ -73,3 +73,11 @@ ALIGN 4
 GriffinRiderClassCardPal:
 #incbin "Dmp/Arbalest (F) Lance {EldritchAbomination, Jj09}.png_pal.dmp"
 setCardEntry(GriffinRiderClassCard, GriffinRiderClassCardData, GriffinRiderClassCardPal)
+
+ALIGN 4
+Fighter_FClassCardData:
+#incbin "Dmp/Fighter (F) Axe {Jj09, HyperGammaSpaces}.dmp"
+ALIGN 4
+Fighter_FClassCardPal:
+#incbin "Dmp/Fighter (F) Axe {Jj09, HyperGammaSpaces}.png_pal.dmp"
+setCardEntry(Fighter_FClassCard, Fighter_FClassCardData, Fighter_FClassCardPal)

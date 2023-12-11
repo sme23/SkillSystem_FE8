@@ -52,3 +52,7 @@
 
 #define SoldierLanceAnim 0xE2
 #define SoldierUnarmedAnim 0xE3
+
+#define Fighter_FAxeAnim 0xE4
+#define Fighter_FHandAxeAnim 0xE5
+#define Fighter_FUnarmedAnim 0xE6
