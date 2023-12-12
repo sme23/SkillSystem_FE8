@@ -56,3 +56,9 @@
     #include "Animations/DragonRider/Handaxe Installer.event"
     #include "Animations/DragonRider/Unarmed Installer.event"
 }
+
+{
+    #include "Animations/Fighter_F/Axe Installer.event"
+    #include "Animations/Fighter_F/Handaxe Installer.event"
+    #include "Animations/Fighter_F/Unarmed Installer.event"
+}

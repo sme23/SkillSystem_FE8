@@ -178,14 +178,14 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(1
 
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem) // Explode!
 CHECK_AT [5,8]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BEQ 1 s1 sC
 CameraCursor(5,8)
 CALL BombExplodes
 LABEL 1
 CHECK_AT [14,12]
-SMOV s0 Bomb
-BEQ 2 s0 sC
+SMOV s1 Bomb
+BEQ 2 s1 sC
 CameraCursor(14,12)
 CALL BombExplodes
 LABEL 2
@@ -197,8 +197,8 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem)
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem) // Explode!
 CHECK_AT [19,6]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BEQ 1 s1 sC
 CameraCursor(19,6)
 CALL BombExplodes
 LABEL 1
@@ -209,8 +209,8 @@ Turn10EP:
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-10,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-10,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem) // Explode!
 CHECK_AT [12,10]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BEQ 1 s1 sC
 CameraCursor(12,10)
 CALL BombExplodes
 LABEL 1
@@ -220,8 +220,8 @@ ENDA
 Turn11EP:
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-11,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem) // Explode!
 CHECK_AT [13,2]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BEQ 1 s1 sC
 CameraCursor(13,2)
 CALL BombExplodes
 LABEL 1
