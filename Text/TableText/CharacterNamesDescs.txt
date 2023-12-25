@@ -195,7 +195,7 @@ Rahel[X]
 
 ## RahelDesc
 Carpenter[N]
-As skilled with her bow as her hammer,[N]
+More skilled her hammer than her bow,[N]
 she repairs ships with a curt nod.[X]
 
 ## KhazhakName

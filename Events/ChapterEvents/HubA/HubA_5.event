@@ -46,7 +46,7 @@ ENDA
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Tangyuan DragonRider_F 0 Level(3,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
+UNIT Tangyuan DragonRider_F 0 Level(5,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [13,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -58,7 +58,7 @@ UNIT
 
 Units2:
 UNIT Lua Captain 0 Level(10,Ally,False) [13,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Tangyuan DragonRider_F 0 Level(3,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
+UNIT Tangyuan DragonRider_F 0 Level(5,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,16] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [13,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [14,17] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -100,8 +100,8 @@ UNIT TheDukes Hunter 0 Level(3, Enemy, True) [13,10] 0 0 0 0 [Greatbow] BossAI
 UNIT TheDukes Hunter 0 Level(3, Enemy, True) [4,6] 0 0 0 0 [IronBow] AttackInRangeAI
 UNIT TheDukes Hunter 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [MiniBow] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(3, Enemy, True) [11,9] 0 0 0 0 [Surge] AttackInRangeAI
-UNIT TheDukes Shaman 0 Level(3, Enemy, True) [2,0] 0 0 0 0 [Thani] AttackInTwoAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
+UNIT TheDukes Shaman 0 Level(3, Enemy, True) [0,0] 0 0 0 0 [Thani] AttackInTwoAI
 UNIT BigBrick Fighter 0 Level(5, Enemy, True) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
 UNIT Hakman Myrmidon 0 Level(5, Enemy, True) [8,1] 0 0 0 0 [Peacekeeper] AttackInRangeAI
 UNIT MrMist Mage 0 Level(6, Enemy, True) [12,17] 0 0 0 0 [Galestrike] AttackInRangeAI
@@ -121,7 +121,7 @@ UNIT Jozef Gunner 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R19 [SilverMusk
 UNIT
 
 TheCad:
-UNIT Tangyuan DragonRider_F 0 Level(3,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
+UNIT Tangyuan DragonRider_F 0 Level(5,Ally,True) [6,16] 0 0 0 0 [IronAxe, Oversize, Vulnerary] NoAI
 UNIT
 
 TheMads:
@@ -169,7 +169,7 @@ CURSOR MrMist
 STAL 45
 REMOVE_CURSORS
 TextWithMusicChange(ThePlan2, AvastMeHeartiesID)
-MOVE 20 MrMist [10, 10]
+MOVE 20 MrMist [10, 9]
 ENUN
 STAL 20
 CAMERA Tangyuan

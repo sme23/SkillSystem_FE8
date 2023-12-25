@@ -1702,7 +1702,7 @@ and kills an enemy, +1 Str and +1 Mag[N]
 
 ## SD_WellRested
 Well-rested: When unit isn't deployed for[N]
-a chapter, +1 MOV. If deployed two maps[N]
+a chapter, +2 MOV. If deployed two maps[N]
 in a row, -1 MOV (Min: Base, Max: 15).[X]
 
 ## SD_ForestFriend

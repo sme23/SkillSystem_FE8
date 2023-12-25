@@ -68,13 +68,12 @@ ENDA
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [12,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar 0 0 Level(10,Ally,False) [10,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [12,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
@@ -82,13 +81,12 @@ UNIT
 Units2:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(7,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [12,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar 0 0 Level(10,Ally,False) [10,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [12,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,14] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,15] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -97,7 +95,7 @@ UNIT
 
 NewUnits:
 UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(5,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT
 
 NPCs:

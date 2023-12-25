@@ -105,8 +105,8 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer-3,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-3,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-3,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
 CHECK_AT [3,16]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(3,16)
 CALL BombExplodes
 LABEL 1
@@ -135,8 +135,8 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-5,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-5,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-5,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
 CHECK_AT [11,14]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(11,14)
 CALL BombExplodes
 LABEL 1
@@ -152,8 +152,8 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem) // Explode!
 CHECK_AT [21,16]
-SMOV s0 Bomb
-BEQ 1 s0 sC
+SMOV s1 Bomb
+BNE 1 s1 sC
 CameraCursor(21,16)
 CALL BombExplodes
 LABEL 1
@@ -179,13 +179,13 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(1
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem) // Explode!
 CHECK_AT [5,8]
 SMOV s1 Bomb
-BEQ 1 s1 sC
+BNE 1 s1 sC
 CameraCursor(5,8)
 CALL BombExplodes
 LABEL 1
 CHECK_AT [14,12]
 SMOV s1 Bomb
-BEQ 2 s1 sC
+BNE 2 s1 sC
 CameraCursor(14,12)
 CALL BombExplodes
 LABEL 2
@@ -198,7 +198,7 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(1
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-9,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem) // Explode!
 CHECK_AT [19,6]
 SMOV s1 Bomb
-BEQ 1 s1 sC
+BNE 1 s1 sC
 CameraCursor(19,6)
 CALL BombExplodes
 LABEL 1
@@ -210,7 +210,7 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-10,AnyDeployed,AnyArmy,AnyClass,Area(
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-10,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem) // Explode!
 CHECK_AT [12,10]
 SMOV s1 Bomb
-BEQ 1 s1 sC
+BNE 1 s1 sC
 CameraCursor(12,10)
 CALL BombExplodes
 LABEL 1
@@ -221,7 +221,7 @@ Turn11EP:
 //SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-11,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem) // Explode!
 CHECK_AT [13,2]
 SMOV s1 Bomb
-BEQ 1 s1 sC
+BNE 1 s1 sC
 CameraCursor(13,2)
 CALL BombExplodes
 LABEL 1
@@ -299,7 +299,7 @@ UNIT A6Pirate Brigand 0 Level(A6PirateLevel, Enemy, True) [6,19] 0 0 0 0 [IronAx
 UNIT A6Pirate Deserter 0 Level(A6PirateLevel, Enemy, True) [5,16] 0 0 0 0 [IronLance] PursueWithoutHeedAI
 UNIT A6Pirate Brigand 0 Level(A6PirateLevel, Enemy, True) [8,14] 0 0 0 0 [IronAxe] PursueWithoutHeedAI
 
-UNIT A6Pirate Shaman 0 Level(A6PirateLevel, Enemy, True) [1,14] 0 0 0 0 [Fire] PursueWithoutHeedAI
+UNIT A6Pirate Shaman 0 Level(A6PirateLevel, Enemy, True) [0,16] 0 0 0 0 [Fire] PursueWithoutHeedAI
 UNIT A6Pirate Brigand 0 Level(A6PirateLevel, Enemy, True) [2,8] 0 0 0 0 [SlimAxe] PursueWithoutHeedAI
 UNIT
 

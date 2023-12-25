@@ -91,7 +91,17 @@ GotoChapter2:
 HubChapterFirstTimeEvent(1, SeenHubA2Pitch, HubA2Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_2, Town_Day, HubA, PortGreagorCallbackA2)
-GotoHubChapterIfYes(2, HubA_2, HubA2Accepted)
+SVAL s1 0x1
+BNE 2 s1 sC
+    EVBIT_MODIFY 0
+    Text(HubA2Accepted)
+    GiveGold(1000)
+    ENUF LuaInAHubFlag
+    ASMC EyeForAnEyeResetASMC
+    MNC2 HubA_2
+    NoFade
+    ENDB
+LABEL 2
 ENUF WentToHubA2
 NoFade
 ENDA
@@ -127,7 +137,6 @@ HubChapterFirstTimeEvent(1, SeenHubA4Pitch, HubA4Pitch)
 //TutorialYesNoText(HubA4Prompt) 
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_4, Ship, HubA, PortGreagorCallbackA4)
-ENUT SeenHubA4Pitch
 SVAL s1 0x1
 BNE 2 s1 sC
     EVBIT_MODIFY 0
@@ -154,7 +163,6 @@ GotoChapter5:
 HubChapterFirstTimeEvent(1, SeenHubA5Pitch, HubA5Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubA_5, Fort_Ruins_Outside, HubA, PortGreagorCallbackA5)
-ENUT SeenHubA5Pitch
 SVAL s1 0x1
 BNE 2 s1 sC
     EVBIT_MODIFY 0
@@ -532,7 +540,7 @@ NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(12,NPC,False) [17,11] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
+UNIT Orlando 0 0 Level(13,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
@@ -657,8 +665,8 @@ UNIT Lua Captain 0 Level(10,Ally,False) [8,20] 0 0 0 0 [Cutlass, IronSword, Iron
 UNIT
 
 NewUnits:
-UNIT Estelle Troubadour 0 Level(3,Ally,False) [0,5] 0 0 0 0 [Heal, Torch] NoAI
-UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [14,5] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
+UNIT Estelle Troubadour 0 Level(2,Ally,False) [0,5] 0 0 0 0 [Heal, Torch] NoAI
+UNIT Hermenegildo Myrmidon 0 Level(2,Ally,False) [14,5] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
 UNIT
 
 DurghamUnitGroup:
@@ -672,7 +680,7 @@ UNIT Bartz Deserter 0 Level(6,NPC,True) [7,14] 0 0 0 0 [SteelLance, Vulnerary] N
 UNIT
 
 MrYodsenUnitGroup:
-UNIT MrYodsen Gunner 0 Level(6,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
+UNIT MrYodsen Gunner 0 Level(7,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, Vulnerary, PureWater] NoAI
 UNIT
 
 JaimeUnitGroup:
@@ -697,12 +705,12 @@ UNIT Docksman Mercenary 0 Level(4, NPC, True) [18,13] 0 0 0 0 [KillingEdge] NoAI
 UNIT
 
 EstelleOrlandoDocksGroup:
-UNIT Estelle Troubadour 0 Level(3,NPC,False) [8,4] 0 0 0 0 [Heal, Torch] NoAI
-UNIT Orlando 0 0 Level(12,NPC,False) [8,20] 0x0 0x0 0 0 [SilverKnife, Thani] NoAI
+UNIT Estelle Troubadour 0 Level(2,NPC,False) [8,4] 0 0 0 0 [Heal, Torch] NoAI
+UNIT Orlando 0 0 Level(13,NPC,False) [8,20] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT
 
 DocksGroup:
-UNIT Estelle Troubadour 0 Level(3,NPC,False) [4,14] 0 0 0 0 [Heal, Torch] NoAI
+UNIT Estelle Troubadour 0 Level(2,NPC,False) [4,14] 0 0 0 0 [Heal, Torch] NoAI
 UNIT Ida 0 0 Level(20, NPC, False) [8,21] 0 0 0 0 [SilverAxe] NoAI
 UNIT
 

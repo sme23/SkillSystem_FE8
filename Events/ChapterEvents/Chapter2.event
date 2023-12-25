@@ -111,7 +111,7 @@ UNIT
 
 IgnacioBoatReinforcementsGroup2:
 UNIT Igniswords Warden Ignacio Level(8,Enemy,True) [34,5] 0 0 1 REDA34R5 [IronBlade, Javelin] GroupFourAI
-UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,6] 0 0 1 REDA30R6 [Fire] AttackWhenInRangeAI
+UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,5] 0 0 1 REDA30R6 [Fire] AttackWhenInRangeAI
 UNIT
 
 CharacterBasedEvents:
@@ -307,7 +307,7 @@ NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(12,NPC,False) [17,11] 0x0 0x0 0 0 [Bloodletter, Thani] NoAI
+UNIT Orlando 0 0 Level(13,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
@@ -435,7 +435,7 @@ ENDA
 
 Units1:
 UNIT Lua 0 0 Level(10,Ally,False) [15,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Orlando 0 0 Level(11,Ally,False) [28,11] 0 0 0 0 [SilverKnife, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(11,Ally,False) [28,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 //Lua's Group - 7
 UNIT Rahel 0 0 Level(11,Ally,False) [15,10] 0 0 0 0 [IronBow, Vulnerary] NoAI
 LoadUnit(16,10)
@@ -559,18 +559,18 @@ NoFade
 ENDA
 
 NewPlayerGroup:
-UNIT Orlando 0 0 Level(11,Ally,False) [15,11] 0 0 0 0 [SilverKnife, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(11,Ally,False) [15,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
 IgniswordsGroup:
 UNIT Ignacio 0 0 Level(11,Enemy,False) [36,2] 0 0 0 0 [Elfire, KillingEdge, KnightsPlate] GroupFiveAI
-UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [32,0] 0 0 0 0 [Fire, Luna] GroupFiveAI
+UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [33,0] 0 0 0 0 [Fire, Luna] GroupFiveAI
 UNIT Igniswords Archer Ignacio Level(8,Enemy,True) [33,2] 0 0 0 0 [Longbow] GroupFiveAI
 
-UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [32,10] 0 0 0 0 [Fire] GroupOneAI
-UNIT Igniswords Warden Ignacio Level(8,Enemy,True) [31,11] 0 0 0 0 [SteelSword, IronLance] GroupOneAI
-UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [32,12] 0 0 0 0 [Fire] GroupOneAI
+UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [32,10] 0 0 0 0 [Fire] PursueWithoutHeedAI
+UNIT Igniswords Warden Ignacio Level(8,Enemy,True) [31,11] 0 0 0 0 [SteelSword, IronLance] PursueWithoutHeedAI
+UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [32,12] 0 0 0 0 [Fire] PursueWithoutHeedAI
 
 UNIT Igniswords Shaman Ignacio Level(8,Enemy,True) [36,13] 0 0 0 0 [Elfire] BossAI
 UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [37,13] 0 0 0 0 [Thunder] BossAI
@@ -618,8 +618,8 @@ UNIT
 TORCHMagiDivisionGroup:
 //name this guy
 UNIT Juliana 0 ElodiaBoss Level(12,Enemy,True) [0,24] 0 0 0 0 [Arcfire, MagesRing] GroupTwelveAI
-UNIT TorchUnit Monk ElodiaBoss Level(9,Enemy,True) [1,22] 0 0 0 0 [Luna] GroupTwelveAI
-UNIT TorchUnit Shaman ElodiaBoss Level(9,Enemy,True) [4,22] 0 0 0 0 [Nosferatu] GroupTwelveAI
+UNIT TorchUnit Monk ElodiaBoss Level(9,Enemy,True) [0,23] 0 0 0 0 [Luna] GroupTwelveAI
+UNIT TorchUnit Shaman ElodiaBoss Level(9,Enemy,True) [3,23] 0 0 0 0 [Nosferatu] GroupTwelveAI
 UNIT TorchUnit Mage ElodiaBoss Level(9,Enemy,True) [3,24] 0 0 0 0 [Elfire] GroupTwelveAI
 UNIT
 

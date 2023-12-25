@@ -150,6 +150,13 @@ ORG 0x26B42
 BYTE 0x00 0x20	//
 POP
 
+// Makes uncounterable weapons not forced range
+// vennobennu
+PUSH
+ORG 0x57278
+BYTE 0x16 0xE0
+POP
+
 PUSH // prep screen markup gone
 ORG 0xB5237
 BYTE 0xE0
@@ -213,3 +220,4 @@ SHORT 0x1C00
 ORG 0x022A10
 SHORT 0x1C00
 POP
+
