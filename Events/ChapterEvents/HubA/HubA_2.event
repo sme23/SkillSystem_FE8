@@ -51,7 +51,7 @@ CharacterEventBothWays(0xF,CarmenJaimeTalk,Carmen,Jaime)
 END_MAIN
 
 LocationBasedEvents:
-Village(0xD,ScrollVillage,6,13)
+Village(0xD,ScrollVillage,6,8)
 END_MAIN
 
 MiscBasedEvents:
@@ -112,18 +112,13 @@ UNIT Incendivis Mage 0 Level(3,Enemy,True) [0,5] 0 0 0 0 [Bolting] BossAI
 
 UNIT Incendivis Fighter 0 Level(4,Enemy,True) [1,9] 0 0 0 0 [SteelAxe] GroupTwoAI
 UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [0,8] 0 0 0 0 [IronSword] GroupTwoAI
-UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [1,7] 0 0 0 0 [IronSword] GroupTwoAI
 
 UNIT Felipe Soldier 0 Level(5,Enemy,True) [3,13] 0 0 0 0 [Javelin, Pike] BossAI
 UNIT Incendivis Archer 0 Level(3,Enemy,True) [3,14] 0 0 0 0 [Longbow] BossAI
-UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [1,13] 0 0 0 0 [HandAxe] BossAI
 
 UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [5,11] 0 0 0 0 [IronSword] ChargeAI
-UNIT Incendivis Soldier 0 Level(4,Enemy,True) [4,10] 0 0 0 0 [SteelLance] ChargeAI
 
-UNIT Incendivis Warden 0 Level(3,Enemy,True) [2,9] 0 0 0 0 [Javelin] BossAI
 UNIT Incendivis Vanguard 0 Level(4,Enemy,True) [2,10] 0 0 0 0 [HandAxe] BossAI
-UNIT Incendivis Warden 0 Level(3,Enemy,True) [2,11] 0 0 0 0 [Javelin] BossAI
 
 //Top Left
 UNIT Incendivis Mage 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [Bolting] BossAI
@@ -131,23 +126,18 @@ UNIT Sierra Vanguard 0 Level(6,Enemy,True) [5,1] 0 0 0 0 [Bloodaxe,HandAxe] Boss
 UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [4,2] 0 0 0 0 [IronLance] ChargeAI
 UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [6,2] 0 0 0 0 [IronAxe] ChargeAI
 
-UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [4,3] 0 0 0 0 [HandAxe] BossAI
-UNIT Incendivis Warden 0 Level(4,Enemy,True) [5,3] 0 0 0 0 [Javelin] BossAI
-UNIT Incendivis Vanguard 0 Level(3,Enemy,True) [6,3] 0 0 0 0 [HandAxe] BossAI
+UNIT Incendivis Vanguard 0 Level(4,Enemy,True) [5,3] 0 0 0 0 [HandAxe] BossAI
 
 // Top Right
 UNIT Manfred Mercenary 0 Level(4,Enemy,True) [21,0] 0 0 0 0 [SteelSword,KillingEdge] GroupThreeAI
 UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [21,2] 0 0 0 0 [IronAxe] GroupThreeAI
 UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [19,0] 0 0 0 0 [IronAxe] GroupThreeAI
-UNIT CrimsonHeart Deserter 0 Level(4,Enemy,True) [20,1] 0 0 0 0 [Javelin] GroupThreeAI
 
 UNIT Incendivis Mage 0 Level(3,Enemy,True) [15,0] 0 0 0 0 [Bolting] BossAI
 
 UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,5] 0 0 0 0 [IronLance] GroupOneAI
 UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [20,6] 0 0 0 0 [SteelAxe] GroupOneAI
-UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [21,7] 0 0 0 0 [IronLance] GroupOneAI
 
-UNIT CrimsonHeart Mercenary 0 Level(4,Enemy,True) [14,10] 0 0 0 0 [SteelSword] ChargeAI
 UNIT CrimsonHeart Deserter 0 Level(3,Enemy,True) [13,7] 0 0 0 0 [IronLance] ChargeAI
 
 UNIT CrimsonHeart Brigand 0 Level(3,Enemy,True) [18,11] 0 0 0 0 [IronAxe] GroupFourAI

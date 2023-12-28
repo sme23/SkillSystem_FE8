@@ -91,8 +91,8 @@ NoFade
 ENDA
 
 PlayerGroup:
-UNIT Lua Captain 0 Level(10,Ally,False) [6,19] 0 0 0 0 [SteelBlade, IronMusket, Vulnerary] NoAI
-UNIT Desiderio Vanguard 0 Level(8,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(8,Ally,False) [6,19] 0 0 0 0 [SteelBlade, IronMusket, Vulnerary] NoAI
+UNIT Desiderio Vanguard 0 Level(6,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance, Vulnerary] NoAI
 UNIT Pilar Ninja 0 Level(8,Ally,False) [5,19] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] NoAI
 UNIT Razvan Curate 0 Level(4,Ally,False) [5,20] 0 0 0 0 [Mend, Heal, Vulnerary] NoAI
 UNIT Carmen Mage_F 0 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire, Vulnerary] NoAI
@@ -108,7 +108,6 @@ UNIT Blackheart Deserter 0 Level(2, Enemy, True) [12,20] 0 0 0 0 [IronLance] Cha
 UNIT Blackheart Fighter 0 Level(2, Enemy, True) [12,19] 0 0 0 0 [IronAxe] ChargeAI
 UNIT Blackheart Warden 0 Level(3, Enemy, True) [13,18] 0 0 0 0 [SteelSword, Javelin] BossAI
 UNIT Blackheart Hunter 0 Level(2, Enemy, True) [18,21] 0 0 0 0 [IronBow] ChargeAI
-UNIT Blackheart Myrmidon 0 Level(2, Enemy, True) [18,18] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Blackheart Hunter 0 Level(2, Enemy, True) [12,15] 0 0 0 0 [IronBow] AttackWhenInRangeAI
 
 UNIT Blackheart Mercenary 0 Level(2, Enemy, True) [15,14] 0 0 0 0 [SteelSword] AttackInRangeAI

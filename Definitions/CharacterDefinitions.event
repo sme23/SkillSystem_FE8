@@ -37,6 +37,30 @@
 #define Alonso $41
 #define Elodia $42
 
+// HUB B CHAPTER UNITS
+
+// $17 to $1F
+
+#define HubBUnit1 $17
+#define HubBUnit2 $18
+#define HubBUnit3 $19
+#define HubBUnit4 $1A
+#define HubBUnit5 $1B
+#define HubBUnit6 $1C
+#define HubBUnit7 $1D
+#define HubBUnit8 $1E
+#define HubBUnit9 $1F
+
+// HUB B BASE UNITS
+
+// $20 to $24?? allots space for some Samson/Arraning
+#define Ponte $20
+#define Passarola $21
+#define Flint $22 //these two are mutually exclusive
+#define Gerald $23 //these two are mutually exclusive
+#define Neltume $24 
+
+
 // ENEMY/NPC ($46 through $FF)
 
 //Chapter 1

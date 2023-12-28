@@ -265,7 +265,7 @@ UNIT Razvan 0 0 Level(3,Ally,False) [7,3] 0 0 0 0 [Heal, Torch] NoAI
 UNIT
 
 HubALibraryHermenegildoGroup:
-UNIT Hermenegildo 0 0 Level(1,Ally,False) [9,3] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
+UNIT Hermenegildo 0 0 Level(3,Ally,False) [9,3] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
 UNIT
 
 GotoBarracksAndTreasureRoom:
@@ -333,7 +333,7 @@ ENUT PortToOtherAreas
 ENUT DocksToPort
 ENUT PortToBase
 ENUF WentToPortGreagorDocks //sets the temp flag version and allows global to be triggered
-GiveGold(3000)
+GiveGold(5000)
 ENUF 4
 MUSC PortGreagorID
 NoFade

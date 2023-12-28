@@ -127,7 +127,7 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
 
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS) || attacker->weaponAttributes & (IA_UNCOUNTERABLE | IA_MAGIC)) {
 		
-		if (gSkillTester(attacker,CritthriftIDLink) && gBattleHitIterator->attributes & BATTLE_HIT_ATTR_CRIT) return;
+		if (gSkillTester(&attacker->unit,CritthriftIDLink) && gBattleHitIterator->attributes & BATTLE_HIT_ATTR_CRIT) return;
 		
         attacker->weapon = GetItemAfterUse(attacker->weapon);
 

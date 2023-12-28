@@ -359,8 +359,8 @@ I can't[Beat] I can't die here![A][X]
 ## SierraBossQuote
 [ML][LoadSierra]
 [Beat]You're no rebels, are you?[AN]
-I don't know what reason you have,[N]
-but I've got a job to do here.[AN]
+I don't know why you're here,[N]
+but I've got a job to do.[AN]
 Get out of my way, will you?[A][X]
 
 ## SierraDeathQuote
