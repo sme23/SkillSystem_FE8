@@ -119,6 +119,7 @@
 // EQUIPS
 #define HideShield $ca
 #define GlassShield $d2
+#define HexlockShield $e7
 #define ShoveGlove $d3
 #define Statuette $e5
 

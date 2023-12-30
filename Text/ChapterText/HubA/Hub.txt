@@ -1759,6 +1759,136 @@ not just from pauper[Beat] pirates[Beat][AN]
 [Beat]The fool's out like a light.[N]
 Yeah, this was the right call.[A][X]
 
+//Hub Event; A peddler appears after a few chapters have passed in Hub A, going up to Lua after preps.
+//Slightly different dialogue occurs depending on the chapter most recently completed. 
+//This peddler gives the player a choice between three items. at a certain gold cost for each.
+
+##A1JustCompletedPeddler
+
+[FL][LoadLua]
+Glad we were able to[N]
+recover that statuette[Beat][AN]
+[Beat]Hmm?[.4] Who's that person?[AN]
+[X]
+
+##A2JustCompletedPeddler
+
+[FL][LoadLua]
+Glad we were able to deal[N]
+with those siege mages[Beat][AN]
+[Beat]Hmm?[.4] Who's that person?[AN]
+[X]
+
+##A3JustCompletedPeddler
+
+[FL][LoadLua]
+Glad we were able to escape[N]
+those cursed ruins[Beat][AN]
+[Beat]Hmm?[.4] Who's that person?[AN]
+[X]
+
+##A4JustCompletedPeddler
+
+[FL][LoadLua]
+Glad we were able to get[N]
+out of that chaotic interception[Beat][AN]
+[Beat]Hmm?[.4] Who's that person?[AN]
+[X]
+
+##A5JustCompletedPeddler
+
+[FL][LoadLua]
+Glad we were able to disrupt[N]
+Jozef's operation so readily[Beat][AN]
+[Beat]Hmm?[.4] Who's that person?[AN]
+[X]
+
+##A6JustCompletedPeddler
+
+[FL][LoadLua]
+Glad we cut ties with whatever[N]
+the hell Rochefort was doing[Beat][AN]
+[Beat]Hmm?[.4] Who's that person?[AN]
+[X]
+
+##PeddlerEncounterEvent
+
+[L][LoadLua]
+[FFR][LoadPeddler]
+[FFR][MoR]
+
+[R]
+Good morning to you, captain.[AN]
+Seems like you've had some[N]
+productive days recently.[AN]
+Sailing out from port every so often,[N]
+returning with a larger crew[Beat][AN]
+
+[L]
+You've been watching our movements?[AN]
+Already, I don't like you.[AN]
+
+[R]
+Simple observational awareness is[N]
+something you should respect, Captain.[AN]
+Besides, would I open myself up so[N]
+easily were I to have hostile intent?[AN]
+
+[L]
+Perhaps you're ready to blackmail me.[AN]
+But I'm listening.[AN]
+
+[R]
+Very well, I'll get to the point then.[AN]
+Since I've noticed you've had plenty of[N]
+activity, I know you must have some wealth.[AN]
+Plundered from haughty nobles or the[N]
+struggling commonfolk, I really don't care.[AN]
+What I do care about, however, is some[N]
+of that coin[Beat]for a helpful item.[AN]
+
+[L][1LB]
+So you're one of those peddler types?[AN]
+You tend to charge arms and legs[N]
+for some of your valuables.[AN] 
+
+[R][2LB]
+Only to those I know would want them--[.4][N]
+And can afford the cost, of course.[AN]
+I have a small selection of exotic goods,[N]
+so pick your poison, so I should say.[AN]
+Though, I can only offer one of[N]
+these goods to you and your crew.[AN]
+Choose wisely[Beat]or don't[N]
+choose at all! [.4]It's your choice.[AN][X]
+
+//Selection menu, choose one of them to purchase. Just rough ideas. 
+
+//5 Rainbow Tonics 2000G // +5 HP, + 3 Lck/Res, +2 to all other stats for a chapter. 
+//Hexlock Shield [20 uses] 1500 G // +1 Def , +3 Res
+//Menti's Tome [1 use] 1000 G // +5% to all growths of a unit. 
+
+## DeclinedPeddlerOffer
+[L][LoadLua]
+[R][LoadPeddler]
+
+[L][1LB]
+Not interested.[AN]
+[R][2LB]
+Very well, but if you change[N]
+your mind, I'll be here.[AN][X]
+
+## PeddlerOfferAccepted 
+
+[L][LoadLua]
+[R][LoadPeddler]
+
+[R]
+A fine deal, captain.[AN]
+May this help you out in[N]
+your endeavors in the future![AN][X]
+
+
 //Base Scene 1; Characters: Carmen and Ximo
 ## CarmenXimoBaseSceneText
 [L][LoadCarmen][R][LoadXimo]
