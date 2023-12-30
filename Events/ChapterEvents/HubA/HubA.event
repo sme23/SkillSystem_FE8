@@ -289,6 +289,7 @@ BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
 ENUT GotoChapter2Flag
+ENUT 4 //port music only
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
 SVAL s1 6 //if 6 chapters completed

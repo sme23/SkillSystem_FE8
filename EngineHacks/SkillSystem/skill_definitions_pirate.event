@@ -153,3 +153,7 @@
 
 //Nailed Down
 #define NailedDownID 47
+
+//Bow Range +1: Maximum range of equipped bows is increased.
+//By Teraspark
+#define BowRangeUpID 48

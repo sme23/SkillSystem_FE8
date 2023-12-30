@@ -354,6 +354,15 @@ For you will be honored[N]
 to die by my hand![AN]
 Make your peace![A][X]
 
+## A3SagargalaDeathQuote
+[MidLeft][LoadSagargala]
+Losing to women and babes[Beat][N]
+What a humiliating defeat.[AN]
+But this isn't the end[N]
+for the Rioja Reapers.[AN]
+The captain will find you,[N]
+hear me? You'll all[Beat] pay[Beat][A][X]
+
 // Post-Battle w/ background. We may want conditionals pending on whether Biko/Ondeh make it.
 
 ## A3_Ending_AllAlive
@@ -412,3 +421,9 @@ I trust you'll find use for us.[AN]
 [MidLeft]
 Excellent. Welcome aboard.[N]
 Now then, let's head back to Port.[A][X]
+
+## A3_AshQuiverEventText
+[X]
+
+## A3_ForestFriendText
+[X]

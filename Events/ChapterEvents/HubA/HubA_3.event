@@ -129,9 +129,8 @@ NoFade
 ENDA
 
 ForestFriendEvent:
-//texto
 RemoveAllThreeLogs
-//texto
+Text(A3_ForestFriendText)
 GiveItemWithDurability(SkillScroll,ForestFriendID,0xFFFF)
 NoFade
 ENDA
@@ -279,7 +278,8 @@ NoFade
 ENDA
 
 AshArrowItemEvent:
-GiveItem(AshArrow, Lua)
+Text(A3_AshQuiverEventText)
+GiveItem(AshQuiver, Lua)
 NoFade
 ENDA
 

@@ -773,7 +773,7 @@ in 3[Beat] 2[Beat] 1[Beat][A][X]
 the Game Boy Advance.[A][X]
 
 ## ChA1LuaNoticesChests
-[ML][LoadLua]
+[ML][LoadLua][3LB]
 I knew this place looked too[Beat][N]
 normal, for a nobleman's manor.[AN]
 Listen up! Those armored soldiers[N]

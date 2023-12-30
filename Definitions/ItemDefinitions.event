@@ -134,4 +134,5 @@
 #define TealGem $e0
 #define Eyepatch $e1
 #define AshArrow $e2
+#define AshQuiver AshArrow
 #define KnightRing $e6

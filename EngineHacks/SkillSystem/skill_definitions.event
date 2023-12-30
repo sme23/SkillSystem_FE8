@@ -873,10 +873,6 @@
 
 //Range Skills
 
-//Bow Range +1: Maximum range of equipped bows is increased.
-//By Teraspark
-#define BowRangeUpID 255
-
 //Point Blank: Minimum range of equipped bows is set to 1.
 //By Teraspark
 #define PointBlankID 255

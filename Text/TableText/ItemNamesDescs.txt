@@ -355,11 +355,11 @@ Eyepatch[X]
 Grants +30 crit, but reduces hit by 30.[X]
 
 ## AshArrowName
-Ash Arrow[X]
+Ash Quiver[X]
 
 ## AshArrowDesc
 Can only be equipped with Bows.[N]
-Gives all attacks 100% Hit.[X]
+Gives all attacks +1 Range.[X]
 
 ## StatuetteName
 Statuette[X]
