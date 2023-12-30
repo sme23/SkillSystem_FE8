@@ -685,7 +685,7 @@ UNIT MrYodsen Gunner 0 Level(7,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, 
 UNIT
 
 JaimeUnitGroup:
-UNIT Jaime PegasusRider 0 Level(2,NPC,False) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
+UNIT Jaime PegasusRider 0 Level(2,NPC,True) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
 UNIT
 
 OndehBikoUnitGroup:

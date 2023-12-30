@@ -365,8 +365,9 @@ Gives all attacks +1 Range.[X]
 Statuette[X]
 
 ## StatuetteDesc
-The Balinokans' prized relic. Said[N]
-to possess miraculous properties.[X]
+The Balinokans' prized relic.[N]
+When equipped, user survives[N]
+lethal attacks when HP > 50%.[X]
 
 ## StatuetteUseDesc
 You feel more able[N]
