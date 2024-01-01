@@ -1,0 +1,25 @@
+ALIGN 4
+BravesCrestClassList:
+BYTE Ninja 0x0
+
+ALIGN 4
+KnightsPlateClassList:
+BYTE Vanguard 0x0
+
+ALIGN 4
+HuntersMarkClassList:
+BYTE 0x0
+
+ALIGN 4
+FliersPermitClassList:
+BYTE 0x0
+
+ALIGN 4
+MagesRingClassList:
+BYTE Curate 0x0
+
+ALIGN 4
+RidersBadgeClassList:
+BYTE 0x0
+
+ALIGN 4

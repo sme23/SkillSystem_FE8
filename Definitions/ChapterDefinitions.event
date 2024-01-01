@@ -10,6 +10,12 @@
 #define HubA_6 7
 #define Chapter2 8
 #define HubALibrary 9
+#define HubB 10
+#define HubB_1 11
+#define HubB_2 12
+#define HubB_3 13
+#define HubB_4 14
+#define HubB_5 15
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
 #define Chapter1MapID 0x4
@@ -51,6 +57,30 @@
 #define HubALibraryMapID 0x98
 #define HubALibraryMapChangesID 0x99
 #define HubALibraryEventsID 0x9A
+
+#define HubBMapID 0x28
+#define HubBMapChangesID 0x29
+#define HubBEventsID 0x2A
+
+#define HubB_1MapID 0x2B
+#define HubB_1MapChangesID 0x2C
+#define HubB_1EventsID 0x2D
+
+#define HubB_2MapID 0x31
+#define HubB_2MapChangesID 0x32
+#define HubB_2EventsID 0x33
+
+#define HubB_3MapID 0x35
+#define HubB_3MapChangesID 0x36
+#define HubB_3EventsID 0x37
+
+#define HubB_4MapID 0x39
+#define HubB_4MapChangesID 0x3A
+#define HubB_4EventsID 0x3B
+
+#define HubB_5MapID 0x3F
+#define HubB_5MapChangesID 0x40
+#define HubB_5EventsID 0x41
 
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88

@@ -82,6 +82,14 @@
 #define WentToHubA5 0x8E
 #define WentToHubA6 0x8F
 
+#define WentToHub1 WentToHubA1
+#define WentToHub2 WentToHubA2
+#define WentToHub3 WentToHubA3
+#define WentToHub4 WentToHubA4
+#define WentToHub5 WentToHubA5
+#define WentToHub6 WentToHubA6
+
+
 #define LuaInAHubFlag 0xA0
 
 //A3 macros

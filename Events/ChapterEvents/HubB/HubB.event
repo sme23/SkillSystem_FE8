@@ -1,0 +1,113 @@
+EventPointerTable(HubBEventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AREA WentToHub1 GotoHubB1 [9,7] [9,7]
+AREA WentToHub2 GotoHubB2 [7, 12] [7, 12]
+AREA WentToHub3 GotoHubB3 [12, 12] [12, 12]
+AREA WentToHub4 GotoHubB4 [7,18] [7,18]
+AREA WentToHub5 GotoHubB5 [12,18] [12,18]
+AFEV 0 RefreshLua 0
+END_MAIN
+
+GotoHubB1:
+CenterTextbox(HubB1Prompt)
+GotoHubChapterIfYes(1, HubB_1)
+ENUF WentToHub1
+NoFade
+ENDA
+
+GotoHubB2:
+CenterTextbox(HubB2Prompt)
+GotoHubChapterIfYes(1, HubB_2)
+ENUF WentToHub2
+NoFade
+ENDA
+
+GotoHubB3:
+EVBIT_MODIFY 4
+CenterTextbox(HubB3Prompt)
+GotoHubChapterIfYes(1, HubB_3)
+ENUF WentToHub3
+NoFade
+ENDA
+
+GotoHubB4:
+CenterTextbox(HubB4Prompt)
+GotoHubChapterIfYes(1, HubB_4)
+ENUF WentToHub4
+NoFade
+ENDA
+
+GotoHubB5:
+CenterTextbox(HubB5Prompt)
+GotoHubChapterIfYes(1, HubB_5)
+ENUF WentToHub5
+NoFade
+ENDA
+
+RefreshLua:
+SVAL s1 0x42
+UNSET_CONDITION Lua
+NoFade
+ENDA
+
+Traps1:
+RedSigil(9, 7)
+RedSigil(7, 12)
+RedSigil(12, 12)
+RedSigil(7, 18)
+RedSigil(12, 18)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [10,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+BeginningScene:
+WEATHER 7
+ENUT LuaInAHubFlag
+GotoPrepScreenHub
+NoFade 
+ENDA
+
+EndingScene:
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

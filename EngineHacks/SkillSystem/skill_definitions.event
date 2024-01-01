@@ -298,10 +298,6 @@
 //By Leonarth
 #define ForagerID 255
 
-//Imbue: Recover HP equal to Magic at the start of each turn.
-//By Sme
-#define ImbueID 255
-
 //Movement Skills
 
 //Acrobat: All traversable terrain costs 1 movement.

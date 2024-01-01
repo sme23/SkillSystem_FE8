@@ -93,7 +93,7 @@ Eff. vs. horses and fliers.[X]
 Sidepierce[X]
 
 ## SidepierceDesc
-Allows canto after attack.[X]
+Allows canto after action.[X]
 
 ## PitchforkName
 Pitchfork[X]
@@ -390,3 +390,39 @@ A trap that explodes when walked on.[X]
 ## MineUseDesc
 Use this to place[N]
 down a mine.[X]
+
+## BraveCrestName
+Brave's Crest[X]
+
+## BraveCrestDesc
+[X]
+
+## KnightPlateName
+Knight's Plate[X]
+
+## KnightPlateDesc
+[X]
+
+## HunterMarkName
+Hunter's Mark[X]
+
+## HunterMarkDesc
+[X]
+
+## FlierPermitName
+Flier's Permit[X]
+
+## FlierPermitDesc
+[X]
+
+## MageRingName
+Mage's Ring[X]
+
+## MageRingDesc
+[X]
+
+## RiderBadgeName
+Rider's Badge[X]
+
+## RiderBadgeDesc
+[X]
