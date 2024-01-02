@@ -63,6 +63,18 @@
     ALIGN 4
     N426ImprovedCastleConfig:
     #incbin "Dmp/Config/Castle Update Config_comp.dmp"
+	
+	ALIGN 4
+    DesertBastionObject:
+    #incbin "Dmp/Object/2. Desert + Bastion + Village - Tileset Object Palette.dmp"
+	
+	ALIGN 4
+    DesertBastionPalette:
+    #incbin "Dmp/Palette/2. Desert + Bastion + Village - Tileset Object Palette_pal.dmp"
+	
+	ALIGN 4
+    DesertBastionConfig:
+    #incbin "Dmp/Config/2. Desert + Bastion + Village_comp.dmp"
 
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
@@ -85,3 +97,6 @@
     EventPointerTable(N426ImprovedCastlePaletteID, N426ImprovedCastlePalette)
     EventPointerTable(N426ImprovedCastleConfigID, N426ImprovedCastleConfig)
     
+	EventPointerTable(DesertBastionObjectID, DesertBastionObject)
+    EventPointerTable(DesertBastionPaletteID, DesertBastionPalette)
+    EventPointerTable(DesertBastionConfigID, DesertBastionConfig)
