@@ -93,7 +93,7 @@ Eff. vs. horses and fliers.[X]
 Sidepierce[X]
 
 ## SidepierceDesc
-Allows canto after attack.[X]
+Allows canto after action.[X]
 
 ## PitchforkName
 Pitchfork[X]
@@ -363,18 +363,19 @@ Eyepatch[X]
 Grants +30 crit, but reduces hit by 30.[X]
 
 ## AshArrowName
-Ash Arrow[X]
+Ash Quiver[X]
 
 ## AshArrowDesc
 Can only be equipped with Bows.[N]
-Gives all attacks 100% Hit.[X]
+Gives all attacks +1 Range.[X]
 
 ## StatuetteName
 Statuette[X]
 
 ## StatuetteDesc
-The Balinokans' prized relic. Said[N]
-to possess miraculous properties.[X]
+The Balinokans' prized relic.[N]
+When equipped, user survives[N]
+lethal attacks when HP > 50%.[X]
 
 ## StatuetteUseDesc
 You feel more able[N]
@@ -409,3 +410,39 @@ A knowledgeable tome that grants[N]
 
 Grants +5% to[N]
 all growths.[X]
+
+## BraveCrestName
+Brave's Crest[X]
+
+## BraveCrestDesc
+[X]
+
+## KnightPlateName
+Knight's Plate[X]
+
+## KnightPlateDesc
+[X]
+
+## HunterMarkName
+Hunter's Mark[X]
+
+## HunterMarkDesc
+[X]
+
+## FlierPermitName
+Flier's Permit[X]
+
+## FlierPermitDesc
+[X]
+
+## MageRingName
+Mage's Ring[X]
+
+## MageRingDesc
+[X]
+
+## RiderBadgeName
+Rider's Badge[X]
+
+## RiderBadgeDesc
+[X]

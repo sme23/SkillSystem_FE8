@@ -2,8 +2,7 @@
 #define DeathQuote(Character,Chapter,EventID,TextID,Pointer) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID ; POIN Pointer"
 #define DeathQuote(Character,Chapter,EventID,TextID) "SHORT Character; BYTE 0xFF Chapter; SHORT EventID TextID 0 0"
 
-// Bosses
-
+// Players
 DeathQuote(Lua, AllChapters, 0x65, LuaDQ)
 DeathQuote(Pilar, AllChapters, 0, PilarDQ)
 DeathQuote(Desiderio, AllChapters, 0, DesiderioDQ)
@@ -12,6 +11,12 @@ DeathQuote(Carmen, AllChapters, 0, CarmenDQ)
 DeathQuote(Ximo, AllChapters, 0, XimoDQ)
 DeathQuote(Hermenegildo, AllChapters, 0, HermenegildoDQ)
 DeathQuote(Estelle, AllChapters, 0, EstelleDQ)
+
+//DeathQuote()
+
+// Bosses
+
+
 
 DeathQuote(Khazhak,Chapter1, 2, 0)
 
@@ -23,6 +28,8 @@ DeathQuote(Yurena, HubA_1, 0x0, YurenaDeathQuote)
 DeathQuote(Felipe,HubA_2, 0xA, FelipeDeathQuote)
 DeathQuote(Sierra,HubA_2, 0xB, SierraDeathQuote)
 DeathQuote(Manfred,HubA_2, 0xC, ManfredDeathQuote)
+
+DeathQuote(Sagargala, HubA_3, 0x2, A3SagargalaDeathQuote)
 
 DeathQuote(Stingray, HubA_4, 10, A4_StingrayDefeated)
 DeathQuote(Ramiro, HubA_4, 11, A4_RamiroDefeated)

@@ -20,7 +20,7 @@ None,0,0
 0x12 Juan,(-1),15
 0x13 Matteo,(-1),15
 0x14 Suzanne,1,25
-0x15 Orlando,0,30
+0x15 Orlando,(-1),30
 0x16 Rahel,0,20
 0x17 Saleh,11,30
 0x18 Ewan,2,45
@@ -112,7 +112,7 @@ None,0,0
 0x6E CrimsonHeart,0,0
 0x6F TorchUnit,0,0
 0x70 Igniswords,0,0
-0x71 Ignacio,9,40
+0x71 Ignacio,7,40
 0x72 TorchUnit2,2,5
 0x73 Hugo,0,5
 0x74 Juliana,5,60

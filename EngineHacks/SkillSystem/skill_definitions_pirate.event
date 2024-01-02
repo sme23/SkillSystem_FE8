@@ -153,3 +153,11 @@
 
 //Nailed Down
 #define NailedDownID 47
+
+//Bow Range +1: Maximum range of equipped bows is increased.
+//By Teraspark
+#define BowRangeUpID 48
+
+//Imbue: Recover HP equal to Magic at the start of each turn.
+//By Sme
+#define ImbueID 49

@@ -1,0 +1,29 @@
+## HubB1Prompt
+Go to B-1?[N]
+[No][X]
+
+## HubB2Prompt
+Go to B-2?[N]
+[No][X]
+
+## HubB3Prompt
+Go to B-3?[N]
+[No][X]
+
+## HubB4Prompt
+Go to B-4?[N]
+[No][X]
+
+## HubB5Prompt
+Go to B-5?[N]
+[No][X]
+
+## HubBTitle
+Hub B - Lua's Armada[X]
+
+## HubBStatusObjective
+Search the outskirts[N]
+   for treasure.[X]
+
+## HubBGoalWindow
+Search[X]

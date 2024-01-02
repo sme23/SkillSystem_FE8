@@ -26,6 +26,7 @@ END_MAIN
 
 Reinforcements1:
 SpawnReinforcements(Turn3Reinforcements)
+SpawnReinforcements(CrimsonHeartReinforce)
 NoFade
 ENDA 
 
@@ -44,6 +45,11 @@ UNIT Incendivis AxeCav 0 Level(3,Enemy,False) [0,10] 0 0 1 REDA0R10 [IronAxe] Ch
 UNIT Incendivis SwordCav 0 Level(3,Enemy,False) [0,11] 0 0 1 REDA0R11 [IronSword] ChargeAI
 UNIT Incendivis LanceCav 0 Level(3,Enemy,False) [4,0] 0 0 1 REDA4R0 [IronLance] ChargeAI
 UNIT Incendivis AxeCav 0 Level(3,Enemy,False) [6,0] 0 0 1 REDA6R0 [IronAxe] ChargeAI
+UNIT
+
+CrimsonHeartReinforce:
+UNIT Incendivis Brigand 0 Level(3,Enemy,False) [21,5] 0 0 1 REDA21R5 [IronAxe] ChargeAI
+UNIT Incendivis Deserter 0 Level(3,Enemy,False) [21,8] 0 0 1 REDA21R8 [IronLance] ChargeAI
 UNIT
 
 CharacterBasedEvents:

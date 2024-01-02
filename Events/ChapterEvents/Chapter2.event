@@ -14,6 +14,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0, IgnacioBoatReinforcements, 3)
+TurnEventPlayer(0, HugoReinforcements, 5)
 TurnEventPlayer(ElodiaChargeFlag, ElodiaDecidesToCharge, 1, 255)
 TurnEventPlayer(LuaInAHubFlag, ObjectiveExplanation, 1)
 TurnEventPlayer(Ch2ReinforcementFlags, BoatPursuerReinforcements, 1, 255)
@@ -110,9 +111,19 @@ UNIT Igniswords Archer Ignacio Level(8,Enemy,True) [32,16] 0 0 1 REDA30R15 [Stee
 UNIT
 
 IgnacioBoatReinforcementsGroup2:
-UNIT Igniswords Warden Ignacio Level(8,Enemy,True) [34,5] 0 0 1 REDA34R5 [IronBlade, Javelin] GroupFourAI
-UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,5] 0 0 1 REDA30R6 [Fire] AttackWhenInRangeAI
+UNIT Igniswords Warden Ignacio Level(8,Enemy,True) [34,5] 0 0 1 REDA34R5 [IronBlade, Javelin] ChargeAI
+UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,5] 0 0 1 REDA30R6 [Fire] ChargeAI
 UNIT
+
+HugoReinforcements:
+SpawnReinforcements(HugoReinforcementsGroup)
+NoFade
+ENDA
+
+HugoReinforcementsGroup:
+UNIT TorchUnit Soldier Ignacio Level(12,Enemy,True) [3,0] 0 0 1 REDA3R0 [SteelLance] PursueWithoutHeedAI
+UNIT TorchUnit Fighter Ignacio Level(12,Enemy,True) [1,0] 0 0 1 REDA1R0 [SteelAxe] PursueWithoutHeedAI
+UNIT 
 
 CharacterBasedEvents:
 CharacterEvent(OrlandoHubATalk, GotoChapter1, Lua, Orlando)
@@ -147,7 +158,7 @@ NoFade
 ENDA
 
 LocationBasedEvents:
-DurabilityChest(SkillScroll,AcrobatID,31,15)
+DurabilityChest(SkillScroll,ImbueID,31,15)
 END_MAIN
 
 MiscBasedEvents:
@@ -307,7 +318,7 @@ NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(13,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(10,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
@@ -435,9 +446,9 @@ ENDA
 
 Units1:
 UNIT Lua 0 0 Level(10,Ally,False) [15,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Orlando 0 0 Level(11,Ally,False) [28,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(10,Ally,False) [28,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 //Lua's Group - 7
-UNIT Rahel 0 0 Level(11,Ally,False) [15,10] 0 0 0 0 [IronBow, Vulnerary] NoAI
+UNIT Rahel 0 0 Level(1,Ally,False) [15,10] 0 0 0 0 [IronBow, Vulnerary] NoAI
 LoadUnit(16,10)
 LoadUnit(16,11)
 LoadUnit(16,12)
@@ -559,7 +570,7 @@ NoFade
 ENDA
 
 NewPlayerGroup:
-UNIT Orlando 0 0 Level(11,Ally,False) [15,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(10,Ally,False) [15,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
@@ -608,7 +619,7 @@ UNIT TorchUnit BowCav ElodiaBoss Level(10,Enemy,True) [28,22] 0 0 0 0 [SteelBow]
 UNIT TorchUnit BowCav ElodiaBoss Level(10,Enemy,True) [28,24] 0 0 0 0 [SteelBow] GroupSevenAI
 
 UNIT TorchUnit AxeCav ElodiaBoss Level(10,Enemy,True) [18,22] 0 0 0 0 [SteelAxe] GroupEightAI
-UNIT TorchUnit LanceCav ElodiaBoss Level(10,Enemy,True) [15,25] 0 0 0 0 [SteelLance] GroupEightAI
+UNIT TorchUnit SwordCav ElodiaBoss Level(10,Enemy,True) [15,25] 0 0 0 0 [SteelSword] GroupEightAI
 
 UNIT TorchUnit2 SwordCav ElodiaBoss Level(10,Enemy,True) [39,22] 0 0 0 0 [IronSword] GoForThroneAI
 UNIT TorchUnit2 AxeCav ElodiaBoss Level(10,Enemy,True) [39,24] 0 0 0 0 [IronAxe] GoForThroneAI
@@ -626,14 +637,14 @@ UNIT
 
 EndingScene:
 SetBackground(Fort)
-Text(Ch2EndingScene1)
 MUSC FoolsBoldID
+Text(Ch2EndingScene1)
 Text(Ch2EndingScene2)
 Text(Ch2EndingScene3)
 MUSC ABlackheartsPrideID
 Text(Ch2EndingScene4)
 Text(Ch2EndingScene5)
-GOTO_TITLE
+GoToHubChapter(HubB)
 NoFade
 ENDA
 

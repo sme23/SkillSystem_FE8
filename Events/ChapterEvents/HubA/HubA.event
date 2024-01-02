@@ -289,6 +289,7 @@ BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
 ENUT GotoChapter2Flag
+ENUT 4 //port music only
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
 SVAL s1 6 //if 6 chapters completed
@@ -540,7 +541,7 @@ NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(13,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(10,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
@@ -684,7 +685,7 @@ UNIT MrYodsen Gunner 0 Level(7,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, 
 UNIT
 
 JaimeUnitGroup:
-UNIT Jaime PegasusRider 0 Level(2,NPC,False) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
+UNIT Jaime PegasusRider 0 Level(2,NPC,True) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
 UNIT
 
 OndehBikoUnitGroup:
@@ -706,7 +707,7 @@ UNIT
 
 EstelleOrlandoDocksGroup:
 UNIT Estelle Troubadour 0 Level(2,NPC,False) [8,4] 0 0 0 0 [Heal, Torch] NoAI
-UNIT Orlando 0 0 Level(13,NPC,False) [8,20] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(10,NPC,False) [8,20] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT
 
 DocksGroup:

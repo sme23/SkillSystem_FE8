@@ -102,6 +102,8 @@ POP
 
 #include "ExternalTables/BossMusicTable.event"
 
+#include "ExternalTables/PromotionItemClassListPointers.event"
+
 ALIGN 4
 TestAnimationMapping:
 BYTE 0 1; SHORT 3
