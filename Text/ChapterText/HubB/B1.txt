@@ -1,8 +1,9 @@
 ## HubB_1Title
-Hub B-1[X]
+Ch. B-1: What Once Was[X]
 
 ## HubB_1StatusObjective
-Something[X]
+Rout the enemy before[N]
+the ruins collapse.[X]
 
 ## HubB_1GoalWindow
-Something[X]
+Rout enemy[X]
