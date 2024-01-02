@@ -116,6 +116,7 @@
 [LoadMentor] = [LoadFace][0x16][0x1]
 [LoadOrlando] = [LoadMentor]
 [LoadRahel] = [LoadFace][0x17][0x1]
+[LoadPeddler] = [LoadFace][0x31][0x1]
 
 [LoadElodia] = [LoadFace][0x47][0x1]
 [LoadAlonso] = [LoadFace][0x48][0x1]

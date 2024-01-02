@@ -6,6 +6,7 @@ ALIGN 4
 EquipmentList:
 BYTE HideShield
 BYTE GlassShield
+BYTE HexlockShield
 BYTE AshArrow
 BYTE Eyepatch
 BYTE KnightRing
@@ -17,6 +18,7 @@ BYTE 0x00 //terminator
 ALIGN 4
 DefenseEquipmentList:
 BYTE GlassShield
+BYTE HexlockShield
 BYTE 0x00 // terminator
 
 // Offense equipment loses durability on each attack made
