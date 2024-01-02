@@ -336,6 +336,14 @@ Glass Shield[X]
 ## GlassShieldDesc
 Grants +7 Def/Res but breaks easily.[X]
 
+## HexlockShieldName
+
+Hexlock Shield[X]
+
+## HexlockShieldDesc
+
+Grants +1 Def, +3 Res.[X]
+
 ## ShoveGloveName
 Shove Glove[X]
 
@@ -390,6 +398,18 @@ A trap that explodes when walked on.[X]
 ## MineUseDesc
 Use this to place[N]
 down a mine.[X]
+
+## MetisTomeName
+Meti's Tome[X]
+
+## MetisTomeDesc
+A knowledgeable tome that grants[N] 
++5% to all a unit's growths.[X]
+
+## MetisTomeUseDesc
+
+Grants +5% to[N]
+all growths.[X]
 
 ## BraveCrestName
 Brave's Crest[X]
