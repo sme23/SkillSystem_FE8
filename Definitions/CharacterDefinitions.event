@@ -41,7 +41,7 @@
 
 // $17 to $1F
 
-#define B1Unit1 $17
+#define Dmitr $17
 #define B2Unit1 $18
 #define B2Unit2 $19
 #define B2Unit3 $1A

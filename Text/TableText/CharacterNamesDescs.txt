@@ -550,3 +550,11 @@ Docksman[X]
 Deckhand[N]
 Port crawlers who guard their crew's[N]
 airship from any nosy onlookers.[X]
+
+## DmitrName
+Dmitr[X]
+
+## DmitrDesc
+Wanderer[N]
+A wayward warrior, adrift[N]
+like the sand in the wind.[X]
