@@ -167,6 +167,21 @@
 [LoadRebel] = [LoadFace][0x6C][0x1]
 [LoadVillager] = [LoadFace][0x58][0x1]
 
+[LoadGreagorVillager] = [LoadFace][0x5C][0x1]
+[LoadGreagorSailor] = [LoadFace][0x4C][0x1]
+[LoadGreagorPatroller] = [LoadFace][0x69][0x1]
+// nice
+[LoadGreagorLibrarian] = [LoadFace][0x62][0x1]
+[LoadGreagorGuard] = [LoadFace][0x71][0x1]
+[LoadGreagorSmuggler] = [LoadFace][0x30][0x1]
+[LoadGreagorShipwright] = [LoadFace][0x5A][0x1]
+[LoadGreagorCaptain] = [LoadFace][0x4D][0x1]
+[LoadGreagorPatron] = [LoadFace][0x6D][0x1]
+[LoadGreagorPeddler] = [LoadFace][0x31][0x1]
+[LoadGreagorLibrarianB] = [LoadFace][0x59][0x1]
+[LoadGreagorVillagerB] = [LoadFace][0x61][0x1]
+[LoadGreagorPatronB] = [LoadFace][0x5A][0x1]
+
 [Font] = [0x80][0x26]
 [TextPalette] = [0x80][0x27]
 [ColorGroup] = [0x80][0x28]

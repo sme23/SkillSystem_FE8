@@ -74,6 +74,22 @@
 
 // HUB A CHAPTER ENEMIES + NPCS
 
+#define GreagorVillager $A0
+#define GreagorSailor $A1
+#define GreagorPatroller $A2
+#define GreagorLibrarian $A3
+#define GreagorGuard $A4
+#define GreagorSmuggler $A5
+#define GreagorShipwright $A6
+#define GreagorCaptain $A7
+#define GreagorPatron $A8
+
+#define GreagorPeddler $A9
+
+#define GreagorLibrarianB $AA
+#define GreagorVillagerB $AB
+#define GreagorPatronB $AC
+
 //Hub A1
 #define Buzu $48
 #define Bozo $49

@@ -18,6 +18,8 @@ END_MAIN
 CharacterBasedEvents:
 CharacterEvent(RazvanHermenegildoHubATalkFlag, RazvanHermenegildoHubATalk, Lua, Razvan)
 CharacterEvent(RazvanHermenegildoHubATalkFlag, RazvanHermenegildoHubATalk, Lua, Hermenegildo)
+CharacterEvent(0, NPCLibrarianATalk, Lua, GreagorLibrarian)
+CharacterEvent(0, NPCLibrarianBTalk, Lua, GreagorLibrarianB)
 END_MAIN
 
 RazvanHermenegildoHubATalk:
@@ -50,6 +52,16 @@ ENDA
 CUSALibraryGreens:
 TurnUnitBlueIfAlive(Hermenegildo, 1)
 TurnUnitBlueIfAlive(Razvan, 2)
+NoFade
+ENDA
+
+NPCLibrarianATalk:
+Text(NPCLibrarianDialogueA)
+NoFade
+ENDA
+
+NPCLibrarianBTalk:
+Text(NPCLibrarianDialogueB)
 NoFade
 ENDA
 

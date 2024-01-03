@@ -101,6 +101,12 @@ Pitchfork[X]
 ## PitchforkDesc
 Cannot counter/be countered.[X]
 
+## GuBalgName
+Gu'Balg[X]
+
+## GuBalgDesc
+It's...quite the weapon, alright.[X]
+
 //AXES
 
 ## BloodaxeName
@@ -403,7 +409,7 @@ down a mine.[X]
 Meti's Tome[X]
 
 ## MetisTomeDesc
-A knowledgeable tome that grants[N] 
+A knowledgeable tome that grants[N]
 +5% to all a unit's growths.[X]
 
 ## MetisTomeUseDesc

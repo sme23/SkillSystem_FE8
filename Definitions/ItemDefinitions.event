@@ -35,6 +35,7 @@
 #define Harpoon $d6
 #define Sidepierce $d9
 #define Pitchfork $df
+#define GuBalg $e8
 
 //AXES
 //#define IronAxe $1f
@@ -132,6 +133,7 @@
 #define MagesRing $68
 #define RidersBadge $97
 #define Tonic 0xCB // a durability based item 
+#define MetisTome $89
 #define TealGem $e0
 #define Eyepatch $e1
 #define AshArrow $e2

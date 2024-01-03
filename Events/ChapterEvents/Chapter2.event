@@ -268,6 +268,13 @@ LoadCutsceneUnits(HubALibraryRazvanGroup)
 LoadPlayerUnits(HubALibraryHermenegildoGroup)
 TurnUnitGreenIfAlive(Razvan, 1)
 TurnUnitGreenIfAlive(Hermenegildo, 2)
+
+LoadCutsceneUnits(NPCLibrarianBGroup)
+CheckHowManyHubChaptersCompleted
+SVAL s1 2 //if 2 or more chapters completed
+BLT 776 s1 sC 
+	LoadCutsceneUnits(NPCLibrarianAGroup)
+LABEL 776
 NoFade
 ENDA
 
@@ -277,6 +284,14 @@ UNIT
 
 HubALibraryHermenegildoGroup:
 UNIT Hermenegildo 0 0 Level(3,Ally,False) [9,3] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
+UNIT
+
+NPCLibrarianAGroup:
+UNIT GreagorLibrarian Mage_F 0 Level(3,NPC, False) [15,12] 0 0 0 0 [] NoAI
+UNIT
+
+NPCLibrarianBGroup:
+UNIT GreagorLibrarianB Sage 0 Level(11,NPC, False) [14,3] 0 0 0 0 [] NoAI
 UNIT
 
 GotoBarracksAndTreasureRoom:

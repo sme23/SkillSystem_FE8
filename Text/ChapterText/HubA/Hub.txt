@@ -1763,9 +1763,17 @@ Yeah, this was the right call.[A][X]
 //Slightly different dialogue occurs depending on the chapter most recently completed. 
 //This peddler gives the player a choice between three items. at a certain gold cost for each.
 
-##A1JustCompletedPeddler
+## GenericJustCompletedPeddler //No logic has been added in yet to detect recently done chapter, so generic dialogue for now.
 
-[FL][LoadLua]
+[R][LoadLua]
+Heh. Seems like I'm making steady[N]
+progress growing my crew[Beat][AN]
+[Beat]Hmm?[.4] Who's that person?[AN]
+[X]
+
+## A1JustCompletedPeddler
+
+[R][LoadLua]
 Glad we were able to[N]
 recover that statuette[Beat][AN]
 [Beat]Hmm?[.4] Who's that person?[AN]
@@ -1773,7 +1781,7 @@ recover that statuette[Beat][AN]
 
 ##A2JustCompletedPeddler
 
-[FL][LoadLua]
+[R][LoadLua]
 Glad we were able to deal[N]
 with those siege mages[Beat][AN]
 [Beat]Hmm?[.4] Who's that person?[AN]
@@ -1781,7 +1789,7 @@ with those siege mages[Beat][AN]
 
 ##A3JustCompletedPeddler
 
-[FL][LoadLua]
+[R][LoadLua]
 Glad we were able to escape[N]
 those cursed ruins[Beat][AN]
 [Beat]Hmm?[.4] Who's that person?[AN]
@@ -1789,7 +1797,7 @@ those cursed ruins[Beat][AN]
 
 ##A4JustCompletedPeddler
 
-[FL][LoadLua]
+[R][LoadLua]
 Glad we were able to get[N]
 out of that chaotic interception[Beat][AN]
 [Beat]Hmm?[.4] Who's that person?[AN]
@@ -1797,7 +1805,7 @@ out of that chaotic interception[Beat][AN]
 
 ##A5JustCompletedPeddler
 
-[FL][LoadLua]
+[R][LoadLua]
 Glad we were able to disrupt[N]
 Jozef's operation so readily[Beat][AN]
 [Beat]Hmm?[.4] Who's that person?[AN]
@@ -1805,7 +1813,7 @@ Jozef's operation so readily[Beat][AN]
 
 ##A6JustCompletedPeddler
 
-[FL][LoadLua]
+[R][LoadLua]
 Glad we cut ties with whatever[N]
 the hell Rochefort was doing[Beat][AN]
 [Beat]Hmm?[.4] Who's that person?[AN]
@@ -1813,32 +1821,32 @@ the hell Rochefort was doing[Beat][AN]
 
 ##PeddlerEncounterEvent
 
-[L][LoadLua]
-[FFR][LoadPeddler]
-[FFR][MoR]
+[R][LoadLua]
+[FFL][LoadPeddler]
+[FFR][MoFL]
 
-[R]
+[FL]
 Good morning to you, captain.[AN]
 Seems like you've had some[N]
 productive days recently.[AN]
 Sailing out from port every so often,[N]
 returning with a larger crew[Beat][AN]
 
-[L]
+[R]
 You've been watching our movements?[AN]
 Already, I don't like you.[AN]
 
-[R]
+[FL]
 Simple observational awareness is[N]
 something you should respect, Captain.[AN]
 Besides, would I open myself up so[N]
 easily were I to have hostile intent?[AN]
 
-[L]
+[R]
 Perhaps you're ready to blackmail me.[AN]
 But I'm listening.[AN]
 
-[R]
+[FL]
 Very well, I'll get to the point then.[AN]
 Since I've noticed you've had plenty of[N]
 activity, I know you must have some wealth.[AN]
@@ -1847,12 +1855,12 @@ struggling commonfolk, I really don't care.[AN]
 What I do care about, however, is some[N]
 of that coin[Beat]for a helpful item.[AN]
 
-[L][1LB]
+[R][2LB]
 So you're one of those peddler types?[AN]
 You tend to charge arms and legs[N]
 for some of your valuables.[AN] 
 
-[R][2LB]
+[FL][2LB]
 Only to those I know would want them--[.4][N]
 And can afford the cost, of course.[AN]
 I have a small selection of exotic goods,[N]
@@ -1868,26 +1876,373 @@ choose at all! [.4]It's your choice.[AN][X]
 //Hexlock Shield [20 uses] 1500 G // +1 Def , +3 Res
 //Menti's Tome [1 use] 1000 G // +5% to all growths of a unit. 
 
-## DeclinedPeddlerOffer
-[L][LoadLua]
-[R][LoadPeddler]
+## SplitMenuTonic
+5 Rainbow Tonics (2000G)[X]
 
-[L][1LB]
+## SplitMenuShield
+Hexlock Shield (1500G)[X]
+
+## SplitMenuMentis
+Menti's Tome (1000G)[X]
+
+## TonicPitchText
+5 Rainbow Tonics (SALE!)[AN]
+Grants +5 HP, +3 Res/Lck, [N]
++2 to all other stats for one chapter.[AN][Clear]
+Will Lua purchase these?[N][No][X]
+
+## ShieldPitchText
+Hexlock Shield (SALE!)[AN]
+Grants +1 Def,+3 Res to the[N]
+holder. 20 Durability. [AN]
+Will Lua purchase this?[N][No][X]
+
+## MetisPitchText
+Metis's Tome (SALE!)[AN]
+Grants +5% to all growths to[N]
+the consumer. 2 uses. (cannot[N]
+be used on the same character)[AN]
+Will Lua purchase this?[N][No][X]
+
+## PeddlerTellsLuaShesBroke
+
+[R][LoadLua]
+[FL][LoadPeddler]
+[R]
+However exotic your wares might be,[N]
+I don't have the gold on-hand for them.[AN]
+[FL]
+A pirate, lacking a large sum of gold?[AN]
+Maybe I looked at the wrong client...[AN][X]
+
+
+## DeclinedPeddlerOffer
+[R][LoadLua]
+[FL][LoadPeddler]
+
+[R][1LB]
 Not interested.[AN]
-[R][2LB]
+[FL][2LB]
 Very well, but if you change[N]
 your mind, I'll be here.[AN][X]
 
-## PeddlerOfferAccepted 
+## PeddlerOfferAcceptedTonic
 
-[L][LoadLua]
-[R][LoadPeddler]
+[R][LoadLua]
+[FL][LoadPeddler]
+[R]
+[Beat]Would it have killed you to[N]
+bundle these tonics together?[AN]
+[FL]
+Unfortunately not, captain.[AN]
+They're too unstable to be in[N]
+close proximity to each other.[AN]
+[R]
+Aren't these tonics supposed to be safe?[AN]
+[FL]
+Ingested seperately?[.4] Yes.[AN]
+Combined together?[.4] No.[AN]
+May these help you out in[N]
+your endeavors in the future.[AN][X]
+
+## PeddlerOfferAcceptedShield
+
+[R][LoadLua]
+[FL][LoadPeddler]
+[R]
+Suprisingly light, for a magical shield.[AN]
+I'm sure someone like Desiderio might[N]
+appreciate something like this[Beat][AN]
+[FL]
+Don't feel too gung-ho[N]
+with that shield now.[AN]
+Something like Thani will still[N]
+peel through armor like an onion.[AN]
+[R]
+No need for you to tell me twice.[AN]
+Still, I'm sure this will be useful.[AN]
+[FL]
+Only offering friendly advice, captain.[AN]
+May this help you out in[N]
+your endeavors in the future.[AN][X]
+
+## PeddlerOfferAcceptedMetis
+
+[R][LoadLua]
+[FL][LoadPeddler]
+[R]
+I'm not too sure about these tomes.[AN]
+You say these are meant to awaken[N]
+someone's...[OpenQuote]maturity" over time?[AN]
+[FL]
+That's just what the buyer told me.[AN]
+They might not make a difference now, but[N]
+I'm sure they'll help in the long haul.[AN]
+[R]
+We'll just have to see about that;[.4] I'm[N]
+not even sure how to tell if they did.[AN]
+[FL]
+You just need to have[N]
+enough faith, captain.[AN]
+May these help you out in[N]
+your endeavors in the future.[AN][X]
+
+## NPCVillagerDialogueA
+
+[ML][LoadLua]
+[MR][LoadGreagorVillager]
+Port Greagor might be a pirate[N]
+den through and through, sure.[AN]
+But there's a surprising amount[N]
+of organization in this place.[AN]
+With the Greagor Five running[N]
+this place, things are pretty efficient.[AN]
+Good trade keeps it comfortable[N]
+here; who cares if it's all illicit?[AN][X]
+
+## NPCVillagerDialogueB
+
+[ML][LoadLua]
+[MR][LoadGreagorVillagerB]
+Though Port Greagor looks populous,[N]
+this is the only 'official' town here.[AN]
+Everywhere else, there's only[N]
+wilderness, wilderness, wilderness.[AN]
+That's not a bad thing though;[.4] the nearby[N]
+jungle's got many wild herbs and plants.[AN]
+I'm an alchemist, so it means we have[N]
+a great source of ingredients close by.[AN]
+You might see some of my tonics[N]
+over at the vendor down there![AN][X]
+
+## NPCSailorDialogue
+
+[ML][LoadLua]
+[MR][LoadGreagorSailor]
+Mornin' to you, captain.[AN]
+I gotta say, pretty envious that you[N]
+got yer own cove in this place.[AN]
+Hate always havin' to unload[N]
+in this stuffy ol' dock.[AN][X]
+
+## NPCLibrarianDialogueA
+
+[ML][LoadLua]
+[MR][LoadGreagorLibrarian]
+I've always thought of it quite kind[N]
+of you to keep the library here.[AN]
+Most pirates would've neglected[N]
+this place upon its acquisition.[AN]
+[CloseEyes]I'm sure some would've even[N]
+been so happy to burn it for fun...[AN][X]
+
+## NPCLibrarianDialogueB
+
+[ML][LoadLua]
+[MR][LoadGreagorLibrarianB]
+The Greagor Five consists of the five[N]
+primary types of specialists in the port.[AN]
+The Blacksmiths;[.4] forging necessities like[N]
+pots and pans, to swords and shields.[AN]
+The Alchemists;[.4] creating potent salves[N]
+to heal and bolster the people.[AN]
+The Runecrafters;[.4] transcribing and[N]
+enchanting tools to heal and fight.[AN]
+The Freeblades;[.4] adept fighters who[N]
+protect the port, and serve others.[AN]
+[Beat]For the right price, of course.[AN][Clear]
+Finally, the Shipwrights;[.4] maintaining the[N]
+sails that bring trade and prosperity.[AN]
+With their influence and aid, Port Greagor[N]
+prospers as a haven outside the empire.[AN][X]
+
+## NPCPatrollerDialogue
+
+[ML][LoadLua]
+[MR][LoadGreagorPatroller] 
+Hail to you, captain.[AN]
+I'm just about ready to make[N]
+a reconnaissance run today.[AN]
+We got sharp-eyed folk here[N]
+keeping a tab on ships, sure.[AN]
+But nothing will beat a lone pegasus[N]
+finding a ship miles away![AN]
+Talent like me is tricky to come by.[AN][X]
+
+## NPCGuardDialogue
+
+[ML][LoadLua]
+[MR][LoadGreagorGuard] 
+[3LB]
+This place tends to be pretty[N]
+boring in the daylight.[AN]
+Nobody wants to commit acts that'll get[N]
+them banned from the only safe port in[N]
+this region for miles around.[AN]
+'Course, some people can't hold their[N]
+liquor in the taverns, and well...[AN]
+That's where the fun begins.[AN][X]
+
+## NPCSmugglerDialogue
+
+[ML][LoadLua]
+[MR][LoadGreagorSmuggler]
+Sheesh, aren't I glad to be[N]
+away from the core isles.[AN]
+Feels like you've always got Incendivis[N]
+breathing down your neck.[AN]
+There are plenty of taxes and bans on[N]
+things they deem 'inappropriate'.[AN]
+Thankfully, there's still demand for [N]
+that stuff, in all sorts of circles.[AN]
+Plenty of ways to get ahold of that[N]
+stuff here, behind the imperials' backs.[AN]
+[Beat]Didn't hear that from me[N]
+though captain, heheh.[AN][X]
+
+//NPC Scene 1; Characters: A pirate and a shipwright arguing with each other. 
+
+## NPCShipwrightCaptainArgumentText
+[ML][LoadGreagorShipwright]
+[MR][LoadGreagorCaptain]
+
+[MR]
+4000 gold for ship repairs?![AN]
+You shipwrights are out of your mind![AN]
+I could have gotten repairs for[N]
+half of that price elsewhere![AN]
+
+[ML]
+Ah ah, but you're not really in[N]
+core imperial territory, are you?[AN]
+Materials for your rigging and hull[N]
+aren't exactly cheap to come by.[AN]
+Does this place seem close to[N]
+lumber and textile mills?[AN]
+
+[MR]
+Well, no, but--[AN]
+
+[ML]
+Plus, you should know about the[N]
+quality of our shipwrights here.[AN]
+Take it to any other dock, and you'll be[N]
+back within weeks with their shoddiness.[AN]
+
+[MR]
+That can't possibly be--[AN]
+
+[ML]
+And, do you really think you'd be[N]
+to make it to another port?[AN]
+If you continue to make a fuss, I'm sure[N]
+Master Ida would love to raise the--[AN]
+
+[MR]
+Ghhhh[Beat]damn you![A] I hate[N]
+that you're making good points![AN]
+Fine, just make sure this gets done[N]
+fast, I have other places to be![AN]
+
+[L]
+It'll take as long as it needs to.[AN]
 
 [R]
-A fine deal, captain.[AN]
-May this help you out in[N]
-your endeavors in the future![AN][X]
+Damn artisans[Beat][AN][X]
 
+## NPCPatronDrinkingText 
+
+[ML][LoadGreagorPatron]
+[MR][LoadGreagorPatronB]
+
+[ML] 
+Gods, Paris.[AN]
+What is this, your sixth[N]
+drink of the night?[AN]
+You really need to slow down.[AN]
+
+[MR]
+Sh-llllow down?![AN]
+Hoooow[Beat]could'ya[N]
+poshhhibly think'at[Beat]?[AN]
+
+[ML]
+With all you've drunk, our tab's[N]
+at least a hundred gold![AN]
+Surely you get the math, right?[AN]
+
+[MR]
+Mmm[Beat]not my fault'yuu[N]
+don't gettha[Beat]tha maaath![AN]
+Y'know shomethin'i don't get?[AN]
+P-Piraaats! An'dere...[N]
+buried treshhhzzzure![AN]
+
+[ML]
+Alright, man, go on,[N]
+what don't you get?[AN]
+
+[MR]
+How[Beat]many piraaaates y'tink[N]
+achtuaaaally bury'er gold?[AN]
+Shooo--[.4]sho many[Beat]hunters'n looters,[N]
+wantin' to dig[Beat]holes'n'holes![AN]
+Don[Beat]don'think any piraaaate worth[N]
+a gram'a p-pepper would even...[AN]
+even let their treasure be left[N]
+on a map like'at! Juuust[Beat]bam![AN]
+[OpenQuote]Whooopty doooo, eeeeeex marks'a[N]
+spooooot, in'dis[Beat]hooooole!"[AN]
+
+[ML]
+Well, I'm sure most pirates make[N]
+maps just for their own future use.[AN]
+Could be a case of not wanting[N]
+to keep all their eggs in one basket.[AN]
+Be it one way or another, those maps[N]
+can end up in other folks' hands.[AN]
+
+[MR]
+But I'dneva think[Beat]'bout buryin'[N]
+my books'n magic n'[Beat]all'at stuff.[AN]
+'Cause'at's my[Beat]that's my own[N]
+treashuure, daaaaa Gu'Balg![AN]
+
+[ML]
+Still on that too, huh?[AN]
+Your [OpenQuote]Gu'Balg" isn't[N]
+even made out of iron.[AN]
+It's bronze;[.4] [CloseEyes]why would you[N]
+even have a bronze weapon?[AN][OpenEyes]
+Did you really think that red-haired[N]
+merchant was giving you a deal?[AN]
+
+[MR]
+Das'wha she told me![AN]
+[CloseEyes]Wasn't...bronze[Beat]wus[Beat]aaa,,,[N]
+aged myth...metha...mythral.[AN]
+
+[ML]
+If she got away with that if[N]
+you were sober...[A] *sigh*[.4][AN]
+[CloseEyes]I'm afraid what she'd be[N]
+able to do in your condition.[AN][OpenEyes]
+Alright, c'mon, no more drinking,[N]
+I'll get you some bread and water.[AN]
+
+[MR][OpenEyes]
+Grrrrgh[Beat]fine, alright[Beat][AN]
+Buu[Beat]but after this[Beat]achtually,[N]
+you should[Beat]f-fight me![AN]
+Like[Beat]yooou, yooooou'jus[N]
+undereshhtimate the Gu'Balg.[AN]
+
+[ML]
+Fine, fine, I'll test your might with it.[AN]
+But not now, I'm afraid you'd fall[N]
+over and land on your own spear![AN]
+Tsk...though I doubt it could even[N]
+pierce through a piece of paper.[AN][X]
 
 //Base Scene 1; Characters: Carmen and Ximo
 ## CarmenXimoBaseSceneText

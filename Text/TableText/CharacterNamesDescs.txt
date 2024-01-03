@@ -550,3 +550,91 @@ Docksman[X]
 Deckhand[N]
 Port crawlers who guard their crew's[N]
 airship from any nosy onlookers.[X]
+
+## GreagorVillagerName
+Villager[X]
+
+## GreagorVillagerDesc
+Commoner[N]
+An inhabitant of Port Greagor,[N]
+unshackled by typical empire law.[X]
+
+## GreagorSailorName
+Sailor[X]
+
+## GreagorSailorDesc
+Mariner[N]
+Though docked, these deckhands[N]
+rigorously continue their duties.[X]
+
+## GreagorPatrollerName
+Patroller[X]
+
+## GreagorPatrollerDesc
+Recon[N]
+Aerial scouts of Port Greagor,[N]
+keeping tabs on incoming ships.[X]
+
+## GreagorLibrarianName
+Librarian[X]
+
+## GreagorLibrarianDesc
+Scholar[N]
+Bookkeepers in Lua's cove, allowed[N]
+to study without direct affiliation.[X]
+
+## GreagorGuardName
+Guard[X]
+
+## GreagorGuardDesc
+Watchman[N]
+Said to be dutiful to the Greagor Five.[N]
+...Usually just a bored mercenary.[X]
+
+## GreagorSmugglerName
+Smuggler[X]
+
+## GreagorSmugglerDesc
+Legitimate Merchant[N]
+Sneaks around empire contraband, like[N]
+alcohol, tobacco, and chocolate eggs.[X]
+
+## GreagorShipwrightName
+Shipwright[X]
+
+## GreagorShipwrightDesc
+Ship Artisian[N]
+Member of the Shipwright's guild.[N]
+Adept in repairing ships to be airworthy.[X]
+
+## GreagorCaptainName
+Captain[X]
+
+## GreagorCaptainDesc
+Skipper[N]
+Leader of a vessel docked at port.[N]
+Probably not up to much good.[X]
+
+## GreagorPatronName
+Patron[X]
+
+## GreagorPatronDesc 
+Reveler[N]
+Patron at one of the port's taverns.[N]
+...Worried about his drinking buddy.[X]
+
+## GreagorPatronDrunkName
+Patron[X]
+
+## GreagorPatronDrunkDesc 
+Reveler[N]
+Patron at one of port's taverns.[N]
+Issssh havin'...th'tim ooo'his lyyyfe![X]
+
+## GreagorPeddlerName
+Peddler[X]
+
+## GreagorPeddlerDesc
+Purveyor[N]
+A wandering trader of exotic proportions.[N]
+May have a few powerful connections...[X]

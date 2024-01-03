@@ -18,8 +18,9 @@
 #define RemoveAll "REMOVEALL_BLUE; REMOVEALL_GREEN; REMOVEALL_RED"
 #define GiveItem(Item,Character) "CALL $591F40; SMOV 0x3 Item ; GIVEITEMTO Character"
 #define SilentGiveItem(item,unit) "BYTE 0x40 0x0D unit item; POIN SilentGiveItemFunc|1"
+#define GiveItemWithDurability(Item,Durability,Character) "SVAL 0xC Durability; ASMC GiveItemWithDurability|1; CALL $591F40; SMOV 0x3 (Durability<<8)|Item ; GIVEITEMTO Character"
 #define GiveGold(money) "SVAL 3 money; GIVEMONEY Lua"
-#define TakeGold(money) "SVAL 3 money; TAKEMONEY Lua"
+#define TakeGold(money) "SVAL 3 money; TAKEMONEY"
 #define FadeOutMusic "MUSCMID 0x7FFF"
 #define FadeoutMusic "MUSCMID 0x7FFF"
 
