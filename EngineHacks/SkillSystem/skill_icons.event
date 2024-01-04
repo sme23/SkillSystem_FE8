@@ -1140,6 +1140,8 @@ ORG SkillIcon(EqualizerID)
 #incbin "SkillIcons/DarkBargain.dmp"
 ORG SkillIcon(DelegationID)
 #incbin "SkillIcons/Loyalty.dmp"
+ORG SkillIcon(SwiftID)
+#incbin "SkillIcons/RallySpd.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)

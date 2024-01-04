@@ -175,7 +175,8 @@ NailedDownBitOffset_Link:
 WORD MiscOffset+17
 DelegationBitOffset_Link:
 WORD MiscOffset+18
-
+SwiftBitOffset_Link:
+WORD MiscOffset+19
 
 ALIGN 4 
 RalliesNumberOfBits_Link:

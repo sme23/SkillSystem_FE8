@@ -167,3 +167,6 @@
 
 //Reposition: we all know what this does (StanH)
 #define RepositionID 51
+
+//Swift: Command that grants adjacent ally +3 move for 1 turn. (Dragz)
+#define SwiftID 52

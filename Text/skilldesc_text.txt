@@ -1755,3 +1755,7 @@ Does not trigger Break.[X]
 Delegation: After combat, the next[N]
 action for allies in unit's attack[N]
 range hits lower of foe's Def/Res.[X]
+
+## SD_Swift
+Swift: Unit can use a command to[N]
+grant an ally +3 Move for 1 turn.[X]
