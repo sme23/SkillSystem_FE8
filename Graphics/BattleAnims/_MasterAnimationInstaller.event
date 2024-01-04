@@ -62,3 +62,57 @@
     #include "Animations/Fighter_F/Handaxe Installer.event"
     #include "Animations/Fighter_F/Unarmed Installer.event"
 }
+
+{
+    #include "Animations/Slayer/Sword Installer.event"
+    #include "Animations/Slayer/Magic Installer.event"
+}
+
+{
+    #include "Animations/Slayer_F/Sword Installer.event"
+    #include "Animations/Slayer_F/Magic Installer.event"
+}
+
+{
+    #include "Animations/Monk/Magic Installer.event"
+}
+
+{
+    #include "Animations/Monk_F/Magic Installer.event"
+}
+
+{
+    #include "Animations/Trickster/Magic Installer.event"
+    #include "Animations/Trickster/Sword Installer.event"
+}
+
+{
+    #include "Animations/Mercenary_F/Sword Installer.event"
+    #include "Animations/Mercenary_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Hero_F/Axe Installer.event"
+    #include "Animations/Hero_F/Handaxe Installer.event"
+    #include "Animations/Hero_F/Sword Installer.event"
+    #include "Animations/Hero_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/WarMonk_F/Axe Installer.event"
+    #include "Animations/WarMonk_F/Handaxe Installer.event"
+    #include "Animations/WarMonk_F/Staff Installer.event"
+    #include "Animations/WarMonk_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/WarMonk/Axe Installer.event"
+    #include "Animations/WarMonk/Handaxe Installer.event"
+    #include "Animations/WarMonk/Staff Installer.event"
+    #include "Animations/WarMonk/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Halberdier/Lance Installer.event"
+    #include "Animations/Halberdier/Unarmed Installer.event"
+}

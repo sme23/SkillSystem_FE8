@@ -36,6 +36,18 @@ ALIGN 4
 BravesCrestPromoList:
 PromoListEntry(Deserter, Champion)
 PromoListEntry(Ninja, MasterNinja)
+PromoListEntry(Mercenary, Hero)
+PromoListEntry(Mercenary_F, Hero_F)
+PromoListEntry(Fighter, Hero)
+PromoListEntry(Fighter_F, Hero_F)
+PromoListEntry(Myrmidon, Swordmaster)
+PromoListEntry(Myrmidon_F, Swordmaster_F)
+PromoListEntry(Monk, Slayer)
+PromoListEntry(Monk_F, Slayer_F)
+PromoListEntry(Brigand, Berserker)
+PromoListEntry(Cleric, WarMonk_F)
+PromoListEntry(Priest, WarMonk)
+PromoListEntry(Soldier, Halberdier)
 PromoListEnd
 
 ALIGN 4
@@ -47,7 +59,8 @@ PromoListEnd
 
 ALIGN 4
 KnightsPlatePromoList:
-PromoListEntry(Vanguard, Dreadnought)
+PromoListEntry(Vanguard, Dreadnought) //doesn't work
+PromoListEntry(Warden, General)
 PromoListEnd
 
 ALIGN 4
@@ -59,9 +72,13 @@ PromoListEnd
 
 ALIGN 4
 MagesRingPromoList:
-PromoListEntry(Curate, Sage)
+PromoListEntry(Warden, Baron)
 PromoListEntry(Mage, Sage)
 PromoListEntry(Mage_F, Sage_F)
+PromoListEntry(Curate, Sage) //doesn't work
+PromoListEntry(Myrmidon, Slayer)
+PromoListEntry(Myrmidon_F, Slayer_F)
+PromoListEntry(Brigand, WarMonk)
 PromoListEnd
 
 ALIGN 4

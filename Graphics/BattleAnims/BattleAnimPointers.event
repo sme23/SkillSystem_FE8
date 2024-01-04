@@ -81,3 +81,72 @@ AxeAnim(Fighter_FAxeAnim)
 HandAxeAnim(Fighter_FHandAxeAnim)
 UnarmedAnim(Fighter_FUnarmedAnim)
 EndAnim
+
+ALIGN 4
+SlayerAnims:
+SwordAnim(SlayerSwordAnim)
+TomeAnim(SlayerTomeAnim)
+UnarmedAnim(SlayerTomeAnim)
+EndAnim
+
+ALIGN 4
+Slayer_FAnims:
+SwordAnim(Slayer_FSwordAnim)
+TomeAnim(Slayer_FTomeAnim)
+UnarmedAnim(Slayer_FTomeAnim)
+EndAnim
+
+ALIGN 4
+TricksterAnims:
+KnifeAnim(TricksterKnifeAnim)
+TomeAnim(TricksterTomeAnim)
+UnarmedAnim(TricksterTomeAnim)
+EndAnim
+
+ALIGN 4
+MonkAnims:
+TomeAnim(MonkTomeAnim)
+UnarmedAnim(MonkTomeAnim)
+EndAnim
+
+ALIGN 4
+Monk_FAnims:
+TomeAnim(Monk_FTomeAnim)
+UnarmedAnim(Monk_FTomeAnim)
+EndAnim
+
+ALIGN 4
+Mercenary_FAnims:
+SwordAnim(Mercenary_FSwordAnim)
+UnarmedAnim(Mercenary_FUnarmedAnim)
+EndAnim
+
+ALIGN 4
+Hero_FAnims:
+SwordAnim(Hero_FSwordAnim)
+AxeAnim(Hero_FAxeAnim)
+HandAxeAnim(Hero_FHandaxeAnim)
+UnarmedAnim(Hero_FUnarmedAnim)
+EndAnim
+
+ALIGN 4
+WarMonkAnims:
+StaffAnim(WarMonkStaffAnim)
+AxeAnim(WarMonkAxeAnim)
+HandAxeAnim(WarMonkHandaxeAnim)
+UnarmedAnim(WarMonkUnarmedAnim)
+EndAnim
+
+ALIGN 4
+WarMonk_FAnims:
+StaffAnim(WarMonk_FStaffAnim)
+AxeAnim(WarMonk_FAxeAnim)
+HandAxeAnim(WarMonk_FHandaxeAnim)
+UnarmedAnim(WarMonk_FUnarmedAnim)
+EndAnim
+
+ALIGN 4
+HalberdierAnims:
+LanceAnim(HalberdierLanceAnim)
+UnarmedAnim(HalberdierUnarmedAnim)
+EndAnim

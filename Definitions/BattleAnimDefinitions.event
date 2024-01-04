@@ -56,3 +56,36 @@
 #define Fighter_FAxeAnim 0xE4
 #define Fighter_FHandAxeAnim 0xE5
 #define Fighter_FUnarmedAnim 0xE6
+
+#define SlayerSwordAnim 0xE7
+#define SlayerTomeAnim 0xE8
+
+#define Slayer_FSwordAnim 0xE9
+#define Slayer_FTomeAnim 0xEA
+
+#define TricksterKnifeAnim 0xEB
+#define TricksterTomeAnim 0xEC
+
+#define MonkTomeAnim 0xED
+#define Monk_FTomeAnim 0xEE
+
+#define Mercenary_FSwordAnim 0xEF
+#define Mercenary_FUnarmedAnim 0xF0
+
+#define Hero_FSwordAnim 0xF1
+#define Hero_FAxeAnim 0xF2
+#define Hero_FHandaxeAnim 0xF3
+#define Hero_FUnarmedAnim 0xF4
+
+#define WarMonkStaffAnim 0xF5
+#define WarMonkAxeAnim 0xF6
+#define WarMonkHandaxeAnim 0xF7
+#define WarMonkUnarmedAnim 0xF8
+
+#define WarMonk_FStaffAnim 0xF9
+#define WarMonk_FAxeAnim 0xFA
+#define WarMonk_FHandaxeAnim 0xFB
+#define WarMonk_FUnarmedAnim 0xFC
+
+#define HalberdierLanceAnim 0xFD
+#define HalberdierUnarmedAnim 0xFE

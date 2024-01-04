@@ -39,6 +39,12 @@
 //#define Sniper 0x1b
 //#define Sniper_F 0x1c
 #define Trickster 0x92
+#define Trickster_F 0x9a
+#define Slayer 0x97
+#define Slayer_F 0x98
+#define WarMonk 0x9b
+#define WarMonk_F 0x9c
+#define Halberdier 0x9d
 
 //ARMOR
 
@@ -81,6 +87,7 @@
 //#define Shaman_F 0x2e
 
 //#define Monk
+#define Monk_F 0x99
 
 //#define Priest 0x45
 //#define Cleric 0x4a
@@ -146,3 +153,11 @@
 #define WolfKnightMapSprite 0x85
 #define WardenMapSprite 0x86
 #define Fighter_FMapSprite 0x87
+#define SlayerMapSprite 0x88
+#define Slayer_FMapSprite 0x89
+#define Monk_FMapSprite 0x8A
+#define Mercenary_FMapSprite 0x8B
+#define Hero_FMapSprite 0x8C
+#define WarMonkMapSprite 0x8D
+#define WarMonk_FMapSprite 0x8E
+#define HalberdierMapSprite 0x8F

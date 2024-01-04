@@ -236,3 +236,36 @@ Traits: Steal, Locktouch, Canto[X]
 ## ClericDesc
 Weapons: Staves[N]
 Traits: Steal, Locktouch[X]
+
+## HeroDesc
+Weapons: Swords, Axes[N]
+Traits: Steal, Locktouch[X]
+
+## SwordmasterDesc
+Weapons: Swords[N]
+Traits: Steal, Locktouch[X]
+
+## SlayerName
+Slayer[X]
+
+## SlayerDesc
+Weapons: Swords, Tomes[N]
+Traits: Steal, Locktouch[X]
+
+## BerserkerDesc
+Weapons: Axes[N]
+Traits: Steal, Locktouch[X]
+
+## WarMonkName
+War Monk[X]
+
+## WarMonkDesc
+Weapons: Axes, Staves[N]
+Traits: Steal, Locktouch[X]
+
+## HalberdierName
+Halberdier[X]
+
+## HalberdierDesc
+Weapons: Lances[N]
+Traits: Steal, Locktouch[X]

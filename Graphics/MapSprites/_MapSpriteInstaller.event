@@ -362,3 +362,91 @@ Fighter_FSMS:
 ALIGN 4
 Fighter_FMMS:
 #incbin "Dmp/Fighter (F) Axe {Alusq}-walk.dmp"
+
+StandingMapSprite(SlayerMapSprite,MapSprite16x16,SlayerSMS)
+MovingMapSprite(Slayer, $1C3D7C, SlayerMMS)
+
+ALIGN 4
+SlayerSMS:
+#incbin "Dmp/Dread Fighter (M) {Nuramon}-stand.dmp"
+
+ALIGN 4
+SlayerMMS:
+#incbin "Dmp/Dread Fighter (M) {Nuramon}-walk.dmp"
+
+StandingMapSprite(Slayer_FMapSprite,MapSprite16x16,Slayer_FSMS)
+MovingMapSprite(Slayer_F, $1C3D7C, Slayer_FMMS)
+
+ALIGN 4
+Slayer_FSMS:
+#incbin "Dmp/Dread Fighter (F) {Nuramon}-stand.dmp"
+
+ALIGN 4
+Slayer_FMMS:
+#incbin "Dmp/Dread Fighter (F) {Nuramon}-walk.dmp"
+
+StandingMapSprite(Monk_FMapSprite,MapSprite16x16,Monk_FSMS)
+MovingMapSprite(Monk_F, $1C3D7C, Monk_FMMS)
+
+ALIGN 4
+Monk_FSMS:
+#incbin "Dmp/Monk (F) {Teraspark}-stand.dmp"
+
+ALIGN 4
+Monk_FMMS:
+#incbin "Dmp/Monk (F) {Teraspark}-walk.dmp"
+
+StandingMapSprite(Mercenary_FMapSprite,MapSprite16x16,Mercenary_FSMS)
+MovingMapSprite(Mercenary_F, $1C3D7C, Mercenary_FMMS)
+
+ALIGN 4
+Mercenary_FSMS:
+#incbin "Dmp/Mercenary (F) Sword {Agro}-stand.dmp"
+
+ALIGN 4
+Mercenary_FMMS:
+#incbin "Dmp/Mercenary (F) Sword {Agro}-walk.dmp"
+
+StandingMapSprite(Hero_FMapSprite,MapSprite16x16,Hero_FSMS)
+MovingMapSprite(Hero_F, $1C3D7C, Hero_FMMS)
+
+ALIGN 4
+Hero_FSMS:
+#incbin "Dmp/Hero (F) {IS}-stand.dmp"
+
+ALIGN 4
+Hero_FMMS:
+#incbin "Dmp/Hero (F) {IS}-walk.dmp"
+
+StandingMapSprite(WarMonkMapSprite,MapSprite16x16,WarMonkSMS)
+MovingMapSprite(WarMonk, $1C3D7C, WarMonkMMS)
+
+ALIGN 4
+WarMonkSMS:
+#incbin "Dmp/War Monk (M) Axe {Der}-stand.dmp"
+
+ALIGN 4
+WarMonkMMS:
+#incbin "Dmp/War Monk (M) Axe {Der}-walk.dmp"
+
+StandingMapSprite(WarMonk_FMapSprite,MapSprite16x16,WarMonk_FSMS)
+MovingMapSprite(WarMonk_F, $1C3D7C, WarMonk_FMMS)
+
+ALIGN 4
+WarMonk_FSMS:
+#incbin "Dmp/War Cleric (F) Axe {Der}-stand.dmp"
+
+ALIGN 4
+WarMonk_FMMS:
+#incbin "Dmp/War Cleric (F) Axe {Der}-walk.dmp"
+
+StandingMapSprite(HalberdierMapSprite,MapSprite16x16,HalberdierSMS)
+MovingMapSprite(Halberdier, $1C3D7C, HalberdierMMS)
+
+ALIGN 4
+HalberdierSMS:
+#incbin "Dmp/Halberdier (M) 2.0 {TBA}-stand.dmp"
+
+ALIGN 4
+HalberdierMMS:
+#incbin "Dmp/Halberdier (M) 2.0 {TBA}-walk.dmp"

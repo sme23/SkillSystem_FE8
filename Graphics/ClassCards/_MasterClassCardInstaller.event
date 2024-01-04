@@ -81,3 +81,99 @@ ALIGN 4
 Fighter_FClassCardPal:
 #incbin "Dmp/Fighter (F) Axe {Jj09, HyperGammaSpaces}.png_pal.dmp"
 setCardEntry(Fighter_FClassCard, Fighter_FClassCardData, Fighter_FClassCardPal)
+
+ALIGN 4
+SlayerClassCardData:
+#incbin "Dmp/Dread Fighter (M) T2 Sword {Nuramon}.dmp"
+ALIGN 4
+SlayerClassCardPal:
+#incbin "Dmp/Dread Fighter (M) T2 Sword {Nuramon}.png_pal.dmp"
+setCardEntry(SlayerClassCard, SlayerClassCardData, SlayerClassCardPal)
+
+ALIGN 4
+Slayer_FClassCardData:
+#incbin "Dmp/Dread Fighter (F) T2 Sword {Nuramon}.dmp"
+ALIGN 4
+Slayer_FClassCardPal:
+#incbin "Dmp/Dread Fighter (F) T2 Sword {Nuramon}.png_pal.dmp"
+setCardEntry(Slayer_FClassCard, Slayer_FClassCardData, Slayer_FClassCardPal)
+
+ALIGN 4
+MonkClassCardData:
+#incbin "Dmp/Monk (M) Magic {Blademaster, ltranc}.dmp"
+ALIGN 4
+MonkClassCardPal:
+#incbin "Dmp/Monk (M) Magic {Blademaster, ltranc}.png_pal.dmp"
+setCardEntry(MonkClassCard, MonkClassCardData, MonkClassCardPal)
+
+ALIGN 4
+Monk_FClassCardData:
+#incbin "Dmp/Monk (F) Magic {RobertFPY, ltranc}.dmp"
+ALIGN 4
+Monk_FClassCardPal:
+#incbin "Dmp/Monk (F) Magic {RobertFPY, ltranc}.png_pal.dmp"
+setCardEntry(Monk_FClassCard, Monk_FClassCardData, Monk_FClassCardPal)
+
+ALIGN 4
+TricksterClassCardData:
+#incbin "Dmp/Trickster (M) Sword T2 {Jj09, Scraiza, Sword of HaE}.dmp"
+ALIGN 4
+TricksterClassCardPal:
+#incbin "Dmp/Trickster (M) Sword T2 {Jj09, Scraiza, Sword of HaE}.png_pal.dmp"
+setCardEntry(TricksterClassCard, TricksterClassCardData, TricksterClassCardPal)
+
+ALIGN 4
+Mercenary_FClassCardData:
+#incbin "Dmp/Mercenary (F) Sword {L95}.dmp"
+ALIGN 4
+Mercenary_FClassCardPal:
+#incbin "Dmp/Mercenary (F) Sword {L95}.png_pal.dmp"
+setCardEntry(Mercenary_FClassCard, Mercenary_FClassCardData, Mercenary_FClassCardPal)
+
+ALIGN 4
+Myrmidon_FClassCardData:
+#incbin "Dmp/Myrmidon (F) Sword {L95}.dmp"
+ALIGN 4
+Myrmidon_FClassCardPal:
+#incbin "Dmp/Myrmidon (F) Sword {L95}.png_pal.dmp"
+setCardEntry(Myrmidon_FClassCard, Myrmidon_FClassCardData, Myrmidon_FClassCardPal)
+
+ALIGN 4
+Swordmaster_FClassCardData:
+#incbin "Dmp/Swordmaster (F) Sword {L95}.dmp"
+ALIGN 4
+Swordmaster_FClassCardPal:
+#incbin "Dmp/Swordmaster (F) Sword {L95}.png_pal.dmp"
+setCardEntry(Swordmaster_FClassCard, Swordmaster_FClassCardData, Swordmaster_FClassCardPal)
+
+ALIGN 4
+Hero_FClassCardData:
+#incbin "Dmp/Hero (F) Sword {RobertFPY}.dmp"
+ALIGN 4
+Hero_FClassCardPal:
+#incbin "Dmp/Hero (F) Sword {RobertFPY}.png_pal.dmp"
+setCardEntry(Hero_FClassCard, Hero_FClassCardData, Hero_FClassCardPal)
+
+ALIGN 4
+WarMonkClassCardData:
+#incbin "Dmp/War Monk (M)  {Der}.dmp"
+ALIGN 4
+WarMonkClassCardPal:
+#incbin "Dmp/War Monk (M)  {Der}.png_pal.dmp"
+setCardEntry(WarMonkClassCard, WarMonkClassCardData, WarMonkClassCardPal)
+
+ALIGN 4
+WarMonk_FClassCardData:
+#incbin "Dmp/War Cleric (F) {Der}.dmp"
+ALIGN 4
+WarMonk_FClassCardPal:
+#incbin "Dmp/War Cleric (F) {Der}.png_pal.dmp"
+setCardEntry(WarMonk_FClassCard, WarMonk_FClassCardData, WarMonk_FClassCardPal)
+
+ALIGN 4
+HalberdierClassCardData:
+#incbin "Dmp/Halberdier (M) Lance {TBA}.dmp"
+ALIGN 4
+HalberdierClassCardPal:
+#incbin "Dmp/Halberdier (M) Lance {TBA}.png_pal.dmp"
+setCardEntry(HalberdierClassCard, HalberdierClassCardData, HalberdierClassCardPal)
