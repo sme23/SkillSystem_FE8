@@ -106,12 +106,14 @@
 #include "PortraitHeight/PortraitShiftTable(installthisone).event"
 //2WB
 
-#include "EventMenu/EventMenuDef.event"
-//StanH
+
+// use EventMenuCommand instead!
+// there are two versions becaue RW is bad at organizing things
+// #include "EventMenu/EventMenuDef.event"
+// StanH
 
 #include "EventMenuCommand/EventMenuCommand.event"
 // stan? i think?
-// also, this might conflict with mufflebuns' installation
 
 
 PUSH
