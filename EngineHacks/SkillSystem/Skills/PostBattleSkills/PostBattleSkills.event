@@ -195,3 +195,5 @@ NailedDownID_Link:
 WORD NailedDownID
 
 #include "NailedDown/NailedDown.lyn.event"
+
+#include "Delegation/Delegation.lyn.event"

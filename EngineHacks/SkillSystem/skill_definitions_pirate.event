@@ -161,3 +161,9 @@
 //Imbue: Recover HP equal to Magic at the start of each turn.
 //By Sme
 #define ImbueID 49
+
+//Delegation: After combat, next action of allies in unit's attack range hits lower of foe's Def/Res. (Dragz)
+#define DelegationID 50
+
+//Reposition: we all know what this does (StanH)
+#define RepositionID 51

@@ -1750,3 +1750,8 @@ battle, target's Mov = 0 for a turn.[X]
 Analyze: Foes adjacent to this unit[N]
 gain WTD against this unit's allies.[N]
 Does not trigger Break.[X]
+
+## SD_Delegation
+Delegation: After combat, the next[N]
+action for allies in unit's attack[N]
+range hits lower of foe's Def/Res.[X]
