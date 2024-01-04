@@ -1061,7 +1061,7 @@
 
 //Swap: Allows unit to swap positions with an adjacent ally.
 //By StanH
-#define SwapID 255
+//#define SwapID 255
 
 //Swarp: Allows unit to swap positions with a distant ally.
 //Be Sme

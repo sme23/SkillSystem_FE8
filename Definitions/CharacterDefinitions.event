@@ -12,6 +12,7 @@
 #define Estelle $7
 #define Hermenegildo $8
 #define MrYodsen $9
+#define Yodsen $9
 #define Durgham $A
 //Samson/Arrans
 #define Triana $43
@@ -42,9 +43,9 @@
 // $17 to $1F
 
 #define B1Unit1 $17
-#define B2Unit1 $18
-#define B2Unit2 $19
-#define B2Unit3 $1A
+#define Husniye $18
+#define Avocado $19
+#define Magdalena $1A
 #define B3Unit1 $1B
 #define B3Unit2 $1C
 #define B4Unit1 $1D
@@ -149,3 +150,18 @@
 #define Hugo $73
 #define Juliana $74
 #define ElodiaBoss $75
+
+//Hub 2B
+#define Yadney 0xD0
+#define Cruz 0xD1
+#define CruzFake 0xD2
+#define RecelosoPriest 0xD3
+#define RecelosoCorpse 0xD4
+#define RecelosoStudent 0xD5
+#define RecelosoGuard 0xD6 
+#define RecelosoBarkeep 0xD7
+#define Quim 0xD3
+#define Gavriel 0xD4
+#define Fogaca 0xD5
+#define Dario 0xD6
+#define Thais 0xD7

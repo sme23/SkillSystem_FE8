@@ -12,16 +12,28 @@ POIN $0 $0 $0
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
+#define B2Level 10
+
 TurnBasedEvents:
+TurnEventPlayer(0, NewUnitsBlue, 1)
 END_MAIN
 
 CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Door(13,3)
+Door(16,4)
+Door(20,4)
+Door(13,19)
+Door(16,18)
+Door(20,18)
+Chest(Peshkatz, 9, 4)
+Chest(SwapShoes, 9, 18)
 END_MAIN
 
 MiscBasedEvents:
+DefeatBoss
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -34,15 +46,143 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [10,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [23,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+LoadUnit(22,10)
+LoadUnit(23,10)
+LoadUnit(24,10)
+LoadUnit(22,11)
+LoadUnit(24,11)
+LoadUnit(22,12)
+LoadUnit(24,12)
+LoadUnit(22,13)
+LoadUnit(23,13)
+LoadUnit(24,13)
+// add the new unit at 23,12
+UNIT
+
+// group 1: yadney's squad
+// group 2: top hallway guards
+
+
+B2Baddies:
+UNIT Cruz Shaman CruzFake Level(11,Enemy,False) [5,9] 0 0 0 0 [Sagittae, Eclipse] NeverMoveAI
+UNIT Rebel Thief 0 Level(10,Enemy,True) [9,17] 0 0 0 0 [SteelKnife, DoorKey, DoorKey, DoorKey] ThiefAI
+UNIT Rebel Thief 0 Level(10,Enemy,True) [8,8] 0 0 0 0 [SteelDagger, DoorKey, DoorKey, DoorKey] ThiefAI
+
+// turn 1
+UNIT Rebel GriffinRider Cruz Level(10,Enemy,True) [21,9] 0 0 0 0 [IronLance] ChargeAI
+UNIT Rebel Ninja Cruz Level(10,Enemy,True) [19,10] 0 0 0 0 [SteelKnife] ChargeAI
+UNIT Rebel Deserter Cruz Level(10,Enemy,True) [18,12] 0 0 0 0 [Javelin] ChargeAI
+UNIT Rebel Deserter Cruz Level(10,Enemy,True) [19,13] 0 0 0 0 [Axereaver,SteelLance] ChargeAI
+UNIT Rebel Shaman Cruz Level(10,Enemy,True) [22,14] 0 0 0 0 [Elfire,Surge] ChargeAI
+
+// turn 2
+UNIT Rebel Vanguard Cruz Level(10,Enemy,True) [18,9] 0 0 0 0 [HandAxe,SteelLance] BossAI
+UNIT Rebel Vanguard Cruz Level(10,Enemy,True) [18,14] 0 0 0 0 [Javelin,SteelAxe] BossAI
+UNIT Rebel Myrmidon Cruz Level(10,Enemy,True) [16,8] 0 0 0 0 [IronSword] ChargeAI
+UNIT Rebel GriffinRider Cruz Level(10,Enemy,True) [13,13] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Fighter Cruz Level(10,Enemy,True) [17,15] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Rebel Mage Cruz Level(10,Enemy,True) [14,11] 0 0 0 0 [Fire] ChargeAI
+
+// turn 3 yadney squad
+UNIT Yadney GriffinRider Cruz Level(15,Enemy,False) [8,11] 0 0 0 0 [KillerLance,ShortSpear] GroupOneAI
+UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [9,10] 0 0 0 0 [Onigiri,TealGem] GroupOneAI
+UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [9,12] 0 0 0 0 [Hammer,Crusher] GroupOneAI
+UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [10,8] 0 0 0 0 [IronLance] GroupOneAI
+UNIT Rebel SwordCav Cruz Level(B2Level, Enemy, True) [10,14] 0 0 0 0 [IronSword] GroupOneAI
+
+// turn 4
+UNIT Rebel Curate Cruz Level(10,Enemy,True) [9,11] 0 0 0 0 [Physic] [0xE,0x3,0x0,0x20]
+// BL room
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
+UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [13,21] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [14,20] 0 0 0 0 [Pike] ChargeAI
+
+// turn 5
+// TL room
+UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [12,1] 0 0 0 0 [Rapier] ChargeAI
+UNIT Rebel Ninja Cruz Level(B2Level, Enemy, True)  [14,2] 0 0 0 0 [SteelKnife] ChargeAI
+// BM room
+UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [16,21] 0 0 0 0 [SteelBow] ChargeAI
+UNIT Rebel Gunner Cruz Level(B2Level, Enemy, True) [17,19] 0 0 0 0 [SteelMusket] ChargeAI
+
+// turn 6
+// TM room
+UNIT Rebel Mage Cruz Level(B2Level, Enemy, True) [16,1] 0 0 0 0 [Elfire] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [17,2] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [16,3] 0 0 0 0 [SteelBlade,IronBlade,SteelBlade] ChargeAI
+// BR room
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [20,19] 0 0 0 0 [SteelSword,Javelin,ChestKey] ChargeAI
+UNIT Rebel Ninja Cruz Level(B2Level, Enemy, True) [19,20] 0 0 0 0 [Bloodletter] ChargeAI
+
+// turn 7
+UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [19,3] 0 0 0 0 [Axereaver,Javelin] ChargeAI
+UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [21,3] 0 0 0 0 [Sagittae] ChargeAI
+
+
+// end of chapter?? idk
+UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [6,8] 0 0 0 0 [SteelBow] AttackInTwoAI
+UNIT Rebel Gunner Cruz Level(B2Level, Enemy, True) [6,10] 0 0 0 0 [SteelMusket] AttackInTwoAI
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [1,10] 0 0 0 0 [SteelSword,SteelLance] AttackInTwoAI
+UNIT Rebel Vanguard Cruz Level(B2Level, Enemy, True) [2,9] 0 0 0 0 [SteelAxe,SteelLance] AttackInTwoAI
+UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [3,13] 0 0 0 0 [Greatbow] BossAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [6,12] 0 0 0 0 [IronLance,Ridersbane] BossAI
+UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [6,14] 0 0 0 0 [Thunder] BossAI
+
+//UNIT Rebel AxeCav Cruz Level(B2Level, Enemy, True) [15,5] 0 0 0 0 [IronAxe] GroupTwoAI
+//UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [19,5] 0 0 0 0 [IronLance] GroupTwoAI
+//UNIT Rebel Mage Cruz Level(B2Level, Enemy, True) [18,17] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT
+
+
+HusniyeSquad:
+UNIT Husniye 0 0 Level(10,NPC,False) [23,12] 0 0 0 0 [IronKnife,IronDagger,Vulnerary] NoAI
+UNIT
+
+AvocadoSquad:
+UNIT Avocado 0 0 Level(11,NPC,False) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT
+
+MagdalenaSquad:
+UNIT Magdalena 0 0 Level(17,NPC,False) [23,12] 0 0 0 0 [Thunder,Mend] NoAI
 UNIT
 
 BeginningScene:
+LoadEnemies(B2Baddies)
+FlagIsSet(HusniyeAccused, 0x11)
+	LOAD1 1 AvocadoSquad
+	ENUN
+LABEL 0x11
+FlagIsSet(AvocadoAccused, 0x22)
+	LOAD1 1 HusniyeSquad
+	ENUN
+LABEL 0x22
+FlagIsSet(CruzAccused, 0x33)
+	LOAD1 1 MagdalenaSquad
+	ENUN
+LABEL 0x33
 GotoPrepScreen
 NoFade 
 ENDA
 
+NewUnitsBlue:
+FlagIsSet(HusniyeAccused, 0x11)
+	CAMERA Avocado
+	CUSA Avocado
+LABEL 0x11
+FlagIsSet(AvocadoAccused, 0x22)
+	CAMERA Husniye
+	CUSA Husniye
+LABEL 0x22
+FlagIsSet(CruzAccused, 0x33)
+	CAMERA Magdalena
+	CUSA Magdalena
+LABEL 0x33
+NoFade
+ENDA
+
 EndingScene:
+GoToHubChapter(HubB)
 NoFade
 ENDA
 

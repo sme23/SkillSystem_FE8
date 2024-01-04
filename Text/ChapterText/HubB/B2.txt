@@ -1,8 +1,21 @@
 ## HubB_2Title
-Hub B-2[X]
+Ch. B-2b: Judge, Jury, And...[X]
 
 ## HubB_2StatusObjective
-Something[X]
+Defeat Cruz[X]
 
 ## HubB_2GoalWindow
-Something[X]
+Defeat Cruz[X]
+
+
+## YadneyDeathQuote
+[ML][LoadYadney]
+[ML]And here I'd hoped to die[Beat][HalfCloseEyes][AN]
+under the open[Beat] [CloseEyes]sky[Beat][A][X]
+
+## CruzDeathQuote
+[ML][LoadCruz]
+[ML]No! I'm[Beat] not done[Beat]![AN]
+[HalfCloseEyes]As long as[Beat] as I just[N]
+keep my eyes[Beat] open[Beat][AN]
+[CloseEyes]I can still[Beat][A][X]

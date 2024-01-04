@@ -118,6 +118,11 @@
 [LoadRahel] = [LoadFace][0x17][0x1]
 [LoadPeddler] = [LoadFace][0x31][0x1]
 
+[LoadHusniye] = [LoadFace][0x21][0x1]
+[LoadAvocado] = [LoadFace][0x22][0x1]
+[LoadMagdalena] = [LoadFace][0x23][0x1]
+
+
 [LoadElodia] = [LoadFace][0x47][0x1]
 [LoadAlonso] = [LoadFace][0x48][0x1]
 [LoadRebelLeader] = [LoadFace][0x49][0x1]
@@ -161,6 +166,17 @@
 [LoadTheDuke] = [LoadFace][0x31][0x1]
 [LoadJozef] = [LoadFace][0x31][0x1]
 [LoadTheCloser] = [LoadFace][0x31][0x1]
+
+[LoadYadney] = [LoadFace][0x31][0x1]
+[LoadCruz] = [LoadFace][0x31][0x1]
+[LoadQuim] = [LoadFace][0x5B][0x1]
+[LoadFogaca] = [LoadFace][0x62][0x1]
+[LoadDario] = [LoadFace][0x6A][0x1]
+[LoadThais] = [LoadFace][0x60][0x1]
+[LoadRecelosoPriest] = [LoadFace][0x5B][0x1]
+[LoadRecelosoStudent] = [LoadFace][0x62][0x1]
+[LoadRecelosoGuard] = [LoadFace][0x6A][0x1]
+[LoadRecelosoBarkeep] = [LoadFace][0x60][0x1]
 
 [LoadIda] = [LoadFace][0x51][0x1]
 [LoadSailor] = [LoadFace][0x6B][0x1]

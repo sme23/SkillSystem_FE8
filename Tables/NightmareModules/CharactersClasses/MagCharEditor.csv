@@ -23,9 +23,9 @@ None,0,0
 0x15 Orlando,(-1),30
 0x16 Rahel,0,20
 0x17 Saleh,11,30
-0x18 Ewan,2,45
-0x19 L'Arachel,5,50
-0x1A Dozla,0,5
+0x18 Husniye,3,25
+0x19 Avocado,2,10
+0x1A Magdalena,(-2),40
 0x1B -,0,50
 0x1C Rennac,3,35
 0x1D Duessel,0,5
@@ -117,100 +117,100 @@ None,0,0
 0x73 Hugo,0,5
 0x74 Juliana,5,60
 0x75 Elodia,1,10
-Entombed (Ch 4),1,5
-Saar (Ch 5),1,5
-Novala (Ch 6),8,50
-Murray (Ch 7),2,5
-Tirado (Ch 8),3,15
-Binks (Ch 9A),2,10
-Pablo (Ch 10A),8,50
-Maelduin (Ch 12A),2,10
-Aias (Ch 13A),2,5
-Carlyle (Ch 14A),5,30
-Caellach (Ch 15),3,5
-Pablo (Ch 13A),8,50
-0,0,0
-Gorgon (Ch 18),10,65
-Riev (Ch 19 +ACY- 20),10,45
-0,0,0
-0,0,0
-Gheb (Ch 9B),2,5
-Beran (Ch 10B),3,15
-Cyclops (Ch 12B),2,5
-Wight (Ch 11A),2,5
-Deathgoyle (Ch 11B),3,5
-Entombed (Monster Boss),3,5
-0,0,0
-Gorgon (Ch 18),10,65
-Riev (Ch 19 +ACY- 20),10,45
-0,0,0
-0,0,0
-Gheb (Ch 9B),2,5
-Beran (Ch 10B),3,15
-Cyclops (Ch 12B),2,5
-Wight (Ch 11A),2,5
-Deathgoyle (Ch 11B),3,5
-Entombed (Monster Boss),3,5
-0,0,0
-#NAME?,0,0
-Hunter (Ch 16),3,10
-#NAME?,0,0
-Brigand,0,0
-0,0,0
-O'Neill (Prologue),0,5
-Glen (Cutscene),0,0
-Zonta (Ch 5x),1,5
-Vigarde (Ch 14B),5,15
-Lyon (Ch Final),20,20
-Orson (Ch 16),3,5
-0,0,0
-0,0,0
-#NAME?,0,0
-Hunter (Ch 16),3,10
-#NAME?,0,0
-Brigand,0,0
-0,0,0
-O'Neill (Prologue),0,5
-Glen (Cutscene),0,0
-Zonta (Ch 5x),1,5
-Vigarde (Ch 14B),5,15
-Lyon (Ch Final),20,20
-Orson (Ch 16),3,5
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-Grado Soldier (Special),0,0
-Grado Soldier 1 (Normal),0,0
-Grado Soldier 2,0,0
-Grado Soldier 3,0,0
-Grado Soldier 4,0,0
-Grado Soldier 5,0,0
-Grado Soldier 6,0,0
-Grado Soldier 7,0,0
-Grado Soldier 8,0,0
-Grado Soldier 9,0,0
-Grado Soldier 10 (Duessel's),0,0
-Grado Soldier 11 (Duessel's),0,0
-Grado Soldier 12 (Duessel's),0,0
-Grado Soldier 13,0,0
-Grado Remnant 1 (Main),0,0
-Cutthroat,0,0
-Grado Remnant 2 (Cutscene and C16 only?),0,0
-Grado Remnant 3 (C16 only?),0,0
-Grado Remnant 4 (C16 only?),0,0
-Wraith (Sage),0,0
-Wraith (Swords),0,0
+0x76 Ida,1,5
+0x77 Docksman,1,5
+0x78 A4FunnyArcher,8,50
+0x79 -,2,5
+0x7A -,3,15
+0x7B -,2,10
+0x7C -,8,50
+0x7D -,2,10
+0x7E -,2,5
+0x7F -,5,30
+0x80 Grado Soldier (Main),3,5
+0x81 -,8,50
+0x82 -,0,0
+0x83 -,10,65
+0x84 -,10,45
+0x85 -,0,0
+0x86 -,0,0
+0x87 -,2,5
+0x88 -,3,15
+0x89 Grado (Duessel's),2,5
+0x8A Grado (Duessel's),2,5
+0x8B Grado (Duessel's),3,5
+0x8C Grado,3,5
+0x8D Grado Remnant (Main),0,0
+0x8E Cutthroat,10,65
+0x8F Grado Remnant (Cutscene/C16),10,45
+0x90 Grado Remnant (C16),0,0
+0x91 Grado Remnant (C16),0,0
+0x92 Wraith (Sage),2,5
+0x93 Wraith (Swords),3,15
+0x94 Wraith (Axes),2,5
+0x95 -,2,5
+0x96 -,3,5
+0x97 -,3,5
+0x98 -,0,0
+0x99 -,0,0
+0x9A -,3,10
+0x9B -,0,0
+0x9C -,0,0
+0x9D -,0,0
+0x9E -,0,5
+0x9F -,0,0
+0xA0 -,1,5
+0xA1 -,5,15
+0xA2 -,20,20
+0xA3 -,3,5
+0xA4 -,0,0
+0xA5 -,0,0
+0xA6 -,0,0
+0xA7 Mercenary (Ch 9A),3,10
+0xA8 Mercenary (Ch 10A),0,0
+0xA9 Remnant/Merc (Ch 13A),0,0
+0xAA Monster,0,0
+0xAB Monster,0,5
+0xAC Monster,0,0
+0xAD Monster,1,5
+0xAE Monster,5,15
+0xAF Monster,20,20
+0xB0 Monster,3,5
+0xB1 Monster,0,0
+0xB2 Monster,0,0
+0xB3 Monster,0,0
+0xB4 Monster,0,0
+0xB5 Monster,0,0
+0xB6 Monster,0,0
+0xB7 Monster,0,0
+0xB8 Monster,0,0
+0xB9 Monster,0,0
+0xBA Monster (Gorgon Egg?),0,0
+0xBB Monster,0,0
+0xBC Monster,0,0
+0xBD Monster (Dracozombie?),0,0
+0xBE Demon King,0,0
+0xBF -,0,0
+0xC0 Frelian,0,0
+0xC1 Frelian,0,0
+0xC2 -,0,0
+0xC3 -,0,0
+0xC4 -,0,0
+0xC5 Fado (Renais),0,0
+0xC6 -,0,0
+0xC7 Hayden (Frelia),0,0
+0xC8 Mansel (Rausten),0,0
+0xC9 Klimt (Carcino),0,0
+0xCA Dara (Caer Pelyn),0,0
+0xCB Ismaire (Jehanna),0,0
+0xCC Pegasus Messenger,0,0
+0xCD Rausten Knight,0,0
+0xCE Rausten Knight,0,0
+0xCF -,0,0
+0xD0 - Yadney,2,0
+0xD1 - Cruz,3,0
+0xD2 - CruzFake,3,0
+0xD3 -,0,0
 Wraith (Axes),0,0
 0,0,0
 0,0,0

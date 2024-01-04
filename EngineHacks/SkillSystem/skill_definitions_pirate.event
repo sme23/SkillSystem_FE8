@@ -161,3 +161,5 @@
 //Imbue: Recover HP equal to Magic at the start of each turn.
 //By Sme
 #define ImbueID 49
+
+#define SwapID 50

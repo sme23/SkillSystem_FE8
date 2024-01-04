@@ -17,3 +17,8 @@
 #define A1_GuardshelmGenericBattleQuoteSeen 0x16
 #define A1_YurenaGenericBattleQuoteSeen 0x27
 #define A1_GeraldoGenericBattleQuoteSeen 0x28
+
+// not sure where exactly these are meant to go, but eh -RW
+#define HusniyeAccused 0xB1
+#define CruzAccused 0xB2
+#define AvocadoAccused 0xB3

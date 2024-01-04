@@ -236,3 +236,10 @@ Traits: Steal, Locktouch, Canto[X]
 ## ClericDesc
 Weapons: Staves[N]
 Traits: Steal, Locktouch[X]
+
+## DeadPeerName
+Corpse[X]
+
+## DeadPeerDesc
+Weapons: None[N]
+Traits: Dead[X]

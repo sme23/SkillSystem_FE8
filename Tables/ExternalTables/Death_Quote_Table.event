@@ -11,7 +11,13 @@ DeathQuote(Carmen, AllChapters, 0, CarmenDQ)
 DeathQuote(Ximo, AllChapters, 0, XimoDQ)
 DeathQuote(Hermenegildo, AllChapters, 0, HermenegildoDQ)
 DeathQuote(Estelle, AllChapters, 0, EstelleDQ)
-
+// the B-2 trio have game over death quotes inside B-2 to save on conditionals
+DeathQuote(Husniye, HubB_2, 0x65, HusniyeDQ)
+DeathQuote(Husniye, AllChapters, 0, HusniyeDQ)
+DeathQuote(Avocado, HubB_2, 0x65, AvocadoDQ)
+DeathQuote(Avocado, AllChapters, 0, AvocadoDQ)
+DeathQuote(Magdalena, HubB_2, 0x65, MagdalenaDQ)
+DeathQuote(Magdalena, AllChapters, 0, MagdalenaDQ)
 //DeathQuote()
 
 // Bosses
@@ -35,6 +41,9 @@ DeathQuote(Stingray, HubA_4, 10, A4_StingrayDefeated)
 DeathQuote(Ramiro, HubA_4, 11, A4_RamiroDefeated)
 
 DeathQuote(Gunsmith, HubA_5, 0x9, 0)
+
+DeathQuote(Yadney, HubB_2, 0, YadneyDeathQuote)
+DeathQuote(Cruz, HubB_2, 0x2, CruzDeathQuote)
 
 
 DeathQuote(0xFFFF,0,0,0) // terminator

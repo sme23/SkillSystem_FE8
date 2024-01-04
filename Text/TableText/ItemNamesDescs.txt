@@ -356,6 +356,13 @@ Shove Glove[X]
 ## ShoveGloveDesc
 Allows the holder to shove units 1 tile.[X]
 
+## SwapShoesName
+Swap Shoes[X]
+
+## SwapShoesDesc
+Allows the holder to swap[N]
+places with an adjacent ally.[X]
+
 ## TealGemName
 Teal Gem[X]
 

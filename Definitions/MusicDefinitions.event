@@ -19,3 +19,5 @@
 #define OutIntoTheOpenSkyID 0x18
 #define LastDanceSinkingShipID 0x19
 #define WellAndTrulyLostID 0x1A
+
+#define WindAmbienceID 0x47
