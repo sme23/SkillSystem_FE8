@@ -251,7 +251,7 @@ Text(NPCPatronDrinkingText)
 ENDA
 
 NPCPeddlerTalk:
-ASMC prCallEventMenu|1
+CallEventMenu(pHubMenuDefinition)
 SVAL s1 0 //if tonic chosen
 BNE 900 s1 sC 
 	CALL NPCPeddlerTonicSelected
