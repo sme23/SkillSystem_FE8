@@ -170,3 +170,6 @@
 
 //Swift: Command that grants adjacent ally +3 move for 1 turn. (Dragz)
 #define SwiftID 52
+
+//Dubious Advice: Adjacent allies gain +15 all growths and -15% experience. (Dragz)
+#define DubiousAdviceID 53

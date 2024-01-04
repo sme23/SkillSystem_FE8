@@ -1759,3 +1759,7 @@ range hits lower of foe's Def/Res.[X]
 ## SD_Swift
 Swift: Unit can use a command to[N]
 grant an ally +3 Move for 1 turn.[X]
+
+## SD_DubiousAdvice
+Dubious Advice: Adjacent allies gain[N]
++15 to all growths, but -15% exp gain.[X]
