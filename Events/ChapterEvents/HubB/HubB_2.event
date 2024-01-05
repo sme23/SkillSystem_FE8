@@ -28,7 +28,7 @@ Door(20,4)
 Door(13,19)
 Door(16,18)
 Door(20,18)
-Chest(Peshkatz, 9, 4)
+Chest(LightRune, 9, 4)
 Chest(SwapShoes, 9, 18)
 END_MAIN
 
@@ -63,6 +63,9 @@ UNIT
 // group 1: yadney's squad
 // group 2: top hallway guards
 
+B2Yadney:
+UNIT Yadney GriffinRider Cruz Level(15,Enemy,False) [16,12] 0 0 0 0 [KillerLance,ShortSpear] GroupOneAI
+UNIT
 
 B2Baddies:
 UNIT Cruz Shaman CruzFake Level(11,Enemy,False) [5,9] 0 0 0 0 [Sagittae, Eclipse] NeverMoveAI
@@ -85,7 +88,6 @@ UNIT Rebel Fighter Cruz Level(10,Enemy,True) [17,15] 0 0 0 0 [IronAxe] ChargeAI
 UNIT Rebel Mage Cruz Level(10,Enemy,True) [14,11] 0 0 0 0 [Fire] ChargeAI
 
 // turn 3 yadney squad
-UNIT Yadney GriffinRider Cruz Level(15,Enemy,False) [8,11] 0 0 0 0 [KillerLance,ShortSpear] GroupOneAI
 UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [9,10] 0 0 0 0 [Onigiri,TealGem] GroupOneAI
 UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [9,12] 0 0 0 0 [Hammer,Crusher] GroupOneAI
 UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [10,8] 0 0 0 0 [IronLance] GroupOneAI
@@ -147,8 +149,65 @@ MagdalenaSquad:
 UNIT Magdalena 0 0 Level(17,NPC,False) [23,12] 0 0 0 0 [Thunder,Mend] NoAI
 UNIT
 
+// fadi: to black
+// fadu: back from black
+
 BeginningScene:
+SetBackground(Ship)
+MUSC AvastMeHeartiesID
+FADU 16
+FlagIsSet(CruzAccused, 0xABD)
+	Text(B2_SuppliesAreGone)
+	GOTO 0xABE
+LABEL 0xABD
+	Text(B2_ChiefItsBad)
+LABEL 0xABE
+FADI 16
+
+// conditionals for the recruited one
+MUSC WelcomeAboardMateyID
+FADU 16
+FlagIsSet(HusniyeAccused, 0x1A1)
+	Text(B2_AvocadoJoins)
+LABEL 0x1A1
+FlagIsSet(AvocadoAccused, 0x2A2)
+	Text(B2_HusniyeJoins)
+LABEL 0x2A2
+FlagIsSet(CruzAccused, 0x3A3)
+	Text(B2_MagdalenaJoins)
+LABEL 0x3A3
+FADI 16
+
+EraseBackground
 LoadEnemies(B2Baddies)
+CAM1 Cruz
+// MUSC LetterOpenerID
+// rebels knife is a placeholder! make this play Letter Opener once that exists
+MUSC TheRebelsKnifeID
+FADU 16
+CameraCursor(Cruz)
+Text(B2_IntroCruz_Monologue)
+LoadEnemies(B2Yadney)
+ENUN
+MOVE 16 Yadney [4,9]
+ENUN
+CameraCursor(Yadney)
+CameraCursor(Cruz)
+ASMC MakeMusicAvastASMC
+Text(B2_IntroCruz_Thieves)
+CameraCursor(9,17)
+CameraCursor(8,8)
+STAL 60
+CameraCursor(Cruz)
+Text(B2_IntroCruz_Yadney)
+CameraCursor(Yadney)
+CamOn
+MOVE 16 Yadney [8,11]
+ENUN
+CamOff
+CameraCursor(Yadney)
+FADI 16
+ASMC MakeMusicAhoyASMC
 FlagIsSet(HusniyeAccused, 0x11)
 	LOAD1 1 AvocadoSquad
 	ENUN
@@ -182,6 +241,13 @@ NoFade
 ENDA
 
 EndingScene:
+CHECK_ALIVE Yadney
+BEQ 0xBEEF 0xC 0x0
+	CameraCursor(Yadney)
+	Text(B2_IfYadneyAlive)
+LABEL 0xBEEF
+FADI 16
+// put the rest of the outro here
 GoToHubChapter(HubB)
 NoFade
 ENDA

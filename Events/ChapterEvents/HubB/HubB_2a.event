@@ -185,7 +185,7 @@ ENDA
 B2a_Hedge:
 CenterTextbox(B2a_TalkToHedge)
 RemoveTrapAtCoords(10,10)
-GiveItem(Bloodletter,0xFFFF)
+GiveItem(Peshkatz,0xFFFF)
 NoFade
 ENDA
 
@@ -256,11 +256,11 @@ ENDA
 
 
 EndingScene:
-FADI 16
-ENUF LuaInAHubFlag
 CUSA Desiderio
 CUSA Pilar
 CUSA Razvan
+FADI 16
+ENUF LuaInAHubFlag
 CLEA 0
 CLEN 0
 CLEE 0
@@ -314,16 +314,52 @@ Text(B2a_MagdalenaGivesMoney)
 GiveGold(2500)
 FADI 16
 // MUSC LetterOpenerID
+// rebels knife is a placeholder! make this play Letter Opener once that exists
+MUSC TheRebelsKnifeID
+
+// delete this later - for reference purposes
+// #define TextCont(id,music) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
+
 FlagIsSet(CruzAccused, 0x666)
 	SetBackground(Prison_Cell) // if cruz in jail
 	FADU 16
 	// cruz conversation here
+	TEXTSTART
+	TEXTSHOW B2a_CruzBreakout
+	TEXTEND
+	ASMC MakeMusicAvastASMC
+	TEXTCONT
+	TEXTEND
+	REMA
+	// more cruz conversation
 	GOTO 0x777
 LABEL 0x666
 	SetBackground(Woodland_Night) // if cruz spared
 	FADU 16
 	// cruz conversation here
+
+	TEXTSTART
+	TEXTSHOW B2a_MagdalenaFuckingDies
+	TEXTEND
+	ASMC MakeMusicAvastASMC
+	TEXTCONT
+	TEXTEND
+	// sagittae sound effects. hopefully correct
+	//SOUN 0xD8
+	SOUN 0x0100
+	STAL 40
+	SOUN 0x02BC
+	TEXTCONT
+	TEXTEND
+	// death sound effect
+	SOUN 0xD6
+	TEXTCONT
+	TEXTEND
+	REMA
+
+	// more cruz conversation here
 LABEL 0x777
+ASMC MakeMusicAhoyASMC
 FADI 16
 MNC2 HubB_2
 NoFade

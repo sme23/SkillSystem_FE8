@@ -37,4 +37,19 @@ UnspecifiedBattleConvo(A4FunnyArcher, HubA_4, 13, 0)
 UnspecifiedBattleConvo(Stingray, HubA_4, 16, A4_StingrayBattleQuote)
 UnspecifiedBattleConvo(Ramiro, HubA_4, 17, A4_RamiroBattleQuote)
 
+// Chapter B-2
+SpecifiedBattleConvo(Yadney,Avocado,HubB_2,0x11,B2_BQ_YadneyAvocado)
+SpecifiedBattleConvo(Yadney,Razvan,HubB_2,0x12,B2_BQ_YadneyRazvan)
+SpecifiedBattleConvo(Yadney,Desiderio,HubB_2,0x13,B2_BQ_YadneyDesiderio)
+SpecifiedBattleConvo(Yadney,Pilar,HubB_2,0x14,B2_BQ_YadneyPilar)
+SpecifiedBattleConvo(Yadney,Lua,HubB_2,0x15,B2_BQ_YadneyLua)
+SpecifiedBattleConvo(Yadney,Jaime,HubB_2,0x16,B2_BQ_YadneyJaime)
+UnspecifiedBattleConvo(Yadney,HubB_2,0x17,B2_BQ_YadneyGeneric)
+SpecifiedBattleConvo(Cruz,Husniye,HubB_2,0x21,B2_BQ_CruzHusniye)
+SpecifiedBattleConvo(Cruz,Avocado,HubB_2,0x22,B2_BQ_CruzAvocado)
+SpecifiedBattleConvo(Cruz,Magdalena,HubB_2,0x23,B2_BQ_CruzMagdalena)
+SpecifiedBattleConvo(Cruz,Lua,HubB_2,0x24,B2_BQ_CruzLua)
+SpecifiedBattleConvo(Cruz,Leonor,HubB_2,0x25,B2_BQ_CruzLeonor)
+UnspecifiedBattleConvo(Cruz,HubB_2,0x26,B2_BQ_CruzGeneric)
+
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

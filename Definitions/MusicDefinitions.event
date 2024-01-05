@@ -7,6 +7,7 @@
 #define AvastMeHeartiesID 0xc
 #define StillZephyrsID 0xd
 #define TheRebelsKnifeID 0xe
+#define RebelsKnifeID 0xe
 #define OrlandoThemeID 0xf
 #define SwabbieTalkID 0x10
 #define EmergencyCrewmateID 0x11

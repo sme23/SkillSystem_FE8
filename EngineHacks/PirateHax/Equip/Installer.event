@@ -12,6 +12,7 @@ BYTE Eyepatch
 BYTE KnightRing
 BYTE Statuette
 BYTE ShoveGlove
+BYTE SwapShoes
 BYTE 0x00 //terminator
 
 // Defense equipment loses durability on each hit taken

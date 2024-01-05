@@ -163,3 +163,7 @@
 #define ImbueID 49
 
 #define SwapID 50
+
+//Smite: Allows unit to push other units two tiles away.
+//By StanH
+#define SmiteID 51
