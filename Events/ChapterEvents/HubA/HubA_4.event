@@ -85,16 +85,7 @@ LABEL 1
 	SpawnReinforcements(RebelSpawn)
 	FADU 15
 	ENUN
-	Text(A4_TurnEvent3_A)
 	Music(AvastMeHeartiesID)
-	//if pirate boss is still alive
-	CHECK_EXISTS Stingray //returns 1 if true (thus is still alive)
-	BEQ 8 s0 sC
-		Text(A4_TurnEvent3_B_A) //if he's alive, play this quote
-		GOTO 9
-	LABEL 8
-			Text(A4_TurnEvent3_B_B) //if he's dead, play this instead
-	LABEL 9
 	CameraCursor(Ramiro)
 	Text(A4_TurnEvent4)
 	SetAI(Razorblood,0,0,4,0)
@@ -144,6 +135,15 @@ BNE 6 s0 sC
 	STAL 30
 	TILECHANGE 1
 LABEL 6
+Text(A4_TurnEvent3_A)
+//if pirate boss is still alive
+	CHECK_EXISTS Stingray //returns 1 if true (thus is still alive)
+	BEQ 8 s0 sC
+		Text(A4_TurnEvent3_B_A) //if he's alive, play this quote
+		GOTO 9
+	LABEL 8
+		Text(A4_TurnEvent3_B_B) //if he's dead, play this instead
+LABEL 9
 NoFade
 ENDA
 
@@ -382,9 +382,13 @@ EndingScene:
 Music(StillZephyrsID)
 SetBackground(Ship)
 Text(A4_EndEvent_1)
-GiveGold(1200)
-Music(ABlackheartsPrideID)
 Text(A4_EndEvent_2)
+Text(A4_EndEvent_3)
+Text(A4_EndEvent_4)
+Text(A4_EndEvent_5)
+GiveGold(1500)
+Music(ABlackheartsPrideID)
+Text(A4_EndEvent_6)
 GoToHubChapter(HubA)
 NoFade
 ENDA
