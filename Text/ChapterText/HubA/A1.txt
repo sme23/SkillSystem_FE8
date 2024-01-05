@@ -553,12 +553,16 @@ You are dismissed.[AN]
 [MR]But-[AN]
 [ML]I said DISMISSED![AN]
 [MR][Beat][AN][ClearFace]
-[ML][Beat]YURENA![AN]
-[MR][LoadYurena]
+[ML][Beat]YURENA![AN][X]
+
+
+## ChA1EndingDialogue3
+[ML][LoadYurena]
+[MR][LoadSanz]
 [MR]You called, milord?[AN]
 [ML]Bring me Alonso. [.....]Now![A][X]
 
-## ChA1EndingDialogue3
+## ChA1EndingDialogue4
 [ML][LoadAlonso][MR][LoadSanz]
 [ML]Y'called, bossman?[AN]
 [MR]Explain yourself this instant, seadog![AN]
