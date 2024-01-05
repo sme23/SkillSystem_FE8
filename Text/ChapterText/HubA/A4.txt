@@ -96,14 +96,14 @@ it tricky to wield staves at first.[AN]
 Heh.[A] And experienced curates[N]
 might find it tricky to wield tomes too?[AN]
 [FL][ToggleSmile]
-U-Uh[Beat][AN]
+Uh[Beat][AN]
 W-Well, tomes are a complicated[N]
 topic as well, but--[AN]
 [R]
 Relax, Razvan.[AN]
 Pilar's just pulling your leg.[AN]
 [FL]
-O-Oh, I see, Miss Lua.[AN]
+Oh[Beat]I see, Miss Lua.[AN]
 [L][3LB]
 It's tricky for me to poke fun.[AN]
 I respect our captain a little[N]
@@ -475,7 +475,7 @@ I'll smash down this door![AN]
 And then I'll shove this lance up your--[AN]
 [ML][LoadRebel]//generic pirate instead of rebel
 Capt'![AN]
-We gots a situwaytsion![AN]
+We gots a situation![AN]
 [MR][ClearFace]
 [MR][LoadStingray]
 Huh?![A] What kinda situation[N]
@@ -494,14 +494,11 @@ The rest of you lads, get back on [N]
 board our ship, repel these scum![AN][X]
 
 ## A4StartEventBase_6
-[FFL][LoadLua]
-[FFL][MoFR]
-[FFL][LoadDesiderio]
-[FFL][MoR]
-[FFL][LoadPilar]
-[FFL][MoL]
-[FFL][LoadRazvan]
-[FFL][MoFL]
+[FR][LoadLua]
+[R][LoadDesiderio]
+[L][LoadPilar]
+[FL][LoadRazvan]
+
 // Razvan | Pilar |    | Desi | Lua
 [FR]
 [3LB]
@@ -879,91 +876,447 @@ me not to mess with you![A][X]
 
 ## A4_EndEvent_1
 [R][LoadLua]
-[L][LoadA4ImperialCaptain]
 [FR][LoadRazvan]
+[L][LoadPilar]
+[FL][LoadDesiderio]
+
+// Four main crew members are standing victorious on the main pirate ship. They're
+// wrapping things up with combat, and Lua and Raz prepare to examine the imperial ship.
+
+// Desiderio | Pilar |    | Lua | Razvan
+
 [R]
-Four ships grappled onto each[N]
-other at the same time[Beat][AN]
-We're lucky we managed[N]
-to remain stable.[AN]
-I'm Lua, captain of this[N]
-merchant vessel.[AN]
-Your crew is rather well-armed[N]
-for a merchant vessel[Beat][AN]
-[Beat][Beat]But I can't say I don't[N]
+Hah[Beat]is that all of them?[A]
+
+[L]
+Both commanders are down.[AN]
+Anyone left standing is being[N]
+routed, or surrendering to us.[AN]
+
+[R][3LB]
+[CloseEyes]
+Whew...[.4][A]when I saw both ships[N]
+on the horizon, can't say I was[N]
+expecting to encounter another.[AN][Clear]
+[OpenEyes]
+This was a lot messier than[N]
+I'd thought it'd be.[AN]
+
+[FL][2LB]
+You got that right, boss.[AN]
+Those rebels were crazy, thinking[N]
+that we were some imperials.[AN]
+How'd they even fall for that[N]
+captain's ruse so easily?[AN]
+
+[L]
+[Beat]A matter of circumstance, I suppose.[AN]
+If we'd managed to contact them first,[N]
+we might have rused them instead.[AN]
+
+[FL]
+
+With the way those pirates looked?[AN]
+Hah![AN]
+At least the marines have hygiene[N]
+standards, I'll give them that.[AN]
+No good pirate crew should be[N]
+going around looking like that.[AN]
+
+[FR]
+So you're saying we all look[N]
+nice and pampered, Desiderio?[AN]
+How thoughtful of you.[AN]
+
+[R]
+The banter can wait[N]
+for a little while.[AN]
+Desderio, Pilar.[AN]
+Lead the rest of the crew to[N]
+secure the other two decks.[AN]
+Razvan and I will investigate[N]
+the imperial ship.[AN]
+
+[L]
+Aye, boss![AN]
+I'll make sure there aren't[N]
+any rebels lurking about![AN]
+[ClearFace][CloseSpeechSlow]
+
+[FL]
+Understood, captain.[AN]
+Just make sure you don't get[N]
+shot if there are survivors.[AN]
+[ClearFace][CloseSpeechSlow]
+
+[FR]
+I'm ready to go, captain.[AN]
+
+[FL]
+Stick close to me, Razvan.[AN]
+If there are any survivors, let's
+hope they think we're not the enemy.[AN][X]
+
+
+## A4_EndEvent_2
+
+// Lua and Razvan proceed to the imperial ship alone. They walk onto the deck, to only find the scars of battle. 
+
+// XXX | XXX |    | Lua | Razvan
+
+[R][LoadLua]
+[FR][LoadRazvan]
+
+[FR]
+Gods[Beat][AN]
+These pirates really did a[N]
+number on these men.[AN]
+
+[R]
+For a ship as small as this, these[N]
+marines were probably green.[AN]
+Didn't stand much of a chance[N]
+against even crude pirates.[AN]
+
+[FR]
+Green sailors[Beat][.4]
+It could have been me on [N]
+an imperial ship like this.[AN]
+Slaughtered to the last man[N]
+without any hesitation?[AN]
+It is a terrible thought[Beat][AN]
+
+[R]
+Unfortunately, some pirates[N]
+are simply that unforgiving.[AN]
+Certainly, piracy is not kind[N]
+to begin with, not at all.[AN]
+But some dastardly crews are more[N]
+than willing to revel in cruelty.[AN]
+
+[FR]
+[Beat]I suppose at least this all was[N]
+quicker than being marooned.[AN]
+[Beat][CloseEyes]Hah, it's a dreadful thought[N]
+to be thinking of my own case here.[AN]
+I was lucky enough to be rescued,[N]
+but these men, not so much[Beat][AN]
+
+[FFL][LoadA4ImperialCaptain]
+Don't be so quick to discount[N]
+us as being all dead![AN]
+
+[FL]
+[OpenEyes]
+Wait, what?[AN]
+
+[R]
+[Beat]Well then.[AN][X]
+
+## A4_EndEvent_3
+
+//The door to the deck is opened, and the imperial captain appears on the deck, walking over to Razvan and Lua. 
+
+// XXXX | Captain |    | Lua | Razvan
+
+[R][LoadLua]
+[FR][LoadRazvan]
+[FFL][LoadA4ImperialCaptain]
+[FFL][MoL]
+Here, I thought I was going to have[N]
+only one dose of luck today.[AN]
+Turns out, you folk seem like the[N]
+cause behind the pirates turning tail.[AN]
+What's going on, was there[N]
+some sort of mutiny on board?[AN]
+
+[FR]
+A different story, ma'am.[AN]
+We're your rescuers, from[N]
+a different vessel entirely.[AN]
+
+[L][1LB]
+A different vessel?[AN]
+I'll be damned.[AN]
+
+[R][2LB]
+We're not jesting here.[AN]
+I'm Captain Lua, captain of the[N]
+merchant vessel over there.[AN]
+We saw that your ship was[N]
+besieged by pirates in the distance.[AN]
+So, we took matters into our own hands.[AN]
+
+[L]
+
+Merchants you say?[AN]
+I am Captain Castila of[N]
+the INS Snared Talon.[AN]
+I must say, you all must be rather[N]
+well-armed for a merchant vessel.[AN]
+
+[R]
+
+In a route as suspicious as this?[AN]
+It would have been foolish to not[N]
+hire a decent amount of protection.[AN]
+
+[L]
+I'm still suprised you all managed[N]
+to best a gang of pirates.[A]
+[Beat]But I can't say I don't[N]
 appreciate that fact.[AN]
-It seems like you merchants were[N]
-more prepared for the danger than us.[AN]
-[FL][LoadValerie]
-A-Are you the ones who[N]
-rescued us from those pirates![AN]
+The gods know we should've been[N]
+more prepared in this region too.[AN]
+[Beat]What's that other vessel behind[N]
+the pirate's ship, though?[AN]
+You only mentioned having[N]
+your one ship.[AN]
+
+[FR]
+This may sound hard to believe.[AN]
+But that was a rebel ship that had[N]
+been seemingly patrolled the area.[AN]
+They joined in on the action, and[N]
+aligned with the pirates against us.[AN]
+It seems like they thought we[N]
+were escorted, aligned with you all.[AN]
+
+[L][1LB]
+You're kidding me[Beat][A]
+Rebels as well. [.4]Damn.[AN]
+
+[R][2LB]
+I wish I was kidding.[AN]
+Beyond anything our crew expected,[N]
+but we managed to prevail.[AN]
+
+[L]
+Which I'm glad for, otherwise all[N]
+our heads would be on pikes right now.[AN]
+
+[FFL]
+Um[Beat]is everything alright[N]
+out there captain?[AN]
+I-I've got my musket ready, if[N]
+you need me to get out there and--[AN]
+
+[L]
+No need to, Valerie.[AN]
+Everything's fine up here.[AN]
+Men![A]Come up aboard deck,[N]
+the coast is now clear![AN][X]
+
+## A4_EndEvent_4
+
+// A handful of imperial troops come up on the deck, five total, various soldier classes. 
+// Valerie, the recruit, can appear as a gunner. While the other troops fan out
+// to different parts of the ship, Valerie directly stands behind the captain.
+
+// Valerie | Captain |    | Lua | Razvan
+
+[R][LoadLua]
+[FR][LoadRazvan]
+[L][LoadA4ImperialCaptain]
+[FFL][LoadValerie]
+
+[FFL][MoFL]
+[FL]
+N-No way...[AN]
+So there were people[N]
+who came to help us![AN]
+
+[R]
+I have to admit, I didn't think[N]
+there were any survivors left here.[AN]
+With how lifeless the deck was,[N]
+it seemed like we were too late.[AN]
+
+[FL]
+They[Beat]they were definitely going[N]
+to kill us all if you all didn't help![AN]
 T-Thank you so much![.4][N]
-Those jerks really took us by surprise.[AN]
+Those jerks really took us by surprise![AN]
 Thinking they're going to get[N]
 rich off of fertilizer and wheat![AN]
+How foolish of them, hah![AN]
+
 [R]
 [Beat]Fertilizer and wheat?[AN]
-[L]Valerie![AN]
+What's a Incendivis ship[N]
+doing with farming supplies?[AN]
+
+[L]
+Valerie![AN]
+
 [FL]
-O-Oh, was I not supposed to[N]
-blurt that out?[AN]
-Um[Beat]sorry[Beat][AN]
-[L][3LB]
-Tch, be more mindful, okay?[AN]
-But, yes, as Valerie here hinted,[N]
-we're delivering farming[N]
+O-Oh, was I not supposed[N]
+to blurt that out?[AN]
+Um[Beat]sorry captain...[AN]
+
+[L][1LB]
+Be more mindful, what if we[N]
+carried more dangeroud cargo?[AN]
+
+[FL][1LB]
+O-Of course. I'll uh...[AN]
+Erm...[AN]
+
+[FFL][2LB]
+Captain![N]
+Jenson is still breathing![AN]
+He's hurt bad, we're taking[N]
+him below deck with Castro![AN]
+
+[L]
+Understood, keep him stabilized![AN]
+Razvan, was it?[AN]
+While my men up here are moving, 
+we now have gravely injured men[N]
+If we may recruit you for[N]
+just a moment, we would--[AN]
+
+[FR][1LB]
+
+No need to ask further.[AN]
+Allow me to help over there![AN]
+
+[FR][MoFFL]
+
+[FFL][ClearFace]
+
+[L][2LB]
+Yet another miracle on this day[Beat][AN]
+Valerie, follow him[N]
+down into the cabins.[AN]
+Help with whatever treatment[N] 
+needs to be done.[AN]
+
+[FL]
+O-Of course![AN]
+I-I'll help to make[N]
+sure they're alright![AN][X]
+
+## A4_EndEvent_5
+
+//Valerie and Razvan follow another soldier back into the ship. Dialogue returns to Lua and the imperial captain.
+
+// XXXX | Captain |    | Lua | XXXX
+
+[R][LoadLua]
+[L][LoadA4ImperialCaptain]
+
+[Beat]Heh[Beat]the boy's more[N]
+than eager to lend a helping hand.[AN]
+He studied under an[N] 
+imperial priest, actually.[AN]
+I've been grateful to have[N]
+him on-board my ship.[AN]
+
+[L]
+Is that so?[AN]
+Then I'm certain he's more[N]
+than capable to help us.[AN]
+His aid is much appreciated.[AN]
+
+[R]
+I have to admit, I'm now curious[N]
+after what your crewman just said.[AN]
+It seems your ship isn't handled[N]
+to deliver cargo en masse.[AN]
+Why's a ship like yours[N]
+doing it all alone?[AN]
+
+[L]
+This sort of stuff is classified.[AN]
+[Beat]But since you did help save us,[N]
+and this mission's been rough[Beat][AN]
+Yes, as Valerie hinted...[.4][N]
+ah, no--[.4] directly said.[AN]
+We're delivering farming [N]
 supplies over to Rockwell.[AN]
+
+[R]
+That makes sense those mining [N]
+isles would need help with farming.[AN]
+But why not have[N]
+a merchant do it?[AN]
+
+[L][3LB]
 We were told that this route[N]
 was a quiet one, with minimal[N]
 signs of pirate activity.[AN]
-And now, here I am, in a[N]
-situation I have never[N]
-seen in my whole career.[AN]
-[R][2LB]
-I can say the same myself.[AN]
-[L]
-Ah[Beat]I figured.[AN]
-The islands might be far from the[N]
-capital, sure,[A] but they're[N]
-still a part of the empire.[AN]
-That's why we're sending supplies out,[N]
-after all[Beat][AN]
-But when the people we're[N]
-trying to aid try to attack us,[AN]
-it's not quite the best light.[AN]
-[FL]
-Are you a clergyman?[AN]
-We have a few injured,[N]
-one quite badly.[AN]
-If we may recruit you[N]
-for just a moment[Beat][AN]
-[FR]
-Of course, miss.[AN]
-Anything I can do to help.[AN]
-[L]
-Valerie, escort him[N]
-down into the cabins.[AN]
-Your aid is much appreciated.[AN]
-[FL]
-O-Of course, thank[N]
-you so much![AN]
-This way![AN]
-[FL][ClearFace]
-[FR][ClearFace]
-[L]
-[Beat][CloseEyes]I'm shocked she's still[N]
-holding it together after that.[AN]
-Her first deployment, and already[N]
-encountering pirates, and nearly rebels[Beat][AN]
-[OpenEyes]I wish these islands were more stable.[AN]
-For things to be a bit safer[N]
-passing through.[AN]
-But, you've saved our lives.[AN]
-Here, a small token of my[N]
-as well as my crew's thanks.[AN]
-Safe travels to you, captain.[A][X]
+That, [OpenQuote]there's no need to hire[N]
+a merchant, because[N]
+we can do it ourselves!"[AN][Clear]
+A lone ship[Beat]in an isolated[N]
+region of the empire.[AN]
+Without any backup to speak of.[AN]
+Did the port *truly* think this route[N]
+was going to be completely safe?[AN]
 
-## A4_EndEvent_2
+[R][2LB]
+Sounds as if your problems are with[N]
+that port sent you in without help.[AN]
+
+[L][3LB]
+Damn straight they are;[.4][N]
+I'd rather prioritize me and my[N]
+men's safety over anything else.[AN]
+Being forced onto a desperate[N]
+defensive like this over a lack of[N]
+intelligence is rather irritating.[AN]
+It's not that I don't consider this
+mission important either.[AN]
+I'm sure Rockwell needs the help,[N]
+but this delivery needed some more[N]
+planning[Beat]and an actual merchant.[AN]
+
+[R]
+Seems like we need to prioritize[N]
+our merchants some more then.[AN]
+Definitely no bias here, of course.[AN]
+Will you be able to make[N]
+it to Rockwell safely from here?[AN]
+
+[L]
+With your cleric's help, we should[N]
+be able to stabilize ourselves.[AN]
+This is[Beat]a complicated situation,[N]
+honestly, but we'll figure it out.[AN]
+As long as we don't get plummet into[N]
+the depths below, we have it covered.[AN]
+
+[R]
+I suppose I'll leave it to you then.[AN]
+I'll tell my crew to hand the[N]
+this reins of this over to you.[AN]
+Once Razvan is done tending to[N]
+your men, we'll be off.[AN]
+
+[L]
+
+Ah, wait just one moment, captain.[AN]
+
+[R][1LB]
+Hmm?[AN]
+
+[L]
+You and your crew saved our lives.[AN]
+We've been extremely [N]
+fortunate to have your aid.[AN]
+Here, a small--[.4] no, large token of[N]
+me as well as my crew's thanks.[AN]
+Safe travels to you, Captain Lua.[AN]
+
+[R]
+
+To you as well, Castila.[AN][X]
+
+//The Incendivis Captain gives her 1500 gold.
+
+## A4_EndEvent_6
+
 [FL][LoadRazvan]
 [FR][LoadDesiderio]
 [R][LoadLua]
@@ -1017,6 +1370,9 @@ with that idea[Beat]but don't you?[AN]
 I do, and still do.[AN]
 Their captain was a rarity among the[N]
 officers I've seen and heard about.[AN]
+In fact[Beat]she seemed more than[N]
+content with doing simple work for[N]
+the empire, rather than bold offensives.[AN]
 But, if that ship was at least doing[N]
 something to patch up these isles, [N]
 then they can go on by, no trouble.[AN]
@@ -1090,10 +1446,10 @@ us completely empty-handed.[AN][X]
 
 ## A4_StingrayBattleQuote
 [ML][LoadStingray]
-You're thinkin' you're all[N]
-trying to be raiders, huh?![AN]
-Well lemme tell you, your[N]
-ship is now mine![AN][X]
+Grrr[Beat]you think you can[N]
+just board the Razorbloods?![AN]
+In moments, your remains will[N]
+be thrown off my new ship![AN][X]
 
 ## A4_StingrayDefeated
 [ML][LoadStingray]
