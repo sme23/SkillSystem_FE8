@@ -19,10 +19,10 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Chest(Bloodletter, 2, 2)
-Chest(Bloodletter, 5, 2)
-Chest(Bloodletter, 12, 9)
-Chest(Bloodletter, 16, 12)
+Chest(GlassShield, 2, 2)
+Chest(Surge, 5, 2)
+Chest(FliersPermit, 12, 9)
+Chest(MagekillerBow, 16, 12)
 Chest(FlameSword, 0, 15)
 Chest(BlueGem, 2, 15)
 Door(3,4)
@@ -44,10 +44,28 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [10,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [15,5] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [15,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [15,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT
+
+AntlionsInitial:
+UNIT Kiril MasterNinja 0 Level(5,Enemy,False) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] AttackWhenInRangeAI
+UNIT Antlion Warden 0 Level(9, Enemy, False) [8,6] 0 0 0 0 [IronBlade, Harpoon] BossAI
+UNIT Antlion Vanguard 0 Level(9, Enemy, False) [9,7] 0 0 0 0 [Harpoon, SteelAxe] BossAI
 UNIT
 
 BeginningScene:
+LOAD1 1 AntlionsInitial
 GotoPrepScreen
 NoFade 
 ENDA
