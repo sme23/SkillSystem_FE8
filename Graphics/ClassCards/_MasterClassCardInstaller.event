@@ -81,3 +81,11 @@ ALIGN 4
 Fighter_FClassCardPal:
 #incbin "Dmp/Fighter (F) Axe {Jj09, HyperGammaSpaces}.png_pal.dmp"
 setCardEntry(Fighter_FClassCard, Fighter_FClassCardData, Fighter_FClassCardPal)
+
+ALIGN 4
+ExplosiveClassCardData:
+#incbin "Dmp/WoodenCrate {LaurentLacroix}.dmp"
+ALIGN 4
+ExplosiveClassCardPal:
+#incbin "Dmp/WoodenCrate {LaurentLacroix}.png_pal.dmp"
+setCardEntry(BombClassCard, ExplosiveClassCardData, ExplosiveClassCardPal)

@@ -80,3 +80,4 @@
 #define PegasusRiderClassCard 0x107
 #define GriffinRiderClassCard 0x108
 #define Fighter_FClassCard 0x109
+#define BombClassCard 0x10A
