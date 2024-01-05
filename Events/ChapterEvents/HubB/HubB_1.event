@@ -19,6 +19,16 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Chest(Bloodletter, 2, 2)
+Chest(Bloodletter, 5, 2)
+Chest(Bloodletter, 12, 9)
+Chest(Bloodletter, 16, 12)
+Chest(FlameSword, 0, 15)
+Chest(BlueGem, 2, 15)
+Door(3,4)
+Door(4,4)
+Door(12,11)
+Door(3,16)
 END_MAIN
 
 MiscBasedEvents:
