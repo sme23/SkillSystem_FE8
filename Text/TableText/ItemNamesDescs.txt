@@ -413,42 +413,51 @@ A knowledgeable tome that grants[N]
 +5% to all a unit's growths.[X]
 
 ## MetisTomeUseDesc
-
 Grants +5% to[N]
 all growths.[X]
 
 ## BraveCrestName
-Brave's Crest[X]
+Brave Crest[X]
 
 ## BraveCrestDesc
-[X]
+If Lv. 10 or greater, use to access[N]
+or master the sword, lance, or axe.[X]
+
+## BraveCrestUseDesc
+Use on a Lv. 10 or higher[N]
+unit to gain great power.[X]
 
 ## KnightPlateName
-Knight's Plate[X]
+Knight Plate[X]
 
 ## KnightPlateDesc
-[X]
+If Lv. 10 or greater, use to become[N]
+ironclad or gain greater armor.[X]
 
 ## HunterMarkName
-Hunter's Mark[X]
+Hunter Mark[X]
 
 ## HunterMarkDesc
-[X]
+If Lv. 10 or greater, use to access[N]
+or master the bow, knife, or gun.[X]
 
 ## FlierPermitName
-Flier's Permit[X]
+Flier Permit[X]
 
 ## FlierPermitDesc
-[X]
+If Lv. 10 or greater, use to procure[N]
+a flying steed or hone piloting skill.[X]
 
 ## MageRingName
-Mage's Ring[X]
+Magi Ring[X]
 
 ## MageRingDesc
-[X]
+If Lv. 10 or greater, use to access[N]
+a tome or staff through arcane ability.[X]
 
 ## RiderBadgeName
-Rider's Badge[X]
+Rider Badge[X]
 
 ## RiderBadgeDesc
-[X]
+If Lv. 10 or greater, use to procure[N]
+a horse or hone equestrian talent.[X]
