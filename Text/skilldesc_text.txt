@@ -1763,3 +1763,7 @@ grant an ally +3 Move for 1 turn.[X]
 ## SD_DubiousAdvice
 Dubious Advice: Adjacent allies gain[N]
 +15 to all growths, but -15% exp gain.[X]
+
+## SD_FrigidAura
+Frigid Aura: Adjacent allies take 20%[N]
+max HP damage at the start of the turn.[X]

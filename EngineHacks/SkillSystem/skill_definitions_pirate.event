@@ -173,3 +173,6 @@
 
 //Dubious Advice: Adjacent allies gain +15 all growths and -15% experience. (Dragz)
 #define DubiousAdviceID 53
+
+//Frigid Aura: All adjacent units take 20% damage at the start of turn. (Dragz)
+#define FrigidAuraID 54
