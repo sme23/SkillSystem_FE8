@@ -58,6 +58,9 @@ PromoListEntry(Priest, Adventurer)
 PromoListEntry(Cleric, Adventurer_F)
 PromoListEntry(Monk, Trickster)
 PromoListEntry(Monk_F, Trickster_F)
+PromoListEntry(Fighter, Warrior)
+PromoListEntry(Fighter_F, Warrior_F)
+PromoListEntry(SwordCav, Dragoon)
 PromoListEnd
 
 ALIGN 4
@@ -79,6 +82,7 @@ PromoListEntry(Mage, DarkKnight)
 PromoListEntry(Mage_F, DarkKnight)
 PromoListEntry(Mercenary, Ranger)
 PromoListEntry(Mercenary_F, Ranger_F)
+PromoListEntry(Gunner, Dragoon)
 PromoListEnd
 
 ALIGN 4
@@ -106,4 +110,5 @@ PromoListEntry(Archer, Bombardier)
 PromoListEntry(Archer_F, Bombardier)
 PromoListEntry(Shaman, MaligKnight)
 PromoListEntry(Shaman_F, MaligKnight)
+PromoListEntry(Troubadour, Seraph)
 PromoListEnd

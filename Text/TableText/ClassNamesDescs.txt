@@ -290,3 +290,14 @@ Malig Knight[X]
 ## MaligKnightDesc
 Weapons: Axes, Tomes[N]
 Traits: Flight, Aid+[X]
+
+## WarriorDesc
+Weapons: Axes, Bows[N]
+Traits: Steal, Locktouch[X]
+
+## DragoonName
+Dragoon[X]
+
+## DragoonDesc
+Weapons: Swords, Guns[N]
+Traits: Canto, Aid+[X]

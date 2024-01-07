@@ -112,7 +112,7 @@
 #define MarshallBowAnim 0x10e
 #define MarshallUnarmedAnim 0x10f
 
-#define DarkKnightLanceAnim 0x110
+#define DarkKnightLanceAnim 0x110 //put this in later
 #define DarkKnightMagicAnim 0x111
 
 #define CavSwordAnim 0x112
@@ -131,3 +131,17 @@
 #define SeraphSwordAnim 0x11c
 #define SeraphStaffAnim 0x11d
 #define SeraphUnarmedAnim 0x11e
+
+#define WarriorAxeAnim 0x11f
+#define WarriorHandaxeAnim 0x120
+#define WarriorBowAnim 0x121
+#define WarriorUnarmedAnim 0x122
+
+#define Warrior_FAxeAnim 0x123
+#define Warrior_FHandaxeAnim 0x124
+#define Warrior_FBowAnim 0x125
+#define Warrior_FUnarmedAnim 0x126
+
+#define BombardierBowAnim 0x127
+#define BombardierLanceAnim 0x128
+#define BombardierUnarmedAnim 0x129

@@ -235,3 +235,26 @@ HandAxeAnim(MaligKnightHandaxeAnim)
 TomeAnim(MaligKnightMagicAnim)
 UnarmedAnim(MaligKnightMagicAnim)
 EndAnim
+
+ALIGN 4
+WarriorAnims:
+AxeAnim(WarriorAxeAnim)
+HandAxeAnim(WarriorHandaxeAnim)
+BowAnim(WarriorBowAnim)
+UnarmedAnim(WarriorUnarmedAnim)
+EndAnim
+
+ALIGN 4
+Warrior_FAnims:
+AxeAnim(Warrior_FAxeAnim)
+HandAxeAnim(Warrior_FHandaxeAnim)
+BowAnim(Warrior_FBowAnim)
+UnarmedAnim(Warrior_FUnarmedAnim)
+EndAnim
+
+ALIGN 4
+BombardierAnims:
+BowAnim(BombardierBowAnim)
+LanceAnim(BombardierLanceAnim)
+UnarmedAnim(BombardierUnarmedAnim)
+EndAnim

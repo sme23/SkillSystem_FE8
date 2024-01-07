@@ -177,3 +177,23 @@
     #include "Animations/Seraph/Sword Installer.event"
     #include "Animations/Seraph/Unarmed Installer.event"
 }
+
+{
+    #include "Animations/Warrior/Axe Installer.event"
+    #include "Animations/Warrior/Handaxe Installer.event"
+    #include "Animations/Warrior/Bow Installer.event"
+    #include "Animations/Warrior/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Warrior_F/Axe Installer.event"
+    #include "Animations/Warrior_F/Handaxe Installer.event"
+    #include "Animations/Warrior_F/Bow Installer.event"
+    #include "Animations/Warrior_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Bombardier/Bow Installer.event"
+    #include "Animations/Bombardier/Lance Installer.event"
+    #include "Animations/Bombardier/Unarmed Installer.event"
+}

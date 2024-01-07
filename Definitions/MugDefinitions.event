@@ -106,6 +106,10 @@
 #define Sage_FClassCard 0x121
 #define MaligKnightClassCard 0x122
 #define BombClassCard 0x123
+#define Warrior_FClassCard 0x124
+#define Sniper_FClassCard 0x125
+#define BombardierClassCard 0x126
+#define DragoonClassCard 0x127
 
 // temporary
 #define AdventurerClassCard 0x79

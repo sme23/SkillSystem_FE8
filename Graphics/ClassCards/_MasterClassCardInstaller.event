@@ -289,3 +289,35 @@ ALIGN 4
 MaligKnightClassCardPal:
 #incbin "Dmp/Malig Knight (M) Magic {Pikmin}.png_pal.dmp"
 setCardEntry(MaligKnightClassCard, MaligKnightClassCardData, MaligKnightClassCardPal)
+
+ALIGN 4
+Warrior_FClassCardData:
+#incbin "Dmp/Warrior (F) Axe {Jj09}.dmp"
+ALIGN 4
+Warrior_FClassCardPal:
+#incbin "Dmp/Warrior (F) Axe {Jj09}.png_pal.dmp"
+setCardEntry(Warrior_FClassCard, Warrior_FClassCardData, Warrior_FClassCardPal)
+
+ALIGN 4
+Sniper_FClassCardData:
+#incbin "Dmp/Sniper (F) Bow {L95}.dmp"
+ALIGN 4
+Sniper_FClassCardPal:
+#incbin "Dmp/Sniper (F) Bow {L95}.png_pal.dmp"
+setCardEntry(Sniper_FClassCard, Sniper_FClassCardData, Sniper_FClassCardPal)
+
+ALIGN 4
+BombardierClassCardData:
+#incbin "Dmp/Arbalest (F) Bow {EldritchAbomination, N426, Jj09}.dmp"
+ALIGN 4
+BombardierClassCardPal:
+#incbin "Dmp/Arbalest (F) Bow {EldritchAbomination, N426, Jj09}.png_pal.dmp"
+setCardEntry(BombardierClassCard, BombardierClassCardData, BombardierClassCardPal)
+
+ALIGN 4
+DragoonClassCardData:
+#incbin "Dmp/Forest Knight (U) {Leo_Link, DerTheVaporeon}.dmp"
+ALIGN 4
+DragoonClassCardPal:
+#incbin "Dmp/Forest Knight (U) {Leo_Link, DerTheVaporeon}.png_pal.dmp"
+setCardEntry(DragoonClassCard, DragoonClassCardData, DragoonClassCardPal)

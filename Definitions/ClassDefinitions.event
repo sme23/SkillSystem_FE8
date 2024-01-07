@@ -47,6 +47,7 @@
 #define Halberdier 0x9d
 #define Adventurer 0x9e
 #define Adventurer_F 0x9f
+#define Warrior_F 0xa1
 
 //ARMOR
 
@@ -72,6 +73,7 @@
 #define WolfKnight 0x95
 #define Wolfrider WolfKnight
 #define DarkKnight MageKnight
+#define Dragoon 0xa2
 
 //FLIER
 #define PegasusRider 0x48
@@ -171,3 +173,5 @@
 #define Adventurer_FMapSprite 0x91
 #define DarkKnightMapSprite 0x92
 #define MaligKnightMapSprite 0x93
+#define Warrior_FMapSprite 0x94
+#define DragoonMapSprite 0x95

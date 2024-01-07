@@ -497,3 +497,26 @@ MaligKnightSMS:
 ALIGN 4
 MaligKnightMMS:
 #incbin "Dmp/Malig Knight (M) Axe {Pikmin}-walk.dmp"
+
+StandingMapSprite(Warrior_FMapSprite,MapSprite16x32,Warrior_FSMS)
+MovingMapSprite(Warrior_F, $1C3D7C, Warrior_FMMS)
+
+ALIGN 4
+Warrior_FSMS:
+#incbin "Dmp/Warrior (F) Axe {Pushwall, FEGirls}-stand.dmp"
+
+ALIGN 4
+Warrior_FMMS:
+#incbin "Dmp/Warrior (F) Axe {Pushwall, FEGirls}-walk.dmp"
+
+StandingMapSprite(DragoonMapSprite,MapSprite16x32,DragoonSMS)
+MovingMapSprite(Dragoon, $1C3D7C, DragoonMMS)
+
+ALIGN 4
+DragoonSMS:
+#incbin "Dmp/Dragoon-stand.dmp"
+
+ALIGN 4
+DragoonMMS:
+#incbin "Dmp/Dragoon-walk.dmp"
+
