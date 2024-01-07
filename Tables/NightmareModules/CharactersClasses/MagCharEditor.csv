@@ -3,14 +3,14 @@ None,0,0
 0x01 Lua,0,20
 0x02 Pilar,1,25
 0x03 Desiderio,0,15
-0x04 Razvan,5,70
-0x05 Carmen,0,60
+0x04 Razvan,4,70
+0x05 Carmen,0,55
 0x06 Ximo,0,25
 0x07 Estelle,1,40
 0x08 Hermenegildo,7,65
 0x09 MrYodsen,3,30
 0x0A Durgham,(-3),15
-0x0B Indio,1,70
+0x0B Indio,2,70
 0x0C Leandra,0,14
 0x0D Jaime,2,35
 0x0E Leonor,4,50
@@ -20,7 +20,7 @@ None,0,0
 0x12 Juan,(-1),15
 0x13 Matteo,(-1),15
 0x14 Suzanne,1,25
-0x15 Orlando,(-1),30
+0x15 Orlando,1,30
 0x16 Rahel,0,20
 0x17 Saleh,11,30
 0x18 Ewan,2,45
@@ -66,8 +66,8 @@ None,0,0
 0x40 Lyon (Ch 17),13,50
 0x41 Morva (Ch 20),6,85
 0x42 Orson (Ch 5x),3,10
-0x43 Triana,(-1),50
-0x44 Medwyn,3,40
+0x43 Triana,0,50
+0x44 Medwyn,0,35
 0x45 Bartz,2,25
 0x46 Khazhak,0,5
 0x47 Blackheart,0,5

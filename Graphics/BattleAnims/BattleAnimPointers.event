@@ -150,3 +150,88 @@ HalberdierAnims:
 LanceAnim(HalberdierLanceAnim)
 UnarmedAnim(HalberdierUnarmedAnim)
 EndAnim
+
+ALIGN 4
+AdventurerAnims:
+BowAnim(AdventurerBowAnim)
+StaffAnim(AdventurerStaffAnim)
+UnarmedAnim(AdventurerUnarmedAnim)
+EndAnim
+
+ALIGN 4
+Adventurer_FAnims:
+BowAnim(Adventurer_FBowAnim)
+StaffAnim(Adventurer_FStaffAnim)
+UnarmedAnim(Adventurer_FUnarmedAnim)
+EndAnim
+
+ALIGN 4
+MasterNinjaAnims:
+KnifeAnim(MasterNinjaKnifeAnim)
+SwordAnim(MasterNinjaSwordAnim)
+UnarmedAnim(MasterNinjaUnarmedAnim)
+EndAnim
+
+ALIGN 4
+RuneshieldAnims:
+LanceAnim(RuneshieldLanceAnim)
+SwordAnim(RuneshieldSwordAnim)
+TomeAnim(RuneshieldMagicAnim)
+UnarmedAnim(RuneshieldMagicAnim)
+EndAnim
+
+ALIGN 4
+MarshallAnims:
+AxeAnim(MarshallAxeAnim)
+HandAxeAnim(MarshallHandaxeAnim)
+LanceAnim(MarshallLanceAnim)
+BowAnim(MarshallBowAnim)
+UnarmedAnim(MarshallUnarmedAnim)
+EndAnim
+
+ALIGN 4
+DarkKnightAnims:
+TomeAnim(DarkKnightMagicAnim)
+UnarmedAnim(DarkKnightMagicAnim)
+EndAnim
+
+ALIGN 4
+SwordCavAnims:
+SwordAnim(CavSwordAnim)
+UnarmedAnim(CavUnarmedAnim)
+EndAnim
+
+ALIGN 4
+LanceCavAnims:
+LanceAnim(CavLanceAnim)
+UnarmedAnim(CavUnarmedAnim)
+EndAnim
+
+ALIGN 4
+AxeCavAnims:
+AxeAnim(CavAxeAnim)
+HandAxeAnim(CavHandaxeAnim)
+UnarmedAnim(CavUnarmedAnim)
+EndAnim
+
+ALIGN 4
+BowCavAnims:
+BowAnim(BowCavBowAnim)
+UnarmedAnim(BowCavUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SeraphAnims:
+SwordAnim(SeraphSwordAnim)
+StaffAnim(SeraphStaffAnim)
+UnarmedAnim(SeraphUnarmedAnim)
+EndAnim
+
+
+ALIGN 4
+MaligKnightAnims:
+AxeAnim(MaligKnightAxeAnim)
+HandAxeAnim(MaligKnightHandaxeAnim)
+TomeAnim(MaligKnightMagicAnim)
+UnarmedAnim(MaligKnightMagicAnim)
+EndAnim

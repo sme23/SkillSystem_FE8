@@ -177,3 +177,107 @@ ALIGN 4
 HalberdierClassCardPal:
 #incbin "Dmp/Halberdier (M) Lance {TBA}.png_pal.dmp"
 setCardEntry(HalberdierClassCard, HalberdierClassCardData, HalberdierClassCardPal)
+
+ALIGN 4
+MasterNinjaClassCardData:
+#incbin "Dmp/Master Ninja Class Card.dmp"
+ALIGN 4
+MasterNinjaClassCardPal:
+#incbin "Dmp/Master Ninja Class Card.png_pal.dmp"
+setCardEntry(MasterNinjaClassCard, MasterNinjaClassCardData, MasterNinjaClassCardPal)
+
+ALIGN 4
+RuneshieldClassCardData:
+#incbin "Dmp/Baron (U) Magic {SamirPlayz}.dmp"
+ALIGN 4
+RuneshieldClassCardPal:
+#incbin "Dmp/Baron (U) Magic {SamirPlayz}.png_pal.dmp"
+setCardEntry(RuneshieldClassCard, RuneshieldClassCardData, RuneshieldClassCardPal)
+
+ALIGN 4
+MarshallClassCardData:
+#incbin "Dmp/General Shield (U) Cape Axe {Topazlight,SamirPlayz, Flasuban}.dmp"
+ALIGN 4
+MarshallClassCardPal:
+#incbin "Dmp/General Shield (U) Cape Axe {Topazlight,SamirPlayz, Flasuban}.png_pal.dmp"
+setCardEntry(MarshallClassCard, MarshallClassCardData, MarshallClassCardPal)
+
+ALIGN 4
+DarkKnightClassCardData:
+#incbin "Dmp/Dark Knight (M) Magic {Pikmin, Jj09} 1.dmp"
+ALIGN 4
+DarkKnightClassCardPal:
+#incbin "Dmp/Dark Knight (M) Magic {Pikmin, Jj09} 1.png_pal.dmp"
+setCardEntry(DarkKnightClassCard, DarkKnightClassCardData, DarkKnightClassCardPal)
+
+ALIGN 4
+LanceCavClassCardData:
+#incbin "Dmp/Cavalier (M) Helmless Lance {RobertFPY}.dmp"
+ALIGN 4
+LanceCavClassCardPal:
+#incbin "Dmp/Cavalier (M) Helmless Lance {RobertFPY}.png_pal.dmp"
+setCardEntry(LanceCavClassCard, LanceCavClassCardData, LanceCavClassCardPal)
+
+ALIGN 4
+SwordCavClassCardData:
+#incbin "Dmp/Cavalier (M) Helmless Sword {RobertFPY}.dmp"
+ALIGN 4
+SwordCavClassCardPal:
+#incbin "Dmp/Cavalier (M) Helmless Sword {RobertFPY}.png_pal.dmp"
+setCardEntry(SwordCavClassCard, SwordCavClassCardData, SwordCavClassCardPal)
+
+ALIGN 4
+AxeCavClassCardData:
+#incbin "Dmp/Cavalier (M) Helmless Axe {RobertFPY}.dmp"
+ALIGN 4
+AxeCavClassCardPal:
+#incbin "Dmp/Cavalier (M) Helmless Axe {RobertFPY}.png_pal.dmp"
+setCardEntry(AxeCavClassCard, AxeCavClassCardData, AxeCavClassCardPal)
+
+ALIGN 4
+BowCavClassCardData:
+#incbin "Dmp/Bow Knight (F) {flasuban, RobertFPY}.dmp"
+ALIGN 4
+BowCavClassCardPal:
+#incbin "Dmp/Bow Knight (F) {flasuban, RobertFPY}.png_pal.dmp"
+setCardEntry(BowCavClassCard, BowCavClassCardData, BowCavClassCardPal)
+
+ALIGN 4
+Ranger_FClassCardData:
+#incbin "Dmp/Ranger (F) Bow {RobertFPY}.dmp"
+ALIGN 4
+Ranger_FClassCardPal:
+#incbin "Dmp/Ranger (F) Bow {RobertFPY}.png_pal.dmp"
+setCardEntry(Ranger_FClassCard, Ranger_FClassCardData, Ranger_FClassCardPal)
+
+ALIGN 4
+Archer_FClassCardData:
+#incbin "Dmp/Archer (F) Bow {L95}.dmp"
+ALIGN 4
+Archer_FClassCardPal:
+#incbin "Dmp/Archer (F) Bow {L95}.png_pal.dmp"
+setCardEntry(Archer_FClassCard, Archer_FClassCardData, Archer_FClassCardPal)
+
+ALIGN 4
+Mage_FClassCardData:
+#incbin "Dmp/Mage (F) Thunder (Leif).dmp"
+ALIGN 4
+Mage_FClassCardPal:
+#incbin "Dmp/Mage (F) Thunder (Leif).png_pal.dmp"
+setCardEntry(Mage_FClassCard, Mage_FClassCardData, Mage_FClassCardPal)
+
+ALIGN 4
+Sage_FClassCardData:
+#incbin "Dmp/Sage (F) Magic {L95}.dmp"
+ALIGN 4
+Sage_FClassCardPal:
+#incbin "Dmp/Sage (F) Magic {L95}.png_pal.dmp"
+setCardEntry(Sage_FClassCard, Sage_FClassCardData, Sage_FClassCardPal)
+
+ALIGN 4
+MaligKnightClassCardData:
+#incbin "Dmp/Malig Knight (M) Magic {Pikmin}.dmp"
+ALIGN 4
+MaligKnightClassCardPal:
+#incbin "Dmp/Malig Knight (M) Magic {Pikmin}.png_pal.dmp"
+setCardEntry(MaligKnightClassCard, MaligKnightClassCardData, MaligKnightClassCardPal)

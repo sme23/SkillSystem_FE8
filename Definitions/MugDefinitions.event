@@ -92,3 +92,20 @@
 #define WarMonkClassCard 0x113
 #define WarMonk_FClassCard 0x114
 #define HalberdierClassCard 0x115
+#define MasterNinjaClassCard 0x116
+#define RuneshieldClassCard 0x117
+#define MarshallClassCard 0x118
+#define DarkKnightClassCard 0x119
+#define LanceCavClassCard 0x11a
+#define SwordCavClassCard 0x11b
+#define AxeCavClassCard 0x11c
+#define BowCavClassCard 0x11d
+#define Ranger_FClassCard 0x11e
+#define Archer_FClassCard 0x11f
+#define Mage_FClassCard 0x120
+#define Sage_FClassCard 0x121
+#define MaligKnightClassCard 0x122
+
+// temporary
+#define AdventurerClassCard 0x79
+#define Adventurer_FClassCard 0x79 //sniper class card for now
