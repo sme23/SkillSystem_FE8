@@ -105,6 +105,7 @@
 #define Mage_FClassCard 0x120
 #define Sage_FClassCard 0x121
 #define MaligKnightClassCard 0x122
+#define BombClassCard 0x123
 
 // temporary
 #define AdventurerClassCard 0x79

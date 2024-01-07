@@ -225,10 +225,26 @@ But for now, we need to fight.[A][X]
 
 // Mid battle hint at the phantoms coming?? Cursor flash on the stairs
 
-## A3_MidBattle_PhantomWarn
+## A3_MidBattle_PhantomWarn_AllUnits
+[FarRight][LoadBiko]
+[Right][LoadOndeh]
+[MidLeft][LoadLua]
+[R]
+[Beat]What was that sound[N]
+coming from the ruins?[AN]
+[FR]
+Oh no, I don't think San Torino[N]
+likes us fighting out here[Beat][AN]
+[ML]
+Then we'd better keep moving then.[AN]
+[CloseEyes]Last thing we need is a damned specter[N]
+appearing and haunting us all.[AN][X]
+
+## A3_MidBattle_PhantomWarn_LuaSolo
 [MidLeft][LoadLua]
 I hear some rumbling[Beat][N]
 Let's keep moving.[A][X]
+
 
 // San Torino phantom appears before game over on turn 12
 

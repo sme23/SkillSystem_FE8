@@ -280,6 +280,34 @@ LoadUnit(7,25)
 LoadUnit(9,25)
 UNIT
 
+CutsceneNPCS_1:
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [17,11] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [18,11] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [19,11] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [17,12] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [19,12] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [17,13] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [18,13] 0 0 0 0 [0x0] NoAI
+UNIT Bomb BombClass 0 Level(1, Enemy, False) [19,13] 0 0 0 0 [0x0] NoAI
+// Bosses
+UNIT Santiago Gunner 0 Level(8, Enemy, True) [18,14] 0 0 0 0 [Culverin, Blunderbuss, GlassShield] BossAI
+UNIT Slicer Mercenary 0 Level(6, Enemy, True) [17,15] 0 0 0 0 [SilverSword] AttackInRangeAI
+UNIT Dicer Thief 0 Level(6, Enemy, True) [19,15] 0 0 0 0 [SilverDagger] AttackInRangeAI
+UNIT
+
+CutsceneNPCS_2: //Lua and new units + rochefort showing up
+UNIT Lua Captain 0 Level(1, Ally, False) [7,25] 0 0 0 0 [0, 0, 0, 0] NoAI 
+UNIT Rochefort 0 0 Level(1,NPC,False) [5,25] 0x0 0x0 0 0 [SteelMusket] NoAI
+UNIT Matteo Mercenary 0 Level(4,NPC,True) [6,25] 0 0 0 0 [SteelSword, IronBlade, ShoveGlove, Vulnerary] NoAI
+UNIT Suzanne Gunner 0 Level(4,NPC,True) [8,25] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
+UNIT
+
+CutsceneNPCS_3: //Slicer and Dicer, who show up to walk down towards Lua.
+UNIT Slicer Mercenary 0 Level(6, Enemy, True) [17,17] 0 0 0 0 [SilverSword] AttackInRangeAI
+UNIT Dicer Thief 0 Level(6, Enemy, True) [8,13] 0 0 0 0 [SilverDagger] AttackInRangeAI
+UNIT
+
+
 NewUnits:
 UNIT Matteo Mercenary 0 Level(4,Ally,True) [6,23] 0 0 0 0 [SteelSword, IronBlade, ShoveGlove, Vulnerary] NoAI
 UNIT Suzanne Gunner 0 Level(4,Ally,True) [9,23] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
@@ -374,14 +402,61 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-WEATHER 7
-SetBackground(0x28)
+CAMERA_CENTERED [17,13]
+LoadCutsceneUnits(CutsceneNPCS_1)
+FADU 13
 MUSC SwabbieTalkID
+STAL 30
+FlashCursor(Santiago, 60)
+SetBackground(0x28)
 Text(ChA6Pre1)
-SetBackground(0x34)
-MUSC AvastMeHeartiesID
+ClearBackground
+
+CURSOR_FLASHING [17,11]
+CURSOR_FLASHING [18,11]
+CURSOR_FLASHING [19,11]
+CURSOR_FLASHING [17,12]
+CURSOR_FLASHING [19,12]
+CURSOR_FLASHING [17,13]
+CURSOR_FLASHING [18,13]
+CURSOR_FLASHING [19,13]
+STAL 60
+REMOVE_CURSORS 
+SetBackground(0x28)
 Text(ChA6Pre2)
+ClearBackground
+
+CAMERA_CENTERED [7,23]
+CLEN 0
+CLEE 0
+MUSC AvastMeHeartiesID
+LoadCutsceneUnits(CutsceneNPCS_2)
+MOVE 10 Lua [7,22]
+MOVE 10 Suzanne [8,23]
+MOVE 10 Matteo [6, 23]
+MOVE 8 Rochefort [7,24]
+ENUN
+FlashCursor(Lua, 40)
+SetBackground(0x34)
+Text(ChA6Pre3)
+ClearBackground
+
+LoadCutsceneUnits(CutsceneNPCS_3)
+MOVE 15 Slicer [10, 23]
+MOVE 15 Dicer [7,20]
+ENUN
+CURSOR [7,20]
+CURSOR [10,23]
+STAL 60
+REMOVE_CURSORS
+SetBackground(0x34)
+Text(ChA6Pre4)
 FADI 15
+
+WEATHER 7
+CLEN 0
+CLEE 0
+CLEA 0
 LoadPlayerUnits(NewUnits)
 LoadEnemies(EnemyUnitsBosses)
 LoadEnemies(EnemyUnits1)
