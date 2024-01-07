@@ -39,6 +39,14 @@
 //#define Sniper 0x1b
 //#define Sniper_F 0x1c
 #define Trickster 0x92
+#define Trickster_F 0x9a
+#define Slayer 0x97
+#define Slayer_F 0x98
+#define WarMonk 0x9b
+#define WarMonk_F 0x9c
+#define Halberdier 0x9d
+#define Adventurer 0x9e
+#define Adventurer_F 0x9f
 
 //ARMOR
 
@@ -48,6 +56,7 @@
 
 //T2
 #define Dreadnought 0x8E
+#define Marshall Dreadnought
 #define Runeshield 0x94
 #define Baron Runeshield
 
@@ -62,6 +71,7 @@
 //T2
 #define WolfKnight 0x95
 #define Wolfrider WolfKnight
+#define DarkKnight MageKnight
 
 //FLIER
 #define PegasusRider 0x48
@@ -81,6 +91,7 @@
 //#define Shaman_F 0x2e
 
 //#define Monk
+#define Monk_F 0x99
 
 //#define Priest 0x45
 //#define Cleric 0x4a
@@ -110,6 +121,7 @@
 
 //MAGE/FLIER
 #define Seraph 0x8F
+#define MaligKnight 0xa0
 
 //SPECIAL
 #define BombClass 0x91
@@ -136,6 +148,7 @@
 #define LogMapSprite 0x7C
 #define MasterNinjaMapSprite 0x7D
 #define DreadnoughtMapSprite 0x7E
+#define MarshallMapSprite DreadnoughtMapSprite
 #define SeraphMapSprite 0x7F
 #define BombardierMapSprite 0x80
 #define BombMapSprite 0x81
@@ -146,3 +159,15 @@
 #define WolfKnightMapSprite 0x85
 #define WardenMapSprite 0x86
 #define Fighter_FMapSprite 0x87
+#define SlayerMapSprite 0x88
+#define Slayer_FMapSprite 0x89
+#define Monk_FMapSprite 0x8A
+#define Mercenary_FMapSprite 0x8B
+#define Hero_FMapSprite 0x8C
+#define WarMonkMapSprite 0x8D
+#define WarMonk_FMapSprite 0x8E
+#define HalberdierMapSprite 0x8F
+#define AdventurerMapSprite 0x90
+#define Adventurer_FMapSprite 0x91
+#define DarkKnightMapSprite 0x92
+#define MaligKnightMapSprite 0x93

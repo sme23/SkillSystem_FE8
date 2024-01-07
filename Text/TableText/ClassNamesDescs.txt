@@ -169,7 +169,7 @@ Weapons: Knife, Sword[N]
 Traits: Steal, Locktouch[X]
 
 ## DreadnoughtName
-Dreadnought[X]
+Marshall[X]
 
 ## DreadnoughtDesc
 Weapons: Axe, Lance, Bow[N]
@@ -189,6 +189,9 @@ Traits: Flight, Aid+[X]
 ## SniperDesc
 Weapons: Bow[N]
 Traits: Steal, Locktouch[X]
+
+## DarkKnightName
+Dark Knight[X]
 
 ## MageKnightDesc
 Weapons: Tome, Lance[N]
@@ -236,3 +239,54 @@ Traits: Steal, Locktouch, Canto[X]
 ## ClericDesc
 Weapons: Staves[N]
 Traits: Steal, Locktouch[X]
+
+## HeroDesc
+Weapons: Swords, Axes[N]
+Traits: Steal, Locktouch[X]
+
+## SwordmasterDesc
+Weapons: Swords[N]
+Traits: Steal, Locktouch[X]
+
+## SlayerName
+Slayer[X]
+
+## SlayerDesc
+Weapons: Swords, Tomes[N]
+Traits: Steal, Locktouch[X]
+
+## BerserkerDesc
+Weapons: Axes[N]
+Traits: Steal, Locktouch[X]
+
+## WarMonkName
+War Monk[X]
+
+## WarMonkDesc
+Weapons: Axes, Staves[N]
+Traits: Steal, Locktouch[X]
+
+## HalberdierName
+Halberdier[X]
+
+## HalberdierDesc
+Weapons: Lances[N]
+Traits: Steal, Locktouch[X]
+
+## AdventurerName
+Adventurer[X]
+
+## AdventurerDesc
+Weapons: Bows, Staves[N]
+Traits: Steal, Locktouch[X]
+
+## RangerDesc
+Weapons: Bows, Swords[N]
+Traits: Canto, Aid+[X]
+
+## MaligKnightName
+Malig Knight[X]
+
+## MaligKnightDesc
+Weapons: Axes, Tomes[N]
+Traits: Flight, Aid+[X]
