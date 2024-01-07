@@ -638,3 +638,11 @@ Peddler[X]
 Purveyor[N]
 A wandering trader of exotic proportions.[N]
 May have a few powerful connections...[X]
+
+## FataName
+Fata[X]
+
+## FataDesc
+Intern[N]
+Not paid enough for her responsibilities,[N]
+which continue to grow by the second.[X]

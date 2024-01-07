@@ -8,7 +8,7 @@ pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
 	POIN prDebuffMov 
 	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prEquipmentMov prLuaHubMovement
-	POIN WellRested
+	POIN WellRested SwiftBoost
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
 	#endif
