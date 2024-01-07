@@ -6,19 +6,34 @@ prEventMenuCommandEffect:
 
 ALIGN 4 
 prCallEventMenu:
-    SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
-    POIN pMenuDefinition
+	SHORT $B510 $1C04 $4B11 $469E
+	BYTE $0 $F8
+	SHORT $4A11 $7850 $2101 $4308 $2102 $4308 $2104 $4308 $2108 $4308 $2110 $4308 $7050 $2000 $4B0B $469E
+	BYTE $0 $F8
+	SHORT $4B0A $469E
+	BYTE $0 $F8
+	SHORT $4B0A $469E
+	BYTE $0 $F8
+	SHORT $4809 $6800 $1C21 $4B09 $469E
+	BYTE $0 $F8
+	SHORT $BC10 $BC01 $4700
+	BYTE $0 $0 $84 $E8 $4 $8 $80 $30 $0 $3 $38 $3D $0 $8 $A8 $43 $0 $8 $68 $EB $4 $8 $C0 $4 $0 $3 $C8 $EB $4 $8
 
+#define CallEventMenu(menuDef) "SVAL s2 menuDef|IsPointer; ASMC prCallEventMenu|1"
+
+//used in Hub A
 ALIGN 4
-pMenuDefinition:
+pHubMenuDefinition:
     BYTE 6 8 18 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
     WORD 1                  // style (change it if u want)
-    POIN pCommandDefinition // Command Definitions
+    POIN pHubCommandDefinition // Command Definitions
     WORD 0 0 0 0 0 0        // No routines to handle B press/R press/construction/etc
 
 ALIGN 4
-pCommandDefinition:
+pHubCommandDefinition:
     EventMenuCommand(SplitMenuTonic)
     EventMenuCommand(SplitMenuShield)
     EventMenuCommand(SplitMenuMentis)
 EventMenuCommandEnd
+
+

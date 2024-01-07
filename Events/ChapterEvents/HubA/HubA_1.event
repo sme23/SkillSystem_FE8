@@ -169,6 +169,24 @@ YurenaGaming:
 UNIT Yurena Champion Sanz Level(20, Enemy, False) [14, 8] 0 0 0 0 [BraveLance, Saunion] ChargeAI
 UNIT
 
+SanzUndertaleEndCutscene:
+UNIT Sanz Sage Sanz Level(20, Enemy, False) [18, 9] 0 0 0 0 [0] NoAI
+UNIT Orlando 0 Orlando Level(13, Enemy, False) [18, 10] 0 0 0 0 [0] BossAI
+UNIT Yurena Champion Sanz Level(20, Enemy, False) [19, 17] 0 0 0 0 [BraveLance, Saunion] BossAI
+
+//generics that are running around at the beginning of this cutscene
+
+UNIT Sentinel Hero Sanz Level(4, Enemy, True) [14, 12] 0 0 0 0 [IronBow] ChargeAI 
+UNIT Sentinel Sniper Sanz Level(4, Enemy, True) [11, 7] 0 0 0 0 [IronBow] ChargeAI 
+UNIT Swordmaster Swordmaster Sanz Level(4, Enemy, True) [11, 13] 0 0 0 0 [IronBow] ChargeAI 
+UNIT GreagorPeddler General Sanz Level(4, Enemy, True) [21, 17] 0 0 0 0 [Javelin] BossAI
+UNIT GreagorVillager General Sanz Level(4, Enemy, True) [23, 17] 0 0 0 0 [Javelin] BossAI
+UNIT
+
+AlonsoHimselfGroup:
+UNIT GreagorSailor Trickster 0 Level(20, Enemy, False) [15, 17] 0 0 0 0 [0] NoAI //alonso, modify here once adventurer is complete
+UNIT 
+
 Traps1:
 ENDTRAP
 ALIGN 4
@@ -407,6 +425,7 @@ NoFade
 ENDA
 
 EndingScene:
+FADI 30
 MUSC 0x7FFF
 SetBackground(Ship)
 CHECK_ALIVE Indio
@@ -419,8 +438,46 @@ LABEL 9
 CHECK_ALIVE Leandra
 BEQ 10 0x0 0xC
 Text(ChA1EndingDialogueLeandraRecruited)
+
 LABEL 10
+EVBIT_F 2
+FADI 30
+CLEE 0 //clear all units for upcoming cutscene
+CLEN 0
+CLEA 0
+
+CAMERA_CENTERED [16,11]
+Music(SwabbieTalkID)
+LOAD1 1 SanzUndertaleEndCutscene
+ClearBackground
+FADU 255
+STAL 30
+MOVE 6 GreagorPeddler [21, 5]
+MOVE 6 GreagorVillager [23, 5]
+ENUN
+FlashCursor(Sanz, 60)
 Text(ChA1EndingDialogue2)
+
+MOVE 10 Orlando [17,15]
+ENUN
+MOVE 12 Orlando [5,15]
+MOVE 8 Yurena [17,10]
+ENUN
+STAL 10
+Music(0x7FFF)
+STAL 30
+FlashCursor(Yurena, 60)
+Text(ChA1EndingDialogue3)
+
+MOVE 24 Yurena [17,17]
+ENUN
+STAL 30
+LOAD1 1 AlonsoHimselfGroup
+Music(ABlackheartsPrideID)
+MOVE 8 GreagorSailor [18, 10]
+ENUN
+FlashCursor(Sanz, 50)
+Text(ChA1EndingDialogue4)
 GoToHubChapter(HubA)
 NoFade
 ENDA
