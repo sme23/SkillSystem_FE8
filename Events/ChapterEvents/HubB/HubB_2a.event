@@ -1,3 +1,9 @@
+// To anyone trying to edit this event later, be very careful if you're trying to add a prep screen!
+// Because Razvan/Pilar/Desiderio are turned into green units,
+// saving in preps and Restarting Chapter will erase their unit data.
+// You have been warned!
+// - RW
+
 EventPointerTable(HubB_2aEventsID, PointerList)
 
 PointerList:
@@ -69,15 +75,15 @@ UNIT Magdalena 0 0 Level(17,NPC,False) [14,15] 0 0 0 0 [Thunder,Mend] NoAI
 UNIT
 
 OutroAvocado:
-UNIT Avocado 0 0 Level(11,NPC,False) [16,14] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT Avocado 0 0 Level(12,NPC,False) [16,14] 0 0 0 0 [TealGem] NoAI
 UNIT
 
 OutroHusniye:
-UNIT Husniye 0 0 Level(10,NPC,False) [16,14] 0 0 0 0 [IronKnife,IronDagger,Vulnerary] NoAI
+UNIT Husniye 0 0 Level(10,NPC,False) [16,14] 0 0 0 0 [TealGem] NoAI
 UNIT
 
 OutroCruz:
-UNIT CruzFake 0 0 Level(11,NPC,False) [16,14] 0 0 0 0 [Sagittae] NoAI
+UNIT CruzFake 0 0 Level(11,NPC,False) [16,14] 0 0 0 0 [TealGem] NoAI
 UNIT
 
 MainCastTrio:
@@ -87,10 +93,10 @@ UNIT Razvan 0 0 Level(1,Ally,True) [16,16] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 VillagerGroup:
-UNIT Magdalena 0 0 Level(17,NPC,False) [5,10] 0 0 0 0 [Thunder,Mend] NoAI
-UNIT Avocado 0 0 Level(11,NPC,False) [4,19] 0 0 0 0 [SteelLance,Javelin] NoAI
-UNIT Husniye 0 0 Level(10,NPC,False) [14,12] 0 0 0 0 [IronKnife,IronDagger,Vulnerary] NoAI
-UNIT CruzFake 0 0 Level(11,NPC,False) [15,22] 0 0 0 0 [Sagittae] NoAI
+UNIT Magdalena 0 0 Level(17,NPC,False) [5,10] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
+UNIT Avocado 0 0 Level(12,NPC,False) [4,19] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT Husniye 0 0 Level(10,NPC,False) [14,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
+UNIT CruzFake 0 0 Level(11,NPC,False) [15,22] 0 0 0 0 [Sagittae,Elfire,Vulnerary] NoAI
 
 UNIT RecelosoPriest 0 0 Level(1,NPC,False) [11,5] 0 0 0 0 [Heal,PureWater] NoAI
 UNIT RecelosoCorpse 0 0 Level(1,NPC,False) [16,3] 0 0 0 0 [Mend,RedGem] NoAI

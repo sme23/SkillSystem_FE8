@@ -22,3 +22,4 @@
 #define WellAndTrulyLostID 0x1A
 
 #define WindAmbienceID 0x47
+#define WindAmbianceID 0x47

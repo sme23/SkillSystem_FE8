@@ -16,6 +16,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0, NewUnitsBlue, 1)
+TurnEventPlayer(0, MakeBossCharge, 9)
 END_MAIN
 
 CharacterBasedEvents:
@@ -64,17 +65,17 @@ UNIT
 // group 2: top hallway guards
 
 B2Yadney:
-UNIT Yadney GriffinRider Cruz Level(15,Enemy,False) [16,12] 0 0 0 0 [KillerLance,ShortSpear] GroupOneAI
+UNIT Yadney GriffinRider Cruz Level(15,Enemy,False) [16,12] 0 0 0 0 [ShortSpear,KillerLance] GroupOneAI
 UNIT
 
 B2Baddies:
-UNIT Cruz Shaman CruzFake Level(11,Enemy,False) [5,9] 0 0 0 0 [Sagittae, Eclipse] NeverMoveAI
+UNIT Cruz Shaman CruzFake Level(11,Enemy,False) [5,9] 0 0 0 0 [Sagittae, Elfire, Vulnerary] NeverMoveAI
 UNIT Rebel Thief 0 Level(10,Enemy,True) [9,17] 0 0 0 0 [SteelKnife, DoorKey, DoorKey, DoorKey] ThiefAI
 UNIT Rebel Thief 0 Level(10,Enemy,True) [8,8] 0 0 0 0 [SteelDagger, DoorKey, DoorKey, DoorKey] ThiefAI
 
 // turn 1
 UNIT Rebel GriffinRider Cruz Level(10,Enemy,True) [21,9] 0 0 0 0 [IronLance] ChargeAI
-UNIT Rebel Ninja Cruz Level(10,Enemy,True) [19,10] 0 0 0 0 [SteelKnife] ChargeAI
+UNIT Rebel Ninja Cruz Level(10,Enemy,True) [19,10] 0 0 0 0 [SteelKnife,SteelDagger] ChargeAI
 UNIT Rebel Deserter Cruz Level(10,Enemy,True) [18,12] 0 0 0 0 [Javelin] ChargeAI
 UNIT Rebel Deserter Cruz Level(10,Enemy,True) [19,13] 0 0 0 0 [Axereaver,SteelLance] ChargeAI
 UNIT Rebel Shaman Cruz Level(10,Enemy,True) [22,14] 0 0 0 0 [Elfire,Surge] ChargeAI
@@ -98,15 +99,15 @@ UNIT Rebel Curate Cruz Level(10,Enemy,True) [9,11] 0 0 0 0 [Physic] [0xE,0x3,0x0
 // BL room
 UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
 UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [13,21] 0 0 0 0 [IronAxe] ChargeAI
-UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [14,20] 0 0 0 0 [Pike] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [14,20] 0 0 0 0 [IronLance,Pike] ChargeAI
 
 // turn 5
 // TL room
 UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [12,1] 0 0 0 0 [Rapier] ChargeAI
 UNIT Rebel Ninja Cruz Level(B2Level, Enemy, True)  [14,2] 0 0 0 0 [SteelKnife] ChargeAI
 // BM room
-UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [16,21] 0 0 0 0 [SteelBow] ChargeAI
-UNIT Rebel Gunner Cruz Level(B2Level, Enemy, True) [17,19] 0 0 0 0 [SteelMusket] ChargeAI
+UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [16,21] 0 0 0 0 [IronBow] ChargeAI
+UNIT Rebel Gunner Cruz Level(B2Level, Enemy, True) [17,19] 0 0 0 0 [IronMusket] ChargeAI
 
 // turn 6
 // TM room
@@ -118,8 +119,8 @@ UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [20,19] 0 0 0 0 [SteelSword,J
 UNIT Rebel Ninja Cruz Level(B2Level, Enemy, True) [19,20] 0 0 0 0 [Bloodletter] ChargeAI
 
 // turn 7
-UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [19,3] 0 0 0 0 [Axereaver,Javelin] ChargeAI
-UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [21,3] 0 0 0 0 [Sagittae] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [19,3] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [21,3] 0 0 0 0 [Elfire] ChargeAI
 
 
 // end of chapter?? idk
@@ -128,25 +129,26 @@ UNIT Rebel Gunner Cruz Level(B2Level, Enemy, True) [6,10] 0 0 0 0 [SteelMusket] 
 UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [1,10] 0 0 0 0 [SteelSword,SteelLance] AttackInTwoAI
 UNIT Rebel Vanguard Cruz Level(B2Level, Enemy, True) [2,9] 0 0 0 0 [SteelAxe,SteelLance] AttackInTwoAI
 UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [3,13] 0 0 0 0 [Greatbow] BossAI
-UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [6,12] 0 0 0 0 [IronLance,Ridersbane] BossAI
-UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [6,14] 0 0 0 0 [Thunder] BossAI
+UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [5,12] 0 0 0 0 [Javelin,Ridersbane] BossAI
+UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [5,14] 0 0 0 0 [Thunder] BossAI
 
-//UNIT Rebel AxeCav Cruz Level(B2Level, Enemy, True) [15,5] 0 0 0 0 [IronAxe] GroupTwoAI
-//UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [19,5] 0 0 0 0 [IronLance] GroupTwoAI
-//UNIT Rebel Mage Cruz Level(B2Level, Enemy, True) [18,17] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [15,5] 0 0 0 0 [IronAxe] GroupTwoAI
+UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [19,5] 0 0 0 0 [IronLance] GroupTwoAI
+UNIT Rebel Mage Cruz Level(B2Level, Enemy, True) [18,17] 0 0 0 0 [Fire] AttackInRangeAI
+UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [14,17] 0 0 0 0 [IronSword,Javelin] BossAI
 UNIT
 
 
 HusniyeSquad:
-UNIT Husniye 0 0 Level(10,NPC,False) [23,12] 0 0 0 0 [IronKnife,IronDagger,Vulnerary] NoAI
+UNIT Husniye 0 0 Level(10,NPC,False) [23,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
 UNIT
 
 AvocadoSquad:
-UNIT Avocado 0 0 Level(11,NPC,False) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT Avocado 0 0 Level(12,NPC,False) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
 UNIT
 
 MagdalenaSquad:
-UNIT Magdalena 0 0 Level(17,NPC,False) [23,12] 0 0 0 0 [Thunder,Mend] NoAI
+UNIT Magdalena 0 0 Level(17,NPC,False) [23,12] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
 UNIT
 
 // fadi: to black
@@ -225,29 +227,106 @@ NoFade
 ENDA
 
 NewUnitsBlue:
+FADU 16
 FlagIsSet(HusniyeAccused, 0x11)
-	CAMERA Avocado
+	CameraCursor(Avocado)
+	TEXT(B2_AvocadoAnim)
 	CUSA Avocado
+	CameraCursor(Avocado)
 LABEL 0x11
 FlagIsSet(AvocadoAccused, 0x22)
-	CAMERA Husniye
+	CameraCursor(Husniye)
+	TEXT(B2_HusniyeAnim)
 	CUSA Husniye
+	CameraCursor(Husniye)
 LABEL 0x22
 FlagIsSet(CruzAccused, 0x33)
-	CAMERA Magdalena
+	CameraCursor(Magdalena)
+	TEXT(B2_MagdalenaAnim)
 	CUSA Magdalena
+	CameraCursor(Magdalena)
 LABEL 0x33
 NoFade
 ENDA
 
+MakeBossCharge:
+CameraCursor(Cruz)
+CHECK_ALIVE Yadney
+BEQ 0xFEED 0xC 0x0
+	Text(B2_CruzCharging_YadAlive)
+	GOTO 0x654
+LABEL 0xFEED
+	Text(B2_CruzCharging_YadDead)
+LABEL 0x654
+SetAI(Cruz,0,0,4,0)
+NoFade
+ENDA
+
 EndingScene:
+FadeOutMusic
 CHECK_ALIVE Yadney
 BEQ 0xBEEF 0xC 0x0
 	CameraCursor(Yadney)
 	Text(B2_IfYadneyAlive)
 LABEL 0xBEEF
 FADI 16
-// put the rest of the outro here
+// MUSC NeutralVictoryTheme
+SetBackground(Fort_Ruins)
+FADU 16
+Text(B2_Outro_SuppliesSubplot)
+FADI 16
+
+
+// put the rest of the outro here! with conditionals and stuff
+
+FlagIsSet(CruzAccused, 0x1A1)
+	MUSC StillZephyrsID
+	SetBackground(Inn)
+	FADI 16
+	Text(B2_Outro_Romance)
+	FADU 16
+	MUSC WelcomeAboardMateyID
+	FADI 16
+	Text(B2_Outro_MagdalenaPermanent)
+	FADU 16
+LABEL 0x1A1
+
+FlagIsSet(AvocadoAccused, 0x2B2)
+	// MUSC NeutralVictoryTheme
+	SetBackground(Inn)
+	FADI 16
+	Text(B2_Outro_Aftermath_Avocado)
+	FADU 16
+	// MUSC GreyMoralityID
+	SetBackground(Harbor)
+	FADI 16
+	Text(B2_Outro_RazvanSad)
+	FADU 16
+	MUSC WindAmbienceID
+	SetBackground(Ship)
+	FADI 16
+	Text(B2_Outro_HusniyePermanent)
+	FADI 16
+LABEL 0x2B2
+
+FlagIsSet(HusniyeAccused, 0x3C3)
+	// MUSC NeutralVictoryTheme
+	SetBackground(Inn)
+	FADI 16
+	Text(B2_Outro_Aftermath_Husniye)
+	FADU 16
+	// MUSC GreyMoralityID
+	SetBackground(Harbor)
+	FADI 16
+	Text(B2_Outro_RazvanSad)
+	FADU 16
+	MUSC WindAmbienceID
+	SetBackground(Ship)
+	FADI 16
+	Text(B2_Outro_AvocadoPermanent)
+	FADI 16
+LABEL 0x3C3
+
 GoToHubChapter(HubB)
 NoFade
 ENDA

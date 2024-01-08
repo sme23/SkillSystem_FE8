@@ -570,7 +570,7 @@ chamber is utterly torn asunder.[A][N]
 The positioning of shards indicates[N]
 it was broken from the inside,[A][N]
 and sharp edges all around have[N]
-caught tangled black threads.[A][X]
+caught tangled, sooty threads.[A][X]
 
 ## B2a_TalkToDesk
 On the writing desk[N]
@@ -586,9 +586,11 @@ though none are present at the desk.[A][X]
 
 ## B2a_TalkToHedge
 A steel letter opener is[N]
-tossed aside into this hedge,[N]
-hardly concealed at all.[A][N]
-It's clean and well-made,[N]
+tossed aside, carelessly[N]
+buried in this hedge.[AN]
+It's barely hidden at all-[N]
+almost conspicuously visible.[AN]
+The blade is clean and well-made,[N]
 despite this incongruous location.[A][X]
 
 ## B2a_TalkToGavriel
