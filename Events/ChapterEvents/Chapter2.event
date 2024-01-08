@@ -590,7 +590,7 @@ UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
 IgniswordsGroup:
-UNIT Ignacio 0 0 Level(11,Enemy,False) [36,2] 0 0 0 0 [Elfire, KillingEdge, KnightsPlate] GroupFiveAI
+UNIT Ignacio 0 0 Level(10,Enemy,False) [36,2] 0 0 0 0 [Elfire, KillingEdge, KnightsPlate] GroupFiveAI
 UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [33,0] 0 0 0 0 [Fire, Luna] GroupFiveAI
 UNIT Igniswords Archer Ignacio Level(8,Enemy,True) [33,2] 0 0 0 0 [Longbow] GroupFiveAI
 

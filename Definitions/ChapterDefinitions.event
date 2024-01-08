@@ -119,3 +119,7 @@
 #define N426ImprovedCastleObjectID 0x9B
 #define N426ImprovedCastlePaletteID 0x9C
 #define N426ImprovedCastleConfigID 0x9D
+
+#define ZoramineImprovedStrongholdObjectID 0x9E
+#define ZoramineImprovedStrongholdPaletteID 0x9F
+#define ZoramineImprovedStrongholdConfigID 0xA0

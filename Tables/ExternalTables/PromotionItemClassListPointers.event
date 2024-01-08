@@ -1,25 +1,25 @@
 ALIGN 4
 BravesCrestClassList:
-BYTE Ninja 0x0
+BYTE Mercenary Mercenary_F Myrmidon Myrmidon_F Monk Monk_F Ninja Brigand Priest Cleric Soldier Deserter BowCav 0x0
 
 ALIGN 4
 KnightsPlateClassList:
-BYTE Vanguard 0x0
+BYTE Vanguard Warden Shaman Shaman_F Fighter Fighter_F Soldier AxeCav 0x0
 
 ALIGN 4
 HuntersMarkClassList:
-BYTE 0x0
+BYTE Archer Archer_F Ninja Priest Cleric Monk Monk_F Fighter Fighter_F SwordCav 0x0
 
 ALIGN 4
 FliersPermitClassList:
-BYTE 0x0
+BYTE Curate Shaman Shaman_F Archer Archer_F Troubadour 0x0
 
 ALIGN 4
 MagesRingClassList:
-BYTE Curate 0x0
+BYTE Warden Myrmidon Myrmidon_F Mage Mage_F Curate Brigand Hunter Hunter_F Ninja LanceCav PegasusRider DragonRider DragonRider_F 0x0
 
 ALIGN 4
 RidersBadgeClassList:
-BYTE 0x0
+BYTE Vanguard Mage Mage_F Mercenary Mercenary_F Gunner 0x0
 
 ALIGN 4

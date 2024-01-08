@@ -63,6 +63,19 @@
     ALIGN 4
     N426ImprovedCastleConfig:
     #incbin "Dmp/Config/Castle Update Config_comp.dmp"
+	
+	ALIGN 4
+	ZoramineImprovedStrongholdObject:
+	#incbin "Dmp/Object/Stronghold.dmp"
+	
+	ALIGN 4
+	ZoramineImprovedStrongholdPalette:
+	#incbin "Dmp/Palette/Stronghold_pal.dmp"
+	
+	ALIGN 4
+	ZoramineImprovedStrongholdConfig:
+	#incbin "Dmp/Config/Stronghold Config_comp.dmp"
+
 
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
@@ -84,4 +97,8 @@
     EventPointerTable(N426ImprovedCastleObjectID, N426ImprovedCastleObject)
     EventPointerTable(N426ImprovedCastlePaletteID, N426ImprovedCastlePalette)
     EventPointerTable(N426ImprovedCastleConfigID, N426ImprovedCastleConfig)
+	
+	EventPointerTable(ZoramineImprovedStrongholdObjectID, ZoramineImprovedStrongholdObject)
+	EventPointerTable(ZoramineImprovedStrongholdPaletteID, ZoramineImprovedStrongholdPalette)
+	EventPointerTable(ZoramineImprovedStrongholdConfigID, ZoramineImprovedStrongholdConfig)
     

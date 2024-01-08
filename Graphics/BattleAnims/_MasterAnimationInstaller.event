@@ -62,3 +62,138 @@
     #include "Animations/Fighter_F/Handaxe Installer.event"
     #include "Animations/Fighter_F/Unarmed Installer.event"
 }
+
+{
+    #include "Animations/Slayer/Sword Installer.event"
+    #include "Animations/Slayer/Magic Installer.event"
+}
+
+{
+    #include "Animations/Slayer_F/Sword Installer.event"
+    #include "Animations/Slayer_F/Magic Installer.event"
+}
+
+{
+    #include "Animations/Monk/Magic Installer.event"
+}
+
+{
+    #include "Animations/Monk_F/Magic Installer.event"
+}
+
+{
+    #include "Animations/Trickster/Magic Installer.event"
+    #include "Animations/Trickster/Sword Installer.event"
+}
+
+{
+    #include "Animations/Mercenary_F/Sword Installer.event"
+    #include "Animations/Mercenary_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Hero_F/Axe Installer.event"
+    #include "Animations/Hero_F/Handaxe Installer.event"
+    #include "Animations/Hero_F/Sword Installer.event"
+    #include "Animations/Hero_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/WarMonk_F/Axe Installer.event"
+    #include "Animations/WarMonk_F/Handaxe Installer.event"
+    #include "Animations/WarMonk_F/Staff Installer.event"
+    #include "Animations/WarMonk_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/WarMonk/Axe Installer.event"
+    #include "Animations/WarMonk/Handaxe Installer.event"
+    #include "Animations/WarMonk/Staff Installer.event"
+    #include "Animations/WarMonk/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Halberdier/Lance Installer.event"
+    #include "Animations/Halberdier/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Adventurer/Staff Installer.event"
+    #include "Animations/Adventurer/Bow Installer.event"
+    #include "Animations/Adventurer/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Adventurer_F/Staff Installer.event"
+    #include "Animations/Adventurer_F/Bow Installer.event"
+    #include "Animations/Adventurer_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/MasterNinja/Dagger Installer.event"
+    #include "Animations/MasterNinja/Sword Installer.event"
+    #include "Animations/MasterNinja/Disarmed Installer.event"
+}
+
+{
+    #include "Animations/Runeshield/Sword Installer.event"
+    #include "Animations/Runeshield/Lance Installer.event"
+    #include "Animations/Runeshield/Magic Installer.event"
+}
+
+{
+    #include "Animations/Marshall/Axe Installer.event"
+    #include "Animations/Marshall/Lance Installer.event"
+    #include "Animations/Marshall/Handaxe Installer.event"
+    #include "Animations/Marshall/Bow Installer.event"
+    #include "Animations/Marshall/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/DarkKnight/Magic Installer.event"
+}
+
+{
+    #include "Animations/Cavalier/Sword Installer.event"
+    #include "Animations/Cavalier/Axe Installer.event"
+    #include "Animations/Cavalier/Lance Installer.event"
+    #include "Animations/Cavalier/Handaxe Installer.event"
+    #include "Animations/Cavalier/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Cavalier_F/Bow Installer.event"
+    #include "Animations/Cavalier_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/MaligKnight/Axe Installer.event"
+    #include "Animations/MaligKnight/Handaxe Installer.event"
+    #include "Animations/MaligKnight/Magic Installer.event"
+}
+
+{
+    #include "Animations/Seraph/Staff Installer.event"
+    #include "Animations/Seraph/Sword Installer.event"
+    #include "Animations/Seraph/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Warrior/Axe Installer.event"
+    #include "Animations/Warrior/Handaxe Installer.event"
+    #include "Animations/Warrior/Bow Installer.event"
+    #include "Animations/Warrior/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Warrior_F/Axe Installer.event"
+    #include "Animations/Warrior_F/Handaxe Installer.event"
+    #include "Animations/Warrior_F/Bow Installer.event"
+    #include "Animations/Warrior_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Bombardier/Bow Installer.event"
+    #include "Animations/Bombardier/Lance Installer.event"
+    #include "Animations/Bombardier/Unarmed Installer.event"
+}
