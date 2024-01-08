@@ -87,6 +87,7 @@
 
 //#define Luna $46
 //#define Nosferatu $47
+//#define Eclipse 0x48
 #define Galestrike $dc
 
 //KNIVES
@@ -123,6 +124,7 @@
 #define HexlockShield $e7
 #define ShoveGlove $d3
 #define Statuette $e5
+#define SwapShoes 0xF1
 
 //Items
 

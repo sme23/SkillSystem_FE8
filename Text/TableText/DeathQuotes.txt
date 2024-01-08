@@ -91,3 +91,24 @@ So this was the dark cloud[N]
 hanging over my divination?[AN]
 But I still have so much[N]
 to see[Beat] to learn[Beat][A][CloseEyes][X]
+
+
+## HusniyeDQ
+[MR][LoadHusniye]
+Everything I fled from[Beat][N]
+everything I sacrificed[Beat][AN]
+just to die here?[AN]
+I[Beat] [CloseEyes]I refuse[Beat][A][X]
+
+## AvocadoDQ
+[MR][LoadAvocado]
+So this is the death I have[N]
+wrought so many times[Beat][AN]
+[HalfCloseEyes]So this is how it feels[Beat][AN]
+A deserved[Beat] [CloseEyes]fate[Beat][A][X]
+
+## MagdalenaDQ
+[MR][LoadMagdalena]
+Port Receloso[Beat][AN]
+I will never see[N]
+your streets again[Beat][A][X]

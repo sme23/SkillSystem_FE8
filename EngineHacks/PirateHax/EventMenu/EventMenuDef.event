@@ -1,3 +1,18 @@
+// don't use this version!
+// use EventMenuCommand instead
+// it's like this because RW is bad at organizing things
+
+
+
+
+
+
+
+
+
+
+
+
 #define EventMenuCommand(aTextId) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448+1); WORD 0; POIN (prEventMenuCommandEffect+1); WORD 0 0 0"
     #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
         

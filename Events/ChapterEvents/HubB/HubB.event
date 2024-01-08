@@ -38,8 +38,10 @@ NoFade
 ENDA
 
 GotoHubB2:
+// note that this should display B-2b, but actually send you to B-2a
+// because B-2 is two chapters in a trenchcoat
 CenterTextbox(HubB2Prompt)
-GotoHubChapterIfYes(1, HubB_2)
+GotoHubChapterIfYes(1, HubB_2a)
 ENUF WentToHub2
 NoFade
 ENDA

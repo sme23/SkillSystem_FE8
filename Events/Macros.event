@@ -105,3 +105,9 @@
 //SetUnitItemDurability(unitid, itemslot, durability)
 
 #define InAHubFlag 0xA0
+
+#define DefeatBoss "AFEV 3 EndingScene 2"
+#define DefeatAll "AFEV 3 EndingScene 6"
+
+#define FlagIsSet(id, label) "CHECK_EVENTID (id); BEQ (label) 0xc 0x0;"
+#define FlagNotSet(id, label) "CHECK_EVENTID (id); BNE (label) 0xc 0x0;"

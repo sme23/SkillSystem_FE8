@@ -176,3 +176,9 @@
 
 //Frigid Aura: All adjacent units take 20% damage at the start of turn. (Dragz)
 #define FrigidAuraID 54
+
+#define SwapID 55
+
+//Smite: Allows unit to push other units two tiles away.
+//By StanH
+#define SmiteID 56

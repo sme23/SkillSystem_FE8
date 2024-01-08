@@ -301,3 +301,10 @@ Dragoon[X]
 ## DragoonDesc
 Weapons: Swords, Guns[N]
 Traits: Canto, Aid+[X]
+
+## DeadPeerName
+Corpse[X]
+
+## DeadPeerDesc
+Weapons: None[N]
+Traits: Dead[X]

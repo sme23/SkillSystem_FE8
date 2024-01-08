@@ -198,6 +198,30 @@ Carpenter[N]
 More skilled her hammer than her bow,[N]
 she repairs ships with a curt nod.[X]
 
+## HusniyeName
+Husniye[X]
+
+## HusniyeDesc
+Courtesan[N]
+A foreign thief, poor and desperate.[N]
+One of the murder suspects.[X]
+
+## AvocadoName
+Avocado[X]
+
+## AvocadoDesc
+Retiree[N]
+A haunted former soldier of Incendivis.[N]
+One of the murder suspects.[X]
+
+## MagdalenaName ^
+Magdalena[X]
+
+## MagdalenaDesc
+Magistrate[N]
+Governor of Port Receloso, broken[N]
+with stress by the recent murders.[X]
+
 ## KhazhakName
 Khazhak[X]
 
@@ -646,3 +670,64 @@ Fata[X]
 Intern[N]
 Not paid enough for her responsibilities,[N]
 which continue to grow by the second.[X]
+
+## YadneyName
+Yadney[X]
+
+## YadneyDesc
+Ringleader[N]
+This wandering warrior led the local[N]
+Rebels to the lofty heights of banditry.[X]
+
+## CruzName
+Cruz[X]
+
+## CruzDesc
+Magician[N]
+A reclusive mage with Rebel sympathies,[N]
+and a covert assassin for their cause.[X]
+
+## CruzFakeDesc
+Magician[N]
+A reclusive mage with Rebel sympathies.[N]
+One of the murder suspects.[X]
+
+## RecelosoPriestName
+Quim[X]
+
+## RecelosoPriestDesc
+Acolyte[N]
+Gruffness, faith, and anger, all stepping[N]
+up to lead in Father Gavriel's absence.[X]
+
+## RecelosoCorpseName
+Gavriel[X]
+
+## RecelosoCorpseDesc
+Corpse[N]
+Once Port Receloso's religious leader.[N]
+Now, he's just another dead body.[X]
+
+## RecelosoStudentName
+Fogaca[X]
+
+## RecelosoStudentDesc
+Student[N]
+A historian in training, learning some[N]
+magical secrets from Cruz's library.[X]
+
+## RecelosoGuardName
+Dario[X]
+
+## RecelosoGuardDesc
+Town Guard[N]
+Port Receloso needs little guarding, but[N]
+Dario keeps faithful watch nontheless.[X]
+
+## RecelosoBarkeepName
+Thais[X]
+
+## RecelosoBarkeepDesc
+Barkeep[N]
+A full bottle, a lively counter, and[N]
+a place of joy in tragic times.[X]
