@@ -520,3 +520,24 @@ ALIGN 4
 DragoonMMS:
 #incbin "Dmp/Dragoon-walk.dmp"
 
+StandingMapSprite(GryphknightMapSprite,MapSprite16x32,GryphknightSMS)
+MovingMapSprite(Gryphknight, $1C3D7C, GryphknightMMS)
+
+ALIGN 4
+GryphknightSMS:
+#incbin "Dmp/Griffon Knight (U) {Blue Druid}-stand.dmp"
+
+ALIGN 4
+GryphknightMMS:
+#incbin "Dmp/Griffon Knight (U) {Blue Druid}-walk.dmp"
+
+StandingMapSprite(DracoknightMapSprite,MapSprite16x32,DracoknightSMS)
+MovingMapSprite(Dracoknight, $1C3D7C, DracoknightMMS)
+
+ALIGN 4
+DracoknightSMS:
+#incbin "Dmp/Wyvern Lord (M) Helmless Axe {flasuban}-stand.dmp"
+
+ALIGN 4
+DracoknightMMS:
+#incbin "Dmp/Wyvern Lord (M) Helmless Axe {flasuban}-walk.dmp"

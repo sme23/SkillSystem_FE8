@@ -111,4 +111,7 @@ PromoListEntry(Archer_F, Bombardier)
 PromoListEntry(Shaman, MaligKnight)
 PromoListEntry(Shaman_F, MaligKnight)
 PromoListEntry(Troubadour, Seraph)
+PromoListEntry(DragonRider, Dracoknight)
+PromoListEntry(DragonRider_F, Dracoknight)
+PromoListEntry(PegasusRider, Falcoknight)
 PromoListEnd

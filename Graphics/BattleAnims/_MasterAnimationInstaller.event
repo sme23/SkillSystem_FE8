@@ -197,3 +197,9 @@
     #include "Animations/Bombardier/Lance Installer.event"
     #include "Animations/Bombardier/Unarmed Installer.event"
 }
+
+{
+    #include "Animations/Dracoknight/Axe Installer.event"
+    #include "Animations/Dracoknight/Handaxe Installer.event"
+    #include "Animations/Dracoknight/Unarmed Installer.event"
+}

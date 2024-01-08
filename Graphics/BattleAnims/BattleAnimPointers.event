@@ -258,3 +258,10 @@ BowAnim(BombardierBowAnim)
 LanceAnim(BombardierLanceAnim)
 UnarmedAnim(BombardierUnarmedAnim)
 EndAnim
+
+ALIGN 4
+DracoknightAnims:
+AxeAnim(DracoknightAxeAnim)
+HandAxeAnim(DracoknightHandaxeAnim)
+UnarmedAnim(DracoknightUnarmedAnim)
+EndAnim

@@ -308,3 +308,21 @@ Corpse[X]
 ## DeadPeerDesc
 Weapons: None[N]
 Traits: Dead[X]
+
+## GryphknightName
+Gryphoknight[X]
+
+## GryphknightDesc
+Weapons: Lances[N]
+Traits: Canto, Flight, Aid+[X]
+
+## DracoknightName
+Dracoknight[X]
+
+## DracoknightDesc
+Weapons: Axes[N]
+Traits: Canto, Flight, Aid+[X]
+
+## FalcoknightDesc
+Weapons: Swords[N]
+Traits: Canto, Flight, Aid+[X]
