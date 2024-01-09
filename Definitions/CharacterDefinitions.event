@@ -106,6 +106,9 @@
 #define Sierra $56
 #define Manfred $6D
 #define CrimsonHeart $6E
+//Used for a scripted battle cutscene. 
+#define IncendivisMageA2 $AD 
+
 
 //Hub A3
 #define Sargargala $5B
