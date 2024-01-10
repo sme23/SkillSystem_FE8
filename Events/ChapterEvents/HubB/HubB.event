@@ -1,3 +1,9 @@
+#define SeenHubB1Pitch 7
+#define SeenHubB2Pitch 8
+#define SeenHubB3Pitch 9
+#define SeenHubB4Pitch 10
+#define SeenHubB5Pitch 11
+
 EventPointerTable(HubBEventsID, PointerList)
 
 PointerList:
@@ -62,9 +68,11 @@ NoFade
 ENDA
 
 GotoHubB5:
-CenterTextbox(HubB5Prompt)
-GotoHubChapterIfYes(1, HubB_5)
-ENUF WentToHub5
+HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_5, Castle_Hall_Night, HubB)
+GotoHubChapterIfYes(2, HubB_5, HubA1Accepted)
+//ENUF OrlandoHubATalk
 NoFade
 ENDA
 
