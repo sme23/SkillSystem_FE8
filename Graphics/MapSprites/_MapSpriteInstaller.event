@@ -541,3 +541,14 @@ DracoknightSMS:
 ALIGN 4
 DracoknightMMS:
 #incbin "Dmp/Wyvern Lord (M) Helmless Axe {flasuban}-walk.dmp"
+
+StandingMapSprite(MarksmanMapSprite,MapSprite16x32,MarksmanSMS)
+MovingMapSprite(Marksman, $1C3D7C, MarksmanMMS)
+
+ALIGN 4
+MarksmanSMS:
+#incbin "Dmp/Ballistician (U) {Aruka, Kenpuhu}-stand.dmp"
+
+ALIGN 4
+MarksmanMMS:
+#incbin "Dmp/Ballistician (U) {DrGreen, Aruka, Kenpuhu}-walk.dmp"

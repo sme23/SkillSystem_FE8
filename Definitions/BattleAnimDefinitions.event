@@ -113,7 +113,7 @@
 #define MarshallUnarmedAnim 0x10f
 
 #define DarkKnightLanceAnim 0x110 //put this in later
-#define DarkKnightMagicAnim 0x111
+#define DarkKnightMagicAnim 0x110
 
 #define CavSwordAnim 0x112
 #define CavHandaxeAnim 0x113
@@ -150,6 +150,15 @@
 #define DracoknightHandaxeAnim 0x12b
 #define DracoknightUnarmedAnim 0x12c
 
-#define FalcoknightSwordAnim 0x12d
-#define FalcoknightUnarmedAnim 0x12e
+#define AssassinKnifeAnim 0x12d
+#define AssassinBowAnim 0x12e
 
+#define Assassin_FKnifeAnim 0x12f
+#define Assassin_FBowAnim 0x130
+
+#define RogueKnifeAnim 0x131
+#define RogueUnarmedAnim 0x111
+
+#define WolfKnightLanceAnim 0x132
+#define WolfKnightKnifeAnim 0x133
+#define WolfKnightUnarmedAnim 0x134

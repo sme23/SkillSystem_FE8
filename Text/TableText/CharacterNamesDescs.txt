@@ -195,7 +195,7 @@ Rahel[X]
 
 ## RahelDesc
 Carpenter[N]
-More skilled her hammer than her bow,[N]
+More skilled with a hammer than a bow,[N]
 she repairs ships with a curt nod.[X]
 
 ## HusniyeName

@@ -326,3 +326,14 @@ Traits: Canto, Flight, Aid+[X]
 ## FalcoknightDesc
 Weapons: Swords[N]
 Traits: Canto, Flight, Aid+[X]
+
+## RogueDesc
+Weapons: Knives[N]
+Traits: Steal, Locktouch[X]
+
+## MarksmanName
+Marksman[X]
+
+## MarksmanDesc
+Weapons: Guns[N]
+Traits: Steal, Locktouch[X]

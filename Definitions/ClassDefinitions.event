@@ -48,6 +48,7 @@
 #define Adventurer 0x9e
 #define Adventurer_F 0x9f
 #define Warrior_F 0xa1
+#define Marksman 0xa4
 
 //ARMOR
 
@@ -182,3 +183,4 @@
 #define DragoonMapSprite 0x95
 #define GryphknightMapSprite 0x96
 #define DracoknightMapSprite 0x97
+#define MarksmanMapSprite 0x98

@@ -265,3 +265,30 @@ AxeAnim(DracoknightAxeAnim)
 HandAxeAnim(DracoknightHandaxeAnim)
 UnarmedAnim(DracoknightUnarmedAnim)
 EndAnim
+
+ALIGN 4
+AssassinAnims:
+BowAnim(AssassinBowAnim)
+KnifeAnim(AssassinKnifeAnim)
+UnarmedAnim(AssassinKnifeAnim)
+EndAnim
+
+ALIGN 4
+Assassin_FAnims:
+BowAnim(Assassin_FBowAnim)
+KnifeAnim(Assassin_FKnifeAnim)
+UnarmedAnim(Assassin_FKnifeAnim)
+EndAnim
+
+ALIGN 4
+RogueAnims:
+KnifeAnim(RogueKnifeAnim)
+UnarmedAnim(RogueUnarmedAnim)
+EndAnim
+
+ALIGN 4
+WolfKnightAnims:
+LanceAnim(WolfKnightLanceAnim)
+KnifeAnim(WolfKnightKnifeAnim)
+UnarmedAnim(WolfKnightUnarmedAnim)
+EndAnim
