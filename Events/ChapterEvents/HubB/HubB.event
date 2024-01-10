@@ -22,11 +22,11 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-AREA WentToHub1 GotoHubB1 [4,2] [4,2]
-AREA WentToHub2 GotoHubB2 [2, 7] [2, 7]
-AREA WentToHub3 GotoHubB3 [7, 7] [7, 7]
-AREA WentToHub4 GotoHubB4 [2,13] [2,13]
-AREA WentToHub5 GotoHubB5 [7,13] [7,13]
+AREA WentToHub1 GotoHubB1 [4,12] [4,12]
+AREA WentToHub2 GotoHubB2 [2, 17] [2, 17]
+AREA WentToHub3 GotoHubB3 [7, 17] [7, 17]
+AREA WentToHub4 GotoHubB4 [2,23] [2,23]
+AREA WentToHub5 GotoHubB5 [7,23] [7,23]
 AFEV 0 RefreshLua 0
 END_MAIN
 
@@ -75,11 +75,11 @@ NoFade
 ENDA
 
 Traps1:
-RedSigil(4, 2)
-RedSigil(2, 7)
-RedSigil(7, 7)
-RedSigil(2, 13)
-RedSigil(7, 13)
+RedSigil(4, 12)
+RedSigil(2, 17)
+RedSigil(7, 17)
+RedSigil(2, 23)
+RedSigil(7, 23)
 ENDTRAP
 ALIGN 4
 
@@ -88,7 +88,7 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [5,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [5,22] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 BeginningScene:
