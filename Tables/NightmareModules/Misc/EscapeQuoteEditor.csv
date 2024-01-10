@@ -23,9 +23,9 @@ INLINE EscapeQuoteTable,Text ID
 0x15 Orlando,OrlandoEscapeQuote
 0x16 Rahel,RahelEscapeQuote
 0x17 Saleh,PlaceholderEscapeQuote
-0x18 Ewan,PlaceholderEscapeQuote
-0x19 L'Arachel,PlaceholderEscapeQuote
-0x1A Dozla,PlaceholderEscapeQuote
+0x18 Husniye,HusniyeEscapeQuote
+0x19 Avocado,AvocadoEscapeQuote
+0x1A Magdalena,MagdalenaEscapeQuote
 0x1B -,PlaceholderEscapeQuote
 0x1C Rennac,PlaceholderEscapeQuote
 0x1D Duessel,PlaceholderEscapeQuote

@@ -1758,7 +1758,8 @@ range hits lower of foe's Def/Res.[X]
 
 ## SD_Swift
 Swift: Unit can use a command to[N]
-grant an ally +3 Move for 1 turn.[X]
+grant an ally +3 Move for 1 turn.[N]
+Does not end the user's turn.[X]
 
 ## SD_DubiousAdvice
 Dubious Advice: Adjacent allies gain[N]
