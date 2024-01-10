@@ -14,6 +14,21 @@ Go to B-3?[N]
 Go to B-4?[N]
 [No][X]
 
+## HubB5Title
+B-5: Veil of the Whorl[X]
+
+## HubB5Objective
+Objective: Rout[X]
+
+## HubB5Units
+Unit: Fata (Monk)[X]
+
+## HubB5Loot
+Loot: Tome and staff users will benefit.[X]
+
+## HubB5Confirm
+Seek the Sapphire?[X]
+
 ## HubB5Prompt
 Go to B-5?[N]
 [No][X]
