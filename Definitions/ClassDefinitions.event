@@ -48,6 +48,7 @@
 #define Adventurer 0x9e
 #define Adventurer_F 0x9f
 #define Warrior_F 0xa1
+#define Marksman 0xa4
 
 //ARMOR
 
@@ -77,12 +78,17 @@
 
 //FLIER
 #define PegasusRider 0x48
+#define Falcoknight 0x49
 #define GriffinRider 0x89
 #define DragonRider 0x1f
 #define DragonRider_F 0x20
 
 //T2
+#define Dracoknight 0x21
+#define Dracoknight_F 0x22
 #define Bombardier 0x90
+#define Gryphknight 0xa3
+#define Gryphoknight Gryphknight
 
 //MAGE
 
@@ -175,3 +181,6 @@
 #define MaligKnightMapSprite 0x93
 #define Warrior_FMapSprite 0x94
 #define DragoonMapSprite 0x95
+#define GryphknightMapSprite 0x96
+#define DracoknightMapSprite 0x97
+#define MarksmanMapSprite 0x98

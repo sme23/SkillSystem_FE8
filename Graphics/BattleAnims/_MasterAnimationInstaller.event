@@ -197,3 +197,30 @@
     #include "Animations/Bombardier/Lance Installer.event"
     #include "Animations/Bombardier/Unarmed Installer.event"
 }
+
+{
+    #include "Animations/Dracoknight/Axe Installer.event"
+    #include "Animations/Dracoknight/Handaxe Installer.event"
+    #include "Animations/Dracoknight/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Assassin/Bow Installer.event"
+    #include "Animations/Assassin/Sword Installer.event"
+}
+
+{
+    #include "Animations/Assassin_F/Bow Installer.event"
+    #include "Animations/Assassin_F/Sword Installer.event"
+}
+
+{
+    #include "Animations/Rogue/Sword Installer.event"
+    #include "Animations/Rogue/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/WolfKnight/Sword Installer.event"
+    #include "Animations/WolfKnight/Lance Installer.event"
+    #include "Animations/WolfKnight/Unarmed Installer.event"
+}

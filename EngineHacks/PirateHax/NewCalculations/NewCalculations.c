@@ -342,7 +342,7 @@ void ApplyUnitDefaultPromotion(struct Unit* unit) {
         unit->pow = 30;
     }
 
-	unit->mag += (MagClassTable[promotedClass->number].promotionMag - MagClassTable[currentClass->number].promotionMag);
+	unit->mag += (MagClassTable[promotedClass->number].baseMag - MagClassTable[currentClass->number].baseMag);
 
 	if (unit->mag > 30){
         unit->mag = 30;

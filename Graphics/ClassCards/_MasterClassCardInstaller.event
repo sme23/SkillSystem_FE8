@@ -321,3 +321,27 @@ ALIGN 4
 DragoonClassCardPal:
 #incbin "Dmp/Forest Knight (U) {Leo_Link, DerTheVaporeon}.png_pal.dmp"
 setCardEntry(DragoonClassCard, DragoonClassCardData, DragoonClassCardPal)
+
+ALIGN 4
+DracoknightClassCardData:
+#incbin "Dmp/Wyvern Lord (U) Axe {topazlight}.dmp"
+ALIGN 4
+DracoknightClassCardPal:
+#incbin "Dmp/Wyvern Lord (U) Axe {topazlight}.png_pal.dmp"
+setCardEntry(DracoknightClassCard, DracoknightClassCardData, DracoknightClassCardPal)
+
+ALIGN 4
+FalcoknightClassCardData:
+#incbin "Dmp/Falcoknight (F) Sword {Flasuban, ArcaneEli}.dmp"
+ALIGN 4
+FalcoknightClassCardPal:
+#incbin "Dmp/Falcoknight (F) Sword {Flasuban, ArcaneEli}.png_pal.dmp"
+setCardEntry(FalcoknightClassCard, FalcoknightClassCardData, FalcoknightClassCardPal)
+
+ALIGN 4
+Assassin_FClassCardData:
+#incbin "Dmp/Assassin (F) Knives (Pushwall, L95).dmp"
+ALIGN 4
+Assassin_FClassCardPal:
+#incbin "Dmp/Assassin (F) Knives (Pushwall, L95).png_pal.dmp"
+setCardEntry(Assassin_FClassCard, Assassin_FClassCardData, Assassin_FClassCardPal)

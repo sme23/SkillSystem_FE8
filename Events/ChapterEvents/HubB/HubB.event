@@ -1,3 +1,9 @@
+#define SeenHubB1Pitch 7
+#define SeenHubB2Pitch 8
+#define SeenHubB3Pitch 9
+#define SeenHubB4Pitch 10
+#define SeenHubB5Pitch 11
+
 EventPointerTable(HubBEventsID, PointerList)
 
 PointerList:
@@ -22,11 +28,11 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-AREA WentToHub1 GotoHubB1 [9,7] [9,7]
-AREA WentToHub2 GotoHubB2 [7, 12] [7, 12]
-AREA WentToHub3 GotoHubB3 [12, 12] [12, 12]
-AREA WentToHub4 GotoHubB4 [7,18] [7,18]
-AREA WentToHub5 GotoHubB5 [12,18] [12,18]
+AREA WentToHub1 GotoHubB1 [4,12] [4,12]
+AREA WentToHub2 GotoHubB2 [2, 17] [2, 17]
+AREA WentToHub3 GotoHubB3 [7, 17] [7, 17]
+AREA WentToHub4 GotoHubB4 [2,23] [2,23]
+AREA WentToHub5 GotoHubB5 [7,23] [7,23]
 AFEV 0 RefreshLua 0
 END_MAIN
 
@@ -62,9 +68,11 @@ NoFade
 ENDA
 
 GotoHubB5:
-CenterTextbox(HubB5Prompt)
-GotoHubChapterIfYes(1, HubB_5)
-ENUF WentToHub5
+HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_5, Castle_Hall_Night, HubB)
+GotoHubChapterIfYes(2, HubB_5, HubA1Accepted)
+//ENUF OrlandoHubATalk
 NoFade
 ENDA
 
@@ -75,11 +83,11 @@ NoFade
 ENDA
 
 Traps1:
-RedSigil(9, 7)
-RedSigil(7, 12)
-RedSigil(12, 12)
-RedSigil(7, 18)
-RedSigil(12, 18)
+RedSigil(4, 12)
+RedSigil(2, 17)
+RedSigil(7, 17)
+RedSigil(2, 23)
+RedSigil(7, 23)
 ENDTRAP
 ALIGN 4
 
@@ -88,7 +96,7 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [10,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [5,22] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 BeginningScene:

@@ -51,9 +51,11 @@ PromoListEnd
 
 ALIGN 4
 HuntersMarkPromoList:
-PromoListEntry(Ninja, Assassin)
 PromoListEntry(Archer, Sniper)
 PromoListEntry(Archer_F, Sniper_F)
+PromoListEntry(Hunter, Assassin)
+PromoListEntry(Hunter_F, Assassin_F)
+PromoListEntry(Thief, Rogue)
 PromoListEntry(Priest, Adventurer)
 PromoListEntry(Cleric, Adventurer_F)
 PromoListEntry(Monk, Trickster)
@@ -61,6 +63,7 @@ PromoListEntry(Monk_F, Trickster_F)
 PromoListEntry(Fighter, Warrior)
 PromoListEntry(Fighter_F, Warrior_F)
 PromoListEntry(SwordCav, Dragoon)
+PromoListEntry(Gunner, Marksman)
 PromoListEnd
 
 ALIGN 4
@@ -83,6 +86,8 @@ PromoListEntry(Mage_F, DarkKnight)
 PromoListEntry(Mercenary, Ranger)
 PromoListEntry(Mercenary_F, Ranger_F)
 PromoListEntry(Gunner, Dragoon)
+PromoListEntry(Thief, WolfKnight)
+PromoListEntry(Deserter, WolfKnight)
 PromoListEnd
 
 ALIGN 4
@@ -111,4 +116,7 @@ PromoListEntry(Archer_F, Bombardier)
 PromoListEntry(Shaman, MaligKnight)
 PromoListEntry(Shaman_F, MaligKnight)
 PromoListEntry(Troubadour, Seraph)
+PromoListEntry(DragonRider, Dracoknight)
+PromoListEntry(DragonRider_F, Dracoknight)
+PromoListEntry(PegasusRider, Falcoknight)
 PromoListEnd
