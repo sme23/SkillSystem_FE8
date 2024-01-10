@@ -60,8 +60,22 @@ UNIT
 
 AntlionsInitial:
 UNIT Kiril MasterNinja 0 Level(5,Enemy,False) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] AttackWhenInRangeAI
-UNIT Antlion Warden 0 Level(9, Enemy, False) [8,6] 0 0 0 0 [IronBlade, Harpoon] BossAI
-UNIT Antlion Vanguard 0 Level(9, Enemy, False) [9,7] 0 0 0 0 [Harpoon, SteelAxe] BossAI
+
+//turn 1
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [11,3] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [13,1] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Antlion Hunter 0 Level(9, Enemy, True) [12,4] 0 0 0 0 [SteelBow] ChargeAI
+UNIT Antlion Mage 0 Level(9, Enemy, True) [11,5] 0 0 0 0 [Elfire] ChargeAI
+UNIT Antlion Myrmidon 0 Level(9, Enemy, True) [8,0] 0 0 0 0 [Rapier] AttackWhenInRangeAI
+//turn 2
+UNIT Antlion Warden 0 Level(9, Enemy, True) [8,6] 0 0 0 0 [IronBlade, Harpoon] BossAI
+UNIT Antlion Vanguard 0 Level(9, Enemy, True) [9,7] 0 0 0 0 [Harpoon, SteelAxe] BossAI
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [9,12] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [3,6] 0 0 0 0 [SteelAxe] AttackWhenInRangeAI
+//turn 3
+//nw chest room
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [2,1] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [5,1] 0 0 0 0 [SteelLance] ChargeAI
 UNIT
 
 BeginningScene:
