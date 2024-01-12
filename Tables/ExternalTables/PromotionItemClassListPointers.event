@@ -20,6 +20,6 @@ BYTE Warden Myrmidon Myrmidon_F Mage Mage_F Curate Brigand Hunter Hunter_F Ninja
 
 ALIGN 4
 RidersBadgeClassList:
-BYTE Vanguard Mage Mage_F Mercenary Mercenary_F Gunner Deserter Thief 0x0
+BYTE Vanguard Mage Mage_F Mercenary Mercenary_F Gunner Deserter Thief SwordCav LanceCav AxeCav BowCav Troubadour 0x0
 
 ALIGN 4

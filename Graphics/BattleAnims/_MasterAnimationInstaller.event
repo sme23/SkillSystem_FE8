@@ -154,11 +154,19 @@
 }
 
 {
-    #include "Animations/Cavalier/Sword Installer.event"
-    #include "Animations/Cavalier/Axe Installer.event"
-    #include "Animations/Cavalier/Lance Installer.event"
-    #include "Animations/Cavalier/Handaxe Installer.event"
-    #include "Animations/Cavalier/Unarmed Installer.event"
+    #include "Animations/SwordCav/Sword Installer.event"
+    #include "Animations/SwordCav/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/AxeCav/Axe Installer.event"
+    #include "Animations/AxeCav/Handaxe Installer.event"
+    #include "Animations/AxeCav/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/LanceCav/Lance Installer.event"
+    #include "Animations/LanceCav/Unarmed Installer.event"
 }
 
 {
@@ -223,4 +231,19 @@
     #include "Animations/WolfKnight/Sword Installer.event"
     #include "Animations/WolfKnight/Lance Installer.event"
     #include "Animations/WolfKnight/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/AxeKnight/Axe Installer.event"
+    #include "Animations/AxeKnight/Handaxe Installer.event"
+}
+
+{
+    #include "Animations/LanceKnight/Lance Installer.event"
+    #include "Animations/LanceKnight/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/BowKnight/Bow Installer.event"
+    #include "Animations/BowKnight/Unarmed Installer.event"
 }

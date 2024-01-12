@@ -75,6 +75,13 @@
 #define Wolfrider WolfKnight
 #define DarkKnight MageKnight
 #define Dragoon 0xa2
+#define Savior 0x4c
+#define SwordKnight 0xa5
+#define AxeKnight 0xa6
+#define LanceKnight 0xa7
+#define BowKnight 0xa8
+
+
 
 //FLIER
 #define PegasusRider 0x48
@@ -180,7 +187,11 @@
 #define DarkKnightMapSprite 0x92
 #define MaligKnightMapSprite 0x93
 #define Warrior_FMapSprite 0x94
-#define DragoonMapSprite 0x95
+#define SwordKnightMapSprite 0x95
+#define DragoonMapSprite SwordKnightMapSprite
 #define GryphknightMapSprite 0x96
 #define DracoknightMapSprite 0x97
 #define MarksmanMapSprite 0x98
+#define LanceKnightMapSprite 0x99
+#define AxeKnightMapSprite 0x9a
+#define BowKnightMapSprite 0x9b

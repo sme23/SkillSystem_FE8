@@ -197,21 +197,21 @@ EndAnim
 
 ALIGN 4
 SwordCavAnims:
-SwordAnim(CavSwordAnim)
-UnarmedAnim(CavUnarmedAnim)
+SwordAnim(SwordCavSwordAnim)
+UnarmedAnim(SwordCavUnarmedAnim)
 EndAnim
 
 ALIGN 4
 LanceCavAnims:
-LanceAnim(CavLanceAnim)
-UnarmedAnim(CavUnarmedAnim)
+LanceAnim(LanceCavLanceAnim)
+UnarmedAnim(LanceCavUnarmedAnim)
 EndAnim
 
 ALIGN 4
 AxeCavAnims:
-AxeAnim(CavAxeAnim)
-HandAxeAnim(CavHandaxeAnim)
-UnarmedAnim(CavUnarmedAnim)
+AxeAnim(AxeCavAxeAnim)
+HandAxeAnim(AxeCavHandaxeAnim)
+UnarmedAnim(AxeCavUnarmedAnim)
 EndAnim
 
 ALIGN 4
@@ -291,4 +291,23 @@ WolfKnightAnims:
 LanceAnim(WolfKnightLanceAnim)
 KnifeAnim(WolfKnightKnifeAnim)
 UnarmedAnim(WolfKnightUnarmedAnim)
+EndAnim
+
+ALIGN 4
+AxeKnightAnims:
+AxeAnim(AxeKnightAxeAnim)
+HandAxeAnim(AxeKnightHandaxeAnim)
+UnarmedAnim(AxeKnightAxeAnim)
+EndAnim
+
+ALIGN 4
+BowKnightAnims:
+BowAnim(BowKnightBowAnim)
+UnarmedAnim(BowKnightUnarmedAnim)
+EndAnim
+
+ALIGN 4
+LanceKnightAnims:
+LanceAnim(LanceKnightLanceAnim)
+UnarmedAnim(LanceKnightUnarmedAnim)
 EndAnim

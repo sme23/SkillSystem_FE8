@@ -137,33 +137,33 @@ MovingMapSprite(SwordCav, $1C3D7C, SwordCavMMS)
 
 ALIGN 4
 SwordCavSMS:
-#incbin "Dmp/Cavalier (M) Sword {SALVAGED}-stand.dmp"
+#incbin "Dmp/Sword Cavalier (M) {Leo_Link}-stand.dmp"
 
 ALIGN 4
 SwordCavMMS:
-#incbin "Dmp/Cavalier (M) Sword {SALVAGED}-walk.dmp"
+#incbin "Dmp/Sword Cavalier (M) {Leo_Link}-walk.dmp"
 
 StandingMapSprite(LanceCavMapSprite,MapSprite16x32,LanceCavSMS)
 MovingMapSprite(LanceCav, $1C3D7C, LanceCavMMS)
 
 ALIGN 4
 LanceCavSMS:
-#incbin "Dmp/Cavalier (M) Lance {SALVAGED}-stand.dmp"
+#incbin "Dmp/Lance_Cav_stand.dmp"
 
 ALIGN 4
 LanceCavMMS:
-#incbin "Dmp/Cavalier (M) Lance {SALVAGED}-walk.dmp"
+#incbin "Dmp/Lance_Cav_map_sprite.dmp"
 
 StandingMapSprite(AxeCavMapSprite,MapSprite16x32,AxeCavSMS)
 MovingMapSprite(AxeCav, $1C3D7C, AxeCavMMS)
 
 ALIGN 4
 AxeCavSMS:
-#incbin "Dmp/Cavalier (M) Axe {SALVAGED}-stand.dmp"
+#incbin "Dmp/Axe Cavalier (M) {Leo_Link}-stand.dmp"
 
 ALIGN 4
 AxeCavMMS:
-#incbin "Dmp/Cavalier (M) Axe {SALVAGED}-walk.dmp"
+#incbin "Dmp/Axe Cavalier (M) {Leo_Link}-walk.dmp"
 
 StandingMapSprite(PegasusRiderMapSprite,MapSprite16x32,PegasusRiderSMS)
 MovingMapSprite(PegasusRider, $1C3D7C, PegasusRiderMMS)
@@ -509,18 +509,19 @@ ALIGN 4
 Warrior_FMMS:
 #incbin "Dmp/Warrior (F) Axe {Pushwall, FEGirls}-walk.dmp"
 
-StandingMapSprite(DragoonMapSprite,MapSprite16x32,DragoonSMS)
-MovingMapSprite(Dragoon, $1C3D7C, DragoonMMS)
+StandingMapSprite(SwordKnightMapSprite,MapSprite16x32,SwordKnightSMS)
+MovingMapSprite(SwordKnight, $1C3D7C, SwordKnightMMS)
+MovingMapSprite(Dragoon, $1C3D7C, SwordKnightMMS)
 
 ALIGN 4
-DragoonSMS:
+SwordKnightSMS:
 #incbin "Dmp/Dragoon-stand.dmp"
 
 ALIGN 4
-DragoonMMS:
+SwordKnightMMS:
 #incbin "Dmp/Dragoon-walk.dmp"
 
-StandingMapSprite(GryphknightMapSprite,MapSprite16x32,GryphknightSMS)
+StandingMapSprite(GryphknightMapSprite,MapSprite32x32,GryphknightSMS)
 MovingMapSprite(Gryphknight, $1C3D7C, GryphknightMMS)
 
 ALIGN 4
@@ -552,3 +553,37 @@ MarksmanSMS:
 ALIGN 4
 MarksmanMMS:
 #incbin "Dmp/Ballistician (U) {DrGreen, Aruka, Kenpuhu}-walk.dmp"
+
+StandingMapSprite(BowKnightMapSprite,MapSprite16x32,BowKnightSMS)
+MovingMapSprite(BowKnight, $1C3D7C, BowKnightMMS)
+
+ALIGN 4
+BowKnightSMS:
+#incbin "Dmp/Paladin (F) Bow {VelvetKitsune, Leif, RobertFPY}-stand.dmp"
+
+ALIGN 4
+BowKnightMMS:
+#incbin "Dmp/Paladin (F) Bow {VelvetKitsune, Leif, RobertFPY}-walk.dmp"
+
+StandingMapSprite(LanceKnightMapSprite,MapSprite16x32,LanceKnightSMS)
+MovingMapSprite(LanceKnight, $1C3D7C, LanceKnightMMS)
+
+ALIGN 4
+LanceKnightSMS:
+#incbin "Dmp/Duke Knight (U) {Leo_Link, DerTheVaporeon}-stand.dmp"
+
+ALIGN 4
+LanceKnightMMS:
+#incbin "Dmp/Duke Knight (U) {Leo_Link, DerTheVaporeon}-walk.dmp"
+
+StandingMapSprite(AxeKnightMapSprite,MapSprite16x32,AxeKnightSMS)
+MovingMapSprite(AxeKnight, $1C3D7C, AxeKnightMMS)
+
+ALIGN 4
+AxeKnightSMS:
+#incbin "Dmp/Great Knight (U) Axe {Leo_Link, DerTheVaporeon}-stand.dmp"
+
+ALIGN 4
+AxeKnightMMS:
+#incbin "Dmp/Great Knight (U) Axe {Leo_Link, DerTheVaporeon}-walk.dmp"
+

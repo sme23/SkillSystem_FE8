@@ -109,10 +109,14 @@
 #define Warrior_FClassCard 0x124
 #define Sniper_FClassCard 0x125
 #define BombardierClassCard 0x126
-#define DragoonClassCard 0x127
+#define SwordKnightClassCard 0x127
+#define DragoonClassCard SwordKnightClassCard
 #define DracoknightClassCard 0x128
 #define FalcoknightClassCard 0x129
 #define Assassin_FClassCard 0x12a
+#define LanceKnightClassCard 0x12b
+#define AxeKnightClassCard 0x12c
+#define BowKnightClassCard 0x12d
 
 // temporary
 #define AdventurerClassCard 0x79
