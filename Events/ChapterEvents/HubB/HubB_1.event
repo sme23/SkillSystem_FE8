@@ -59,8 +59,10 @@ UNIT Indio Shaman 0 Level(1, Ally, False) [18,3] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT
 
 AntlionsInitial:
-UNIT Kiril MasterNinja 0 Level(5,Enemy,False) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] AttackWhenInRangeAI
-
+//boss squad
+UNIT Kiril MasterNinja 0 Level(5,Enemy,False) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] GroupOneAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [7,21] 0 0 0 0 [Crusher] GroupOneAI
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [10,21] 0 0 0 0 [Pike] GroupOneAI
 //turn 1
 UNIT Antlion Mercenary 0 Level(9, Enemy, True) [11,3] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Antlion Brigand 0 Level(9, Enemy, True) [13,1] 0 0 0 0 [SteelAxe] ChargeAI
@@ -76,9 +78,34 @@ UNIT Antlion Brigand 0 Level(9, Enemy, True) [3,6] 0 0 0 0 [SteelAxe] AttackWhen
 //nw chest room
 UNIT Antlion Soldier 0 Level(9, Enemy, True) [2,1] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Antlion Soldier 0 Level(9, Enemy, True) [5,1] 0 0 0 0 [SteelLance] ChargeAI
+//sw chest room
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [0,15] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [1,15] 0 0 0 0 [Swordreaver] ChargeAI
+UNIT
+
+DmitrSpawn:
+UNIT Dmitr Brigand 0 Level(9, Ally, False) [15,3] 0 0 0 0 [Bloodaxe, Vulnerary] NoAI
 UNIT
 
 BeginningScene:
+CAMERA [12, 0]
+LOAD1 1 DmitrSpawn
+TEXTSTART
+TEXTSHOW ImDmitr
+TEXTEND
+CAMERA [6, 17]
+CURSOR_FLASHING [9, 20]
+STAL 60
+REMOVE_CURSORS 
+TEXTSTART
+TEXTSHOW KirilTakesNotice
+TEXTEND
+CAMERA [12, 0]
+CURSOR_FLASHING [15, 3]
+STAL 60
+TEXTSTART
+TEXTSHOW LuaResponds
+TEXTEND
 LOAD1 1 AntlionsInitial
 GotoPrepScreen
 NoFade 

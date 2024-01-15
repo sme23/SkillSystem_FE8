@@ -7,3 +7,12 @@ the ruins collapse.[X]
 
 ## HubB_1GoalWindow
 Rout enemy[X]
+
+## ImDmitr
+i'm dmitr[X]
+
+## KirilTakesNotice
+aw hell naw intruders[X]
+
+## LuaResponds
+cue preps[X]
