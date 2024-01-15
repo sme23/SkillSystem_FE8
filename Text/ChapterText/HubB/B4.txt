@@ -1,8 +1,33 @@
 ## HubB_4Title
-Hub B-4[X]
+Hub B-4 - Town Under Thumb [X]
 
 ## HubB_4StatusObjective
-Something[X]
+Rout Bandits[X]
 
 ## HubB_4GoalWindow
-Something[X]
+Rout Bandits[X]
+
+## TutorialTextTemp
+Rout enemies in turn limit.[N]
+2 enemy recruitables.[A][X]
+
+## HubB_4BeginningScene1
+[R][LoadLua]
+[FL][LoadOrlando]
+[L][LoadPilar]
+[FR][LoadDesiderio][1LB]
+Finally![.4] I can see the gates.[A]
+
+[L][2LB]
+That's the annoying thing about inland towns,[.4][N]
+can't just park right in the middle.[A]
+
+[FL][3LB]
+Yes well, either way we're here now.[.4][N]
+Best look presentable and try and act[N]
+like we aren't pirates on the run.[A]
+Unfinished.[A][X]
+
+## LunarBladeText
+[LoadCurrent][1LB]
+Yeet.[A][X]

@@ -19,6 +19,8 @@
 //#define Lancereaver $12 
 #define Peacekeeper $d8
 
+#define LunarBlade $ED
+
 //LANCES
 #define Saunion $13
 //#define IronLance $14
@@ -89,6 +91,7 @@
 //#define Nosferatu $47
 //#define Eclipse 0x48
 #define Galestrike $dc
+#define Elsurge 0xE9
 
 //KNIVES
 #define IronKnife $bd
@@ -125,6 +128,7 @@
 #define ShoveGlove $d3
 #define Statuette $e5
 #define SwapShoes 0xF1
+#define IronShield 0xEA
 
 //Items
 

@@ -67,6 +67,9 @@
 #define YaoguaiMug $31
 #define MrMistMug $31
 
+// B-4 Placeholders
+#define JavierMug $2F
+
 
 //CLASS CARDS
 

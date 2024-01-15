@@ -11,7 +11,7 @@ Go to B-3?[N]
 [No][X]
 
 ## HubB4Prompt
-Go to B-4?[N]
+Take Orlando's suggestion?[N]
 [No][X]
 
 ## HubB5Title
@@ -28,6 +28,71 @@ Loot: Tome and staff users will benefit.[X]
 
 ## HubB5Confirm
 Seek the Sapphire?[X]
+
+## HubB4Pitch
+[ML][LoadOrlando]
+[MR][LoadLua]
+[ML][1LB]
+Ah! Lua,[.4] have you got a moment?[A]
+
+[MR][2LB]
+Sure, not much else to do[N]
+but watch the clouds roll here.[A]
+
+[ML][3LB]
+We're not too far off of one of[N]
+the more substantial towns out[N]
+here in this wasteland.[AN]
+Perhaps while we're still in a[Beat][N]
+somewhat civilised land it might[N]
+be worth visiting for trade and supplies.[A]
+
+[MR][2LB]
+Is that right Orlando?[AN]
+Hm,[.4] I suppose it would be prudent.[AN]
+after all who knows how long it'll be[N]
+before we see anywhere with real trade again.[AN]
+Of course you and I know this is still[N]
+quite far out from the usual trade routes.[AN]
+They'll probably want to fleece us for[N]
+all we're worth especially given our status.[A]
+
+[ML][3LB]
+Come now Lua we're both veterans of the[N]
+merchants guild,[.4] I'm sure we can[N]
+swindle ourselves a good deal.[AN]
+Besides it would certainly make for[N]
+a good break from all this endless fighting.[A]
+
+[MR]
+Hmm[Beat] I suppose so.[X]
+
+## HubB4Accepted
+[ML][LoadOrlando]
+[MR][LoadLua][2LB]
+Alright Orlando you made your case.[A]
+We could do with something less[Beat] Intensive[N]
+and we'll definetly need some money and gear.[A]
+
+[ML][1LB]
+Excellent, I'll make preparations right away.[A][X]
+
+## HubB4Rejected
+[ML][LoadOrlando]
+[MR][LoadLua][2LB]
+Maybe not right now Orlando.[AN]
+I think we have more pressing matters[N]
+but I'll think about it.[A][X]
+
+## HubB4Objective
+Objective: Rout[X]
+
+## HubB4Units
+Units: x (Fighter), y (Thief)[X]
+
+## HubB4Loot
+Loot: Stuff![X]
+
 
 ## HubB5Prompt
 Go to B-5?[N]

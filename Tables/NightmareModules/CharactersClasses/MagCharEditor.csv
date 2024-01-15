@@ -28,8 +28,8 @@ None,0,0
 0x1A Magdalena,(-2),40
 0x1B -,0,50
 0x1C Rennac,3,35
-0x1D Duessel,0,5
-0x1E Myrrh,2,85
+0x1D Adrian,1,10
+0x1E Lexa,1,25
 0x1F Knoll,10,50
 0x20 Joshua,0,20
 0x21 Syrene,4,20
@@ -216,7 +216,7 @@ Wraith (Axes),0,0
 0,0,0
 0,0,0
 Grado Soldier (Special),0,0
-Grado Soldier 1 (Normal),0,0
+0xD( Javier,3,20
 Grado Soldier 2,0,0
 Grado Soldier 3,0,0
 Grado Soldier 4,0,0
