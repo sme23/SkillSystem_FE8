@@ -116,7 +116,7 @@ Bartz[X]
 ## BartzDesc
 Deserter[N]
 A soldier turned to a life of piracy.[N]
-Fights with no regards for honour.[X]
+Fights with no regard for honour.[X]
 
 ## JaimeName
 Jaime[X]
@@ -731,3 +731,34 @@ Thais[X]
 Barkeep[N]
 A full bottle, a lively counter, and[N]
 a place of joy in tragic times.[X]
+
+## B4BanditsName
+Bandit[X]
+
+## B4BanditsDesc
+Members of a gang running this town.[N]
+Little more than boatless pirates.[X]
+
+## JavierName
+Javier[X]
+
+## JavierDesc
+Extortionist[N]
+Cutthroat ruler of a mob of bandits.[N]
+Rules over this town with an iron fist.[X]
+
+## AdrianName
+Adrian[X]
+
+## AdrianDesc
+Desperado[N]
+A wandering renegade turned to banditry[N]
+and a merciless bully, but good in a fight.[X]
+
+## LexaName
+Lexa[X]
+
+## LexaDesc
+Desperado[N]
+A skilled blade who fights using cheap[N]
+tricks. Her foes lay dead nontheless.[X]

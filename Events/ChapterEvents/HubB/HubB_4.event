@@ -1,59 +1,179 @@
 EventPointerTable(HubB_4EventsID, PointerList)
 
 PointerList:
-POIN TurnBasedEvents
-POIN CharacterBasedEvents
-POIN LocationBasedEvents
-POIN MiscBasedEvents
-POIN Dunno1 Dunno2 Dunno3 Tutorial
-POIN Traps1 Traps2
-POIN Units1 Units1
-POIN $0 $0 $0 
-POIN $0 $0 $0
-POIN BeginningScene EndingScene
+	POIN TurnBasedEvents
+	POIN CharacterBasedEvents
+	POIN LocationBasedEvents
+	POIN MiscBasedEvents
+	POIN Dunno1 Dunno2 Dunno3 Tutorial
+	POIN Traps1 Traps2
+	POIN Units1 Units1
+	POIN $0 $0 $0 
+	POIN $0 $0 $0
+	POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-END_MAIN
+	TurnEventPlayer(0, TurnLimit, 14)
+	END_MAIN
 
 CharacterBasedEvents:
-END_MAIN
+	CharacterEventBothWays(7, AdrianLexaRecruitment, Lua, Adrian)
+	CharacterEventBothWays(7, AdrianLexaRecruitment, Lua, Lexa)
+	CharacterEventBothWays(7, AdrianLexaRecruitment, Desiderio, Adrian)
+	CharacterEventBothWays(7, AdrianLexaRecruitment, Desiderio, Lexa)
+	CharacterEventBothWays(7, AdrianLexaRecruitment, Orlando, Adrian)
+	CharacterEventBothWays(7, AdrianLexaRecruitment, Orlando, Lexa)
+	END_MAIN
 
 LocationBasedEvents:
-END_MAIN
+	AREA 12 GuidingMoonlight [1,0][2,1]
+	END_MAIN
 
 MiscBasedEvents:
-CauseGameOverIfLordDies
-END_MAIN
+	DefeatAll(EndingScene)
+	CauseGameOverIfLordDies
+	END_MAIN
 
 Traps1:
-ENDTRAP
-ALIGN 4
+	ENDTRAP
+	ALIGN 4
 
 Traps2:
-ENDTRAP
-ALIGN 4
+	ENDTRAP
+	ALIGN 4
 
-Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [10,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT
+//Flags Used
+//7 (Recruitment) 
+//12 (LunarBlade)
 
-BeginningScene:
-GotoPrepScreen
-NoFade 
-ENDA
+Dunno:
+	Dunno1: //down here because nothing here is really used
+	END_MAIN
 
-EndingScene:
-NoFade
-ENDA
+	Dunno2:
+	END_MAIN
 
-Dunno1: //down here because nothing here is really used
-END_MAIN
+	Dunno3:
+	END_MAIN
 
-Dunno2:
-END_MAIN
+	Tutorial:
+	END_MAIN
 
-Dunno3:
-END_MAIN
+MainEvents:
+	BeginningScene:
+		Load1 1 RecruitableUnits
+		Load1 1 EnemyUnits1
+		Load1 1 EnemyUnits2
+		Load1 1 EnemyUnits3
+		Load1 1 JavierUnits
+		GotoPrepScreen
+		NoFade 
+		ENDA
 
-Tutorial:
-END_MAIN
+	EndingScene:
+		NoFade
+		ENDA
+
+GuidingMoonlight:
+	Text(LunarBladeText)
+	GiveItem(LunarBlade,0xFFFF)
+	// Intended to be a one off easter egg item
+	NoFade
+	ENDA
+
+TurnLimit:
+	CALL 0x592104
+	NoFade
+	ENDA
+
+AdrianLexaRecruitment:
+	MUSS WelcomeAboardMateyID
+	SetAI(Adrian,0,0,0,0)
+	SetAI(Lexa,0,0,0,0)
+	Text(ChA4JuanRecruitText)
+	CUSA Adrian
+	CUSA Lexa
+	MURE 2
+	NoFade
+	ENDA
+
+UnitPlacement:
+
+	Units1:
+		UNIT Lua Captain 0 Level(10,Ally,False) [13,23] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [16,23] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [14,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [15,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [13,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [16,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [18,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [11,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [14,27] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [15,27] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [13,26] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [16,26] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [12,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT Lua Captain 0 Level(10,Ally,False) [17,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		UNIT
+
+	JavierUnits:
+		UNIT B4Bandit Deserter 0 Level(11,Enemy,True) [24,4] 0 0 0 0 [SteelLance] AttackWhenInRangeAI
+		UNIT B4Bandit Archer 0 Level(11,Enemy,True) [24,2] 0 0 0 0 [Longbow] AttackWhenInRangeAI
+		UNIT B4Bandit Ninja 0 Level(11,Enemy,True) [28,3] 0 0 0 0 [SteelDagger,Stiletto] AttackWhenInRangeAI
+		UNIT B4Bandit Fighter 0 Level(11,Enemy,True) [28,6] 0 0 0 0 [Crusher] AttackWhenInRangeAI
+		UNIT B4Bandit Vanguard 0 Level(11,Enemy,True) [20,4] 0 0 0 0 [SteelAxe,Javelin] BossAI
+		UNIT B4Bandit Vanguard 0 Level(11,Enemy,True) [21,5] 0 0 0 0 [SteelAxe,Javelin] BossAI
+		UNIT B4Bandit Vanguard 0 Level(11,Enemy,True) [20,6] 0 0 0 0 [SteelAxe,Javelin] BossAI
+		UNIT B4Bandit Warden 0 Level(11,Enemy,True) [25,10] 0 0 0 0 [IronBlade,Javelin] BossAI
+		UNIT B4Bandit Warden 0 Level(11,Enemy,True) [26,10] 0 0 0 0 [IronBlade,Javelin] BossAI
+		UNIT Javier Hero 0 Level(15,Enemy,False) [26,2] 0 0 0 0 [SilverSword,HideShield,RedGem] AttackWhenInRangeAI
+		UNIT
+
+	EnemyUnits1:
+		UNIT B4Bandit Mercenary 0 Level(10,Enemy,True) [11,20] 0 0 0 0 [SteelSword] ChargeAI
+		UNIT B4Bandit Deserter 0 Level(10,Enemy,True) [13,18] 0 0 0 0 [Pike] ChargeAI
+		UNIT B4Bandit Fighter 0 Level(10,Enemy,True) [18,19] 0 0 0 0 [SteelAxe] ChargeAI
+		UNIT B4Bandit Brigand 0 Level(10,Enemy,True) [20,21] 0 0 0 0 [IronAxe] ChargeAI
+		UNIT B4Bandit Mercenary 0 Level(10,Enemy,True) [17,21] 0 0 0 0 [IronBlade] ChargeAI
+		UNIT B4Bandit Vanguard 0 Level(11,Enemy,True) [9,22] 0 0 0 0 [SteelAxe,Javelin] ChargeAI
+		UNIT B4Bandit Gunner 0 Level(10,Enemy,True) [6,23] 0 0 0 0 [IronMusket] ChargeAI
+		UNIT B4Bandit Ninja 0 Level(10,Enemy,True) [7,20] 0 0 0 0 [SteelDagger] ChargeAI
+		UNIT B4Bandit Warden 0 Level(11,Enemy,True) [26,23] 0 0 0 0 [IronBlade,HideShield] AttackWhenInRangeAI
+		UNIT
+
+	EnemyUnits2:
+		UNIT B4Bandit Brigand 0 Level(10,Enemy,True) [18,14] 0 0 0 0 [SlimAxe] AttackInTwoAI
+		UNIT B4Bandit Fighter 0 Level(10,Enemy,True) [8,13] 0 0 0 0 [SteelAxe] AttackInTwoAI
+		UNIT B4Bandit Warden 0 Level(11,Enemy,True) [3,18] 0 0 0 0 [SteelBlade,Javelin] AttackWhenInRangeAI
+		UNIT B4Bandit Cavalier 0 Level(10,Enemy,True) [1,13] 0 0 0 0 [IronLance] AttackInTwoAI
+		UNIT B4Bandit Mercenary 0 Level(10,Enemy,True) [5,11] 0 0 0 0 [SteelSword] AttackInTwoAI
+		UNIT B4Bandit GriffinRider 0 Level(10,Enemy,True) [16,13] 0 0 0 0 [SteelLance] AttackWhenInRangeAI
+		UNIT B4Bandit Shaman 0 Level(10,Enemy,True) [7,15] 0 0 0 0 [Thunder] AttackWhenInRangeAI
+		UNIT B4Bandit Archer 0 Level(10,Enemy,True) [19,12] 0 0 0 0 [Longbow] AttackWhenInRangeAI
+		UNIT B4Bandit Mercenary 0 Level(10,Enemy,True) [27,13] 0 0 0 0 [SteelBlade] AttackInTwoAI
+		UNIT B4Bandit Thief 0 Level(10,Enemy,True) [23,11] 0 0 0 0 [IronDagger] AttackInTwoAI
+		UNIT B4Bandit Myrmidon 0 Level(10,Enemy,True) [21,17] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+		UNIT B4Bandit Monk 0 Level(10,Enemy,True) [25,18] 0 0 0 0 [Thunder] AttackInTwoAI
+		UNIT B4Bandit Champion 0 Level(13,Enemy,True) [21,14] 0 0 0 0 [SteelLance,HideShield,TealGem,IronShield] AttackWhenInRangeAI //Change for Iron Shield
+		UNIT
+
+	EnemyUnits3:
+		UNIT B4Bandit AxeCav 0 Level(10,Enemy,True) [12,13] 0 0 0 0 [IronAxe] AttackWhenInRangeAI
+		UNIT B4Bandit Deserter 0 Level(10,Enemy,True) [3,9] 0 0 0 0 [Pike] AttackInTwoAI
+		UNIT B4Bandit Thief 0 Level(10,Enemy,True) [6,8] 0 0 0 0 [SteelDagger] AttackWhenInRangeAI
+		UNIT B4Bandit Vanguard 0 Level(11,Enemy,True) [9,7] 0 0 0 0 [Oversize] AttackWhenInRangeAI
+		UNIT B4Bandit Mercenary 0 Level(10,Enemy,True) [8,4] 0 0 0 0 [Onigiri] AttackInTwoAI
+		UNIT B4Bandit PegasusRider 0 Level(10,Enemy,True) [0,2] 0 0 0 0 [Wingclipper] AttackInTwoAI
+		UNIT B4Bandit PegasusRider 0 Level(10,Enemy,True) [7,0] 0 0 0 0 [SteelSword] AttackInTwoAI
+		UNIT B4Bandit Bombardier 0 Level(13,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] AttackInTwoAI
+		UNIT B4Bandit Mage 0 Level(10,Enemy,True) [16,6] 0 0 0 0 [Surge,Elsurge] AttackWhenInRangeAI //Change for Elsurge
+		UNIT B4Bandit Warrior 0 Level(13,Enemy,True) [14,7] 0 0 0 0 [SilverAxe] AttackWhenInRangeAI
+		UNIT
+
+
+	RecruitableUnits:
+		UNIT Adrian Fighter 0 Level(12,Enemy,False) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] AttackWhenInRangeAI
+		UNIT Lexa Myrmidon_F 0 Level(12,Enemy,False) [13,10] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+		UNIT
+
+//End
