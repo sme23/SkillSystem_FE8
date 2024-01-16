@@ -178,7 +178,7 @@ UnitPlacement:
 		UNIT B4Bandit Mercenary 	Javier Level(10,Enemy,True) [5,11] 0 0 0 0 [SteelSword] AttackInTwoAI
 		UNIT B4Bandit GriffinRider 	Javier Level(10,Enemy,True) [16,13] 0 0 0 0 [SteelLance] AttackWhenInRangeAI
 		UNIT B4Bandit Shaman 		Javier Level(10,Enemy,True) [7,15] 0 0 0 0 [Thunder] AttackWhenInRangeAI
-		UNIT B4Bandit Archer 		Javier Level(10,Enemy,True) [19,12] 0 0 0 0 [Longbow] AttackWhenInRangeAI
+		UNIT B4Bandit Hunter 		Javier Level(10,Enemy,True) [19,12] 0 0 0 0 [Longbow,MiniBow] AttackWhenInRangeAI
 		UNIT B4Bandit Mercenary 	Javier Level(10,Enemy,True) [27,13] 0 0 0 0 [SteelBlade] AttackInTwoAI
 		UNIT B4Bandit Thief 		Javier Level(10,Enemy,True) [23,11] 0 0 0 0 [IronDagger] AttackInTwoAI
 		UNIT B4Bandit Myrmidon 		Javier Level(10,Enemy,True) [21,17] 0 0 0 0 [SteelSword] AttackWhenInRangeAI

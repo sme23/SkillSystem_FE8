@@ -4,6 +4,8 @@
 #include "Portraits/_PortraitInstaller.event"
 #include "BattleAnims/_MasterAnimationInstaller.event"
 #include "ClassCards/_MasterClassCardInstaller.event"
+#include "Palettes/Clear/Clear Old Palettes.event"
+#include "Palettes/Palette Setup.event"
 
 PUSH
 ORG 0x5B6BB4 //blue
