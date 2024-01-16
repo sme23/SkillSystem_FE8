@@ -12,6 +12,11 @@ PointerList:
 	POIN $0 $0 $0
 	POIN BeginningScene EndingScene
 
+//Flags Used
+//7 (Recruitment)
+//8-10 (Villages)
+//12 (LunarBlade)
+
 TurnBasedEvents:
 	TurnEventPlayer(0, TurnLimit, 14)
 	END_MAIN
@@ -26,10 +31,13 @@ CharacterBasedEvents:
 	END_MAIN
 
 LocationBasedEvents:
-	AREA 12 GuidingMoonlight [1,0][2,1]
+	Village(8,VillageA,14,4)
+	Village(9,VillageB,4,7)
+	Village(10,VillageC,25,16)
 	END_MAIN
 
 MiscBasedEvents:
+	AREA 12 GuidingMoonlight [1,0][2,1] // Intended to be a one off easter egg item
 	DefeatAll(EndingScene)
 	CauseGameOverIfLordDies
 	END_MAIN
@@ -41,10 +49,6 @@ Traps1:
 Traps2:
 	ENDTRAP
 	ALIGN 4
-
-//Flags Used
-//7 (Recruitment) 
-//12 (LunarBlade)
 
 Dunno:
 	Dunno1: //down here because nothing here is really used
@@ -66,8 +70,9 @@ MainEvents:
 		Load1 1 EnemyUnits2
 		Load1 1 EnemyUnits3
 		Load1 1 JavierUnits
+		Text(TutorialTextTemp)
 		GotoPrepScreen
-		NoFade 
+		NoFade
 		ENDA
 
 	EndingScene:
@@ -83,6 +88,30 @@ GuidingMoonlight:
 
 TurnLimit:
 	CALL 0x592104
+	NoFade
+	ENDA
+
+VillageA:
+	SetBackground(HouseBG)
+	Text(VillageAText)
+	CALL $9EE2C4
+	GiveItem(HuntersMark,0xFFFF)
+	NoFade
+	ENDA
+
+VillageB:
+	SetBackground(Salehs_House)
+	Text(VillageBText)
+	CALL $9EE2C4
+	GiveItem(Sleep,0xFFFF)
+	NoFade
+	ENDA
+
+VillageC:
+	SetBackground(Salehs_House)
+	Text(VillageCText)
+	CALL $9EE2C4
+	GiveItem(SpdTonic,0xFFFF)
 	NoFade
 	ENDA
 
@@ -154,7 +183,7 @@ UnitPlacement:
 		UNIT B4Bandit Thief 0 Level(10,Enemy,True) [23,11] 0 0 0 0 [IronDagger] AttackInTwoAI
 		UNIT B4Bandit Myrmidon 0 Level(10,Enemy,True) [21,17] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
 		UNIT B4Bandit Monk 0 Level(10,Enemy,True) [25,18] 0 0 0 0 [Thunder] AttackInTwoAI
-		UNIT B4Bandit Champion 0 Level(13,Enemy,True) [21,14] 0 0 0 0 [SteelLance,HideShield,TealGem,IronShield] AttackWhenInRangeAI //Change for Iron Shield
+		UNIT B4Bandit Champion 0 Level(13,Enemy,True) [21,14] 0 0 0 0 [SteelLance,IronShield,TealGem] AttackWhenInRangeAI
 		UNIT
 
 	EnemyUnits3:
@@ -166,7 +195,7 @@ UnitPlacement:
 		UNIT B4Bandit PegasusRider 0 Level(10,Enemy,True) [0,2] 0 0 0 0 [Wingclipper] AttackInTwoAI
 		UNIT B4Bandit PegasusRider 0 Level(10,Enemy,True) [7,0] 0 0 0 0 [SteelSword] AttackInTwoAI
 		UNIT B4Bandit Bombardier 0 Level(13,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] AttackInTwoAI
-		UNIT B4Bandit Mage 0 Level(10,Enemy,True) [16,6] 0 0 0 0 [Surge,Elsurge] AttackWhenInRangeAI //Change for Elsurge
+		UNIT B4Bandit Mage 0 Level(10,Enemy,True) [16,6] 0 0 0 0 [Elsurge] AttackWhenInRangeAI
 		UNIT B4Bandit Warrior 0 Level(13,Enemy,True) [14,7] 0 0 0 0 [SilverAxe] AttackWhenInRangeAI
 		UNIT
 

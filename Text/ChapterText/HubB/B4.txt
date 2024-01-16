@@ -8,6 +8,7 @@ Rout Bandits[X]
 Rout Bandits[X]
 
 ## TutorialTextTemp
+[MidLeft][LoadLua]
 Rout enemies in turn limit.[N]
 2 enemy recruitables.[A][X]
 
@@ -29,5 +30,17 @@ like we aren't pirates on the run.[A]
 Unfinished.[A][X]
 
 ## LunarBladeText
+[LoadCurrent][1LB]
+Yeet.[A][X]
+
+## VillageAText
+[LoadCurrent][1LB]
+Yeet.[A][X]
+
+## VillageBText
+[LoadCurrent][1LB]
+Yeet.[A][X]
+
+## VillageCText
 [LoadCurrent][1LB]
 Yeet.[A][X]

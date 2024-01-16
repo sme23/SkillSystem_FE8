@@ -60,6 +60,12 @@ Peacekeeper[X]
 ## PeacekeeperDesc
 Can't be countered.[X]
 
+## LunarBladeName
+Lunar Blade[X]
+
+## LunarBladeDesc
+An arcane blade glowing with soft light.[X]
+
 //LANCES
 
 ## SaunionName
@@ -233,6 +239,12 @@ Gale Strike[X]
 ## GalestrikeDesc
 Refreshes once per turn on a kill.[X]
 
+## ElsurgeName
+Elsurge[X]
+
+## ElsurgeDesc
+A short-range blast that cannot miss[X]
+
 
 //KNIVES
 
@@ -335,6 +347,13 @@ Hide Shield[X]
 
 ## HideShieldDesc
 Grants +3 Def.[X]
+
+
+## IronShieldName
+Iron Shield[X]
+
+## IronShieldDesc
+Grants +5 Def but -2 Spd.[X]
 
 ## GlassShieldName
 Glass Shield[X]

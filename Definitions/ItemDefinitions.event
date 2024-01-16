@@ -19,7 +19,7 @@
 //#define Lancereaver $12 
 #define Peacekeeper $d8
 
-#define LunarBlade $ED
+#define LunarBlade $EB
 
 //LANCES
 #define Saunion $13

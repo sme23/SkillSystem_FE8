@@ -5,6 +5,7 @@ ALIGN 4
 ALIGN 4
 EquipmentList:
 BYTE HideShield
+BYTE IronShield
 BYTE GlassShield
 BYTE HexlockShield
 BYTE AshArrow

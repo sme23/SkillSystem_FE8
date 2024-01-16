@@ -69,7 +69,8 @@
 
 // B-4 Placeholders
 #define JavierMug $2F
-
+#define AdrianMug $25
+#define LexaMug $26
 
 //CLASS CARDS
 

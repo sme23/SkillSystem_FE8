@@ -250,3 +250,19 @@ JavierMugData:
 #incbin "Dmp/Javier_minimug.dmp"
 setMugEntry(JavierMug, JavierMugData, 2, 4, 3, 2)
 
+ALIGN 16
+AdrianMugData:
+#incbin "Dmp/Adrian_mug.dmp"
+#incbin "Dmp/Adrian_frames.dmp"
+#incbin "Dmp/Adrian_palette.dmp"
+#incbin "Dmp/Adrian_minimug.dmp"
+setMugEntry(AdrianMug, AdrianMugData, 2, 5, 3, 3)
+
+ALIGN 16
+LexaMugData:
+#incbin "Dmp/Lexa_mug.dmp"
+#incbin "Dmp/Lexa_frames.dmp"
+#incbin "Dmp/Lexa_palette.dmp"
+#incbin "Dmp/Lexa_minimug.dmp"
+setMugEntry(LexaMug, LexaMugData, 2, 6, 3, 4)
+
