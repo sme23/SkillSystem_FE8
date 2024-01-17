@@ -8,6 +8,9 @@ the ruins collapse.[X]
 ## HubB_1GoalWindow
 Rout enemy[X]
 
+## StartingScene
+text[X]
+
 ## ImDmitr
 i'm dmitr[X]
 

@@ -88,7 +88,14 @@ UNIT Dmitr Brigand 0 Level(9, Ally, False) [15,3] 0 0 0 0 [Bloodaxe, Vulnerary] 
 UNIT
 
 BeginningScene:
+SetBackground(Desert)
+TEXTSTART
+TEXTSHOW StartingScene
+TEXTEND
+FADI 16
+CLEAN
 CAMERA [12, 0]
+FADU 16
 LOAD1 1 DmitrSpawn
 TEXTSTART
 TEXTSHOW ImDmitr
@@ -103,6 +110,7 @@ TEXTEND
 CAMERA [12, 0]
 CURSOR_FLASHING [15, 3]
 STAL 60
+REMOVE_CURSORS 
 TEXTSTART
 TEXTSHOW LuaResponds
 TEXTEND
