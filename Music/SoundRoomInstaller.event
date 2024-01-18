@@ -51,6 +51,7 @@ SoundRoomEntry(MeetTheCrewID, 0, SongName_MeetTheCrew)
 SoundRoomEntry(OutIntoTheOpenSkyID, 0, SongName_OutIntoTheOpenSky)
 SoundRoomEntry(LastDanceSinkingShipID, 0, SongName_LastDanceSinkingShip)
 SoundRoomEntry(WellAndTrulyLostID, 0, SongName_WellAndTrulyLost)
+SoundRoomEntry(ToTheSkiesID, 0, SongName_ToTheSkies)
 SoundRoomTerminator
 
 

@@ -1600,8 +1600,8 @@ cannot counter, this unit doubles.[X]
 
 ## SD_SuppressiveFire
 Suppressive Fire: If an ally attacks[N]
-an enemy in this unit's attack range,[N]
-ally ignores enemy's AVO.[X]
+an enemy within range of this unit's[N]
+weapon, ally ignores enemy's AVO.[X]
 
 ## SD_SurpriseAttack
 Surprise Attack: If foe is unable[N]
@@ -1636,9 +1636,9 @@ combat, next ally's Atk against the same[N]
 target this turn increases by unit Mag.[X]
 
 ## SD_Underhanded
-Underhanded: When unit has weapon[N]
-triangle advantage, +15 crit and[N]
-+30 crit avoid.[X]
+Underhanded: If opponent is at weapon[N]
+triangle disadvantage, this unit gains[N]
+15 Crit and ignores 50% of defenses.[X]
 
 ## SD_LiquidCourage
 Liquid Courage: Once per turn, unit[N]

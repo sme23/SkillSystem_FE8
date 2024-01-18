@@ -142,6 +142,12 @@ SongTable(WellAndTrulyLostID,WellAndTrulyLost,MapMusicGroup)
 #include "songs/map/WellAndTrulyLost.event"
 }
 
+// 27 - To The Skies
+{
+SongTable(ToTheSkiesID,ToTheSkies,MapMusicGroup)
+#include "songs/map/ToTheSkies.event"
+}
+
 // --------------- SONGS: GUI AND SFX ---------------
 
 // "GUI" refers to in-game jingles such as Level Up!
