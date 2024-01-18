@@ -30,3 +30,8 @@ SnapshotStatBonuses:
 StatBonus(0,0,0,0,2,0,0,0,0,0)  
 // StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB)
 
+ALIGN 4
+IronShieldStatBonuses:
+StatBonus(0,0,0,0,(-2),5,0,0,0,0) 
+// StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB)
+
