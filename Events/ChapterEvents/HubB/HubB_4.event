@@ -93,6 +93,7 @@ MainEvents:
 		//Load1 1 JavierUnits
 		Load1 1 TestUnit
 		Text(TutorialTextTemp)
+		ENUT 0x13
 		GotoPrepScreen
 		NoFade
 		ENDA
@@ -176,21 +177,21 @@ AdrianLexaRecruitment:
 
 AdrianRevengeQuote: //Doesn't seem to work
 	//Triggered by flag 13 aka Lexa death OR recruitment
-	/*CHECK_EXISTS Lexa
+	CHECK_EXISTS Lexa
 	BNE 1 0xC 0x0 //If lexa does not exist continue otherwise end
 		CHECK_EXISTS Adrian
-		BEQ 1 0xC 0x0 //If adrian does not exist end otherwise continue/*
+		BEQ 1 0xC 0x0 //If adrian does not exist end otherwise continue
 			CAMERA Adrian
 			Text(AdrianAvengeText)
 			ENUT 0x7 //Prevents recruiting the characters
-	//LABEL 1
+	LABEL 1
 	NoFade
 	ENDA
 	
 LexaRevengeQuote: //Doesn't seem to work
 	//Triggered by flag 12 aka Adrian death OR recruitment
 	CHECK_EXISTS Adrian
-	BNE 1 0xC 0x0 //If Adrian does not exist continue otherwise end
+	BNE 2 0xC 0x0 //If Adrian does not exist continue otherwise end
 		CHECK_EXISTS Lexa
 		BEQ 1 0xC 0x0 //If Lexa does not exist end otherwise continue
 			CAMERA Lexa
