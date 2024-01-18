@@ -19,9 +19,9 @@ DeathQuote(Avocado, AllChapters, 0, AvocadoDQ)
 DeathQuote(Magdalena, HubB_2, 0x65, MagdalenaDQ)
 DeathQuote(Magdalena, AllChapters, 0, MagdalenaDQ)
 //Adrian and Lexa can die as enemies and have seperate quotes for event purposes
-DeathQuote(Adrian, HubB_4, 0x12, AdrianDQB_4)
+DeathQuote(Adrian, HubB_4, 0xC, AdrianDQB_4)
 DeathQuote(Adrian, AllChapters, 0, AdrianDQ)
-DeathQuote(Lexa, HubB_4, 0x13, LexaDQB_4)
+DeathQuote(Lexa, HubB_4, 0xD, LexaDQB_4)
 DeathQuote(Lexa, AllChapters, 0, LexaDQ)
 //DeathQuote()
 
