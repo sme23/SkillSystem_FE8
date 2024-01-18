@@ -1,3 +1,24 @@
+// Hub B Script
+
+// Scene 1
+// Having fleed from Elodia's trap, Lua and the gang fly with their newly acquired ship with a sense of purpose.
+// First, they stop by the port one last time to see if they can safely acquire their third ship before T.O.R.C.H comes to catch them.
+// They are surprised to find Ida there readying their ship for takeoff, and Lua initially believes she's taking it for herself.
+// Ida tells her off and lets her know that she saw some suspicious characters (pirates) around the boatyard, which Ida chased off.
+// This led her to believe that trouble was coming for Lua's crew, but she believed that she'd make her way out of it anyway.
+// So, she got their ship ready and waited, planning to turn Lua in on the spot if she didn't keep Rahel safe.
+// Rahel apologizes to Ida, saying she had to defend herself against T.O.R.C.H, and that she'd bring shame to Ida's name if she stayed.
+// Ida at first moves to admonish her, but she instead comforts Rahel, telling her that her surviving means more than anything else.
+// She tells Rahel to travel with Lua's crew and see the world, as she's spent long enough milling about the port following after her shadow.
+// Rahel tentatively agrees, but tells Ida she'll come right back to take over the guild once it's all blown over, since Ida's too old for that.
+// Ida starts to chew her out, but Lua thanks her for all the help she's given her and her crew over the last few months they've haunted Port Greagor.
+// She then says that they really have to go before "The Pirate Hunter" pursues them. Rahel and Ida share a heartfelt goodbye (think Sanji and Zeff).
+// As Rahel tears up on the deck, she tells Lua that this all better be worth what she's lost; Lua assures her that it will be.
+
+// Scene 2
+// A couple days pass, and Pilar informs Lua that there's no sign of pursuers following them. Lua exhales, and tells Pilar to gather the crew.
+
+
 ## HubB1Prompt
 Go to B-1?[N]
 [No][X]
