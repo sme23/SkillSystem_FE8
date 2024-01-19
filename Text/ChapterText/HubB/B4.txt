@@ -194,13 +194,13 @@ Yes.[A][X]
 
 ## AdrianAvengeText
 [L][LoadAdrian][2LB]
-L-lexa?![.4] You bastards![N]
-Forget joining you, I'm gonna bury you!.[A][X]
+L-Lexa?![.4] You bastards![.4][N]
+Forget joining you,[.4] I'm gonna bury you![A][X]
 
 ## LexaAvengeText
 [L][LoadLexa][2LB]
-Adrian?! No, damnit you idiot[Beat][N]
-If that's how you wanna play it then!.[A][X]
+Adrian?![.4] No,[.4] damnit you idiot[Beat][.4][N]
+If that's how you wanna play it then![A][X]
 
 
 

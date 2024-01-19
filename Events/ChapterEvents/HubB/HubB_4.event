@@ -17,7 +17,8 @@ PointerList:
 //8-10 (Villages)
 //11 (LunarBlade)
 //12-13 (Avenge Quotes)
-//14-16 (Boss Quotes (15/15 Not done yet))
+//14-16 (Boss Quotes (15/16 Not done yet))
+//17 (Seperate flag for keeping track of one or both units being dead)
 
 
 //Eventing Todo List
@@ -26,17 +27,18 @@ PointerList:
 // - Recruitment Event (Disables Death Quotes) (X)
 // - Revenge Quotes (Disables Recruitment (flag 7)) (X)
 // - Recruitment Convos
+// - Village Dialogue
 
 //Feedback Todo List:
 //Javier Autolevel True
 //B4Bandit Base Level 1
 //Stealables Javier
-//GroupAI Siblings + MoveIn2 Warrior
+//GroupAI Siblings + MoveIn2 Warrior (X)
 //Gets a bit dead later on
 
 TurnBasedEvents:
 	TurnEventPlayer(0, TurnLimit, 14)
-	TurnEventPlayer(0, AdrianLexaWarning, 4)
+	TurnEventPlayer(17, AdrianLexaWarning, 4)
 	TurnEventPlayer(0, HurryWarning, 9)
 	END_MAIN
 
@@ -57,8 +59,8 @@ LocationBasedEvents:
 
 MiscBasedEvents:
 	AREA 11 GuidingMoonlight [1,0][2,1] // Intended to be a one off easter egg item
-	AFEV 0 LexaRevengeQuote	12
-	AFEV 0 AdrianRevengeQuote 13
+	AFEV 0 LexaRevengeQuote	0x0C
+	AFEV 0 AdrianRevengeQuote 0x0D
 	DefeatAll(EndingScene)
 	CauseGameOverIfLordDies
 	END_MAIN
@@ -93,7 +95,6 @@ MainEvents:
 		//Load1 1 JavierUnits
 		Load1 1 TestUnit
 		Text(TutorialTextTemp)
-		ENUT 0x13
 		GotoPrepScreen
 		NoFade
 		ENDA
@@ -115,6 +116,7 @@ TurnLimit:
 	ENDA
 
 AdrianLexaWarning:
+	CAMERA Adrian
 	Text(AdrianLexaWarningText)
 	NoFade
 	ENDA
@@ -169,8 +171,9 @@ AdrianLexaRecruitment:
 		SetAI(Lexa,0,0,0,0)
 		CUSA Adrian
 		CUSA Lexa
-		ENUT 0x12
-		ENUT 0x13 //Disables their enemy death quotes
+		ENUT 12
+		ENUT 13 //Disables their enemy death quotes
+		ENUT 17 //Records recruitment or death
 		MURE 2
 		NoFade
 		ENDA
@@ -183,7 +186,9 @@ AdrianRevengeQuote: //Doesn't seem to work
 		BEQ 1 0xC 0x0 //If adrian does not exist end otherwise continue
 			CAMERA Adrian
 			Text(AdrianAvengeText)
-			ENUT 0x7 //Prevents recruiting the characters
+			ENUT 7 //Prevents recruiting the characters
+			ENUF 13 //Stops the event just playing forever
+			ENUT 17 //Records recruitment or death
 	LABEL 1
 	NoFade
 	ENDA
@@ -191,12 +196,14 @@ AdrianRevengeQuote: //Doesn't seem to work
 LexaRevengeQuote: //Doesn't seem to work
 	//Triggered by flag 12 aka Adrian death OR recruitment
 	CHECK_EXISTS Adrian
-	BNE 2 0xC 0x0 //If Adrian does not exist continue otherwise end
+	BNE 1 0xC 0x0 //If Adrian does not exist continue otherwise end
 		CHECK_EXISTS Lexa
 		BEQ 1 0xC 0x0 //If Lexa does not exist end otherwise continue
 			CAMERA Lexa
 			Text(LexaAvengeText)
-			ENUT 0x7 //Prevents recruiting the characters
+			ENUT 7 //Prevents recruiting the characters
+			ENUF 12 //Stops the event just playing forever
+			ENUT 17 //Records recruitment or death
 	LABEL 1
 	NoFade
 	ENDA
@@ -276,13 +283,14 @@ UnitPlacement:
 		UNIT B4Bandit PegasusRider 	Javier Level(10,Enemy,True) [7,0] 0 0 0 0 [SteelSword] AttackInTwoAI
 		UNIT B4Bandit Bombardier 	Javier Level(13,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] AttackInTwoAI
 		UNIT B4Bandit Mage 			Javier Level(10,Enemy,True) [16,6] 0 0 0 0 [Elsurge] AttackWhenInRangeAI
-		UNIT B4Bandit Warrior		Javier Level(13,Enemy,True) [14,7] 0 0 0 0 [SilverAxe] AttackWhenInRangeAI
+		UNIT B4Bandit Warrior		Javier Level(13,Enemy,True) [14,7] 0 0 0 0 [SilverAxe] AttackInTwoAI
 		UNIT
 
+#define AttackInTwoGroup1AI		[0x00,0x06,0x09,0x01]
 
 	RecruitableUnits:
-		UNIT Adrian Fighter 0 Level(12,Enemy,False) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] AttackWhenInRangeAI
-		UNIT Lexa Myrmidon_F 0 Level(12,Enemy,False) [13,10] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+		UNIT Adrian Fighter 0 Level(12,Enemy,False) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] AttackInTwoGroup1AI
+		UNIT Lexa Myrmidon_F 0 Level(12,Enemy,False) [13,10] 0 0 0 0 [SteelSword] AttackInTwoGroup1AI
 		UNIT
 
 //End
