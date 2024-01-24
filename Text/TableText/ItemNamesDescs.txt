@@ -243,7 +243,7 @@ Refreshes once per turn on a kill.[X]
 Elsurge[X]
 
 ## ElsurgeDesc
-A short-range blast that cannot miss[X]
+A short-range blast that cannot miss.[X]
 
 
 //KNIVES

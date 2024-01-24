@@ -13,30 +13,41 @@ PointerList:
 	POIN BeginningScene EndingScene
 
 //Flags Used
-//7 (Recruitment)
-//8-10 (Villages)
-//11 (LunarBlade)
-//12-13 (Avenge Quotes)
-//14-16 (Boss Quotes (15/16 Not done yet))
-//17 (Seperate flag for keeping track of one or both units being dead)
+	//7 (Recruitment)
+	//8-10 (Villages)
+	//11 (LunarBlade)
+	//12-13 (Avenge Quotes)
+	//14-16 (Boss Quotes (15/16 Not done yet))
+	//17 (Seperate flag for keeping track of one or both units being dead)
 
 
-//Eventing Todo List
-// - Beginning / Ending Scenes
-// - Boss Quotes (X/)
-// - Recruitment Event (Disables Death Quotes) (X)
-// - Revenge Quotes (Disables Recruitment (flag 7)) (X)
-// - Recruitment Convos
-// - Village Dialogue
+//Todo List
+	// - Beginning / Ending Scenes
+	//		- Writing A (X)
+	//		- Writing B (X)
+	//		- Eventing A (X)
+	//		- Eventing B
+	// - Boss Quotes (X/)
+	// - Recruitment Event (Disables Death Quotes) (X)
+	// - Revenge Quotes (Disables Recruitment (flag 7)) (X)
+	// - Recruitment Convos (X)
+	// - Village Dialogue
+	// - New Unit
+	// - Full stop on Elsurge (X)
+	// - 25 Uses LB since its one only (X)
+	// - Game Over Event
+	// - Playtest Feedback Addressment
+	// - Personal Playtest
 
 //Feedback Todo List:
-//Javier Autolevel True
-//B4Bandit Base Level 1
-//Stealables Javier
-//GroupAI Siblings + MoveIn2 Warrior (X)
-//Gets a bit dead later on
+	//Javier Autolevel True / Nerf (X)
+	//B4Bandit Base Level 1 (X)
+	//Stealables Javier
+	//GroupAI Siblings + MoveIn2 Warrior (X) (Reconsidered for the time being)
+	//Gets a bit dead later on, consider reinfs
 
 TurnBasedEvents:
+	//TurnEventPlayer(0, )
 	TurnEventPlayer(0, TurnLimit, 14)
 	TurnEventPlayer(17, AdrianLexaWarning, 4)
 	TurnEventPlayer(0, HurryWarning, 9)
@@ -88,20 +99,67 @@ Dunno:
 
 MainEvents:
 	BeginningScene:
+		//Load1 1 CutsceneUnits1
+		//ENUN
+		CAMERA_CENTERED Lua
+		SetBackground(Desert)
+		Text(HubB_4BeginningScene1)
+		CALL $9EE2C4
+		CamOn
+		Load1 1 CutsceneUnits1
+		ENUN
+		MOVE 25 Lua [14,22]
+		MOVE 25 Orlando [15,22]
+		MOVE 30 Desiderio [13,23]
+		MOVE 20 Pilar [16,23]
+		ENUN
+		CamOff
+		CAMERA_CENTERED Lua
+		Text(HubB_4BeginningScene2)
+		Load1 1 CutsceneUnits2
+		STAL 20
+		Text(HubB_4BeginningScene3)
+		FADI 10
+		STAL 20
+		REMOVEALL_BLUE
+		REMOVEALL_RED
 		Load1 1 RecruitableUnits
-		//Load1 1 EnemyUnits1
-		//Load1 1 EnemyUnits2
-		//Load1 1 EnemyUnits3
-		//Load1 1 JavierUnits
-		Load1 1 TestUnit
-		Text(TutorialTextTemp)
-		GotoPrepScreen
+		Load1 1 EnemyUnits1
+		Load1 1 EnemyUnits2
+		Load1 1 EnemyUnits3
+		Load1 1 JavierUnits
+		//Load1 1 TestUnit
+		GoToPrepScreen2
+		FADU 10
+		//CAMERA_CENTERED Lua
+		Text(HubB_4BeginningScene4)
 		NoFade
 		ENDA
 
 	EndingScene:
 		NoFade
+		Text(RoutTestText)
+		GiveItem(BlueGem,Lua)
+		GoToHubChapter(HubB)
 		ENDA
+
+	CutsceneUnits:
+		CutsceneUnits1:
+			UNIT Lua Captain 0 Level(1, Ally, False) [14,26] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT Orlando Trickster 0 Level(1, Ally, False) [15,26] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT Desiderio Vanguard 0 Level(1, Ally, False) [13,27] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT Pilar Ninja 0 Level(1, Ally, False) [16,27] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT
+
+	CutsceneUnits2:
+		UNIT B4Bandit Mercenary 0 Level(1, Enemy, False) [11,16] 0 0 1 REDA11R20 [0, 0, 0, 0] NoAI //Next 13, 16 & 21,16
+		UNIT B4Bandit Deserter 0 Level(1, Enemy, False) [13,16] 0 0 1 REDA13R18 [0, 0, 0, 0] NoAI //Next 13, 16 & 21,16
+		UNIT B4Bandit Mercenary 0 Level(1, Enemy, False) [21,16] 0 0 1 REDA17R21 [0, 0, 0, 0] NoAI //Next 13, 16 & 21,16
+		UNIT B4Bandit Fighter 0 Level(1, Enemy, False) [22,17] 0 0 1 REDA18R19 [0, 0, 0, 0] NoAI //Next 13, 16 & 21,16
+		UNIT B4Bandit Brigand 0 Level(1, Enemy, False) [22,18] 0 0 1 REDA20R21 [0, 0, 0, 0] NoAI //Next 13, 16 & 21,16
+		UNIT B4Bandit Vanguard 0 Level(1, Enemy, False) [6,22] 0 0 1 REDA9R22 [0, 0, 0, 0] NoAI //Next 13, 16 & 21,16
+		UNIT B4Bandit Ninja 0 Level(1, Enemy, False) [6,20] 0 0 1 REDA7R20 [0, 0, 0, 0] NoAI //Next 13, 16 & 21,16 
+		UNIT
 
 GuidingMoonlight:
 	Text(LunarBladeText)
@@ -212,7 +270,7 @@ UnitPlacement:
 
 	TestUnit:
 		UNIT B4Bandit Mercenary		Javier Level(1,Enemy,False) [11,20] 0 0 0 0 [IronSword] BossAI
-		UNIT B4Bandit Mercenary		Javier Level(1,Enemy,False) [1,1] 0 0 0 0 [IronSword] BossAI
+		//UNIT B4Bandit Mercenary		Javier Level(1,Enemy,False) [1,1] 0 0 0 0 [IronSword] BossAI
 		UNIT
 
 	Units1:
@@ -224,8 +282,8 @@ UnitPlacement:
 		UNIT Lua Captain 0 Level(10,Ally,False) [16,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 		UNIT Lua Captain 0 Level(10,Ally,False) [18,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 		UNIT Lua Captain 0 Level(10,Ally,False) [11,24] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-		UNIT Lua Captain 0 Level(10,Ally,False) [14,27] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-		UNIT Lua Captain 0 Level(10,Ally,False) [15,27] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		//UNIT Lua Captain 0 Level(10,Ally,False) [14,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+		//UNIT Lua Captain 0 Level(10,Ally,False) [15,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 		UNIT Lua Captain 0 Level(10,Ally,False) [13,26] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 		UNIT Lua Captain 0 Level(10,Ally,False) [16,26] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 		UNIT Lua Captain 0 Level(10,Ally,False) [12,25] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -237,12 +295,13 @@ UnitPlacement:
 		UNIT B4Bandit Archer 		Javier Level(11,Enemy,True) [24,2] 0 0 0 0 [Longbow] AttackWhenInRangeAI
 		UNIT B4Bandit Ninja 		Javier Level(11,Enemy,True) [28,3] 0 0 0 0 [SteelDagger,Stiletto] AttackWhenInRangeAI
 		UNIT B4Bandit Fighter 		Javier Level(11,Enemy,True) [28,6] 0 0 0 0 [Crusher] AttackWhenInRangeAI
-		UNIT B4Bandit Vanguard 		Javier Level(11,Enemy,True) [20,4] 0 0 0 0 [SteelAxe,Javelin] BossAI
-		UNIT B4Bandit Vanguard 		Javier Level(11,Enemy,True) [21,5] 0 0 0 0 [SteelAxe,Javelin] BossAI
-		UNIT B4Bandit Vanguard 		Javier Level(11,Enemy,True) [20,6] 0 0 0 0 [SteelAxe,Javelin] BossAI
+		UNIT B4Bandit Vanguard 		Javier Level(11,Enemy,True) [20,4] 0 0 0 0 [SteelLance,HandAxe] BossAI
+		UNIT B4Bandit Vanguard 		Javier Level(12,Enemy,True) [21,5] 0 0 0 0 [SteelAxe,Javelin] BossAI
+		UNIT B4Bandit Vanguard 		Javier Level(11,Enemy,True) [20,6] 0 0 0 0 [SteelLance,HandAxe] BossAI
 		UNIT B4Bandit Warden 		Javier Level(11,Enemy,True) [25,10] 0 0 0 0 [IronBlade,Javelin] BossAI
 		UNIT B4Bandit Warden 		Javier Level(11,Enemy,True) [26,10] 0 0 0 0 [IronBlade,Javelin] BossAI
-		UNIT Javier Hero 			Javier Level(15,Enemy,False) [26,2] 0 0 0 0 [SilverSword,HideShield,RedGem] AttackWhenInRangeAI
+		UNIT Javier Hero 			Javier Level(15,Enemy,True) [26,2] 0 0 0 0 [SilverSword,HideShield,TealGem] AttackWhenInRangeAI
+		//UNIT B4Bandit Hero			Javier Level(15,Enemy,True) [1,1] 0 0 0 0 [IronBlade] BossAI
 		UNIT
 
 	EnemyUnits1:
@@ -260,7 +319,7 @@ UnitPlacement:
 	EnemyUnits2:
 		UNIT B4Bandit Brigand 		Javier Level(10,Enemy,True) [18,14] 0 0 0 0 [SlimAxe] AttackInTwoAI
 		UNIT B4Bandit Fighter 		Javier Level(10,Enemy,True) [8,13] 0 0 0 0 [SteelAxe] AttackInTwoAI
-		UNIT B4Bandit Warden 		Javier Level(11,Enemy,True) [3,18] 0 0 0 0 [SteelBlade,Javelin] AttackWhenInRangeAI
+		UNIT B4Bandit Warden 		Javier Level(11,Enemy,True) [3,18] 0 0 0 0 [FlameSword] AttackWhenInRangeAI
 		UNIT B4Bandit Cavalier 		Javier Level(10,Enemy,True) [1,13] 0 0 0 0 [IronLance] AttackInTwoAI
 		UNIT B4Bandit Mercenary 	Javier Level(10,Enemy,True) [5,11] 0 0 0 0 [SteelSword] AttackInTwoAI
 		UNIT B4Bandit GriffinRider 	Javier Level(10,Enemy,True) [16,13] 0 0 0 0 [SteelLance] AttackWhenInRangeAI
@@ -283,14 +342,14 @@ UnitPlacement:
 		UNIT B4Bandit PegasusRider 	Javier Level(10,Enemy,True) [7,0] 0 0 0 0 [SteelSword] AttackInTwoAI
 		UNIT B4Bandit Bombardier 	Javier Level(13,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] AttackInTwoAI
 		UNIT B4Bandit Mage 			Javier Level(10,Enemy,True) [16,6] 0 0 0 0 [Elsurge] AttackWhenInRangeAI
-		UNIT B4Bandit Warrior		Javier Level(13,Enemy,True) [14,7] 0 0 0 0 [SilverAxe] AttackInTwoAI
+		UNIT B4Bandit Warrior		Javier Level(13,Enemy,True) [14,7] 0 0 0 0 [SilverAxe] AttackWhenInRangeAI
 		UNIT
 
-#define AttackInTwoGroup1AI		[0x00,0x06,0x09,0x01]
+//#define AttackInTwoGroup1AI		[0x00,0x06,0x09,0x01] //Doesn't actually work (at least not the intended way)
 
 	RecruitableUnits:
-		UNIT Adrian Fighter 0 Level(12,Enemy,False) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] AttackInTwoGroup1AI
-		UNIT Lexa Myrmidon_F 0 Level(12,Enemy,False) [13,10] 0 0 0 0 [SteelSword] AttackInTwoGroup1AI
+		UNIT Adrian Fighter 0 Level(12,Enemy,False) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] GroupOneAI //AttackInTwoGroup1AI
+		UNIT Lexa Myrmidon_F 0 Level(12,Enemy,False) [13,10] 0 0 0 0 [SteelSword] GroupOneAI //AttackInTwoGroup1AI
 		UNIT
 
 //End
