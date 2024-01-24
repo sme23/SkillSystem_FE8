@@ -134,7 +134,7 @@ I'll leave all this behind.[A][X]
 always fleeing from my fate[Beat][A][X]
 
 ## MagdalenaEscapeQuote
-[ML][LoadMagdalena
+[ML][LoadMagdalena]
 If we must truly[N]
 leave this place[Beat][A][X]
 

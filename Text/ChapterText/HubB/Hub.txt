@@ -6,11 +6,6 @@ Go to B-1?[N]
 
 // enter B-2 by talking to Desiderio
 
-// i have no idea how to actually implement this stuff
-// but i thought i'd at least write it out
-// to make your job easier, loog
-// - RW
-
 ## HubB2Pitch
 [ML][LoadDesiderio]
 [MR][LoadLua]
@@ -73,7 +68,7 @@ Loot: Knives, as well as nonweapon items.[X]
 B-2: With Bloody Hands (Investigate / Defeat Boss)[N]
 Units: Variable[N]
 Loot: Knives, as well as nonweapon items.[N]
-Will Lua stop at Port Receloso?[N]
+Stop at Port Receloso?[N]
 [No][X]
 
 ## HubB2Selection_Yes
@@ -86,7 +81,7 @@ should be able to fly out[N]
 of there with full pockets.[A][X]
 
 ## HubB2Confirm
-Explore this location?[X]
+Stop at Port Receloso?[X]
 
 ## HubB2Selection_No
 [ML][LoadDesiderio]

@@ -595,7 +595,7 @@ to die for the cause![A][X]
 
 ## B2_BQ_YadneyXimo
 [ML][LoadYadney]
-An archer, huh? Think[A]
+An archer, huh? Think[N]
 you can shoot me down?[AN]
 Well, you won't be so smug[AN]
 once I've stuck a[N]
