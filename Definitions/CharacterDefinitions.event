@@ -48,8 +48,8 @@
 #define Magdalena $1A
 #define B3Unit1 $1B
 #define B3Unit2 $1C
-#define B4Unit1 $1D
-#define B4Unit2 $1E
+#define Adrian $1D
+#define Lexa $1E
 #define Fata $1F
 
 // HUB B BASE UNITS
@@ -168,3 +168,7 @@
 #define Fogaca 0xD5
 #define Dario 0xD6
 #define Thais 0xD7
+
+//Hub B4
+#define B4Bandit 0xD8
+#define Javier 0xD9

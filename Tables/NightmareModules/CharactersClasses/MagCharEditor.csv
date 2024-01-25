@@ -7,7 +7,7 @@ None,0,0
 0x05 Carmen,0,55
 0x06 Ximo,0,25
 0x07 Estelle,0,40
-0x08 Hermenegildo,7,65
+0x08 Hermenegildo,8,65
 0x09 MrYodsen,3,30
 0x0A Durgham,(-3),15
 0x0B Indio,2,70
@@ -19,7 +19,7 @@ None,0,0
 0x11 Tangyuan,(-1),15
 0x12 Juan,(-1),15
 0x13 Matteo,(-1),15
-0x14 Suzanne,1,25
+0x14 Suzanne,2,25
 0x15 Orlando,1,30
 0x16 Rahel,0,20
 0x17 Saleh,11,30
@@ -28,8 +28,8 @@ None,0,0
 0x1A Magdalena,(-2),40
 0x1B -,0,50
 0x1C Rennac,3,35
-0x1D Duessel,0,5
-0x1E Myrrh,2,85
+0x1D Adrian,1,10
+0x1E Lexa,1,25
 0x1F Knoll,10,50
 0x20 Joshua,0,20
 0x21 Syrene,4,20
@@ -216,7 +216,7 @@ Wraith (Axes),0,0
 0,0,0
 0,0,0
 Grado Soldier (Special),0,0
-Grado Soldier 1 (Normal),0,0
+0xD( Javier,3,20
 Grado Soldier 2,0,0
 Grado Soldier 3,0,0
 Grado Soldier 4,0,0

@@ -18,6 +18,11 @@ DeathQuote(Avocado, HubB_2, 0x65, AvocadoDQ)
 DeathQuote(Avocado, AllChapters, 0, AvocadoDQ)
 DeathQuote(Magdalena, HubB_2, 0x65, MagdalenaDQ)
 DeathQuote(Magdalena, AllChapters, 0, MagdalenaDQ)
+//Adrian and Lexa can die as enemies and have seperate quotes for event purposes
+DeathQuote(Adrian, HubB_4, 0x12, AdrianDQB_4)
+DeathQuote(Adrian, AllChapters, 0, AdrianDQ)
+DeathQuote(Lexa, HubB_4, 0x13, LexaDQB_4)
+DeathQuote(Lexa, AllChapters, 0, LexaDQ)
 //DeathQuote()
 
 // Bosses
@@ -44,6 +49,8 @@ DeathQuote(Gunsmith, HubA_5, 0x9, 0)
 
 DeathQuote(Yadney, HubB_2, 0, YadneyDeathQuote)
 DeathQuote(Cruz, HubB_2, 0x2, CruzDeathQuote)
+
+DeathQuote(Javier, HubB_4, 0x2, JavierDQ)
 
 
 DeathQuote(0xFFFF,0,0,0) // terminator

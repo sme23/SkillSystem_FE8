@@ -37,7 +37,7 @@ NoFade
 ENDA
 
 BoatPursuerGriffin:
-UNIT TorchUnit2 GriffinRider Hugo Level(9, Enemy, True) [10,2] 0 0 1 REDA10R4 [IronLance] GoForThroneAI
+UNIT TorchUnit2 WyvernRider Hugo Level(9, Enemy, True) [10,2] 0 0 1 REDA10R4 [IronAxe] GoForThroneAI
 UNIT
 
 BoatPursuerCavaliers:
@@ -609,7 +609,7 @@ TORCHGroupLeft:
 UNIT Hugo 0 Hugo Level(12, Enemy, True) [2,1] 0 0 0 0 [SilverSword, BravesCrest] AttackWhenInRangeAI
 UNIT TorchUnit Soldier Hugo Level(9,Enemy,True) [2,0] 0 0 0 0 [Pike] AttackInTwoAI
 
-UNIT TorchUnit2 GriffinRider Hugo Level(9, Enemy, True) [11,4] 0 0 0 0 [IronLance] GoForThroneAI
+UNIT TorchUnit2 WyvernRider Hugo Level(9, Enemy, True) [11,4] 0 0 0 0 [IronAxe] GoForThroneAI
 
 UNIT TorchUnit Soldier Hugo Level(9,Enemy,True) [11,9] 0 0 0 0 [IronLance] PursueWithoutHeedAI
 UNIT TorchUnit Mercenary Hugo Level(9,Enemy,True) [12,14] 0 0 0 0 [IronSword] PursueWithoutHeedAI
@@ -659,6 +659,7 @@ Text(Ch2EndingScene3)
 MUSC ABlackheartsPrideID
 Text(Ch2EndingScene4)
 Text(Ch2EndingScene5)
+//GOTO_TITLE
 GoToHubChapter(HubB)
 NoFade
 ENDA

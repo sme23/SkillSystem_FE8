@@ -337,3 +337,38 @@ Marksman[X]
 ## MarksmanDesc
 Weapons: Guns[N]
 Traits: Steal, Locktouch[X]
+
+## SaviorName
+Savior[X]
+
+## SaviorDesc
+Weapons: Staves[N]
+Traits: Canto+, Aid+[X]
+
+## SwordKnightName
+Sword Knight[X]
+
+## SwordKnightDesc
+Weapons: Swords[N]
+Traits: Canto+, Aid+[X]
+
+## AxeKnightName
+Axe Knight[X]
+
+## AxeKnightDesc
+Weapons: Axes[N]
+Traits: Canto+, Aid+[X]
+
+## LanceKnightName
+Lance Knight[X]
+
+## LanceKnightDesc
+Weapons: Lances[N]
+Traits: Canto+, Aid+[X]
+
+## BowKnightName
+Bow Knight[X]
+
+## BowKnightDesc
+Weapons: Bows[N]
+Traits: Canto+, Aid+[X]

@@ -88,6 +88,11 @@ PromoListEntry(Mercenary_F, Ranger_F)
 PromoListEntry(Gunner, Dragoon)
 PromoListEntry(Thief, WolfKnight)
 PromoListEntry(Deserter, WolfKnight)
+PromoListEntry(SwordCav, SwordKnight)
+PromoListEntry(AxeCav, AxeKnight)
+PromoListEntry(LanceCav, LanceKnight)
+PromoListEntry(BowCav, BowKnight)
+PromoListEntry(Troubadour, Savior)
 PromoListEnd
 
 ALIGN 4
