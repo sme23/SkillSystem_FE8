@@ -38,8 +38,8 @@ Looks a bit quiet up ahead,[.4] not a guard[N]
 in sight.[.4] Bit unusual if you ask me.[A]
 
 [FL][2LB]
-Hmm.[.4] Now that you mention it,[.4] best[N]
-to keep our guard up then.[.4] Never know[N]
+Hmm.[.4] Now that you mention it[Beat][.4] Best[N]
+to keep our guard up then.[.5] Never know[N]
 what goes on out this far from the empire.[A][X]
 
 
@@ -124,9 +124,7 @@ before they get here that is.[A][X]
 I think that's the lot of them.[.4][N]
 I thought that would never end.[A]
 
-[MR][LoadVillager][2LB]
-Replace with old man.[AN]
-
+[MR][LoadGreagorLibrarianB][2LB]
 Traveller![.4] I cannot thank you enough[N]
 for ridding us of these bandits.[AN]
 I am the mayor of our little oasis.[.4][N]
@@ -180,7 +178,7 @@ it will be of use in your journeys.[A]
 [MR][MoveLeft]
 [L][MoveLeft]
 [L][ClearFace]
-[MR][LoadVillager]
+[MR][LoadGreagorLibrarianB]
 
 [ML][1LB]
 Sir-[.4] we can't-[.4][A]
@@ -189,12 +187,10 @@ Sir-[.4] we can't-[.4][A]
 But you can,[.4] now go before they get[N]
 here.[.4] Lest you get into another scuffle.[A][X]
 
-## HubB_4EndingScene2b
-[MR][LoadRedSoldier]
-Pursuit.[A][X]
+
 
 ## HubB_4EndingScene2
-[ML][LoadRedSoldier]
+[ML][LoadRedFSoldier]
 [MR][LoadRedSoldier]
 [ML][2LB]
 Sir it appears that the bandits[N]
@@ -208,10 +204,8 @@ some kind of bandit turf war?[AN]
 But then there's not a lot of[N]
 large gangs around these parts.[AN]
 And besides,[.4] they would still be[N]
-here if that was the case[Beat][A]
-
-[FR][1LB]
-Event.[A]
+here if that was the case[Beat][A][CloseSpeechSlow]
+[Event]
 
 [ML][MoveLeft]
 [FL][LoadRedSoldier][3LB]
@@ -410,7 +404,7 @@ Huh?[.4] What's that[N]
 glowing under the water?[A][X]
 
 ## B4VillageAText
-[ML][LoadVillager]
+[ML][LoadQuim]
 [MR][LoadCurrent]
 [ML]
 Who're you?[.4] Here to clean up[N]
@@ -421,43 +415,43 @@ I ain't got no use for it anymore.[.4][N]
 But you might know someone who might.[A][X]
 
 ## B4VillageBText
-[ML][LoadVillager]
+[ML][LoadGreagorVillagerB]
 [MR][LoadCurrent]
 [ML]
-Sleep.[A][X]
+My son has always had issues getting[N]
+to bed so I bought this staff.[AN]
+But with these bandits around not[N]
+even that is helping anymore.[AN]
+Maybe you could use it to incapacitate[N]
+them and make the fight easier?[A][X]
 
 ## B4VillageCText
-[ML][LoadVillager]
-[MR][LoadCurrent]
-[ML]
-Speed Tonic.[A][X]
-
-## B4VillageCText2
-[ML][LoadRedSoldier]
+[ML][LoadNoah2]
 [MR][LoadCurrent]
 [ML][2LB]
 H-[.4]hey who are you guys?[.5][N]
-Are you here to fight the pirates?[A]
-I- was off duty w-when they attacked[N]
-and they left me as a civillian[Beat][A]
-I'd like to j-[.4]join you and avenge[N]
-my friends if I can be of any help[Beat][A]
+Are you here to fight the bandits?[AN]
+I-[.4] was off duty w-[.4]when they attacked[N]
+so they didn't come after me[Beat][AN]
+I'd like to join you and avenge[N]
+my friends,[.4] if I can be of any help[Beat][AN]
 Oh,[.4] wait,[.4] just let me get my armor on.[A]
 [ClearFace]
-[.7][.7]
-[ML][LoadRedFighter]
-Alright- *huff*[.5] I'm ready![A][X]
+[.7][.4]
+[ML][LoadNoah]
+Alright-[.4][MoveMidLeft] *huff*[.5] I'm ready![A][X]
 
 
 
 
 ## B4HurryWarning
 [MR][LoadPilar]
-Duhhh.[A][X]
+We might want to get a move[N]
+on,[.4] incendivis ain't far out.[A][X]
 
 ## JavierBQ
 [ML][LoadJavier]
-Swept through my gang huh?[A]
+Swept through my gang huh?[AN]
 Well you might find me a cut above[N]
 those chumps,[.4] prepare to meet your end.[A][X]
 
@@ -485,6 +479,11 @@ Sorry Adrian[Beat][.4][CloseEyes] It's up for me[Beat][A][X]
 [ML][LoadLexa]
 Wait that wasn't what we[N]
 planned[Beat][.4] Adrian I'm[Beat][.4][CloseEyes] Sorry[Beat][A][X]
+
+## HubB_4GameOverText
+[MR][LoadLua]
+Blast![.5] They caught up to us[.4][N]
+No way we're getting out of here now.[A][X]
 
 ## RoutTestText
 [ML][LoadLuaHatless]

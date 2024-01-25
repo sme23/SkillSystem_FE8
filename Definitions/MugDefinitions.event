@@ -46,6 +46,8 @@
 #define SargargalaMug $52
 #define SagargalaMug SargargalaMug
 
+#define RedFSoldierMug $4F
+
 // A-4 mugs, currently placeholders
 #define ValerieMug $54
 #define A4ImperialCaptainMug $55
@@ -71,6 +73,8 @@
 #define JavierMug $2F
 #define AdrianMug $25
 #define LexaMug $26
+#define NoahMug $4B
+#define Noah2Mug $4E
 
 //CLASS CARDS
 
