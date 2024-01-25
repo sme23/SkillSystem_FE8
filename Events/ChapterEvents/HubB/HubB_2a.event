@@ -102,7 +102,7 @@ UNIT RecelosoPriest 0 0 Level(1,NPC,False) [11,5] 0 0 0 0 [Heal,PureWater] NoAI
 UNIT RecelosoCorpse 0 0 Level(1,NPC,False) [16,3] 0 0 0 0 [Mend,RedGem] NoAI
 UNIT RecelosoStudent 0 0 Level(1,NPC,False) [13,25] 0 0 0 0 [Fire] NoAI
 UNIT RecelosoGuard 0 0 Level(1,NPC,False) [18,14] 0 0 0 0 [IronLance] NoAI
-UNIT RecelosoBarkeep 0 0 Level(1,NPC,False) [9,23] 0 0 0 0 [Vulnerary,Vulnerary,Vulnerary] NoAI
+UNIT RecelosoBarkeep 0 0 Level(1,NPC,False) [9,23] 0 0 0 0 [Vulnerary,Tonic,Tonic] NoAI
 UNIT
 
 BeginningScene:
@@ -127,6 +127,9 @@ CUSN Razvan
 LOAD1 1 VillagerGroup
 LOAD1 1 Units1
 ENUN
+// give the barkeep tonics - alcohol flavored, after all!
+SetUnitItemDurability(9, 23, 1, SklTonic)
+SetUnitItemDurability(9, 23, 2, LuckTonic) 
 ENUT LuaInAHubFlag
 CAM1 Lua
 FADU 16

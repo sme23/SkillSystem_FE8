@@ -230,19 +230,19 @@ NewUnitsBlue:
 FADU 16
 FlagIsSet(HusniyeAccused, 0x11)
 	CameraCursor(Avocado)
-	TEXT(B2_AvocadoAnim)
+	Text(B2_AvocadoAnim)
 	CUSA Avocado
 	CameraCursor(Avocado)
 LABEL 0x11
 FlagIsSet(AvocadoAccused, 0x22)
 	CameraCursor(Husniye)
-	TEXT(B2_HusniyeAnim)
+	Text(B2_HusniyeAnim)
 	CUSA Husniye
 	CameraCursor(Husniye)
 LABEL 0x22
 FlagIsSet(CruzAccused, 0x33)
 	CameraCursor(Magdalena)
-	TEXT(B2_MagdalenaAnim)
+	Text(B2_MagdalenaAnim)
 	CUSA Magdalena
 	CameraCursor(Magdalena)
 LABEL 0x33
@@ -253,10 +253,10 @@ MakeBossCharge:
 CameraCursor(Cruz)
 CHECK_ALIVE Yadney
 BEQ 0xFEED 0xC 0x0
-	Text(B2_CruzCharging_YadAlive)
+	Text(B2_CruzCharging_YadDead)
 	GOTO 0x654
 LABEL 0xFEED
-	Text(B2_CruzCharging_YadDead)
+	Text(B2_CruzCharging_YadAlive)
 LABEL 0x654
 SetAI(Cruz,0,0,4,0)
 NoFade

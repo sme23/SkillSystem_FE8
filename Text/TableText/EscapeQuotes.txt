@@ -123,6 +123,23 @@ makes yet another daring escape![A][X]
 Run, run! Do pirates do anything else?[N]
 Dang good thing I have you, girl![A][X]
 
+## HusniyeEscapeQuote
+[ML][LoadHusniye]
+Not getting caught here[Beat][N]
+I'll leave all this behind.[A][X]
+
+## AvocadoEscapeQuote
+[ML][LoadAvocado]
+[Beat]So I must run away again,[N]
+always fleeing from my fate[Beat][A][X]
+
+## MagdalenaEscapeQuote
+[ML][LoadMagdalena]
+If we must truly[N]
+leave this place[Beat][A][X]
+
+
+
 ## PlaceholderEscapeQuote
 [ML][LoadCurrent]
 [ML]Dragz says hi. This character[N]

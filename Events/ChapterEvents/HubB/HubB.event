@@ -43,12 +43,26 @@ ENUF WentToHub1
 NoFade
 ENDA
 
+/*
 GotoHubB2:
 // note that this should display B-2b, but actually send you to B-2a
 // because B-2 is two chapters in a trenchcoat
 CenterTextbox(HubB2Prompt)
 GotoHubChapterIfYes(1, HubB_2a)
 ENUF WentToHub2
+NoFade
+ENDA
+*/
+
+GotoHubB2:
+// should be triggered by talking to desiderio
+HubChapterFirstTimeEvent(1, SeenHubB2Pitch, HubB2Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_2a, Harbor, HubB)
+// FancyChapterPreview(HubB_2a, Harbor, HubB)
+GotoHubChapterIfYes(2, HubB_2a, HubB2Selection_Yes)
+ENUF WentToHub2
+Text(HubB2Selection_No)
 NoFade
 ENDA
 

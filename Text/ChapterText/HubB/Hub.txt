@@ -23,9 +23,103 @@
 Go to B-1?[N]
 [No][X]
 
+
+
+// enter B-2 by talking to Desiderio
+
+## HubB2Pitch
+[ML][LoadDesiderio]
+[MR][LoadLua]
+[ML][1LB]
+Captain. Do you have a moment?[A]
+[MR][2LB]
+We've no shortage of time[N]
+out here. Say your piece.[A]
+[ML][3LB]
+With how big the armada's gotten,[N]
+our supplies just can't keep up.[A][N]
+I know Pilar has a plan[N]
+to get us some fresh water,[A][N]
+but all the water in the sky[N]
+can't take the place of a[N]
+hearty meal or sturdy hull.[A]
+[MR][2LB]
+That's a problem, all right.[A][N]
+And with our scale, we'll need to[N]
+find a proper port to restock[Beat][A][N]
+but out here?[A]
+[ML]
+[Beat]I've already been looking into it.[A][N]
+Asked Pilar for some help.[A][N]
+And she found a place not far[N]
+from here called Port Receloso.[A]
+[MR]
+A port all the way on the[N]
+outskirts of the Empire[Beat][A][N]
+It'd have to be quiet, at least.[A]
+[ML]
+A quiet frontier port? I[N]
+think you mean [OpenQuote]too" quiet.[A][N]
+No way somewhere out here[N]
+is as safe as it looks.[A]
+[MR]
+So if we go there,[AN]
+we'd definitely need to[N]
+prepare for trouble[Beat][A][X]
+
 ## HubB2Prompt
-Go to B-2?[N]
+[ML][LoadDesiderio]
+[MR][LoadLua]
+[MR]Should I stop at Port Receloso?[AN]
 [No][X]
+
+## HubB2Title
+B-2: With Bloody Hands[X]
+
+## HubB2Objective
+Objective: Investigate / Defeat Boss[X]
+
+## HubB2Units
+Units: Variable[X]
+
+## HubB2Loot
+Loot: Knives, as well as nonweapon items.[X]
+
+## HubB2Sys_Text_Mission_Select
+B-2: With Bloody Hands (Investigate / Defeat Boss)[N]
+Units: Variable[N]
+Loot: Knives, as well as nonweapon items.[N]
+Stop at Port Receloso?[N]
+[No][X]
+
+## HubB2Selection_Yes
+[ML][LoadDesiderio]
+[MR][LoadLua]
+[ML][3LB]
+Good call, Captain.[AN]
+One way or another, we[N]
+should be able to fly out[N]
+of there with full pockets.[A][X]
+
+## HubB2Confirm
+Stop at Port Receloso?[X]
+
+## HubB2Selection_No
+[ML][LoadDesiderio]
+[MR][LoadLua]
+[MR][3LB]
+If TORCH is still following us,[N]
+they'd expect us to land at[N]
+a port sooner or later.[AN]
+And our stocks should be able to[N]
+hold out for a bit longer[Beat][A]
+[ML][2LB]
+Gotcha, Captain.[AN]
+Port Receloso will still[N]
+be there when we need it.[A][X]
+
+
+
 
 ## HubB3Prompt
 Go to B-3?[N]
