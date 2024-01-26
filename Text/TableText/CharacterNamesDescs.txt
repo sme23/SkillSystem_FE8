@@ -770,3 +770,43 @@ Noah[X]
 Guardsman[N]
 A rookie town guard with an enthusiastic[N]
 mindset. Endearing if nothing else.[X]
+
+## PonteName
+Ponte[X]
+
+## PonteDesc
+Carpenter[N]
+A well-known and praised craftsman,[N]
+willing to work if the price is right.[X]
+
+## PassarolaName
+Passarola[X]
+
+## PassarolaDesc
+Tinkerer[N]
+A forward-thinking cleric[N]
+fascinated by ostensible boondoggles.[X]
+
+## NeltumeName
+Neltume[X]
+
+## NeltumeDesc
+Botanist[N]
+A stoic man who prefers[N]
+plants to people.[X]
+
+## FlintName
+Flint[X]
+
+## FlintDesc
+Gambler[N]
+Gladly leaves everything to chance,[N]
+despite losing his eye to it.[X]
+
+## GeraldName
+Gerald[X]
+
+## GeraldDesc
+Outlaw[N]
+Desperately clings onto marksmanship,[N]
+despite maiming his shooting arm.[X]

@@ -20,7 +20,7 @@ None,0,0
 0x12 Juan,(-1),15
 0x13 Matteo,(-1),15
 0x14 Suzanne,2,25
-0x15 Orlando,1,30
+0x15 Orlando,2,30
 0x16 Rahel,0,20
 0x17 Saleh,11,30
 0x18 Husniye,3,25
@@ -31,9 +31,9 @@ None,0,0
 0x1D Adrian,1,10
 0x1E Lexa,1,25
 0x1F Knoll,10,50
-0x20 Joshua,0,20
-0x21 Syrene,4,20
-0x22 Tana,2,15
+0x20 Ponta,5,40
+0x21 Passarola,2,35
+0x22 Neltume,(-3),30
 0x23 Lyon,13,50
 0x24 Orson,3,10
 0x25 Noah,-3,15
@@ -61,8 +61,8 @@ None,0,0
 0x3B Lyon's Summon,0,0
 0x3C <Summon>,0,0
 0x3D <'Summonern'>,0,0
-0x3E Knoll's Summon,0,0
-0x3F Ewan's Summon,0,0
+0x3E Flint,0,15
+0x3F Gerald,2,25
 0x40 Lyon (Ch 17),13,50
 0x41 Morva (Ch 20),6,85
 0x42 Orson (Ch 5x),3,10

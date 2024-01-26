@@ -113,9 +113,14 @@ Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [5,22] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
+NewUnits:
+UNIT Ponte 0 0 Level(7,Ally,False) [5,22] 0 0 0 0 [Hammer, Hammer] NoAI
+UNIT 
+
 BeginningScene:
 WEATHER 7
 ENUT LuaInAHubFlag
+LoadPlayerUnits(NewUnits)
 GotoPrepScreenHub
 NoFade 
 ENDA

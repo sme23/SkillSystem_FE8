@@ -148,6 +148,20 @@ SongTable(ToTheSkiesID,ToTheSkies,MapMusicGroup)
 #include "songs/map/ToTheSkies.event"
 }
 
+// 28 - Fin In The Clouds
+{
+SongTable(FinInTheCloudsID,FinInTheClouds,MapMusicGroup)
+#include "songs/event/FinInTheClouds.event"
+}
+
+// 29 - Letter Opener
+{
+SongTable(LetterOpenerID,LetterOpener,MapMusicGroup)
+#include "songs/map/LetterOpener.event"
+}
+
+
+
 // --------------- SONGS: GUI AND SFX ---------------
 
 // "GUI" refers to in-game jingles such as Level Up!

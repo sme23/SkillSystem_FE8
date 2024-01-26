@@ -227,22 +227,6 @@ ValerieMugData:
 setMugEntry(ValerieMug, ValerieMugData, 2, 5, 3, 3)
 
 ALIGN 16
-StingrayMugData:
-#incbin "Dmp/Stingray_mug.dmp"
-#incbin "Dmp/Stingray_frames.dmp"
-#incbin "Dmp/Stingray_palette.dmp"
-#incbin "Dmp/Stingray_minimug.dmp"
-setMugEntry(StingrayMug, StingrayMugData, 2, 5, 3, 3)
-
-ALIGN 16
-RamiroMugData:
-#incbin "Dmp/Ramiro_mug.dmp"
-#incbin "Dmp/Ramiro_frames.dmp"
-#incbin "Dmp/Ramiro_palette.dmp"
-#incbin "Dmp/Ramiro_minimug.dmp"
-setMugEntry(RamiroMug, RamiroMugData, 2, 5, 3, 3)
-
-ALIGN 16
 JavierMugData:
 #incbin "Dmp/Javier_mug.dmp"
 #incbin "Dmp/Javier_frames.dmp"
@@ -290,6 +274,50 @@ RedFSoldierMugData:
 #incbin "Dmp/RedFSoldier_minimug.dmp"
 setMugEntry(RedFSoldierMug, RedFSoldierMugData, 3, 6, 3, 4)
 
+ALIGN 16
+DicerMugData:
+#incbin "Dmp/Dicer_mug.dmp"
+#incbin "Dmp/Dicer_frames.dmp"
+#incbin "Dmp/Dicer_palette.dmp"
+#incbin "Dmp/Dicer_minimug.dmp"
+setMugEntry(DicerMug, DicerMugData, 3, 5, 3, 3)
 
+ALIGN 16
+SlicerMugData:
+#incbin "Dmp/Slicer_mug.dmp"
+#incbin "Dmp/Slicer_frames.dmp"
+#incbin "Dmp/Slicer_palette.dmp"
+#incbin "Dmp/Slicer_minimug.dmp"
+setMugEntry(SlicerMug, SlicerMugData, 3, 5, 3, 3)
 
+ALIGN 16
+FelipeMugData:
+#incbin "Dmp/Felipe_mug.dmp"
+#incbin "Dmp/Felipe_frames.dmp"
+#incbin "Dmp/Felipe_palette.dmp"
+#incbin "Dmp/Felipe_minimug.dmp"
+setMugEntry(FelipeMug, FelipeMugData, 3, 6, 3, 4)
 
+ALIGN 16
+RamiroMugData:
+#incbin "Dmp/Ramiro_mug.dmp"
+#incbin "Dmp/Ramiro_frames.dmp"
+#incbin "Dmp/Ramiro_palette.dmp"
+#incbin "Dmp/Ramiro_minimug.dmp"
+setMugEntry(RamiroMug, RamiroMugData, 3, 5, 3, 3)
+
+ALIGN 16
+StingrayMugData:
+#incbin "Dmp/Stingray_mug.dmp"
+#incbin "Dmp/Stingray_frames.dmp"
+#incbin "Dmp/Stingray_palette.dmp"
+#incbin "Dmp/Stingray_minimug.dmp"
+setMugEntry(StingrayMug, StingrayMugData, 3, 5, 3, 3)
+
+ALIGN 16
+SagargalaMugData:
+#incbin "Dmp/Sagargala_mug.dmp"
+#incbin "Dmp/Sagargala_frames.dmp"
+#incbin "Dmp/Sagargala_palette.dmp"
+#incbin "Dmp/Sagargala_minimug.dmp"
+setMugEntry(SagargalaMug, SagargalaMugData, 3, 5, 3, 3)

@@ -21,6 +21,8 @@
 #define LastDanceSinkingShipID 0x19
 #define WellAndTrulyLostID 0x1A
 #define ToTheSkiesID 0x1B
+#define FinInTheCloudsID 0x1C
+#define LetterOpenerID 0x1D
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47
