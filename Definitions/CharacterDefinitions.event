@@ -40,7 +40,7 @@
 
 // HUB B CHAPTER UNITS
 
-// $17 to $1F
+// $17 to $1F (+ $25)
 
 #define B1Unit1 $17
 #define Husniye $18
@@ -51,6 +51,7 @@
 #define Adrian $1D
 #define Lexa $1E
 #define Fata $1F
+#define Noah $25
 
 // HUB B BASE UNITS
 

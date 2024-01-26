@@ -22,6 +22,8 @@
 #define TakeGold(money) "SVAL 3 money; TAKEMONEY"
 #define FadeOutMusic "MUSCMID 0x7FFF"
 #define FadeoutMusic "MUSCMID 0x7FFF"
+#define GoToPrepScreen2 "CALL $591FD8" //Prep screen without ENDA
+#define ClearBackgroundSlow "FADI 3 CLEAN STAL 60 FADU 2"
 
 #define TextWithMusicChange(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSC songId; TEXTCONT; TEXTEND; REMA"
 #define TextWithMusicChange2(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSS songId; TEXTCONT; TEXTEND; REMA"

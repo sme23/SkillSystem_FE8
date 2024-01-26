@@ -266,3 +266,30 @@ LexaMugData:
 #incbin "Dmp/Lexa_minimug.dmp"
 setMugEntry(LexaMug, LexaMugData, 2, 6, 3, 4)
 
+ALIGN 16
+NoahMugData:
+#incbin "Dmp/Noah_mug.dmp"
+#incbin "Dmp/Noah_frames.dmp"
+#incbin "Dmp/Noah_palette.dmp"
+#incbin "Dmp/Noah_minimug.dmp"
+setMugEntry(NoahMug, NoahMugData, 3, 5, 3, 3)
+
+ALIGN 16
+Noah2MugData:
+#incbin "Dmp/Noah2_mug.dmp"
+#incbin "Dmp/Noah2_frames.dmp"
+#incbin "Dmp/Noah2_palette.dmp"
+#incbin "Dmp/Noah2_minimug.dmp"
+setMugEntry(Noah2Mug, Noah2MugData, 2, 5, 3, 3)
+
+ALIGN 16
+RedFSoldierMugData:
+#incbin "Dmp/RedFSoldier_mug.dmp"
+#incbin "Dmp/RedFSoldier_frames.dmp"
+#incbin "Dmp/RedFSoldier_palette.dmp"
+#incbin "Dmp/RedFSoldier_minimug.dmp"
+setMugEntry(RedFSoldierMug, RedFSoldierMugData, 3, 6, 3, 4)
+
+
+
+

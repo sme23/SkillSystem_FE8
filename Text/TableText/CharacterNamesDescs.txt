@@ -752,8 +752,8 @@ Adrian[X]
 
 ## AdrianDesc
 Desperado[N]
-A wandering renegade turned to banditry[N]
-and a merciless bully, but good in a fight.[X]
+A wandering renegade turned to banditry.[N]
+He's a merciless bully, but good in a fight.[X]
 
 ## LexaName
 Lexa[X]
@@ -762,3 +762,11 @@ Lexa[X]
 Desperado[N]
 A skilled blade who fights using cheap[N]
 tricks. Her foes lay dead nontheless.[X]
+
+## NoahName
+Noah[X]
+
+## NoahDesc
+Guardsman[N]
+A rookie town guard with an enthusiastic[N]
+mindset. Endearing if nothing else.[X]
