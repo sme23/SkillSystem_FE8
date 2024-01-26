@@ -200,6 +200,7 @@
 [LoadGreagorLibrarianB] = [LoadFace][0x59][0x1]
 [LoadGreagorVillagerB] = [LoadFace][0x61][0x1]
 [LoadGreagorPatronB] = [LoadFace][0x5A][0x1]
+[LoadGreagorVillagerC] = [LoadFace][0x58][0x1]
 
 [Font] = [0x80][0x26]
 [TextPalette] = [0x80][0x27]
