@@ -1254,7 +1254,7 @@ Quick, no time to waste![AN]
 Let's catch up with[A]
 your injured ally![AN]
 [ML]
-Of course, of course![AN]
+Of course, of course![AN][X]
 
 ## A4_EndEvent_6
 
