@@ -321,3 +321,46 @@ SagargalaMugData:
 #incbin "Dmp/Sagargala_palette.dmp"
 #incbin "Dmp/Sagargala_minimug.dmp"
 setMugEntry(SagargalaMug, SagargalaMugData, 3, 5, 3, 3)
+
+
+// B-2 placeholders
+
+ALIGN 16
+AvocadoMugData:
+#incbin "Dmp/Avocado_mug.dmp"
+#incbin "Dmp/Avocado_frames.dmp"
+#incbin "Dmp/Avocado_palette.dmp"
+#incbin "Dmp/Avocado_minimug.dmp"
+setMugEntry(AvocadoMug, AvocadoMugData, 2, 5, 2, 3)
+
+ALIGN 16
+CruzMugData:
+#incbin "Dmp/Cruz_mug.dmp"
+#incbin "Dmp/Cruz_frames.dmp"
+#incbin "Dmp/Cruz_palette.dmp"
+#incbin "Dmp/Cruz_minimug.dmp"
+setMugEntry(CruzMug, CruzMugData, 2, 6, 3, 4)
+
+ALIGN 16
+HusniyeMugData:
+#incbin "Dmp/Husniye_mug.dmp"
+#incbin "Dmp/Husniye_frames.dmp"
+#incbin "Dmp/Husniye_palette.dmp"
+#incbin "Dmp/Husniye_minimug.dmp"
+setMugEntry(HusniyeMug, HusniyeMugData, 2, 6, 3, 4)
+
+ALIGN 16
+MagdalenaMugData:
+#incbin "Dmp/Magdalena_mug.dmp"
+#incbin "Dmp/Magdalena_frames.dmp"
+#incbin "Dmp/Magdalena_palette.dmp"
+#incbin "Dmp/Magdalena_minimug.dmp"
+setMugEntry(MagdalenaMug, MagdalenaMugData, 2, 5, 3, 3)
+
+ALIGN 16
+YadneyMugData:
+#incbin "Dmp/Yadney_mug.dmp"
+#incbin "Dmp/Yadney_frames.dmp"
+#incbin "Dmp/Yadney_palette.dmp"
+#incbin "Dmp/Yadney_minimug.dmp"
+setMugEntry(YadneyMug, YadneyMugData, 2, 5, 2, 3)

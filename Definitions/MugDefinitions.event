@@ -51,6 +51,9 @@
 
 #define RedFSoldierMug $4F
 
+
+
+
 // A-4 Mugs
 #define StingrayMug $56
 #define RamiroMug $57
@@ -77,6 +80,14 @@
 #define LexaMug $26
 #define NoahMug $4B
 #define Noah2Mug $4E
+
+
+// B-2 Placeholders
+#define AvocadoMug 0x19
+#define CruzMug 0x1A
+#define HusniyeMug 0x1B
+#define MagdalenaMug 0x1C
+#define YadneyMug 0x1D
 
 //CLASS CARDS
 
