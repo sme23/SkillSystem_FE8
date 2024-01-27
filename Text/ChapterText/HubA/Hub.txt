@@ -2015,6 +2015,46 @@ a great source of ingredients close by.[AN]
 You might see some of my tonics[N]
 over at the vendor down there![AN][X]
 
+//This plays if A4 hasn't yet been completed. 
+## NPCVillagerDialogueC_1 
+[ML][LoadLua]
+[MR][LoadGreagorVillagerC]
+[MR]
+Have you heard of the Razorbloods?[AN]
+They're one of the pirate crews[N]
+who ply their trade around here[Beat][AN]
+And they might just be the[N]
+most ruthless band of all.[AN]
+They stole some massive treasure[N]
+galleon from Incendivis a while back.[AN]
+Not only have the Razorbloods[N]
+converted it into their flagship...[AN]
+but they hang the corpses of captains[N]
+they rob from their mast like flags.[AN]
+[CloseEyes]Those pirates are a true scourge[Beat][AN]
+[OpenEyes]Be on your guard if you ever[N]
+see that galleon on the horizon.[AN][X]
+
+//If A4 is completed...
+## NPCVillagerDialogueC_2
+[ML][LoadLua]
+[MR][LoadGreagorVillagerC]
+[MR][3LB]
+Have you heard the good news?[N]
+The Razorbloods are no more![AN]
+Supposedly, a lone Incendivis ship took[N]
+them out, and returned their stolen[N]
+galleon to its rightful owners.[AN]
+However, some rumors are saying[N]
+it was really a rival pirate gang[N]
+who actually did them in in the end![AN]
+Whoever it was, they did a brave thing![AN]
+If you ever happen to run into the[N]
+heroes who slew those monsters, be[N]
+sure to give them all our thanks.[AN]
+[ML][1LB]
+[Beat]Yes[Beat] I definitely will.[AN][X]
+
 ## NPCSailorDialogue
 
 [ML][LoadLua]
@@ -2070,13 +2110,12 @@ finding a ship miles away![AN]
 Talent like me is tricky to come by.[AN][X]
 
 ## NPCGuardDialogue
-
 [ML][LoadLua]
-[MR][LoadGreagorGuard] 
-[3LB]
+[MR][LoadGreagorGuard]
+[MR][3LB]
 This place tends to be pretty[N]
 boring in the daylight.[AN]
-Nobody wants to commit acts that'll get[N]
+Nobody wants to do acts that'll get[N]
 them banned from the only safe port in[N]
 this region for miles around.[AN]
 'Course, some people can't hold their[N]

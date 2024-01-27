@@ -91,6 +91,7 @@
 #define GreagorLibrarianB $AA
 #define GreagorVillagerB $AB
 #define GreagorPatronB $AC
+#define GreagorVillagerC $AE
 
 //Hub A1
 #define Buzu $48

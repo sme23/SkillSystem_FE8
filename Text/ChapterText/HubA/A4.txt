@@ -354,15 +354,19 @@ to keep up with all of this[Beat]![AN]
 Keep your mettle up, Val![N]
 Stay strong, keep on fighting![AN]
 [L][OpenEyes]
-T-Trying, captain![AN][L][MoveLeft]
+T-Trying, captain![AN]
+[L][MoveLeft]
 D-Darn it, missed[N]
 another shot[Beat][AN]
 [FFL][MoFL]
 [R]
 Behind you![AN]
-[Event] //Play gun firing SFX
-[R][MoveRight]
-[FL]
+[R][MoveRight][X]
+
+## A4StartEventBase_4
+[MR][LoadA4ImperialCaptain]
+[L][LoadValerie]
+[FL][LoadRebel]
 Gaaaaaah![AN]
 [ClearFace]
 [L]
@@ -370,13 +374,13 @@ S-Shoot![AN][CloseEyes]
 Oh gods[Beat]Oh gods![AN]
 [R]
 And that was my last[N]
-loaded pistol right there[Beat][AN]
+shot right there[Beat][AN]
 Is this truly how--[.4][AN][R][MoveRight]
 Halt![A][X]
 
 //Could potentially return to cutscene here, showing the pirate captain approaching the captain
 
-## A4StartEventBase_4
+## A4StartEventBase_5
 [ML][LoadStingray]
 [R][LoadA4ImperialCaptain]
 [FR][LoadValerie]
@@ -408,10 +412,10 @@ empire group I've dealt with?[AN]
 The Razorbloods won't be[N]
 stopped by a mere sloop![AN]
 [FR]
-Ghh[Beat]n-no, you can't do this![AN]
+Gah[Beat]n-no, you can't do this![AN]
 We won't let you![AN]
 [R][3LB]
-Ghhhhhh[Beat][AN]
+Heh[Beat][AN]
 Everyone, retreat![AN][.4]
 Fall back into the hull![.4][N]
 I'll hold them off, just move it![AN]
@@ -425,7 +429,11 @@ You all can't stay up here[N]
 and fight any longer.[AN]
 [FR][CloseEyes]
 [Beat]I-I'm sorry, captain[Beat][AN]
-[FR][ClearFace]
+[FR][ClearFace][X]
+
+## A4StartEventBase_6
+[ML][LoadStingray]
+[R][LoadA4ImperialCaptain]
 [ML]
 So, you're sacrificing yerself[N]
 for your doomed crew, eh?[AN][ToggleSmile]
@@ -453,7 +461,7 @@ GRENADE![AN]
 Get back![N]
 Get back![AN]
 [CSSCF]
-[Event]//Fade screen to white & play explosion sfx
+[Event]//Fade screen to white & play explosion sfx. Have captain fall back. 
 [FL][MoML][LoadStingray][3LB]
 Damn imperials[N]
 and their gunpowder![AN]
@@ -461,7 +469,7 @@ She was just rusin' us![.4][N]
 Get back here![AN][X]
 
 
-## A4StartEventBase_5
+## A4StartEventBase_7
 [FFL][LoadStingray]
 [FFL][MoMR]
 [MR][2LB][CloseEyes]
@@ -493,7 +501,7 @@ let 'em get out till we're ready![AN]
 The rest of you lads, get back on [N]
 board our ship, repel these scum![AN][X]
 
-## A4StartEventBase_6
+## A4StartEventBase_8
 [FR][LoadLua]
 [R][LoadDesiderio]
 [L][LoadPilar]
@@ -937,28 +945,30 @@ secure the other two decks.[AN]
 Razvan and I will investigate[N]
 the imperial ship.[AN]
 
-[L]
+[FL]
 Aye, boss![AN]
 I'll make sure there aren't[N]
 any rebels lurking about![AN]
 [ClearFace][CloseSpeechSlow]
 
-[FL]
+[L]
 Understood, captain.[AN]
 Just make sure you don't get[N]
 shot if there are survivors.[AN]
-[ClearFace][CloseSpeechSlow]
+[ClearFace][CloseSpeechSlow][X]
 
-[FR]
+## A4_EndEvent_2
+[R][LoadLua]
+[FL][LoadRazvan]
 I'm ready to go, captain.[AN]
 
-[FL]
+[R]
 Stick close to me, Razvan.[AN]
-If there are any survivors, let's
+If there are any survivors, let's[N]
 hope they think we're not the enemy.[AN][X]
 
 
-## A4_EndEvent_2
+## A4_EndEvent_3
 
 // Lua and Razvan proceed to the imperial ship alone. They walk onto the deck, to only find the scars of battle. 
 
@@ -1013,7 +1023,7 @@ Wait, what?[AN]
 [R]
 [Beat]Well then.[AN][X]
 
-## A4_EndEvent_3
+## A4_EndEvent_4
 
 //The door to the deck is opened, and the imperial captain appears on the deck, walking over to Razvan and Lua. 
 
@@ -1107,7 +1117,7 @@ Everything's fine up here.[AN]
 Men![A]Come up aboard deck,[N]
 the coast is now clear![AN][X]
 
-## A4_EndEvent_4
+## A4_EndEvent_5
 
 // A handful of imperial troops come up on the deck, five total, various soldier classes. 
 // Valerie, the recruit, can appear as a gunner. While the other troops fan out
@@ -1197,7 +1207,56 @@ O-Of course![AN]
 I-I'll help to make[N]
 sure they're alright![AN][X]
 
-## A4_EndEvent_5
+//If Razvan doesn't have a healing staff in his inventory...
+## A4_EndEvent_Secret
+[ML][LoadValerie]
+[MR][LoadRazvan]
+...Erm, ah, shoot.[AN]
+[ML][1LB]
+O-Oh? What is it?[AN]
+[MR][2LB]
+This is actually going to[N]
+sound rather awkward.[AN]
+But,[.4] I just realized I don't[N]
+have any staves to heal with.[AN]
+It completely slipped me somehow--[.4][CloseEyes][N]
+I'm very, very sorry.[AN]
+[ML]
+H-Huh?[AN]
+Isn't that a heal staff[N]
+you're holding right now?[AN]
+[MR][2LB]
+[OpenEyes]It is, but it's more of a[N]
+sentimental staff, actually[Beat][AN]
+[ML][1LB]
+Sentimental[Beat]?[A] How so?[AN]
+[MR][3LB]
+This was a gift from my mother, when[N]
+I first became a curate proper.[AN]
+I'd borrowed ones before when I was[N]
+training with my local church, but[N]
+this was my first real staff.[AN]
+It's been drained for quite some[N]
+time though[Beat]so in other words,[N]
+I'm utterly useless right now.[AN]
+[ML][2LB]
+Wow[Beat][A]E-Erm, not wowing in[A]
+disappointment or anything but, u-uh[AN]
+Don't you worry,because[A] 
+everyone makes mistakes![AN]
+I got a staff, right here![AN]
+[ML][MoML][Clear]
+Here you go![AN][CloseEyes]
+Don't ask where I got it please[Beat][AN][OpenEyes]
+[MR]
+Oh, that's perfect..![N]
+Quick, no time to waste![AN]
+Let's catch up with[A]
+your injured ally![AN]
+[ML]
+Of course, of course![AN][X]
+
+## A4_EndEvent_6
 
 //Valerie and Razvan follow another soldier back into the ship. Dialogue returns to Lua and the imperial captain.
 
@@ -1205,10 +1264,13 @@ sure they're alright![AN][X]
 
 [R][LoadLua]
 [L][LoadA4ImperialCaptain]
+Heh[Beat]Your curate seemed very[N]
+eager to lend a helping hand.[AN]
+I'm glad to know there are still[N]
+good samaritans along these routes.[AN]
 
-[Beat]Heh[Beat]the boy's more[N]
-than eager to lend a helping hand.[AN]
-He studied under an[N] 
+[R]
+He studied under an[N]
 imperial priest, actually.[AN]
 I've been grateful to have[N]
 him on-board my ship.[AN]
@@ -1237,10 +1299,10 @@ We're delivering farming [N]
 supplies over to Rockwell.[AN]
 
 [R]
-That makes sense those mining [N]
-isles would need help with farming.[AN]
-But why not have[N]
-a merchant do it?[AN]
+Makes sense those mining [N]
+isles would need those supplies.[AN]
+But why send a single navy vessel[N] 
+instead of a proper convoy?[AN]
 
 [L][3LB]
 We were told that this route[N]
@@ -1266,7 +1328,7 @@ men's safety over anything else.[AN]
 Being forced onto a desperate[N]
 defensive like this over a lack of[N]
 intelligence is rather irritating.[AN]
-It's not that I don't consider this
+It's not that I don't consider this[N]
 mission important either.[AN]
 I'm sure Rockwell needs the help,[N]
 but this delivery needed some more[N]
@@ -1315,7 +1377,18 @@ To you as well, Castila.[AN][X]
 
 //The Incendivis Captain gives her 1500 gold.
 
-## A4_EndEvent_6
+## A4_EndEvent_7
+
+[L][LoadA4ImperialCaptain]
+[Beat]Going from having all of us[N]
+nearly hacked to death by pirates[Beat][AN]
+[Beat]To taking back an imperial[N]
+galleon and a rebel sloop.[AN]
+[CloseEyes]
+Fate really,[.4] really loves to[N]
+screw with me, huh?[AN][X]
+
+## A4_EndEvent_8
 
 [FL][LoadRazvan]
 [FR][LoadDesiderio]
@@ -1449,7 +1522,7 @@ us completely empty-handed.[AN][X]
 Grrr[Beat]you think you can[N]
 just board the Razorbloods?![AN]
 In moments, your remains will[N]
-be thrown off my new ship![AN][X]
+be lost to the void below![AN][X]
 
 ## A4_StingrayDefeated
 [ML][LoadStingray]
