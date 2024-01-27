@@ -512,7 +512,6 @@ LetterOpener_2_10:
         BYTE   PATT
          POIN2  LetterOpener_2_9
 // 014   ----------------------------------------
-        BYTE           VOL     70
         BYTE   W96
 // 015   ----------------------------------------
         BYTE   W96
@@ -639,6 +638,7 @@ LetterOpener_3:
         BYTE   KEYSH   LetterOpener_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   24
+        BYTE           VOL     70
         BYTE           PAN     c_v-8
         BYTE   W90
         BYTE           N48     Ds2   v110   gtp3

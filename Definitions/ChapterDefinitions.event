@@ -127,5 +127,6 @@
 
 #define DesertBastionVillageObjectID 0xA1
 #define DesertBastionVillagePaletteID 0xA2
-#define DesertBastionVillageConfigID 0xA3
+// note that 0xA3 is vanilla mountainous lagdou palette, used in B-2
+#define DesertBastionVillageConfigID 0xA4
 

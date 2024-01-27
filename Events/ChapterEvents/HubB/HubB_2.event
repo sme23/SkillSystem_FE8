@@ -183,11 +183,12 @@ FADI 16
 EraseBackground
 LoadEnemies(B2Baddies)
 CAM1 Cruz
-// MUSC LetterOpenerID
-// rebels knife is a placeholder! make this play Letter Opener once that exists
-MUSC TheRebelsKnifeID
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
 FADU 16
+ASMC MakeMusicAhoyASMC
 CameraCursor(Cruz)
+ASMC MakeMusicAhoyASMC
 Text(B2_IntroCruz_Monologue)
 LoadEnemies(B2Yadney)
 ENUN

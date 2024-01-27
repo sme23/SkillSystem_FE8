@@ -8,4 +8,8 @@ CalmFlowSong(DistantSkiesID,6)
 CalmFlowSong(ScalleywagsOnDeckID,6)
 CalmFlowSong(FoolsBoldID,6)
 CalmFlowSong(TheRebelsKnifeID,7)
+// not sure if this is actually where LDSS should cut off, what with the new version being edited
+CalmFlowSong(LastDanceSinkingShipID,7)
+CalmFlowSong(WellAndTrulyLostID,6)
+CalmFlowSong(LetterOpenerID,7)
 CalmFlowSongListEnd

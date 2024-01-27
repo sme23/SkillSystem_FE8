@@ -133,8 +133,10 @@ SetUnitItemDurability(9, 23, 2, LuckTonic)
 ENUT LuaInAHubFlag
 CAM1 Lua
 FADU 16
-// MUSC LetterOpenerID
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
 CameraCursor(Lua)
+ASMC MakeMusicAhoyASMC
 Text(B2a_MagExplainsHusniye)
 CameraCursor(Husniye)
 Text(B2a_MagExplainsCruz)
@@ -322,16 +324,17 @@ FADU 16
 Text(B2a_MagdalenaGivesMoney)
 GiveGold(2500)
 FADI 16
-// MUSC LetterOpenerID
-// rebels knife is a placeholder! make this play Letter Opener once that exists
-MUSC TheRebelsKnifeID
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
 
 // delete this later - for reference purposes
 // #define TextCont(id,music) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
 
 FlagIsSet(CruzAccused, 0x666)
 	SetBackground(Prison_Cell) // if cruz in jail
+	ASMC MakeMusicAhoyASMC
 	FADU 16
+	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 	TEXTSTART
 	TEXTSHOW B2a_CruzBreakout
@@ -344,7 +347,9 @@ FlagIsSet(CruzAccused, 0x666)
 	GOTO 0x777
 LABEL 0x666
 	SetBackground(Woodland_Night) // if cruz spared
+	ASMC MakeMusicAhoyASMC
 	FADU 16
+	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 
 	TEXTSTART
