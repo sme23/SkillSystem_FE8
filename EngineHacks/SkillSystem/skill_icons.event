@@ -1094,12 +1094,14 @@ ORG SkillIcon(UnderhandedID)
 #incbin "SkillIcons/Underhanded.dmp"
 ORG SkillIcon(CritthriftID)
 #incbin "SkillIcons/Armsthrift.dmp"
+ORG SkillIcon(AstralBlessingID)
+#incbin "SkillIcons/AstralBlessing.dmp"
+ORG SkillIcon(AdaptableID)
+#incbin "SkillIcons/Versatile.dmp"
 
 //placeholder
 ORG SkillIcon(PanacheID)
-#incbin "SkillIcons/SuppressiveFire.dmp" 
-ORG SkillIcon(AdaptableID)
-#incbin "SkillIcons/SpectrumStance.dmp" 
+#incbin "SkillIcons/SuppressiveFire.dmp"
 ORG SkillIcon(SeaShantyID)
 #incbin "SkillIcons/ReMove.dmp"
 ORG SkillIcon(RunningStartID)
@@ -1110,8 +1112,6 @@ ORG SkillIcon(StudiousBlowID)
 #incbin "SkillIcons/HoneMag.dmp"
 ORG SkillIcon(ResoluteSacrificeID)
 #incbin "SkillIcons/ResoluteSacrifice.dmp"
-ORG SkillIcon(AstralBlessingID)
-#incbin "SkillIcons/LullLck.dmp"
 ORG SkillIcon(WellRestedID)
 #incbin "SkillIcons/DriveSpd.dmp"
 ORG SkillIcon(HardworkingID)
