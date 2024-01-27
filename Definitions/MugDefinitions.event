@@ -138,6 +138,7 @@
 #define LanceKnightClassCard 0x12b
 #define AxeKnightClassCard 0x12c
 #define BowKnightClassCard 0x12d
+#define AssassinClassCard 0x12e
 
 // temporary
 #define AdventurerClassCard 0x79

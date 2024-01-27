@@ -120,7 +120,35 @@ UNIT
 BeginningScene:
 WEATHER 7
 ENUT LuaInAHubFlag
+SetBackground(Ship)
+Text(HubB_BeginningScene_1_1)
+Text(HubB_BeginningScene_1_2)
+Text(HubB_BeginningScene_1_3)
+Text(HubB_BeginningScene_1_4)
+Text(HubB_BeginningScene_1_5)
+Text(HubB_BeginningScene_1_6)
+
+Text(HubB_BeginningScene_2_1)
+Text(HubB_BeginningScene_2_2)
+
+Text(HubB_BeginningScene_3_1)
+Text(HubB_BeginningScene_3_3)
+Text(HubB_BeginningScene_3_4)
+Text(HubB_BeginningScene_3_5)
+
+SoloTextbox(HubB_BeginningScene_3_6, 24, 24)
+STAL 30
+SoloTextbox(HubB_BeginningScene_3_6, 104, 200)
+STAL 30
+SoloTextboxCenter(HubB_BeginningScene_3_7)
+STAL 30
+
+LocationText(HubB_BeginningScene_4_1, 8, 8)
+Text(HubB_BeginningScene_4_2)
+
+FADI 10
 LoadPlayerUnits(NewUnits)
+STAL 1
 GotoPrepScreenHub
 NoFade 
 ENDA

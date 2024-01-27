@@ -339,6 +339,14 @@ FalcoknightClassCardPal:
 setCardEntry(FalcoknightClassCard, FalcoknightClassCardData, FalcoknightClassCardPal)
 
 ALIGN 4
+AssassinClassCardData:
+#incbin "Dmp/Assassin (M) Dual-Swords {Scraiza, Sword of HaE}.dmp"
+ALIGN 4
+AssassinClassCardPal:
+#incbin "Dmp/Assassin (M) Dual-Swords {Scraiza, Sword of HaE}.png_pal.dmp"
+setCardEntry(AssassinClassCard, AssassinClassCardData, AssassinClassCardPal)
+
+ALIGN 4
 Assassin_FClassCardData:
 #incbin "Dmp/Assassin (F) Knives (Pushwall, L95).dmp"
 ALIGN 4
@@ -356,10 +364,10 @@ setCardEntry(LanceKnightClassCard, LanceKnightClassCardData, LanceKnightClassCar
 
 ALIGN 4
 AxeKnightClassCardData:
-#incbin "Dmp/Great Knight (Der, leo_link).dmp"
+#incbin "Dmp/Great Knight (U) Axe {Leo_Link, DerTheVaporeon}.dmp"
 ALIGN 4
 AxeKnightClassCardPal:
-#incbin "Dmp/Great Knight (Der, leo_link).png_pal.dmp"
+#incbin "Dmp/Great Knight (U) Axe {Leo_Link, DerTheVaporeon}.png_pal.dmp"
 setCardEntry(AxeKnightClassCard, AxeKnightClassCardData, AxeKnightClassCardPal)
 
 ALIGN 4
