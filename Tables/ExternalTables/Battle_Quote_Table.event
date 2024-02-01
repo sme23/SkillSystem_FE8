@@ -41,6 +41,7 @@ UnspecifiedBattleConvo(Ramiro, HubA_4, 17, A4_RamiroBattleQuote)
 UnspecifiedBattleConvo(Hugo, Chapter2, 0x13, HugoBossQuote)
 UnspecifiedBattleConvo(Juliana, Chapter2, 0x14, JulianaBossQuote)
 UnspecifiedBattleConvo(Ignacio, Chapter2, 0x15, IgnacioBossQuote)
+UnspecifiedBattleConvo(ElodiaBoss, Chapter2, 0x16, ElodiaBossQuoteCh2)
 
 // Chapter B-2
 SpecifiedBattleConvo(Yadney,Avocado,HubB_2,0x11,B2_BQ_YadneyAvocado)

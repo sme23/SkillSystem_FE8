@@ -531,8 +531,20 @@ a damned griffin squadron, too?[AN]
 But we're almost out of here[Beat][N]
 Don't let them onboard, got it?![A][X]
 
-## IgnacioBossQuote
+## ElodiaBossQuoteCh2 
+[ML][LoadElodia]
+I wanted to make this easy,[N]
+but yet, you all still resist.[AN]
+Your crimes end here and now.[AN][X]
 
+## ElodiaDefeatQuoteCh2
+[ML][LoadElodia]
+Nggh--![A] Unbelievable.[AN]
+I'll have to lick my wounds[Beat][AN][X]
+But even if I fall, the pressure[N]
+still isn't off you all.[AN][X]
+
+## IgnacioBossQuote
 [ML][LoadIgnacio]
 You got through the[N]
 rest of my crew?![AN]
@@ -555,7 +567,7 @@ Men, show these rats no mercy![AN]
 dolt.[A] So much for unmatched skill.)[AN][X]
 
 ## HugoBossQuote
-[MR][LoadHugo]
+[ML][LoadHugo]
 Oi![A] So you're the ones who[N]
 actually reclaimed that galleon![AN]
 I knew that Castila would never[N]
@@ -564,7 +576,7 @@ Well then, guess I'll have a[N]
 real challenge today after all![AN][X]
 
 ## HugoDeathQuote
-[MR][LoadHugo]
+[ML][LoadHugo]
 H-Haha[Beat][AN]
 [CloseEyes]Looks like I gave you all[N]
 far too little credit, huh?[AN]
