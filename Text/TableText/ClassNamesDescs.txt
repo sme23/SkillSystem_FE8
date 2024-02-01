@@ -372,3 +372,10 @@ Bow Knight[X]
 ## BowKnightDesc
 Weapons: Bows[N]
 Traits: Canto+, Aid+[X]
+
+## HorseName
+Horse[X]
+
+## HorseDesc
+Weapons: None[N]
+Traits: It's a horse![X]

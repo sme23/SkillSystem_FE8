@@ -37,6 +37,11 @@ UnspecifiedBattleConvo(A4FunnyArcher, HubA_4, 13, 0)
 UnspecifiedBattleConvo(Stingray, HubA_4, 16, A4_StingrayBattleQuote)
 UnspecifiedBattleConvo(Ramiro, HubA_4, 17, A4_RamiroBattleQuote)
 
+// Chapter 2
+UnspecifiedBattleConvo(Hugo, Chapter2, 0x13, HugoBossQuote)
+UnspecifiedBattleConvo(Juliana, Chapter2, 0x14, JulianaBossQuote)
+UnspecifiedBattleConvo(Ignacio, Chapter2, 0x15, IgnacioBossQuote)
+
 // Chapter B-2
 SpecifiedBattleConvo(Yadney,Avocado,HubB_2,0x11,B2_BQ_YadneyAvocado)
 SpecifiedBattleConvo(Yadney,Razvan,HubB_2,0x12,B2_BQ_YadneyRazvan)
