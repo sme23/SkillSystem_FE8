@@ -423,7 +423,7 @@ UnitPlacement:
 		UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [21,4] 0 0 0 0 [SteelBlade] TwoRangeAI
 		UNIT B4Bandit Deserter		Javier Level(10,Enemy,True) [23,5] 0 0 0 0 [Pike] AttackInRangeAI
 		UNIT B4Bandit Hunter		Javier Level(10,Enemy,True) [23,2] 0 0 0 0 [Greatbow] AttackInRangeAI
-		UNIT B4Bandit Ninja			Javier Level(10,Enemy,True) [27,3] 0 0 0 0 [SteelDagger,Stiletto] AttackInRangeAI
+		UNIT B4Bandit Ninja			Javier Level(10,Enemy,True) [28,3] 0 0 0 0 [SteelDagger,Stiletto] AttackInRangeAI
 		UNIT Javier Hero 			Javier Level(13,Enemy,True) [26,3] 0 0 0 0 [SilverSword,HideShield,TealGem] AttackInRangeAI
 		UNIT
 
