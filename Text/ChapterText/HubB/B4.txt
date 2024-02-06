@@ -93,7 +93,7 @@ like we have much of a choice.[AN]
 Well if you want to be that way we'll[N]
 just have to show you your own mistake.[AN]
 Crew![.4] To arms,[.4] let's rout these[N]
-land locked desert rats.[A][X]
+flightless desert rats.[A][X]
 
 
 ## HubB_4BeginningScene4

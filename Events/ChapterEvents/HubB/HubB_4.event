@@ -40,16 +40,24 @@ PointerList:
 	// - Playtest Feedback Addressment (X)
 	// - Personal Playtest (X)
 	// - Post Map Lexa/Adrian & Noah Convos if they survive (Maybe)
+	// - Playtesting/feedback addressing
 
 //Feedback Todo List:
-	//Javier Autolevel True / Nerf (X)
-	//B4Bandit Base Level 1 (X)
-	//Stealables Javier (Kinda)
-	//Enemy placement redesigned (X)
+	//Old:
+		//Javier Autolevel True / Nerf (X)
+		//B4Bandit Base Level 1 (X)
+		//Stealables Javier (Kinda)
+		//Enemy placement redesigned (X)
+	//Turn Limit Tightened (X)
+	//Level Adjustments Player/Enemy (X)
+	//Boss area AI adjustment (X)
+	//Vuln Lexa (X)
+	//Lexa/Adrian no aggro (X)
+	//Maybe remove bottom javier pit entrances but im eh on this
 
 
 TurnBasedEvents:
-	TurnEventPlayer(0, TurnLimit, 14)
+	TurnEventPlayer(0, TurnLimit, 11)
 	TurnEventPlayer(17, AdrianLexaWarning, 3)
 	TurnEventPlayer(0, HurryWarning, 9)
 	END_MAIN
@@ -363,60 +371,60 @@ UnitPlacement:
 		UNIT
 
 	EnemyUnits1:
-		UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [11,21] 0 0 0 0 [SteelSword] ChargeAI
-		UNIT B4Bandit Deserter		Javier Level(10,Enemy,True) [13,19] 0 0 0 0 [SteelLance] ChargeAI
+		UNIT B4Bandit Mercenary		Javier Level(9,Enemy,True) [11,21] 0 0 0 0 [SteelSword] ChargeAI
+		UNIT B4Bandit Deserter		Javier Level(9,Enemy,True) [13,19] 0 0 0 0 [SteelLance] ChargeAI
 		//UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [19,23] 0 0 0 0 [IronBlade] ChargeAI
-		UNIT B4Bandit Fighter		Javier Level(10,Enemy,True) [18,19] 0 0 0 0 [HandAxe] ChargeAI
-		UNIT B4Bandit Brigand		Javier Level(10,Enemy,True) [20,21] 0 0 0 0 [IronAxe] ChargeAI
-		UNIT B4Bandit Warden		Javier Level(11,Enemy,True) [24,23] 0 0 0 0 [SteelLance,HideShield] AttackInRangeAI
-		UNIT B4Bandit Vanguard		Javier Level(11,Enemy,True) [8,22] 0 0 0 0 [SteelAxe] ChargeAI
-		UNIT B4Bandit Ninja			Javier Level(10,Enemy,True) [7,20] 0 0 0 0 [IronDagger] ChargeAI
-		UNIT B4Bandit Warden		Javier Level(11,Enemy,True) [3,18] 0 0 0 0 [FlameSword] AttackInRangeAI
+		UNIT B4Bandit Fighter		Javier Level(9,Enemy,True) [18,19] 0 0 0 0 [HandAxe] ChargeAI
+		UNIT B4Bandit Brigand		Javier Level(9,Enemy,True) [20,21] 0 0 0 0 [IronAxe] ChargeAI
+		UNIT B4Bandit Warden		Javier Level(10,Enemy,True) [24,23] 0 0 0 0 [SteelLance,HideShield] AttackInRangeAI
+		UNIT B4Bandit Vanguard		Javier Level(9,Enemy,True) [8,22] 0 0 0 0 [SteelAxe] ChargeAI
+		UNIT B4Bandit Ninja			Javier Level(9,Enemy,True) [7,20] 0 0 0 0 [IronDagger] ChargeAI
+		UNIT B4Bandit Warden		Javier Level(10,Enemy,True) [3,18] 0 0 0 0 [FlameSword] AttackInRangeAI
 		UNIT
 
 	EnemyUnits2:
-		UNIT B4Bandit Fighter		Javier Level(10,Enemy,True) [8,15] 0 0 0 0 [SteelAxe] TwoRangeAI
-		UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [13,13] 0 0 0 0 [SteelSword] AttackInRangeAI
-		UNIT B4Bandit Shaman		Javier Level(10,Enemy,True) [6,14] 0 0 0 0 [Elfire] AttackInRangeAI
-		UNIT B4Bandit Gunner		Javier Level(10,Enemy,True) [12,12] 0 0 0 0 [IronMusket] AttackInRangeAI
-		UNIT B4Bandit Thief			Javier Level(10,Enemy,True) [3,15] 0 0 0 0 [SteelDagger] AttackInRangeAI
-		UNIT B4Bandit Cavalier		Javier Level(10,Enemy,True) [1,13] 0 0 0 0 [IronLance] AttackInRangeAI
-		UNIT B4Bandit GriffinRider	Javier Level(10,Enemy,True) [8,15] 0 0 0 0 [IronLance] AttackInRangeAI
-		UNIT B4Bandit Thief			Javier Level(10,Enemy,True) [17,13] 0 0 0 0 [SteelKnife] AttackInRangeAI
-		UNIT B4Bandit Deserter		Javier Level(10,Enemy,True) [19,15] 0 0 0 0 [Pike] AttackInRangeAI
-		UNIT B4Bandit Myrmidon		Javier Level(10,Enemy,True) [22,17] 0 0 0 0 [SteelSword] AttackInRangeAI
-		UNIT B4Bandit Hunter		Javier Level(10,Enemy,True) [20,11] 0 0 0 0 [Longbow,MiniBow] GroupTwoAI
-		UNIT B4Bandit Fighter		Javier Level(10,Enemy,True) [23,13] 0 0 0 0 [Hammer] GroupTwoAI
-		UNIT B4Bandit Monk			Javier Level(10,Enemy,True) [25,18] 0 0 0 0 [Thunder] TwoRangeAI
-		UNIT B4Bandit Champion		Javier Level(13,Enemy,True) [21,14] 0 0 0 0 [SteelLance,IronShield,TealGem] GroupTwoAI
+		UNIT B4Bandit Fighter		Javier Level(9,Enemy,True) [8,15] 0 0 0 0 [SteelAxe] TwoRangeAI
+		UNIT B4Bandit Mercenary		Javier Level(9,Enemy,True) [13,13] 0 0 0 0 [SteelSword] AttackInRangeAI
+		UNIT B4Bandit Shaman		Javier Level(9,Enemy,True) [6,14] 0 0 0 0 [Elfire] AttackInRangeAI
+		UNIT B4Bandit Gunner		Javier Level(9,Enemy,True) [12,12] 0 0 0 0 [IronMusket] AttackInRangeAI
+		UNIT B4Bandit Thief			Javier Level(9,Enemy,True) [3,15] 0 0 0 0 [SteelDagger] AttackInRangeAI
+		UNIT B4Bandit Cavalier		Javier Level(9,Enemy,True) [1,13] 0 0 0 0 [IronLance] AttackInRangeAI
+		UNIT B4Bandit GriffinRider	Javier Level(9,Enemy,True) [8,15] 0 0 0 0 [IronLance] AttackInRangeAI
+		UNIT B4Bandit Thief			Javier Level(9,Enemy,True) [17,13] 0 0 0 0 [SteelKnife] AttackInRangeAI
+		UNIT B4Bandit Deserter		Javier Level(9,Enemy,True) [19,15] 0 0 0 0 [Pike] AttackInRangeAI
+		UNIT B4Bandit Myrmidon		Javier Level(9,Enemy,True) [22,17] 0 0 0 0 [SteelSword] AttackInRangeAI
+		UNIT B4Bandit Hunter		Javier Level(9,Enemy,True) [20,11] 0 0 0 0 [Longbow,MiniBow] GroupTwoAI
+		UNIT B4Bandit Fighter		Javier Level(9,Enemy,True) [23,13] 0 0 0 0 [Hammer] GroupTwoAI
+		UNIT B4Bandit Monk			Javier Level(9,Enemy,True) [25,18] 0 0 0 0 [Thunder] TwoRangeAI
+		UNIT B4Bandit Champion		Javier Level(12,Enemy,True) [21,14] 0 0 0 0 [SteelLance,IronShield,TealGem] GroupTwoAI
 		UNIT
 
 	EnemyUnits3:
-		UNIT B4Bandit Deserter		Javier Level(10,Enemy,True) [17,9] 0 0 0 0 [SteelLance] AttackInRangeAI
-		UNIT B4Bandit AxeCav		Javier Level(10,Enemy,True) [12,7] 0 0 0 0 [SteelAxe] AttackInRangeAI
-		UNIT B4Bandit Mage			Javier Level(10,Enemy,True) [17,7] 0 0 0 0 [Elsurge] GroupThreeAI
-		UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [13,5] 0 0 0 0 [Onigiri] GroupThreeAI
-		UNIT B4Bandit Vanguard		Javier Level(11,Enemy,True) [8,7] 0 0 0 0 [Oversize] AttackInRangeAI
-		UNIT B4Bandit Warrior		Javier Level(13,Enemy,True) [15,6] 0 0 0 0 [SteelAxe,0xEC] GroupThreeAI
-		UNIT B4Bandit Myrmidon		Javier Level(10,Enemy,True) [5,10] 0 0 0 0 [SteelSword] AttackInRangeAI
-		UNIT B4Bandit Deserter		Javier Level(10,Enemy,True) [4,8] 0 0 0 0 [Harpoon] AttackInRangeAI
-		UNIT B4Bandit Brigand		Javier Level(10,Enemy,True) [2,10] 0 0 0 0 [Bloodaxe] AttackInRangeAI
-		UNIT B4Bandit PegasusRider	Javier Level(10,Enemy,True) [7,1] 0 0 0 0 [SteelSword] GroupFourAI
-		UNIT B4Bandit PegasusRider	Javier Level(10,Enemy,True) [1,3] 0 0 0 0 [Wingclipper] GroupFourAI
-		UNIT B4Bandit Bombardier	Javier Level(13,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] GroupFourAI
+		UNIT B4Bandit Deserter		Javier Level(9,Enemy,True) [17,9] 0 0 0 0 [SteelLance] AttackInRangeAI
+		UNIT B4Bandit AxeCav		Javier Level(9,Enemy,True) [12,7] 0 0 0 0 [IronAxe] AttackInRangeAI
+		UNIT B4Bandit Mage			Javier Level(9,Enemy,True) [17,7] 0 0 0 0 [Elsurge] GroupThreeAI
+		UNIT B4Bandit Mercenary		Javier Level(9,Enemy,True) [13,5] 0 0 0 0 [Onigiri] GroupThreeAI
+		UNIT B4Bandit Vanguard		Javier Level(10,Enemy,True) [8,7] 0 0 0 0 [Oversize] AttackInRangeAI
+		UNIT B4Bandit Warrior		Javier Level(12,Enemy,True) [15,6] 0 0 0 0 [SteelAxe,0xEC] GroupThreeAI
+		UNIT B4Bandit Myrmidon		Javier Level(9,Enemy,True) [5,10] 0 0 0 0 [SteelSword] AttackInRangeAI
+		UNIT B4Bandit Deserter		Javier Level(9,Enemy,True) [4,8] 0 0 0 0 [Harpoon] AttackInRangeAI
+		UNIT B4Bandit Brigand		Javier Level(9,Enemy,True) [2,10] 0 0 0 0 [Bloodaxe] AttackInRangeAI
+		UNIT B4Bandit PegasusRider	Javier Level(9,Enemy,True) [7,1] 0 0 0 0 [SteelSword] GroupFourAI
+		UNIT B4Bandit PegasusRider	Javier Level(9,Enemy,True) [1,3] 0 0 0 0 [Wingclipper] GroupFourAI
+		UNIT B4Bandit Bombardier	Javier Level(12,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] GroupFourAI
 		UNIT
 
 	JavierUnits:
-		UNIT B4Bandit Warden		Javier Level(11,Enemy,True) [25,10] 0 0 0 0 [SteelBlade,Javelin] BossAI
-		UNIT B4Bandit Warden		Javier Level(11,Enemy,True) [26,10] 0 0 0 0 [SteelBlade,Javelin] BossAI
-		UNIT B4Bandit SwordCav		Javier Level(11,Enemy,True) [26,8] 0 0 0 0 [IronBlade] GroupFiveAI
-		UNIT B4Bandit Myrmidon		Javier Level(11,Enemy,True) [22,8] 0 0 0 0 [Rapier] GroupFiveAI
-		UNIT B4Bandit Brigand		Javier Level(11,Enemy,True) [28,7] 0 0 0 0 [Crusher] GroupFiveAI
-		UNIT B4Bandit Mercenary		Javier Level(11,Enemy,True) [21,4] 0 0 0 0 [SteelBlade] TwoRangeAI
-		UNIT B4Bandit Deserter		Javier Level(11,Enemy,True) [23,5] 0 0 0 0 [Pike] GroupSixAI
-		UNIT B4Bandit Hunter		Javier Level(11,Enemy,True) [23,2] 0 0 0 0 [Greatbow] GroupSixAI
-		UNIT B4Bandit Ninja			Javier Level(11,Enemy,True) [27,3] 0 0 0 0 [SteelDagger,Stiletto] GroupSixAI
-		UNIT Javier Hero 			Javier Level(15,Enemy,True) [25,4] 0 0 0 0 [SilverSword,HideShield,TealGem] GroupSixAI
+		UNIT B4Bandit Warden		Javier Level(10,Enemy,True) [25,10] 0 0 0 0 [SteelBlade,Javelin] BossAI
+		UNIT B4Bandit Warden		Javier Level(10,Enemy,True) [26,10] 0 0 0 0 [SteelBlade,Javelin] BossAI
+		UNIT B4Bandit SwordCav		Javier Level(10,Enemy,True) [26,8] 0 0 0 0 [IronBlade] GroupFiveAI
+		UNIT B4Bandit Myrmidon		Javier Level(10,Enemy,True) [22,8] 0 0 0 0 [Rapier] GroupFiveAI
+		UNIT B4Bandit Brigand		Javier Level(10,Enemy,True) [28,7] 0 0 0 0 [Crusher] GroupFiveAI
+		UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [21,4] 0 0 0 0 [SteelBlade] TwoRangeAI
+		UNIT B4Bandit Deserter		Javier Level(10,Enemy,True) [23,5] 0 0 0 0 [Pike] AttackInRangeAI
+		UNIT B4Bandit Hunter		Javier Level(10,Enemy,True) [23,2] 0 0 0 0 [Greatbow] AttackInRangeAI
+		UNIT B4Bandit Ninja			Javier Level(10,Enemy,True) [27,3] 0 0 0 0 [SteelDagger,Stiletto] AttackInRangeAI
+		UNIT Javier Hero 			Javier Level(13,Enemy,True) [26,3] 0 0 0 0 [SilverSword,HideShield,TealGem] AttackInRangeAI
 		UNIT
 
 
@@ -479,12 +487,12 @@ UnitPlacement:
 	//#define AttackInTwoGroup1AI		[0x00,0x06,0x09,0x01] //Doesn't actually work (at least not the intended way)
 
 	RecruitableUnits:
-		UNIT Adrian Fighter 0 Level(12,Enemy,False) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] GroupOneAI //AttackInTwoGroup1AI
-		UNIT Lexa Myrmidon_F 0 Level(12,Enemy,False) [13,10] 0 0 0 0 [SteelSword] GroupOneAI //AttackInTwoGroup1AI
+		UNIT Adrian Fighter 0 Level(10,Enemy,True) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] [0x6,0x3,0x4,0x0]
+		UNIT Lexa Myrmidon_F 0 Level(10,Enemy,True) [13,10] 0 0 0 0 [SteelSword,Vulnerary] [0x6,0x3,0x4,0x0]
 		UNIT
 
 	NoahUnit:
-		UNIT Noah Warden 0 Level(10,Ally,False) [25,16] 0 0 1 REDA25R17 [SteelLance,IronBlade,Vulnerary] NoAI
+		UNIT Noah Warden 0 Level(8,Ally,True) [25,16] 0 0 1 REDA25R17 [SteelLance,IronBlade] NoAI
 		UNIT
 
 //End

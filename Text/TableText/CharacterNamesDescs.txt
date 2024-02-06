@@ -737,7 +737,7 @@ Bandit[X]
 
 ## B4BanditsDesc
 Members of a gang running this town.[N]
-Little more than boatless pirates.[X]
+Little more than flightless pirates.[X]
 
 ## JavierName
 Javier[X]
