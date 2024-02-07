@@ -587,3 +587,15 @@ ALIGN 4
 AxeKnightMMS:
 #incbin "Dmp/Great Knight (U) Axe {Leo_Link, DerTheVaporeon}-walk.dmp"
 
+StandingMapSprite(HorseMapSprite,MapSprite16x32, HorseSMS)
+MovingMapSprite(HorseClass, $1C3D7C, HorseMMS)
+
+ALIGN 4
+HorseSMS:
+#incbin "Dmp/Horse Standing {L95}.dmp"
+
+ALIGN 4
+//Yes, just a horse itself. 
+HorseMMS:
+#incbin "Dmp/Horse Moving {L95}.dmp"
+
