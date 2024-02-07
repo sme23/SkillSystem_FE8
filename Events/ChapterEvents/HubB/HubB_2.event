@@ -65,28 +65,28 @@ UNIT
 // group 2: top hallway guards
 
 B2Yadney:
-UNIT Yadney GriffinRider Cruz Level(15,Enemy,False) [16,12] 0 0 0 0 [ShortSpear,KillerLance] GroupOneAI
+UNIT Yadney GriffinRider Cruz Level(15,Enemy,True) [16,12] 0 0 0 0 [ShortSpear,KillerLance] GroupOneAI
 UNIT
 
 B2Baddies:
-UNIT Cruz Shaman CruzFake Level(11,Enemy,False) [5,9] 0 0 0 0 [Sagittae, Elfire, Vulnerary] NeverMoveAI
-UNIT Rebel Thief 0 Level(10,Enemy,True) [9,17] 0 0 0 0 [SteelKnife, DoorKey, DoorKey, DoorKey] ThiefAI
-UNIT Rebel Thief 0 Level(10,Enemy,True) [8,8] 0 0 0 0 [SteelDagger, DoorKey, DoorKey, DoorKey] ThiefAI
+UNIT Cruz Shaman CruzFake Level(11,Enemy,True) [5,9] 0 0 0 0 [Sagittae, Elfire, Vulnerary] NeverMoveAI
+UNIT Rebel Thief 0 Level(B2Level,Enemy,True) [9,17] 0 0 0 0 [SteelKnife, DoorKey, DoorKey, DoorKey] ThiefAI
+UNIT Rebel Thief 0 Level(B2Level,Enemy,True) [8,8] 0 0 0 0 [SteelDagger, DoorKey, DoorKey, DoorKey] ThiefAI
 
 // turn 1
-UNIT Rebel GriffinRider Cruz Level(10,Enemy,True) [21,9] 0 0 0 0 [IronLance] ChargeAI
-UNIT Rebel Ninja Cruz Level(10,Enemy,True) [19,10] 0 0 0 0 [SteelKnife,SteelDagger] ChargeAI
-UNIT Rebel Deserter Cruz Level(10,Enemy,True) [18,12] 0 0 0 0 [Javelin] ChargeAI
-UNIT Rebel Deserter Cruz Level(10,Enemy,True) [19,13] 0 0 0 0 [Axereaver,SteelLance] ChargeAI
-UNIT Rebel Shaman Cruz Level(10,Enemy,True) [22,14] 0 0 0 0 [Elfire,Surge] ChargeAI
+UNIT Rebel GriffinRider Cruz Level(B2Level,Enemy,True) [21,9] 0 0 0 0 [IronLance] ChargeAI
+UNIT Rebel Ninja Cruz Level(B2Level,Enemy,True) [19,10] 0 0 0 0 [SteelKnife,SteelDagger] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level,Enemy,True) [18,12] 0 0 0 0 [Javelin] ChargeAI
+UNIT Rebel Deserter Cruz Level(B2Level,Enemy,True) [19,13] 0 0 0 0 [Axereaver,SteelLance] ChargeAI
+UNIT Rebel Shaman Cruz Level(B2Level,Enemy,True) [22,14] 0 0 0 0 [Elfire,Surge] ChargeAI
 
 // turn 2
-UNIT Rebel Vanguard Cruz Level(10,Enemy,True) [18,9] 0 0 0 0 [HandAxe,SteelLance] BossAI
-UNIT Rebel Vanguard Cruz Level(10,Enemy,True) [18,14] 0 0 0 0 [Javelin,SteelAxe] BossAI
-UNIT Rebel Myrmidon Cruz Level(10,Enemy,True) [16,8] 0 0 0 0 [IronSword] ChargeAI
-UNIT Rebel GriffinRider Cruz Level(10,Enemy,True) [13,13] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Rebel Fighter Cruz Level(10,Enemy,True) [17,15] 0 0 0 0 [IronAxe] ChargeAI
-UNIT Rebel Mage Cruz Level(10,Enemy,True) [14,11] 0 0 0 0 [Fire] ChargeAI
+UNIT Rebel Vanguard Cruz Level(B2Level,Enemy,True) [18,9] 0 0 0 0 [HandAxe,SteelLance] BossAI
+UNIT Rebel Vanguard Cruz Level(B2Level,Enemy,True) [18,14] 0 0 0 0 [Javelin,SteelAxe] BossAI
+UNIT Rebel Myrmidon Cruz Level(B2Level,Enemy,True) [16,8] 0 0 0 0 [IronSword] ChargeAI
+UNIT Rebel GriffinRider Cruz Level(B2Level,Enemy,True) [13,13] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Rebel Fighter Cruz Level(B2Level,Enemy,True) [17,15] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Rebel Mage Cruz Level(B2Level,Enemy,True) [14,11] 0 0 0 0 [Fire] ChargeAI
 
 // turn 3 yadney squad
 UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [9,10] 0 0 0 0 [Onigiri,TealGem] GroupOneAI
@@ -95,7 +95,7 @@ UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [10,8] 0 0 0 0 [IronLan
 UNIT Rebel SwordCav Cruz Level(B2Level, Enemy, True) [10,14] 0 0 0 0 [IronSword] GroupOneAI
 
 // turn 4
-UNIT Rebel Curate Cruz Level(10,Enemy,True) [9,11] 0 0 0 0 [Physic] [0xE,0x3,0x0,0x20]
+UNIT Rebel Curate Cruz Level(B2Level,Enemy,True) [9,11] 0 0 0 0 [Physic] [0xE,0x3,0x0,0x20]
 // BL room
 UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
 UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [13,21] 0 0 0 0 [IronAxe] ChargeAI
@@ -140,15 +140,15 @@ UNIT
 
 
 HusniyeSquad:
-UNIT Husniye 0 0 Level(10,NPC,False) [23,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
+UNIT Husniye 0 0 Level(10,NPC,True) [23,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
 UNIT
 
 AvocadoSquad:
-UNIT Avocado 0 0 Level(12,NPC,False) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT Avocado 0 0 Level(12,NPC,True) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
 UNIT
 
 MagdalenaSquad:
-UNIT Magdalena 0 0 Level(17,NPC,False) [23,12] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
+UNIT Magdalena 0 0 Level(17,NPC,True) [23,12] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
 UNIT
 
 // fadi: to black

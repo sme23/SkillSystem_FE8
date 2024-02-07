@@ -70,6 +70,7 @@
 #define CanDance 0x00000010
 #define CanPlay 0x00000020
 #define CritBoost 0x00000040
+#define ArmsMaster 0x00000040
 #define UseBallista 0x00000080
 #define IsPromoted 0x00000100
 #define IsSupply 0x00000200

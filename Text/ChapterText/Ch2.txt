@@ -540,7 +540,7 @@ Your crimes end here and now.[AN][X]
 ## ElodiaDefeatQuoteCh2
 [ML][LoadElodia]
 Nggh--![A] Unbelievable.[AN]
-I'll have to lick my wounds[Beat][AN][X]
+I'll have to lick my wounds[Beat][AN]
 But even if I fall, the pressure[N]
 still isn't off you all.[AN][X]
 

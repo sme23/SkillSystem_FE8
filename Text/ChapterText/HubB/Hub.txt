@@ -268,10 +268,6 @@ then all I can do is make you proud.[AN]
 Goodbye, Master Ida[Beat][N]
 I'll never forget you![A][X]
 
-// Scene 2
-// She promises to pay him all he's worth once she finds what she's searching for, at the end of the world.
-// He cheerily agrees to this, and Pilar muses at her deflection working until she realizes Lua is serious. 
-
 ## HubB_BeginningScene_2_1
 [L][LoadPilar]
 [MR][LoadLua]
@@ -282,7 +278,8 @@ How do the skies look?[AN]
 Free of pursuers.[AN]
 [MR]
 Excellent. Anything else to report?[N]
-Good news, bad news, I want it all.[AN]
+Good news, bad news, any news.[AN]
+The peace is putting me on edge.[A]
 [L]
 Well[Beat] There is one thing.[N]
 Come in, stowaway. You're wanted.[AN]
@@ -501,10 +498,30 @@ to say, speak up. Now's the time.[A][X]
 // Scene 3
 // Each of the crew collected so far say their piece; Orlando and Rahel start, the rest of the crew (if alive).
 
+## HubB_BeginningScene_3_2_Orlando
+[ML][LoadOrlando][3LB]
+Well, you know my thoughts already, Lua.[N]
+I fully support this venture,[N]
+both with my heart and my coinpurse.[AN]
+I have a wide array of basic goods[N]
+for purchase at the fairest of prices,[N]
+should the crew have any need for it.[AN]
+My grace may make my profits plummet,[N]
+but your gratitude is payment enough[Beat][N]
+For now. I'll expect restitution later.[A][X]
+
+## HubB_BeginningScene_3_2_Rahel
+[ML][LoadRahel]
+If we're going in somewhere blind,[N]
+then our airships better be up to par.[AN]
+I'll do a sweep around the new ones[N]
+and report any flaws that I see.[AN]
+You better not balk at the bill,[N]
+captain. Safety doesn't come cheap.[A][X]
 
 ## HubB_BeginningScene_3_3
 [MR][LoadLua][3LB]
-I[Beat] I have to say, I expected[N]
+Ha! I[Beat] I have to say, I expected[N]
 at least one of you to want out.[AN]
 But if not, that matter's settled![AN]
 Now that we have a united goal,[N]

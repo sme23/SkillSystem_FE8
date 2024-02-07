@@ -86,7 +86,7 @@ HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubB_5, Castle_Hall_Night, HubB)
 GotoHubChapterIfYes(2, HubB_5, HubA1Accepted)
-//ENUF OrlandoHubATalk
+ENUF WentToHub5
 NoFade
 ENDA
 
@@ -120,18 +120,35 @@ UNIT
 BeginningScene:
 WEATHER 7
 ENUT LuaInAHubFlag
+BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
+FADI 10
+STAL 1
+GotoPrepScreenHub
+NoFade
+ENDA
+
+BeginningSceneFirstTimeInHuB:
 SetBackground(Ship)
 Text(HubB_BeginningScene_1_1)
+SetBackground(Harbor)
 Text(HubB_BeginningScene_1_2)
 Text(HubB_BeginningScene_1_3)
 Text(HubB_BeginningScene_1_4)
+SetBackground(Ship)
 Text(HubB_BeginningScene_1_5)
 Text(HubB_BeginningScene_1_6)
-
+SetBackground(Inn)
 Text(HubB_BeginningScene_2_1)
 Text(HubB_BeginningScene_2_2)
 
+SetBackground(Castle_Hall)
 Text(HubB_BeginningScene_3_1)
+
+//todo: add a reaction from every other crew member except the main 3
+
+Text(HubB_BeginningScene_3_2_Rahel)
+Text(HubB_BeginningScene_3_2_Orlando)
+
 Text(HubB_BeginningScene_3_3)
 Text(HubB_BeginningScene_3_4)
 Text(HubB_BeginningScene_3_5)
@@ -146,11 +163,9 @@ STAL 30
 LocationText(HubB_BeginningScene_4_1, 8, 8)
 Text(HubB_BeginningScene_4_2)
 
-FADI 10
+
 LoadPlayerUnits(NewUnits)
-STAL 1
-GotoPrepScreenHub
-NoFade 
+NoFade
 ENDA
 
 EndingScene:

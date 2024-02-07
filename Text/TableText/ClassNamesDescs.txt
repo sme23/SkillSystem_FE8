@@ -188,7 +188,7 @@ Traits: Flight, Aid+[X]
 
 ## SniperDesc
 Weapons: Bow[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## DarkKnightName
 Dark Knight[X]
@@ -246,7 +246,7 @@ Traits: Steal, Locktouch[X]
 
 ## SwordmasterDesc
 Weapons: Swords[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## SlayerName
 Slayer[X]
@@ -257,7 +257,7 @@ Traits: Steal, Locktouch[X]
 
 ## BerserkerDesc
 Weapons: Axes[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## WarMonkName
 War Monk[X]
@@ -271,7 +271,7 @@ Halberdier[X]
 
 ## HalberdierDesc
 Weapons: Lances[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## AdventurerName
 Adventurer[X]
@@ -329,14 +329,14 @@ Traits: Canto, Flight, Aid+[X]
 
 ## RogueDesc
 Weapons: Knives[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## MarksmanName
 Marksman[X]
 
 ## MarksmanDesc
 Weapons: Guns[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## SaviorName
 Savior[X]
