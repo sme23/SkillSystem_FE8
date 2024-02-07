@@ -43,12 +43,26 @@ ENUF WentToHub1
 NoFade
 ENDA
 
+/*
 GotoHubB2:
 // note that this should display B-2b, but actually send you to B-2a
 // because B-2 is two chapters in a trenchcoat
 CenterTextbox(HubB2Prompt)
 GotoHubChapterIfYes(1, HubB_2a)
 ENUF WentToHub2
+NoFade
+ENDA
+*/
+
+GotoHubB2:
+// should be triggered by talking to desiderio
+HubChapterFirstTimeEvent(1, SeenHubB2Pitch, HubB2Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_2a, Harbor, HubB)
+// FancyChapterPreview(HubB_2a, Harbor, HubB)
+GotoHubChapterIfYes(2, HubB_2a, HubB2Selection_Yes)
+ENUF WentToHub2
+Text(HubB2Selection_No)
 NoFade
 ENDA
 
@@ -99,9 +113,42 @@ Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [5,22] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
+NewUnits:
+UNIT Ponte 0 0 Level(7,Ally,False) [5,22] 0 0 0 0 [Hammer, Hammer] NoAI
+UNIT 
+
 BeginningScene:
 WEATHER 7
 ENUT LuaInAHubFlag
+SetBackground(Ship)
+Text(HubB_BeginningScene_1_1)
+Text(HubB_BeginningScene_1_2)
+Text(HubB_BeginningScene_1_3)
+Text(HubB_BeginningScene_1_4)
+Text(HubB_BeginningScene_1_5)
+Text(HubB_BeginningScene_1_6)
+
+Text(HubB_BeginningScene_2_1)
+Text(HubB_BeginningScene_2_2)
+
+Text(HubB_BeginningScene_3_1)
+Text(HubB_BeginningScene_3_3)
+Text(HubB_BeginningScene_3_4)
+Text(HubB_BeginningScene_3_5)
+
+SoloTextbox(HubB_BeginningScene_3_6, 24, 24)
+STAL 30
+SoloTextbox(HubB_BeginningScene_3_6, 104, 200)
+STAL 30
+SoloTextboxCenter(HubB_BeginningScene_3_7)
+STAL 30
+
+LocationText(HubB_BeginningScene_4_1, 8, 8)
+Text(HubB_BeginningScene_4_2)
+
+FADI 10
+LoadPlayerUnits(NewUnits)
+STAL 1
 GotoPrepScreenHub
 NoFade 
 ENDA

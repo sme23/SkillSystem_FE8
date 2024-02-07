@@ -40,7 +40,7 @@
 
 // HUB B CHAPTER UNITS
 
-// $17 to $1F
+// $17 to $1F (+ $25)
 
 #define B1Unit1 $17
 #define Husniye $18
@@ -51,14 +51,15 @@
 #define Adrian $1D
 #define Lexa $1E
 #define Fata $1F
+#define Noah $25
 
 // HUB B BASE UNITS
 
 #define Ponte $20
 #define Passarola $21
-#define Flint $22 //these two are mutually exclusive
-#define Gerald $23 //these two are mutually exclusive
-#define Neltume $24 
+#define Neltume $22
+#define Flint $3E //these two are mutually exclusive
+#define Gerald $3F //these two are mutually exclusive
 
 
 // ENEMY/NPC ($46 through $FF)

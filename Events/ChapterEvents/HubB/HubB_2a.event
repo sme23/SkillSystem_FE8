@@ -102,7 +102,7 @@ UNIT RecelosoPriest 0 0 Level(1,NPC,False) [11,5] 0 0 0 0 [Heal,PureWater] NoAI
 UNIT RecelosoCorpse 0 0 Level(1,NPC,False) [16,3] 0 0 0 0 [Mend,RedGem] NoAI
 UNIT RecelosoStudent 0 0 Level(1,NPC,False) [13,25] 0 0 0 0 [Fire] NoAI
 UNIT RecelosoGuard 0 0 Level(1,NPC,False) [18,14] 0 0 0 0 [IronLance] NoAI
-UNIT RecelosoBarkeep 0 0 Level(1,NPC,False) [9,23] 0 0 0 0 [Vulnerary,Vulnerary,Vulnerary] NoAI
+UNIT RecelosoBarkeep 0 0 Level(1,NPC,False) [9,23] 0 0 0 0 [Vulnerary,Tonic,Tonic] NoAI
 UNIT
 
 BeginningScene:
@@ -127,11 +127,16 @@ CUSN Razvan
 LOAD1 1 VillagerGroup
 LOAD1 1 Units1
 ENUN
+// give the barkeep tonics - alcohol flavored, after all!
+SetUnitItemDurability(9, 23, 1, SklTonic)
+SetUnitItemDurability(9, 23, 2, LuckTonic) 
 ENUT LuaInAHubFlag
 CAM1 Lua
 FADU 16
-// MUSC LetterOpenerID
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
 CameraCursor(Lua)
+ASMC MakeMusicAhoyASMC
 Text(B2a_MagExplainsHusniye)
 CameraCursor(Husniye)
 Text(B2a_MagExplainsCruz)
@@ -319,16 +324,17 @@ FADU 16
 Text(B2a_MagdalenaGivesMoney)
 GiveGold(2500)
 FADI 16
-// MUSC LetterOpenerID
-// rebels knife is a placeholder! make this play Letter Opener once that exists
-MUSC TheRebelsKnifeID
+MUSC LetterOpenerID
+ASMC MakeMusicAhoyASMC
 
 // delete this later - for reference purposes
 // #define TextCont(id,music) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
 
 FlagIsSet(CruzAccused, 0x666)
 	SetBackground(Prison_Cell) // if cruz in jail
+	ASMC MakeMusicAhoyASMC
 	FADU 16
+	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 	TEXTSTART
 	TEXTSHOW B2a_CruzBreakout
@@ -341,7 +347,9 @@ FlagIsSet(CruzAccused, 0x666)
 	GOTO 0x777
 LABEL 0x666
 	SetBackground(Woodland_Night) // if cruz spared
+	ASMC MakeMusicAhoyASMC
 	FADU 16
+	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 
 	TEXTSTART
