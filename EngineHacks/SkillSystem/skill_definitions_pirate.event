@@ -182,3 +182,5 @@
 //Smite: Allows unit to push other units two tiles away.
 //By StanH
 #define SmiteID 56
+
+#define CantoAttackID 57

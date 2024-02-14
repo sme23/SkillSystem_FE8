@@ -99,7 +99,7 @@ Eff. vs. horses and fliers.[X]
 Sidepierce[X]
 
 ## SidepierceDesc
-Allows canto after action.[X]
+User can move again with remaining Mov.[X]
 
 ## PitchforkName
 Pitchfork[X]
@@ -111,7 +111,7 @@ Cannot counter/be countered.[X]
 Gu'Balg[X]
 
 ## GuBalgDesc
-It's...quite the weapon, alright.[X]
+It's... quite the weapon, alright.[X]
 
 //AXES
 
