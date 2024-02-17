@@ -19,6 +19,16 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Chest(GlassShield, 2, 2)
+Chest(Surge, 5, 2)
+Chest(FliersPermit, 12, 9)
+Chest(MagekillerBow, 16, 12)
+Chest(FlameSword, 0, 15)
+Chest(BlueGem, 2, 15)
+Door(3,4)
+Door(4,4)
+Door(12,11)
+Door(3,16)
 END_MAIN
 
 MiscBasedEvents:
@@ -34,10 +44,77 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [10,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [15,5] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [15,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [15,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT
+
+AntlionsInitial:
+//boss squad
+UNIT Kiril MasterNinja 0 Level(5,Enemy,False) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] GroupOneAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [7,21] 0 0 0 0 [Crusher] GroupOneAI
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [10,21] 0 0 0 0 [Pike] GroupOneAI
+//turn 1
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [11,3] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [13,1] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Antlion Hunter 0 Level(9, Enemy, True) [12,4] 0 0 0 0 [SteelBow] ChargeAI
+UNIT Antlion Mage 0 Level(9, Enemy, True) [11,5] 0 0 0 0 [Elfire] ChargeAI
+UNIT Antlion Myrmidon 0 Level(9, Enemy, True) [8,0] 0 0 0 0 [Rapier] AttackWhenInRangeAI
+//turn 2
+UNIT Antlion Warden 0 Level(9, Enemy, True) [8,6] 0 0 0 0 [IronBlade, Harpoon] BossAI
+UNIT Antlion Vanguard 0 Level(9, Enemy, True) [9,7] 0 0 0 0 [Harpoon, SteelAxe] BossAI
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [9,12] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [3,6] 0 0 0 0 [SteelAxe] AttackWhenInRangeAI
+//turn 3
+//nw chest room
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [2,1] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [5,1] 0 0 0 0 [SteelLance] ChargeAI
+//sw chest room
+UNIT Antlion Soldier 0 Level(9, Enemy, True) [0,15] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Antlion Brigand 0 Level(9, Enemy, True) [1,15] 0 0 0 0 [Swordreaver] ChargeAI
+UNIT
+
+DmitrSpawn:
+UNIT Dmitr Brigand 0 Level(9, Ally, False) [15,3] 0 0 0 0 [Bloodaxe, Vulnerary] NoAI
 UNIT
 
 BeginningScene:
+SetBackground(Desert)
+TEXTSTART
+TEXTSHOW StartingScene
+TEXTEND
+FADI 16
+CLEAN
+CAMERA [12, 0]
+FADU 16
+LOAD1 1 DmitrSpawn
+TEXTSTART
+TEXTSHOW ImDmitr
+TEXTEND
+CAMERA [6, 17]
+CURSOR_FLASHING [9, 20]
+STAL 60
+REMOVE_CURSORS 
+TEXTSTART
+TEXTSHOW KirilTakesNotice
+TEXTEND
+CAMERA [12, 0]
+CURSOR_FLASHING [15, 3]
+STAL 60
+REMOVE_CURSORS 
+TEXTSTART
+TEXTSHOW LuaResponds
+TEXTEND
+LOAD1 1 AntlionsInitial
 GotoPrepScreen
 NoFade 
 ENDA

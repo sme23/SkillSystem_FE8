@@ -25,6 +25,7 @@
 #define PassarolaMug $2B
 #define NeltumeMug $2C
 
+
 #define KhazhakMug $31
 #define GeraldoMug $32
 #define BozoMug $33
@@ -72,6 +73,10 @@
 #define SantiagoMug $31
 #define RochefortMug $31
 
+
+// B1 Units
+#define DmitrMug $19
+#define KirilMug $4A
 
 
 // B-4 Placeholders

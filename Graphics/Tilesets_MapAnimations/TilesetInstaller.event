@@ -94,7 +94,7 @@
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
     EventPointerTable(FlasubanVillageOurplePaletteID,FlasubanOurpleVillagePalette)
 
-	EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
+	  EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
     EventPointerTable(DesertBastionNightSkyPaletteID,DesertBastionNightSkyPalette)
     EventPointerTable(DesertBastionNightSkyConfigID,DesertBastionNightSkyMapchipConfig)
 
@@ -113,8 +113,7 @@
     EventPointerTable(N426ImprovedCastleObjectID, N426ImprovedCastleObject)
     EventPointerTable(N426ImprovedCastlePaletteID, N426ImprovedCastlePalette)
     EventPointerTable(N426ImprovedCastleConfigID, N426ImprovedCastleConfig)
-	
-	EventPointerTable(ZoramineImprovedStrongholdObjectID, ZoramineImprovedStrongholdObject)
-	EventPointerTable(ZoramineImprovedStrongholdPaletteID, ZoramineImprovedStrongholdPalette)
-	EventPointerTable(ZoramineImprovedStrongholdConfigID, ZoramineImprovedStrongholdConfig)
     
+	  EventPointerTable(ZoramineImprovedStrongholdObjectID, ZoramineImprovedStrongholdObject)
+	  EventPointerTable(ZoramineImprovedStrongholdPaletteID, ZoramineImprovedStrongholdPalette)
+	  EventPointerTable(ZoramineImprovedStrongholdConfigID, ZoramineImprovedStrongholdConfig)

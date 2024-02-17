@@ -307,6 +307,22 @@ RamiroMugData:
 setMugEntry(RamiroMug, RamiroMugData, 3, 5, 3, 3)
 
 ALIGN 16
+DmitrMugData:
+#incbin "Dmp/Dmitr_mug.dmp"
+#incbin "Dmp/Dmitr_frames.dmp"
+#incbin "Dmp/Dmitr_palette.dmp"
+#incbin "Dmp/Dmitr_minimug.dmp"
+setMugEntry(DmitrMug, DmitrMugData, 2, 5, 3, 3)
+
+ALIGN 16
+KirilMugData:
+#incbin "Dmp/Kiril_mug.dmp"
+#incbin "Dmp/Kiril_frames.dmp"
+#incbin "Dmp/Kiril_palette.dmp"
+#incbin "Dmp/Kiril_minimug.dmp"
+setMugEntry(KirilMug, KirilMugData, 3, 5, 3, 3)
+
+ALIGN 16
 StingrayMugData:
 #incbin "Dmp/Stingray_mug.dmp"
 #incbin "Dmp/Stingray_frames.dmp"

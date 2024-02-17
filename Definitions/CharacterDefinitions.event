@@ -42,7 +42,7 @@
 
 // $17 to $1F (+ $25)
 
-#define B1Unit1 $17
+#define Dmitr $17
 #define Husniye $18
 #define Avocado $19
 #define Magdalena $1A
@@ -156,6 +156,11 @@
 #define Juliana $74
 #define ElodiaBoss $75
 
+
+//Hub B1
+#define Antlion $79
+#define Kiril $7A
+
 //Hub 2B
 #define Yadney 0xD0
 #define Cruz 0xD1
@@ -174,3 +179,4 @@
 //Hub B4
 #define B4Bandit 0xD8
 #define Javier 0xD9
+

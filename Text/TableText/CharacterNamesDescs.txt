@@ -575,6 +575,30 @@ Deckhand[N]
 Port crawlers who guard their crew's[N]
 airship from any nosy onlookers.[X]
 
+## DmitrName
+Dmitr[X]
+
+## DmitrDesc
+Wanderer[N]
+A wayward warrior, adrift[N]
+like the sand in the wind.[X]
+
+## KirilName
+Kiril[X]
+
+## KirilDesc
+Lacewing[N]
+He who leads the Antlions[N]
+to dominance of the desert.[X]
+
+## AntlionName
+Antlion[X]
+
+## AntlionDesc
+Marauder[N]
+Criminals who trap unfortunate[N]
+travelers like prey.[X]
+
 ## GreagorVillagerName
 Villager[X]
 
