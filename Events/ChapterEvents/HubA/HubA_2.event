@@ -99,12 +99,13 @@ UNIT Pilar 0 0 Level(10,Ally,False) [8,15] 0 0 0 0 [Cutlass, IronSword, IronMusk
 UNIT Pilar 0 0 Level(10,Ally,False) [11,15] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
-NewUnits:
-UNIT Jaime PegasusRider 0 Level(2,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+JaimeAndLua:
+UNIT Jaime PegasusRider 0 Level(2,Ally,True) [11,18] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [12,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 NPCs:
+UNIT Leonor Cleric 0 Level(6,Ally,True) [7,5] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [7,10] 0 0 0 0 [IronLance] ChargeAI
 UNIT Rebel Warden 0 Level(1,NPC,True) [10,8] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [12,9] 0 0 0 0 [IronLance] ChargeAI
@@ -119,22 +120,22 @@ UNIT Incendivis Mage 0 Level(3,Enemy,True) [0,5] 0 0 0 0 [Bolting] BossAI
 UNIT Incendivis Fighter 0 Level(4,Enemy,True) [1,9] 0 0 0 0 [SteelAxe] GroupTwoAI
 UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [0,8] 0 0 0 0 [IronSword] GroupTwoAI
 
-UNIT Felipe Soldier 0 Level(5,Enemy,True) [3,13] 0 0 0 0 [Javelin, Pike] BossAI
-UNIT Incendivis Archer 0 Level(3,Enemy,True) [3,14] 0 0 0 0 [Longbow] BossAI
+//will eventually end up at [3,14], but for cutscene. he'll be elsewhere. 
+UNIT Felipe Soldier 0 Level(5,Enemy,True) [4,1] 0 0 0 0 [Javelin, Pike] BossAI 
+//also praise the 3,13 archer
+UNIT Incendivis Archer 0 Level(3,Enemy,True) [3,13] 0 0 0 0 [Longbow] BossAI
 
 UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [5,11] 0 0 0 0 [IronSword] ChargeAI
 
 UNIT Incendivis Vanguard 0 Level(4,Enemy,True) [2,10] 0 0 0 0 [HandAxe] BossAI
 
 //Top Left
-UNIT Incendivis Mage 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [Bolting] BossAI
+UNIT IncendivisMageA2 Mage 0 Level(3,Enemy,True) [5,0] 0 0 0 0 [Bolting] BossAI
 UNIT Sierra Vanguard 0 Level(6,Enemy,True) [5,1] 0 0 0 0 [Bloodaxe,HandAxe] BossAI
 UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [4,2] 0 0 0 0 [IronLance] ChargeAI
 UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [6,2] 0 0 0 0 [IronAxe] ChargeAI
 
 UNIT Incendivis Vanguard 0 Level(4,Enemy,True) [5,3] 0 0 0 0 [HandAxe] BossAI
-
-// Top Right
 UNIT Manfred Mercenary 0 Level(4,Enemy,True) [21,0] 0 0 0 0 [SteelSword,KillingEdge] GroupThreeAI
 UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [21,2] 0 0 0 0 [IronAxe] GroupThreeAI
 UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [19,0] 0 0 0 0 [IronAxe] GroupThreeAI
@@ -165,23 +166,80 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-WEATHER 7
 COUNTER_SET 0x1 0x0
 ENUT 0x13
 LOAD1 1 NPCs
 LOAD1 1 Enemies
-LOAD1 1 NewUnits
 ENUN
-SetBackground(Town_Day)
+FADU 13
 MUSC AvastMeHeartiesID
+CAMERA_CENTERED [5,3]
+
+STAL 30
+FlashCursor(Felipe, 60)
+SetBackground(Town_Day)
+WEATHER 7
 Text(A2PrePrepsCutscene)
+ClearBackground
+FlashCursor(IncendivisMageA2, 60)
+
+//Bolting mage does 18 damage to Leonor, but misses. 
+StartBattle
+MissedAttack(0, 18)
+EndAttack
+FIGHT_MAP IncendivisMageA2 Leonor Bolting 0
+
+MOVE 20 Leonor [11,11]
+ENUN
+
+CAMERA_CENTERED [8,11]
+FlashCursor(Leonor, 60)
 SetBackground(Outside_Village_Day)
 Text(A2PrePrepsCutscene2)
+ClearBackground
+
+CAMERA_CENTERED [19,2]
+STAL 30
+FlashCursor(Manfred, 60)
 SetBackground(Outside_Village_Day)
 Text(A2PrePrepsCutscene3)
+ClearBackground
+
+CAMERA_CENTERED [3,3]
+STAL 60
+FlashCursor(Felipe, 60)
 SetBackground(Outside_Village_Day)
+Text(A2PrePrepsCutscene4)
+ClearBackground
+MOVE 15 Felipe [1,6]
+ENUN
+MOVE 15 Felipe [1,12]
+ENUN
+MOVE 15 Felipe [3,14]
+ENUN
+
 MUSC EmergencyCrewmateID
-Text(A2JaimeJoins)
+CAMERA_CENTERED [8, 14]
+STAL 30
+TILECHANGE 0x02 //Show the ship lowering planks
+STAL 10
+LOAD1 1 JaimeAndLua
+MOVE 8 Lua [11, 13] 
+MOVE 8 Jaime [10, 13]
+ENUN
+FlashCursor(Lua, 60)
+SetBackground(Outside_Village_Day)
+TEXTSHOW A2JaimeJoins
+TEXTEND
+MUSI
+SOUN 0xBF
+STAL 50
+SOUN 0xAB
+STAL 50
+MUNO
+TEXTCONT
+TEXTEND
+REMA
 GotoPrepScreen
 NoFade
 ENDA
@@ -220,7 +278,14 @@ ENDA
 EndingScene:
 SetBackground(Town_Day)
 MUSC SwabbieTalkID
-Text(A2Ending1)
+TEXTSHOW A2Ending1
+TEXTEND
+MUSI
+SOUN 0x137 //ballista arrow falling, for the funnies
+STAL 50
+MUNO
+TEXTCONT
+TEXTEND
 SetBackground(Ship)
 CHECK_ALIVE Leonor
 BEQ 0x4 0xC 0x0

@@ -17,6 +17,8 @@
 #define HubB_4 14
 #define HubB_5 15
 
+#define HubB_2a 0x3D
+
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
 #define Chapter1MapID 0x4
 #define Chapter1MapChangesID 0x6
@@ -82,6 +84,10 @@
 #define HubB_5MapChangesID 0x40
 #define HubB_5EventsID 0x41
 
+#define HubB_2aMapID 0x42
+#define HubB_2aMapChangesID 0x43
+#define HubB_2aEventsID 0x44
+
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88
 #define FlasubanVillageSkyPaletteID 0x89
@@ -101,6 +107,7 @@
 
 #define MountainousObjectID 0x6C
 #define MountainousPaletteID 0x6D
+#define MountainousLagdouPaletteID 0xA3
 #define MountainousConfigID 0x6E
 #define MountainousTileAnimationsID 0x5
 
@@ -113,6 +120,15 @@
 #define N426ImprovedCastlePaletteID 0x9C
 #define N426ImprovedCastleConfigID 0x9D
 
-#define DesertBastionObjectID 0x9E
-#define DesertBastionPaletteID 0x9F
-#define DesertBastionConfigID 0xA0
+#define ZoramineImprovedStrongholdObjectID 0x9E
+#define ZoramineImprovedStrongholdPaletteID 0x9F
+#define ZoramineImprovedStrongholdConfigID 0xA0
+
+#define DesertBastionVillageObjectID 0xA1
+#define DesertBastionVillagePaletteID 0xA2
+// note that 0xA3 is vanilla mountainous lagdou palette, used in B-2
+#define DesertBastionVillageConfigID 0xA4
+
+#define DesertBastionObjectID 0xA5
+#define DesertBastionPaletteID 0xA6
+#define DesertBastionConfigID 0xA7

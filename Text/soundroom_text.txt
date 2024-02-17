@@ -61,3 +61,12 @@ Last Dance, Sinking Ship[X]
 
 ## SongName_WellAndTrulyLost
 Well and Truly Lost[X]
+
+## SongName_ToTheSkies
+To The Skies[X]
+
+## SongName_FinInTheClouds
+Fin In The Clouds[X]
+
+## SongName_LetterOpener
+Letter Opener[X]

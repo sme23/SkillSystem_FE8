@@ -12,6 +12,7 @@
 #define Estelle $7
 #define Hermenegildo $8
 #define MrYodsen $9
+#define Yodsen $9
 #define Durgham $A
 //Samson/Arrans
 #define Triana $43
@@ -39,25 +40,26 @@
 
 // HUB B CHAPTER UNITS
 
-// $17 to $1F
+// $17 to $1F (+ $25)
 
 #define Dmitr $17
-#define B2Unit1 $18
-#define B2Unit2 $19
-#define B2Unit3 $1A
+#define Husniye $18
+#define Avocado $19
+#define Magdalena $1A
 #define B3Unit1 $1B
 #define B3Unit2 $1C
-#define B4Unit1 $1D
-#define B4Unit2 $1E
-#define B5Unit1 $1F
+#define Adrian $1D
+#define Lexa $1E
+#define Fata $1F
+#define Noah $25
 
 // HUB B BASE UNITS
 
 #define Ponte $20
 #define Passarola $21
-#define Flint $22 //these two are mutually exclusive
-#define Gerald $23 //these two are mutually exclusive
-#define Neltume $24 
+#define Neltume $22
+#define Flint $3E //these two are mutually exclusive
+#define Gerald $3F //these two are mutually exclusive
 
 
 // ENEMY/NPC ($46 through $FF)
@@ -73,6 +75,23 @@
 // HUB A CHAPTER UNITS
 
 // HUB A CHAPTER ENEMIES + NPCS
+
+#define GreagorVillager $A0
+#define GreagorSailor $A1
+#define GreagorPatroller $A2
+#define GreagorLibrarian $A3
+#define GreagorGuard $A4
+#define GreagorSmuggler $A5
+#define GreagorShipwright $A6
+#define GreagorCaptain $A7
+#define GreagorPatron $A8
+
+#define GreagorPeddler $A9
+
+#define GreagorLibrarianB $AA
+#define GreagorVillagerB $AB
+#define GreagorPatronB $AC
+#define GreagorVillagerC $AE
 
 //Hub A1
 #define Buzu $48
@@ -90,6 +109,9 @@
 #define Sierra $56
 #define Manfred $6D
 #define CrimsonHeart $6E
+//Used for a scripted battle cutscene. 
+#define IncendivisMageA2 $AD 
+
 
 //Hub A3
 #define Sargargala $5B
@@ -134,6 +156,27 @@
 #define Juliana $74
 #define ElodiaBoss $75
 
+
 //Hub B1
 #define Antlion $79
 #define Kiril $7A
+
+//Hub 2B
+#define Yadney 0xD0
+#define Cruz 0xD1
+#define CruzFake 0xD2
+#define RecelosoPriest 0xD3
+#define RecelosoCorpse 0xD4
+#define RecelosoStudent 0xD5
+#define RecelosoGuard 0xD6 
+#define RecelosoBarkeep 0xD7
+#define Quim 0xD3
+#define Gavriel 0xD4
+#define Fogaca 0xD5
+#define Dario 0xD6
+#define Thais 0xD7
+
+//Hub B4
+#define B4Bandit 0xD8
+#define Javier 0xD9
+

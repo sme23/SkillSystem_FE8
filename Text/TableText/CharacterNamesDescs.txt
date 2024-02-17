@@ -116,7 +116,7 @@ Bartz[X]
 ## BartzDesc
 Deserter[N]
 A soldier turned to a life of piracy.[N]
-Fights with no regards for honour.[X]
+Fights with no regard for honour.[X]
 
 ## JaimeName
 Jaime[X]
@@ -195,8 +195,32 @@ Rahel[X]
 
 ## RahelDesc
 Carpenter[N]
-More skilled her hammer than her bow,[N]
+More skilled with a hammer than a bow,[N]
 she repairs ships with a curt nod.[X]
+
+## HusniyeName
+Husniye[X]
+
+## HusniyeDesc
+Courtesan[N]
+A foreign thief, poor and desperate.[N]
+One of the murder suspects.[X]
+
+## AvocadoName
+Avocado[X]
+
+## AvocadoDesc
+Retiree[N]
+A haunted former soldier of Incendivis.[N]
+One of the murder suspects.[X]
+
+## MagdalenaName ^
+Magdalena[X]
+
+## MagdalenaDesc
+Magistrate[N]
+Governor of Port Receloso, broken[N]
+with stress by the recent murders.[X]
 
 ## KhazhakName
 Khazhak[X]
@@ -574,3 +598,239 @@ Antlion[X]
 Marauder[N]
 Criminals who trap unfortunate[N]
 travelers like prey.[X]
+
+## GreagorVillagerName
+Villager[X]
+
+## GreagorVillagerDesc
+Commoner[N]
+An inhabitant of Port Greagor,[N]
+unshackled by typical empire law.[X]
+
+## GreagorSailorName
+Sailor[X]
+
+## GreagorSailorDesc
+Mariner[N]
+Though docked, these deckhands[N]
+rigorously continue their duties.[X]
+
+## GreagorPatrollerName
+Patroller[X]
+
+## GreagorPatrollerDesc
+Recon[N]
+Aerial scouts of Port Greagor,[N]
+keeping tabs on incoming ships.[X]
+
+## GreagorLibrarianName
+Librarian[X]
+
+## GreagorLibrarianDesc
+Scholar[N]
+Bookkeepers in Lua's cove, allowed[N]
+to study without direct affiliation.[X]
+
+## GreagorGuardName
+Guard[X]
+
+## GreagorGuardDesc
+Watchman[N]
+Said to be dutiful to the Greagor Five.[N]
+...Usually just a bored mercenary.[X]
+
+## GreagorSmugglerName
+Smuggler[X]
+
+## GreagorSmugglerDesc
+Legitimate Merchant[N]
+Sneaks around empire contraband, like[N]
+alcohol, tobacco, and chocolate eggs.[X]
+
+## GreagorShipwrightName
+Shipwright[X]
+
+## GreagorShipwrightDesc
+Ship Artisian[N]
+Member of the Shipwright's guild.[N]
+Adept in repairing ships to be airworthy.[X]
+
+## GreagorCaptainName
+Captain[X]
+
+## GreagorCaptainDesc
+Skipper[N]
+Leader of a vessel docked at port.[N]
+Probably not up to much good.[X]
+
+## GreagorPatronName
+Patron[X]
+
+## GreagorPatronDesc 
+Reveler[N]
+Patron at one of the port's taverns.[N]
+...Worried about his drinking buddy.[X]
+
+## GreagorPatronDrunkName
+Patron[X]
+
+## GreagorPatronDrunkDesc 
+Reveler[N]
+Patron at one of port's taverns.[N]
+Issssh havin'...th'tim ooo'his lyyyfe![X]
+
+## GreagorPeddlerName
+Peddler[X]
+
+## GreagorPeddlerDesc
+Purveyor[N]
+A wandering trader of exotic proportions.[N]
+May have a few powerful connections...[X]
+
+## FataName
+Fata[X]
+
+## FataDesc
+Intern[N]
+Not paid enough for her responsibilities,[N]
+which continue to grow by the second.[X]
+
+## YadneyName
+Yadney[X]
+
+## YadneyDesc
+Ringleader[N]
+This wandering warrior led the local[N]
+Rebels to the lofty heights of banditry.[X]
+
+## CruzName
+Cruz[X]
+
+## CruzDesc
+Magician[N]
+A reclusive mage with Rebel sympathies,[N]
+and a covert assassin for their cause.[X]
+
+## CruzFakeDesc
+Magician[N]
+A reclusive mage with Rebel sympathies.[N]
+One of the murder suspects.[X]
+
+## RecelosoPriestName
+Quim[X]
+
+## RecelosoPriestDesc
+Acolyte[N]
+Gruffness, faith, and anger, all stepping[N]
+up to lead in Father Gavriel's absence.[X]
+
+## RecelosoCorpseName
+Gavriel[X]
+
+## RecelosoCorpseDesc
+Corpse[N]
+Once Port Receloso's religious leader.[N]
+Now, he's just another dead body.[X]
+
+## RecelosoStudentName
+Fogaca[X]
+
+## RecelosoStudentDesc
+Student[N]
+A historian in training, learning some[N]
+magical secrets from Cruz's library.[X]
+
+## RecelosoGuardName
+Dario[X]
+
+## RecelosoGuardDesc
+Town Guard[N]
+Port Receloso needs little guarding, but[N]
+Dario keeps faithful watch nontheless.[X]
+
+## RecelosoBarkeepName
+Thais[X]
+
+## RecelosoBarkeepDesc
+Barkeep[N]
+A full bottle, a lively counter, and[N]
+a place of joy in tragic times.[X]
+
+## B4BanditsName
+Bandit[X]
+
+## B4BanditsDesc
+Members of a gang running this town.[N]
+Little more than flightless pirates.[X]
+
+## JavierName
+Javier[X]
+
+## JavierDesc
+Extortionist[N]
+Cutthroat ruler of a mob of bandits.[N]
+Rules over this town with an iron fist.[X]
+
+## AdrianName
+Adrian[X]
+
+## AdrianDesc
+Desperado[N]
+A wandering renegade turned to banditry.[N]
+He's a merciless bully, but good in a fight.[X]
+
+## LexaName
+Lexa[X]
+
+## LexaDesc
+Desperado[N]
+A skilled blade who fights using cheap[N]
+tricks. Her foes lay dead nontheless.[X]
+
+## NoahName
+Noah[X]
+
+## NoahDesc
+Guardsman[N]
+A rookie town guard with an enthusiastic[N]
+mindset. Endearing if nothing else.[X]
+
+## PonteName
+Ponte[X]
+
+## PonteDesc
+Carpenter[N]
+A well-known and praised craftsman,[N]
+willing to work if the price is right.[X]
+
+## PassarolaName
+Passarola[X]
+
+## PassarolaDesc
+Tinkerer[N]
+A forward-thinking cleric[N]
+fascinated by ostensible boondoggles.[X]
+
+## NeltumeName
+Neltume[X]
+
+## NeltumeDesc
+Botanist[N]
+A stoic man who prefers[N]
+plants to people.[X]
+
+## FlintName
+Flint[X]
+
+## FlintDesc
+Gambler[N]
+Gladly leaves everything to chance,[N]
+despite losing his eye to it.[X]
+
+## GeraldName
+Gerald[X]
+
+## GeraldDesc
+Outlaw[N]
+Desperately clings onto marksmanship,[N]
+despite maiming his shooting arm.[X]

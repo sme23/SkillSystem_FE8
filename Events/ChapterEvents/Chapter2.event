@@ -15,6 +15,7 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0, IgnacioBoatReinforcements, 3)
 TurnEventPlayer(0, HugoReinforcements, 5)
+TurnEventPlayer(0, JulianaDialogue, 2)
 TurnEventPlayer(ElodiaChargeFlag, ElodiaDecidesToCharge, 1, 255)
 TurnEventPlayer(LuaInAHubFlag, ObjectiveExplanation, 1)
 TurnEventPlayer(Ch2ReinforcementFlags, BoatPursuerReinforcements, 1, 255)
@@ -37,7 +38,7 @@ NoFade
 ENDA
 
 BoatPursuerGriffin:
-UNIT TorchUnit2 GriffinRider Hugo Level(9, Enemy, True) [10,2] 0 0 1 REDA10R4 [IronLance] GoForThroneAI
+UNIT TorchUnit2 WyvernRider Hugo Level(9, Enemy, True) [10,2] 0 0 1 REDA10R4 [IronAxe] GoForThroneAI
 UNIT
 
 BoatPursuerCavaliers:
@@ -73,6 +74,48 @@ Text(Ch2GriffinsShowUp)
 ENUT Ch2ReinforcementFlags
 NoFade
 ENDA
+
+LuaRahelBeginningCutscene:
+UNIT Lua Captain 0 Level(1, Ally, False) [19,18] 0 0 0 0 [0, 0, 0, 0] NoAI 
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,21] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+OrlandoBeginningCutscene:
+UNIT Orlando 0 0 Level(10,NPC,False) [19,25] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+Unit 
+
+LuaTheHorseIsHere:
+UNIT GreagorLibrarian HorseClass 0 Level(1, NPC, False) [19, 25] 0 0 0 0 [0, 0, 0, 0] NoAI 
+UNIT
+
+LuaThePilarIsHere:
+UNIT Pilar 0x0 0x0 Level(1, Ally, False) [19,25] 0 0 0 0 [Vulnerary] NoAI
+UNIT 
+
+CutsceneUnitsPt2:
+UNIT Lua Captain 0 Level(1, Ally, False) [11,10] 0 0 0 0 [0, 0, 0, 0] NoAI
+UNIT ElodiaBoss 0 0 Level(15, Enemy, False) [13, 22] 0 0 0 0 [Baselard, SilverLance, KnightRing] GroupSixAI
+UNIT
+
+CutsceneUnitsPt2Razvan:
+UNIT Razvan 0x0 0x0 Level(1, Ally, False) [11,10] 0 0 0 0 [Vulnerary] NoAI
+UNIT
+
+CutsceneUnitsOnShip:
+UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
+UNIT GreagorLibrarian HorseClass 0 Level(1, NPC, False) [20, 10] 0 0 0 0 [0, 0, 0, 0] NoAI
+UNIT Pilar Ninja 0x0 Level(1, Ally, False) [19,13] 0 0 0 0 [Vulnerary] NoAI
+UNIT
+
+CutsceneDesiOrlandoComeUp:
+UNIT Desiderio 0x0 0x0 Level(1, Ally, False) [21,9] 0 0 0 0 [Vulnerary] NoAI
+UNIT Orlando 0 0 Level(10,NPC,False) [22,9] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT
+
+CutsceneRahelTurnsIntoBowCav:
+UNIT Rahel BowCav 0 Level(1,Ally,False) [15,10] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
 
 ElodiaWolfSquad:
 UNIT TorchUnit Wolfrider Ignacio Level(10,Enemy,True) [39,22] 0 0 1 REDA39R22 [SteelKnife] PursueWithoutHeedAI
@@ -116,6 +159,9 @@ UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,5] 0 0 1 REDA30R6 [Fire] Ch
 UNIT
 
 HugoReinforcements:
+CameraCursor(Hugo)
+STAL 30
+Text(HugoWarning)
 SpawnReinforcements(HugoReinforcementsGroup)
 NoFade
 ENDA
@@ -132,6 +178,13 @@ CharacterEvent(RahelOrlandoHubATalkFlag, OrlandoRahelTalk, Lua, Rahel)
 CharacterEvent(CarmenXimoHubATalkFlag, CarmenXimoTalk, Lua, Carmen)
 CharacterEvent(CarmenXimoHubATalkFlag, CarmenXimoTalk, Lua, Ximo)
 END_MAIN
+
+JulianaDialogue:
+CameraCursor(Juliana)
+STAL 30
+Text(JulianaWarning)
+NoFade
+ENDA
 
 GotoChapter1:
 HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
@@ -268,6 +321,13 @@ LoadCutsceneUnits(HubALibraryRazvanGroup)
 LoadPlayerUnits(HubALibraryHermenegildoGroup)
 TurnUnitGreenIfAlive(Razvan, 1)
 TurnUnitGreenIfAlive(Hermenegildo, 2)
+
+LoadCutsceneUnits(NPCLibrarianBGroup)
+CheckHowManyHubChaptersCompleted
+SVAL s1 2 //if 2 or more chapters completed
+BLT 776 s1 sC 
+	LoadCutsceneUnits(NPCLibrarianAGroup)
+LABEL 776
 NoFade
 ENDA
 
@@ -277,6 +337,14 @@ UNIT
 
 HubALibraryHermenegildoGroup:
 UNIT Hermenegildo 0 0 Level(3,Ally,False) [9,3] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
+UNIT
+
+NPCLibrarianAGroup:
+UNIT GreagorLibrarian Mage_F 0 Level(3,NPC, False) [15,12] 0 0 0 0 [] NoAI
+UNIT
+
+NPCLibrarianBGroup:
+UNIT GreagorLibrarianB Sage 0 Level(11,NPC, False) [14,3] 0 0 0 0 [] NoAI
 UNIT
 
 GotoBarracksAndTreasureRoom:
@@ -541,30 +609,168 @@ ENUT Ch2ThisIsAChapter
 ENUT RahelOrlandoHubATalkFlag
 ENUT CarmenXimoHubATalkFlag
 ENUT ElodiaChargeFlag
-TILECHANGE 0
+TILECHANGE 2 //Lua's office
+LoadCutsceneUnits(LuaRahelBeginningCutscene)
+CAMERA_CENTERED [19,20]
+FADU 15
+
+MUSC MeetTheCrewID
+STAL 60
+MOVE 4 Lua [18,18]
+ENUN
+STAL 40
+MOVE 4 Lua [20,18]
+ENUN
+STAL 40
+MOVE 4 Lua [19,18]
+ENUN
+FlashCursor(Rahel, 60)
+SetBackground(Fort)
+Text(Ch2BeginningScene1)
+ClearBackground
+
+LoadCutsceneUnits(OrlandoBeginningCutscene)
+MOVE 6 Orlando [18,22]
+ENUN
+FlashCursor(Orlando, 60)
+SetBackground(Fort)
+Text(Ch2BeginningScene2)
+ClearBackground
+
+LoadCutsceneUnits(LuaTheHorseIsHere)
+MUSC SwabbieTalkID
+MOVE 10 GreagorLibrarian [19,23]
+ENUN
+STAL 20 
+MOVE 8 Rahel [20,23]
+ENUN
+FlashCursor(Rahel, 60)
+SetBackground(Fort)
+Text(Ch2BeginningScene3)
+ClearBackground
+
+MOVE 10 Orlando [19,25]
+ENUN 
+DISA Orlando
+STAL 15
+MOVE 8 Rahel [22,22]
+MOVE 8 GreagorLibrarian [22,23]
+MOVE 8 Lua [19,22]
+ENUN
+LoadCutsceneUnits(LuaThePilarIsHere)
+MOVE 15 Pilar [19,23]
+ENUN 
+FlashCursor(Pilar, 30)
+SetBackground(Fort)
+Text(Ch2BeginningScene4)
+ClearBackground
+
+STAL 10
+MOVE 5 Pilar [19,25]
+MOVE 5 Lua [20,25]
+ENUN
+REMOVEALL_BLUE
+REMOVEALL_GREEN
+FADI 15
+STAL 40
+
+CAMERA_CENTERED [14, 22]
+TILEREVERT 2
 TILECHANGE 4
-LoadPlayerUnits(NewPlayerGroup)
-LoadEnemies(IgniswordsGroup)
 LoadEnemies(TORCHGroupBottom)
-LoadEnemies(TORCHGroupLeft)
-LoadEnemies(TORCHMagiDivisionGroup)
+DISA ElodiaBoss
+LoadCutsceneUnits(CutsceneUnitsPt2)
+LoadCutsceneUnits(CutsceneUnitsOnShip)
+FADU 15
+MUSC AvastMeHeartiesID
+MOVE 10 Lua [13, 19]
+ENUN 
+STAL 10
+FlashCursor(ElodiaBoss, 60)
+Text(Ch2BeginningScene5)
+
+LoadCutsceneUnits(CutsceneUnitsPt2Razvan)
+MOVE 10 Razvan [12, 20]
+ENUN
+FlashCursor(Razvan, 60)
+Text(Ch2BeginningScene6)
+
+MOVE 15 ElodiaBoss [29,23]
+ENUN
+MOVE 10 Razvan [9,13]
+MOVE 10 Lua [9,12]
+ENUN
+DISA ElodiaBoss
+CAMERA_CENTERED [29,11]
+STAL 60
+
+FADI 15
+CLEE 0
+LoadEnemies(TORCHGroupBottom)
+TILECHANGE 0
+SOUN 0xDC //ship coming in, manakete transform SFX
+LoadCutsceneUnits(IgniswordsGroup)
+FADU 15
+
+STAL 60
+SOUN 0x02D7 //snag falling sound effect
+TILECHANGE 6 //Summons the planks
+STAL 40
+CAMERA_CENTERED [34,4]
+STAL 50
+FlashCursor(Ignacio, 60)
+Text(Ch2BeginningScene7)
+
+MOVE 5 Lua [14,11]
+MOVE 5 Razvan [13,12]
+CAMERA_CENTERED [17,11]
+MUSC EmergencyCrewmateID
+STAL 80
+LoadCutsceneUnits(CutsceneDesiOrlandoComeUp)
+MOVE 10 Orlando [17,10]
+MOVE 7 Desiderio [17,12]
+ENUN
+FlashCursor(Orlando,60)
+Text(Ch2BeginningScene8)
+
+CUSA Orlando
+MOVE 10 Orlando [26,10]
+MOVE 7 Desiderio [27,12]
+ENUN
+DISA Orlando 
+ENUN
+STAL 10
+FlashCursor(Rahel, 60)
+MOVE 7 Rahel [16, 10]
+MOVE 7 GreagorLibrarian [15,10]
+ENUN
+Text(Ch2BeginningScene9)
+
+CUSA Rahel
+CUSA GreagorLibrarian
+MOVE 30 Rahel [15, 10]
+ENUN
+DISA Rahel
+DISA GreagorLibrarian
+LoadCutsceneUnits(CutsceneRahelTurnsIntoBowCav)
+STAL 60
+FADI 15
+
+CLEE 0
+CLEN 0
+CLEA 0
 AddTrap(RedSigilTrapID,18,10)
 AddTrap(RedSigilTrapID,18,11)
 AddTrap(RedSigilTrapID,18,12)
 AddTrap(RedSigilTrapID,25,10)
 AddTrap(RedSigilTrapID,25,11)
 AddTrap(RedSigilTrapID,25,12)
-SetBackground(Fort)
-MUSC MeetTheCrewID
-Text(Ch2BeginningScene1)
-MUSC SwabbieTalkID
-Text(Ch2BeginningScene2)
-Text(Ch2BeginningScene3)
-MUSC AvastMeHeartiesID
-Text(Ch2BeginningScene4)
-Text(Ch2BeginningScene5)
-MUSC EmergencyCrewmateID
-Text(Ch2BeginningScene6)
+LoadPlayerUnits(NewPlayerGroup)
+LoadPlayerUnits(Units1)
+LoadEnemies(IgniswordsGroup)
+LoadEnemies(TORCHGroupBottom)
+LoadEnemies(TORCHGroupLeft)
+LoadEnemies(TORCHMagiDivisionGroup)
 GotoPrepScreen
 NoFade
 ENDA
@@ -575,7 +781,7 @@ UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
 IgniswordsGroup:
-UNIT Ignacio 0 0 Level(11,Enemy,False) [36,2] 0 0 0 0 [Elfire, KillingEdge, KnightsPlate] GroupFiveAI
+UNIT Ignacio 0 0 Level(10,Enemy,False) [36,2] 0 0 0 0 [Elfire, KillingEdge, KnightsPlate] GroupFiveAI
 UNIT Igniswords Monk Ignacio Level(8,Enemy,True) [33,0] 0 0 0 0 [Fire, Luna] GroupFiveAI
 UNIT Igniswords Archer Ignacio Level(8,Enemy,True) [33,2] 0 0 0 0 [Longbow] GroupFiveAI
 
@@ -594,7 +800,7 @@ TORCHGroupLeft:
 UNIT Hugo 0 Hugo Level(12, Enemy, True) [2,1] 0 0 0 0 [SilverSword, BravesCrest] AttackWhenInRangeAI
 UNIT TorchUnit Soldier Hugo Level(9,Enemy,True) [2,0] 0 0 0 0 [Pike] AttackInTwoAI
 
-UNIT TorchUnit2 GriffinRider Hugo Level(9, Enemy, True) [11,4] 0 0 0 0 [IronLance] GoForThroneAI
+UNIT TorchUnit2 WyvernRider Hugo Level(9, Enemy, True) [11,4] 0 0 0 0 [IronAxe] GoForThroneAI
 
 UNIT TorchUnit Soldier Hugo Level(9,Enemy,True) [11,9] 0 0 0 0 [IronLance] PursueWithoutHeedAI
 UNIT TorchUnit Mercenary Hugo Level(9,Enemy,True) [12,14] 0 0 0 0 [IronSword] PursueWithoutHeedAI
@@ -627,23 +833,110 @@ UNIT TorchUnit2 AxeCav ElodiaBoss Level(10,Enemy,True) [39,24] 0 0 0 0 [IronAxe]
 UNIT
 
 TORCHMagiDivisionGroup:
-//name this guy
 UNIT Juliana 0 ElodiaBoss Level(12,Enemy,True) [0,24] 0 0 0 0 [Arcfire, MagesRing] GroupTwelveAI
 UNIT TorchUnit Monk ElodiaBoss Level(9,Enemy,True) [0,23] 0 0 0 0 [Luna] GroupTwelveAI
 UNIT TorchUnit Shaman ElodiaBoss Level(9,Enemy,True) [3,23] 0 0 0 0 [Nosferatu] GroupTwelveAI
 UNIT TorchUnit Mage ElodiaBoss Level(9,Enemy,True) [3,24] 0 0 0 0 [Elfire] GroupTwelveAI
 UNIT
 
+EndingSceneCutsceneUnits:
+UNIT Lua Captain 0x0 Level(1, Ally, False) [19,10] 0 0 0 0 [0, 0, 0, 0] NoAI
+UNIT Desiderio 0x0 0x0 Level(1, Ally, False) [20,12] 0 0 0 0 [Vulnerary] NoAI
+UNIT Rahel 0x0 0 Level(1,Ally,False) [20,15] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Pilar 0x81 0x0 Level(1, Ally, False) [31,10] 0 0 0 0 [Vulnerary] NoAI
+UNIT Razvan 0x0 0 Level(1,Ally,False) [22,10] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Orlando 0 0 Level(10,Ally,False) [30,12] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT
+
+EndingSceneElodiaCutscene:
+UNIT ElodiaBoss 0 0 Level(15, Enemy, False) [12, 20] 0 0 0 0 [Baselard, SilverLance, KnightRing] GroupSixAI
+UNIT
+
+EndingSceneAlonsoCutscene:
+UNIT GreagorSailor Trickster 0 Level(20, Enemy, False) [3, 14] 0 0 0 0 [0] NoAI //alonso, modify here once adventurer is completeUNIT
+
+EndingSceneMysteriousFigureCutscene:
+UNIT GreagorVillager MaligKnight 0 Level(20, NPC, False) [39, 0] 0 0 0 0 [0] NoAI //alonso, modify here once adventurer is complete
+UNIT
+
 
 EndingScene:
-SetBackground(Fort)
+RemoveTrapAtCoords(18,10)
+RemoveTrapAtCoords(18,11)
+RemoveTrapAtCoords(18,12)
+RemoveTrapAtCoords(25,10)
+RemoveTrapAtCoords(25,11)
+RemoveTrapAtCoords(25,12)
+REMOVEALL_GREEN
+REMOVEALL_RED
+REMOVEALL_BLUE
 MUSC FoolsBoldID
+LoadCutsceneUnits(EndingSceneCutsceneUnits)
+LoadCutsceneUnits(EndingSceneElodiaCutscene)
+FADU 15
+CAMERA_CENTERED [18,10]
+STAL 30
+FlashCursor(Lua, 60)
 Text(Ch2EndingScene1)
+STAL 30
+CAMERA_CENTERED [26,10]
+FlashCursor(Orlando, 60)
 Text(Ch2EndingScene2)
+TILECHANGE 7 //Planks removed from the Ignissword boat to lua's boat.
+SOUN 0xEB
+STAL 20
+CAMERA_CENTERED [18,10]
+STAL 30
+MOVE 12 ElodiaBoss [13,11]
+STAL 40
+TILECHANGE 5 //Planks removing from the shore to lua's boat
+SOUN 0xEB
+STAL 50
+MOVE 10 Lua [21, 5]
+MOVE 10 Desiderio [23, 7]
+ENUN
+FlashCursor(ElodiaBoss, 60)
 Text(Ch2EndingScene3)
-MUSC ABlackheartsPrideID
+MOVE 8 Razvan [19,11]
+ENUN
+FlashCursor(Razvan, 60)
 Text(Ch2EndingScene4)
+STAL 25
+
+//Ships disappear off the map
+FADI 15
+REMOVEALL_BLUE
+MUSC 0x7FFF //music turns off
+TILEREVERT 0 //ignissword ship vanishes
+SOUN 0xE2 //ships leaving, armor triangle SFX
+STAL 40
+TILECHANGE 8 //liberator vanishes
+SOUN 0xE2 //ships leaving, armor triangle SFX
+FADU 15
+
+STAL 60
+MOVE 4 ElodiaBoss [14,11]
+ENUN
+FlashCursor(ElodiaBoss, 60)
 Text(Ch2EndingScene5)
+LoadCutsceneUnits(EndingSceneAlonsoCutscene)
+
+MUSC ABlackheartsPrideID
+CAMERA_CENTERED [9,11]
+MOVE 8 GreagorSailor [12,11]
+ENUN
+STAL 30
+FlashCursor(GreagorSailor, 60)
+Text(Ch2EndingScene6)
+
+CAMERA_CENTERED [37, 2]
+STAL 30
+LoadCutsceneUnits(EndingSceneMysteriousFigureCutscene)
+MOVE 4 GreagorVillager [33,7]
+ENUN
+STAL 30
+Text(Ch2EndingScene7)
+
 GoToHubChapter(HubB)
 NoFade
 ENDA

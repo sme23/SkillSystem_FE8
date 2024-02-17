@@ -24,6 +24,18 @@
     #incbin "Dmp/Config/DesertBastionNightSky_comp.dmp"
 
     ALIGN 4
+    DesertBastionVillageObject:
+    #incbin "Dmp/Object/DesertBastionVillage.dmp"
+
+    ALIGN 4
+    DesertBastionVillagePalette:
+    #incbin "Dmp/Palette/DesertBastionVillage_pal.dmp"
+
+    ALIGN 4
+    DesertBastionVillageMapchipConfig:
+    #incbin "Dmp/Config/DesertBastionVillage_comp.dmp"
+
+    ALIGN 4
     FF5CaveObject:
     #incbin "Dmp/Object/FF5Cave(Wave).dmp"
 
@@ -63,15 +75,32 @@
     ALIGN 4
     N426ImprovedCastleConfig:
     #incbin "Dmp/Config/Castle Update Config_comp.dmp"
+	
+	ALIGN 4
+	ZoramineImprovedStrongholdObject:
+	#incbin "Dmp/Object/Stronghold.dmp"
+	
+	ALIGN 4
+	ZoramineImprovedStrongholdPalette:
+	#incbin "Dmp/Palette/Stronghold_pal.dmp"
+	
+	ALIGN 4
+	ZoramineImprovedStrongholdConfig:
+	#incbin "Dmp/Config/Stronghold Config_comp.dmp"
+
 
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
     EventPointerTable(FlasubanVillageOurplePaletteID,FlasubanOurpleVillagePalette)
 
-	EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
+	  EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
     EventPointerTable(DesertBastionNightSkyPaletteID,DesertBastionNightSkyPalette)
     EventPointerTable(DesertBastionNightSkyConfigID,DesertBastionNightSkyMapchipConfig)
+
+    EventPointerTable(DesertBastionVillageObjectID,DesertBastionVillageObject)
+    EventPointerTable(DesertBastionVillagePaletteID,DesertBastionVillagePalette)
+    EventPointerTable(DesertBastionVillageConfigID,DesertBastionVillageMapchipConfig)
 
     EventPointerTable(FF5CaveObjectID,FF5CaveObject)
     EventPointerTable(FF5CavePaletteID,FF5CavePalette)
@@ -84,3 +113,7 @@
     EventPointerTable(N426ImprovedCastleObjectID, N426ImprovedCastleObject)
     EventPointerTable(N426ImprovedCastlePaletteID, N426ImprovedCastlePalette)
     EventPointerTable(N426ImprovedCastleConfigID, N426ImprovedCastleConfig)
+    
+	  EventPointerTable(ZoramineImprovedStrongholdObjectID, ZoramineImprovedStrongholdObject)
+	  EventPointerTable(ZoramineImprovedStrongholdPaletteID, ZoramineImprovedStrongholdPalette)
+	  EventPointerTable(ZoramineImprovedStrongholdConfigID, ZoramineImprovedStrongholdConfig)

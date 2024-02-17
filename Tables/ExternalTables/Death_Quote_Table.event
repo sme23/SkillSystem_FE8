@@ -11,7 +11,18 @@ DeathQuote(Carmen, AllChapters, 0, CarmenDQ)
 DeathQuote(Ximo, AllChapters, 0, XimoDQ)
 DeathQuote(Hermenegildo, AllChapters, 0, HermenegildoDQ)
 DeathQuote(Estelle, AllChapters, 0, EstelleDQ)
-
+// the B-2 trio have game over death quotes inside B-2 to save on conditionals
+DeathQuote(Husniye, HubB_2, 0x65, HusniyeDQ)
+DeathQuote(Husniye, AllChapters, 0, HusniyeDQ)
+DeathQuote(Avocado, HubB_2, 0x65, AvocadoDQ)
+DeathQuote(Avocado, AllChapters, 0, AvocadoDQ)
+DeathQuote(Magdalena, HubB_2, 0x65, MagdalenaDQ)
+DeathQuote(Magdalena, AllChapters, 0, MagdalenaDQ)
+//Adrian and Lexa can die as enemies and have seperate quotes for event purposes
+DeathQuote(Adrian, HubB_4, 0xC, AdrianDQB_4)
+DeathQuote(Adrian, AllChapters, 0, AdrianDQ)
+DeathQuote(Lexa, HubB_4, 0xD, LexaDQB_4)
+DeathQuote(Lexa, AllChapters, 0, LexaDQ)
 //DeathQuote()
 
 // Bosses
@@ -36,5 +47,15 @@ DeathQuote(Ramiro, HubA_4, 11, A4_RamiroDefeated)
 
 DeathQuote(Gunsmith, HubA_5, 0x9, 0)
 
+
+DeathQuote(Juliana, Chapter2, 0, JulianaDeathQuote)
+DeathQuote(Hugo, Chapter2, 0, HugoDeathQuote)
+DeathQuote(Ignacio, Chapter2, 0, IgnacioDeathQuote)
+DeathQuote(ElodiaBoss, Chapter2, 0, ElodiaDefeatQuoteCh2)
+
+DeathQuote(Yadney, HubB_2, 0, YadneyDeathQuote)
+DeathQuote(Cruz, HubB_2, 0x2, CruzDeathQuote)
+
+DeathQuote(Javier, HubB_4, 0x2, JavierDQ)
 
 DeathQuote(0xFFFF,0,0,0) // terminator

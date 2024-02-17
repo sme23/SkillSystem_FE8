@@ -106,6 +106,24 @@
 #include "PortraitHeight/PortraitShiftTable(installthisone).event"
 //2WB
 
+
+// use EventMenuCommand instead!
+// there are two versions becaue RW is bad at organizing things
+// #include "EventMenu/EventMenuDef.event"
+// StanH
+
+#include "EventMenuCommand/EventMenuCommand.event"
+// stan? i think?
+
+#include "DoesUnitHaveItemASMC/DoesUnitHaveItem.event"
+//Sme
+
+#include "NewComputeUnitBattleDefense/Installer.event"
+//Dragz
+
+//#include "FE8-Convoy_Partition_and_Item_Combining/FE8-Convoy_Stuff_EA.event" //soley being used for item combination
+//Tequila
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0
@@ -221,3 +239,8 @@ ORG 0x022A10
 SHORT 0x1C00
 POP
 
+// BWL on first playthrough
+PUSH
+ORG $86FE0
+BYTE 0x0 0x1C 0x0 0x1C 0x00 0x1C 0x00 0x1C //nops the check entirely
+POP

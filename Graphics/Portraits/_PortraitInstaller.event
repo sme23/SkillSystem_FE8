@@ -227,12 +227,76 @@ ValerieMugData:
 setMugEntry(ValerieMug, ValerieMugData, 2, 5, 3, 3)
 
 ALIGN 16
-StingrayMugData:
-#incbin "Dmp/Stingray_mug.dmp"
-#incbin "Dmp/Stingray_frames.dmp"
-#incbin "Dmp/Stingray_palette.dmp"
-#incbin "Dmp/Stingray_minimug.dmp"
-setMugEntry(StingrayMug, StingrayMugData, 2, 5, 3, 3)
+JavierMugData:
+#incbin "Dmp/Javier_mug.dmp"
+#incbin "Dmp/Javier_frames.dmp"
+#incbin "Dmp/Javier_palette.dmp"
+#incbin "Dmp/Javier_minimug.dmp"
+setMugEntry(JavierMug, JavierMugData, 2, 4, 3, 2)
+
+ALIGN 16
+AdrianMugData:
+#incbin "Dmp/Adrian_mug.dmp"
+#incbin "Dmp/Adrian_frames.dmp"
+#incbin "Dmp/Adrian_palette.dmp"
+#incbin "Dmp/Adrian_minimug.dmp"
+setMugEntry(AdrianMug, AdrianMugData, 2, 5, 3, 3)
+
+ALIGN 16
+LexaMugData:
+#incbin "Dmp/Lexa_mug.dmp"
+#incbin "Dmp/Lexa_frames.dmp"
+#incbin "Dmp/Lexa_palette.dmp"
+#incbin "Dmp/Lexa_minimug.dmp"
+setMugEntry(LexaMug, LexaMugData, 2, 6, 3, 4)
+
+ALIGN 16
+NoahMugData:
+#incbin "Dmp/Noah_mug.dmp"
+#incbin "Dmp/Noah_frames.dmp"
+#incbin "Dmp/Noah_palette.dmp"
+#incbin "Dmp/Noah_minimug.dmp"
+setMugEntry(NoahMug, NoahMugData, 3, 5, 3, 3)
+
+ALIGN 16
+Noah2MugData:
+#incbin "Dmp/Noah2_mug.dmp"
+#incbin "Dmp/Noah2_frames.dmp"
+#incbin "Dmp/Noah2_palette.dmp"
+#incbin "Dmp/Noah2_minimug.dmp"
+setMugEntry(Noah2Mug, Noah2MugData, 2, 5, 3, 3)
+
+ALIGN 16
+RedFSoldierMugData:
+#incbin "Dmp/RedFSoldier_mug.dmp"
+#incbin "Dmp/RedFSoldier_frames.dmp"
+#incbin "Dmp/RedFSoldier_palette.dmp"
+#incbin "Dmp/RedFSoldier_minimug.dmp"
+setMugEntry(RedFSoldierMug, RedFSoldierMugData, 3, 6, 3, 4)
+
+ALIGN 16
+DicerMugData:
+#incbin "Dmp/Dicer_mug.dmp"
+#incbin "Dmp/Dicer_frames.dmp"
+#incbin "Dmp/Dicer_palette.dmp"
+#incbin "Dmp/Dicer_minimug.dmp"
+setMugEntry(DicerMug, DicerMugData, 3, 5, 3, 3)
+
+ALIGN 16
+SlicerMugData:
+#incbin "Dmp/Slicer_mug.dmp"
+#incbin "Dmp/Slicer_frames.dmp"
+#incbin "Dmp/Slicer_palette.dmp"
+#incbin "Dmp/Slicer_minimug.dmp"
+setMugEntry(SlicerMug, SlicerMugData, 3, 5, 3, 3)
+
+ALIGN 16
+FelipeMugData:
+#incbin "Dmp/Felipe_mug.dmp"
+#incbin "Dmp/Felipe_frames.dmp"
+#incbin "Dmp/Felipe_palette.dmp"
+#incbin "Dmp/Felipe_minimug.dmp"
+setMugEntry(FelipeMug, FelipeMugData, 3, 6, 3, 4)
 
 ALIGN 16
 RamiroMugData:
@@ -240,7 +304,7 @@ RamiroMugData:
 #incbin "Dmp/Ramiro_frames.dmp"
 #incbin "Dmp/Ramiro_palette.dmp"
 #incbin "Dmp/Ramiro_minimug.dmp"
-setMugEntry(RamiroMug, RamiroMugData, 2, 5, 3, 3)
+setMugEntry(RamiroMug, RamiroMugData, 3, 5, 3, 3)
 
 ALIGN 16
 DmitrMugData:
@@ -257,3 +321,62 @@ KirilMugData:
 #incbin "Dmp/Kiril_palette.dmp"
 #incbin "Dmp/Kiril_minimug.dmp"
 setMugEntry(KirilMug, KirilMugData, 3, 5, 3, 3)
+
+ALIGN 16
+StingrayMugData:
+#incbin "Dmp/Stingray_mug.dmp"
+#incbin "Dmp/Stingray_frames.dmp"
+#incbin "Dmp/Stingray_palette.dmp"
+#incbin "Dmp/Stingray_minimug.dmp"
+setMugEntry(StingrayMug, StingrayMugData, 3, 5, 3, 3)
+
+ALIGN 16
+SagargalaMugData:
+#incbin "Dmp/Sagargala_mug.dmp"
+#incbin "Dmp/Sagargala_frames.dmp"
+#incbin "Dmp/Sagargala_palette.dmp"
+#incbin "Dmp/Sagargala_minimug.dmp"
+setMugEntry(SagargalaMug, SagargalaMugData, 3, 5, 3, 3)
+
+
+// B-2 placeholders
+
+ALIGN 16
+AvocadoMugData:
+#incbin "Dmp/Avocado_mug.dmp"
+#incbin "Dmp/Avocado_frames.dmp"
+#incbin "Dmp/Avocado_palette.dmp"
+#incbin "Dmp/Avocado_minimug.dmp"
+setMugEntry(AvocadoMug, AvocadoMugData, 2, 5, 2, 3)
+
+ALIGN 16
+CruzMugData:
+#incbin "Dmp/Cruz_mug.dmp"
+#incbin "Dmp/Cruz_frames.dmp"
+#incbin "Dmp/Cruz_palette.dmp"
+#incbin "Dmp/Cruz_minimug.dmp"
+setMugEntry(CruzMug, CruzMugData, 2, 6, 3, 4)
+
+ALIGN 16
+HusniyeMugData:
+#incbin "Dmp/Husniye_mug.dmp"
+#incbin "Dmp/Husniye_frames.dmp"
+#incbin "Dmp/Husniye_palette.dmp"
+#incbin "Dmp/Husniye_minimug.dmp"
+setMugEntry(HusniyeMug, HusniyeMugData, 2, 6, 3, 4)
+
+ALIGN 16
+MagdalenaMugData:
+#incbin "Dmp/Magdalena_mug.dmp"
+#incbin "Dmp/Magdalena_frames.dmp"
+#incbin "Dmp/Magdalena_palette.dmp"
+#incbin "Dmp/Magdalena_minimug.dmp"
+setMugEntry(MagdalenaMug, MagdalenaMugData, 2, 5, 3, 3)
+
+ALIGN 16
+YadneyMugData:
+#incbin "Dmp/Yadney_mug.dmp"
+#incbin "Dmp/Yadney_frames.dmp"
+#incbin "Dmp/Yadney_palette.dmp"
+#incbin "Dmp/Yadney_minimug.dmp"
+setMugEntry(YadneyMug, YadneyMugData, 2, 5, 2, 3)

@@ -93,6 +93,12 @@ CantoPlus:
 POIN SkillTester
 WORD CantoPlusID
 
+ALIGN 4
+CantoAttack:
+#include "CantoAttack/cantoattack.lyn.event"
+POIN SkillTester
+WORD CantoAttackID
+
 CantoAI_Label:
 WORD CANTO_AI 
 
@@ -195,3 +201,5 @@ NailedDownID_Link:
 WORD NailedDownID
 
 #include "NailedDown/NailedDown.lyn.event"
+
+#include "Delegation/Delegation.lyn.event"
