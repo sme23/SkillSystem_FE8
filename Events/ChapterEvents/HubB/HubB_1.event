@@ -20,7 +20,7 @@ END_MAIN
 
 LocationBasedEvents:
 Chest(GlassShield, 2, 2)
-Chest(Surge, 5, 2)
+Chest(Elsurge, 5, 2)
 Chest(FliersPermit, 12, 9)
 Chest(MagekillerBow, 16, 12)
 Chest(FlameSword, 0, 15)
@@ -45,46 +45,67 @@ ALIGN 4
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [15,5] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [16,5] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [17,5] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [18,5] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [15,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,6] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT Indio Shaman 0 Level(1, Ally, False) [16,4] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [17,4] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [18,4] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT Indio Shaman 0 Level(1, Ally, False) [15,3] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [16,3] 0 0 0 0 [Surge, Vulnerary] NoAI
-UNIT Indio Shaman 0 Level(1, Ally, False) [17,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,5] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,6] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT Indio Shaman 0 Level(1, Ally, False) [18,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [18,4] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,3] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [16,1] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [17,2] 0 0 0 0 [Surge, Vulnerary] NoAI
+UNIT Indio Shaman 0 Level(1, Ally, False) [15,0] 0 0 0 0 [Surge, Vulnerary] NoAI
 UNIT
 
 AntlionsInitial:
 //boss squad
-UNIT Kiril MasterNinja 0 Level(5,Enemy,False) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] GroupOneAI
-UNIT Antlion Brigand 0 Level(9, Enemy, True) [7,21] 0 0 0 0 [Crusher] GroupOneAI
-UNIT Antlion Soldier 0 Level(9, Enemy, True) [10,21] 0 0 0 0 [Pike] GroupOneAI
+UNIT Kiril MasterNinja 0 Level(13,Enemy,True) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] GroupOneAI
+UNIT Antlion Brigand 0 Level(10, Enemy, True) [7,21] 0 0 0 0 [Crusher] GroupOneAI
+UNIT Antlion Deserter 0 Level(10, Enemy, True) [10,21] 0 0 0 0 [Pike] GroupOneAI
 //turn 1
 UNIT Antlion Mercenary 0 Level(9, Enemy, True) [11,3] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Antlion Brigand 0 Level(9, Enemy, True) [13,1] 0 0 0 0 [SteelAxe] ChargeAI
 UNIT Antlion Hunter 0 Level(9, Enemy, True) [12,4] 0 0 0 0 [SteelBow] ChargeAI
 UNIT Antlion Mage 0 Level(9, Enemy, True) [11,5] 0 0 0 0 [Elfire] ChargeAI
 UNIT Antlion Myrmidon 0 Level(9, Enemy, True) [8,0] 0 0 0 0 [Rapier] AttackWhenInRangeAI
+UNIT Antlion Fighter 0 Level(9, Enemy, True) [7,8] 0 0 0 0 [SteelAxe] ChargeAI
 //turn 2
-UNIT Antlion Warden 0 Level(9, Enemy, True) [8,6] 0 0 0 0 [IronBlade, Harpoon] BossAI
-UNIT Antlion Vanguard 0 Level(9, Enemy, True) [9,7] 0 0 0 0 [Harpoon, SteelAxe] BossAI
-UNIT Antlion Mercenary 0 Level(9, Enemy, True) [9,12] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+UNIT Antlion Warden 0 Level(10, Enemy, True) [8,6] 0 0 0 0 [IronBlade, Harpoon] BossAI
+UNIT Antlion Vanguard 0 Level(10, Enemy, True) [9,7] 0 0 0 0 [Harpoon, SteelAxe] BossAI
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [9,12] 0 0 0 0 [IronSword] AttackWhenInRangeAI
 UNIT Antlion Brigand 0 Level(9, Enemy, True) [3,6] 0 0 0 0 [SteelAxe] AttackWhenInRangeAI
+UNIT Antlion Shaman 0 Level(9, Enemy, True) [3,9] 0 0 0 0 [Elsurge] AttackWhenInRangeAI
 //turn 3
+UNIT Antlion Shaman 0 Level(9, Enemy, True) [3,9] 0 0 0 0 [Elsurge] AttackWhenInRangeAI
+UNIT Antlion Deserter 0 Level(9, Enemy, True) [6,12] 0 0 0 0 [IronLance] AttackWhenInRangeAI
+UNIT Antlion Vanguard 0 Level(9, Enemy, True) [2,11] 0 0 0 0 [SteelAxe] AttackInTwoAI
+UNIT Antlion Hunter 0 Level(9, Enemy, True) [0,8] 0 0 0 0 [Longbow] AttackWhenInRangeAI
+//turn 4
+UNIT Antlion Thief 0 Level(9, Enemy, True) [6,15] 0 0 0 0 [IronDagger] AttackWhenInRangeAI
+UNIT Antlion Ninja 0 Level(9, Enemy, True) [11,14] 0 0 0 0 [Stiletto] AttackWhenInRangeAI
+UNIT Antlion Fighter 0 Level(9, Enemy, True) [8,16] 0 0 0 0 [SteelAxe,IronShield] AttackWhenInRangeAI
+UNIT Antlion SwordCav 0 Level(9, Enemy, True) [12,16] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+//turn 5
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [6,18] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+UNIT Antlion Myrmidon 0 Level(9, Enemy, True) [11,17] 0 0 0 0 [Lancereaver] AttackWhenInRangeAI
+UNIT Antlion Shaman 0 Level(9, Enemy, True) [12,20] 0 0 0 0 [Elfire] AttackWhenInRangeAI
+UNIT Antlion Warden 0 Level(9, Enemy, True) [5,19] 0 0 0 0 [SteelBlade,Horseslayer] AttackInTwoAI
+UNIT Antlion Gunner 0 Level(9, Enemy, True) [15,17] 0 0 0 0 [SteelMusket,Pistol] AttackWhenInRangeAI
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [16,19] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
 //nw chest room
 UNIT Antlion Soldier 0 Level(9, Enemy, True) [2,1] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Antlion Soldier 0 Level(9, Enemy, True) [5,1] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Antlion Mercenary 0 Level(9, Enemy, True) [5,1] 0 0 0 0 [SteelSword] ChargeAI
 //sw chest room
 UNIT Antlion Soldier 0 Level(9, Enemy, True) [0,15] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Antlion Brigand 0 Level(9, Enemy, True) [1,15] 0 0 0 0 [Swordreaver] ChargeAI
+//se chest room
+UNIT Antlion Warden 0 Level(10, Enemy, True) [16,11] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+UNIT Antlion Vanguard 0 Level(10, Enemy, True) [14,9] 0 0 0 0 [Oversize] AttackWhenInRangeAI
 UNIT
 
 DmitrSpawn:
-UNIT Dmitr Brigand 0 Level(9, Ally, False) [15,3] 0 0 0 0 [Bloodaxe, Vulnerary] NoAI
+UNIT Dmitr Brigand 0 Level(9, Ally, True) [15,3] 0 0 0 0 [Bloodaxe, Vulnerary] NoAI
 UNIT
 
 BeginningScene:
