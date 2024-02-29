@@ -2,20 +2,23 @@
 Ch. B-1: What Once Was[X]
 
 ## HubB_1StatusObjective
-Rout the enemy before[N]
+Defeat the boss before[N]
 the ruins collapse.[X]
 
 ## HubB_1GoalWindow
-Rout enemy[X]
+Defeat Boss[X]
 
 ## StartingScene
 text[X]
 
 ## ImDmitr
-i'm dmitr[X]
+i'm dmitr[A][X]
 
 ## KirilTakesNotice
-aw hell naw intruders[X]
+aw hell naw intruders[A][X]
 
 ## LuaResponds
-cue preps[X]
+cue preps[A][X]
+
+## KirilDeathQuote
+[Beat][.5][A][X]
