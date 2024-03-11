@@ -1,0 +1,25 @@
+Questgiver: Razvan
+
+Scenario:
+A treasure ruin puppeted by bandits called the antlions where they lure in travelers with myths of a dangerous treasure.
+They meet a local called Dmitr who offers to guide them to the treasure.
+They arrive and find the Antlions lying in wait.
+Potentially the ruins are going to collapse.
+
+Scene 1:
+
+Lua bumps into razvan on the boat who talks about a large desert on one of the islands out here
+He suggests trying to map it, its inhospitable conditions might make it a place where they could find some useful treasure.
+
+Scene 2:
+They arrive in a small village that seems a good place to stay the night and scout information.
+In a tavern they hear travellers talking about the treasure but people don't want to take them
+Dmitr overhears them and offers to guide them and they set off in the morning.
+Flying into the desert is considered a bad idea due to sandstorms that may ruin the boat
+
+Scene 3:
+They've been travelling a while and find the ruins, however they also find the antlions!
+
+
+Ending Scene:
+Depending on how much loot was secured they get a different ending scene and it ends in an 'oh gods we have to walk all the way back'

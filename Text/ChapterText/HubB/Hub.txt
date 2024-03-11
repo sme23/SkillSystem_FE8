@@ -778,10 +778,10 @@ but I'll think about it.[A][X]
 Objective: Rout[X]
 
 ## HubB4Units
-Units: x (Fighter), y (Thief)[X]
+Units: Adrian (Fighter), Lexa (Myrmidon), Noah (Warden)[X]
 
 ## HubB4Loot
-Loot: Stuff![X]
+Loot: Varied loot and wealth[X]
 
 
 ## HubB5Prompt

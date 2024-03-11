@@ -22,3 +22,10 @@ cue preps[A][X]
 
 ## KirilDeathQuote
 [Beat][.5][A][X]
+
+## HubB_1Intro
+[X]
+
+## HubB_1BeginningScene1
+
+[X]
