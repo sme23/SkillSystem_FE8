@@ -109,7 +109,7 @@ Dunno:
 
 MainEvents:
 	BeginningScene:
-		//Load1 1 CutsceneUnits1
+		//LOAD1 1 CutsceneUnits1
 		//ENUN
 		MUSC 0x47
 		//FlagIsSet(10,1)
@@ -118,7 +118,7 @@ MainEvents:
 		Text(HubB_4BeginningScene1)
 		CALL $9EE2C4
 		CamOn
-		Load1 1 CutsceneUnits1
+		LOAD1 1 CutsceneUnits1
 		ENUN
 		MOVE 25 Lua [14,22]
 		MOVE 25 Orlando [15,22]
@@ -128,7 +128,7 @@ MainEvents:
 		CamOff
 		CAMERA_CENTERED Lua
 		Text(HubB_4BeginningScene2)
-		Load1 1 CutsceneUnits2
+		LOAD1 1 CutsceneUnits2
 		STAL 20
 		Text(HubB_4BeginningScene3)
 		FADI 10
@@ -136,12 +136,12 @@ MainEvents:
 		REMOVEALL_BLUE
 		REMOVEALL_RED
 		LABEL 1
-		Load1 1 RecruitableUnits
-		Load1 1 EnemyUnits1
-		Load1 1 EnemyUnits2
-		Load1 1 EnemyUnits3
-		Load1 1 JavierUnits
-		//Load1 1 TestUnit
+		LOAD1 1 RecruitableUnits
+		LOAD1 1 EnemyUnits1
+		LOAD1 1 EnemyUnits2
+		LOAD1 1 EnemyUnits3
+		LOAD1 1 JavierUnits
+		//LOAD1 1 TestUnit
 		GoToPrepScreen2
 		CAMERA_CENTERED[14,23]
 		FADU 10
@@ -154,7 +154,7 @@ MainEvents:
 		MUSC 0x47
 		FADI 10
 		RemoveAll
-		Load1 1 CutsceneUnits3
+		LOAD1 1 CutsceneUnits3
 		CAMERA_CENTERED (Gunsmith)
 		SetBackground(Village)
 		Text(HubB_4EndingScene1)
@@ -281,7 +281,7 @@ VillageC:
 	MUSC WelcomeAboardMateyID
 	Text(B4VillageCText)
 	CALL $9EE2C4
-	Load1 1 NoahUnit
+	LOAD1 1 NoahUnit
 	ENUN
 	NoFade
 	ENDA
