@@ -2,7 +2,8 @@
 Hub B-4 - Town Under Thumb [X]
 
 ## HubB_4StatusObjective
-Rout Bandits[X]
+Rout bandits before[N]
+Incendevis arrive.[X]
 
 ## HubB_4GoalWindow
 Rout Bandits[X]
@@ -111,7 +112,7 @@ We'll just have to finish and get[N]
 out of here as fast as we can.[A]
 
 [ML][2LB]
-I'd give us [Red]13 minutes[Red] for[N]
+I'd give us [Red]10 minutes[Red] for[N]
 us to clean this bandit hole.[AN]
 If we want any chance of leaving[N]
 before they get here that is.[A][X]
@@ -447,13 +448,13 @@ Alright-[.4][MoveMidLeft] *huff*[.5] I'm ready![A][X]
 ## B4HurryWarning
 [MR][LoadPilar]
 We might want to get a move[N]
-on,[.4] incendivis ain't far out.[A][X]
+on,[.4] Incendivis ain't far out.[A][X]
 
 ## JavierBQ
 [ML][LoadJavier]
 Swept through my gang huh?[AN]
-Well you might find me a cut above[N]
-those chumps,[.4] prepare to meet your end.[A][X]
+Well you'll find me a cut above[N]
+those chumps,[.4] prepare to die.[A][X]
 
 ## JavierDQ
 [ML][LoadJavier]

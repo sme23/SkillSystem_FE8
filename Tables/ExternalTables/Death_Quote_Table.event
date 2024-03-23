@@ -53,6 +53,8 @@ DeathQuote(Hugo, Chapter2, 0, HugoDeathQuote)
 DeathQuote(Ignacio, Chapter2, 0, IgnacioDeathQuote)
 DeathQuote(ElodiaBoss, Chapter2, 0, ElodiaDefeatQuoteCh2)
 
+DeathQuote(Kiril, HubB_1, 2, KirilDeathQuote)
+
 DeathQuote(Yadney, HubB_2, 0, YadneyDeathQuote)
 DeathQuote(Cruz, HubB_2, 0x2, CruzDeathQuote)
 
