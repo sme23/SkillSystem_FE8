@@ -20,19 +20,19 @@ None,0,0
 0x12 Juan,(-1),15
 0x13 Matteo,(-1),15
 0x14 Suzanne,2,25
-0x15 Orlando,2,30
-0x16 Rahel,0,20
+0x15 Orlando,3,35
+0x16 Rahel,(-1),15
 0x17 Dmitr,0,5
 0x18 Husniye,3,25
-0x19 Avocado,2,10
-0x1A Magdalena,(-2),40
-0x1B -,0,50
-0x1C Rennac,3,35
+0x19 Avocado,2,20
+0x1A Magdalena,1,40
+0x1B Ernest,(-4),10
+0x1C Kai,6,45
 0x1D Adrian,1,10
 0x1E Lexa,0,25
 0x1F Knoll,10,50
 0x20 Ponta,5,40
-0x21 Passarola,2,35
+0x21 Passarola,1,35
 0x22 Neltume,(-3),30
 0x23 Lyon,13,50
 0x24 Orson,3,10
@@ -174,7 +174,7 @@ None,0,0
 0xAC Monster,0,0
 0xAD Monster,1,5
 0xAE Monster,5,15
-0xAF Monster,20,20
+0xAF Monster,0,0
 0xB0 Monster,3,5
 0xB1 Monster,0,0
 0xB2 Monster,0,0
@@ -210,14 +210,14 @@ None,0,0
 0xD0 - Yadney,2,0
 0xD1 - Cruz,3,0
 0xD2 - CruzFake,3,0
-0xD3 -,0,0
-Wraith (Axes),0,0
-0,0,0
-0,0,0
-0,0,0
-Grado Soldier (Special),0,0
-0xD( Javier,2,20
-Grado Soldier 2,0,0
+0xD3 - RecelosoPriest,0,0
+0xD4 - RecelosoCorpse,0,0
+0xD5 - RecelosoStudent,0,0
+0xD6 - RecelosoGuard,0,0
+0xD7 - RecelosoBarkeep,0,0
+0xD8 - B4Bandit,0,0
+0xD9 - Javier,2,20
+0xDA - Azahar,2,20
 Grado Soldier 3,0,0
 Grado Soldier 4,0,0
 Grado Soldier 5,0,0

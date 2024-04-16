@@ -29,6 +29,8 @@
 #define LocationText(textId, x, y) "BROWNBOXTEXT textId[x,y]"
 
 
+#define IfAliveDeadDialog(character,alivetext,deadtext, label1, label2) "CHECK_ALIVE character; BEQ label1 0x0 0xC; Text(alivetext); GOTO label2; LABEL label1; Text(deadtext); LABEL label2"
+
 #define TextWithMusicChange(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSC songId; TEXTCONT; TEXTEND; REMA"
 #define TextWithMusicChange2(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSS songId; TEXTCONT; TEXTEND; REMA"
 
@@ -117,3 +119,4 @@
 
 #define FlagIsSet(id, label) "CHECK_EVENTID (id); BEQ (label) 0xc 0x0;"
 #define FlagNotSet(id, label) "CHECK_EVENTID (id); BNE (label) 0xc 0x0;"
+

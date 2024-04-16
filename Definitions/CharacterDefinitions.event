@@ -46,8 +46,8 @@
 #define Husniye $18
 #define Avocado $19
 #define Magdalena $1A
-#define B3Unit1 $1B
-#define B3Unit2 $1C
+#define Ernest $1B
+#define Kai $1C
 #define Adrian $1D
 #define Lexa $1E
 #define Fata $1F
@@ -161,7 +161,7 @@
 #define Antlion $79
 #define Kiril $7A
 
-//Hub 2B
+//Hub B2
 #define Yadney 0xD0
 #define Cruz 0xD1
 #define CruzFake 0xD2
@@ -175,6 +175,10 @@
 #define Fogaca 0xD5
 #define Dario 0xD6
 #define Thais 0xD7
+
+// Hub B3
+#define Azahar 0xDA
+#define RebelThief 0xAF
 
 //Hub B4
 #define B4Bandit 0xD8

@@ -160,6 +160,12 @@ SongTable(LetterOpenerID,LetterOpener,MapMusicGroup)
 #include "songs/map/LetterOpener.event"
 }
 
+// 30 - The Wave's Apprentice
+{
+SongTable(TheWavesApprenticeID,TheWavesApprentice,BattleMusicGroup)
+#include "songs/boss/TheWavesApprentice.event"
+}
+
 
 
 // --------------- SONGS: GUI AND SFX ---------------

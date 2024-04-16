@@ -132,3 +132,8 @@
 #define DesertBastionObjectID 0xA5
 #define DesertBastionPaletteID 0xA6
 #define DesertBastionConfigID 0xA7
+
+#define SnowyBernObjectID 0xA8
+#define SnowyBernPaletteID 0xA9
+#define SnowyBernConfigID 0xAA
+#define SnowyBernAnimationsID 0xAB

@@ -12,9 +12,12 @@ BossBGMEntry(Ramiro,FoolsBoldID)
 BossBGMEntry(BigBrick,FoolsBoldID)
 BossBGMEntry(Santiago,FoolsBoldID)
 // these ones should probably be Waves' Apprentice?
-BossBGMEntry(ElodiaBoss,FoolsBoldID)
-BossBGMEntry(Yadney,FoolsBoldID)
-BossBGMEntry(Cruz,FoolsBoldID)
+BossBGMEntry(ElodiaBoss,TheWavesApprenticeID)
+BossBGMEntry(Kiril, TheWavesApprenticeID)
+BossBGMEntry(Yadney,TheWavesApprenticeID)
+BossBGMEntry(Cruz,TheWavesApprenticeID)
+BossBGMEntry(Azahar,TheWavesApprenticeID)
+BossBGMEntry(Javier,TheWavesApprenticeID)
 BossBGMTerminator
 
 PUSH

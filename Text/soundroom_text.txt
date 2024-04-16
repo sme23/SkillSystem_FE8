@@ -70,3 +70,6 @@ Fin In The Clouds[X]
 
 ## SongName_LetterOpener
 Letter Opener[X]
+
+## SongName_TheWavesApprenticeID
+The Wave's Apprentice[X]

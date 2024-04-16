@@ -88,6 +88,17 @@
 	ZoramineImprovedStrongholdConfig:
 	#incbin "Dmp/Config/Stronghold Config_comp.dmp"
 
+    ALIGN 4
+	SnowyBernObject:
+	#incbin "Dmp/Object/SnowyBern.dmp"
+	
+	ALIGN 4
+	SnowyBernPalette:
+	#incbin "Dmp/Palette/SnowyBern_pal.dmp"
+	
+	ALIGN 4
+	SnowyBernConfig:
+	#incbin "Dmp/Config/SnowyBern_comp.dmp"
 
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
@@ -114,6 +125,10 @@
     EventPointerTable(N426ImprovedCastlePaletteID, N426ImprovedCastlePalette)
     EventPointerTable(N426ImprovedCastleConfigID, N426ImprovedCastleConfig)
     
-	  EventPointerTable(ZoramineImprovedStrongholdObjectID, ZoramineImprovedStrongholdObject)
-	  EventPointerTable(ZoramineImprovedStrongholdPaletteID, ZoramineImprovedStrongholdPalette)
-	  EventPointerTable(ZoramineImprovedStrongholdConfigID, ZoramineImprovedStrongholdConfig)
+	EventPointerTable(ZoramineImprovedStrongholdObjectID, ZoramineImprovedStrongholdObject)
+	EventPointerTable(ZoramineImprovedStrongholdPaletteID, ZoramineImprovedStrongholdPalette)
+	EventPointerTable(ZoramineImprovedStrongholdConfigID, ZoramineImprovedStrongholdConfig)
+
+    EventPointerTable(SnowyBernObjectID, SnowyBernObject)
+    EventPointerTable(SnowyBernPaletteID, SnowyBernPalette)
+    EventPointerTable(SnowyBernConfigID, SnowyBernConfig)

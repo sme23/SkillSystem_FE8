@@ -1768,3 +1768,13 @@ Dubious Advice: Adjacent allies gain[N]
 ## SD_FrigidAura
 Frigid Aura: Adjacent allies take 20%[N]
 max HP damage at the start of the turn.[X]
+
+## SD_ArcaneArtifice
+Arcane Artifice: If this unit's weapon[N]
+uses MAG and the enemy's uses STR,[N]
+this unit's attacks cannot be countered.[X]
+
+## SD_ScoutsInstinct
+Scout's Instinct: If attacked,[N]
+this unit's Avo is multiplied by number[N]
+of tiles between them and the attacker.[X]

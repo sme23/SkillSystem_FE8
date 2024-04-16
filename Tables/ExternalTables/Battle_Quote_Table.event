@@ -64,6 +64,14 @@ SpecifiedBattleConvo(Cruz,Pilar,HubB_2,0x26,B2_BQ_CruzPilar)
 SpecifiedBattleConvo(Cruz,Orlando,HubB_2,0x27,B2_BQ_CruzOrlando)
 UnspecifiedBattleConvo(Cruz,HubB_2,0x28,B2_BQ_CruzGeneric)
 
+// Chapter B-3
+SpecifiedBattleConvo(Azahar,Pilar,    HubB_3,0x9,PilarAzaharBQ)
+SpecifiedBattleConvo(Azahar,Desiderio,HubB_3,0xA,DesiAzaharBQ)
+SpecifiedBattleConvo(Azahar,Kai,      HubB_3,0xB,KaiAzaharBQ)
+SpecifiedBattleConvo(Azahar,Ernest,   HubB_3,0xC,ErnestAzaharBQ)
+SpecifiedBattleConvo(Azahar,Lua,      HubB_3,0xD,LuaAzaharBQ)
+UnspecifiedBattleConvo(Azahar,        HubB_3,0x1,AzaharBQ)
+
 // Chapter B-4
 UnspecifiedBattleConvo(Javier,HubB_4,0x14,JavierBQ)
 

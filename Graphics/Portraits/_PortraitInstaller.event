@@ -380,3 +380,11 @@ YadneyMugData:
 #incbin "Dmp/Yadney_palette.dmp"
 #incbin "Dmp/Yadney_minimug.dmp"
 setMugEntry(YadneyMug, YadneyMugData, 2, 5, 2, 3)
+
+ALIGN 16
+ErnestMugData:
+#incbin "Dmp/Ernest_mug.dmp"
+#incbin "Dmp/Ernest_frames.dmp"
+#incbin "Dmp/Ernest_palette.dmp"
+#incbin "Dmp/Ernest_minimug.dmp"
+setMugEntry(ErnestMug, ErnestMugData, 3, 5, 3, 3)

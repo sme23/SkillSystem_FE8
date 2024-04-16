@@ -660,13 +660,6 @@ Units: Variable[X]
 ## HubB2Loot
 Loot: Knives, as well as nonweapon items.[X]
 
-## HubB2Sys_Text_Mission_Select
-B-2: With Bloody Hands (Investigate / Defeat Boss)[N]
-Units: Variable[N]
-Loot: Knives, as well as nonweapon items.[N]
-Stop at Port Receloso?[N]
-[No][X]
-
 ## HubB2Selection_Yes
 [ML][LoadDesiderio]
 [MR][LoadLua]
@@ -693,31 +686,98 @@ Gotcha, Captain.[AN]
 Port Receloso will still[N]
 be there when we need it.[A][X]
 
+## HubB3Title
+Ch. B-3: Last Ship Home[X]
 
+## HubB3Objective
+Objective: Seize[X]
 
+## HubB3Units
+Units: Ernest (Gryphoknight), Kai (Ninja)[X]
 
-## HubB3Prompt
-Go to B-3?[N]
-[No][X]
+## HubB3Loot
+Loot: Axe and lance users will benefit.[X]
 
-## HubB4Prompt
-Take Orlando's suggestion?[N]
-[No][X]
+## HubB3Confirm
+Sail to Snowthorne?[X]
 
-## HubB5Title
-B-5: Veil of the Whorl[X]
+## HubB3Pitch
+[ML][LoadDesiderio]
+[MR][LoadLua]
+[ML]
+Boss, you got a minute to talk?[AN]
+I've got a destination for the crew[N]
+in mind, if you'll take requests.[AN]
+[MR]
+You'd know more about these[N]
+parts than me, so shoot.[AN]
+[ML][3LB]
+Right[Beat] Well, there's a little[N]
+island nearby called Snowthorne.[AN]
+The name comes from what you'd guess.[N]
+Never seen the place with less than[N]
+six inches of snow on the ground.[AN]
+But yeah, my old crew, the Roseblades,[N]
+used to hang around an old fort there.[AN]
+[Beat]It all went to hell when T.O.R.C.H.[N]
+showed up, off a tip given by a traitor[N]
+in the crew. I've mentioned this, right?[A]
+[MR][2LB]
+You have. Where's this going,[N]
+and how does it benefit us?[AN]
+[ML][3LB]
+You'd see where it's goin'[N]
+if you let me finish, boss.[N]
+After the attack, they left real quick.[AN]
+Probably didn't want to hang around[N]
+in the cold and risk us striking back.[AN]
+I hung around for a little, along with[N]
+a couple other survivors from our crew.[AN]
+But they all left, one by one, til[N]
+it was me and one other guy[Beat][N]
+Wouldn't be surprised if he stayed.[AN]
+Anyway, we had a huge stockpile[N]
+of fuel, what with the cold weather.[AN]
+That fuel can be used for airships,[N]
+and if we're going into the unknown,[N]
+we need as much as we can get.[AN]
+I say we swing by there and grab[N]
+it for ourselves, if you're up for it.[A]
+[MR]
+That does sound tempting, Desiderio.[N]
+But what of that man? You don't think[N]
+he could have taken the rest and ran?[AN]
+[ML]
+Nah, no way. If he's got anything,[N]
+it's a sense of honor[Beat] of duty.[N]
+He'll still be there, I'm sure.[AN]
+And if he's not, no one else would[N]
+find the fuel. We've got it locked up,[N]
+and only he and I know how to get it.[AN]
+So long as he doesn't put up a fight,[N]
+it'll be free to take for ourselves.[N]
+[Beat]Well, what do you say, boss?[A][X]
 
-## HubB5Objective
-Objective: Rout[X]
-
-## HubB5Units
-Unit: Fata (Monk)[X]
-
-## HubB5Loot
-Loot: Tome and staff users will benefit.[X]
-
-## HubB5Confirm
-Seek the Sapphire?[X]
+## HubB3Accepted
+[ML][LoadDesiderio]
+[MR][LoadLua]
+It doesn't seem fully reliable,[N]
+but the reward is something else[Beat][AN]
+I'm in. We'll sail there tomorrow,[N]
+so get the route for the trip ready.[AN]
+[ML][ToggleSmile]
+I figured you were up for a gamble.[AN]
+I'm not the best navigator around,[N]
+but you can leave it to me, boss![AN]
+[MR]
+Good. I'm counting on you, like always.[N]
+For this, and the battles to come.[A][CloseSpeechSlow][ClearFace]
+[ML][3LB]
+[Beat]Heh, praise from the boss?[N]
+Now I really can't let her down.[AN][ToggleSmile]
+Whatever's waiting for us there,[N]
+I'll settle my business in Snowthorne[N]
+and leave it all behind[Beat] for good.[A][X]
 
 ## HubB4Pitch
 [ML][LoadOrlando]
@@ -774,6 +834,9 @@ Maybe not right now Orlando.[AN]
 I think we have more pressing matters[N]
 but I'll think about it.[A][X]
 
+## HubB4Title
+Ch. B-4: Town Under Thumb[X]
+
 ## HubB4Objective
 Objective: Rout[X]
 
@@ -783,10 +846,23 @@ Units: Adrian (Fighter), Lexa (Myrmidon), Noah (Warden)[X]
 ## HubB4Loot
 Loot: Varied loot and wealth[X]
 
+## HubB4Confirm
+Take Orlando's suggestion?[X]
 
-## HubB5Prompt
-Go to B-5?[N]
-[No][X]
+## HubB5Title
+Ch. B-5: Veil of the Whorl[X]
+
+## HubB5Objective
+Objective: Rout[X]
+
+## HubB5Units
+Unit: Fata (Monk)[X]
+
+## HubB5Loot
+Loot: Tome and staff users will benefit.[X]
+
+## HubB5Confirm
+Seek the Sapphire?[X]
 
 ## HubBTitle
 Hub B - Lua's Armada[X]

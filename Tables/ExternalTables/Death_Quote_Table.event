@@ -18,6 +18,10 @@ DeathQuote(Avocado, HubB_2, 0x65, AvocadoDQ)
 DeathQuote(Avocado, AllChapters, 0, AvocadoDQ)
 DeathQuote(Magdalena, HubB_2, 0x65, MagdalenaDQ)
 DeathQuote(Magdalena, AllChapters, 0, MagdalenaDQ)
+// B-3
+DeathQuote(Ernest, AllChapters, 0, ErnestDQ)
+DeathQuote(Kai, AllChapters, 0, KaiDQ)
+
 //Adrian and Lexa can die as enemies and have seperate quotes for event purposes
 DeathQuote(Adrian, HubB_4, 0xC, AdrianDQB_4)
 DeathQuote(Adrian, AllChapters, 0, AdrianDQ)
@@ -57,6 +61,9 @@ DeathQuote(Kiril, HubB_1, 2, KirilDeathQuote)
 
 DeathQuote(Yadney, HubB_2, 0, YadneyDeathQuote)
 DeathQuote(Cruz, HubB_2, 0x2, CruzDeathQuote)
+
+DeathQuote(Azahar, HubB_3, 2, AzaharDQ)
+DeathQuote(RebelThief, HubB_3, 0xF, 0x0)
 
 DeathQuote(Javier, HubB_4, 0x2, JavierDQ)
 

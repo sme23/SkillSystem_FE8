@@ -1146,6 +1146,8 @@ ORG SkillIcon(DubiousAdviceID)
 #incbin "SkillIcons/HoardersBane.dmp"
 ORG SkillIcon(FrigidAuraID)
 #incbin "SkillIcons/SavageBlow.dmp"
+ORG SkillIcon(ArcaneArtificeID)
+#incbin "SkillIcons/ArcaneBlade.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)

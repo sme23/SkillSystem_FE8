@@ -834,3 +834,27 @@ Gerald[X]
 Outlaw[N]
 Desperately clings onto marksmanship,[N]
 despite maiming his shooting arm.[X]
+
+## ErnestName
+Ernest[X]
+
+## ErnestDesc
+Scout[N]
+A former sky eye for the Roseblades[N]
+who failed them when it mattered most.[X]
+
+## KaiName
+Kai[X]
+
+## KaiDesc
+Scavenger[N]
+Taking anything he can get his hands on,[N]
+he wanders with no direction or purpose.[X]
+
+## AzaharName
+Azahar[X]
+
+## AzaharDesc
+Rebel Captain[N]
+The leader of a group of rebels[N]
+who have sunk to plundering.[X]

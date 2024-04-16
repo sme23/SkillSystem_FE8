@@ -107,6 +107,7 @@
 #define Baselard $c7
 #define Heartpiercer $c8
 #define Compass $dd
+#define RuneDagger $ec
 
 // GUNS
 #define IronMusket $c9
@@ -145,3 +146,4 @@
 #define AshArrow $e2
 #define AshQuiver AshArrow
 #define KnightRing $e6
+#define SuppliesItem $ed
