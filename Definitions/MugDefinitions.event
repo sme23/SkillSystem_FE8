@@ -4,6 +4,9 @@
 #define RazvanMug $5
 #define CarmenMug $6
 #define XimoMug $7
+
+
+//Hub A
 #define EstelleMug $8
 #define HermenegildoMug $9
 #define MrYodsenMug $a
@@ -15,16 +18,32 @@
 #define OndehMug $10
 #define BikoMug $11
 #define JuanMug $12
-
 #define MatteoMug $14
 #define SuzanneMug $15
 #define OrlandoMug $16
 #define RahelMug $17
 #define TangyuanMug $18
+
+
+//Hub B
+#define DmitrMug 0x1E
+#define AvocadoMug 0x19
+#define CruzMug 0x1A
+#define HusniyeMug 0x1B
+#define MagdalenaMug 0x1C
+#define ErnestMug 0x1D
+#define KaiMug 0x24
+
 #define PonteMug $2A
 #define PassarolaMug $2B
 #define NeltumeMug $2C
+#define AdrianMug $25
+#define LexaMug $26
+#define NoahMug $4B
+#define Noah2Mug $4E
 
+
+// assorted
 #define KhazhakMug $31
 #define GeraldoMug $32
 #define BozoMug $33
@@ -55,8 +74,8 @@
 
 
 // A-4 Mugs
-#define StingrayMug $56
-#define RamiroMug $57
+#define StingrayMug $99
+#define RamiroMug $9A
 
 // A-4 mugs, currently placeholders
 #define ValerieMug $54
@@ -73,20 +92,18 @@
 #define RochefortMug $31
 
 
+// B1 Units
+
+#define KirilMug $4A
+
 
 // B-4 Placeholders
 #define JavierMug $2F
-#define AdrianMug $25
-#define LexaMug $26
-#define NoahMug $4B
-#define Noah2Mug $4E
 
+// B-3 Mugs
+#define AzaharMug $56
 
 // B-2 Placeholders
-#define AvocadoMug 0x19
-#define CruzMug 0x1A
-#define HusniyeMug 0x1B
-#define MagdalenaMug 0x1C
 #define YadneyMug 0x1D
 
 //CLASS CARDS
@@ -138,6 +155,7 @@
 #define LanceKnightClassCard 0x12b
 #define AxeKnightClassCard 0x12c
 #define BowKnightClassCard 0x12d
+#define AssassinClassCard 0x12e
 
 // temporary
 #define AdventurerClassCard 0x79

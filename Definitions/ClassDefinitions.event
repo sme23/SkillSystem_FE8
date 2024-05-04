@@ -140,6 +140,7 @@
 
 //SPECIAL
 #define BombClass 0x91
+#define HorseClass 0xA9
 
 
 //STANDING MAP SPRITES
@@ -195,3 +196,4 @@
 #define LanceKnightMapSprite 0x99
 #define AxeKnightMapSprite 0x9a
 #define BowKnightMapSprite 0x9b
+#define HorseMapSprite 0x9c

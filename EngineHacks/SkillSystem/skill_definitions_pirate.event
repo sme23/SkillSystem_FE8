@@ -182,3 +182,13 @@
 //Smite: Allows unit to push other units two tiles away.
 //By StanH
 #define SmiteID 56
+
+#define CantoAttackID 57
+
+#define ScoutsInstinctID 58
+
+#define ArcaneArtificeID 59
+
+// Keen Fighter: Unit takes 75% damage if the opponent can double. 
+// By Vesly 
+#define KeenFighterID 60

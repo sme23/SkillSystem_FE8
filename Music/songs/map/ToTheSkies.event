@@ -627,7 +627,7 @@ ToTheSkies_2_14:
 ToTheSkies_3:
         BYTE   KEYSH   ToTheSkies_key+0
 // 000   ----------------------------------------
-        BYTE           VOICE   3
+        BYTE           VOICE   1
         BYTE           VOL     127
         BYTE   W96
 // 001   ----------------------------------------

@@ -24,6 +24,12 @@
 #define FadeoutMusic "MUSCMID 0x7FFF"
 #define GoToPrepScreen2 "CALL $591FD8" //Prep screen without ENDA
 #define ClearBackgroundSlow "FADI 3 CLEAN STAL 60 FADU 2"
+#define SoloTextbox(textId, xOffset, yOffset) "SVAL sB ((yOffset) << 16)|(xOffset); SOLOTEXTBOXSTART; TEXTSHOW textId; TEXTEND; REMA"
+#define SoloTextboxCenter(textId) "CenterTutorialTextBox; SOLOTEXTBOXSTART; TEXTSHOW textId; TEXTEND; REMA"
+#define LocationText(textId, x, y) "BROWNBOXTEXT textId[x,y]"
+
+
+#define IfAliveDeadDialog(character,alivetext,deadtext, label1, label2) "CHECK_ALIVE character; BEQ label1 0x0 0xC; Text(alivetext); GOTO label2; LABEL label1; Text(deadtext); LABEL label2"
 
 #define TextWithMusicChange(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSC songId; TEXTCONT; TEXTEND; REMA"
 #define TextWithMusicChange2(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSS songId; TEXTCONT; TEXTEND; REMA"
@@ -38,7 +44,6 @@
 #define CheckHowManyHubChaptersCompleted "ASMC CheckHowManyHubChaptersCompletedASMC"
 #define SpawnQuestSigil(eventId, labelId, trapId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; AddTrap(trapId, xPos, yPos); LABEL labelId"
 #define RemoveQuestSigil(eventId, labelId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; RemoveTrapAtCoords(xPos, yPos); LABEL labelId"
-
 
 #define BranchIfHubNotVisited(labelId, eventId) "CheckIfHubVisited; BNE labelId s0 sC; CALL eventId; LABEL labelId"
 #define CheckIfHubAChapterCompleted "ASMC CheckIfOneHubAChapterCompletedASMC"
@@ -114,3 +119,4 @@
 
 #define FlagIsSet(id, label) "CHECK_EVENTID (id); BEQ (label) 0xc 0x0;"
 #define FlagNotSet(id, label) "CHECK_EVENTID (id); BNE (label) 0xc 0x0;"
+

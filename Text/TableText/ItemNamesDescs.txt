@@ -99,7 +99,7 @@ Eff. vs. horses and fliers.[X]
 Sidepierce[X]
 
 ## SidepierceDesc
-Allows canto after action.[X]
+User can move again with remaining Mov.[X]
 
 ## PitchforkName
 Pitchfork[X]
@@ -111,7 +111,7 @@ Cannot counter/be countered.[X]
 Gu'Balg[X]
 
 ## GuBalgDesc
-It's...quite the weapon, alright.[X]
+It's... quite the weapon, alright.[X]
 
 //AXES
 
@@ -280,6 +280,12 @@ Arcane Knife[X]
 
 ## ArcaneKnifeDesc
 A magical knife etched with runes.[X]
+
+## RuneDaggerName
+Rune Dagger[X]
+
+## RuneDaggerDesc
+Uses MAG, follow-ups consecutive.[X]
 
 ## PeshkatzName
 Peshkatz[X]
@@ -498,3 +504,10 @@ Rider Badge[X]
 ## RiderBadgeDesc
 If Lv. 10 or greater, use to procure[N]
 a horse or hone equestrian talent.[X]
+
+## SuppliesItemName
+Supplies[X]
+
+## SuppliesItemDesc
+Contains fuel, along with[N]
+other pilfered loot.[X]

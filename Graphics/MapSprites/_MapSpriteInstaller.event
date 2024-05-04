@@ -189,6 +189,7 @@ GriffinRiderMMS:
 
 StandingMapSprite(DragonRiderMapSprite,MapSprite16x32,DragonRiderSMS)
 MovingMapSprite(DragonRider, $1C3D7C, DragonRiderMMS)
+MovingMapSprite(DragonRider_F, $1C3D7C, DragonRiderMMS)
 
 ALIGN 4
 DragonRiderSMS:
@@ -586,4 +587,16 @@ AxeKnightSMS:
 ALIGN 4
 AxeKnightMMS:
 #incbin "Dmp/Great Knight (U) Axe {Leo_Link, DerTheVaporeon}-walk.dmp"
+
+StandingMapSprite(HorseMapSprite,MapSprite16x32, HorseSMS)
+MovingMapSprite(HorseClass, $1C3D7C, HorseMMS)
+
+ALIGN 4
+HorseSMS:
+#incbin "Dmp/Horse Standing {L95}.dmp"
+
+ALIGN 4
+//Yes, just a horse itself. 
+HorseMMS:
+#incbin "Dmp/Horse Moving {L95}.dmp"
 

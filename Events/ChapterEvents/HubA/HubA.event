@@ -98,6 +98,7 @@ CharacterEvent(0, NPCPatrollerTalk, Lua, GreagorPatroller)
 CharacterEvent(0, NPCGuardTalk, Lua, GreagorGuard)
 CharacterEvent(0, NPCSmugglerTalk, Lua, GreagorSmuggler)
 CharacterEvent(0, NPCPeddlerTalk, Lua, GreagorPeddler)
+CharacterEvent(0, NPCVillagerCTalk, Lua, GreagorVillagerC)
 CharacterEvent(ShipwrightCaptainHubATalkFlag, NPCShipwrightCaptainArgumentTalk, Lua, GreagorCaptain)
 CharacterEvent(ShipwrightCaptainHubATalkFlag, NPCShipwrightCaptainArgumentTalk, Lua, GreagorShipwright)
 CharacterEvent(TwoPatronsHubATalkFlag, NPCPatronsDrinkingTalk, Lua, GreagorPatron)
@@ -208,6 +209,19 @@ ENDA
 
 NPCVillagerBTalk:
 Text(NPCVillagerDialogueB)
+NoFade
+ENDA
+
+NPCVillagerCTalk:
+CHECK_EVENTID WentToHubA4
+SVAL s1 0x1
+//If not gone to A4, then branch to alternate dialogue.
+BNE 776 s1 sC
+	Text(NPCVillagerDialogueC_2)
+	GOTO 777
+LABEL 776
+	Text(NPCVillagerDialogueC_1)
+LABEL 777
 NoFade
 ENDA
 
@@ -891,6 +905,10 @@ NPCVillagerBGroup: //main
 UNIT GreagorVillagerB VillagerFAdult 0 Level(1,NPC, False) [12,5] 0 0 0 0 [] NoAI
 UNIT
 
+NPCVillagerCGroup: //main
+UNIT GreagorVillagerC VillagerMAdult 0 Level(1,NPC, False) [26,13] 0 0 0 0 [] NoAI
+UNIT
+
 NPCSailorGroup: //docks
 UNIT GreagorSailor PirateClass 0 Level(3,NPC, False) [8,5] 0 0 0 0 [SlimAxe] NoAI
 UNIT
@@ -931,6 +949,10 @@ ENDA
 
 SpawnNPCVillagerB:
 LoadCutsceneUnits(NPCVillagerBGroup)
+ENDA
+
+SpawnNPCVillagerC:
+LoadCutsceneUnits(NPCVillagerCGroup)
 ENDA
 
 SpawnNPCSailor:
@@ -1035,10 +1057,12 @@ Call PortSpawnEventNPCs
 NoFade
 ENDA
 
+// Villager C always spawned in. 
 // After 2 chapters cleared, spawn VillagerB and Guard.
 // After 4 chapters cleared, spawn VillagerA and Patrol. 
 // If the peddler is active, and hasn't been purchased from, spawn him. 
 PortSpawnEventNPCs:
+CALL SpawnNPCVillagerC
 CheckHowManyHubChaptersCompleted
 SVAL s1 2 //if 2 or more chapters completed
 BGT 776 s1 sC 

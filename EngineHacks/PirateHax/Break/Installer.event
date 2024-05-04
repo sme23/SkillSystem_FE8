@@ -38,3 +38,7 @@ ALIGN 4
 CritthriftIDLink:
 BYTE CritthriftID
 ALIGN 4
+
+ArcaneArtificeIDLink:
+BYTE ArcaneArtificeID
+ALIGN 4

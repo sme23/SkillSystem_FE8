@@ -230,45 +230,89 @@ WellAndTrulyLost_0_18:
         BYTE   W48
 // 020   ----------------------------------------
         BYTE           EOT
-        BYTE           N48     An2
+        BYTE           N48
         BYTE   W48
-        BYTE           N12     Gs2
+        BYTE           N12     Gs3
         BYTE   W12
-        BYTE                   An2
+        BYTE                   An3
         BYTE   W12
-        BYTE           N48     Bn2
+        BYTE           N48     Bn3
         BYTE   W48
-        BYTE           N12     An2
+        BYTE           N12     An3
         BYTE   W12
-        BYTE                   Bn2
+        BYTE                   Bn3
         BYTE   W12
 // 021   ----------------------------------------
-        BYTE   PATT
-         POIN2  WellAndTrulyLost_0_13
+WellAndTrulyLost_0_21:
+        BYTE           N48     Cn4   v102
+        BYTE   W48
+        BYTE           N24     An3
+        BYTE   W24
+        BYTE           N48     Fn3
+        BYTE   W48
+        BYTE           N24     En3
+        BYTE   W24
+        BYTE   PEND
 // 022   ----------------------------------------
-        BYTE   PATT
-         POIN2  WellAndTrulyLost_0_12
+WellAndTrulyLost_0_22:
+        BYTE           N48     An3   v102
+        BYTE   W48
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE           N48     Bn3
+        BYTE   W48
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE   PEND
 // 023   ----------------------------------------
-        BYTE           TIE     Cn3   v102
+        BYTE           TIE     Cn4
         BYTE   W96
         BYTE   W48
 // 024   ----------------------------------------
-        BYTE   PATT
-         POIN2  WellAndTrulyLost_0_16
+WellAndTrulyLost_0_24:
+        BYTE           EOT     Cn4
+        BYTE           N48     An3   v102
+        BYTE   W48
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE           N48     Bn3
+        BYTE   W48
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE   PEND
 // 025   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_0_17
+         POIN2  WellAndTrulyLost_0_21
 // 026   ----------------------------------------
-        BYTE   PATT
-         POIN2  WellAndTrulyLost_0_18
+WellAndTrulyLost_0_26:
+        BYTE           N48     An2   v102
+        BYTE   W48
+        BYTE           N12     Gs2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE           N48     En2
+        BYTE   W48
+        BYTE           N24     Gs2
+        BYTE   W24
+        BYTE   PEND
 // 027   ----------------------------------------
-        BYTE           TIE     An3   v102
+        BYTE           TIE     An2
         BYTE   W96
         BYTE   W48
 // 028   ----------------------------------------
         BYTE           EOT
         BYTE   GoTo
          POIN2  WellAndTrulyLost_0_LOOP
+        BYTE   W24
         BYTE   FINE
 
 //****************** Track 1 (Midi-Chn.1) ******************//
@@ -460,6 +504,7 @@ WellAndTrulyLost_1_8:
 // 028   ----------------------------------------
         BYTE   GoTo
          POIN2  WellAndTrulyLost_1_LOOP
+        BYTE   W24
         BYTE   FINE
 
 //****************** Track 2 (Midi-Chn.2) ******************//
@@ -468,7 +513,7 @@ WellAndTrulyLost_2:
         BYTE   KEYSH   WellAndTrulyLost_key+0
 // 000   ----------------------------------------
 WellAndTrulyLost_2_LOOP:
-        BYTE           VOICE   0
+        BYTE           VOICE   3
         BYTE           PAN     c_v-13
         BYTE           VOL     76
         BYTE   W96
@@ -660,6 +705,7 @@ WellAndTrulyLost_2_16:
         BYTE                   An2
         BYTE   GoTo
          POIN2  WellAndTrulyLost_2_LOOP
+        BYTE   W24
         BYTE   FINE
 
 //****************** Track 3 (Midi-Chn.3) ******************//
@@ -836,6 +882,7 @@ WellAndTrulyLost_3_12:
 // 028   ----------------------------------------
         BYTE   GoTo
          POIN2  WellAndTrulyLost_3_LOOP
+        BYTE   W24
         BYTE   FINE
 
 //****************** Track 4 (Midi-Chn.4) ******************//
@@ -923,115 +970,73 @@ WellAndTrulyLost_4_3:
         BYTE   PATT
          POIN2  WellAndTrulyLost_4_3
 // 012   ----------------------------------------
-WellAndTrulyLost_4_12:
-        BYTE           N48     An3   v102
-        BYTE   W48
-        BYTE           N12     Gs3
-        BYTE   W12
-        BYTE                   An3
-        BYTE   W12
-        BYTE           N48     Bn3
-        BYTE   W48
-        BYTE           N12     An3
-        BYTE   W12
-        BYTE                   Bn3
-        BYTE   W12
-        BYTE   PEND
+        BYTE   PATT
+         POIN2  WellAndTrulyLost_0_22
 // 013   ----------------------------------------
-WellAndTrulyLost_4_13:
-        BYTE           N48     Cn4   v102
-        BYTE   W48
-        BYTE           N24     An3
-        BYTE   W24
-        BYTE           N48     Fn3
-        BYTE   W48
-        BYTE           N24     En3
-        BYTE   W24
-        BYTE   PEND
+        BYTE   PATT
+         POIN2  WellAndTrulyLost_0_21
 // 014   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_4_12
+         POIN2  WellAndTrulyLost_0_22
 // 015   ----------------------------------------
         BYTE           TIE     Cn4   v102
         BYTE   W96
         BYTE   W48
 // 016   ----------------------------------------
-WellAndTrulyLost_4_16:
-        BYTE           EOT     Cn4
-        BYTE           N48     An3   v102
-        BYTE   W48
-        BYTE           N12     Gs3
-        BYTE   W12
-        BYTE                   An3
-        BYTE   W12
-        BYTE           N48     Bn3
-        BYTE   W48
-        BYTE           N12     An3
-        BYTE   W12
-        BYTE                   Bn3
-        BYTE   W12
-        BYTE   PEND
+        BYTE   PATT
+         POIN2  WellAndTrulyLost_0_24
 // 017   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_4_13
+         POIN2  WellAndTrulyLost_0_21
 // 018   ----------------------------------------
-WellAndTrulyLost_4_18:
-        BYTE           N48     An2   v102
-        BYTE   W48
-        BYTE           N12     Gs2
-        BYTE   W12
-        BYTE                   Fn2
-        BYTE   W12
-        BYTE           N48     En2
-        BYTE   W48
-        BYTE           N24     Gs2
-        BYTE   W24
-        BYTE   PEND
+        BYTE   PATT
+         POIN2  WellAndTrulyLost_0_26
 // 019   ----------------------------------------
-        BYTE           TIE     An2
+        BYTE           TIE     An2   v102
         BYTE   W96
         BYTE   W48
 // 020   ----------------------------------------
         BYTE           EOT
-        BYTE           N48     An3
+        BYTE           N48
         BYTE   W48
-        BYTE           N12     Gs3
+        BYTE           N12     Gs2
         BYTE   W12
-        BYTE                   An3
+        BYTE                   An2
         BYTE   W12
-        BYTE           N48     Bn3
+        BYTE           N48     Bn2
         BYTE   W48
-        BYTE           N12     An3
+        BYTE           N12     An2
         BYTE   W12
-        BYTE                   Bn3
+        BYTE                   Bn2
         BYTE   W12
 // 021   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_4_13
+         POIN2  WellAndTrulyLost_0_13
 // 022   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_4_12
+         POIN2  WellAndTrulyLost_0_12
 // 023   ----------------------------------------
-        BYTE           TIE     Cn4   v102
+        BYTE           TIE     Cn3   v102
         BYTE   W96
         BYTE   W48
 // 024   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_4_16
+         POIN2  WellAndTrulyLost_0_16
 // 025   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_4_13
+         POIN2  WellAndTrulyLost_0_17
 // 026   ----------------------------------------
         BYTE   PATT
-         POIN2  WellAndTrulyLost_4_18
+         POIN2  WellAndTrulyLost_0_18
 // 027   ----------------------------------------
-        BYTE           TIE     An2   v102
+        BYTE           TIE     An3   v102
         BYTE   W96
         BYTE   W48
 // 028   ----------------------------------------
         BYTE           EOT
         BYTE   GoTo
          POIN2  WellAndTrulyLost_4_LOOP
+        BYTE   W24
         BYTE   FINE
 
 //****************** Track 5 (Midi-Chn.5) ******************//
@@ -1156,6 +1161,7 @@ WellAndTrulyLost_5_20:
 // 028   ----------------------------------------
         BYTE   GoTo
          POIN2  WellAndTrulyLost_5_LOOP
+        BYTE   W24
         BYTE   FINE
 
 //****************** Track 6 (Midi-Chn.6) ******************//
@@ -1328,6 +1334,7 @@ WellAndTrulyLost_6_15:
 // 028   ----------------------------------------
         BYTE   GoTo
          POIN2  WellAndTrulyLost_6_LOOP
+        BYTE   W24
         BYTE   FINE
 
 
@@ -1337,10 +1344,10 @@ WellAndTrulyLost_6_15:
 WellAndTrulyLost:
         BYTE   7                       // Num Tracks
         BYTE   0                       // Unknown
-        BYTE   WellAndTrulyLost_pri // Priority
-        BYTE   WellAndTrulyLost_rev // Reverb
+        BYTE   WellAndTrulyLost_pri    // Priority
+        BYTE   WellAndTrulyLost_rev    // Reverb
 
-        POIN2   WellAndTrulyLost_grp
+        POIN2   WellAndTrulyLost_grp   
 
         POIN2   WellAndTrulyLost_0
         POIN2   WellAndTrulyLost_1

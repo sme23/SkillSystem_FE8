@@ -37,6 +37,12 @@ UnspecifiedBattleConvo(A4FunnyArcher, HubA_4, 13, 0)
 UnspecifiedBattleConvo(Stingray, HubA_4, 16, A4_StingrayBattleQuote)
 UnspecifiedBattleConvo(Ramiro, HubA_4, 17, A4_RamiroBattleQuote)
 
+// Chapter 2
+UnspecifiedBattleConvo(Hugo, Chapter2, 0x13, HugoBossQuote)
+UnspecifiedBattleConvo(Juliana, Chapter2, 0x14, JulianaBossQuote)
+UnspecifiedBattleConvo(Ignacio, Chapter2, 0x15, IgnacioBossQuote)
+UnspecifiedBattleConvo(ElodiaBoss, Chapter2, 0x16, ElodiaBossQuoteCh2)
+
 // Chapter B-2
 SpecifiedBattleConvo(Yadney,Avocado,HubB_2,0x11,B2_BQ_YadneyAvocado)
 SpecifiedBattleConvo(Yadney,Razvan,HubB_2,0x12,B2_BQ_YadneyRazvan)
@@ -57,6 +63,14 @@ SpecifiedBattleConvo(Cruz,Leonor,HubB_2,0x25,B2_BQ_CruzLeonor)
 SpecifiedBattleConvo(Cruz,Pilar,HubB_2,0x26,B2_BQ_CruzPilar)
 SpecifiedBattleConvo(Cruz,Orlando,HubB_2,0x27,B2_BQ_CruzOrlando)
 UnspecifiedBattleConvo(Cruz,HubB_2,0x28,B2_BQ_CruzGeneric)
+
+// Chapter B-3
+SpecifiedBattleConvo(Azahar,Pilar,    HubB_3,0x9,PilarAzaharBQ)
+SpecifiedBattleConvo(Azahar,Desiderio,HubB_3,0xA,DesiAzaharBQ)
+SpecifiedBattleConvo(Azahar,Kai,      HubB_3,0xB,KaiAzaharBQ)
+SpecifiedBattleConvo(Azahar,Ernest,   HubB_3,0xC,ErnestAzaharBQ)
+SpecifiedBattleConvo(Azahar,Lua,      HubB_3,0xD,LuaAzaharBQ)
+UnspecifiedBattleConvo(Azahar,        HubB_3,0x1,AzaharBQ)
 
 // Chapter B-4
 UnspecifiedBattleConvo(Javier,HubB_4,0x14,JavierBQ)

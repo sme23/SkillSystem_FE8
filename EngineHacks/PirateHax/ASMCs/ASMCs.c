@@ -1,6 +1,7 @@
 #include "gbafe.h"
 
 #define DesiderioCharId 3
+extern u8 SuppliesItemIDLink;
 
 void A3ReturnLogDroppedStatusASMC(){
 
@@ -60,4 +61,47 @@ void EyeForAnEyeResetASMC(){
     else{
         unit->supports[5] = 0; //last support byte set to be 0
     }
+}
+
+void DoesBattleTargetHaveSuppliesASMC(){
+    u16* targetInventory = gBattleTarget.unit.items;
+    u16 targetInventoryItem = 0;
+    for (int i = 0; i < ITEM_SLOT_COUNT; i++){
+        targetInventoryItem = targetInventory[i];
+        if (GetItemIndex(targetInventoryItem) == 0xED){ //is the given item a supplies item
+            gEventSlot[0xC] = 1;
+            break;
+        }
+        if (targetInventoryItem == 0){
+            gEventSlot[0xC] = 0;
+        }
+    } 
+}
+
+void GetNumberOfSuppliesItemsOnHandASMC(){
+    u16* convoyArray = GetConvoyItemArray();
+    u16 convoyArrayItem;
+    int suppliesItemCount = 0;
+    for (int i = 0; i <= 200; i++){
+        convoyArrayItem = convoyArray[i];
+        if (convoyArrayItem == 0){
+            break;
+        }
+        if (GetItemIndex(convoyArrayItem) == SuppliesItemIDLink){
+            suppliesItemCount++;
+        }
+    }
+
+    Unit* someUnit;
+    u16 someItem;
+    for (int i = 0; i <= 60; i++){
+        someUnit = &gUnitArrayBlue[i];
+        for (int j = 0; j < 5; j++){
+            someItem = someUnit->items[j];
+            if (GetItemIndex(someItem) == SuppliesItemIDLink){
+                suppliesItemCount++;
+            }
+        }
+    }
+    gEventSlot[0xC] = suppliesItemCount;
 }

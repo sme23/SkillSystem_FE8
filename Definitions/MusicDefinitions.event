@@ -23,6 +23,10 @@
 #define ToTheSkiesID 0x1B
 #define FinInTheCloudsID 0x1C
 #define LetterOpenerID 0x1D
+#define TheWavesApprenticeID 0x1E
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47
+#define WindGustSoundID 0x4E
+#define NighttimeSoundID 0x4A 
+#define BlizzardSoundID 0x50

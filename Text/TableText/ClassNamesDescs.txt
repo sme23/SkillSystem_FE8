@@ -17,7 +17,7 @@ Vanguard[X]
 
 ## VanguardDesc
 Weapons: Axe, Lance[N]
-Traits: Steal, Locktouch, Unbreakable[X]
+Traits: Unbreakable, Steal, Locktouch[X]
 
 ## CurateName
 Curate[X]
@@ -59,7 +59,7 @@ Warden[X]
 
 ## WardenDesc
 Weapons: Sword, Lance[N]
-Traits: Steal, Locktouch, Unbreakable[X]
+Traits: Unbreakable, Steal, Locktouch[X]
 
 ## ThiefDesc
 Weapons: Knife[N]
@@ -159,7 +159,7 @@ Cataphract[X]
 
 ## CataphractDesc
 Weapons: Axe, Lance[N]
-Traits: Canto, Aid+, Unbreakable[X]
+Traits: Unbreakable, Canto, Aid+[X]
 
 ## MasterNinjaName
 Master Ninja[X]
@@ -173,7 +173,7 @@ Marshall[X]
 
 ## DreadnoughtDesc
 Weapons: Axe, Lance, Bow[N]
-Traits: Steal, Locktouch, Unbreakable[X]
+Traits: Unbreakable, Steal, Locktouch[X]
 
 ## SageDesc
 Weapons: Tome, Staff[N]
@@ -188,7 +188,7 @@ Traits: Flight, Aid+[X]
 
 ## SniperDesc
 Weapons: Bow[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## DarkKnightName
 Dark Knight[X]
@@ -227,7 +227,7 @@ Runeshield[X]
 
 ## RuneshieldDesc
 Weapons: Sword, Lance, Tome[N]
-Traits: Steal, Locktouch, Unbreakable[X]
+Traits: Unbreakable, Steal, Locktouch[X]
 
 ## WolfKnightName
 Wolfrider[X]
@@ -246,7 +246,7 @@ Traits: Steal, Locktouch[X]
 
 ## SwordmasterDesc
 Weapons: Swords[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## SlayerName
 Slayer[X]
@@ -257,7 +257,7 @@ Traits: Steal, Locktouch[X]
 
 ## BerserkerDesc
 Weapons: Axes[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## WarMonkName
 War Monk[X]
@@ -271,7 +271,7 @@ Halberdier[X]
 
 ## HalberdierDesc
 Weapons: Lances[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## AdventurerName
 Adventurer[X]
@@ -314,29 +314,29 @@ Gryphoknight[X]
 
 ## GryphknightDesc
 Weapons: Lances[N]
-Traits: Canto, Flight, Aid+[X]
+Traits: Flight+, Aid+[X]
 
 ## DracoknightName
 Dracoknight[X]
 
 ## DracoknightDesc
 Weapons: Axes[N]
-Traits: Canto, Flight, Aid+[X]
+Traits: Flight+, Aid+[X]
 
 ## FalcoknightDesc
 Weapons: Swords[N]
-Traits: Canto, Flight, Aid+[X]
+Traits: Flight+, Aid+[X]
 
 ## RogueDesc
 Weapons: Knives[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## MarksmanName
 Marksman[X]
 
 ## MarksmanDesc
 Weapons: Guns[N]
-Traits: Steal, Locktouch[X]
+Traits: Armsmaster, Steal, Locktouch[X]
 
 ## SaviorName
 Savior[X]
@@ -372,3 +372,10 @@ Bow Knight[X]
 ## BowKnightDesc
 Weapons: Bows[N]
 Traits: Canto+, Aid+[X]
+
+## HorseName
+Horse[X]
+
+## HorseDesc
+Weapons: None[N]
+Traits: It's a horse![X]

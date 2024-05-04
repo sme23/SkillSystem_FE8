@@ -1,3 +1,9 @@
 #include "ASMCs.lyn.event"
 
 #define A3ReturnLogDroppedStatus "ASMC A3ReturnLogDroppedStatusASMC"
+#define DoesBattleTargetHaveSupplies "ASMC DoesBattleTargetHaveSuppliesASMC"
+#define GetNumberOfSuppliesItemsOnHand "ASMC GetNumberOfSuppliesItemsOnHandASMC"
+
+ALIGN 4
+SuppliesItemIDLink:
+BYTE SuppliesItem

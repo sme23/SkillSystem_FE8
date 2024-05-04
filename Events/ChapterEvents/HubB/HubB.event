@@ -67,26 +67,29 @@ NoFade
 ENDA
 
 GotoHubB3:
-EVBIT_MODIFY 4
-CenterTextbox(HubB3Prompt)
-GotoHubChapterIfYes(1, HubB_3)
+HubChapterFirstTimeEvent(1, SeenHubB3Pitch, HubB3Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_3, Castle_Hall_Night, HubB)
+GotoHubChapterIfYes(2, HubB_3, HubB3Accepted)
 ENUF WentToHub3
 NoFade
 ENDA
 
 GotoHubB4:
-CenterTextbox(HubB4Prompt)
-GotoHubChapterIfYes(1, HubB_4)
+HubChapterFirstTimeEvent(1, SeenHubB4Pitch, HubB4Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_4, Castle_Hall_Night, HubB)
+GotoHubChapterIfYes(2, HubB_4, HubB4Accepted)
 ENUF WentToHub4
 NoFade
 ENDA
 
 GotoHubB5:
-HubChapterFirstTimeEvent(1, SeenHubA1Pitch, HubA1Pitch)
+HubChapterFirstTimeEvent(1, SeenHubB5Pitch, HubA1Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubB_5, Castle_Hall_Night, HubB)
 GotoHubChapterIfYes(2, HubB_5, HubA1Accepted)
-//ENUF OrlandoHubATalk
+ENUF WentToHub5
 NoFade
 ENDA
 
@@ -120,9 +123,52 @@ UNIT
 BeginningScene:
 WEATHER 7
 ENUT LuaInAHubFlag
-LoadPlayerUnits(NewUnits)
+BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
+FADI 10
+STAL 1
 GotoPrepScreenHub
-NoFade 
+NoFade
+ENDA
+
+BeginningSceneFirstTimeInHuB:
+SetBackground(Ship)
+Text(HubB_BeginningScene_1_1)
+SetBackground(Harbor)
+Text(HubB_BeginningScene_1_2)
+Text(HubB_BeginningScene_1_3)
+Text(HubB_BeginningScene_1_4)
+SetBackground(Ship)
+Text(HubB_BeginningScene_1_5)
+Text(HubB_BeginningScene_1_6)
+SetBackground(Inn)
+Text(HubB_BeginningScene_2_1)
+Text(HubB_BeginningScene_2_2)
+
+SetBackground(Castle_Hall)
+Text(HubB_BeginningScene_3_1)
+
+//todo: add a reaction from every other crew member except the main 3
+
+Text(HubB_BeginningScene_3_2_Rahel)
+Text(HubB_BeginningScene_3_2_Orlando)
+
+Text(HubB_BeginningScene_3_3)
+Text(HubB_BeginningScene_3_4)
+Text(HubB_BeginningScene_3_5)
+
+SoloTextbox(HubB_BeginningScene_3_6, 24, 24)
+STAL 30
+SoloTextbox(HubB_BeginningScene_3_6, 104, 200)
+STAL 30
+SoloTextboxCenter(HubB_BeginningScene_3_7)
+STAL 30
+
+LocationText(HubB_BeginningScene_4_1, 8, 8)
+Text(HubB_BeginningScene_4_2)
+
+
+LoadPlayerUnits(NewUnits)
+NoFade
 ENDA
 
 EndingScene:

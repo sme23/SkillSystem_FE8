@@ -115,6 +115,8 @@
 #include "EventMenuCommand/EventMenuCommand.event"
 // stan? i think?
 
+#include "DoesUnitHaveItemASMC/DoesUnitHaveItem.event"
+//Sme
 
 #include "NewComputeUnitBattleDefense/Installer.event"
 //Dragz

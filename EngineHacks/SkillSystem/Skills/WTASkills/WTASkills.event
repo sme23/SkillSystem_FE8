@@ -33,3 +33,6 @@ WORD 1
 
 ALIGN 4
 #include "Analyze/Analyze.lyn.event"
+
+ALIGN 4
+#include "ArmsMaster/ArmsMaster.lyn.event"
