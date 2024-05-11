@@ -27,6 +27,11 @@ DeathQuote(Adrian, HubB_4, 0xC, AdrianDQB_4)
 DeathQuote(Adrian, AllChapters, 0, AdrianDQ)
 DeathQuote(Lexa, HubB_4, 0xD, LexaDQB_4)
 DeathQuote(Lexa, AllChapters, 0, LexaDQ)
+
+// B-5
+DeathQuote(Fata, AllChapters, 0, FataDQ)
+
+
 //DeathQuote()
 
 // Bosses
@@ -66,5 +71,7 @@ DeathQuote(Azahar, HubB_3, 2, AzaharDQ)
 DeathQuote(RebelThief, HubB_3, 0xF, 0x0)
 
 DeathQuote(Javier, HubB_4, 0x2, JavierDQ)
+
+DeathQuote(Nicodemus, HubB_5, 0, NicodemusDeathQuote)
 
 DeathQuote(0xFFFF,0,0,0) // terminator

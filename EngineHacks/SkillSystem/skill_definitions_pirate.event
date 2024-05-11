@@ -192,3 +192,7 @@
 // Keen Fighter: Unit takes 75% damage if the opponent can double. 
 // By Vesly 
 #define KeenFighterID 60
+
+//Shade: Enemies are less likely to target this unit.
+//By Sme
+#define ShadeID 61

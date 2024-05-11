@@ -18,6 +18,7 @@ BossBGMEntry(Yadney,TheWavesApprenticeID)
 BossBGMEntry(Cruz,TheWavesApprenticeID)
 BossBGMEntry(Azahar,TheWavesApprenticeID)
 BossBGMEntry(Javier,TheWavesApprenticeID)
+BossBGMEntry(Nicodemus,TheWavesApprenticeID)
 BossBGMTerminator
 
 PUSH

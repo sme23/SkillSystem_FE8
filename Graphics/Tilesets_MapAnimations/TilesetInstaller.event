@@ -100,12 +100,24 @@
 	SnowyBernConfig:
 	#incbin "Dmp/Config/SnowyBern_comp.dmp"
 
+    ALIGN 4
+    FlasubanFrontierObject:
+    #incbin "Dmp/Object/frontier.dmp"
+
+    ALIGN 4
+    FlasubanFrontierPalette:
+    #incbin "Dmp/Palette/frontier_pal.dmp"
+
+    ALIGN 4
+    FlasubanFrontierConfig:
+    #incbin "Dmp/Config/frontier_comp.dmp"
+
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
     EventPointerTable(FlasubanVillageOurplePaletteID,FlasubanOurpleVillagePalette)
 
-	  EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
+	EventPointerTable(DesertBastionNightSkyObjectID,DesertBastionNightSkyObject)
     EventPointerTable(DesertBastionNightSkyPaletteID,DesertBastionNightSkyPalette)
     EventPointerTable(DesertBastionNightSkyConfigID,DesertBastionNightSkyMapchipConfig)
 
@@ -132,3 +144,7 @@
     EventPointerTable(SnowyBernObjectID, SnowyBernObject)
     EventPointerTable(SnowyBernPaletteID, SnowyBernPalette)
     EventPointerTable(SnowyBernConfigID, SnowyBernConfig)
+
+    EventPointerTable(FlasubanFrontierObjectID, FlasubanFrontierObject)
+    EventPointerTable(FlasubanFrontierPaletteID, FlasubanFrontierPalette)
+    EventPointerTable(FlasubanFrontierConfigID, FlasubanFrontierConfig)

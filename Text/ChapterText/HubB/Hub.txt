@@ -849,20 +849,133 @@ Loot: Varied loot and wealth[X]
 ## HubB4Confirm
 Take Orlando's suggestion?[X]
 
+
+
+// enter B-5 by talking to Pilar
+
 ## HubB5Title
-Ch. B-5: Veil of the Whorl[X]
+Ch. B-5: Green Mirage[X]
 
 ## HubB5Objective
-Objective: Rout[X]
+Objective: Arrive[X]
 
 ## HubB5Units
 Unit: Fata (Monk)[X]
 
 ## HubB5Loot
-Loot: Tome and staff users will benefit.[X]
+Loot: Staves, as well as nonweapon items.[X]
 
 ## HubB5Confirm
-Seek the Sapphire?[X]
+Sail to the Ghostwood?[X]
+
+
+## HubB5Pitch
+[ML][LoadPilar]
+[MR][LoadLua]
+[ML][1LB]
+Bad news, Captain.[A]
+[MR]
+Oh?[A]
+[ML][2LB]
+I'll get straight to the[N]
+point. We're being followed.[A]
+[MR]
+I should've known we wouldn't[N]
+get clear of TORCH that easily[Beat][A][N]
+Pilar, who exactly are our pursuers?[A]
+[ML]
+An airship. Bristling with weapons,[N]
+but not flying a single banner.[A][N]
+Pirates, maybe. Or the Empire's[N]
+dogs trying some stratagem.[A][N]
+Either way, they don't mean well.[A]
+[MR]
+We'll need to get these[N]
+pursuers off our tail, then.[A][N]
+The armada is too slow to[N]
+confront them with broadsides,[A][N]
+so we'll need some other way[Beat][A]
+[ML]
+On that note. I have a[N]
+suggestion, if you'll take it.[A][N]
+Our route near Port Receloso flies[N]
+by an island called the Ghostwood.[A]
+[MR]
+I've not heard of it before[Beat][N]
+but the name sounds dangerous.[A]
+[ML]
+Rumors say it's haunted.[A][N]
+Ghostly illusions trap travelers[N]
+and devour their souls,[A][N]
+never to be seen again.[A]
+[MR]
+[ToggleSmile]I didn't take you to believe[N]
+in ghost stories, Pilar.[ToggleSmile][A]
+[ML]
+[CloseEyes]After the sort of things[N]
+we've seen out here?[A][N]
+Hard to say.[A][N]
+[OpenEyes]In any case, we know for sure the[N]
+Ghostwood is a dangerous battleground.[A][N]
+If we can land there, and force[N]
+our pursuers to do the same[Beat][A][N]
+then we might just be able[N]
+to turn the odds against them.[A]
+[MR][3LB]
+Maybe we can stay for a while[N]
+in the Ghostwood afterwards, too.[A][N]
+[ToggleSmile]All the sea shanties agree,[N]
+a haunted place like that's[N]
+got to hold some great treasure.[ToggleSmile][A]
+[ML]
+We can look for plunder, too.[A][N]
+But all the gold in the sky[N]
+won't do us any good if that[N]
+airship shoots us down.[A][N]
+Well, Captain? What's the plan?[A][X]
+
+## HubB5Accepted
+[ML][LoadPilar]
+[MR][LoadLua]
+[MR]
+The longer we let that[N]
+airship stay on our tail,[AN]
+the more chances it'll get[N]
+to strike when we're weak.[AN]
+Show me the way to[N]
+the Ghostwood, Pilar.[A]
+[ML]
+Certainly.[A][N]
+If we just veer off course[N]
+southeast, drop ten degrees[Beat][A][X]
+
+## HubB5Rejected
+[ML][LoadPilar]
+[MR][LoadLua]
+[MR][1LB]
+I have an alternative idea.[A]
+[ML]
+What is it?[A]
+[MR][3LB]
+We're not in short supply of[N]
+points of interest to land at.[A][N]
+This Ghostwood is promising,[N]
+but we can't risk going too far[N]
+off course for it quite yet.[A][N]
+Let's try our other destinations,[N]
+and see if they take the[N]
+bait in one of those.[A][N]
+The Ghostwood's treasure[N]
+will just have to wait.[A]
+[ML][2LB]
+Bringing some port or ruin into[N]
+this is an unnecessary risk[Beat][AN]
+but it's your call, Captain.[N]
+You've not led us wrong before.[A][X]
+
+
+
+
 
 ## HubBTitle
 Hub B - Lua's Armada[X]

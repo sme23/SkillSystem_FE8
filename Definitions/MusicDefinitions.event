@@ -11,6 +11,7 @@
 #define OrlandoThemeID 0xf
 #define SwabbieTalkID 0x10
 #define EmergencyCrewmateID 0x11
+#define NewHandsOnDeckID 0x11
 #define WelcomeAboardMateyID 0x12
 #define ToTheCrowsNestID 0x13
 #define LookAtMeWaresID 0x14

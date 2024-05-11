@@ -137,3 +137,7 @@
 #define SnowyBernPaletteID 0xA9
 #define SnowyBernConfigID 0xAA
 #define SnowyBernAnimationsID 0xAB
+
+#define FlasubanFrontierObjectID 0xAC
+#define FlasubanFrontierPaletteID 0xAD
+#define FlasubanFrontierConfigID 0xAE

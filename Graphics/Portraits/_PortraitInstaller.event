@@ -232,7 +232,7 @@ JavierMugData:
 #incbin "Dmp/Javier_frames.dmp"
 #incbin "Dmp/Javier_palette.dmp"
 #incbin "Dmp/Javier_minimug.dmp"
-setMugEntry(JavierMug, JavierMugData, 2, 4, 3, 2)
+setMugEntry(JavierMug, JavierMugData, 3, 5, 2, 3)
 
 ALIGN 16
 AdrianMugData:
@@ -297,6 +297,15 @@ FelipeMugData:
 #incbin "Dmp/Felipe_palette.dmp"
 #incbin "Dmp/Felipe_minimug.dmp"
 setMugEntry(FelipeMug, FelipeMugData, 3, 6, 3, 4)
+
+ALIGN 16
+SierraMugData:
+#incbin "Dmp/Sierra_mug.dmp"
+#incbin "Dmp/Sierra_frames.dmp"
+#incbin "Dmp/Sierra_palette.dmp"
+#incbin "Dmp/Sierra_minimug.dmp"
+setMugEntry(SierraMug, SierraMugData, 3, 6, 3, 4)
+
 
 ALIGN 16
 RamiroMugData:
@@ -388,3 +397,19 @@ ErnestMugData:
 #incbin "Dmp/Ernest_palette.dmp"
 #incbin "Dmp/Ernest_minimug.dmp"
 setMugEntry(ErnestMug, ErnestMugData, 3, 5, 3, 3)
+
+ALIGN 16
+FataMugData:
+#incbin "Dmp/Fata_mug.dmp"
+#incbin "Dmp/Fata_frames.dmp"
+#incbin "Dmp/Fata_palette.dmp"
+#incbin "Dmp/Fata_minimug.dmp"
+setMugEntry(FataMug, FataMugData, 3, 5, 3, 3)
+
+ALIGN 16
+NicodemusMugData:
+#incbin "Dmp/Nicodemus_mug.dmp"
+#incbin "Dmp/Nicodemus_frames.dmp"
+#incbin "Dmp/Nicodemus_palette.dmp"
+#incbin "Dmp/Nicodemus_minimug.dmp"
+setMugEntry(NicodemusMug, NicodemusMugData, 3, 4, 4, 2)

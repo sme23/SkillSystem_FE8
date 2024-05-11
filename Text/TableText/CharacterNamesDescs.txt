@@ -691,6 +691,11 @@ May have a few powerful connections...[X]
 Fata[X]
 
 ## FataDesc
+Hermit[N]
+Behind her illusions and crabby[N]
+exterior is a kind heart... allegedly.[X]
+
+## FataDescOld
 Intern[N]
 Not paid enough for her responsibilities,[N]
 which continue to grow by the second.[X]
@@ -858,3 +863,11 @@ Azahar[X]
 Rebel Captain[N]
 The leader of a group of rebels[N]
 who have sunk to plundering.[X]
+
+## NicodemusName ^
+Nicodemus[X]
+
+## NicodemusDesc
+Maverick[N]
+A TORCH soldier with a daring plan[N]
+to take down Lua and seize his glory.[X]

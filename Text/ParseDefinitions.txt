@@ -100,6 +100,7 @@
 [LoadEstelle] = [LoadFace][0x8][0x1]
 [LoadHermenegildo] = [LoadFace][0x9][0x1]
 [LoadMrYodsen] = [LoadFace][0xa][0x1]
+[LoadYodsen] = [LoadFace][0xa][0x1]
 [LoadDurgham] = [LoadFace][0xb][0x1]
 
 [LoadTriana] = [LoadFace][0x43][0x1]
@@ -135,6 +136,10 @@
 [LoadHusniye] = [LoadFace][0x1B][0x1]
 [LoadAvocado] = [LoadFace][0x19][0x1]
 [LoadMagdalena] = [LoadFace][0x1C][0x1]
+
+[LoadFata] = [LoadFace][0x57][0x1]
+
+
 
 
 [LoadElodia] = [LoadFace][0x47][0x1]
@@ -181,7 +186,7 @@
 [LoadJozef] = [LoadFace][0x31][0x1]
 [LoadTheCloser] = [LoadFace][0x31][0x1]
 
-[LoadYadney] = [LoadFace][0x1D][0x1]
+[LoadYadney] = [LoadFace][0x1F][0x1]
 [LoadCruz] = [LoadFace][0x1A][0x1]
 [LoadQuim] = [LoadFace][0x5B][0x1]
 [LoadFogaca] = [LoadFace][0x62][0x1]
@@ -194,6 +199,7 @@
 [LoadAzahar] = [LoadFace][0x56][0x1]
 [LoadJavier] = [LoadFace][0x2F][0x1]
 [LoadKiril] = [LoadFace][0x4A][0x1]
+[LoadNicodemus] = [LoadFace][0x20][0x1]
 
 [LoadIda] = [LoadFace][0x51][0x1]
 [LoadSailor] = [LoadFace][0x6B][0x1]
