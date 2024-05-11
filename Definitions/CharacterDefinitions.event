@@ -184,3 +184,5 @@
 #define B4Bandit 0xD8
 #define Javier 0xD9
 
+// Hub B5
+#define Nicodemus 0xDB

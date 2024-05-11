@@ -10,7 +10,7 @@
 
 //Shade: Enemies are less likely to target this unit.
 //By Sme
-#define ShadeID 255
+// #define ShadeID 255
 
 //Shade+: Enemies will not target this unit.
 //By Sme

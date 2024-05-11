@@ -85,11 +85,13 @@ NoFade
 ENDA
 
 GotoHubB5:
-HubChapterFirstTimeEvent(1, SeenHubB5Pitch, HubA1Pitch)
+// should be triggered by talking to Pilar
+HubChapterFirstTimeEvent(1, SeenHubB5Pitch, HubB5Pitch)
 FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubB_5, Castle_Hall_Night, HubB)
-GotoHubChapterIfYes(2, HubB_5, HubA1Accepted)
+FancyChapterPreview(HubB_5, Forest_Dense, HubB)
+GotoHubChapterIfYes(2, HubB_5, HubB5Accepted)
 ENUF WentToHub5
+Text(HubB5Rejected)
 NoFade
 ENDA
 

@@ -75,4 +75,13 @@ UnspecifiedBattleConvo(Azahar,        HubB_3,0x1,AzaharBQ)
 // Chapter B-4
 UnspecifiedBattleConvo(Javier,HubB_4,0x14,JavierBQ)
 
+// Chapter B-5
+SpecifiedBattleConvo(Nicodemus,Fata,HubB_5,0x11,B5_BQ_NicodemusFata)
+SpecifiedBattleConvo(Nicodemus,Lua,HubB_5,0x12,B5_BQ_NicodemusLua)
+SpecifiedBattleConvo(Nicodemus,Razvan,HubB_5,0x13,B5_BQ_NicodemusRazvan)
+SpecifiedBattleConvo(Nicodemus,Pilar,HubB_5,0x14,B5_BQ_NicodemusPilar)
+SpecifiedBattleConvo(Nicodemus,Avocado,HubB_5,0x15,B5_BQ_NicodemusAvocado)
+SpecifiedBattleConvo(Nicodemus,MrYodsen,HubB_5,0x16,B5_BQ_NicodemusYodsen)
+UnspecifiedBattleConvo(Nicodemus,HubB_5,0x17,B5_BQ_NicodemusGeneric)
+
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

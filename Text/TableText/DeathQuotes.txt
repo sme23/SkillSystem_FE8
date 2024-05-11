@@ -112,3 +112,12 @@ A deserved[Beat] [CloseEyes]fate[Beat][A][X]
 Port Receloso[Beat][AN]
 I will never see[N]
 your streets again[Beat][A][X]
+
+
+## FataDQ
+[MR][LoadFata]
+Damn it all, if this hasn't
+been a long time coming[Beat][AN]
+[HalfCloseEyes]Ismar, Djona[Beat] Morgan[Beat][AN]
+here's hoping you saved[Beat]
+a seat for me, [CloseEyes]huh[Beat]?[A][X]

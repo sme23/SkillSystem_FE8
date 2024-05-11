@@ -1752,8 +1752,8 @@ gain WTD against this unit's allies.[N]
 Does not trigger Break.[X]
 
 ## SD_Delegation
-Delegation: After combat, the next[N]
-action for allies in unit's attack[N]
+Distracting Delusion: After combat, the[N]
+next action for allies in unit's attack[N]
 range hits lower of foe's Def/Res.[X]
 
 ## SD_Swift

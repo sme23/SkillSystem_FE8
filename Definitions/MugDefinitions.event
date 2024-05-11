@@ -41,6 +41,7 @@
 #define LexaMug $26
 #define NoahMug $4B
 #define Noah2Mug $4E
+#define FataMug $57
 
 
 // assorted
@@ -104,7 +105,10 @@
 #define AzaharMug $56
 
 // B-2 Placeholders
-#define YadneyMug 0x1D
+#define YadneyMug 0x1F
+
+// B-5 Placeholders
+#define NicodemusMug 0x20
 
 //CLASS CARDS
 
