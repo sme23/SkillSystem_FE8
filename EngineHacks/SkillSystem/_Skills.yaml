@@ -1,0 +1,2981 @@
+enabled: true
+id: ProvokeID
+desc: ProvokeDesc
+icon: Provoke
+nihil: true
+anim: ''
+---
+enabled: true
+id: ShadeID
+desc: ShadeDesc
+icon: Shade
+nihil: true
+anim: ''
+---
+enabled: true
+id: ShadePlusID
+desc: ShadePlusDesc
+icon: ShadePlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: AnathemaID
+desc: AnathemaDesc
+icon: Anathema
+nihil: true
+anim: ''
+---
+enabled: false
+id: BloodTideID
+desc: BloodTideDesc
+icon: BloodTide
+nihil: true
+anim: ''
+---
+enabled: true
+id: CharismaID
+desc: CharismaDesc
+icon: Charisma
+nihil: true
+anim: ''
+---
+enabled: true
+id: CharmID
+desc: CharmDesc
+icon: Charm
+nihil: true
+anim: ''
+---
+enabled: true
+id: DauntID
+desc: DauntDesc
+icon: Daunt
+nihil: true
+anim: ''
+---
+enabled: true
+id: DemoiselleID
+desc: DemoiselleDesc
+icon: Demoiselle
+nihil: true
+anim: ''
+---
+enabled: false
+id: DriveStrID
+desc: DriveStrDesc
+icon: DriveStr
+nihil: true
+anim: ''
+---
+enabled: false
+id: DriveMagID
+desc: DriveMagDesc
+icon: DriveMag
+nihil: true
+anim: ''
+---
+enabled: false
+id: DriveSpdID
+desc: DriveSpdDesc
+icon: DriveSpd
+nihil: true
+anim: ''
+---
+enabled: false
+id: DriveDefID
+desc: DriveDefDesc
+icon: DriveDef
+nihil: true
+anim: ''
+---
+enabled: false
+id: DriveResID
+desc: DriveResDesc
+icon: DriveRes
+nihil: true
+anim: ''
+---
+enabled: true
+id: FocusID
+desc: FocusDesc
+icon: Focus
+nihil: true
+anim: ''
+---
+enabled: true
+id: GentilhommeID
+desc: GentilhommeDesc
+icon: Gentilhomme
+nihil: true
+anim: ''
+---
+enabled: true
+id: HexID
+desc: HexDesc
+icon: Hex
+nihil: true
+anim: ''
+---
+enabled: true
+id: InfiltratorID
+desc: InfiltratorDesc
+icon: Infiltrator
+nihil: true
+anim: ''
+---
+enabled: true
+id: InspirationID
+desc: InspirationDesc
+icon: Inspiration
+nihil: true
+anim: ''
+---
+enabled: false
+id: DivinelyInspiringID
+desc: DivinelyInspiringDesc
+icon: DivinelyInspiring
+nihil: true
+anim: ''
+---
+enabled: true
+id: IntimidateID
+desc: IntimidateDesc
+icon: Intimidate
+nihil: true
+anim: ''
+---
+enabled: true
+id: LilysPoiseID
+desc: LilysPoiseDesc
+icon: LilysPoise
+nihil: true
+anim: ''
+---
+enabled: true
+id: MaleficAuraID
+desc: MaleficAuraDesc
+icon: MaleficAura
+nihil: true
+anim: ''
+---
+enabled: false
+id: NightTideID
+desc: NightTideDesc
+icon: NightTide
+nihil: true
+anim: ''
+---
+enabled: true
+id: SolidarityID
+desc: SolidarityDesc
+icon: Solidarity
+nihil: true
+anim: ''
+---
+enabled: true
+id: SpurStrID
+desc: SpurStrDesc
+icon: SpurStr
+nihil: true
+anim: ''
+---
+enabled: true
+id: SpurMagID
+desc: SpurMagDesc
+icon: SpurMag
+nihil: true
+anim: ''
+---
+enabled: true
+id: SpurSpdID
+desc: SpurSpdDesc
+icon: SpurSpd
+nihil: true
+anim: ''
+---
+enabled: true
+id: SpurDefID
+desc: SpurDefDesc
+icon: SpurDef
+nihil: true
+anim: ''
+---
+enabled: true
+id: SpurResID
+desc: SpurResDesc
+icon: SpurRes
+nihil: true
+anim: ''
+---
+enabled: true
+id: TantivyID
+desc: TantivyDesc
+icon: Tantivy
+nihil: true
+anim: ''
+---
+enabled: false
+id: UpWithArchID
+desc: UpWithArchDesc
+icon: UpWithArch
+nihil: true
+anim: ''
+---
+enabled: false
+id: VoiceOfPeaceID
+desc: VoiceOfPeaceDesc
+icon: VoiceOfPeace
+nihil: true
+anim: ''
+---
+enabled: false
+id: WhitePoolID
+desc: WhitePoolDesc
+icon: WhitePool
+nihil: true
+anim: ''
+---
+enabled: true
+id: SkyguardID
+desc: SkyguardDesc
+icon: Skyguard
+nihil: true
+anim: ''
+---
+enabled: true
+id: HorseguardID
+desc: HorseguardDesc
+icon: Horseguard
+nihil: true
+anim: ''
+---
+enabled: true
+id: ArmorBoostID
+desc: ArmorBoostDesc
+icon: ArmorBoost
+nihil: true
+anim: ''
+---
+enabled: false
+id: PastelVeilID
+desc: PastelVeilDesc
+icon: PastelVeil
+nihil: true
+anim: ''
+---
+enabled: false
+id: RallyChaosID
+desc: RallyChaosDesc
+icon: RallyChaos
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoardersBaneID
+desc: HoardersBaneDesc
+icon: HoardersBane
+nihil: true
+anim: ''
+---
+enabled: false
+id: DarkBargainID
+desc: DarkBargainDesc
+icon: DarkBargain
+nihil: true
+anim: ''
+---
+enabled: false
+id: SoulSapID
+desc: SoulSapDesc
+icon: SoulSap
+nihil: true
+anim: ''
+---
+enabled: false
+id: SnowWarningID
+desc: SnowWarningDesc
+icon: SnowWarning
+nihil: true
+anim: ''
+---
+enabled: false
+id: SandstreamID
+desc: SandstreamDesc
+icon: Sandstream
+nihil: true
+anim: ''
+---
+enabled: false
+id: DrizzleID
+desc: DrizzleDesc
+icon: Drizzle
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirlockID
+desc: AirlockDesc
+icon: Airlock
+nihil: true
+anim: ''
+---
+enabled: false
+id: DroughtID
+desc: DroughtDesc
+icon: Drought
+nihil: true
+anim: ''
+---
+enabled: false
+id: EternalVanityID
+desc: EternalVanityDesc
+icon: EternalVanity
+nihil: true
+anim: ''
+---
+enabled: false
+id: StrTakerID
+desc: StrTakerDesc
+icon: StrTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: SklTakerID
+desc: SklTakerDesc
+icon: SklTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: SpdTakerID
+desc: SpdTakerDesc
+icon: SpdTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefTakerID
+desc: DefTakerDesc
+icon: DefTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: ResTakerID
+desc: ResTakerDesc
+icon: ResTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: LukTakerID
+desc: LukTakerDesc
+icon: LukTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: MagTakerID
+desc: MagTakerDesc
+icon: MagTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: MovTakerID
+desc: MovTakerDesc
+icon: MovTaker
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneMagID
+desc: HoneMagDesc
+icon: HoneMag
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneStrID
+desc: HoneStrDesc
+icon: HoneStr
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneSklID
+desc: HoneSklDesc
+icon: HoneSkl
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneSpdID
+desc: HoneSpdDesc
+icon: HoneSpd
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneDefID
+desc: HoneDefDesc
+icon: HoneDef
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneResID
+desc: HoneResDesc
+icon: HoneRes
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneLukID
+desc: HoneLukDesc
+icon: HoneLuk
+nihil: true
+anim: ''
+---
+enabled: false
+id: HoneMovID
+desc: HoneMovDesc
+icon: HoneMov
+nihil: true
+anim: ''
+---
+enabled: false
+id: MagOathID
+desc: MagOathDesc
+icon: MagOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: StrOathID
+desc: StrOathDesc
+icon: StrOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: SklOathID
+desc: SklOathDesc
+icon: SklOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: SpdOathID
+desc: SpdOathDesc
+icon: SpdOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefOathID
+desc: DefOathDesc
+icon: DefOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: ResOathID
+desc: ResOathDesc
+icon: ResOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: LukOathID
+desc: LukOathDesc
+icon: LukOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: MovOathID
+desc: MovOathDesc
+icon: MovOath
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseMagID
+desc: RouseMagDesc
+icon: RouseMag
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseStrID
+desc: RouseStrDesc
+icon: RouseStr
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseSklID
+desc: RouseSklDesc
+icon: RouseSkl
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseSpdID
+desc: RouseSpdDesc
+icon: RouseSpd
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseDefID
+desc: RouseDefDesc
+icon: RouseDef
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseResID
+desc: RouseResDesc
+icon: RouseRes
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseLukID
+desc: RouseLukDesc
+icon: RouseLuk
+nihil: true
+anim: ''
+---
+enabled: false
+id: RouseMovID
+desc: RouseMovDesc
+icon: RouseMov
+nihil: true
+anim: ''
+---
+enabled: false
+id: CleverInitID
+desc: CleverInitDesc
+icon: CleverInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: StrongInitID
+desc: StrongInitDesc
+icon: StrongInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: DeftInitID
+desc: DeftInitDesc
+icon: DeftInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: QuickInitID
+desc: QuickInitDesc
+icon: QuickInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: LuckyInitID
+desc: LuckyInitDesc
+icon: LuckyInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: SturdyInitID
+desc: SturdyInitDesc
+icon: SturdyInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: CalmInitID
+desc: CalmInitDesc
+icon: CalmInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: NimbleInitID
+desc: NimbleInitDesc
+icon: NimbleInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: SpectrumInitID
+desc: SpectrumInitDesc
+icon: SpectrumInit
+nihil: true
+anim: ''
+---
+enabled: false
+id: OddFootedID
+desc: OddFootedDesc
+icon: OddFooted
+nihil: true
+anim: ''
+---
+enabled: false
+id: EvenFootedID
+desc: EvenFootedDesc
+icon: EvenFooted
+nihil: true
+anim: ''
+---
+enabled: true
+id: SealStrID
+desc: SealStrDesc
+icon: SealStr
+nihil: true
+anim: ''
+---
+enabled: true
+id: SealSklID
+desc: SealSklDesc
+icon: SealSkl
+nihil: true
+anim: ''
+---
+enabled: true
+id: SealSpdID
+desc: SealSpdDesc
+icon: SealSpd
+nihil: true
+anim: ''
+---
+enabled: true
+id: SealLukID
+desc: SealLukDesc
+icon: SealLuk
+nihil: true
+anim: ''
+---
+enabled: true
+id: SealDefID
+desc: SealDefDesc
+icon: SealDef
+nihil: true
+anim: ''
+---
+enabled: true
+id: SealResID
+desc: SealResDesc
+icon: SealRes
+nihil: true
+anim: ''
+---
+enabled: true
+id: SealMagID
+desc: SealMagDesc
+icon: SealMag
+nihil: true
+anim: ''
+---
+enabled: true
+id: FullMetalBodyID
+desc: FullMetalBodyDesc
+icon: FullMetalBody
+nihil: true
+anim: ''
+---
+enabled: true
+id: NullifyID
+desc: NullifyDesc
+icon: Nullify
+nihil: true
+anim: ''
+---
+enabled: true
+id: SlayerID
+desc: SlayerDesc
+icon: Slayer
+nihil: true
+anim: ''
+---
+enabled: true
+id: SkybreakerID
+desc: SkybreakerDesc
+icon: Skybreaker
+nihil: true
+anim: ''
+---
+enabled: true
+id: ResourcefulID
+desc: ResourcefulDesc
+icon: Resourceful
+nihil: true
+anim: ''
+---
+enabled: true
+id: ParagonID
+desc: ParagonDesc
+icon: Paragon
+nihil: true
+anim: ''
+---
+enabled: true
+id: VoidCurseID
+desc: VoidCurseDesc
+icon: VoidCurse
+nihil: true
+anim: ''
+---
+enabled: true
+id: BlossomID
+desc: BlossomDesc
+icon: Blossom
+nihil: true
+anim: ''
+---
+enabled: true
+id: AptitudeID
+desc: AptitudeDesc
+icon: Aptitude
+nihil: true
+anim: ''
+---
+enabled: true
+id: RenewalID
+desc: RenewalDesc
+icon: Renewal
+nihil: true
+anim: ''
+---
+enabled: true
+id: AmaterasuID
+desc: AmaterasuDesc
+icon: Amaterasu
+nihil: true
+anim: ''
+---
+enabled: true
+id: CamaraderieID
+desc: CamaraderieDesc
+icon: Camaraderie
+nihil: true
+anim: ''
+---
+enabled: true
+id: ReliefID
+desc: ReliefDesc
+icon: Relief
+nihil: true
+anim: ''
+---
+enabled: true
+id: BondID
+desc: BondDesc
+icon: Bond
+nihil: true
+anim: ''
+---
+enabled: true
+id: ForagerID
+desc: ForagerDesc
+icon: Forager
+nihil: true
+anim: ''
+---
+enabled: true
+id: ImbueID
+desc: ImbueDesc
+icon: Imbue
+nihil: true
+anim: ''
+---
+enabled: true
+id: AcrobatID
+desc: AcrobatDesc
+icon: Acrobat
+nihil: true
+anim: ''
+---
+enabled: true
+id: ArmorMarchID
+desc: ArmorMarchDesc
+icon: ArmorMarch
+nihil: true
+anim: ''
+---
+enabled: true
+id: PassID
+desc: PassDesc
+icon: Pass
+nihil: true
+anim: ''
+---
+enabled: true
+id: KeepUpID
+desc: KeepUpDesc
+icon: KeepUp
+nihil: true
+anim: ''
+---
+enabled: true
+id: IndoorMarchID
+desc: IndoorMarchDesc
+icon: IndoorMarch
+nihil: true
+anim: ''
+---
+enabled: true
+id: NatureRushID
+desc: NatureRushDesc
+icon: NatureRush
+nihil: true
+anim: ''
+---
+enabled: true
+id: RandomMugID
+desc: RandomMugDesc
+icon: RandomMug
+nihil: true
+anim: ''
+---
+enabled: true
+id: IdentityProblemsID
+desc: IdentityProblemsDesc
+icon: IdentityProblems
+nihil: true
+anim: ''
+---
+enabled: true
+id: BreathOfLifeID
+desc: BreathOfLifeDesc
+icon: BreathOfLife
+nihil: true
+anim: ''
+---
+enabled: true
+id: CantoID
+desc: CantoDesc
+icon: Canto
+nihil: true
+anim: ''
+---
+enabled: true
+id: CantoPlusID
+desc: CantoPlusDesc
+icon: CantoPlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: DespoilID
+desc: DespoilDesc
+icon: Despoil
+nihil: true
+anim: ''
+---
+enabled: false
+id: PickupID
+desc: PickupDesc
+icon: Pickup
+nihil: true
+anim: ''
+---
+enabled: true
+id: FuryID
+desc: FuryDesc
+icon: Fury
+nihil: true
+anim: ''
+---
+enabled: true
+id: GaleforceID
+desc: GaleforceDesc
+icon: Galeforce
+nihil: true
+anim: ''
+---
+enabled: false
+id: FailGaleID
+desc: FailGaleDesc
+icon: FailGale
+nihil: true
+anim: ''
+---
+enabled: true
+id: LifetakerID
+desc: LifetakerDesc
+icon: Lifetaker
+nihil: true
+anim: ''
+---
+enabled: true
+id: PoisonStrikeID
+desc: PoisonStrikeDesc
+icon: PoisonStrike
+nihil: true
+anim: ''
+---
+enabled: true
+id: GrislyWoundID
+desc: GrislyWoundDesc
+icon: GrislyWound
+nihil: true
+anim: ''
+---
+enabled: true
+id: PowerstaffID
+desc: PowerstaffDesc
+icon: Powerstaff
+nihil: true
+anim: ''
+---
+enabled: true
+id: ReMoveID
+desc: ReMoveDesc
+icon: ReMove
+nihil: true
+anim: ''
+---
+enabled: true
+id: SavageBlowID
+desc: SavageBlowDesc
+icon: SavageBlow
+nihil: true
+anim: ''
+---
+enabled: true
+id: CulturedID
+desc: CulturedDesc
+icon: Cultured
+nihil: true
+anim: ''
+---
+enabled: true
+id: GridmasterID
+desc: GridmasterDesc
+icon: Gridmaster
+nihil: true
+anim: ''
+---
+enabled: false
+id: PoisonPointID
+desc: PoisonPointDesc
+icon: PoisonPoint
+nihil: true
+anim: ''
+---
+enabled: false
+id: NoGuardID
+desc: NoGuardDesc
+icon: NoGuard
+nihil: true
+anim: ''
+---
+enabled: false
+id: WonderGuardID
+desc: WonderGuardDesc
+icon: WonderGuard
+nihil: true
+anim: ''
+---
+enabled: false
+id: AnalyticID
+desc: AnalyticDesc
+icon: Analytic
+nihil: true
+anim: ''
+---
+enabled: false
+id: SuperLuckID
+desc: SuperLuckDesc
+icon: SuperLuck
+nihil: true
+anim: ''
+---
+enabled: false
+id: TechnicianID
+desc: TechnicianDesc
+icon: Technician
+nihil: true
+anim: ''
+---
+enabled: false
+id: SolarPowerID
+desc: SolarPowerDesc
+icon: SolarPower
+nihil: true
+anim: ''
+---
+enabled: false
+id: ContraryID
+desc: ContraryDesc
+icon: Contrary
+nihil: true
+anim: ''
+---
+enabled: false
+id: TrueStrikeID
+desc: TrueStrikeDesc
+icon: TrueStrike
+nihil: true
+anim: ''
+---
+enabled: false
+id: CriticalPierceID
+desc: CriticalPierceDesc
+icon: CriticalPierce
+nihil: true
+anim: ''
+---
+enabled: false
+id: CatchingUpID
+desc: CatchingUpDesc
+icon: CatchingUp
+nihil: true
+anim: ''
+---
+enabled: false
+id: SandRushID
+desc: SandRushDesc
+icon: SandRush
+nihil: true
+anim: ''
+---
+enabled: false
+id: SlushRushID
+desc: SlushRushDesc
+icon: SlushRush
+nihil: true
+anim: ''
+---
+enabled: false
+id: SwiftSwimID
+desc: SwiftSwimDesc
+icon: SwiftSwim
+nihil: true
+anim: ''
+---
+enabled: false
+id: MercilessID
+desc: MercilessDesc
+icon: Merciless
+nihil: true
+anim: ''
+---
+enabled: false
+id: StoneBodyID
+desc: StoneBodyDesc
+icon: StoneBody
+nihil: true
+anim: ''
+---
+enabled: true
+id: AxefaithID
+desc: AxefaithDesc
+icon: Axefaith
+nihil: true
+anim: ''
+---
+enabled: true
+id: BattleVeteranID
+desc: BattleVeteranDesc
+icon: BattleVeteran
+nihil: true
+anim: ''
+---
+enabled: true
+id: DuelistsBlowID
+desc: DuelistsBlowDesc
+icon: DuelistsBlow
+nihil: true
+anim: ''
+---
+enabled: true
+id: DeathBlowID
+desc: DeathBlowDesc
+icon: DeathBlow
+nihil: true
+anim: ''
+---
+enabled: true
+id: DartingBlowID
+desc: DartingBlowDesc
+icon: DartingBlow
+nihil: true
+anim: ''
+---
+enabled: true
+id: WardingBlowID
+desc: WardingBlowDesc
+icon: WardingBlow
+nihil: true
+anim: ''
+---
+enabled: true
+id: CertainBlowID
+desc: CertainBlowDesc
+icon: CertainBlow
+nihil: true
+anim: ''
+---
+enabled: true
+id: ArmoredBlowID
+desc: ArmoredBlowDesc
+icon: ArmoredBlow
+nihil: true
+anim: ''
+---
+enabled: false
+id: HeroesDeathBlowID
+desc: HeroesDeathBlowDesc
+icon: HeroesDeathBlow
+nihil: true
+anim: ''
+---
+enabled: true
+id: SwordbreakerID
+desc: SwordbreakerDesc
+icon: Swordbreaker
+nihil: true
+anim: ''
+---
+enabled: true
+id: LancebreakerID
+desc: LancebreakerDesc
+icon: Lancebreaker
+nihil: true
+anim: ''
+---
+enabled: true
+id: AxebreakerID
+desc: AxebreakerDesc
+icon: Axebreaker
+nihil: true
+anim: ''
+---
+enabled: true
+id: BowbreakerID
+desc: BowbreakerDesc
+icon: Bowbreaker
+nihil: true
+anim: ''
+---
+enabled: true
+id: TomebreakerID
+desc: TomebreakerDesc
+icon: Tomebreaker
+nihil: true
+anim: ''
+---
+enabled: true
+id: ChargeID
+desc: ChargeDesc
+icon: Charge
+nihil: true
+anim: ''
+---
+enabled: true
+id: ChargePlusID
+desc: ChargePlusDesc
+icon: ChargePlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: CriticalForceID
+desc: CriticalForceDesc
+icon: CriticalForce
+nihil: true
+anim: ''
+---
+enabled: true
+id: KillingMachineID
+desc: KillingMachineDesc
+icon: KillingMachine
+nihil: true
+anim: ''
+---
+enabled: true
+id: CritUpID
+desc: CritUpDesc
+icon: CritUp
+nihil: true
+anim: ''
+---
+enabled: true
+id: StrongRiposteID
+desc: StrongRiposteDesc
+icon: StrongRiposte
+nihil: true
+anim: ''
+---
+enabled: true
+id: PatienceID
+desc: PatienceDesc
+icon: Patience
+nihil: true
+anim: ''
+---
+enabled: true
+id: PursuitID
+desc: PursuitDesc
+icon: Pursuit
+nihil: true
+anim: ''
+---
+enabled: true
+id: ChivalryID
+desc: ChivalryDesc
+icon: Chivalry
+nihil: true
+anim: ''
+---
+enabled: true
+id: PragmaticID
+desc: PragmaticDesc
+icon: Pragmatic
+nihil: true
+anim: ''
+---
+enabled: true
+id: DefiantAvoID
+desc: DefiantAvoDesc
+icon: DefiantAvo
+nihil: true
+anim: ''
+---
+enabled: true
+id: DefiantCritID
+desc: DefiantCritDesc
+icon: DefiantCrit
+nihil: true
+anim: ''
+---
+enabled: true
+id: IndoorFighterID
+desc: IndoorFighterDesc
+icon: IndoorFighter
+nihil: true
+anim: ''
+---
+enabled: true
+id: OutdoorFighterID
+desc: OutdoorFighterDesc
+icon: OutdoorFighter
+nihil: true
+anim: ''
+---
+enabled: true
+id: ElbowRoomID
+desc: ElbowRoomDesc
+icon: ElbowRoom
+nihil: true
+anim: ''
+---
+enabled: true
+id: OddRhythmID
+desc: OddRhythmDesc
+icon: OddRhythm
+nihil: true
+anim: ''
+---
+enabled: true
+id: EvenRhythmID
+desc: EvenRhythmDesc
+icon: EvenRhythm
+nihil: true
+anim: ''
+---
+enabled: true
+id: SwordfaireID
+desc: SwordfaireDesc
+icon: Swordfaire
+nihil: true
+anim: ''
+---
+enabled: true
+id: LancefaireID
+desc: LancefaireDesc
+icon: Lancefaire
+nihil: true
+anim: ''
+---
+enabled: true
+id: AxefaireID
+desc: AxefaireDesc
+icon: Axefaire
+nihil: true
+anim: ''
+---
+enabled: true
+id: BowfaireID
+desc: BowfaireDesc
+icon: Bowfaire
+nihil: true
+anim: ''
+---
+enabled: true
+id: TomefaireID
+desc: TomefaireDesc
+icon: Tomefaire
+nihil: true
+anim: ''
+---
+enabled: true
+id: FieryBloodID
+desc: FieryBloodDesc
+icon: FieryBlood
+nihil: true
+anim: ''
+---
+enabled: false
+id: ForeignPrincessID
+desc: ForeignPrincessDesc
+icon: ForeignPrincess
+nihil: true
+anim: ''
+---
+enabled: true
+id: FortuneID
+desc: FortuneDesc
+icon: Fortune
+nihil: true
+anim: ''
+---
+enabled: true
+id: FrenzyID
+desc: FrenzyDesc
+icon: Frenzy
+nihil: true
+anim: ''
+---
+enabled: true
+id: HawkeyeID
+desc: HawkeyeDesc
+icon: Hawkeye
+nihil: true
+anim: ''
+---
+enabled: true
+id: HeavyStrikesID
+desc: HeavyStrikesDesc
+icon: HeavyStrikes
+nihil: true
+anim: ''
+---
+enabled: true
+id: HolyAuraID
+desc: HolyAuraDesc
+icon: HolyAura
+nihil: true
+anim: ''
+---
+enabled: false
+id: InsightID
+desc: InsightDesc
+icon: Insight
+nihil: true
+anim: ''
+---
+enabled: true
+id: KnightAspirantID
+desc: KnightAspirantDesc
+icon: KnightAspirant
+nihil: true
+anim: ''
+---
+enabled: false
+id: LifeAndDeathID
+desc: LifeAndDeathDesc
+icon: LifeAndDeath
+nihil: true
+anim: ''
+---
+enabled: true
+id: LightWeightID
+desc: LightWeightDesc
+icon: LightWeight
+nihil: true
+anim: ''
+---
+enabled: true
+id: LoyaltyID
+desc: LoyaltyDesc
+icon: Loyalty
+nihil: true
+anim: ''
+---
+enabled: true
+id: LuckySevenID
+desc: LuckySevenDesc
+icon: LuckySeven
+nihil: true
+anim: ''
+---
+enabled: true
+id: MageSlayerID
+desc: MageSlayerDesc
+icon: MageSlayer
+nihil: true
+anim: ''
+---
+enabled: true
+id: NaturalCoverID
+desc: NaturalCoverDesc
+icon: NaturalCover
+nihil: true
+anim: ''
+---
+enabled: true
+id: OpportunistID
+desc: OpportunistDesc
+icon: Opportunist
+nihil: true
+anim: ''
+---
+enabled: true
+id: OutriderID
+desc: OutriderDesc
+icon: Outrider
+nihil: true
+anim: ''
+---
+enabled: true
+id: PerfectionistID
+desc: PerfectionistDesc
+icon: Perfectionist
+nihil: true
+anim: ''
+---
+enabled: true
+id: PrescienceID
+desc: PrescienceDesc
+icon: Prescience
+nihil: true
+anim: ''
+---
+enabled: true
+id: PuissanceID
+desc: PuissanceDesc
+icon: Puissance
+nihil: true
+anim: ''
+---
+enabled: true
+id: QuickRiposteID
+desc: QuickRiposteDesc
+icon: QuickRiposte
+nihil: true
+anim: ''
+---
+enabled: true
+id: QuickBurnID
+desc: QuickBurnDesc
+icon: QuickBurn
+nihil: true
+anim: ''
+---
+enabled: true
+id: SlowBurnID
+desc: SlowBurnDesc
+icon: SlowBurn
+nihil: true
+anim: ''
+---
+enabled: true
+id: ShortShieldID
+desc: ShortShieldDesc
+icon: ShortShield
+nihil: true
+anim: ''
+---
+enabled: true
+id: SilentPrideID
+desc: SilentPrideDesc
+icon: SilentPride
+nihil: true
+anim: ''
+---
+enabled: true
+id: BracingStanceID
+desc: BracingStanceDesc
+icon: BracingStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: DartingStanceID
+desc: DartingStanceDesc
+icon: DartingStance
+nihil: true
+anim: ''
+---
+enabled: false
+id: FierceStanceID
+desc: FierceStanceDesc
+icon: FierceStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: KestrelStanceID
+desc: KestrelStanceDesc
+icon: KestrelStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: MirrorStanceID
+desc: MirrorStanceDesc
+icon: MirrorStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: ReadyStanceID
+desc: ReadyStanceDesc
+icon: ReadyStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: SteadyStanceID
+desc: SteadyStanceDesc
+icon: SteadyStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: SturdyStanceID
+desc: SturdyStanceDesc
+icon: SturdyStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: SwiftStanceID
+desc: SwiftStanceDesc
+icon: SwiftStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: WardingStanceID
+desc: WardingStanceDesc
+icon: WardingStance
+nihil: true
+anim: ''
+---
+enabled: false
+id: SpectrumStanceID
+desc: SpectrumStanceDesc
+icon: SpectrumStance
+nihil: true
+anim: ''
+---
+enabled: true
+id: AlertStanceID
+desc: AlertStanceDesc
+icon: AlertStance
+nihil: true
+anim: ''
+---
+enabled: false
+id: AlertStancePlusID
+desc: AlertStancePlusDesc
+icon: AlertStancePlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: ThunderstormID
+desc: ThunderstormDesc
+icon: Thunderstorm
+nihil: true
+anim: ''
+---
+enabled: true
+id: TowerShieldID
+desc: TowerShieldDesc
+icon: TowerShield
+nihil: true
+anim: ''
+---
+enabled: true
+id: TowerShieldPlusID
+desc: TowerShieldPlusDesc
+icon: TowerShieldPlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: TrampleID
+desc: TrampleDesc
+icon: Trample
+nihil: true
+anim: ''
+---
+enabled: true
+id: VanityID
+desc: VanityDesc
+icon: Vanity
+nihil: true
+anim: ''
+---
+enabled: false
+id: VigilanceID
+desc: VigilanceDesc
+icon: Vigilance
+nihil: true
+anim: ''
+---
+enabled: true
+id: WindDiscipleID
+desc: WindDiscipleDesc
+icon: WindDisciple
+nihil: true
+anim: ''
+---
+enabled: true
+id: WrathID
+desc: WrathDesc
+icon: Wrath
+nihil: true
+anim: ''
+---
+enabled: true
+id: QuickDrawID
+desc: QuickDrawDesc
+icon: QuickDraw
+nihil: true
+anim: ''
+---
+enabled: true
+id: ArcaneBladeID
+desc: ArcaneBladeDesc
+icon: ArcaneBlade
+nihil: true
+anim: ''
+---
+enabled: true
+id: BlueFlameID
+desc: BlueFlameDesc
+icon: BlueFlame
+nihil: true
+anim: ''
+---
+enabled: true
+id: DoubleLionID
+desc: DoubleLionDesc
+icon: DoubleLion
+nihil: true
+anim: ''
+---
+enabled: true
+id: ThighdeologyID
+desc: ThighdeologyDesc
+icon: Thighdeology
+nihil: true
+anim: ''
+---
+enabled: true
+id: ThotslayerID
+desc: ThotslayerDesc
+icon: Thotslayer
+nihil: true
+anim: ''
+---
+enabled: false
+id: HeavyBladeID
+desc: HeavyBladeDesc
+icon: HeavyBlade
+nihil: true
+anim: ''
+---
+enabled: false
+id: DancingBladeID
+desc: DancingBladeDesc
+icon: DancingBlade
+nihil: true
+anim: ''
+---
+enabled: false
+id: FireBoostID
+desc: FireBoostDesc
+icon: FireBoost
+nihil: true
+anim: ''
+---
+enabled: false
+id: WindBoostID
+desc: WindBoostDesc
+icon: WindBoost
+nihil: true
+anim: ''
+---
+enabled: false
+id: EarthBoostID
+desc: EarthBoostDesc
+icon: EarthBoost
+nihil: true
+anim: ''
+---
+enabled: false
+id: WaterBoostID
+desc: WaterBoostDesc
+icon: WaterBoost
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirRaidAtkID
+desc: AirRaidAtkDesc
+icon: AirRaidAtk
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirRaidSpdID
+desc: AirRaidSpdDesc
+icon: AirRaidSpd
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirRaidDefID
+desc: AirRaidDefDesc
+icon: AirRaidDef
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirRaidCriID
+desc: AirRaidCriDesc
+icon: AirRaidCri
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirRaidHitID
+desc: AirRaidHitDesc
+icon: AirRaidHit
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirRaidAvoID
+desc: AirRaidAvoDesc
+icon: AirRaidAvo
+nihil: true
+anim: ''
+---
+enabled: false
+id: AirRaidResID
+desc: AirRaidResDesc
+icon: AirRaidRes
+nihil: true
+anim: ''
+---
+enabled: false
+id: ChaosStyleID
+desc: ChaosStyleDesc
+icon: ChaosStyle
+nihil: true
+anim: ''
+---
+enabled: false
+id: DragonskinID
+desc: DragonskinDesc
+icon: Dragonskin
+nihil: true
+anim: ''
+---
+enabled: false
+id: StunningSmileID
+desc: StunningSmileDesc
+icon: StunningSmile
+nihil: true
+anim: ''
+---
+enabled: false
+id: KeenFighterID
+desc: KeenFighterDesc
+icon: KeenFighter
+nihil: true
+anim: ''
+---
+enabled: false
+id: SteadyBrawlerID
+desc: SteadyBrawlerDesc
+icon: SteadyBrawler
+nihil: true
+anim: ''
+---
+enabled: false
+id: MultiscaleID
+desc: MultiscaleDesc
+icon: Multiscale
+nihil: true
+anim: ''
+---
+enabled: false
+id: FlankID
+desc: FlankDesc
+icon: Flank
+nihil: true
+anim: ''
+---
+enabled: false
+id: SwarmID
+desc: SwarmDesc
+icon: Swarm
+nihil: true
+anim: ''
+---
+enabled: false
+id: LadyBladeID
+desc: LadyBladeDesc
+icon: LadyBlade
+nihil: true
+anim: ''
+---
+enabled: true
+id: AdeptID
+desc: AdeptDesc
+icon: Adept
+nihil: true
+anim: ''
+---
+enabled: true
+id: AegisID
+desc: AegisDesc
+icon: Aegis
+nihil: true
+anim: ''
+---
+enabled: true
+id: AetherID
+desc: AetherDesc
+icon: Aether
+nihil: true
+anim: ''
+---
+enabled: true
+id: AstraID
+desc: AstraDesc
+icon: Astra
+nihil: true
+anim: ''
+---
+enabled: true
+id: BaneID
+desc: BaneDesc
+icon: Bane
+nihil: true
+anim: ''
+---
+enabled: true
+id: BarricadeID
+desc: BarricadeDesc
+icon: Barricade
+nihil: true
+anim: ''
+---
+enabled: true
+id: BarricadePlusID
+desc: BarricadePlusDesc
+icon: BarricadePlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: BlackMagicID
+desc: BlackMagicDesc
+icon: BlackMagic
+nihil: true
+anim: ''
+---
+enabled: true
+id: ColossusID
+desc: ColossusDesc
+icon: Colossus
+nihil: true
+anim: ''
+---
+enabled: true
+id: CoronaID
+desc: CoronaDesc
+icon: Corona
+nihil: true
+anim: ''
+---
+enabled: true
+id: CounterID
+desc: CounterDesc
+icon: Counter
+nihil: true
+anim: ''
+---
+enabled: true
+id: CounterMagicID
+desc: CounterMagicDesc
+icon: CounterMagic
+nihil: true
+anim: ''
+---
+enabled: true
+id: CountermagicID
+desc: CountermagicDesc
+icon: Countermagic
+nihil: true
+anim: ''
+---
+enabled: true
+id: DeadeyeID
+desc: DeadeyeDesc
+icon: Deadeye
+nihil: true
+anim: ''
+---
+enabled: true
+id: DevilsLuckID
+desc: DevilsLuckDesc
+icon: DevilsLuck
+nihil: true
+anim: ''
+---
+enabled: true
+id: DevilsPactID
+desc: DevilsPactDesc
+icon: DevilsPact
+nihil: true
+anim: ''
+---
+enabled: true
+id: DevilsWhimID
+desc: DevilsWhimDesc
+icon: DevilsWhim
+nihil: true
+anim: ''
+---
+enabled: false
+id: DownWithArchID
+desc: DownWithArchDesc
+icon: DownWithArch
+nihil: true
+anim: ''
+---
+enabled: true
+id: DragonFangID
+desc: DragonFangDesc
+icon: DragonFang
+nihil: true
+anim: ''
+---
+enabled: true
+id: EclipseID
+desc: EclipseDesc
+icon: Eclipse
+nihil: true
+anim: ''
+---
+enabled: true
+id: EnrageID
+desc: EnrageDesc
+icon: Enrage
+nihil: true
+anim: ''
+---
+enabled: true
+id: FlareID
+desc: FlareDesc
+icon: Flare
+nihil: true
+anim: ''
+---
+enabled: true
+id: ForesightID
+desc: ForesightDesc
+icon: Foresight
+nihil: true
+anim: ''
+---
+enabled: true
+id: IgnisID
+desc: IgnisDesc
+icon: Ignis
+nihil: true
+anim: ''
+---
+enabled: true
+id: ImpaleID
+desc: ImpaleDesc
+icon: Impale
+nihil: true
+anim: ''
+---
+enabled: true
+id: LethalityID
+desc: LethalityDesc
+icon: Lethality
+nihil: true
+anim: ''
+---
+enabled: true
+id: LunaID
+desc: LunaDesc
+icon: Luna
+nihil: true
+anim: ''
+---
+enabled: true
+id: MiracleID
+desc: MiracleDesc
+icon: Miracle
+nihil: true
+anim: ''
+---
+enabled: true
+id: MoonbowID
+desc: MoonbowDesc
+icon: Moonbow
+nihil: true
+anim: ''
+---
+enabled: true
+id: PaviseID
+desc: PaviseDesc
+icon: Pavise
+nihil: true
+anim: ''
+---
+enabled: true
+id: PetrifyID
+desc: PetrifyDesc
+icon: Petrify
+nihil: true
+anim: ''
+---
+enabled: true
+id: SolID
+desc: SolDesc
+icon: Sol
+nihil: true
+anim: ''
+---
+enabled: false
+id: SolarBraceID
+desc: SolarBraceDesc
+icon: SolarBrace
+nihil: true
+anim: ''
+---
+enabled: false
+id: LunarBraceID
+desc: LunarBraceDesc
+icon: LunarBrace
+nihil: true
+anim: ''
+---
+enabled: true
+id: SureShotID
+desc: SureShotDesc
+icon: SureShot
+nihil: true
+anim: ''
+---
+enabled: true
+id: CorrosionID
+desc: CorrosionDesc
+icon: Corrosion
+nihil: true
+anim: ''
+---
+enabled: true
+id: GlaciesID
+desc: GlaciesDesc
+icon: Glacies
+nihil: true
+anim: ''
+---
+enabled: true
+id: GreatShieldID
+desc: GreatShieldDesc
+icon: GreatShield
+nihil: true
+anim: ''
+---
+enabled: true
+id: VengeanceID
+desc: VengeanceDesc
+icon: Vengeance
+nihil: true
+anim: ''
+---
+enabled: true
+id: BowRangeUpID
+desc: BowRangeUpDesc
+icon: BowRangeUp
+nihil: true
+anim: ''
+---
+enabled: true
+id: PointBlankID
+desc: PointBlankDesc
+icon: PointBlank
+nihil: true
+anim: ''
+---
+enabled: true
+id: StaffSavantID
+desc: StaffSavantDesc
+icon: StaffSavant
+nihil: true
+anim: ''
+---
+enabled: true
+id: TomeRangeUpID
+desc: TomeRangeUpDesc
+icon: TomeRangeUp
+nihil: true
+anim: ''
+---
+enabled: false
+id: HighGroundID
+desc: HighGroundDesc
+icon: HighGround
+nihil: true
+anim: ''
+---
+enabled: false
+id: RunningStartID
+desc: RunningStartDesc
+icon: RunningStart
+nihil: true
+anim: ''
+---
+enabled: true
+id: ArmsthriftID
+desc: ArmsthriftDesc
+icon: Armsthrift
+nihil: true
+anim: ''
+---
+enabled: false
+id: BlessingID
+desc: BlessingDesc
+icon: Blessing
+nihil: true
+anim: ''
+---
+enabled: true
+id: DazzleID
+desc: DazzleDesc
+icon: Dazzle
+nihil: true
+anim: ''
+---
+enabled: true
+id: DesperationID
+desc: DesperationDesc
+icon: Desperation
+nihil: true
+anim: ''
+---
+enabled: true
+id: AssassinateID
+desc: AssassinateDesc
+icon: Assassinate
+nihil: true
+anim: ''
+---
+enabled: false
+id: PridefulWarriorID
+desc: PridefulWarriorDesc
+icon: PridefulWarrior
+nihil: true
+anim: ''
+---
+enabled: true
+id: MoonlightID
+desc: MoonlightDesc
+icon: Moonlight
+nihil: true
+anim: ''
+---
+enabled: false
+id: RecklessFighterID
+desc: RecklessFighterDesc
+icon: RecklessFighter
+nihil: true
+anim: ''
+---
+enabled: true
+id: WaryFighterID
+desc: WaryFighterDesc
+icon: WaryFighter
+nihil: true
+anim: ''
+---
+enabled: false
+id: LastWordID
+desc: LastWordDesc
+icon: LastWord
+nihil: true
+anim: ''
+---
+enabled: false
+id: BoldFighterID
+desc: BoldFighterDesc
+icon: BoldFighter
+nihil: true
+anim: ''
+---
+enabled: false
+id: VengefulFighterID
+desc: VengefulFighterDesc
+icon: VengefulFighter
+nihil: true
+anim: ''
+---
+enabled: false
+id: QuickLearnerID
+desc: QuickLearnerDesc
+icon: QuickLearner
+nihil: true
+anim: ''
+---
+enabled: false
+id: PassionsFlowID
+desc: PassionsFlowDesc
+icon: PassionsFlow
+nihil: true
+anim: ''
+---
+enabled: false
+id: BidingBlowID
+desc: BidingBlowDesc
+icon: BidingBlow
+nihil: true
+anim: ''
+---
+enabled: false
+id: AdvantageChaserID
+desc: AdvantageChaserDesc
+icon: AdvantageChaser
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefiantStrID
+desc: DefiantStrDesc
+icon: DefiantStr
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefiantMagID
+desc: DefiantMagDesc
+icon: DefiantMag
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefiantSklID
+desc: DefiantSklDesc
+icon: DefiantSkl
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefiantSpdID
+desc: DefiantSpdDesc
+icon: DefiantSpd
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefiantLckID
+desc: DefiantLckDesc
+icon: DefiantLck
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefiantDefID
+desc: DefiantDefDesc
+icon: DefiantDef
+nihil: true
+anim: ''
+---
+enabled: false
+id: DefiantResID
+desc: DefiantResDesc
+icon: DefiantRes
+nihil: true
+anim: ''
+---
+enabled: true
+id: ResolveID
+desc: ResolveDesc
+icon: Resolve
+nihil: true
+anim: ''
+---
+enabled: false
+id: FortressDefenseID
+desc: FortressDefenseDesc
+icon: FortressDefense
+nihil: true
+anim: ''
+---
+enabled: false
+id: FortressResistanceID
+desc: FortressResistanceDesc
+icon: FortressResistance
+nihil: true
+anim: ''
+---
+enabled: true
+id: HeroesLifeAndDeathID
+desc: HeroesLifeAndDeathDesc
+icon: HeroesLifeAndDeath
+nihil: true
+anim: ''
+---
+enabled: false
+id: PushStrID
+desc: PushStrDesc
+icon: PushStr
+nihil: true
+anim: ''
+---
+enabled: false
+id: PushMagID
+desc: PushMagDesc
+icon: PushMag
+nihil: true
+anim: ''
+---
+enabled: false
+id: PushSklID
+desc: PushSklDesc
+icon: PushSkl
+nihil: true
+anim: ''
+---
+enabled: false
+id: PushSpdID
+desc: PushSpdDesc
+icon: PushSpd
+nihil: true
+anim: ''
+---
+enabled: false
+id: PushDefID
+desc: PushDefDesc
+icon: PushDef
+nihil: true
+anim: ''
+---
+enabled: false
+id: PushResID
+desc: PushResDesc
+icon: PushRes
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullStrID
+desc: LullStrDesc
+icon: LullStr
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullMagID
+desc: LullMagDesc
+icon: LullMag
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullSklID
+desc: LullSklDesc
+icon: LullSkl
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullSpdID
+desc: LullSpdDesc
+icon: LullSpd
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullLckID
+desc: LullLckDesc
+icon: LullLck
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullDefID
+desc: LullDefDesc
+icon: LullDef
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullResID
+desc: LullResDesc
+icon: LullRes
+nihil: true
+anim: ''
+---
+enabled: false
+id: LullSpectrumID
+desc: LullSpectrumDesc
+icon: LullSpectrum
+nihil: true
+anim: ''
+---
+enabled: false
+id: GutsID
+desc: GutsDesc
+icon: Guts
+nihil: true
+anim: ''
+---
+enabled: false
+id: StrongConstitutionID
+desc: StrongConstitutionDesc
+icon: StrongConstitution
+nihil: true
+anim: ''
+---
+enabled: false
+id: SpeedBoostID
+desc: SpeedBoostDesc
+icon: SpeedBoost
+nihil: true
+anim: ''
+---
+enabled: false
+id: PlusID
+desc: PlusDesc
+icon: Plus
+nihil: true
+anim: ''
+---
+enabled: false
+id: MinusID
+desc: MinusDesc
+icon: Minus
+nihil: true
+anim: ''
+---
+enabled: false
+id: HeavyMetalID
+desc: HeavyMetalDesc
+icon: HeavyMetal
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallyStrID
+desc: RallyStrDesc
+icon: RallyStr
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallyMagID
+desc: RallyMagDesc
+icon: RallyMag
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallySklID
+desc: RallySklDesc
+icon: RallySkl
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallySpdID
+desc: RallySpdDesc
+icon: RallySpd
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallyLukID
+desc: RallyLukDesc
+icon: RallyLuk
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallyDefID
+desc: RallyDefDesc
+icon: RallyDef
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallyResID
+desc: RallyResDesc
+icon: RallyRes
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallyMovID
+desc: RallyMovDesc
+icon: RallyMov
+nihil: true
+anim: ''
+---
+enabled: true
+id: RallySpectrumID
+desc: RallySpectrumDesc
+icon: RallySpectrum
+nihil: true
+anim: ''
+---
+enabled: true
+id: CaptureID
+desc: CaptureDesc
+icon: Capture
+nihil: true
+anim: ''
+---
+enabled: true
+id: DanceID
+desc: DanceDesc
+icon: Dance
+nihil: true
+anim: ''
+---
+enabled: true
+id: GambleID
+desc: GambleDesc
+icon: Gamble
+nihil: true
+anim: ''
+---
+enabled: true
+id: LungeID
+desc: LungeDesc
+icon: Lunge
+nihil: true
+anim: ''
+---
+enabled: true
+id: MercyID
+desc: MercyDesc
+icon: Mercy
+nihil: true
+anim: ''
+---
+enabled: true
+id: SummonID
+desc: SummonDesc
+icon: Summon
+nihil: true
+anim: ''
+---
+enabled: true
+id: SupplyID
+desc: SupplyDesc
+icon: Supply
+nihil: true
+anim: ''
+---
+enabled: true
+id: ShoveID
+desc: ShoveDesc
+icon: Shove
+nihil: true
+anim: ''
+---
+enabled: true
+id: SmiteID
+desc: SmiteDesc
+icon: Smite
+nihil: true
+anim: ''
+---
+enabled: true
+id: PivotID
+desc: PivotDesc
+icon: Pivot
+nihil: true
+anim: ''
+---
+enabled: true
+id: RepositionID
+desc: RepositionDesc
+icon: Reposition
+nihil: true
+anim: ''
+---
+enabled: true
+id: SwapID
+desc: SwapDesc
+icon: Swap
+nihil: true
+anim: ''
+---
+enabled: true
+id: SwarpID
+desc: SwarpDesc
+icon: Swarp
+nihil: true
+anim: ''
+---
+enabled: true
+id: StealID
+desc: StealDesc
+icon: Steal
+nihil: true
+anim: ''
+---
+enabled: true
+id: StealPlusID
+desc: StealPlusDesc
+icon: StealPlus
+nihil: true
+anim: ''
+---
+enabled: false
+id: DrawBackID
+desc: DrawBackDesc
+icon: DrawBack
+nihil: true
+anim: ''
+---
+enabled: false
+id: SacrificeID
+desc: SacrificeDesc
+icon: Sacrifice
+nihil: true
+anim: ''
+---
+enabled: false
+id: ArdentSacrificeID
+desc: ArdentSacrificeDesc
+icon: ArdentSacrifice
+nihil: true
+anim: ''
+---
+enabled: false
+id: ReciprocalAidID
+desc: ReciprocalAidDesc
+icon: ReciprocalAid
+nihil: true
+anim: ''
+---
+enabled: false
+id: GoddessDanceID
+desc: GoddessDanceDesc
+icon: GoddessDance
+nihil: true
+anim: ''
+---
+enabled: false
+id: DetonateID
+desc: DetonateDesc
+icon: Detonate
+nihil: true
+anim: ''
+---
+enabled: false
+id: StrideID
+desc: StrideDesc
+icon: Stride
+nihil: true
+anim: ''
+---
+enabled: true
+id: SaviorID
+desc: SaviorDesc
+icon: Savior
+nihil: true
+anim: ''
+---
+enabled: true
+id: DisciplineID
+desc: DisciplineDesc
+icon: Discipline
+nihil: true
+anim: ''
+---
+enabled: true
+id: VantageID
+desc: VantageDesc
+icon: Vantage
+nihil: true
+anim: ''
+---
+enabled: true
+id: CatchEmAllID
+desc: CatchEmAllDesc
+icon: CatchEmAll
+nihil: true
+anim: ''
+---
+enabled: true
+id: VantagePlusID
+desc: VantagePlusDesc
+icon: VantagePlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: NihilID
+desc: NihilDesc
+icon: Nihil
+nihil: true
+anim: ''
+---
+enabled: true
+id: LiveToServeID
+desc: LiveToServeDesc
+icon: LiveToServe
+nihil: true
+anim: ''
+---
+enabled: true
+id: LocktouchID
+desc: LocktouchDesc
+icon: Locktouch
+nihil: true
+anim: ''
+---
+enabled: true
+id: ExpertiseID
+desc: ExpertiseDesc
+icon: Expertise
+nihil: true
+anim: ''
+---
+enabled: true
+id: CelerityID
+desc: CelerityDesc
+icon: Celerity
+nihil: true
+anim: ''
+---
+enabled: true
+id: DragonsBloodID
+desc: DragonsBloodDesc
+icon: DragonsBlood
+nihil: true
+anim: ''
+---
+enabled: true
+id: HeroID
+desc: HeroDesc
+icon: Hero
+nihil: true
+anim: ''
+---
+enabled: true
+id: RightfulKingID
+desc: RightfulKingDesc
+icon: RightfulKing
+nihil: true
+anim: ''
+---
+enabled: true
+id: RightfulGodID
+desc: RightfulGodDesc
+icon: RightfulGod
+nihil: true
+anim: ''
+---
+enabled: false
+id: RightfulArchID
+desc: RightfulArchDesc
+icon: RightfulArch
+nihil: true
+anim: ''
+---
+enabled: true
+id: TriangleAdeptID
+desc: TriangleAdeptDesc
+icon: TriangleAdept
+nihil: true
+anim: ''
+---
+enabled: true
+id: TriangleAdeptPlusID
+desc: TriangleAdeptPlusDesc
+icon: TriangleAdeptPlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: InspiringTuneID
+desc: InspiringTuneDesc
+icon: InspiringTune
+nihil: true
+anim: ''
+---
+enabled: true
+id: LiquidOozeID
+desc: LiquidOozeDesc
+icon: LiquidOoze
+nihil: true
+anim: ''
+---
+enabled: true
+id: ShadowgiftID
+desc: ShadowgiftDesc
+icon: Shadowgift
+nihil: true
+anim: ''
+---
+enabled: true
+id: LuminaID
+desc: LuminaDesc
+icon: Lumina
+nihil: true
+anim: ''
+---
+enabled: true
+id: DisciplinePlusID
+desc: DisciplinePlusDesc
+icon: DisciplinePlus
+nihil: true
+anim: ''
+---
+enabled: true
+id: WatchfulID
+desc: WatchfulDesc
+icon: Watchful
+nihil: true
+anim: ''
+---
+enabled: true
+id: BoonID
+desc: BoonDesc
+icon: Boon
+nihil: true
+anim: ''
+---
+enabled: true
+id: SynchronizeID
+desc: SynchronizeDesc
+icon: Synchronize
+nihil: true
+anim: ''
+---
+enabled: true
+id: BargainID
+desc: BargainDesc
+icon: Bargain
+nihil: true
+anim: ''
+---
+enabled: true
+id: PoiseID
+desc: PoiseDesc
+icon: Poise
+nihil: true
+anim: ''
+---
+enabled: true
+id: AmischeID
+desc: AmischeDesc
+icon: Amische
+nihil: true
+anim: ''
+---
+enabled: true
+id: TriangleAttackID
+desc: TriangleAttackDesc
+icon: TriangleAttack
+nihil: true
+anim: ''
+---
+enabled: false
+id: ShrewdPotentialID
+desc: ShrewdPotentialDesc
+icon: ShrewdPotential
+nihil: true
+anim: ''
+---
+enabled: false
+id: NonconformingID
+desc: NonconformingDesc
+icon: Nonconforming
+nihil: true
+anim: ''
+---
+enabled: false
+id: ConcealedWeaponID
+desc: ConcealedWeaponDesc
+icon: ConcealedWeapon
+nihil: true
+anim: ''
+---
+enabled: false
+id: PursuerID
+desc: PursuerDesc
+icon: Pursuer
+nihil: true
+anim: ''
+---
+enabled: false
+id: DecapitatorID
+desc: DecapitatorDesc
+icon: Decapitator
+nihil: true
+anim: ''
+---
+enabled: true
+id: CunningID
+desc: CunningDesc
+icon: Cunning
+nihil: true
+anim: ''
+---
+enabled: true
+id: NiceThighsID
+desc: NiceThighsDesc
+icon: NiceThighs
+nihil: true
+anim: ''
+---
+enabled: true
+id: PersonalityID
+desc: PersonalityDesc
+icon: Personality
+nihil: true
+anim: ''
+---
+enabled: false
+id: Roll12ID
+desc: Roll12Desc
+icon: Roll12
+nihil: true
+anim: ''
+---
+enabled: false
+id: TraceID
+desc: TraceDesc
+icon: Trace
+nihil: true
+anim: ''
