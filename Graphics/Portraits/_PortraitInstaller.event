@@ -56,7 +56,7 @@ PilarMugData:
 #incbin "Dmp/Pilar_frames.dmp"
 #incbin "Dmp/Pilar_palette.dmp"
 #incbin "Dmp/Pilar_minimug.dmp"
-setMugEntry(PilarMug, PilarMugData, 5, 4, 5, 2)
+setMugEntry(PilarMug, PilarMugData, 5, 5, 5, 3)
 
 ALIGN 16
 MrYodsenMugData:
@@ -413,3 +413,59 @@ NicodemusMugData:
 #incbin "Dmp/Nicodemus_palette.dmp"
 #incbin "Dmp/Nicodemus_minimug.dmp"
 setMugEntry(NicodemusMug, NicodemusMugData, 3, 4, 4, 2)
+
+ALIGN 16
+PassarolaMugData:
+#incbin "Dmp/Passarola_mug.dmp"
+#incbin "Dmp/Passarola_frames.dmp"
+#incbin "Dmp/Passarola_palette.dmp"
+#incbin "Dmp/Passarola_minimug.dmp"
+setMugEntry(PassarolaMug, PassarolaMugData, 3, 5, 3, 3)
+
+ALIGN 16
+IgnacioMugData:
+#incbin "Dmp/Ignacio_mug.dmp"
+#incbin "Dmp/Ignacio_frames.dmp"
+#incbin "Dmp/Ignacio_palette.dmp"
+#incbin "Dmp/Ignacio_minimug.dmp"
+setMugEntry(IgnacioMug, IgnacioMugData, 2, 5, 2, 3)
+
+ALIGN 16
+SantiagoMugData:
+#incbin "Dmp/Santiago_mug.dmp"
+#incbin "Dmp/Santiago_frames.dmp"
+#incbin "Dmp/Santiago_palette.dmp"
+#incbin "Dmp/Santiago_minimug.dmp"
+setMugEntry(SantiagoMug, SantiagoMugData, 3, 5, 3, 3)
+
+ALIGN 16
+RochefortMugData:
+#incbin "Dmp/Rochefort_mug.dmp"
+#incbin "Dmp/Rochefort_frames.dmp"
+#incbin "Dmp/Rochefort_palette.dmp"
+#incbin "Dmp/Rochefort_minimug.dmp"
+setMugEntry(RochefortMug, RochefortMugData, 3, 6, 3, 3)
+
+ALIGN 16
+JozefMugData:
+#incbin "Dmp/Jozef_mug.dmp"
+#incbin "Dmp/Jozef_frames.dmp"
+#incbin "Dmp/Jozef_palette.dmp"
+#incbin "Dmp/Jozef_minimug.dmp"
+setMugEntry(JozefMug, JozefMugData, 3, 6, 3, 3)
+
+ALIGN 16
+BozoMugData:
+#incbin "Dmp/Bozo_mug.dmp"
+#incbin "Dmp/Bozo_frames.dmp"
+#incbin "Dmp/Bozo_palette.dmp"
+#incbin "Dmp/Bozo_minimug.dmp"
+setMugEntry(BozoMug, BozoMugData, 3, 5, 2, 3)
+
+ALIGN 16
+BuzuMugData:
+#incbin "Dmp/Buzu_mug.dmp"
+#incbin "Dmp/Buzu_frames.dmp"
+#incbin "Dmp/Buzu_palette.dmp"
+#incbin "Dmp/Buzu_minimug.dmp"
+setMugEntry(BuzuMug, BuzuMugData, 3, 5, 2, 3)

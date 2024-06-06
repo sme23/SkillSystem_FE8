@@ -514,7 +514,7 @@ Leader of a rebel raiding party.[N]
 A zealot dedicated to the cause.[X]
 
 ## TorchUnitName
-TORCH[X]
+T.O.R.C.H.[X]
 
 ## TorchUnitDesc
 Members of an elite group tasked[N]
@@ -869,5 +869,29 @@ Nicodemus[X]
 
 ## NicodemusDesc
 Maverick[N]
-A TORCH soldier with a daring plan[N]
+A T.O.R.C.H. soldier with a daring plan[N]
 to take down Lua and seize his glory.[X]
+
+## DalilaName
+Dalila[X]
+
+## DalilaDesc
+First Mate[N]
+A founding member of the Blackhearts[N]
+whose loyalty is unbreakable.[X]
+
+## AlonsoName
+Alonso[X]
+
+## AlonsoEnemyDesc
+Captain[N]
+A ruthless pirate boss who has sworn[N]
+to hunt Lua til the horizon ends.[X]
+
+## BlackheartEliteName
+Blackbows[X]
+
+## BlackheartEliteDesc
+Elite[N]
+Known for their unflinching arrows[N]
+that pierce their enemies' hearts.[X]

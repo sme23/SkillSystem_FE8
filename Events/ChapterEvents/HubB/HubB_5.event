@@ -168,8 +168,7 @@ EndingScene:
 FadeOutMusic
 Text(B5_CurrentCharacterSignals)
 FadeToBlack
-// maybe use the sad cutscene razvan theme here instead? idk. something with "melancholy victory" vibes
-Music(NighttimeSoundID)
+Music(CastawayHeartID)
 SetBackground(Forest_Dense)
 FadeBackFromBlack
 Text(B5_ChatOnHill)

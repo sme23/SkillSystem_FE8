@@ -74,4 +74,7 @@ DeathQuote(Javier, HubB_4, 0x2, JavierDQ)
 
 DeathQuote(Nicodemus, HubB_5, 0, NicodemusDeathQuote)
 
+DeathQuote(AlonsoChapter3, Chapter3, 0x2, 0)
+DeathQuote(Dalila, Chapter3, 0, 0)
+
 DeathQuote(0xFFFF,0,0,0) // terminator

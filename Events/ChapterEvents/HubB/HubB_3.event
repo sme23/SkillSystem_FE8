@@ -244,7 +244,6 @@ UNIT Rebel Deserter 0 Level(10,Enemy,True) [24,11] 0 0 0 0 [SteelLance] AttackIn
 UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [24,14] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT Rebel Deserter 0 Level(10,Enemy,True) [26,14] 0 0 0 0 [SteelLance] AttackInRangeAI
 UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [26,11] 0 0 0 0 [IronSword] AttackInRangeAI
-
 UNIT
 
 BeginningScene:
@@ -266,7 +265,7 @@ Text(HubB3BeginningScene2_2)
 FADI 10
 STAL 30
 SetBackground(0x20) //night forest area
-MUSC WindGustSoundID                    //really want a different theme here, but none fit
+MUSC CastawayHeartID                    
 Text(HubB3BeginningScene2_3)
 FADI 10
 STAL 30
@@ -278,9 +277,9 @@ STAL 30
 SetBackground(0xA) //inner castle area
 MUSC FinInTheCloudsID
 Text(HubB3BeginningScene3_2)
+FADI 10
 LoadPlayerUnits(NewUnits) 
 LoadEnemies(EnemyUnits)
-FADI 10
 GotoPrepScreen
 NoFade 
 ENDA
@@ -318,7 +317,7 @@ BEQ 781 s0 sC
     Text(B3EndingScene4ErnestAlive)
     GOTO 782
 LABEL 781
-MUSC WindGustSoundID //sad music, putting this here for now
+MUSC CastawayHeartID //sad music, putting this here for now
 Text(B3EndingScene3_2_ErnestDead)
 Text(B3EndingScene4ErnestDead)
 LABEL 782

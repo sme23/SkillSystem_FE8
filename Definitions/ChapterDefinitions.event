@@ -16,6 +16,7 @@
 #define HubB_3 13
 #define HubB_4 14
 #define HubB_5 15
+#define Chapter3 16
 
 #define HubB_2a 0x3D
 
@@ -87,6 +88,10 @@
 #define HubB_2aMapID 0x42
 #define HubB_2aMapChangesID 0x43
 #define HubB_2aEventsID 0x44
+
+#define Chapter3MapID 0x45
+#define Chapter3MapChangesID 0x46
+#define Chapter3EventsID 0x47
 
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88

@@ -17,7 +17,7 @@ EmergencyCrewmate_0:
 // 000   ----------------------------------------
         BYTE   TEMPO   154/2
         BYTE           VOICE   26
-        BYTE           VOL     107
+        BYTE           VOL     77
         BYTE           PAN     c_v-19
         BYTE           N32     Bn2   v096   gtp3
         BYTE                   Dn3
@@ -465,7 +465,7 @@ EmergencyCrewmate_1:
 // 000   ----------------------------------------
         BYTE           VOICE   21
         BYTE           N11     Bn2   v096
-        BYTE           VOL     100
+        BYTE           VOL     70
         BYTE   W12
         BYTE           N11     Dn3
         BYTE           N11     Fs3
@@ -853,7 +853,7 @@ EmergencyCrewmate_2:
         BYTE   KEYSH   EmergencyCrewmate_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   34
-        BYTE           VOL     100
+        BYTE           VOL     70
         BYTE           N11     Bn1   v096
         BYTE   W12
         BYTE           N23     Fs1
@@ -1237,7 +1237,7 @@ EmergencyCrewmate_3:
         BYTE   KEYSH   EmergencyCrewmate_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     100
+        BYTE           VOL     70
         BYTE           N05     Cn1   v096
         BYTE           N05     Fs1
         BYTE   W06
@@ -1644,7 +1644,7 @@ EmergencyCrewmate_4:
         BYTE   KEYSH   EmergencyCrewmate_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   52
-        BYTE           VOL     100
+        BYTE           VOL     70
         BYTE   W24
         BYTE           N11     Bn2   v112
         BYTE   W24
@@ -1882,7 +1882,7 @@ EmergencyCrewmate_5:
 // 000   ----------------------------------------
         BYTE           VOICE   61
         BYTE           PAN     c_v+15
-        BYTE           VOL     100
+        BYTE           VOL     70
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W72
@@ -2160,7 +2160,7 @@ EmergencyCrewmate_6:
 // 000   ----------------------------------------
         BYTE           VOICE   40
         BYTE           PAN     c_v+20
-        BYTE           VOL     100
+        BYTE           VOL     70
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96

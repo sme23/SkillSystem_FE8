@@ -73,3 +73,12 @@ Letter Opener[X]
 
 ## SongName_TheWavesApprenticeID
 The Wave's Apprentice[X]
+
+## SongName_TougherTussleID
+Tougher Tussle[X]
+
+## SongName_TimesTickingID
+Time's Ticking[X]
+
+## SongName_CastawayHeart
+Castaway Heart[X]

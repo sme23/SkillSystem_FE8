@@ -18,7 +18,7 @@ OrlandoTheme_0:
         BYTE   TEMPO   136/2
         BYTE           VOICE   26
         BYTE           PAN     c_v-20
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE           N11     Fs3   v049
         BYTE   W12
         BYTE                   Gs3
@@ -710,7 +710,7 @@ OrlandoTheme_1:
 // 000   ----------------------------------------
         BYTE           VOICE   82
         BYTE           PAN     c_v-14
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE           TIE     Fs3   v049
         BYTE           TIE     Gs3
         BYTE           TIE     Cs4
@@ -1122,7 +1122,7 @@ OrlandoTheme_2:
         BYTE   KEYSH   OrlandoTheme_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   34
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE           TIE     Cs2   v064
         BYTE   W96
 // 001   ----------------------------------------
@@ -1449,7 +1449,7 @@ OrlandoTheme_3:
 // 000   ----------------------------------------
         BYTE           VOICE   40
         BYTE           PAN     c_v+24
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -1947,7 +1947,7 @@ OrlandoTheme_4:
 // 000   ----------------------------------------
         BYTE           VOICE   48
         BYTE           PAN     c_v-1
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE           TIE     Fs1   v033
         BYTE   W96
 // 001   ----------------------------------------
@@ -2318,7 +2318,7 @@ OrlandoTheme_5:
 // 000   ----------------------------------------
         BYTE           VOICE   77
         BYTE           PAN     c_v+20
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -2694,7 +2694,7 @@ OrlandoTheme_6:
 // 000   ----------------------------------------
         BYTE           VOICE   82
         BYTE           PAN     c_v-13
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -2823,7 +2823,7 @@ OrlandoTheme_7:
         BYTE   KEYSH   OrlandoTheme_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     100
+        BYTE           VOL     80
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96

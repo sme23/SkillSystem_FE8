@@ -144,6 +144,7 @@
 
 [LoadElodia] = [LoadFace][0x47][0x1]
 [LoadAlonso] = [LoadFace][0x48][0x1]
+[LoadDalila] = [LoadFace][0x21][0x1]
 [LoadRebelLeader] = [LoadFace][0x49][0x1]
 
 [LoadRedSoldier] = [LoadFace][0x6B][0x1]
@@ -161,8 +162,8 @@
 [LoadIgnacio] = [LoadFace][0x3A][0x1]
 [LoadSagargala] = [LoadFace][0x52][0x1]
 
-[LoadRochefort] = [LoadFace][0x31][0x1]
-[LoadSantiago] = [LoadFace][0x31][0x1]
+[LoadRochefort] = [LoadFace][0x58][0x1]
+[LoadSantiago] = [LoadFace][0x59][0x1]
 [LoadSlicer] = [LoadFace][0x40][0x1]
 [LoadDicer] = [LoadFace][0x41][0x1]
 
@@ -183,7 +184,7 @@
 [LoadMrMist] = [LoadFace][0x31][0x1]
 [LoadYaoguai] = [LoadFace][0x31][0x1]
 [LoadTheDuke] = [LoadFace][0x31][0x1]
-[LoadJozef] = [LoadFace][0x31][0x1]
+[LoadJozef] = [LoadFace][0x53][0x1]
 [LoadTheCloser] = [LoadFace][0x31][0x1]
 
 [LoadYadney] = [LoadFace][0x1F][0x1]

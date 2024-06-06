@@ -17,6 +17,7 @@ LookAtMeWares_0:
 // 000   ----------------------------------------
         BYTE   TEMPO   80/2
 LookAtMeWares_0_LOOP:
+        BYTE           VOICE   114
         BYTE           PAN     c_v+38
         BYTE           N06     An3   v064
         BYTE           VOL     127
@@ -122,7 +123,6 @@ LookAtMeWares_0_2:
         BYTE           N48     An2
         BYTE   W96
 // 011   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  LookAtMeWares_0_LOOP
         BYTE   FINE
@@ -133,6 +133,7 @@ LookAtMeWares_1:
         BYTE   KEYSH   LookAtMeWares_key+0
 // 000   ----------------------------------------
 LookAtMeWares_1_LOOP:
+        BYTE           VOICE   77
         BYTE           PAN     c_v-37
         BYTE           VOL     127
         BYTE   W96
@@ -199,7 +200,6 @@ LookAtMeWares_1_LOOP:
 // 010   ----------------------------------------
         BYTE   W96
 // 011   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  LookAtMeWares_1_LOOP
         BYTE   FINE
@@ -210,6 +210,7 @@ LookAtMeWares_2:
         BYTE   KEYSH   LookAtMeWares_key+0
 // 000   ----------------------------------------
 LookAtMeWares_2_LOOP:
+        BYTE           VOICE   13
         BYTE           PAN     c_v-43
         BYTE           N12     An3   v051
         BYTE           VOL     127
@@ -353,7 +354,6 @@ LookAtMeWares_2_2:
         BYTE           N24     An4
         BYTE   W96
 // 011   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  LookAtMeWares_2_LOOP
         BYTE   FINE
@@ -364,6 +364,7 @@ LookAtMeWares_3:
         BYTE   KEYSH   LookAtMeWares_key+0
 // 000   ----------------------------------------
 LookAtMeWares_3_LOOP:
+        BYTE           VOICE   21
         BYTE           N24     An2   v045
         BYTE           VOL     127
         BYTE   W12
@@ -608,7 +609,6 @@ LookAtMeWares_3_LOOP:
         BYTE           N48     Dn3
         BYTE   W48
 // 011   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  LookAtMeWares_3_LOOP
         BYTE   FINE
@@ -619,6 +619,7 @@ LookAtMeWares_4:
         BYTE   KEYSH   LookAtMeWares_key+0
 // 000   ----------------------------------------
 LookAtMeWares_4_LOOP:
+        BYTE           VOICE   124
         BYTE           N18     Fs2   v051
         BYTE           N12     Cs1
         BYTE           VOL     127
@@ -785,7 +786,6 @@ LookAtMeWares_4_1:
         BYTE                   As2
         BYTE   W12
 // 011   ----------------------------------------
-        BYTE           VOICE   0
         BYTE   GoTo
          POIN2  LookAtMeWares_4_LOOP
         BYTE   FINE

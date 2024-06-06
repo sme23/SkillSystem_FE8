@@ -18,7 +18,7 @@ ToTheSkies_0:
         BYTE   TEMPO   120/2
         BYTE           VOICE   56
         BYTE           PAN     c_v+17
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -248,7 +248,7 @@ ToTheSkies_1:
         BYTE   KEYSH   ToTheSkies_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   46
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W96
 // 001   ----------------------------------------
         BYTE           N12     Bn2   v040
@@ -486,7 +486,7 @@ ToTheSkies_2:
         BYTE   KEYSH   ToTheSkies_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   41
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -628,7 +628,7 @@ ToTheSkies_3:
         BYTE   KEYSH   ToTheSkies_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   1
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -789,7 +789,7 @@ ToTheSkies_4:
 // 000   ----------------------------------------
         BYTE           VOICE   77
         BYTE           PAN     c_v-24
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -998,7 +998,7 @@ ToTheSkies_5:
 // 000   ----------------------------------------
         BYTE           VOICE   50
         BYTE           N96     Gn3   v025
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W96
 // 001   ----------------------------------------
         BYTE           N72     Dn3
@@ -1224,7 +1224,7 @@ ToTheSkies_6:
 // 000   ----------------------------------------
         BYTE           VOICE   57
         BYTE           N96     Gn1   v030
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W06
         BYTE           TIE     Dn2
         BYTE   W06
@@ -1463,7 +1463,7 @@ ToTheSkies_7:
 // 000   ----------------------------------------
         BYTE           VOICE   47
         BYTE           N36     Gn2   v035
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W36
         BYTE           N12     Gn2   v030
         BYTE   W12
@@ -1710,7 +1710,7 @@ ToTheSkies_8:
         BYTE   KEYSH   ToTheSkies_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   127
-        BYTE           VOL     127
+        BYTE           VOL     137
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96

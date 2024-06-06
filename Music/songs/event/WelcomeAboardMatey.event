@@ -16,9 +16,9 @@ WelcomeAboardMatey_0:
         BYTE   KEYSH   WelcomeAboardMatey_key+0
 // 000   ----------------------------------------
         BYTE   TEMPO   120/2
+        BYTE           VOICE   7
         BYTE           VOL     127
         BYTE   W24
-        BYTE           VOICE   7
         BYTE           PAN     c_v+29
         BYTE   W72
 // 001   ----------------------------------------
@@ -26,19 +26,19 @@ WelcomeAboardMatey_0:
 // 002   ----------------------------------------
         BYTE   W24
 WelcomeAboardMatey_0_LOOP:
-        BYTE           N12     Dn4   v127
+        BYTE           N12     Dn4   v063
         BYTE   W18
-        BYTE           N06     Dn4   v100
+        BYTE           N06     Dn4   v050
         BYTE   W06
-        BYTE                   Dn4   v110
+        BYTE                   Dn4   v055
         BYTE   W12
-        BYTE                   An4   v100
+        BYTE                   An4   v050
         BYTE   W06
-        BYTE                   An4   v110
+        BYTE                   An4   v055
         BYTE   W12
-        BYTE                   An4   v100
+        BYTE                   An4   v050
         BYTE   W06
-        BYTE                   An4   v110
+        BYTE                   An4   v055
         BYTE   W06
         BYTE           N12     Dn4
         BYTE   W06
@@ -46,53 +46,53 @@ WelcomeAboardMatey_0_LOOP:
         BYTE   W06
         BYTE                   Fn4
         BYTE   W18
-        BYTE                   Fn4   v127
+        BYTE                   Fn4   v063
         BYTE   W18
-        BYTE                   As4   v100
+        BYTE                   As4   v050
         BYTE   W18
-        BYTE           N36     Dn5   v110
+        BYTE           N36     Dn5   v055
         BYTE   W36
 // 004   ----------------------------------------
-        BYTE           N24     As4   v100
+        BYTE           N24     As4   v050
         BYTE   W24
-        BYTE           N12     Fn4   v127
+        BYTE           N12     Fn4   v063
         BYTE   W18
-        BYTE                   An4   v100
+        BYTE                   An4   v050
         BYTE   W18
-        BYTE           N36     Cn5   v110
+        BYTE           N36     Cn5   v055
         BYTE   W36
 // 005   ----------------------------------------
-        BYTE           N24     An4   v100
+        BYTE           N24     An4   v050
         BYTE   W24
-        BYTE           N12     Gn4   v127
+        BYTE           N12     Gn4   v063
         BYTE   W18
-        BYTE           N06     Gn4   v100
+        BYTE           N06     Gn4   v050
         BYTE   W06
         BYTE           N12     En4
         BYTE   W12
         BYTE                   Cn4
         BYTE   W12
-        BYTE                   En4   v110
+        BYTE                   En4   v055
         BYTE   W12
-        BYTE           N24     En4   v100
+        BYTE           N24     En4   v050
         BYTE   W12
 // 006   ----------------------------------------
         BYTE   W12
         BYTE           N12     Gn4
         BYTE   W12
-        BYTE                   Dn4   v127
+        BYTE                   Dn4   v063
         BYTE   W18
-        BYTE           N06     Dn4   v100
+        BYTE           N06     Dn4   v050
         BYTE   W06
-        BYTE                   Dn4   v110
+        BYTE                   Dn4   v055
         BYTE   W12
-        BYTE                   An4   v100
+        BYTE                   An4   v050
         BYTE   W06
-        BYTE                   An4   v110
+        BYTE                   An4   v055
         BYTE   W12
-        BYTE                   An4   v100
+        BYTE                   An4   v050
         BYTE   W06
-        BYTE                   An4   v110
+        BYTE                   An4   v055
         BYTE   W06
         BYTE           N12     Dn5
         BYTE   W06
@@ -100,41 +100,41 @@ WelcomeAboardMatey_0_LOOP:
         BYTE   W06
         BYTE                   An4
         BYTE   W18
-        BYTE                   Dn5   v127
+        BYTE                   Dn5   v063
         BYTE   W18
-        BYTE                   As4   v100
+        BYTE                   As4   v050
         BYTE   W18
-        BYTE           N36     Fn4   v110
+        BYTE           N36     Fn4   v055
         BYTE   W36
 // 008   ----------------------------------------
-        BYTE           N24     As4   v100
+        BYTE           N24     As4   v050
         BYTE   W24
-        BYTE           N12     Cn5   v127
+        BYTE           N12     Cn5   v063
         BYTE   W18
-        BYTE                   An4   v100
+        BYTE                   An4   v050
         BYTE   W18
-        BYTE           N36     Fn4   v110
+        BYTE           N36     Fn4   v055
         BYTE   W36
 // 009   ----------------------------------------
-        BYTE           N24     An4   v100
+        BYTE           N24     An4   v050
         BYTE   W24
-        BYTE           N12     Cn5   v127
+        BYTE           N12     Cn5   v063
         BYTE   W18
-        BYTE           N06     Cn5   v100
+        BYTE           N06     Cn5   v050
         BYTE   W06
         BYTE           N12     Gn4
         BYTE   W12
         BYTE                   En4
         BYTE   W12
-        BYTE                   Gn4   v110
+        BYTE                   Gn4   v055
         BYTE   W12
-        BYTE           N24     Gn4   v100
+        BYTE           N24     Gn4   v050
         BYTE   W12
 // 010   ----------------------------------------
         BYTE   W12
         BYTE           N12     Cn5
         BYTE   W48
-        BYTE                   Fn4   v070
+        BYTE                   Fn4   v035
         BYTE           N12     An4
         BYTE           N12     En5
         BYTE   W24
@@ -261,12 +261,12 @@ WelcomeAboardMatey_0_LOOP:
 WelcomeAboardMatey_1:
         BYTE   KEYSH   WelcomeAboardMatey_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   62
         BYTE           VOL     127
         BYTE   W24
-        BYTE           VOICE   62
-        BYTE           N24     Dn2   v090
+        BYTE           N24     Dn2   v045
         BYTE   W24
-        BYTE                   Fn2   v080
+        BYTE                   Fn2   v040
         BYTE   W24
         BYTE                   An2
         BYTE   W24
@@ -278,111 +278,111 @@ WelcomeAboardMatey_1:
 // 002   ----------------------------------------
         BYTE   W24
 WelcomeAboardMatey_1_LOOP:
-        BYTE           N96     An2   v080
+        BYTE           N96     An2   v040
         BYTE   W72
 // 003   ----------------------------------------
 WelcomeAboardMatey_1_3:
         BYTE   W24
-        BYTE           N96     As2   v080
+        BYTE           N96     As2   v040
         BYTE   W44
         BYTE   W01
         BYTE           N01     Fs3
-        BYTE           N01     Gn3   v090
+        BYTE           N01     Gn3   v045
         BYTE   W01
-        BYTE                   Gs3   v100
+        BYTE                   Gs3   v050
         BYTE   W01
-        BYTE                   An3   v110
+        BYTE                   An3   v055
         BYTE   W01
-        BYTE           N06     As3   v127
+        BYTE           N06     As3   v063
         BYTE   W06
-        BYTE                   As3   v090
+        BYTE                   As3   v045
         BYTE   W06
-        BYTE                   As3   v070
+        BYTE                   As3   v035
         BYTE   W08
-        BYTE           N01     As3   v080
+        BYTE           N01     As3   v040
         BYTE   W01
-        BYTE                   Bn3   v090
+        BYTE                   Bn3   v045
         BYTE   W01
-        BYTE                   Cn4   v100
+        BYTE                   Cn4   v050
         BYTE   W01
-        BYTE                   Cs4   v110
-        BYTE           N06     Dn4   v127
+        BYTE                   Cs4   v055
+        BYTE           N06     Dn4   v063
         BYTE   W01
         BYTE   PEND
 // 004   ----------------------------------------
 WelcomeAboardMatey_1_4:
         BYTE   W05
-        BYTE           N06     Dn4   v090
+        BYTE           N06     Dn4   v045
         BYTE   W06
-        BYTE                   Dn4   v070
+        BYTE                   Dn4   v035
         BYTE   W13
-        BYTE           N96     Fn2   v080
-        BYTE           N42     An3   v090
+        BYTE           N96     Fn2   v040
+        BYTE           N42     An3   v045
         BYTE   W44
         BYTE   W01
-        BYTE           N01     Fn3   v080
-        BYTE           N01     Fs3   v090
+        BYTE           N01     Fn3   v040
+        BYTE           N01     Fs3   v045
         BYTE   W01
-        BYTE                   Gn3   v100
+        BYTE                   Gn3   v050
         BYTE   W01
-        BYTE                   Gs3   v110
+        BYTE                   Gs3   v055
         BYTE   W01
-        BYTE           N06     An3   v127
+        BYTE           N06     An3   v063
         BYTE   W06
-        BYTE                   An3   v090
+        BYTE                   An3   v045
         BYTE   W06
-        BYTE                   An3   v070
+        BYTE                   An3   v035
         BYTE   W08
-        BYTE           N01     Gs3   v080
+        BYTE           N01     Gs3   v040
         BYTE   W01
-        BYTE                   An3   v090
+        BYTE                   An3   v045
         BYTE   W01
-        BYTE                   As3   v100
+        BYTE                   As3   v050
         BYTE   W01
-        BYTE                   Bn3   v110
-        BYTE           N06     Cn4   v127
+        BYTE                   Bn3   v055
+        BYTE           N06     Cn4   v063
         BYTE   W01
         BYTE   PEND
 // 005   ----------------------------------------
 WelcomeAboardMatey_1_5:
         BYTE   W05
-        BYTE           N06     Cn4   v090
+        BYTE           N06     Cn4   v045
         BYTE   W06
-        BYTE                   Cn4   v070
+        BYTE                   Cn4   v035
         BYTE   W13
-        BYTE           N96     En2   v080
-        BYTE           N42     Gn3   v090
+        BYTE           N96     En2   v040
+        BYTE           N42     Gn3   v045
         BYTE   W44
         BYTE   W01
-        BYTE           N01     Ds3   v080
-        BYTE           N01     En3   v090
+        BYTE           N01     Ds3   v040
+        BYTE           N01     En3   v045
         BYTE   W01
-        BYTE                   Fn3   v100
+        BYTE                   Fn3   v050
         BYTE   W01
-        BYTE                   Fs3   v110
+        BYTE                   Fs3   v055
         BYTE   W01
-        BYTE           N06     Gn3   v127
+        BYTE           N06     Gn3   v063
         BYTE   W06
-        BYTE                   Gn3   v090
+        BYTE                   Gn3   v045
         BYTE   W06
-        BYTE                   Gn3   v070
+        BYTE                   Gn3   v035
         BYTE   W09
-        BYTE           N01     Cn3   v080
-        BYTE           N01     Cs3   v090
+        BYTE           N01     Cn3   v040
+        BYTE           N01     Cs3   v045
         BYTE   W01
-        BYTE                   Dn3   v100
+        BYTE                   Dn3   v050
         BYTE   W01
-        BYTE                   Ds3   v110
+        BYTE                   Ds3   v055
         BYTE   W01
         BYTE   PEND
 // 006   ----------------------------------------
-        BYTE           N06     En3   v127
+        BYTE           N06     En3   v063
         BYTE   W06
-        BYTE                   En3   v090
+        BYTE                   En3   v045
         BYTE   W06
-        BYTE                   En3   v070
+        BYTE                   En3   v035
         BYTE   W12
-        BYTE           N96     Dn3   v080
+        BYTE           N96     Dn3   v040
         BYTE   W72
 // 007   ----------------------------------------
         BYTE   PATT
@@ -394,11 +394,11 @@ WelcomeAboardMatey_1_5:
         BYTE   PATT
          POIN2  WelcomeAboardMatey_1_5
 // 010   ----------------------------------------
-        BYTE           N06     En3   v127
+        BYTE           N06     En3   v063
         BYTE   W06
-        BYTE                   En3   v090
+        BYTE                   En3   v045
         BYTE   W06
-        BYTE                   En3   v070
+        BYTE                   En3   v035
         BYTE   W84
 // 011   ----------------------------------------
         BYTE   W96
@@ -425,30 +425,30 @@ WelcomeAboardMatey_1_5:
 WelcomeAboardMatey_2:
         BYTE   KEYSH   WelcomeAboardMatey_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   41
         BYTE           VOL     127
         BYTE   W24
-        BYTE           VOICE   41
         BYTE           PAN     c_v-1
-        BYTE           N12     Dn1   v127
+        BYTE           N12     Dn1   v063
         BYTE   W24
-        BYTE                   Dn1   v080
+        BYTE                   Dn1   v040
         BYTE   W12
-        BYTE                   Dn1   v090
+        BYTE                   Dn1   v045
         BYTE   W12
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W24
 // 001   ----------------------------------------
-        BYTE                   Dn1   v080
+        BYTE                   Dn1   v040
         BYTE   W12
-        BYTE                   Dn1   v090
+        BYTE                   Dn1   v045
         BYTE   W12
-        BYTE                   Dn1   v127
+        BYTE                   Dn1   v063
         BYTE   W24
-        BYTE                   Dn1   v080
+        BYTE                   Dn1   v040
         BYTE   W12
-        BYTE                   Dn1   v090
+        BYTE                   Dn1   v045
         BYTE   W12
-        BYTE                   Dn1   v127
+        BYTE                   Dn1   v063
         BYTE   W12
         BYTE                   Fn1
         BYTE   W12
@@ -458,71 +458,71 @@ WelcomeAboardMatey_2:
         BYTE                   Ds1
         BYTE   W12
 WelcomeAboardMatey_2_LOOP:
-        BYTE           N12     Dn1   v127
+        BYTE           N12     Dn1   v063
         BYTE   W24
-        BYTE                   Dn1   v080
+        BYTE                   Dn1   v040
         BYTE   W12
-        BYTE                   Dn1   v090
+        BYTE                   Dn1   v045
         BYTE   W12
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W24
 // 003   ----------------------------------------
 WelcomeAboardMatey_2_3:
-        BYTE           N12     Dn1   v080
+        BYTE           N12     Dn1   v040
         BYTE   W12
-        BYTE                   Dn1   v090
+        BYTE                   Dn1   v045
         BYTE   W12
-        BYTE                   As0   v127
+        BYTE                   As0   v063
         BYTE   W24
-        BYTE                   As0   v080
+        BYTE                   As0   v040
         BYTE   W12
-        BYTE                   As0   v090
+        BYTE                   As0   v045
         BYTE   W12
-        BYTE                   As0   v100
+        BYTE                   As0   v050
         BYTE   W24
         BYTE   PEND
 // 004   ----------------------------------------
 WelcomeAboardMatey_2_4:
-        BYTE           N12     As0   v080
+        BYTE           N12     As0   v040
         BYTE   W12
-        BYTE                   As0   v090
+        BYTE                   As0   v045
         BYTE   W12
-        BYTE                   Fn1   v127
+        BYTE                   Fn1   v063
         BYTE   W24
-        BYTE                   Fn1   v080
+        BYTE                   Fn1   v040
         BYTE   W12
-        BYTE                   Fn1   v090
+        BYTE                   Fn1   v045
         BYTE   W12
-        BYTE                   Fn1   v100
+        BYTE                   Fn1   v050
         BYTE   W24
         BYTE   PEND
 // 005   ----------------------------------------
 WelcomeAboardMatey_2_5:
-        BYTE           N12     Fn1   v080
+        BYTE           N12     Fn1   v040
         BYTE   W12
-        BYTE                   Fn1   v090
+        BYTE                   Fn1   v045
         BYTE   W12
-        BYTE                   Cn1   v127
+        BYTE                   Cn1   v063
         BYTE   W24
-        BYTE                   Cn1   v080
+        BYTE                   Cn1   v040
         BYTE   W12
-        BYTE                   Cn1   v090
+        BYTE                   Cn1   v045
         BYTE   W12
-        BYTE                   Cn1   v100
+        BYTE                   Cn1   v050
         BYTE   W24
         BYTE   PEND
 // 006   ----------------------------------------
-        BYTE                   Cn1   v080
+        BYTE                   Cn1   v040
         BYTE   W12
-        BYTE                   Cn1   v090
+        BYTE                   Cn1   v045
         BYTE   W12
-        BYTE                   Dn1   v127
+        BYTE                   Dn1   v063
         BYTE   W24
-        BYTE                   Dn1   v080
+        BYTE                   Dn1   v040
         BYTE   W12
-        BYTE                   Dn1   v090
+        BYTE                   Dn1   v045
         BYTE   W12
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W24
 // 007   ----------------------------------------
         BYTE   PATT
@@ -534,41 +534,41 @@ WelcomeAboardMatey_2_5:
         BYTE   PATT
          POIN2  WelcomeAboardMatey_2_5
 // 010   ----------------------------------------
-        BYTE           N12     Cn1   v080
+        BYTE           N12     Cn1   v040
         BYTE   W12
         BYTE           PAN     c_v-29
-        BYTE           N12     Cn1   v090
-        BYTE           N06     Cn3   v127
+        BYTE           N12     Cn1   v045
+        BYTE           N06     Cn3   v063
         BYTE   W06
         BYTE                   Cs3
         BYTE   W06
         BYTE           N24     Dn3
         BYTE   W24
-        BYTE                   En3   v100
+        BYTE                   En3   v050
         BYTE   W24
-        BYTE           N48     An3   v110
+        BYTE           N48     An3   v055
         BYTE   W24
 // 011   ----------------------------------------
 WelcomeAboardMatey_2_11:
         BYTE   W24
-        BYTE           N36     Cn4   v127
+        BYTE           N36     Cn4   v063
         BYTE   W36
-        BYTE           N12     As3   v100
+        BYTE           N12     As3   v050
         BYTE   W12
-        BYTE           N24     An3   v110
+        BYTE           N24     An3   v055
         BYTE   W24
         BYTE   PEND
 // 012   ----------------------------------------
-        BYTE                   Gn3   v100
+        BYTE                   Gn3   v050
         BYTE   W24
-        BYTE           N72     Gn3   v127
+        BYTE           N72     Gn3   v063
         BYTE   W72
 // 013   ----------------------------------------
-        BYTE           N12     Fn3   v100
+        BYTE           N12     Fn3   v050
         BYTE   W12
         BYTE                   Gn3
         BYTE   W12
-        BYTE           N84     An3   v127
+        BYTE           N84     An3   v063
         BYTE   W72
 // 014   ----------------------------------------
         BYTE   W12
@@ -578,24 +578,24 @@ WelcomeAboardMatey_2_11:
         BYTE   W06
         BYTE           N24     Dn3
         BYTE   W24
-        BYTE                   En3   v100
+        BYTE                   En3   v050
         BYTE   W24
-        BYTE           N48     Dn4   v110
+        BYTE           N48     Dn4   v055
         BYTE   W24
 // 015   ----------------------------------------
         BYTE   PATT
          POIN2  WelcomeAboardMatey_2_11
 // 016   ----------------------------------------
-        BYTE           N24     Gn3   v100
+        BYTE           N24     Gn3   v050
         BYTE   W24
-        BYTE           N72     Cn4   v127
+        BYTE           N72     Cn4   v063
         BYTE   W72
 // 017   ----------------------------------------
-        BYTE           N12     As3   v100
+        BYTE           N12     As3   v050
         BYTE   W12
         BYTE                   Cn4
         BYTE   W12
-        BYTE           N96     Dn4   v127
+        BYTE           N96     Dn4   v063
         BYTE   W72
 // 018   ----------------------------------------
         BYTE   W24
@@ -609,11 +609,11 @@ WelcomeAboardMatey_2_11:
 WelcomeAboardMatey_3:
         BYTE   KEYSH   WelcomeAboardMatey_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   17
         BYTE           VOL     127
         BYTE   W24
-        BYTE           VOICE   17
         BYTE           PAN     c_v-22
-        BYTE           N09     Dn2   v060
+        BYTE           N09     Dn2   v030
         BYTE           N09     En3
         BYTE           N09     Cn3
         BYTE   W12
@@ -632,11 +632,11 @@ WelcomeAboardMatey_3:
         BYTE   W24
 // 001   ----------------------------------------
         BYTE   W12
-        BYTE           N06     Fn2   v100
+        BYTE           N06     Fn2   v050
         BYTE   W06
         BYTE                   Fs2
         BYTE   W06
-        BYTE           N09     Fn3   v060
+        BYTE           N09     Fn3   v030
         BYTE           N09     An3
         BYTE           N09     Gn2
         BYTE   W12
@@ -654,14 +654,14 @@ WelcomeAboardMatey_3:
         BYTE           N24     En3
         BYTE   W24
 WelcomeAboardMatey_3_LOOP:
-        BYTE           N96     Dn2   v060
+        BYTE           N96     Dn2   v030
         BYTE           N96     Cn3
         BYTE           N96     En3
         BYTE   W72
 // 003   ----------------------------------------
 WelcomeAboardMatey_3_3:
         BYTE   W24
-        BYTE           N96     As1   v060
+        BYTE           N96     As1   v030
         BYTE           N96     An2
         BYTE           N96     Cn3
         BYTE   W72
@@ -669,7 +669,7 @@ WelcomeAboardMatey_3_3:
 // 004   ----------------------------------------
 WelcomeAboardMatey_3_4:
         BYTE   W24
-        BYTE           N96     En3   v060
+        BYTE           N96     En3   v030
         BYTE           N96     Fn2
         BYTE           N96     Gn3
         BYTE   W72
@@ -677,7 +677,7 @@ WelcomeAboardMatey_3_4:
 // 005   ----------------------------------------
 WelcomeAboardMatey_3_5:
         BYTE   W24
-        BYTE           N96     As2   v060
+        BYTE           N96     As2   v030
         BYTE           N96     Cn2
         BYTE           N96     Dn3
         BYTE   W72
@@ -699,7 +699,7 @@ WelcomeAboardMatey_3_5:
          POIN2  WelcomeAboardMatey_3_5
 // 010   ----------------------------------------
         BYTE   W24
-        BYTE           N24     Dn2   v060
+        BYTE           N24     Dn2   v030
         BYTE   W12
         BYTE           N12     Fn2
         BYTE           N12     An2
@@ -722,7 +722,7 @@ WelcomeAboardMatey_3_5:
         BYTE   W11
 // 011   ----------------------------------------
 WelcomeAboardMatey_3_11:
-        BYTE           N24     An1   v060
+        BYTE           N24     An1   v030
         BYTE   W12
         BYTE           N12     Fn2
         BYTE           N12     An2
@@ -753,7 +753,7 @@ WelcomeAboardMatey_3_11:
         BYTE   PEND
 // 012   ----------------------------------------
 WelcomeAboardMatey_3_12:
-        BYTE           N24     Fn1   v060
+        BYTE           N24     Fn1   v030
         BYTE   W12
         BYTE           N12     Dn2
         BYTE           N12     Fn2
@@ -844,7 +844,7 @@ WelcomeAboardMatey_3_12:
         BYTE   PATT
          POIN2  WelcomeAboardMatey_3_12
 // 017   ----------------------------------------
-        BYTE           N24     Gn1   v060
+        BYTE           N24     Gn1   v030
         BYTE   W12
         BYTE           N12     En2
         BYTE           N12     Gn2
@@ -887,12 +887,12 @@ WelcomeAboardMatey_4:
         BYTE   KEYSH   WelcomeAboardMatey_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   33
-        BYTE           N24     Dn6   v127
+        BYTE           N24     Dn6   v063
         BYTE           VOL     127
         BYTE   W24
         BYTE           N12     Dn1
         BYTE   W24
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W12
         BYTE           N24     Gn1
         BYTE   W24
@@ -902,9 +902,9 @@ WelcomeAboardMatey_4:
         BYTE   W12
         BYTE           N12     An1
         BYTE   W12
-        BYTE                   Dn1   v127
+        BYTE                   Dn1   v063
         BYTE   W24
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W12
         BYTE           N24     Gn1
         BYTE   W24
@@ -915,94 +915,94 @@ WelcomeAboardMatey_4:
         BYTE           N12     An1
         BYTE   W12
 WelcomeAboardMatey_4_LOOP:
-        BYTE           N12     Dn1   v127
+        BYTE           N12     Dn1   v063
         BYTE   W18
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W18
         BYTE                   Dn1
         BYTE   W12
         BYTE           N06     En1
         BYTE   W06
-        BYTE                   En1   v110
+        BYTE                   En1   v055
         BYTE   W12
-        BYTE                   Fn1   v100
+        BYTE                   Fn1   v050
         BYTE   W06
 // 003   ----------------------------------------
 WelcomeAboardMatey_4_3:
-        BYTE           N06     Fn1   v110
+        BYTE           N06     Fn1   v055
         BYTE   W12
-        BYTE                   Gn1   v100
+        BYTE                   Gn1   v050
         BYTE   W06
-        BYTE                   Gn1   v110
+        BYTE                   Gn1   v055
         BYTE   W06
-        BYTE           N12     As0   v127
+        BYTE           N12     As0   v063
         BYTE   W18
-        BYTE                   As0   v100
+        BYTE                   As0   v050
         BYTE   W18
         BYTE                   As0
         BYTE   W12
         BYTE           N06     Cn1
         BYTE   W06
-        BYTE                   Cn1   v110
+        BYTE                   Cn1   v055
         BYTE   W12
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W06
         BYTE   PEND
 // 004   ----------------------------------------
 WelcomeAboardMatey_4_4:
-        BYTE           N06     Dn1   v110
+        BYTE           N06     Dn1   v055
         BYTE   W12
-        BYTE                   En1   v100
+        BYTE                   En1   v050
         BYTE   W06
-        BYTE                   En1   v110
+        BYTE                   En1   v055
         BYTE   W06
-        BYTE           N12     Fn1   v127
+        BYTE           N12     Fn1   v063
         BYTE   W18
-        BYTE                   Fn1   v100
+        BYTE                   Fn1   v050
         BYTE   W18
         BYTE                   Fn1
         BYTE   W12
         BYTE           N06     Gn1
         BYTE   W06
-        BYTE                   Gn1   v110
+        BYTE                   Gn1   v055
         BYTE   W12
-        BYTE                   An1   v100
+        BYTE                   An1   v050
         BYTE   W06
         BYTE   PEND
 // 005   ----------------------------------------
 WelcomeAboardMatey_4_5:
-        BYTE           N06     An1   v110
+        BYTE           N06     An1   v055
         BYTE   W12
-        BYTE                   As1   v100
+        BYTE                   As1   v050
         BYTE   W06
-        BYTE                   As1   v110
+        BYTE                   As1   v055
         BYTE   W06
-        BYTE           N12     Cn1   v127
+        BYTE           N12     Cn1   v063
         BYTE   W18
-        BYTE                   Cn1   v100
+        BYTE                   Cn1   v050
         BYTE   W18
         BYTE                   Cn1
         BYTE   W12
-        BYTE                   Dn1   v127
+        BYTE                   Dn1   v063
         BYTE   W18
-        BYTE                   Dn2   v100
+        BYTE                   Dn2   v050
         BYTE   W06
         BYTE   PEND
 // 006   ----------------------------------------
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE                   Dn1   v127
+        BYTE                   Dn1   v063
         BYTE   W18
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W18
         BYTE                   Dn1
         BYTE   W12
         BYTE           N06     En1
         BYTE   W06
-        BYTE                   En1   v110
+        BYTE                   En1   v055
         BYTE   W12
-        BYTE                   Fn1   v100
+        BYTE                   Fn1   v050
         BYTE   W06
 // 007   ----------------------------------------
         BYTE   PATT
@@ -1016,48 +1016,48 @@ WelcomeAboardMatey_4_5:
 // 010   ----------------------------------------
 WelcomeAboardMatey_4_10:
         BYTE   W12
-        BYTE           N12     Dn1   v100
+        BYTE           N12     Dn1   v050
         BYTE   W12
-        BYTE           N24     Dn1   v127
+        BYTE           N24     Dn1   v063
         BYTE   W24
-        BYTE                   Fn1   v100
+        BYTE                   Fn1   v050
         BYTE   W24
-        BYTE           N12     Dn1   v110
+        BYTE           N12     Dn1   v055
         BYTE   W24
         BYTE   PEND
 // 011   ----------------------------------------
 WelcomeAboardMatey_4_11:
-        BYTE           N12     Dn2   v100
+        BYTE           N12     Dn2   v050
         BYTE   W24
-        BYTE           N24     As0   v127
+        BYTE           N24     As0   v063
         BYTE   W24
-        BYTE                   Dn1   v100
+        BYTE                   Dn1   v050
         BYTE   W24
-        BYTE           N12     As0   v110
+        BYTE           N12     As0   v055
         BYTE   W24
         BYTE   PEND
 // 012   ----------------------------------------
 WelcomeAboardMatey_4_12:
-        BYTE           N12     As1   v100
+        BYTE           N12     As1   v050
         BYTE   W24
-        BYTE           N24     Cn1   v127
+        BYTE           N24     Cn1   v063
         BYTE   W24
-        BYTE                   En1   v100
+        BYTE                   En1   v050
         BYTE   W24
-        BYTE           N12     Cn1   v110
+        BYTE           N12     Cn1   v055
         BYTE   W24
         BYTE   PEND
 // 013   ----------------------------------------
 WelcomeAboardMatey_4_13:
-        BYTE           N12     Cn2   v100
+        BYTE           N12     Cn2   v050
         BYTE   W24
-        BYTE           N24     Dn2   v127
+        BYTE           N24     Dn2   v063
         BYTE   W36
-        BYTE           N12     Dn2   v100
+        BYTE           N12     Dn2   v050
         BYTE   W12
-        BYTE                   Cn2   v110
+        BYTE                   Cn2   v055
         BYTE   W12
-        BYTE           N24     An1   v100
+        BYTE           N24     An1   v050
         BYTE   W12
         BYTE   PEND
 // 014   ----------------------------------------
@@ -1074,7 +1074,7 @@ WelcomeAboardMatey_4_13:
          POIN2  WelcomeAboardMatey_4_13
 // 018   ----------------------------------------
         BYTE   W12
-        BYTE           N12     Dn1   v100
+        BYTE           N12     Dn1   v050
         BYTE   W12
         BYTE   GoTo
          POIN2  WelcomeAboardMatey_4_LOOP
@@ -1085,12 +1085,12 @@ WelcomeAboardMatey_4_13:
 WelcomeAboardMatey_5:
         BYTE   KEYSH   WelcomeAboardMatey_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   123
         BYTE           VOL     127
         BYTE   W24
-        BYTE           VOICE   123
-        BYTE           N24     Cn1   v127
+        BYTE           N24     Cn1   v063
         BYTE   W36
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
         BYTE           N24
         BYTE   W24
@@ -1098,9 +1098,9 @@ WelcomeAboardMatey_5:
         BYTE   W12
         BYTE           N12
         BYTE   W12
-        BYTE           N24     Cn1   v127
+        BYTE           N24     Cn1   v063
         BYTE   W36
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
         BYTE           N06     Bn1
         BYTE   W06
@@ -1116,21 +1116,21 @@ WelcomeAboardMatey_5:
         BYTE                   Gn1
         BYTE   W12
 WelcomeAboardMatey_5_LOOP:
-        BYTE           N24     Cn1   v127
+        BYTE           N24     Cn1   v063
         BYTE           N24     Cs2
         BYTE   W36
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
         BYTE           N24
         BYTE   W24
 // 003   ----------------------------------------
 WelcomeAboardMatey_5_3:
         BYTE   W12
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
-        BYTE           N24     Cn1   v127
+        BYTE           N24     Cn1   v063
         BYTE   W36
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
         BYTE           N24
         BYTE   W24
@@ -1140,11 +1140,11 @@ WelcomeAboardMatey_5_3:
          POIN2  WelcomeAboardMatey_5_3
 // 005   ----------------------------------------
         BYTE   W12
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
-        BYTE           N24     Cn1   v127
+        BYTE           N24     Cn1   v063
         BYTE   W36
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
         BYTE                   Cn1
         BYTE   W12
@@ -1159,10 +1159,10 @@ WelcomeAboardMatey_5_3:
         BYTE   W06
         BYTE                   Cn1
         BYTE   W06
-        BYTE           N24     Cs2   v127
+        BYTE           N24     Cs2   v063
         BYTE           N24     Cn1
         BYTE   W36
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
         BYTE           N24
         BYTE   W24
@@ -1177,40 +1177,40 @@ WelcomeAboardMatey_5_3:
          POIN2  WelcomeAboardMatey_5_3
 // 010   ----------------------------------------
         BYTE   W12
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
-        BYTE           N96     En2   v127
+        BYTE           N96     En2   v063
         BYTE           N12     Fs1
         BYTE   W12
-        BYTE                   Fs1   v100
+        BYTE                   Fs1   v050
         BYTE   W12
         BYTE           N24     Cs1
         BYTE   W18
         BYTE           N06     Fs1
         BYTE   W06
-        BYTE           N12     Fs1   v110
+        BYTE           N12     Fs1   v055
         BYTE   W12
-        BYTE                   Fs1   v100
+        BYTE                   Fs1   v050
         BYTE   W12
 // 011   ----------------------------------------
 WelcomeAboardMatey_5_11:
-        BYTE           N12     Cs1   v100
+        BYTE           N12     Cs1   v050
         BYTE   W12
         BYTE                   Cs1
         BYTE   W06
         BYTE           N06     Fs1
         BYTE   W06
-        BYTE           N12     Fs1   v127
+        BYTE           N12     Fs1   v063
         BYTE   W12
-        BYTE                   Fs1   v100
+        BYTE                   Fs1   v050
         BYTE   W12
         BYTE           N24     Cs1
         BYTE   W18
         BYTE           N06     Fs1
         BYTE   W06
-        BYTE           N12     Fs1   v110
+        BYTE           N12     Fs1   v055
         BYTE   W12
-        BYTE                   Fs1   v100
+        BYTE                   Fs1   v050
         BYTE   W12
         BYTE   PEND
 // 012   ----------------------------------------
@@ -1220,24 +1220,24 @@ WelcomeAboardMatey_5_11:
         BYTE   PATT
          POIN2  WelcomeAboardMatey_5_11
 // 014   ----------------------------------------
-        BYTE           N12     Cs1   v100
+        BYTE           N12     Cs1   v050
         BYTE   W12
         BYTE                   Cs1
         BYTE   W06
         BYTE           N06     Fs1
         BYTE   W06
-        BYTE           N12     Fs1   v127
+        BYTE           N12     Fs1   v063
         BYTE           N96     En2
         BYTE   W12
-        BYTE           N12     Fs1   v100
+        BYTE           N12     Fs1   v050
         BYTE   W12
         BYTE           N24     Cs1
         BYTE   W18
         BYTE           N06     Fs1
         BYTE   W06
-        BYTE           N12     Fs1   v110
+        BYTE           N12     Fs1   v055
         BYTE   W12
-        BYTE                   Fs1   v100
+        BYTE                   Fs1   v050
         BYTE   W12
 // 015   ----------------------------------------
         BYTE   PATT
@@ -1249,7 +1249,7 @@ WelcomeAboardMatey_5_11:
         BYTE   PATT
          POIN2  WelcomeAboardMatey_5_11
 // 018   ----------------------------------------
-        BYTE           N12     Cs1   v100
+        BYTE           N12     Cs1   v050
         BYTE   W12
         BYTE                   Cs1
         BYTE   W06
@@ -1264,120 +1264,120 @@ WelcomeAboardMatey_5_11:
 WelcomeAboardMatey_6:
         BYTE   KEYSH   WelcomeAboardMatey_key+0
 // 000   ----------------------------------------
+        BYTE           VOICE   122
         BYTE           VOL     127
         BYTE   W24
-        BYTE           VOICE   122
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
 // 001   ----------------------------------------
 WelcomeAboardMatey_6_1:
-        BYTE           N12     Dn1   v100
+        BYTE           N12     Dn1   v050
         BYTE   W12
-        BYTE                   As1   v127
-        BYTE           N06     Ds2   v080
+        BYTE                   As1   v063
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE   PEND
 // 002   ----------------------------------------
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
-        BYTE           N12     As1   v127
+        BYTE           N06     Ds2   v040
+        BYTE           N12     As1   v063
         BYTE   W06
-        BYTE           N06     Ds2   v090
+        BYTE           N06     Ds2   v045
         BYTE   W06
 WelcomeAboardMatey_6_LOOP:
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
 // 003   ----------------------------------------
 WelcomeAboardMatey_6_3:
-        BYTE           N12     Dn1   v100
+        BYTE           N12     Dn1   v050
         BYTE   W12
-        BYTE           N06     Ds2   v080
-        BYTE           N12     As1   v127
+        BYTE           N06     Ds2   v040
+        BYTE           N12     As1   v063
         BYTE   W06
-        BYTE           N06     Ds2   v090
+        BYTE           N06     Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE   PEND
 // 004   ----------------------------------------
         BYTE   PATT
          POIN2  WelcomeAboardMatey_6_1
 // 005   ----------------------------------------
-        BYTE           N12     Dn1   v100
+        BYTE           N12     Dn1   v050
         BYTE   W12
-        BYTE           N06     Ds2   v080
-        BYTE           N12     As1   v127
+        BYTE           N06     Ds2   v040
+        BYTE           N12     As1   v063
         BYTE   W06
-        BYTE           N06     Ds2   v090
+        BYTE           N06     Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE                   Bn1   v100
+        BYTE                   Bn1   v050
         BYTE   W06
-        BYTE                   Bn1   v127
+        BYTE                   Bn1   v063
         BYTE   W12
-        BYTE                   An1   v100
+        BYTE                   An1   v050
         BYTE   W06
 // 006   ----------------------------------------
         BYTE                   Gn1
@@ -1386,21 +1386,21 @@ WelcomeAboardMatey_6_3:
         BYTE   W06
         BYTE                   An1
         BYTE   W06
-        BYTE                   An1   v127
+        BYTE                   An1   v063
         BYTE   W06
         BYTE           N12     Ds2
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
 // 007   ----------------------------------------
         BYTE   PATT
@@ -1409,24 +1409,24 @@ WelcomeAboardMatey_6_3:
         BYTE   PATT
          POIN2  WelcomeAboardMatey_6_3
 // 009   ----------------------------------------
-        BYTE           N12     Dn1   v100
+        BYTE           N12     Dn1   v050
         BYTE   W12
-        BYTE           N06     Ds2   v080
-        BYTE           N12     As1   v127
+        BYTE           N06     Ds2   v040
+        BYTE           N12     As1   v063
         BYTE   W06
-        BYTE           N06     Ds2   v090
+        BYTE           N06     Ds2   v045
         BYTE   W06
-        BYTE           N12     Ds2   v127
+        BYTE           N12     Ds2   v063
         BYTE   W12
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W12
         BYTE                   Dn1
         BYTE   W12
-        BYTE           N06     Ds2   v080
+        BYTE           N06     Ds2   v040
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE           N12     En1   v100
+        BYTE           N12     En1   v050
         BYTE   W12
         BYTE                   En1
         BYTE   W12
@@ -1439,9 +1439,9 @@ WelcomeAboardMatey_6_3:
         BYTE   W06
         BYTE                   En1
         BYTE   W06
-        BYTE           N12     Cn1   v127
+        BYTE           N12     Cn1   v063
         BYTE   W12
-        BYTE                   Cn1   v100
+        BYTE                   Cn1   v050
         BYTE   W24
         BYTE                   Cn1
         BYTE   W12
@@ -1450,11 +1450,11 @@ WelcomeAboardMatey_6_3:
 // 011   ----------------------------------------
 WelcomeAboardMatey_6_11:
         BYTE   W12
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
-        BYTE                   Cn1   v127
+        BYTE                   Cn1   v063
         BYTE   W12
-        BYTE                   Cn1   v100
+        BYTE                   Cn1   v050
         BYTE   W24
         BYTE                   Cn1
         BYTE   W12
@@ -1466,29 +1466,29 @@ WelcomeAboardMatey_6_11:
          POIN2  WelcomeAboardMatey_6_11
 // 013   ----------------------------------------
         BYTE   W12
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
-        BYTE                   Cn1   v127
+        BYTE                   Cn1   v063
         BYTE   W12
-        BYTE                   Cn1   v100
+        BYTE                   Cn1   v050
         BYTE   W24
         BYTE                   Cn1
         BYTE   W12
-        BYTE           N06     Ds2   v090
+        BYTE           N06     Ds2   v045
         BYTE   W06
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W06
-        BYTE                   Ds2   v090
+        BYTE                   Ds2   v045
         BYTE   W06
-        BYTE                   Ds2   v100
+        BYTE                   Ds2   v050
         BYTE   W06
 // 014   ----------------------------------------
         BYTE   W06
         BYTE           N12
         BYTE   W18
-        BYTE                   Cn1   v127
+        BYTE                   Cn1   v063
         BYTE   W12
-        BYTE                   Cn1   v100
+        BYTE                   Cn1   v050
         BYTE   W24
         BYTE                   Cn1
         BYTE   W12
@@ -1502,25 +1502,25 @@ WelcomeAboardMatey_6_11:
          POIN2  WelcomeAboardMatey_6_11
 // 017   ----------------------------------------
         BYTE   W12
-        BYTE           N12     Cn1   v100
+        BYTE           N12     Cn1   v050
         BYTE   W12
-        BYTE           N18     Cn2   v127
+        BYTE           N18     Cn2   v063
         BYTE   W18
-        BYTE                   An1   v110
+        BYTE                   An1   v055
         BYTE   W18
-        BYTE           N06     An1   v100
+        BYTE           N06     An1   v050
         BYTE   W06
-        BYTE                   Gn1   v110
+        BYTE                   Gn1   v055
         BYTE   W06
-        BYTE           N18     Fn1   v127
+        BYTE           N18     Fn1   v063
         BYTE   W18
-        BYTE                   Gn1   v110
+        BYTE                   Gn1   v055
         BYTE   W06
 // 018   ----------------------------------------
         BYTE   W12
-        BYTE           N06     Fn1   v100
+        BYTE           N06     Fn1   v050
         BYTE   W06
-        BYTE                   Fn1   v110
+        BYTE                   Fn1   v055
         BYTE   W06
         BYTE   GoTo
          POIN2  WelcomeAboardMatey_6_LOOP

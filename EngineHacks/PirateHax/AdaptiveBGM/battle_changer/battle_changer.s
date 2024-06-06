@@ -23,6 +23,34 @@ cmp r0,#0
 bne RetBossMusic
 pop {r0-r3}
 
+mov r0, #0x4	@ let's check for flag 4 being set
+blh CheckEventId
+cmp r0,#0
+beq NormalMusicCheck @ if it isn't set, just do the normal check
+
+Flag4Check:
+ldr r6, =0x202BCF0 @chapter data
+ldrb r0,[r6,#0xE] @chapter ID
+blh GetROMChapterStruct
+add r0,#0x28 @offset of player phase music
+ldrb r1,[r6,#0xF] @current phase
+
+cmp r1,#0
+bne CheckEnemyPhaseFlag4
+ldrh r6,[r0] @load player phase battle bgm
+b retNormal
+
+CheckEnemyPhaseFlag4:
+cmp r1,#0x80
+bne OtherPhaseFlag4
+ldrh r6,[r0,#2] @load enemy phase battle bgm
+b retNormal
+
+OtherPhaseFlag4:
+ldrb r6,[r0,#0x4] @load npc phase battle bgm, used ldrb here because the offset is invalid otherwise
+b retNormal
+
+NormalMusicCheck:
 ldr r6, =0x202BCF0 @chapter data
 ldrb r0,[r6,#0xE] @chapter ID
 blh GetROMChapterStruct

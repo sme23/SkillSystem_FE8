@@ -18,7 +18,7 @@ TheRebelsKnife_0:
         BYTE   TEMPO   116/2
         BYTE           VOICE   36
         BYTE           PAN     c_v-8
-        BYTE           VOL     70
+        BYTE           VOL     50
         BYTE           N24     Fn3   v102
         BYTE   W24
         BYTE                   Cn3
@@ -198,7 +198,7 @@ TheRebelsKnife_1:
         BYTE   KEYSH   TheRebelsKnife_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   30
-        BYTE           VOL     63
+        BYTE           VOL     43
         BYTE           PAN     c_v-13
         BYTE   W96
 // 001   ----------------------------------------
@@ -376,7 +376,7 @@ TheRebelsKnife_2:
 // 000   ----------------------------------------
         BYTE           VOICE   16
         BYTE           PAN     c_v+21
-        BYTE           VOL     51
+        BYTE           VOL     31
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -554,7 +554,7 @@ TheRebelsKnife_3:
         BYTE   KEYSH   TheRebelsKnife_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   3
-        BYTE           VOL     78
+        BYTE           VOL     58
         BYTE           PAN     c_v-20
         BYTE   W96
 // 001   ----------------------------------------
@@ -839,7 +839,7 @@ TheRebelsKnife_4:
         BYTE   KEYSH   TheRebelsKnife_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   81
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE           PAN     c_v+21
         BYTE   W96
 // 001   ----------------------------------------
@@ -1075,7 +1075,7 @@ TheRebelsKnife_5:
         BYTE   KEYSH   TheRebelsKnife_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   123
-        BYTE           VOL     82
+        BYTE           VOL     62
         BYTE           N48     Cn1   v102
         BYTE   W48
         BYTE                   Dn1
@@ -1367,7 +1367,7 @@ TheRebelsKnife_6:
 // 000   ----------------------------------------
         BYTE           VOICE   118
         BYTE           PAN     c_v+6
-        BYTE           VOL     67
+        BYTE           VOL     47
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -1516,7 +1516,7 @@ TheRebelsKnife_7:
 // 000   ----------------------------------------
         BYTE           VOICE   117
         BYTE           PAN     c_v-7
-        BYTE           VOL     81
+        BYTE           VOL     61
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -1768,7 +1768,7 @@ TheRebelsKnife_8:
         BYTE   KEYSH   TheRebelsKnife_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     94
+        BYTE           VOL     74
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96

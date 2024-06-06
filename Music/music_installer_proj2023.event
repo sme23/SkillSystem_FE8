@@ -166,6 +166,23 @@ SongTable(TheWavesApprenticeID,TheWavesApprentice,BattleMusicGroup)
 #include "songs/boss/TheWavesApprentice.event"
 }
 
+// 31 - Tougher Tussle
+{
+SongTable(TougherTussleID,TougherTussle,BattleMusicGroup)
+#include "songs/boss/TougherTussle.event"
+}
+
+// 32 - Time's Ticking
+{
+SongTable(TimesTickingID,TimesTicking,MapMusicGroup)
+#include "songs/map/TimesTicking.event"
+}
+
+// 33 - Castaway Heart
+{
+SongTable(CastawayHeartID,CastawayHeart,MapMusicGroup)
+#include "songs/event/CastawayHeart.event"
+}
 
 
 // --------------- SONGS: GUI AND SFX ---------------

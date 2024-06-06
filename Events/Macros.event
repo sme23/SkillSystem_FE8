@@ -2,7 +2,7 @@
 #define SpawnReinforcements(UnitGroup) "CamOn; LOAD1 0x1 UnitGroup; ENUN; CamOff; RefreshSMS; ENUN; STAL 30"
 #define LoadPlayerUnits(unitPtr) "LOAD1 0x0 unitPtr; ENUN"
 #define LoadCutsceneUnits(unitGroup) "LOAD1 2 unitGroup; ENUN"
-#define LoadUnit(x,y) "UNIT 0x2 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for units in player placement with prep menu
+#define LoadUnit(x,y) "UNIT Carmen 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for units in player placement with prep menu
 #define LoadUnit(x,y,unitID) "UNIT unitID 0x11 0x1 Level(1,Ally,1) [x,y] 0x00 0x00 0x00 0x00 [0x00] NoAI" // for loading specific force deployed units
 #define LoadEnemies(unitPtr) "LOAD1 0x1 unitPtr; ENUN"
 #define CameraCursor(character) "CAM1 character; STAL 20; FlashCursor(character,60)"

@@ -19,16 +19,16 @@ SleepinWithTheSkyFishes_0:
 SleepinWithTheSkyFishes_0_LOOP:
         BYTE           VOICE   9
         BYTE           PAN     c_v-34
-        BYTE           N96     Dn3   v050
+        BYTE           N96     Dn3   v040
         BYTE           N96     Fn3
         BYTE           VOL     127
         BYTE   W01
-        BYTE           N92     An3   v050   gtp3
+        BYTE           N92     An3   v040   gtp3
         BYTE   W01
-        BYTE           N44     En4   v050   gtp2
+        BYTE           N44     En4   v040   gtp2
         BYTE   W44
         BYTE   W02
-        BYTE           N48     Dn4   v063
+        BYTE           N48     Dn4   v050
         BYTE   W48
 // 001   ----------------------------------------
         BYTE           N24     Gn4
@@ -37,49 +37,49 @@ SleepinWithTheSkyFishes_0_LOOP:
         BYTE           N12     En4
         BYTE           N12     An4
         BYTE   W24
-        BYTE           N24     Dn4   v056
+        BYTE           N24     Dn4   v044
         BYTE           N24     Fn4
         BYTE   W24
-        BYTE                   Fn4   v040
+        BYTE                   Fn4   v032
         BYTE           N24     Dn4
         BYTE   W24
 // 002   ----------------------------------------
-        BYTE                   Gn3   v050
+        BYTE                   Gn3   v040
         BYTE           N24     Cn4
         BYTE   W01
         BYTE           N23     En4
         BYTE   W23
-        BYTE           N48     En4   v030
+        BYTE           N48     En4   v024
         BYTE           N48     Gn3
         BYTE           N48     Cn4
         BYTE   W48
-        BYTE           N24     En4   v063
+        BYTE           N24     En4   v050
         BYTE           N24     Cn5
         BYTE   W24
 // 003   ----------------------------------------
-        BYTE           N12     En4   v040
+        BYTE           N12     En4   v032
         BYTE           N12     As4
         BYTE           N12     Gn4
         BYTE           N12     Dn4
         BYTE   W24
-        BYTE           N24     Fn4   v050
+        BYTE           N24     Fn4   v040
         BYTE           N24     An4
         BYTE           N24     Dn4
         BYTE   W24
-        BYTE           N48     Fn4   v032
+        BYTE           N48     Fn4   v025
         BYTE           N48     Dn4
         BYTE           N48     An4
         BYTE   W48
 // 004   ----------------------------------------
-        BYTE           N96     Dn3   v050
+        BYTE           N96     Dn3   v040
         BYTE           N96     Fn3
         BYTE   W01
-        BYTE           N92     An3   v050   gtp3
+        BYTE           N92     An3   v040   gtp3
         BYTE   W01
-        BYTE           N44     En4   v050   gtp2
+        BYTE           N44     En4   v040   gtp2
         BYTE   W44
         BYTE   W02
-        BYTE           N48     An4   v063
+        BYTE           N48     An4   v050
         BYTE   W48
 // 005   ----------------------------------------
         BYTE           N24     Gn4
@@ -88,36 +88,36 @@ SleepinWithTheSkyFishes_0_LOOP:
         BYTE           N12     En4
         BYTE           N12     An4
         BYTE   W24
-        BYTE           N24     Dn4   v056
+        BYTE           N24     Dn4   v044
         BYTE           N24     An4
         BYTE   W24
-        BYTE                   Dn4   v040
+        BYTE                   Dn4   v032
         BYTE           N24     An4
         BYTE   W24
 // 006   ----------------------------------------
-        BYTE                   En4   v050
+        BYTE                   En4   v040
         BYTE           N24     An4
         BYTE   W01
         BYTE           N23     Cn5
         BYTE   W23
-        BYTE           N48     An4   v030
+        BYTE           N48     An4   v024
         BYTE           N48     En4
         BYTE           N48     Cn5
         BYTE   W48
-        BYTE           N24     As4   v063
+        BYTE           N24     As4   v050
         BYTE           N24     Gn4
         BYTE   W24
 // 007   ----------------------------------------
-        BYTE           N12     En4   v040
+        BYTE           N12     En4   v032
         BYTE           N12     As4
         BYTE           N12     Gn4
         BYTE           N12     Dn4
         BYTE   W24
-        BYTE           N24     An4   v050
+        BYTE           N24     An4   v040
         BYTE           N24     Dn4
         BYTE           N24     Fn4
         BYTE   W24
-        BYTE           N48     An4   v032
+        BYTE           N48     An4   v025
         BYTE           N48     Dn4
         BYTE           N48     Fn4
         BYTE   W48
@@ -142,6 +142,7 @@ SleepinWithTheSkyFishes_1:
         BYTE   KEYSH   SleepinWithTheSkyFishes_key+0
 // 000   ----------------------------------------
 SleepinWithTheSkyFishes_1_LOOP:
+        BYTE           VOICE   52
         BYTE           VOL     127
         BYTE   W96
 // 001   ----------------------------------------
@@ -149,7 +150,6 @@ SleepinWithTheSkyFishes_1_LOOP:
 // 002   ----------------------------------------
         BYTE   W96
 // 003   ----------------------------------------
-        BYTE           VOICE   52
         BYTE           PAN     c_v-33
         BYTE   W72
         BYTE           N12     Fn2   v048
@@ -196,7 +196,6 @@ SleepinWithTheSkyFishes_1_LOOP:
         BYTE                   Dn3   v048
         BYTE   W48
 // 013   ----------------------------------------
-        BYTE           VOICE   0
         BYTE           PAN     c_v+0
         BYTE   GoTo
          POIN2  SleepinWithTheSkyFishes_1_LOOP
@@ -210,21 +209,21 @@ SleepinWithTheSkyFishes_2:
 SleepinWithTheSkyFishes_2_LOOP:
         BYTE           VOICE   17
         BYTE           PAN     c_v+27
-        BYTE           N96     Dn2   v032
+        BYTE           N96     Dn2   v025
         BYTE           N96     Fn2
         BYTE           N96     An1
         BYTE           VOL     127
         BYTE   W96
 // 001   ----------------------------------------
 SleepinWithTheSkyFishes_2_1:
-        BYTE           N96     Dn2   v032
+        BYTE           N96     Dn2   v025
         BYTE           N96     Gn1
         BYTE           N96     As1
         BYTE   W96
         BYTE   PEND
 // 002   ----------------------------------------
 SleepinWithTheSkyFishes_2_2:
-        BYTE           N96     An1   v032
+        BYTE           N96     An1   v025
         BYTE           N96     Cn2
         BYTE           N96     En1
         BYTE   W96
@@ -246,12 +245,12 @@ SleepinWithTheSkyFishes_2_2:
         BYTE   PATT
          POIN2  SleepinWithTheSkyFishes_2_2
 // 007   ----------------------------------------
-        BYTE           N96     Fn1   v032
+        BYTE           N96     Fn1   v025
         BYTE           N96     An1
         BYTE           N96     Dn2
         BYTE   W96
 // 008   ----------------------------------------
-        BYTE                   Dn2   v040
+        BYTE                   Dn2   v032
         BYTE           N96     En2
         BYTE           N96     Fn2
         BYTE           N96     An2
@@ -272,11 +271,11 @@ SleepinWithTheSkyFishes_2_2:
         BYTE           N96     An2
         BYTE   W96
 // 012   ----------------------------------------
-        BYTE           N48     An2   v032
+        BYTE           N48     An2   v025
         BYTE           N48     Fn2
         BYTE           N48     Dn2
         BYTE   W48
-        BYTE                   Dn2   v024
+        BYTE                   Dn2   v019
         BYTE           N48     Fn2
         BYTE           N48     An2
         BYTE   W48

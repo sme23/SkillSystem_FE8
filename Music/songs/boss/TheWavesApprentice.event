@@ -17,7 +17,7 @@ TheWavesApprentice_0:
 // 000   ----------------------------------------
         BYTE   TEMPO   130/2
         BYTE           VOICE   18
-        BYTE           VOL     78
+        BYTE           VOL     58
         BYTE           PAN     c_v+31
         BYTE   W96
 // 001   ----------------------------------------
@@ -219,7 +219,7 @@ TheWavesApprentice_1:
         BYTE   KEYSH   TheWavesApprentice_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   30
-        BYTE           VOL     81
+        BYTE           VOL     61
         BYTE           PAN     c_v-26
         BYTE   W96
 // 001   ----------------------------------------
@@ -379,7 +379,7 @@ TheWavesApprentice_2:
         BYTE   KEYSH   TheWavesApprentice_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   39
-        BYTE           VOL     64
+        BYTE           VOL     44
         BYTE           PAN     c_v-8
         BYTE   W96
 // 001   ----------------------------------------
@@ -565,7 +565,7 @@ TheWavesApprentice_3:
 // 000   ----------------------------------------
         BYTE           VOICE   29
         BYTE           PAN     c_v-26
-        BYTE           VOL     82
+        BYTE           VOL     62
         BYTE   W96
 // 001   ----------------------------------------
 TheWavesApprentice_3_LOOP:
@@ -716,7 +716,7 @@ TheWavesApprentice_4:
         BYTE   KEYSH   TheWavesApprentice_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   80
-        BYTE           VOL     64
+        BYTE           VOL     44
         BYTE           PAN     c_v+12
         BYTE   W96
 // 001   ----------------------------------------
@@ -908,7 +908,7 @@ TheWavesApprentice_5:
 // 000   ----------------------------------------
         BYTE           VOICE   123
         BYTE           PAN     c_v-1
-        BYTE           VOL     78
+        BYTE           VOL     58
         BYTE           N05     Dn2   v080
         BYTE           N05     Dn1
         BYTE           N05     En1
@@ -1520,7 +1520,7 @@ TheWavesApprentice_6:
         BYTE   KEYSH   TheWavesApprentice_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     78
+        BYTE           VOL     58
         BYTE   W96
 // 001   ----------------------------------------
 TheWavesApprentice_6_LOOP:
@@ -1715,7 +1715,7 @@ TheWavesApprentice_7:
 // 000   ----------------------------------------
         BYTE           VOICE   121
         BYTE           PAN     c_v-1
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE   W96
 // 001   ----------------------------------------
 TheWavesApprentice_7_LOOP:
@@ -1814,7 +1814,7 @@ TheWavesApprentice_8:
 // 000   ----------------------------------------
         BYTE           VOICE   14
         BYTE           PAN     c_v+12
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE   W96
 // 001   ----------------------------------------
 TheWavesApprentice_8_LOOP:
@@ -2000,7 +2000,7 @@ TheWavesApprentice_9:
         BYTE   KEYSH   TheWavesApprentice_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   113
-        BYTE           VOL     107
+        BYTE           VOL     87
         BYTE   W96
 // 001   ----------------------------------------
 TheWavesApprentice_9_LOOP:
@@ -2083,7 +2083,7 @@ TheWavesApprentice_10:
         BYTE   KEYSH   TheWavesApprentice_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   55
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE           PAN     c_v-13
         BYTE   W96
 // 001   ----------------------------------------

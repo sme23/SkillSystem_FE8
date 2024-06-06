@@ -19,7 +19,7 @@ WellAndTrulyLost_0:
 WellAndTrulyLost_0_LOOP:
         BYTE           VOICE   22
         BYTE           PAN     c_v+20
-        BYTE           VOL     84
+        BYTE           VOL     64
         BYTE           N24     An3   v102
         BYTE   W24
         BYTE                   Gs3
@@ -322,7 +322,7 @@ WellAndTrulyLost_1:
 // 000   ----------------------------------------
 WellAndTrulyLost_1_LOOP:
         BYTE           VOICE   36
-        BYTE           VOL     70
+        BYTE           VOL     50
         BYTE           PAN     c_v+12
         BYTE           N24     An2   v102
         BYTE   W24
@@ -515,7 +515,7 @@ WellAndTrulyLost_2:
 WellAndTrulyLost_2_LOOP:
         BYTE           VOICE   3
         BYTE           PAN     c_v-13
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE   W96
         BYTE   W48
 // 001   ----------------------------------------
@@ -715,7 +715,7 @@ WellAndTrulyLost_3:
 // 000   ----------------------------------------
 WellAndTrulyLost_3_LOOP:
         BYTE           VOICE   121
-        BYTE           VOL     78
+        BYTE           VOL     58
         BYTE           N12     Cn1   v127
         BYTE   W12
         BYTE                   Fs1
@@ -893,7 +893,7 @@ WellAndTrulyLost_4:
 WellAndTrulyLost_4_LOOP:
         BYTE           VOICE   22
         BYTE           PAN     c_v-19
-        BYTE           VOL     72
+        BYTE           VOL     52
         BYTE           N24     En3   v102
         BYTE   W24
         BYTE                   En3
@@ -1046,7 +1046,7 @@ WellAndTrulyLost_5:
 // 000   ----------------------------------------
 WellAndTrulyLost_5_LOOP:
         BYTE           VOICE   121
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE           N12     As1   v127
         BYTE   W48
         BYTE                   As1
@@ -1171,7 +1171,7 @@ WellAndTrulyLost_6:
 // 000   ----------------------------------------
 WellAndTrulyLost_6_LOOP:
         BYTE           VOICE   96
-        BYTE           VOL     64
+        BYTE           VOL     44
         BYTE           PAN     c_v+26
         BYTE   W96
         BYTE   W48

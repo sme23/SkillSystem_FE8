@@ -69,7 +69,7 @@ Text(ChA6BombExplodes)
 EARTHQUAKE_END
 CALL 0x592104
 NoFade
-ENDA
+ENDB
 
 Turn1EP:
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-1,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
@@ -92,6 +92,7 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb5Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(3
 SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(11,14,11,14),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-2,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
+PlayBombMusicIfBombReady(3,16)
 NoFade
 ENDA
 
@@ -110,6 +111,7 @@ BNE 1 s1 sC
 CameraCursor(3,16)
 CALL BombExplodes
 LABEL 1
+ENUF 4
 NoFade
 ENDA
 
@@ -122,6 +124,7 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb6Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(11,14,11,14),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-4,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem)
+PlayBombMusicIfBombReady(11,14)
 NoFade
 ENDA
 
@@ -140,6 +143,7 @@ BNE 1 s1 sC
 CameraCursor(11,14)
 CALL BombExplodes
 LABEL 1
+PlayBombMusicIfBombReady(21,16)
 NoFade
 ENDA
 
@@ -150,7 +154,6 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem)
 
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
-//SetUnitStatusAll(Bomb,CurrentHP,Bomb8Timer-6,AnyDeployed,AnyArmy,AnyClass,Area(21,16,21,16),AnyItem) // Explode!
 CHECK_AT [21,16]
 SMOV s1 Bomb
 BNE 1 s1 sC
@@ -167,16 +170,14 @@ SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-7,AnyDeployed,AnyArmy,AnyClass,Area(1
 SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-7,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem)
 
 SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-7,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem)
+PlayBombMusicIfEitherBombReady(5,8,14,12)
 NoFade
 ENDA
 
 Turn8EP:
 SetUnitStatusAll(Bomb,CurrentHP,Bomb1Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(13,2,13,2),AnyItem)
-//SetUnitStatusAll(Bomb,CurrentHP,Bomb2Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(5,8,5,8),AnyItem) // Explode!
 SetUnitStatusAll(Bomb,CurrentHP,Bomb3Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(12,10,12,10),AnyItem)
 SetUnitStatusAll(Bomb,CurrentHP,Bomb4Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(19,6,19,6),AnyItem)
-
-//SetUnitStatusAll(Bomb,CurrentHP,Bomb7Timer-8,AnyDeployed,AnyArmy,AnyClass,Area(14,12,14,12),AnyItem) // Explode!
 CHECK_AT [5,8]
 SMOV s1 Bomb
 BNE 1 s1 sC
@@ -189,6 +190,7 @@ BNE 2 s1 sC
 CameraCursor(14,12)
 CALL BombExplodes
 LABEL 2
+PlayBombMusicIfBombReady(19,6)
 NoFade
 ENDA
 
@@ -202,6 +204,7 @@ BNE 1 s1 sC
 CameraCursor(19,6)
 CALL BombExplodes
 LABEL 1
+PlayBombMusicIfBombReady(12,10)
 NoFade
 ENDA
 
@@ -214,6 +217,7 @@ BNE 1 s1 sC
 CameraCursor(12,10)
 CALL BombExplodes
 LABEL 1
+PlayBombMusicIfBombReady(13,2)
 NoFade
 ENDA
 

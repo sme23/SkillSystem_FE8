@@ -186,3 +186,8 @@
 
 // Hub B5
 #define Nicodemus 0xDB
+
+// Chapter 3
+#define Dalila 0x7B
+#define AlonsoChapter3 0x7C
+#define BlackheartElite 0x7D

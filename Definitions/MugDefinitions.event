@@ -68,6 +68,7 @@
 #define IdaMug $51
 #define SargargalaMug $52
 #define SagargalaMug SargargalaMug
+#define JozefMug $53
 
 #define RedFSoldierMug $4F
 
@@ -89,8 +90,8 @@
 #define DicerMug $41
 
 // A-6 placeholders, these are all Khazhak
-#define SantiagoMug $31
-#define RochefortMug $31
+#define SantiagoMug $59
+#define RochefortMug $58
 
 
 // B1 Units
@@ -109,6 +110,9 @@
 
 // B-5 Placeholders
 #define NicodemusMug 0x20
+
+// Chapter 3 Placeholder
+#define DalilaMug 0x21
 
 //CLASS CARDS
 

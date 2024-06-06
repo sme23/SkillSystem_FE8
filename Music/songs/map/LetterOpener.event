@@ -17,7 +17,7 @@ LetterOpener_0:
 // 000   ----------------------------------------
         BYTE   TEMPO   104/2
         BYTE           VOICE   39
-        BYTE           VOL     57
+        BYTE           VOL     37
         BYTE           PAN     c_v-13
         BYTE   W96
 // 001   ----------------------------------------
@@ -233,7 +233,7 @@ LetterOpener_1:
 // 000   ----------------------------------------
         BYTE           VOICE   29
         BYTE           PAN     c_v+8
-        BYTE           VOL     67
+        BYTE           VOL     47
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -380,7 +380,7 @@ LetterOpener_2:
 // 000   ----------------------------------------
         BYTE           VOICE   100
         BYTE           PAN     c_v+37
-        BYTE           VOL     56
+        BYTE           VOL     36
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -626,7 +626,7 @@ LetterOpener_2_27:
 // 045   ----------------------------------------
         BYTE   W96
 // 046   ----------------------------------------
-        BYTE           VOL     56
+        BYTE           VOL     36
         BYTE   GoTo
          POIN2  LetterOpener_2_LOOP
         BYTE   W24
@@ -638,7 +638,7 @@ LetterOpener_3:
         BYTE   KEYSH   LetterOpener_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   24
-        BYTE           VOL     70
+        BYTE           VOL     50
         BYTE           PAN     c_v-8
         BYTE   W90
         BYTE           N48     Ds2   v110   gtp3
@@ -694,7 +694,7 @@ LetterOpener_3_4:
         BYTE   W48
         BYTE   PEND
 // 005   ----------------------------------------
-        BYTE           VOL     78
+        BYTE           VOL     58
         BYTE   W96
 // 006   ----------------------------------------
 LetterOpener_3_LOOP:
@@ -822,7 +822,7 @@ LetterOpener_4:
 // 000   ----------------------------------------
         BYTE           VOICE   65
         BYTE           PAN     c_v+20
-        BYTE           VOL     75
+        BYTE           VOL     55
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -1027,7 +1027,7 @@ LetterOpener_5:
         BYTE   KEYSH   LetterOpener_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   52
-        BYTE           VOL     57
+        BYTE           VOL     37
         BYTE           PAN     c_v-19
         BYTE   W96
 // 001   ----------------------------------------
@@ -1183,7 +1183,7 @@ LetterOpener_6:
         BYTE   KEYSH   LetterOpener_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     63
+        BYTE           VOL     43
         BYTE           N18     Fs1   v102
         BYTE           N18     Cs1
         BYTE   W18
@@ -1399,7 +1399,7 @@ LetterOpener_7:
         BYTE   KEYSH   LetterOpener_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   80
-        BYTE           VOL     60
+        BYTE           VOL     40
         BYTE           PAN     c_v+4
         BYTE   W96
 // 001   ----------------------------------------
@@ -1815,7 +1815,7 @@ LetterOpener_8:
         BYTE   KEYSH   LetterOpener_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   123
-        BYTE           VOL     94
+        BYTE           VOL     74
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96

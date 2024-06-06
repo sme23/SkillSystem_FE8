@@ -18,7 +18,7 @@ FinInTheClouds_0:
         BYTE   TEMPO   220/2
         BYTE           VOICE   21
         BYTE           PAN     c_v+27
-        BYTE           VOL     95
+        BYTE           VOL     75
         BYTE           N48     Gs3   v089
         BYTE           N48     Cs3
         BYTE   W48
@@ -179,7 +179,7 @@ FinInTheClouds_1:
 // 000   ----------------------------------------
         BYTE           VOICE   39
         BYTE           PAN     c_v-19
-        BYTE           VOL     59
+        BYTE           VOL     39
         BYTE           N12     Cs3   v102
         BYTE   W12
         BYTE                   Gs2
@@ -371,7 +371,7 @@ FinInTheClouds_2:
         BYTE   KEYSH   FinInTheClouds_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     87
+        BYTE           VOL     67
         BYTE           N24     Cn1   v108
         BYTE   W24
         BYTE           N12     Fs1
@@ -647,7 +647,7 @@ FinInTheClouds_3:
 // 000   ----------------------------------------
         BYTE           VOICE   42
         BYTE           PAN     c_v-26
-        BYTE           VOL     73
+        BYTE           VOL     53
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -820,7 +820,7 @@ FinInTheClouds_4:
         BYTE   KEYSH   FinInTheClouds_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   6
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE           PAN     c_v+31
         BYTE   W96
 // 001   ----------------------------------------
@@ -969,7 +969,7 @@ FinInTheClouds_5:
         BYTE   KEYSH   FinInTheClouds_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   19
-        BYTE           VOL     67
+        BYTE           VOL     47
         BYTE           PAN     c_v-26
         BYTE   W96
 // 001   ----------------------------------------
@@ -1079,7 +1079,7 @@ FinInTheClouds_6:
 // 000   ----------------------------------------
         BYTE           VOICE   41
         BYTE           PAN     c_v-7
-        BYTE           VOL     76
+        BYTE           VOL     56
         BYTE           N12     Gs4   v083
         BYTE   W12
         BYTE                   Cs4

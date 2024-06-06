@@ -18,7 +18,7 @@ LastDanceSinkingShip_0:
         BYTE   TEMPO   120/2
         BYTE           VOICE   22
         BYTE           PAN     c_v+12
-        BYTE           VOL     76
+        BYTE           VOL     66
         BYTE           N24     Dn3   v102
         BYTE   W24
         BYTE                   Fn3
@@ -201,7 +201,7 @@ LastDanceSinkingShip_1:
 // 000   ----------------------------------------
         BYTE           VOICE   6
         BYTE           PAN     c_v-19
-        BYTE           VOL     70
+        BYTE           VOL     60
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -453,7 +453,8 @@ LastDanceSinkingShip_2:
         BYTE   KEYSH   LastDanceSinkingShip_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   124
-        BYTE           VOL     95
+        BYTE           PAN     c_v-1
+        BYTE           VOL     85
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W72
@@ -463,30 +464,46 @@ LastDanceSinkingShip_2:
 LastDanceSinkingShip_2_LOOP:
         BYTE           N12     Fs1   v102
         BYTE           N12     Cn1
-        BYTE   W24
-        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
+        BYTE           N12     Fs1
         BYTE           N12     Dn1
-        BYTE   W24
-        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
+        BYTE           N12     Fs1
         BYTE           N12     Cn1
-        BYTE   W24
-        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
+        BYTE           N12     Fs1
         BYTE           N12     Dn1
-        BYTE   W24
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
 // 003   ----------------------------------------
 LastDanceSinkingShip_2_3:
         BYTE           N12     Fs1   v102
         BYTE           N12     Cn1
-        BYTE   W24
-        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
+        BYTE           N12     Fs1
         BYTE           N12     Dn1
-        BYTE   W24
-        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
+        BYTE           N12     Fs1
         BYTE           N12     Cn1
-        BYTE   W24
-        BYTE                   Fs1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
+        BYTE           N12     Fs1
         BYTE           N12     Dn1
-        BYTE   W24
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W12
         BYTE   PEND
 // 004   ----------------------------------------
         BYTE   PATT
@@ -511,13 +528,17 @@ LastDanceSinkingShip_2_10:
         BYTE           N24     Cn1   v102
         BYTE           N24     As1
         BYTE   W24
-        BYTE           N12     Fs1
-        BYTE   W24
+        BYTE           N12     Gs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
         BYTE           N24     Cn1
         BYTE           N24     As1
         BYTE   W24
-        BYTE           N12     Fs1
-        BYTE   W24
+        BYTE           N12     Gs1
+        BYTE   W12
+        BYTE                   Fs1
+        BYTE   W12
         BYTE   PEND
 // 011   ----------------------------------------
         BYTE   PATT
@@ -565,17 +586,27 @@ LastDanceSinkingShip_2_10:
         BYTE   PATT
          POIN2  LastDanceSinkingShip_2_3
 // 026   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_10
+LastDanceSinkingShip_2_26:
+        BYTE           N24     Cn1   v102
+        BYTE           N24     As1
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W24
+        BYTE           N24     Cn1
+        BYTE           N24     As1
+        BYTE   W24
+        BYTE           N12     Fs1
+        BYTE   W24
+        BYTE   PEND
 // 027   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_10
+         POIN2  LastDanceSinkingShip_2_26
 // 028   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_10
+         POIN2  LastDanceSinkingShip_2_26
 // 029   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_10
+         POIN2  LastDanceSinkingShip_2_26
 // 030   ----------------------------------------
         BYTE   PATT
          POIN2  LastDanceSinkingShip_2_3
@@ -589,29 +620,103 @@ LastDanceSinkingShip_2_10:
         BYTE   PATT
          POIN2  LastDanceSinkingShip_2_3
 // 034   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+LastDanceSinkingShip_2_34:
+        BYTE           N12     Fs1   v102
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE   PEND
 // 035   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+         POIN2  LastDanceSinkingShip_2_34
 // 036   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+         POIN2  LastDanceSinkingShip_2_34
 // 037   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+         POIN2  LastDanceSinkingShip_2_34
 // 038   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+LastDanceSinkingShip_2_38:
+        BYTE           N12     Fs1   v102
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE           N06     Fs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE           N06     Fs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE   PEND
 // 039   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+         POIN2  LastDanceSinkingShip_2_34
 // 040   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+         POIN2  LastDanceSinkingShip_2_38
 // 041   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_2_3
+        BYTE           N12     Fs1   v102
+        BYTE           N12     Cn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE           N06     Gs1
+        BYTE   W06
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N12
+        BYTE           N12     Cn1
+        BYTE   W24
+        BYTE           N24     Fs1
+        BYTE           N24     Dn1
+        BYTE   W24
 // 042   ----------------------------------------
         BYTE   GoTo
          POIN2  LastDanceSinkingShip_2_LOOP
@@ -624,7 +729,7 @@ LastDanceSinkingShip_3:
 // 000   ----------------------------------------
         BYTE           VOICE   21
         BYTE           PAN     c_v+26
-        BYTE           VOL     50
+        BYTE           VOL     40
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -768,7 +873,7 @@ LastDanceSinkingShip_4:
         BYTE   KEYSH   LastDanceSinkingShip_key+0
 // 000   ----------------------------------------
         BYTE           VOICE   81
-        BYTE           VOL     63
+        BYTE           VOL     53
         BYTE           PAN     c_v-32
         BYTE   W96
 // 001   ----------------------------------------
@@ -970,8 +1075,9 @@ LastDanceSinkingShip_4_20:
 LastDanceSinkingShip_5:
         BYTE   KEYSH   LastDanceSinkingShip_key+0
 // 000   ----------------------------------------
-        BYTE           VOICE   123
-        BYTE           VOL     94
+        BYTE           VOICE   100
+        BYTE           VOL     47
+        BYTE           PAN     c_v+21
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -1039,37 +1145,155 @@ LastDanceSinkingShip_5_LOOP:
 // 032   ----------------------------------------
         BYTE   W96
 // 033   ----------------------------------------
-        BYTE   W48
-        BYTE           N48     Bn3   v102
-        BYTE   W48
+        BYTE   W96
 // 034   ----------------------------------------
 LastDanceSinkingShip_5_34:
-        BYTE           N48     Cs2   v102
-        BYTE   W48
-        BYTE                   Cs2
-        BYTE   W48
+        BYTE           N12     Dn3   v076
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     As2
+        BYTE   W12
         BYTE   PEND
 // 035   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_5_34
+LastDanceSinkingShip_5_35:
+        BYTE           N12     Dn3   v076
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE           N12     Fn3
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     En3
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     En3
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     En3
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     En3
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE   PEND
 // 036   ----------------------------------------
         BYTE   PATT
          POIN2  LastDanceSinkingShip_5_34
 // 037   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_5_34
+        BYTE           N12     Fn3   v076
+        BYTE           N12     As2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE           N12     As2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE           N12     As2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE           N12     As2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Cs3
+        BYTE           N12     Fn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Cs3
+        BYTE           N12     Fn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Cs3
+        BYTE           N12     Fn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Cs3
+        BYTE           N12     Fn3
+        BYTE   W12
 // 038   ----------------------------------------
         BYTE   PATT
          POIN2  LastDanceSinkingShip_5_34
 // 039   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_5_34
+         POIN2  LastDanceSinkingShip_5_35
 // 040   ----------------------------------------
         BYTE   PATT
          POIN2  LastDanceSinkingShip_5_34
 // 041   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_5_34
+        BYTE           N12     Fn2   v076
+        BYTE           N12     An2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE           N12     An2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE           N12     An2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE           N12     An2
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Dn3
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Dn3
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Dn3
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE           N12     Dn3
+        BYTE           N12     Fn2
+        BYTE   W12
 // 042   ----------------------------------------
         BYTE   GoTo
          POIN2  LastDanceSinkingShip_5_LOOP
@@ -1080,9 +1304,9 @@ LastDanceSinkingShip_5_34:
 LastDanceSinkingShip_6:
         BYTE   KEYSH   LastDanceSinkingShip_key+0
 // 000   ----------------------------------------
-        BYTE           VOICE   101
-        BYTE           VOL     57
-        BYTE           PAN     c_v+21
+        BYTE           VOICE   123
+        BYTE           PAN     c_v-26
+        BYTE           VOL     79
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
@@ -1128,12 +1352,16 @@ LastDanceSinkingShip_6_LOOP:
 // 021   ----------------------------------------
         BYTE   W96
 // 022   ----------------------------------------
+        BYTE           N48     Cs2   v102
         BYTE   W96
 // 023   ----------------------------------------
+        BYTE                   Cs2
         BYTE   W96
 // 024   ----------------------------------------
+        BYTE                   Cs2
         BYTE   W96
 // 025   ----------------------------------------
+        BYTE                   Cs2
         BYTE   W96
 // 026   ----------------------------------------
         BYTE   W96
@@ -1150,155 +1378,33 @@ LastDanceSinkingShip_6_LOOP:
 // 032   ----------------------------------------
         BYTE   W96
 // 033   ----------------------------------------
-        BYTE   W96
+        BYTE   W48
+        BYTE                   Bn3
+        BYTE   W48
 // 034   ----------------------------------------
-LastDanceSinkingShip_6_34:
-        BYTE           N12     Dn3   v076
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     As2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     As2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     As2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     As2
-        BYTE   W12
-        BYTE   PEND
+        BYTE                   Cs2
+        BYTE   W96
 // 035   ----------------------------------------
-LastDanceSinkingShip_6_35:
-        BYTE           N12     Dn3   v076
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   Dn3
-        BYTE           N12     Fn3
-        BYTE           N12     An2
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     En3
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     En3
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     En3
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     En3
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE   PEND
+        BYTE                   Cs2
+        BYTE   W96
 // 036   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_6_34
+        BYTE                   Cs2
+        BYTE   W96
 // 037   ----------------------------------------
-        BYTE           N12     Fn3   v076
-        BYTE           N12     As2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   Fn3
-        BYTE           N12     As2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   Fn3
-        BYTE           N12     As2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   Fn3
-        BYTE           N12     As2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Cs3
-        BYTE           N12     Fn3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Cs3
-        BYTE           N12     Fn3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Cs3
-        BYTE           N12     Fn3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Cs3
-        BYTE           N12     Fn3
-        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W96
 // 038   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_6_34
+        BYTE                   Cs2
+        BYTE   W96
 // 039   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_6_35
+        BYTE                   Cs2
+        BYTE   W96
 // 040   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_6_34
+        BYTE                   Cs2
+        BYTE   W96
 // 041   ----------------------------------------
-        BYTE           N12     Fn2   v076
-        BYTE           N12     An2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   Fn2
-        BYTE           N12     An2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   Fn2
-        BYTE           N12     An2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   Fn2
-        BYTE           N12     An2
-        BYTE           N12     Cs3
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Dn3
-        BYTE           N12     Fn2
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Dn3
-        BYTE           N12     Fn2
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Dn3
-        BYTE           N12     Fn2
-        BYTE   W12
-        BYTE                   An2
-        BYTE           N12     Dn3
-        BYTE           N12     Fn2
-        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W96
 // 042   ----------------------------------------
         BYTE   GoTo
          POIN2  LastDanceSinkingShip_6_LOOP
@@ -1309,206 +1415,31 @@ LastDanceSinkingShip_6_35:
 LastDanceSinkingShip_7:
         BYTE   KEYSH   LastDanceSinkingShip_key+0
 // 000   ----------------------------------------
-        BYTE           VOICE   124
-        BYTE           VOL     95
-        BYTE   W96
-// 001   ----------------------------------------
-        BYTE   W96
-// 002   ----------------------------------------
-LastDanceSinkingShip_7_LOOP:
-        BYTE   W12
-        BYTE           N06     Gs1   v102
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W18
-        BYTE                   Gs1
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W18
-        BYTE                   Gs1
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W18
-        BYTE                   Gs1
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W06
-// 003   ----------------------------------------
-LastDanceSinkingShip_7_3:
-        BYTE   W12
-        BYTE           N06     Gs1   v102
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W18
-        BYTE                   Gs1
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W18
-        BYTE                   Gs1
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W18
-        BYTE                   Gs1
-        BYTE   W06
-        BYTE                   Fs1
-        BYTE   W06
-        BYTE   PEND
-// 004   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 005   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 006   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 007   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 008   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 009   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 010   ----------------------------------------
-LastDanceSinkingShip_7_10:
-        BYTE   W36
-        BYTE           N12     Fs1   v102
-        BYTE           N12     Dn1
-        BYTE   W48
-        BYTE                   Fs1
-        BYTE           N12     Dn1
-        BYTE   W12
-        BYTE   PEND
-// 011   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 012   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 013   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 014   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 015   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 016   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 017   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 018   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 019   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 020   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 021   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 022   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 023   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 024   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 025   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 026   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 027   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 028   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 029   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_10
-// 030   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 031   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 032   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 033   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 034   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 035   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 036   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 037   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 038   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 039   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 040   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 041   ----------------------------------------
-        BYTE   PATT
-         POIN2  LastDanceSinkingShip_7_3
-// 042   ----------------------------------------
-        BYTE   GoTo
-         POIN2  LastDanceSinkingShip_7_LOOP
-        BYTE   FINE
-
-//****************** Track 8 (Midi-Chn.8) ******************//
-
-LastDanceSinkingShip_8:
-        BYTE   KEYSH   LastDanceSinkingShip_key+0
-// 000   ----------------------------------------
         BYTE           VOICE   14
-        BYTE           VOL     63
+        BYTE           VOL     54
         BYTE           PAN     c_v+18
         BYTE   W96
 // 001   ----------------------------------------
         BYTE   W96
 // 002   ----------------------------------------
-LastDanceSinkingShip_8_LOOP:
+LastDanceSinkingShip_7_LOOP:
         BYTE   W72
         BYTE           N48     An3   v102
         BYTE   W24
 // 003   ----------------------------------------
-LastDanceSinkingShip_8_3:
+LastDanceSinkingShip_7_3:
         BYTE   W72
         BYTE           N48     As3   v102
         BYTE   W24
         BYTE   PEND
 // 004   ----------------------------------------
-LastDanceSinkingShip_8_4:
+LastDanceSinkingShip_7_4:
         BYTE   W72
         BYTE           N48     An3   v102
         BYTE   W24
         BYTE   PEND
 // 005   ----------------------------------------
-LastDanceSinkingShip_8_5:
+LastDanceSinkingShip_7_5:
         BYTE   W72
         BYTE           N24     An2   v102
         BYTE   W24
@@ -1520,36 +1451,36 @@ LastDanceSinkingShip_8_5:
         BYTE   W24
 // 007   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_3
+         POIN2  LastDanceSinkingShip_7_3
 // 008   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_4
+         POIN2  LastDanceSinkingShip_7_4
 // 009   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_5
+         POIN2  LastDanceSinkingShip_7_5
 // 010   ----------------------------------------
-LastDanceSinkingShip_8_10:
+LastDanceSinkingShip_7_10:
         BYTE           N48     Dn3   v102
         BYTE   W48
         BYTE                   Dn3
         BYTE   W48
         BYTE   PEND
 // 011   ----------------------------------------
-LastDanceSinkingShip_8_11:
+LastDanceSinkingShip_7_11:
         BYTE           N48     Fn3   v102
         BYTE   W48
         BYTE                   En3
         BYTE   W48
         BYTE   PEND
 // 012   ----------------------------------------
-LastDanceSinkingShip_8_12:
+LastDanceSinkingShip_7_12:
         BYTE           N48     Dn3   v102
         BYTE   W48
         BYTE                   Fn3
         BYTE   W48
         BYTE   PEND
 // 013   ----------------------------------------
-LastDanceSinkingShip_8_13:
+LastDanceSinkingShip_7_13:
         BYTE           N48     As3   v102
         BYTE   W48
         BYTE                   An3
@@ -1557,40 +1488,40 @@ LastDanceSinkingShip_8_13:
         BYTE   PEND
 // 014   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_10
+         POIN2  LastDanceSinkingShip_7_10
 // 015   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_11
+         POIN2  LastDanceSinkingShip_7_11
 // 016   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_12
+         POIN2  LastDanceSinkingShip_7_12
 // 017   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_13
+         POIN2  LastDanceSinkingShip_7_13
 // 018   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_10
+         POIN2  LastDanceSinkingShip_7_10
 // 019   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_11
+         POIN2  LastDanceSinkingShip_7_11
 // 020   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_12
+         POIN2  LastDanceSinkingShip_7_12
 // 021   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_13
+         POIN2  LastDanceSinkingShip_7_13
 // 022   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_10
+         POIN2  LastDanceSinkingShip_7_10
 // 023   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_11
+         POIN2  LastDanceSinkingShip_7_11
 // 024   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_12
+         POIN2  LastDanceSinkingShip_7_12
 // 025   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_13
+         POIN2  LastDanceSinkingShip_7_13
 // 026   ----------------------------------------
         BYTE   W96
 // 027   ----------------------------------------
@@ -1601,16 +1532,16 @@ LastDanceSinkingShip_8_13:
         BYTE   W96
 // 030   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_10
+         POIN2  LastDanceSinkingShip_7_10
 // 031   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_11
+         POIN2  LastDanceSinkingShip_7_11
 // 032   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_12
+         POIN2  LastDanceSinkingShip_7_12
 // 033   ----------------------------------------
         BYTE   PATT
-         POIN2  LastDanceSinkingShip_8_13
+         POIN2  LastDanceSinkingShip_7_13
 // 034   ----------------------------------------
         BYTE   W96
 // 035   ----------------------------------------
@@ -1629,7 +1560,555 @@ LastDanceSinkingShip_8_13:
         BYTE   W96
 // 042   ----------------------------------------
         BYTE   GoTo
+         POIN2  LastDanceSinkingShip_7_LOOP
+        BYTE   FINE
+
+//****************** Track 8 (Midi-Chn.8) ******************//
+
+LastDanceSinkingShip_8:
+        BYTE   KEYSH   LastDanceSinkingShip_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   124
+        BYTE           PAN     c_v+25
+        BYTE           VOL     85
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+LastDanceSinkingShip_8_LOOP:
+        BYTE   W18
+        BYTE           N06     Fs1   v102
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W06
+// 003   ----------------------------------------
+LastDanceSinkingShip_8_3:
+        BYTE   W18
+        BYTE           N06     Fs1   v102
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 010   ----------------------------------------
+LastDanceSinkingShip_8_10:
+        BYTE   W36
+        BYTE           N12     Dn1   v102
+        BYTE   W48
+        BYTE                   Dn1
+        BYTE   W12
+        BYTE   PEND
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_10
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_10
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_10
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_10
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_10
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_10
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_10
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 022   ----------------------------------------
+LastDanceSinkingShip_8_22:
+        BYTE   W18
+        BYTE           N06     Fs1   v102
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE           N48     Cs2
+        BYTE   W18
+        BYTE           N06     Fs1
+        BYTE   W24
+        BYTE                   Fs1
+        BYTE   W06
+        BYTE   PEND
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_22
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_22
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_22
+// 026   ----------------------------------------
+LastDanceSinkingShip_8_26:
+        BYTE   W36
+        BYTE           N12     Fs1   v102
+        BYTE           N12     Dn1
+        BYTE   W48
+        BYTE                   Fs1
+        BYTE           N12     Dn1
+        BYTE   W12
+        BYTE   PEND
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_26
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_26
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_26
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_3
+// 034   ----------------------------------------
+LastDanceSinkingShip_8_34:
+        BYTE   W48
+        BYTE           N48     Cs2   v102
+        BYTE   W48
+        BYTE   PEND
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_34
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_34
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_34
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_34
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_34
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_34
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_8_34
+// 042   ----------------------------------------
+        BYTE   GoTo
          POIN2  LastDanceSinkingShip_8_LOOP
+        BYTE   FINE
+
+//***************** Track 9 (Midi-Chn.10) ******************//
+
+LastDanceSinkingShip_9:
+        BYTE   KEYSH   LastDanceSinkingShip_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   117
+        BYTE           VOL     66
+        BYTE           PAN     c_v-13
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+LastDanceSinkingShip_9_LOOP:
+        BYTE   W12
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W18
+        BYTE           N12     An3
+        BYTE   W12
+// 003   ----------------------------------------
+LastDanceSinkingShip_9_3:
+        BYTE   W12
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W18
+        BYTE           N12     As3
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+LastDanceSinkingShip_9_4:
+        BYTE   W12
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W18
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE   PEND
+// 005   ----------------------------------------
+LastDanceSinkingShip_9_5:
+        BYTE   W12
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W18
+        BYTE           N12     Fn3
+        BYTE   W12
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_4
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_3
+// 008   ----------------------------------------
+LastDanceSinkingShip_9_8:
+        BYTE   W12
+        BYTE           N06     Cs3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   Cs3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE   W06
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Cs3
+        BYTE   W12
+        BYTE   PEND
+// 009   ----------------------------------------
+LastDanceSinkingShip_9_9:
+        BYTE   W12
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W18
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Cs3
+        BYTE   W18
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE   PEND
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+LastDanceSinkingShip_9_14:
+        BYTE           N06     Dn3   v089
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE           N24
+        BYTE   W24
+        BYTE   PEND
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_14
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_14
+// 017   ----------------------------------------
+        BYTE           N06     Dn3   v089
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W24
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE           N24     En3
+        BYTE   W24
+// 018   ----------------------------------------
+LastDanceSinkingShip_9_18:
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE                   An3
+        BYTE   W24
+        BYTE   PEND
+// 019   ----------------------------------------
+LastDanceSinkingShip_9_19:
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE                   As3
+        BYTE   W24
+        BYTE   PEND
+// 020   ----------------------------------------
+LastDanceSinkingShip_9_20:
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE                   Fn3
+        BYTE   W24
+        BYTE   PEND
+// 021   ----------------------------------------
+        BYTE           N06     Dn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W24
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_18
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_19
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_20
+// 025   ----------------------------------------
+        BYTE           N06     Dn3   v089
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12
+        BYTE   W12
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE           N12     En3
+        BYTE   W12
+        BYTE                   Cs3   v102
+        BYTE   W12
+// 026   ----------------------------------------
+        BYTE           N24     Dn3   v089
+        BYTE   W24
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE           N24     Fn3
+        BYTE   W24
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+// 027   ----------------------------------------
+        BYTE           N24     As3
+        BYTE   W24
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE           N24     En3
+        BYTE   W24
+        BYTE           N12     Fn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+// 028   ----------------------------------------
+        BYTE           N24     Dn3
+        BYTE   W24
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE           N24     En3
+        BYTE   W24
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+// 029   ----------------------------------------
+        BYTE           N24     Fn3
+        BYTE   W24
+        BYTE           N12     En3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE           N24     Cs3
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W24
+// 030   ----------------------------------------
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE           N12     En3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE           N24     As3
+        BYTE   W24
+        BYTE           N12     Gn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+// 031   ----------------------------------------
+        BYTE           N24     As3
+        BYTE   W24
+        BYTE           N12     Cn4
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N24     An3
+        BYTE   W24
+        BYTE           N12     Fn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+// 032   ----------------------------------------
+        BYTE           N24     Dn3
+        BYTE   W24
+        BYTE                   An2
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W24
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Cs3
+        BYTE   W12
+// 033   ----------------------------------------
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE                   Cs3
+        BYTE   W24
+        BYTE           N48     Dn3
+        BYTE   W48
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_4
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_3
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_4
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_5
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_4
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_3
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_8
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  LastDanceSinkingShip_9_9
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  LastDanceSinkingShip_9_LOOP
         BYTE   FINE
 
 
@@ -1637,7 +2116,7 @@ LastDanceSinkingShip_8_13:
 
         ALIGN 4
 LastDanceSinkingShip:
-        BYTE   9                       // Num Tracks
+        BYTE   10                      // Num Tracks
         BYTE   0                       // Unknown
         BYTE   LastDanceSinkingShip_pri // Priority
         BYTE   LastDanceSinkingShip_rev // Reverb
@@ -1653,5 +2132,6 @@ LastDanceSinkingShip:
         POIN2   LastDanceSinkingShip_6
         POIN2   LastDanceSinkingShip_7
         POIN2   LastDanceSinkingShip_8
+        POIN2   LastDanceSinkingShip_9
 
         

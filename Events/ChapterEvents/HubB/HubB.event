@@ -125,8 +125,16 @@ UNIT
 BeginningScene:
 WEATHER 7
 ENUT LuaInAHubFlag
-BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
-FADI 10
+//BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
+//CheckHowManyHubChaptersCompleted
+//SVAL s1 5 //if 5 chapters completed
+//SVAL sC 5
+//BNE 2 s1 sC
+    MNC2 Chapter3
+    NoFade
+    ENDB
+//LABEL 2
+//FADI 10
 STAL 1
 GotoPrepScreenHub
 NoFade

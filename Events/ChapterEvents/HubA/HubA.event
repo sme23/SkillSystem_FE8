@@ -465,6 +465,7 @@ BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
 ENUT GotoChapter2Flag
+ENUT PeddlerHubAEncounterFlag
 ENUT 4 //port music only
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
@@ -746,6 +747,7 @@ ENUF ReadyForTakeoffFlag
 ENUF IgniswordsDead
 ENUF PilarEstelleHubATalkFlag
 ENUF DesiderioIdaHubATalkFlag
+ENUF PeddlerHubAEncounterFlag
 CALL BackFromBaseTraps
 CALL PortSpawnEvent  //unset all chapter flags and port flags so you can walk around
 LoadPlayerUnits(LuaInDaHub)

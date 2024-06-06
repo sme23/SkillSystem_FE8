@@ -55,6 +55,9 @@ SoundRoomEntry(ToTheSkiesID, 0, SongName_ToTheSkies)
 SoundRoomEntry(FinInTheCloudsID, 0, SongName_FinInTheClouds)
 SoundRoomEntry(LetterOpenerID, 0, SongName_LetterOpener)
 SoundRoomEntry(TheWavesApprenticeID, 0, SongName_TheWavesApprenticeID)
+SoundRoomEntry(TougherTussleID, 0, SongName_TougherTussleID)
+SoundRoomEntry(TimesTickingID, 0, SongName_TimesTickingID)
+SoundRoomEntry(CastawayHeartID, 0, SongName_CastawayHeart)
 SoundRoomTerminator
 
 

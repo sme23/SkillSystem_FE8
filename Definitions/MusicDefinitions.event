@@ -25,6 +25,9 @@
 #define FinInTheCloudsID 0x1C
 #define LetterOpenerID 0x1D
 #define TheWavesApprenticeID 0x1E
+#define TougherTussleID 0x1F
+#define TimesTickingID 0x20
+#define CastawayHeartID 0x21
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47
