@@ -18,6 +18,8 @@ dat 0x02026B90, gTempSkillBuffer
 dat 0x02027200, gAuraSkillBuffer     
 dat 0x0202764C, gUnitRangeBuffer     
 
+dat 0x0203F100, gDebuffTable
+
 @ NewBattleFollowUpOrder
 fun __divsi3,   __aeabi_idiv
 fun __modsi3,   __aeabi_idivmod

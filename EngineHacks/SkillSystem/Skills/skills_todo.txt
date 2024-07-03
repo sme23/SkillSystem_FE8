@@ -1,0 +1,2 @@
+- Blue Flame may be unnecessarily split into 2 functions
+- Charge has an additional hack to make it work with enemies that needs converted
