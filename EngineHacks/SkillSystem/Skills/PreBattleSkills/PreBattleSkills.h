@@ -4,6 +4,7 @@
 #include "bmmap.h"
 #include "types.h"
 #include "variables.h"
+#include "sio.h"
 
 // debuff table 0-entry data structure
 struct ExternData {
@@ -169,6 +170,11 @@ extern u8 WrathID_Link;
 extern u8 NiceThighsID_Link;
 extern u8 PersonalityID_Link;
 
+//FlankSwarmScale transplants
+extern int SwarmBonusDamagePercent; 
+extern int FlankBonusDamagePercent; 
+extern int FlankRequiresSkill_Link; 
+
 //extern data
 extern u8 IndoorTerrainList;
 
@@ -229,6 +235,22 @@ void IndoorFighter(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 void OutdoorFighter(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 void DoubleLion(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 void Dragonskin(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void ElbowRoom(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void EarthBoost(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void FireBoost(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void WaterBoost(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void WindBoost(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void EvenRhythm(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Swordfaire(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Lancefaire(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Axefaire(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Bowfaire(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Tomefaire(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void FieryBlood(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Flank(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Swarm(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Multiscale(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void ForeignPrincess(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 
-
-
+void Fortune(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Frenzy(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
