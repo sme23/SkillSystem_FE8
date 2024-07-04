@@ -96,6 +96,7 @@
 #define Bombardier 0x90
 #define Gryphknight 0xa3
 #define Gryphoknight Gryphknight
+#define Gryphoknight_D 0xaa
 
 //MAGE
 
@@ -197,3 +198,4 @@
 #define AxeKnightMapSprite 0x9a
 #define BowKnightMapSprite 0x9b
 #define HorseMapSprite 0x9c
+#define Gryphknight_DMapSprite 0x9d

@@ -947,31 +947,38 @@ UNIT
 
 SpawnNPCVillagerA:
 LoadCutsceneUnits(NPCVillagerGroup)
+NoFade
 ENDA
 
 SpawnNPCVillagerB:
 LoadCutsceneUnits(NPCVillagerBGroup)
+NoFade
 ENDA
 
 SpawnNPCVillagerC:
 LoadCutsceneUnits(NPCVillagerCGroup)
+NoFade
 ENDA
 
 SpawnNPCSailor:
 LoadCutsceneUnits(NPCSailorGroup)
+NoFade
 ENDA
 
 SpawnNPCGuard:
 LoadCutsceneUnits(NPCGuardGroup)
+NoFade
 ENDA
 
 SpawnNPCSmuggler:
 LoadCutsceneUnits(NPCSmugglerGroup)
+NoFade
 ENDA
 
 SpawnNPCPatroller:
 LoadCutsceneUnits(NPCPatrollerGroup)
 SetUnitItemDurability(3, 15, 1, SpdTonic) //unique addition to give the pegasus knight a speed tonic
+NoFade
 ENDA
 
 SpawnArguingNPCs:
@@ -980,6 +987,7 @@ ENDA
 
 SpawnPatronNPCs:
 LoadCutsceneUnits(NPCPatronDrinkingGroup)
+NoFade
 ENDA
 
 // Hub Events
@@ -995,6 +1003,7 @@ CameraCursor(GreagorPeddler)
 Text(PeddlerEncounterEvent)
 MOVE 15 GreagorPeddler [12,12]
 ENUT PeddlerHubAEncounterFlag
+NoFade
 ENDA 
 
 DocksSpawnEvent:

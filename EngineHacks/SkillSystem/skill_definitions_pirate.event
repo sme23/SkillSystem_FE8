@@ -185,7 +185,7 @@
 
 #define CantoAttackID 57
 
-#define ScoutsInstinctID 58
+#define DismountID 58
 
 #define ArcaneArtificeID 59
 

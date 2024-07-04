@@ -26,7 +26,7 @@ INLINE PersonalSkillTable,Skill
 0x18 Husniye,SwiftID
 0x19 Avocado,SmiteID
 0x1A Magdalena,DubiousAdviceID
-0x1B Ernest,ScoutsInstinctID
+0x1B Ernest,DismountID
 0x1C Kai,ArcaneArtificeID
 0x1D Adrian,0x0
 0x1E Lexa,0x0

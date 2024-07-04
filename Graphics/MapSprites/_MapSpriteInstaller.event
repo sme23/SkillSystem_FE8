@@ -600,3 +600,13 @@ ALIGN 4
 HorseMMS:
 #incbin "Dmp/Horse Moving {L95}.dmp"
 
+StandingMapSprite(Gryphknight_DMapSprite,MapSprite16x16, Gryphknight_DSMS)
+MovingMapSprite(Gryphoknight_D, $1C3D7C, Gryphoknight_D)
+
+ALIGN 4
+Gryphknight_DSMS:
+#incbin "Dmp/dismountedlancem (archerbias).dmp"
+
+ALIGN 4
+Gryphknight_DMMS:
+#incbin "Dmp/dismountlancemmove (archerbias).dmp"

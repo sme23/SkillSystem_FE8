@@ -219,3 +219,15 @@ Unequip[X]
 Remove this equipment.[X]
 
 #include "soundroom_text.txt"
+
+## Dismount_Name_TextID
+ Dismount[X]
+
+## Dismount_Description_TextID
+Time to march?[X]
+
+## Mount_Name_TextID
+ Mount[X]
+
+## Mount_Description_TextID
+Ready to ride?[X]

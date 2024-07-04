@@ -3,6 +3,7 @@
 #define SeenHubB3Pitch 9
 #define SeenHubB4Pitch 10
 #define SeenHubB5Pitch 11
+#define Turn1EventFlag 12
 
 EventPointerTable(HubBEventsID, PointerList)
 
@@ -19,67 +20,68 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(Turn1EventFlag, Turn1Event, 1)
 END_MAIN
 
+Turn1Event:
+LoadCutsceneUnits(HubBQuestGivers)
+CALL QuestGiversGreen
+NoFade
+ENDA
+
 CharacterBasedEvents:
+CharacterEvent(WentToHub1, GotoHubB1, Lua, Razvan)
+CharacterEvent(WentToHub2, GotoHubB2, Lua, Rahel)
+CharacterEvent(WentToHub3, GotoHubB3, Lua, Desiderio)
+CharacterEvent(WentToHub4, GotoHubB4, Lua, Orlando)
+CharacterEvent(WentToHub5, GotoHubB5, Lua, Pilar)
 END_MAIN
 
 LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-AREA WentToHub1 GotoHubB1 [4,12] [4,12]
-AREA WentToHub2 GotoHubB2 [2, 17] [2, 17]
-AREA WentToHub3 GotoHubB3 [7, 17] [7, 17]
-AREA WentToHub4 GotoHubB4 [2,23] [2,23]
-AREA WentToHub5 GotoHubB5 [7,23] [7,23]
 AFEV 0 RefreshLua 0
 END_MAIN
 
 GotoHubB1:
-CenterTextbox(HubB1Prompt)
-GotoHubChapterIfYes(1, HubB_1)
+// razvan
+HubChapterFirstTimeEvent(1, SeenHubB1Pitch, HubB1Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_1, Castle_Hall_Night, HubB)
+GotoHubChapterIfYesHubB(2, HubB_1, HubB1Accepted)
 ENUF WentToHub1
 NoFade
 ENDA
 
-/*
 GotoHubB2:
-// note that this should display B-2b, but actually send you to B-2a
-// because B-2 is two chapters in a trenchcoat
-CenterTextbox(HubB2Prompt)
-GotoHubChapterIfYes(1, HubB_2a)
-ENUF WentToHub2
-NoFade
-ENDA
-*/
-
-GotoHubB2:
-// should be triggered by talking to desiderio
+// changing this to rahel
 HubChapterFirstTimeEvent(1, SeenHubB2Pitch, HubB2Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubB_2a, Harbor, HubB)
 // FancyChapterPreview(HubB_2a, Harbor, HubB)
-GotoHubChapterIfYes(2, HubB_2a, HubB2Selection_Yes)
+GotoHubChapterIfYesHubB(2, HubB_2a, HubB2Selection_Yes)
 ENUF WentToHub2
 Text(HubB2Selection_No)
 NoFade
 ENDA
 
 GotoHubB3:
+// desiderio's 
 HubChapterFirstTimeEvent(1, SeenHubB3Pitch, HubB3Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubB_3, Castle_Hall_Night, HubB)
-GotoHubChapterIfYes(2, HubB_3, HubB3Accepted)
+GotoHubChapterIfYesHubB(2, HubB_3, HubB3Accepted)
 ENUF WentToHub3
 NoFade
 ENDA
 
 GotoHubB4:
+// orlando
 HubChapterFirstTimeEvent(1, SeenHubB4Pitch, HubB4Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubB_4, Castle_Hall_Night, HubB)
-GotoHubChapterIfYes(2, HubB_4, HubB4Accepted)
+GotoHubChapterIfYesHubB(2, HubB_4, HubB4Accepted)
 ENUF WentToHub4
 NoFade
 ENDA
@@ -89,7 +91,7 @@ GotoHubB5:
 HubChapterFirstTimeEvent(1, SeenHubB5Pitch, HubB5Pitch)
 FancyChapterMapOffset(-1,-1)
 FancyChapterPreview(HubB_5, Forest_Dense, HubB)
-GotoHubChapterIfYes(2, HubB_5, HubB5Accepted)
+GotoHubChapterIfYesHubB(2, HubB_5, HubB5Accepted)
 ENUF WentToHub5
 Text(HubB5Rejected)
 NoFade
@@ -123,45 +125,98 @@ UNIT Ponte 0 0 Level(7,Ally,False) [5,22] 0 0 0 0 [Hammer, Hammer] NoAI
 UNIT 
 
 BeginningScene:
+LoadPlayerUnits(NewUnits)
 WEATHER 7
 ENUT LuaInAHubFlag
-//BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
+BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
 //CheckHowManyHubChaptersCompleted
 //SVAL s1 5 //if 5 chapters completed
 //SVAL sC 5
 //BNE 2 s1 sC
-    MNC2 Chapter3
-    NoFade
-    ENDB
+//MNC2 Chapter3
+//NoFade
+//ENDB
 //LABEL 2
 //FADI 10
+STAL 1
+FADI 15
+SpawnQuestSigil(WentToHub1, 776, RedSigilTrapID, 4, 12)
+SpawnQuestSigil(WentToHub2, 777, RedSigilTrapID, 2, 17)
+SpawnQuestSigil(WentToHub3, 778, RedSigilTrapID, 7, 17)
+SpawnQuestSigil(WentToHub4, 779, RedSigilTrapID, 2, 23)
+SpawnQuestSigil(WentToHub5, 780, RedSigilTrapID, 7, 23)
 STAL 1
 GotoPrepScreenHub
 NoFade
 ENDA
 
+QuestGiversGreen:
+CUSN Razvan
+CUSN Rahel
+CUSN Desiderio
+CUSN Orlando
+CUSN Pilar
+NoFade
+ENDA
+
+QuestGiversBlue:
+CUSA Razvan
+CUSA Rahel
+CUSA Desiderio
+CUSA Orlando
+CUSA Pilar
+NoFade
+ENDA
+
+HubBQuestGivers:
+UNIT Razvan Curate 0 Level(10,Ally,False) [4,12] 0 0 0 0 [0x0] NoAI
+UNIT Rahel BowCav 0 Level(10,Ally,False) [2,17] 0 0 0 0 [0x0] NoAI
+UNIT Desiderio Vanguard 0 Level(10,Ally,False) [7,17] 0 0 0 0 [0x0] NoAI
+UNIT Orlando Trickster 0 Level(10,Ally,False) [2,23] 0 0 0 0 [0x0] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [7,23] 0 0 0 0 [0x0] NoAI
+UNIT
+
 BeginningSceneFirstTimeInHuB:
 SetBackground(Ship)
+MUSC StillZephyrsID
 Text(HubB_BeginningScene_1_1)
 SetBackground(Harbor)
 Text(HubB_BeginningScene_1_2)
+FADI 15
+STAL 60
+FADU 15
+MUSC CastawayHeartID
 Text(HubB_BeginningScene_1_3)
 Text(HubB_BeginningScene_1_4)
 SetBackground(Ship)
 Text(HubB_BeginningScene_1_5)
 Text(HubB_BeginningScene_1_6)
+FADI 15
+STAL 60
 SetBackground(Inn)
+MUSC StillZephyrsID
 Text(HubB_BeginningScene_2_1)
-Text(HubB_BeginningScene_2_2)
-
+TEXTSTART
+TEXTSHOW HubB_BeginningScene_2_2
+TEXTEND
+FadeOutMusic
+STAL 30
+MUSC OrlandoThemeID
+TEXTCONT
+TEXTEND
+REMA
+FADI 15
+STAL 60
 SetBackground(Castle_Hall)
+MUSC MeetTheCrewID
 Text(HubB_BeginningScene_3_1)
 
-//todo: add a reaction from every other crew member except the main 3
+//todo: add a reaction from every other crew member except the main 3?
 
 Text(HubB_BeginningScene_3_2_Rahel)
 Text(HubB_BeginningScene_3_2_Orlando)
 
+MUSC NewHandsOnDeckID
 Text(HubB_BeginningScene_3_3)
 Text(HubB_BeginningScene_3_4)
 Text(HubB_BeginningScene_3_5)
@@ -172,12 +227,12 @@ SoloTextbox(HubB_BeginningScene_3_6, 104, 200)
 STAL 30
 SoloTextboxCenter(HubB_BeginningScene_3_7)
 STAL 30
-
+FADI 5
+FadeOutMusic
+STAL 60
+SetBackground(Inn)
 LocationText(HubB_BeginningScene_4_1, 8, 8)
 Text(HubB_BeginningScene_4_2)
-
-
-LoadPlayerUnits(NewUnits)
 NoFade
 ENDA
 

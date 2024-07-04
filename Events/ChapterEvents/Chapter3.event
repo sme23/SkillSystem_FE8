@@ -138,6 +138,21 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+SetBackground(Inn)
+Text(Ch3BeginningScene1_1)
+Text(Ch3BeginningScene1_2)
+Text(Ch3BeginningScene1_3)
+SetBackground(Ship)
+Text(Ch3BeginningScene2)
+// scene change
+Text(Ch3BeginningScene3_1)
+Text(Ch3BeginningScene3_2)
+// camera cursor razvan
+Text(Ch3BeginningScene3_3Razvan)
+// camera cursor Pilar
+Text(Ch3BeginningScene3_3Pilar)
+// camera cursor Desiderio
+Text(Ch3BeginningScene3_3Desiderio)
 WEATHER 7
 STAL 5
 LoadEnemies(LeftSideUnits)
@@ -147,7 +162,25 @@ GotoPrepScreen
 NoFade
 ENDA
 
+AlonsoWarningEvent:
+CameraCursor(Alonso)
+Text(Ch3MidMapAlonsoWarning)
+NoFade
+ENDA
+
 EndingScene:
+MUSC 0x7FFF
+//prob load in dudes here
+SetBackground(Ship)
+Text(Ch3EndingScene1)
+// some eventing
+Text(Ch3EndingScene2)
+// some eventing 
+Text(Ch3EndingScene3)
+//some eventing
+Text(Ch3EndingScene4)
+SetBackground(Inn)
+Text(Ch3EndingScene5)
 NoFade
 ENDA
 

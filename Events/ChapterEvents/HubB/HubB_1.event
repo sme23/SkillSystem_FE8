@@ -13,8 +13,8 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0, ThiefSpawnA, 4)
-TurnEventPlayer(0, ThiefSpawnB, 5)
+TurnEventPlayer(0, ThiefSpawnB, 6)
+TurnEventPlayer(0, ThiefSpawnC, 7)
 END_MAIN
 
 CharacterBasedEvents:
@@ -96,8 +96,8 @@ UNIT Antlion Mercenary 0 Level(9, Enemy, True) [6,18] 0 0 0 0 [SteelSword] Attac
 UNIT Antlion Myrmidon 0 Level(9, Enemy, True) [11,17] 0 0 0 0 [Lancereaver] AttackWhenInRangeAI
 UNIT Antlion Shaman 0 Level(10, Enemy, True) [12,20] 0 0 0 0 [Elfire] AttackWhenInRangeAI
 UNIT Antlion Warden 0 Level(10, Enemy, True) [5,19] 0 0 0 0 [SteelBlade,Horseslayer] AttackInTwoAI
-UNIT Antlion Gunner 0 Level(10, Enemy, True) [15,17] 0 0 0 0 [SteelMusket,Pistol] AttackWhenInRangeAI
-UNIT Antlion Mercenary 0 Level(10, Enemy, True) [16,19] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+UNIT Antlion Gunner 0 Level(10, Enemy, True) [16,17] 0 0 0 0 [SteelMusket,Pistol] AttackWhenInRangeAI
+UNIT Antlion Mercenary 0 Level(10, Enemy, True) [17,19] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
 //nw chest room
 UNIT Antlion Soldier 0 Level(9, Enemy, True) [2,1] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Antlion Mercenary 0 Level(9, Enemy, True) [5,1] 0 0 0 0 [SteelSword] ChargeAI
@@ -131,10 +131,12 @@ UNIT
 
 BeginningScene:
 	SetBackground(Inn)
+	MUSC StillZephyrsID
 	Text(HubB_1BeginningScene1)
 	SetBackground(Desert)
 	Text(HubB_1BeginningScene2)
 	SetBackground(Fort_2)
+	MUSC SwabbieTalkID
 	Text(HubB_1BeginningScene3)
 	FADI 6
 	CLEAN
@@ -147,6 +149,7 @@ BeginningScene:
 	ENUN
 	CamOff
 	CAMERA Lua
+	MUSC AvastMeHeartiesID
 	Text(HubB_1BeginningScene4)
 	FADI 10
 	LOAD1 1 DmitrSpawn
@@ -181,23 +184,16 @@ EndingScene:
 	GoToHubChapter(HubB)
 	ENDA
 
-ThiefSpawnA:
-	CamOn
-	LOAD1 1 ThiefB
-	Text(ThiefTextB_1)
-	CamOff
-	ENUN
-	NoFade
-	ENDA
-
 ThiefSpawnB:
-	CamOn
-	LOAD1 1 ThiefC
-	CamOff
-	ENUN
+	SpawnReinforcements(ThiefB)
+	Text(ThiefTextB_1)
 	NoFade
 	ENDA
 
+ThiefSpawnC:
+	SpawnReinforcements(ThiefC)
+	NoFade
+	ENDA
 
 Dunno1: //down here because nothing here is really used
 END_MAIN

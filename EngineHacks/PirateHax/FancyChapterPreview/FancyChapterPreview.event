@@ -48,7 +48,7 @@ ChapterPreviewEntry(HubA_4, HubA4Title, HubA4Objective, HubA4Units, HubA4Loot, H
 ChapterPreviewEntry(HubA_5, HubA5Title, HubA5Objective, HubA5Units, HubA5Loot, HubA5Confirm)
 ChapterPreviewEntry(HubA_6, HubA6Title, HubA6Objective, HubA6Units, HubA6Loot, HubA6Confirm)
 
-// ChapterPreviewEntry(HubB_1, HubB1Title, HubB1Objective, HubB1Units, HubB1Loot, HubB1Confirm)
+ChapterPreviewEntry(HubB_1, HubB1Title, HubB1Objective, HubB1Units, HubB1Loot, HubB1Confirm)
 ChapterPreviewEntry(HubB_2, HubB2Title, HubB2Objective, HubB2Units, HubB2Loot, HubB2Confirm)
 ChapterPreviewEntry(HubB_2a, HubB2Title, HubB2Objective, HubB2Units, HubB2Loot, HubB2Confirm)
 ChapterPreviewEntry(HubB_3, HubB3Title, HubB3Objective, HubB3Units, HubB3Loot, HubB3Confirm)

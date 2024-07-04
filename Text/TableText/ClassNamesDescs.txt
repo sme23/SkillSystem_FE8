@@ -316,6 +316,10 @@ Gryphoknight[X]
 Weapons: Lances[N]
 Traits: Flight+, Aid+[X]
 
+## GryphknightDismountedDesc
+Weapons: Lances[N]
+Traits: Steal, Locktouch[X]
+
 ## DracoknightName
 Dracoknight[X]
 

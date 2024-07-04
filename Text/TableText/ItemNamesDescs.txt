@@ -489,7 +489,7 @@ Flier Permit[X]
 
 ## FlierPermitDesc
 If Lv. 10 or greater, use to procure[N]
-a flying steed or hone piloting skill.[X]
+a flying steed or hone skyriding skill.[X]
 
 ## MageRingName
 Magi Ring[X]

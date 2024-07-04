@@ -135,10 +135,10 @@ But for the right price with your[N]
 party in tow,[.4] I could be swayed.[AN]
 
 [MidLeft][2LB]
-[Beat][.5] I see,[.4] well I don't[N]
-know about vengeful spirits.[AN]
-But we certainly can't find our way[N]
-around the desert on our own.[AN]
+I see[Beat] Well, I don't know[N]
+about vengeful spirits,[AN]
+but we certainly can't find our[N]
+way around the desert on our own.[AN]
 What's your fee for your guidance?[A]
 
 [MidRight][2LB]
@@ -146,9 +146,8 @@ A cut of the treasure itself[N]
 should suffice for me.[A]
 
 [MidLeft][2LB]
-Acceptable terms,[.4] very well[N]
-we'll set out tomorrow.[A]
-[X]
+Acceptable terms for me.[N]
+We'll set out tomorrow.[A][X]
 
 
 ##HubB_1BeginningScene2
@@ -167,12 +166,12 @@ on.[.5] It would be way too hot earlier.[A]
 
 [FarRight][2LB]
 We can't be out here too long[N]
-though.[.4] It'll be freezing[N]
+though.[.4][A] It'll be freezing[N]
 once it gets really dark.[A]
 
 [Right][2LB]
 I think I see it in the distance.[.5][N]
-only a half hour more at most.[A]
+Only a half hour more at most.[A]
 
 [FarLeft][2LB]
 Good.[.5] I don't think I want[N]
@@ -275,24 +274,26 @@ What's it to you?[A]
 [Right][2LB]
 I am a traveller myself,[.4] but in truth[N]
 there is only so far one can go alone.[AN]
-If you would permit it I would[N]
+If you would permit it, I would[N]
 like to join you on your travels.[AN]
-So long as I have room and board[N]
+So long as I have room and board,[N]
 that is enough for me.[A]
 
 [FarLeft][2LB]
 Sure,[.4] you fought well and[N]
 we could always use more bodies.[AN]
 I should tell you though this is[N]
-a pirate gang,[.4] we're outlaws.[AN]
+a pirate gang. We're outlaws.[AN]
 You'll be expected to pull your weight.[A]
 
 [Right][2LB]
-I'd figured you were.[.5] This is fine[N]
-with me.[.5] I'm merely concerned with travel.[A]
+No problem, I'd figured you were.[N]
+I'm merely concerned with travel.[A]
 
-[FarLeft][1LB]
-Alright then,[.4] let's get a move on.[A][X]
+[FarLeft]
+Then welcome to the crew, Dmitr.[AN]
+Let's get a move on before some other[N]
+idiots think they can try and jump us.[A][X]
 
 
 ## HubB_1EndingScene1_B
@@ -332,12 +333,15 @@ navigate us back to town?[A]
 
 [FarRight][2LB]
 I wouldn't be much of a[N]
-navigator if I couldn't Lua.[AN]
+navigator if I couldn't, Lua.[AN]
 I'll have us back before[N]
-we end up freezing to death.[A]
+we end up dying of heat stroke.[A]
 
-[MidLeft][1LB]
-Alright then,[.4] let's get a move on.[A][X]
+[MidLeft]
+The quicker we get back, the more loot[N]
+I'll give you out of my own cut, Pilar.[AN]
+Let's get a move on before some other[N]
+idiots think they can try and jump us.[A][X]
 
 
 ## ThiefTextB_1
@@ -346,19 +350,9 @@ Now's my chance to make my break.[A][CSS]
 [MidLeft][2LB]
 I'll pick what I can and be gone[N]
 before anyone can notice me.[AN]
-By the time Kiril find's out[N]
-they'll have no chance of finding me.[A]
-
-
-
-## ImDmitr
-i'm dmitr[A][X]
-
-## KirilTakesNotice
-aw hell naw intruders[A][X]
-
-## LuaResponds
-cue preps[A][X]
+By the time Kiril finds out,[N]
+they'll have no chance of finding me.[A][X]
 
 ## KirilDeathQuote
+[MidLeft][LoadKiril]
 [Beat][.5][CloseEyes][A][X]

@@ -105,6 +105,9 @@ UnitMenuTable:
   MenuCommand(UM_Shift2, UM_ShiftDesc, BlueText, ShiftUsability2, ShiftEffect, $22c31, $22c99)
   #endif // COMBAT_ARTS
 
+  MenuCommand(Dismount_Name_TextID, Dismount_Description_TextID, OrangeText, DismountUsability, DismountRoutine)
+  MenuCommand(Mount_Name_TextID, Mount_Description_TextID, OrangeText, MountUsability, MountRoutine)
+  
   UM_Staff
   UM_Ride
   UM_Exit

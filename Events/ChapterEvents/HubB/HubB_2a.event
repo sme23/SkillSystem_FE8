@@ -111,12 +111,10 @@ ENUF CruzAccused
 ENUF AvocadoAccused
 MUSC WindAmbienceID
 SetBackground(Ship)
-FADU 16
 Text(B2a_OnBoat)
 FADI 16
 // MUSC GreyMoralityID
 SetBackground(Harbor)
-FADU 16
 Text(B2a_OnDocks)
 FADI 16
 EraseBackground
@@ -320,7 +318,6 @@ LABEL 0x303
 FADI 16
 // MUSC GreyMoralityID
 SetBackground(Harbor)
-FADU 16
 Text(B2a_MagdalenaGivesMoney)
 GiveGold(2500)
 FADI 16
@@ -333,7 +330,6 @@ ASMC MakeMusicAhoyASMC
 FlagIsSet(CruzAccused, 0x666)
 	SetBackground(Prison_Cell) // if cruz in jail
 	ASMC MakeMusicAhoyASMC
-	FADU 16
 	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 	TEXTSTART
@@ -348,7 +344,6 @@ FlagIsSet(CruzAccused, 0x666)
 LABEL 0x666
 	SetBackground(Woodland_Night) // if cruz spared
 	ASMC MakeMusicAhoyASMC
-	FADU 16
 	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 

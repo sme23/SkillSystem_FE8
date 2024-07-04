@@ -34,7 +34,7 @@ int AiBattleGetDamageDealtWeight(void) {
     int score;
     
     if (gBattleTarget.unit.curHP == 0) {
-        return 60; //if enemy dies and actor doesn't, maximum value considered
+        return 120; //if enemy dies and actor doesn't, maximum value considered
     }
 
     if ((gBattleActor.battleAttack - gBattleTarget.battleDefense) <= 0){
@@ -90,7 +90,7 @@ int AiBattleGetDamageTakenWeight(void) {
     }
 
     if (gBattleActor.unit.curHP == 0){
-        return 50; //if the unit dies in the combat, lowered priority
+        return 60; //if the unit dies in the combat, lowered priority
     } 
     
     score = (gBattleTarget.battleAttack - gBattleActor.battleDefense) * (gBattleTarget.battleEffectiveHitRate);

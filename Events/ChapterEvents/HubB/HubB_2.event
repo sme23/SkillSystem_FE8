@@ -86,7 +86,6 @@ UNIT Rebel Vanguard Cruz Level(B2Level,Enemy,True) [18,14] 0 0 0 0 [Javelin,Stee
 UNIT Rebel Myrmidon Cruz Level(B2Level,Enemy,True) [16,8] 0 0 0 0 [IronSword] ChargeAI
 UNIT Rebel GriffinRider Cruz Level(B2Level,Enemy,True) [13,13] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Rebel Fighter Cruz Level(B2Level,Enemy,True) [17,15] 0 0 0 0 [IronAxe] ChargeAI
-UNIT Rebel Mage Cruz Level(B2Level,Enemy,True) [14,11] 0 0 0 0 [Fire] ChargeAI
 
 // turn 3 yadney squad
 UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [9,10] 0 0 0 0 [Onigiri,TealGem] GroupOneAI
@@ -132,7 +131,6 @@ UNIT Rebel Archer Cruz Level(B2Level, Enemy, True) [3,13] 0 0 0 0 [Greatbow] Bos
 UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [5,12] 0 0 0 0 [Javelin,Ridersbane] BossAI
 UNIT Rebel Shaman Cruz Level(B2Level, Enemy, True) [5,14] 0 0 0 0 [Thunder] BossAI
 
-UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [15,5] 0 0 0 0 [IronAxe] GroupTwoAI
 UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [19,5] 0 0 0 0 [IronLance] GroupTwoAI
 UNIT Rebel Mage Cruz Level(B2Level, Enemy, True) [18,17] 0 0 0 0 [Fire] AttackInRangeAI
 UNIT Rebel Warden Cruz Level(B2Level, Enemy, True) [14,17] 0 0 0 0 [IronSword,Javelin] BossAI
@@ -179,13 +177,11 @@ FlagIsSet(CruzAccused, 0x3A3)
 	Text(B2_MagdalenaJoins)
 LABEL 0x3A3
 FADI 16
-
-EraseBackground
 LoadEnemies(B2Baddies)
 CAM1 Cruz
+EraseBackground
+
 MUSC LetterOpenerID
-ASMC MakeMusicAhoyASMC
-FADU 16
 ASMC MakeMusicAhoyASMC
 CameraCursor(Cruz)
 ASMC MakeMusicAhoyASMC
@@ -273,7 +269,6 @@ LABEL 0xBEEF
 FADI 16
 // MUSC NeutralVictoryTheme
 SetBackground(Fort_Ruins)
-FADU 16
 Text(B2_Outro_SuppliesSubplot)
 FADI 16
 
@@ -285,11 +280,9 @@ FlagIsSet(CruzAccused, 0x1A1)
 	SetBackground(Inn)
 	FADI 16
 	Text(B2_Outro_Romance)
-	FADU 16
 	MUSC WelcomeAboardMateyID
 	FADI 16
 	Text(B2_Outro_MagdalenaPermanent)
-	FADU 16
 LABEL 0x1A1
 
 FlagIsSet(AvocadoAccused, 0x2B2)
@@ -297,12 +290,10 @@ FlagIsSet(AvocadoAccused, 0x2B2)
 	SetBackground(Inn)
 	FADI 16
 	Text(B2_Outro_Aftermath_Avocado)
-	FADU 16
 	// MUSC GreyMoralityID
 	SetBackground(Harbor)
 	FADI 16
 	Text(B2_Outro_RazvanSad)
-	FADU 16
 	MUSC WindAmbienceID
 	SetBackground(Ship)
 	FADI 16
@@ -315,12 +306,10 @@ FlagIsSet(HusniyeAccused, 0x3C3)
 	SetBackground(Inn)
 	FADI 16
 	Text(B2_Outro_Aftermath_Husniye)
-	FADU 16
 	// MUSC GreyMoralityID
 	SetBackground(Harbor)
 	FADI 16
 	Text(B2_Outro_RazvanSad)
-	FADU 16
 	MUSC WindAmbienceID
 	SetBackground(Ship)
 	FADI 16
