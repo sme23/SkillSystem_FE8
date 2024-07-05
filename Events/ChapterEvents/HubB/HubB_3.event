@@ -189,7 +189,7 @@ UNIT Desiderio 0 0 Level(10,Ally,False) [6,2] 0 0 0 0 [Cutlass, IronSword, IronM
 UNIT
 
 NewUnits:
-UNIT Ernest Gryphoknight 0 Level(10,Ally,False) [10,12] 0 0 0 0 [SilverLance, Pike, Javelin] NoAI
+UNIT Ernest Gryphoknight 0 Level(10,Ally,True) [10,12] 0 0 0 0 [SilverLance, Pike, Javelin] NoAI
 UNIT
 
 EnemyUnits:
@@ -234,16 +234,12 @@ UNIT Rebel Deserter 0 Level(10,Enemy,True) [17,11] 0 0 0 0 [SteelLance] AttackIn
 
 //later enemies
 UNIT Rebel Mercenary 0 Level(10,Enemy,True) [20,12] 0 0 0 0 [IronBlade] AttackInRangeAI
-UNIT Rebel Thief 0 Level(10,Enemy,True) [21,16] 0 0 0 0 [IronKnife] AttackInRangeAI
 UNIT Rebel Thief 0 Level(10,Enemy,True) [21,8] 0 0 0 0 [SteelKnife] AttackInRangeAI
-UNIT Rebel Thief 0 Level(10,Enemy,True) [29,8] 0 0 0 0 [IronKnife] AttackInRangeAI
 UNIT Rebel Thief 0 Level(10,Enemy,True) [29,16] 0 0 0 0 [SteelKnife] AttackInRangeAI
 UNIT Rebel Mercenary 0 Level(10,Enemy,True) [30,12] 0 0 0 0 [IronBlade] AttackInRangeAI
 
 UNIT Rebel Deserter 0 Level(10,Enemy,True) [24,11] 0 0 0 0 [SteelLance] AttackInRangeAI
-UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [24,14] 0 0 0 0 [IronSword] AttackInRangeAI
-UNIT Rebel Deserter 0 Level(10,Enemy,True) [26,14] 0 0 0 0 [SteelLance] AttackInRangeAI
-UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [26,11] 0 0 0 0 [IronSword] AttackInRangeAI
+UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [26,14] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT
 
 BeginningScene:
@@ -338,6 +334,7 @@ BLT 1 sC s1 //if number of supplies items is less than 7, do not play all fuel t
 LABEL 1
 Text(B3EndingScene3_1_SomeFuel)
 LABEL 2
+GetNumberOfSuppliesItemsOnHand
 SVAL s1 5
 BLT 3 sC s1 //check sC's amount, give items accordingly
     GiveItemWithDurability(SkillScroll,KeenFighterID,Lua)
@@ -345,12 +342,14 @@ BLT 3 sC s1 //check sC's amount, give items accordingly
     GiveItem(RedGem,Lua)
     GOTO 5
 LABEL 3
+GetNumberOfSuppliesItemsOnHand
 SVAL s1 3
 BLT 4 sC s1
     GiveItem(Bloodletter,Lua)
     GiveItem(RedGem,Lua)
     GOTO 5
 LABEL 4
+GetNumberOfSuppliesItemsOnHand
 SVAL s1 1
 BLT 5 sC s1
     GiveItem(RedGem,Lua)

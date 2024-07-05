@@ -601,7 +601,7 @@ HorseMMS:
 #incbin "Dmp/Horse Moving {L95}.dmp"
 
 StandingMapSprite(Gryphknight_DMapSprite,MapSprite16x16, Gryphknight_DSMS)
-MovingMapSprite(Gryphoknight_D, $1C3D7C, Gryphoknight_D)
+MovingMapSprite(Gryphoknight_D, $1C3D7C, Gryphknight_DMMS)
 
 ALIGN 4
 Gryphknight_DSMS:
