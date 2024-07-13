@@ -1,7 +1,8 @@
 #include  "Main.h"
 
 bool DidUnitBreak(){
-	if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BREAK){
+	u32* entry = GetUnitDebuffEntry(&gBattleTarget.unit);
+	if (CheckBit(entry, BreakBitOffset_Link)){
 		return false;
 	}
 	int j = 0;
@@ -39,8 +40,9 @@ void BreakPostBattle(){
 
 	// unset break
 	bool alreadyBroken = false;
-	if (gDebuffTable[target->index].skillState & SKILLSTATE_BREAK){
-		gDebuffTable[target->index].skillState &= ~SKILLSTATE_BREAK;
+	u32* entry = GetUnitDebuffEntry(target);
+	if (CheckBit(entry, BreakBitOffset_Link)){
+		UnsetBit(entry, BreakBitOffset_Link);
 		alreadyBroken = true;
 	}
 
@@ -55,22 +57,35 @@ void BreakPostBattle(){
 	}
 
 	// try to apply break
-	if(DidUnitBreak() & (!alreadyBroken) && (gDebuffTable[target->index].skillState & SKILLSTATE_BROKEN_IN_BATTLE)){
-		gDebuffTable[target->index].skillState |= SKILLSTATE_BREAK;
+	if(DidUnitBreak() && (alreadyBroken == false) && (CheckBit(entry, BreakInBattleBitOffset_Link))){
+		SetBit(entry, BreakBitOffset_Link);
 	}
 	//unset the broken in battle bit at the end
-	gDebuffTable[target->index].skillState &= ~SKILLSTATE_BROKEN_IN_BATTLE; //gets rid of mid battle break
+	UnsetBit(entry, BreakInBattleBitOffset_Link);
 }
 
 void ClearActiveFactionBreakStatus(){
 	Unit* unit;
 	int i;
+	u32* entry;
 	for (i = gChapterData.currentPhase + 1; i < gChapterData.currentPhase + 0x40; i++) {
         unit = GetUnit(i);
-
+		entry = GetUnitDebuffEntry(unit);
         if (UNIT_IS_VALID(unit)){
-			gDebuffTable[unit->index].skillState &= ~SKILLSTATE_BREAK; //undo break status for current actors
-			gDebuffTable[unit->index].skillState &= ~SKILLSTATE_BROKEN_IN_BATTLE;
+			UnsetBit(entry, BreakBitOffset_Link);
+			UnsetBit(entry, BreakInBattleBitOffset_Link);
 		} 
     }
+}
+
+void PulverizePreBattle(BattleUnit* unit1, BattleUnit* unit2)
+{
+	if (gSkillTester(&unit1->unit, PulverizeIDLink))
+	{
+		u32* entry = GetUnitDebuffEntry(&unit2->unit);
+		if (CheckBit(entry, BreakBitOffset_Link))
+		{
+			unit1->battleCritRate += 40; //add 40 crit to the unit with Pulverize if target is broken
+		}
+	}
 }

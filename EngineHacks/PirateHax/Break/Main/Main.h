@@ -24,10 +24,19 @@ void SetEventId(int eventId);
 //skillsys stuff
 extern u8 DazzleIDLink;
 extern u8 ArcaneArtificeIDLink;
+extern u8 PulverizeIDLink;
 
 extern bool(*gSkillTester)(Unit* unit, int skillID);
 
 
-#define SKILLSTATE_BREAK (1 << 2)
-#define SKILLSTATE_BROKEN_IN_BATTLE (1 << 3)
+//#define SKILLSTATE_BREAK (1 << 2)
+//#define SKILLSTATE_BROKEN_IN_BATTLE (1 << 3)
 #define BATTLE_HIT_BREAK BATTLE_HIT_ATTR_12 // (1 << 17)
+
+extern void SetBit(u32* address, u8 bitOffset);
+extern void UnsetBit(u32* address, u8 bitOffset);
+extern bool CheckBit(u32* address, u8 bitOffset);
+extern u32* GetUnitDebuffEntry(struct Unit* unit);
+
+extern int BreakBitOffset_Link;
+extern int BreakInBattleBitOffset_Link;

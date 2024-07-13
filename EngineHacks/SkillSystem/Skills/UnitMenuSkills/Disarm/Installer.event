@@ -1,0 +1,20 @@
+#include "Disarm.lyn.event"
+
+ALIGN 4
+DisarmIDLink:
+WORD DisarmID
+
+ALIGN 4
+DisarmHelpTextLink:
+WORD DisarmHelpText
+
+DisarmMapEvent:
+CAM1 0xFFFF
+SOUN 0xCE
+STAL 0x16
+SOUN 0xCE
+STAL 0x16
+SOUN 0xCE
+STAL 0x16
+NoFade
+ENDA

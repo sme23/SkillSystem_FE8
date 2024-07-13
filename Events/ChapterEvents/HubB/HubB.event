@@ -4,6 +4,7 @@
 #define SeenHubB4Pitch 10
 #define SeenHubB5Pitch 11
 #define Turn1EventFlag 12
+#define GoToNextHubFlagID 20
 
 EventPointerTable(HubBEventsID, PointerList)
 
@@ -41,8 +42,14 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
+AREA GoToNextHubFlagID GotoChapter3 [5,17] [5,17]
 AFEV 0 RefreshLua 0
 END_MAIN
+
+GotoChapter3:
+GotoHubChapterIfYesHubB(2, Chapter3)
+NoFade
+ENDA
 
 GotoHubB1:
 // razvan
@@ -129,15 +136,6 @@ LoadPlayerUnits(NewUnits)
 WEATHER 7
 ENUT LuaInAHubFlag
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
-//CheckHowManyHubChaptersCompleted
-//SVAL s1 5 //if 5 chapters completed
-//SVAL sC 5
-//BNE 2 s1 sC
-//MNC2 Chapter3
-//NoFade
-//ENDB
-//LABEL 2
-//FADI 10
 STAL 1
 FADI 15
 SpawnQuestSigil(WentToHub1, 776, RedSigilTrapID, 4, 12)
@@ -145,6 +143,13 @@ SpawnQuestSigil(WentToHub2, 777, RedSigilTrapID, 2, 17)
 SpawnQuestSigil(WentToHub3, 778, RedSigilTrapID, 7, 17)
 SpawnQuestSigil(WentToHub4, 779, RedSigilTrapID, 2, 23)
 SpawnQuestSigil(WentToHub5, 780, RedSigilTrapID, 7, 23)
+ENUT GoToNextHubFlagID
+CheckHowManyHubChaptersCompleted
+SVAL s1 4 
+BNE 2 sC s1 //if chapters completed != 5, skip
+    AddTrap(GreenSigilTrapID, 5, 17)
+    ENUF GoToNextHubFlagID
+LABEL 2
 STAL 1
 GotoPrepScreenHub
 NoFade

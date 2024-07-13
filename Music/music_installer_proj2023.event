@@ -184,6 +184,24 @@ SongTable(CastawayHeartID,CastawayHeart,MapMusicGroup)
 #include "songs/event/CastawayHeart.event"
 }
 
+// 34 - Dropping Anchor
+{
+SongTable(DroppingAnchorID,DroppingAnchor,MapMusicGroup)
+#include "songs/preps/DroppingAnchor.event"
+}
+
+// 35 - Cloud's Yearning
+{
+SongTable(CloudsYearningID,CloudsYearning,MapMusicGroup)
+#include "songs/map/CloudsYearning.event"
+}
+
+// 36 - Storm's Brewing
+{
+SongTable(StormsBrewingID,StormsBrewing,MapMusicGroup)
+#include "songs/map/StormsBrewing.event"
+}
+
 
 // --------------- SONGS: GUI AND SFX ---------------
 

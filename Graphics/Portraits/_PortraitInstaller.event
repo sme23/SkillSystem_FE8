@@ -388,7 +388,7 @@ YadneyMugData:
 #incbin "Dmp/Yadney_frames.dmp"
 #incbin "Dmp/Yadney_palette.dmp"
 #incbin "Dmp/Yadney_minimug.dmp"
-setMugEntry(YadneyMug, YadneyMugData, 2, 5, 2, 3)
+setMugEntry(YadneyMug, YadneyMugData, 3, 5, 2, 3)
 
 ALIGN 16
 ErnestMugData:

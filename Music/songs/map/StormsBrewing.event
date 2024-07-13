@@ -1,0 +1,2311 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    StormsBrewing_grp  voicegroup000
+        #define    StormsBrewing_pri  0
+        #define    StormsBrewing_rev  0
+        #define    StormsBrewing_key  0
+
+        // .rodata
+        // StormsBrewing
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+StormsBrewing_0:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   166/2
+StormsBrewing_0_LOOP:
+        BYTE           VOICE   40
+        BYTE           VOL     55
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE           N23     Dn3   v080
+        BYTE   W24
+        BYTE           N11     An3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE           N68     En3   v080   gtp3
+        BYTE   W24
+// 007   ----------------------------------------
+StormsBrewing_0_7:
+        BYTE   W48
+        BYTE           N23     Dn3   v080
+        BYTE   W24
+        BYTE           N11     An3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE   PEND
+// 008   ----------------------------------------
+StormsBrewing_0_8:
+        BYTE           N11     An3   v080
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE           N32     En3   v080   gtp3
+        BYTE   W36
+        BYTE   PEND
+// 009   ----------------------------------------
+        BYTE           N11     Dn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE           N32     An3   v080   gtp3
+        BYTE   W36
+        BYTE           N11     Dn4
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+// 010   ----------------------------------------
+        BYTE                   As3
+        BYTE   W12
+        BYTE           N23     An3
+        BYTE   W24
+        BYTE           N11     En4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   Gn4
+        BYTE   W12
+// 011   ----------------------------------------
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   Gn4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE           N32     En4   v080   gtp3
+        BYTE   W36
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W36
+        BYTE           N11     Dn4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W36
+// 025   ----------------------------------------
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W48
+        BYTE                   An3
+        BYTE   W12
+// 026   ----------------------------------------
+        BYTE                   As3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W48
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+// 027   ----------------------------------------
+        BYTE   W36
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W36
+// 028   ----------------------------------------
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W48
+        BYTE                   As2
+        BYTE   W12
+// 029   ----------------------------------------
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Cs4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   Gn4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+// 030   ----------------------------------------
+        BYTE           N23     Dn3
+        BYTE   W24
+        BYTE           N11     An3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE           N68     Fn3   v080   gtp3
+        BYTE   W24
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_0_7
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_0_8
+// 033   ----------------------------------------
+        BYTE   W72
+        BYTE           N23     An4   v080
+        BYTE   W24
+// 034   ----------------------------------------
+        BYTE           N11     En4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE           N23     An4
+        BYTE   W24
+        BYTE           N11     En4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+// 035   ----------------------------------------
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+        BYTE           N23     An4
+        BYTE   W24
+        BYTE           N11     En4
+        BYTE   W12
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE                   En4
+        BYTE   W12
+        BYTE                   Dn4
+        BYTE   W12
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+StormsBrewing_1:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_1_LOOP:
+        BYTE           VOICE   64
+        BYTE           VOL     60
+        BYTE           PAN     c_v-10
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE           N11     Dn2   v080
+        BYTE   W12
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W12
+// 013   ----------------------------------------
+        BYTE   W24
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+// 014   ----------------------------------------
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N11     Fn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+// 015   ----------------------------------------
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE           N32     Fn2   v080   gtp3
+        BYTE   W36
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   As1
+        BYTE   W12
+        BYTE           N32     Fn2   v080   gtp3
+        BYTE   W12
+// 016   ----------------------------------------
+        BYTE   W24
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Cn2
+        BYTE   W12
+        BYTE           N32     Fn2   v080   gtp3
+        BYTE   W36
+// 017   ----------------------------------------
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE           N23     Cs2
+        BYTE   W24
+        BYTE           N11     En2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   Cs2
+        BYTE   W12
+        BYTE                   En2
+        BYTE           N11     An2
+        BYTE   W12
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   W96
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   W96
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W72
+        BYTE           N23     Dn2
+        BYTE   W24
+// 031   ----------------------------------------
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE           N68     Fn2   v080   gtp3
+        BYTE   W48
+// 032   ----------------------------------------
+        BYTE   W24
+        BYTE           N23     Dn2
+        BYTE   W24
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+// 033   ----------------------------------------
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE           N32     En2   v080   gtp3
+        BYTE   W60
+// 034   ----------------------------------------
+        BYTE   W48
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+// 035   ----------------------------------------
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE           N23
+        BYTE   W24
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+// 036   ----------------------------------------
+        BYTE           N23
+        BYTE   W24
+        BYTE           N11     En2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W36
+// 037   ----------------------------------------
+        BYTE   W48
+        BYTE           N23     As2
+        BYTE   W24
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+// 038   ----------------------------------------
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE           N23     Gn3
+        BYTE   W24
+        BYTE           N11     En3
+        BYTE   W12
+        BYTE           N23     Fn3
+        BYTE   W24
+        BYTE           N11     Dn3
+        BYTE   W12
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+StormsBrewing_2:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_2_LOOP:
+        BYTE           VOICE   62
+        BYTE           VOL     60
+        BYTE           PAN     c_v+10
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   W96
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   W96
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   W96
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   W96
+// 018   ----------------------------------------
+        BYTE           N23     Cn3   v080
+        BYTE   W24
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE           N23     Cn3
+        BYTE   W24
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+// 019   ----------------------------------------
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE           N23     As2
+        BYTE   W24
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE           N23     As2
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE   W12
+        BYTE           N11     Gn2
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+// 021   ----------------------------------------
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   As1
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+// 022   ----------------------------------------
+        BYTE                   En2
+        BYTE   W12
+        BYTE           N32     En2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Cs3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+// 023   ----------------------------------------
+        BYTE                   Cs3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE           N23     En3
+        BYTE   W24
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   W96
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   W96
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W48
+        BYTE           N23     Dn2
+        BYTE   W24
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+// 032   ----------------------------------------
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE           N68     Fn2   v080   gtp3
+        BYTE   W72
+// 033   ----------------------------------------
+        BYTE           N23     Dn2
+        BYTE   W24
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+// 034   ----------------------------------------
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE           N32     En2   v080   gtp3
+        BYTE   W84
+// 035   ----------------------------------------
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W36
+        BYTE           N11     En2
+        BYTE   W12
+        BYTE           N23     Dn2
+        BYTE   W24
+// 036   ----------------------------------------
+        BYTE   W72
+        BYTE                   An2
+        BYTE   W24
+// 037   ----------------------------------------
+        BYTE           N11     En2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W60
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE           N32     En2   v063   gtp3
+        BYTE   W36
+        BYTE                   As2
+        BYTE   W36
+        BYTE           N23     En3
+        BYTE   W24
+// 040   ----------------------------------------
+        BYTE           N32     Dn3   v063   gtp3
+        BYTE   W36
+        BYTE                   An2
+        BYTE   W36
+        BYTE           N23     Dn3
+        BYTE   W24
+// 041   ----------------------------------------
+        BYTE           N44     Fn3   v063   gtp3
+        BYTE   W48
+        BYTE                   Cn3
+        BYTE   W48
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+StormsBrewing_3:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_3_LOOP:
+        BYTE           VOICE   88
+        BYTE           VOL     45
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+        BYTE   W96
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   W96
+// 006   ----------------------------------------
+        BYTE           N68     Dn4   v080   gtp3
+        BYTE   W72
+        BYTE                   En4
+        BYTE   W24
+// 007   ----------------------------------------
+StormsBrewing_3_7:
+        BYTE   W48
+        BYTE           N68     Fn4   v080   gtp3
+        BYTE   W48
+        BYTE   PEND
+// 008   ----------------------------------------
+StormsBrewing_3_8:
+        BYTE   W24
+        BYTE           N68     En4   v080   gtp3
+        BYTE   W72
+        BYTE   PEND
+// 009   ----------------------------------------
+StormsBrewing_3_9:
+        BYTE           N68     Dn4   v080   gtp3
+        BYTE   W72
+        BYTE                   Cn4
+        BYTE   W24
+        BYTE   PEND
+// 010   ----------------------------------------
+        BYTE   W48
+        BYTE                   En4
+        BYTE   W48
+// 011   ----------------------------------------
+        BYTE   W24
+        BYTE                   An3
+        BYTE   W72
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_3_9
+// 013   ----------------------------------------
+        BYTE   W48
+        BYTE           N68     Dn4   v080   gtp3
+        BYTE   W48
+// 014   ----------------------------------------
+        BYTE   W24
+        BYTE                   Cn4
+        BYTE   W72
+// 015   ----------------------------------------
+        BYTE                   Fn4
+        BYTE   W72
+        BYTE                   En4
+        BYTE   W24
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_3_7
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_3_8
+// 018   ----------------------------------------
+        BYTE           N68     An3   v080   gtp3
+        BYTE   W72
+        BYTE                   Cn4
+        BYTE   W24
+// 019   ----------------------------------------
+        BYTE   W48
+        BYTE                   As3
+        BYTE   W48
+// 020   ----------------------------------------
+        BYTE   W24
+        BYTE                   Gn3
+        BYTE   W72
+// 021   ----------------------------------------
+        BYTE                   Fn3
+        BYTE   W72
+        BYTE                   An3
+        BYTE   W24
+// 022   ----------------------------------------
+        BYTE   W48
+        BYTE                   An3
+        BYTE   W48
+// 023   ----------------------------------------
+        BYTE   W24
+        BYTE                   Cs4
+        BYTE   W72
+// 024   ----------------------------------------
+        BYTE                   An3
+        BYTE           N68     Cn4   v080   gtp3
+        BYTE   W72
+        BYTE                   As3
+        BYTE           N68     Dn4   v080   gtp3
+        BYTE   W24
+// 025   ----------------------------------------
+        BYTE   W48
+        BYTE                   An3
+        BYTE           N68     Cn4   v080   gtp3
+        BYTE   W48
+// 026   ----------------------------------------
+        BYTE   W24
+        BYTE                   Gn3
+        BYTE           N68     As3   v080   gtp3
+        BYTE   W72
+// 027   ----------------------------------------
+        BYTE                   En3
+        BYTE           N68     Gn3   v080   gtp3
+        BYTE   W72
+        BYTE                   Gn3
+        BYTE           N68     As3   v080   gtp3
+        BYTE   W24
+// 028   ----------------------------------------
+        BYTE   W48
+        BYTE                   As3
+        BYTE           N68     Dn4   v080   gtp3
+        BYTE   W48
+// 029   ----------------------------------------
+        BYTE   W24
+        BYTE                   Cs4
+        BYTE           N68     En4   v080   gtp3
+        BYTE   W72
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE           N23     An3
+        BYTE   W24
+        BYTE           N11     En3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE           N23     An3
+        BYTE   W24
+// 037   ----------------------------------------
+        BYTE           N11     En3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W60
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE           N68     Fn3   v080   gtp3
+        BYTE   W72
+        BYTE                   As3
+        BYTE   W24
+// 040   ----------------------------------------
+        BYTE   W48
+        BYTE                   Gn4
+        BYTE   W48
+// 041   ----------------------------------------
+        BYTE   W24
+        BYTE                   En4
+        BYTE   W68
+        BYTE   W03
+        BYTE           VOL     40
+        BYTE           PAN     c_v-20
+        BYTE   W01
+// 042   ----------------------------------------
+        BYTE           VOL     45
+        BYTE           PAN     c_v+0
+        BYTE   GoTo
+         POIN2  StormsBrewing_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+StormsBrewing_4:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_4_LOOP:
+        BYTE           VOICE   24
+        BYTE           VOL     35
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Fn2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn2
+        BYTE           N23     Fn2
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Fn2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Gn2
+        BYTE           N32     As2   v080   gtp3
+        BYTE   W24
+// 001   ----------------------------------------
+StormsBrewing_4_1:
+        BYTE   W12
+        BYTE           N23     Dn2   v080
+        BYTE           N23     Gn2
+        BYTE           N23     As2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Gn2
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Fn2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn2
+        BYTE           N23     Fn2
+        BYTE           N23     An2
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+StormsBrewing_4_2:
+        BYTE   W12
+        BYTE           N11     Dn2   v080
+        BYTE           N11     Fn2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE           N32     Cn2   v080   gtp3
+        BYTE                   En2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Cn2
+        BYTE           N23     En2
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Cn2
+        BYTE           N11     En2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE   PEND
+// 003   ----------------------------------------
+StormsBrewing_4_3:
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Fn2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn2
+        BYTE           N23     Fn2
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Fn2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Fn2
+        BYTE           N32     As2   v080   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 004   ----------------------------------------
+StormsBrewing_4_4:
+        BYTE   W12
+        BYTE           N23     Dn2   v080
+        BYTE           N23     Fn2
+        BYTE           N23     As2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Fn2
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Gn2
+        BYTE           N32     As2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn2
+        BYTE           N23     Gn2
+        BYTE           N23     As2
+        BYTE   W12
+        BYTE   PEND
+// 005   ----------------------------------------
+StormsBrewing_4_5:
+        BYTE   W12
+        BYTE           N11     Dn2   v080
+        BYTE           N11     Gn2
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE           N32     Cn2   v080   gtp3
+        BYTE                   En2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Cn2
+        BYTE           N23     En2
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Cn2
+        BYTE           N11     En2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE   PEND
+// 006   ----------------------------------------
+StormsBrewing_4_6:
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Fn2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn2
+        BYTE           N23     Fn2
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Fn2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Gn2
+        BYTE           N32     As2   v080   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_1
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_2
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_3
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_4
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_5
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_6
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_1
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_4
+// 017   ----------------------------------------
+StormsBrewing_4_17:
+        BYTE   W12
+        BYTE           N11     Dn2   v080
+        BYTE           N11     Gn2
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE           N32     Cs2   v080   gtp3
+        BYTE                   En2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Cs2
+        BYTE           N23     En2
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Cs2
+        BYTE           N11     En2
+        BYTE           N11     An2
+        BYTE   W12
+        BYTE   PEND
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_6
+// 019   ----------------------------------------
+        BYTE   W12
+        BYTE           N23     Dn2   v080
+        BYTE           N23     Gn2
+        BYTE           N23     As2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Gn2
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE           N32     En2   v080   gtp3
+        BYTE                   Gn2
+        BYTE           N32     As2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     En2
+        BYTE           N23     Gn2
+        BYTE           N23     As2
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE   W12
+        BYTE           N11     En2
+        BYTE           N11     Gn2
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Gn2
+        BYTE           N32     As2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn2
+        BYTE           N23     Gn2
+        BYTE           N23     As2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Gn2
+        BYTE           N11     As2
+        BYTE   W12
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_3
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_4
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_17
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_6
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_4
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_17
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_6
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_1
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_2
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_3
+// 034   ----------------------------------------
+        BYTE   W12
+        BYTE           N23     Dn2   v080
+        BYTE           N23     Fn2
+        BYTE           N23     As2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Fn2
+        BYTE           N11     As2
+        BYTE   W12
+        BYTE           N32     En2   v080   gtp3
+        BYTE                   An2
+        BYTE           N32     Cn3   v080   gtp3
+        BYTE   W36
+        BYTE           N23     En2
+        BYTE           N23     An2
+        BYTE           N23     Cn3
+        BYTE   W12
+// 035   ----------------------------------------
+        BYTE   W12
+        BYTE           N11     En2
+        BYTE           N11     An2
+        BYTE           N11     Cn3
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE                   Fn2
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn2
+        BYTE           N23     Fn2
+        BYTE           N23     An2
+        BYTE   W24
+        BYTE           N11     Dn2
+        BYTE           N11     Fn2
+        BYTE           N11     An2
+        BYTE   W12
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_6
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_1
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_2
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_3
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_4
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_4_5
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_4_LOOP
+        BYTE   FINE
+
+//****************** Track 5 (Midi-Chn.5) ******************//
+
+StormsBrewing_5:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_5_LOOP:
+        BYTE           VOICE   124
+        BYTE           VOL     40
+        BYTE           N11     Dn2   v080
+        BYTE           N32     Cn1   v080   gtp3
+        BYTE   W36
+        BYTE           N11     Cn2
+        BYTE           N23     Bn0
+        BYTE   W12
+        BYTE           N11     Bn1
+        BYTE   W12
+        BYTE                   An1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE                   Bn1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE           N23     Cn2
+        BYTE           N11     Cn1
+        BYTE   W12
+// 001   ----------------------------------------
+StormsBrewing_5_1:
+        BYTE           N11     Cn1   v080
+        BYTE   W12
+        BYTE           N23     Dn1
+        BYTE           N23     Bn0
+        BYTE   W24
+        BYTE           N11     Cs1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N32     Cn1   v080   gtp3
+        BYTE   W36
+        BYTE           N11     Cn2
+        BYTE           N23     Bn0
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+StormsBrewing_5_2:
+        BYTE           N11     Bn1   v080
+        BYTE   W12
+        BYTE                   An1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE                   Bn1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE           N23     Cn2
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE                   Cn1
+        BYTE   W12
+        BYTE           N23     En1
+        BYTE           N23     Bn0
+        BYTE   W24
+        BYTE           N11     Fn1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE   PEND
+// 003   ----------------------------------------
+StormsBrewing_5_3:
+        BYTE           N11     Dn2   v080
+        BYTE           N32     Cn1   v080   gtp3
+        BYTE   W36
+        BYTE           N11     Cn2
+        BYTE           N23     Bn0
+        BYTE   W12
+        BYTE           N11     Bn1
+        BYTE   W12
+        BYTE                   An1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE                   Bn1
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE           N23     Cn2
+        BYTE           N11     Cn1
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_3
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_1
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_5_2
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_5_LOOP
+        BYTE   FINE
+
+//****************** Track 6 (Midi-Chn.6) ******************//
+
+StormsBrewing_6:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_6_LOOP:
+        BYTE           VOICE   124
+        BYTE           PAN     c_v-7
+        BYTE           VOL     60
+        BYTE   W96
+// 001   ----------------------------------------
+        BYTE   W96
+// 002   ----------------------------------------
+StormsBrewing_6_2:
+        BYTE   W60
+        BYTE           N32     An2   v080   gtp3
+        BYTE   W36
+        BYTE   PEND
+// 003   ----------------------------------------
+        BYTE   W96
+// 004   ----------------------------------------
+        BYTE   W96
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 006   ----------------------------------------
+        BYTE   W96
+// 007   ----------------------------------------
+        BYTE   W96
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 009   ----------------------------------------
+        BYTE   W96
+// 010   ----------------------------------------
+        BYTE   W96
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 012   ----------------------------------------
+        BYTE   W96
+// 013   ----------------------------------------
+        BYTE   W96
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 015   ----------------------------------------
+        BYTE   W96
+// 016   ----------------------------------------
+        BYTE   W96
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 018   ----------------------------------------
+        BYTE   W96
+// 019   ----------------------------------------
+        BYTE   W96
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 021   ----------------------------------------
+        BYTE   W96
+// 022   ----------------------------------------
+        BYTE   W96
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 024   ----------------------------------------
+        BYTE   W96
+// 025   ----------------------------------------
+        BYTE   W96
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 027   ----------------------------------------
+        BYTE   W96
+// 028   ----------------------------------------
+        BYTE   W96
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 030   ----------------------------------------
+        BYTE   W96
+// 031   ----------------------------------------
+        BYTE   W96
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_6_2
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_6_LOOP
+        BYTE   FINE
+
+//****************** Track 7 (Midi-Chn.7) ******************//
+
+StormsBrewing_7:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_7_LOOP:
+        BYTE           VOICE   123
+        BYTE           PAN     c_v+6
+        BYTE           VOL     45
+        BYTE           N11     Fs2   v080
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE           N32     Fs2   v080   gtp3
+        BYTE   W36
+        BYTE           N11
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+// 001   ----------------------------------------
+StormsBrewing_7_1:
+        BYTE           N11     Fs2   v080
+        BYTE   W12
+        BYTE           N32     Fs2   v080   gtp3
+        BYTE   W36
+        BYTE           N23
+        BYTE   W24
+        BYTE           N11
+        BYTE   W12
+        BYTE           N23
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+StormsBrewing_7_2:
+        BYTE   W12
+        BYTE           N11     Fs2   v080
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE           N32     Fs2   v080   gtp3
+        BYTE   W36
+        BYTE   PEND
+// 003   ----------------------------------------
+StormsBrewing_7_3:
+        BYTE           N11     Fs2   v080
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE           N32     Fs2   v080   gtp3
+        BYTE   W36
+        BYTE           N11
+        BYTE   W12
+        BYTE                   Fs2
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 005   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_3
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_1
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_7_2
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_7_LOOP
+        BYTE   FINE
+
+//****************** Track 8 (Midi-Chn.8) ******************//
+
+StormsBrewing_8:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_8_LOOP:
+        BYTE           VOICE   100
+        BYTE           PAN     c_v+25
+        BYTE           VOL     45
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Fn1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn1
+        BYTE           N23     Fn1
+        BYTE           N23     An1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Fn1
+        BYTE           N11     An1
+        BYTE   W12
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Gn1
+        BYTE           N32     As1   v080   gtp3
+        BYTE   W24
+// 001   ----------------------------------------
+StormsBrewing_8_1:
+        BYTE   W12
+        BYTE           N23     Dn1   v080
+        BYTE           N23     Gn1
+        BYTE           N23     As1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Gn1
+        BYTE           N11     As1
+        BYTE   W12
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Fn1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn1
+        BYTE           N23     Fn1
+        BYTE           N23     An1
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+StormsBrewing_8_2:
+        BYTE   W12
+        BYTE           N11     Dn1   v080
+        BYTE           N11     Fn1
+        BYTE           N11     An1
+        BYTE   W12
+        BYTE           N32     Cn1   v080   gtp3
+        BYTE                   En1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Cn1
+        BYTE           N23     En1
+        BYTE           N23     An1
+        BYTE   W24
+        BYTE           N11     Cn1
+        BYTE           N11     En1
+        BYTE           N11     An1
+        BYTE   W12
+        BYTE   PEND
+// 003   ----------------------------------------
+StormsBrewing_8_3:
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Fn1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn1
+        BYTE           N23     Fn1
+        BYTE           N23     An1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Fn1
+        BYTE           N11     An1
+        BYTE   W12
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Fn1
+        BYTE           N32     As1   v080   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 004   ----------------------------------------
+StormsBrewing_8_4:
+        BYTE   W12
+        BYTE           N23     Dn1   v080
+        BYTE           N23     Fn1
+        BYTE           N23     As1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Fn1
+        BYTE           N11     As1
+        BYTE   W12
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Gn1
+        BYTE           N32     As1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn1
+        BYTE           N23     Gn1
+        BYTE           N23     As1
+        BYTE   W12
+        BYTE   PEND
+// 005   ----------------------------------------
+StormsBrewing_8_5:
+        BYTE   W12
+        BYTE           N11     Dn1   v080
+        BYTE           N11     Gn1
+        BYTE           N11     As1
+        BYTE   W12
+        BYTE           N32     Cn1   v080   gtp3
+        BYTE                   En1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Cn1
+        BYTE           N23     En1
+        BYTE           N23     An1
+        BYTE   W24
+        BYTE           N11     Cn1
+        BYTE           N11     En1
+        BYTE           N11     An1
+        BYTE   W12
+        BYTE   PEND
+// 006   ----------------------------------------
+StormsBrewing_8_6:
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Fn1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn1
+        BYTE           N23     Fn1
+        BYTE           N23     An1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Fn1
+        BYTE           N11     An1
+        BYTE   W12
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Gn1
+        BYTE           N32     As1   v080   gtp3
+        BYTE   W24
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_1
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_2
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_3
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_4
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_5
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_6
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_1
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_4
+// 017   ----------------------------------------
+StormsBrewing_8_17:
+        BYTE   W12
+        BYTE           N11     Dn1   v080
+        BYTE           N11     Gn1
+        BYTE           N11     As1
+        BYTE   W12
+        BYTE           N32     Cs1   v080   gtp3
+        BYTE                   En1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Cs1
+        BYTE           N23     En1
+        BYTE           N23     An1
+        BYTE   W24
+        BYTE           N11     Cs1
+        BYTE           N11     En1
+        BYTE           N11     An1
+        BYTE   W12
+        BYTE   PEND
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_6
+// 019   ----------------------------------------
+        BYTE   W12
+        BYTE           N23     Dn1   v080
+        BYTE           N23     Gn1
+        BYTE           N23     As1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Gn1
+        BYTE           N11     As1
+        BYTE   W12
+        BYTE           N32     En1   v080   gtp3
+        BYTE                   Gn1
+        BYTE           N32     As1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     En1
+        BYTE           N23     Gn1
+        BYTE           N23     As1
+        BYTE   W12
+// 020   ----------------------------------------
+        BYTE   W12
+        BYTE           N11     En1
+        BYTE           N11     Gn1
+        BYTE           N11     As1
+        BYTE   W12
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Gn1
+        BYTE           N32     As1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn1
+        BYTE           N23     Gn1
+        BYTE           N23     As1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Gn1
+        BYTE           N11     As1
+        BYTE   W12
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_3
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_4
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_5
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_6
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_4
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_17
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_6
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_1
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_2
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_3
+// 034   ----------------------------------------
+        BYTE   W12
+        BYTE           N23     Dn1   v080
+        BYTE           N23     Fn1
+        BYTE           N23     As1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Fn1
+        BYTE           N11     As1
+        BYTE   W12
+        BYTE           N32     En1   v080   gtp3
+        BYTE                   An1
+        BYTE           N32     Cn2   v080   gtp3
+        BYTE   W36
+        BYTE           N23     En1
+        BYTE           N23     An1
+        BYTE           N23     Cn2
+        BYTE   W12
+// 035   ----------------------------------------
+        BYTE   W12
+        BYTE           N11     En1
+        BYTE           N11     An1
+        BYTE           N11     Cn2
+        BYTE   W12
+        BYTE           N32     Dn1   v080   gtp3
+        BYTE                   Fn1
+        BYTE           N32     An1   v080   gtp3
+        BYTE   W36
+        BYTE           N23     Dn1
+        BYTE           N23     Fn1
+        BYTE           N23     An1
+        BYTE   W24
+        BYTE           N11     Dn1
+        BYTE           N11     Fn1
+        BYTE           N11     An1
+        BYTE   W12
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_6
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_1
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_2
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_3
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_4
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_8_5
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_8_LOOP
+        BYTE   FINE
+
+//***************** Track 9 (Midi-Chn.10) ******************//
+
+StormsBrewing_9:
+        BYTE   KEYSH   StormsBrewing_key+0
+// 000   ----------------------------------------
+StormsBrewing_9_LOOP:
+        BYTE           VOICE   36
+        BYTE           VOL     55
+        BYTE           PAN     c_v-26
+        BYTE           N11     Dn2   v080
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+// 001   ----------------------------------------
+StormsBrewing_9_1:
+        BYTE           N11     An2   v080
+        BYTE   W12
+        BYTE           N32     As2   v080   gtp3
+        BYTE   W36
+        BYTE           N11     Dn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE   PEND
+// 002   ----------------------------------------
+StormsBrewing_9_2:
+        BYTE           N11     Fn2   v080
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE           N32     Gn2   v080   gtp3
+        BYTE   W36
+        BYTE   PEND
+// 003   ----------------------------------------
+StormsBrewing_9_3:
+        BYTE           N11     Dn2   v080
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 005   ----------------------------------------
+StormsBrewing_9_5:
+        BYTE           N11     Fn2   v080
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE           N32     Dn2   v080   gtp3
+        BYTE   W36
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_2
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_5
+// 012   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_5
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_2
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_5
+// 024   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 025   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_2
+// 027   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 029   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_5
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 031   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 032   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_2
+// 033   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_5
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 037   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_2
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_3
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_1
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  StormsBrewing_9_5
+// 042   ----------------------------------------
+        BYTE   GoTo
+         POIN2  StormsBrewing_9_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+StormsBrewing:
+        BYTE   10                      // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   StormsBrewing_pri       // Priority
+        BYTE   StormsBrewing_rev       // Reverb
+
+        POIN2   StormsBrewing_grp      
+
+        POIN2   StormsBrewing_0
+        POIN2   StormsBrewing_1
+        POIN2   StormsBrewing_2
+        POIN2   StormsBrewing_3
+        POIN2   StormsBrewing_4
+        POIN2   StormsBrewing_5
+        POIN2   StormsBrewing_6
+        POIN2   StormsBrewing_7
+        POIN2   StormsBrewing_8
+        POIN2   StormsBrewing_9
+
+        

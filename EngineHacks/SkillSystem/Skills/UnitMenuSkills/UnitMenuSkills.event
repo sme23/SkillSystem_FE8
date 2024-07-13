@@ -78,3 +78,5 @@ WORD AdaptableID
 ALIGN 4
 ShiftEffect:
 #incbin "Shift/ShiftEffect.dmp"
+
+#include "Disarm/Installer.event"

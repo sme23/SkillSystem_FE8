@@ -82,3 +82,12 @@ Time's Ticking[X]
 
 ## SongName_CastawayHeart
 Castaway Heart[X]
+
+## SongName_DroppingAnchor
+Dropping Anchor[X]
+
+## SongName_CloudsYearning
+Cloud's Yearning[X]
+
+## SongName_StormsBrewing
+Storm's Brewing[X]

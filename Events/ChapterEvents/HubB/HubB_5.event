@@ -87,8 +87,6 @@ TILECHANGE 0xE
 SetBackground(Ship)
 // storm ambience specifically
 Music(WindGustSoundID)
-FadeBackFromBlack
-
 TEXTSTART
 TEXTSHOW B5_LuaSky
 TEXTEND
@@ -125,7 +123,6 @@ STAL 60
 EraseBackground
 LOAD1 1 CutsceneNicoSquad
 CAM1 Nicodemus
-FadeBackFromBlack
 STAL 30
 CameraCursor(Nicodemus)
 Text(B5_NicodemusCrash)
@@ -135,7 +132,6 @@ Text(B5_FataMocksNicodemus)
 FadeToBlack
 Music(NighttimeSoundID)
 SetBackground(Forest_Dense)
-FadeBackFromBlack
 Text(B5_LuaCrash)
 FadeToBlack
 EraseBackground
@@ -170,7 +166,6 @@ Text(B5_CurrentCharacterSignals)
 FadeToBlack
 Music(CastawayHeartID)
 SetBackground(Forest_Dense)
-FadeBackFromBlack
 Text(B5_ChatOnHill)
 FadeToBlack
 
@@ -198,7 +193,6 @@ LABEL 0x1A1
 SetBackground(Inn)
 // idk; some sort of spooky ambient-ish song? Dire Tides?
 Music(NighttimeSoundID)
-FadeBackFromBlack
 Text(B5_Wreckage_Intro)
 CenterTextbox(B5_Journal_Elodia)
 Text(B5_Wreckage_Interlude)
@@ -227,7 +221,7 @@ UNIT Fata Monk 0 Level(10,Ally,True) [3,6] 0 0 1 REDA3R6 [Elfire,Luna] NoAI
 UNIT
 
 BadGuys:
-UNIT Nicodemus Cataphract 0 Level(13,Enemy,False) [21,2] 0 0 0 0 [Pike,SilverAxe,RiderBadge] GroupOneAI
+UNIT Nicodemus Cataphract 0 Level(13,Enemy,True) [21,2] 0 0 0 0 [Pike,SilverAxe,RiderBadge] GroupOneAI
 // brigand
 UNIT A6Pirate Brigand Nicodemus Level(10,Enemy,True) [23,1] 0 0 0 0 [SteelAxe,TealGem] [0x0,0x4,0x4,0x0]
 // boss squad
@@ -268,16 +262,18 @@ UNIT Incendivis Warden Nicodemus Level(10,Enemy,True) [13,8] 0 0 0 0 [SteelSword
 // t6
 // UNIT Incendivis Shaman Nicodemus Level(10,Enemy,True) [9,7] 0 0 0 0 [Sagittae] BossAI
 UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [1,6] 0 0 0 0 [Bloodaxe,Bloodaxe,Bloodaxe] GroupThreeAI
-UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [4,3] 0 0 0 0 [Axereaver,Lancereaver] GroupThreeAI
+UNIT Incendivis Warden Nicodemus Level(10,Enemy,True) [4,3] 0 0 0 0 [Axereaver,Lancereaver] GroupThreeAI
 UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [20,8] 0 0 0 0 [SteelLance,Impaler] AttackInTwoAI
 UNIT Incendivis AxeCav Nicodemus Level(10,Enemy,True) [19,7] 0 0 0 0 [SteelAxe] AttackInTwoAI
 UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [17,9] 0 0 0 0 [SteelLance] AttackInTwoAI
 UNIT Incendivis SwordKnight Nicodemus Level(12,Enemy,True) [20,7] 0 0 0 0 [Rapier] AttackInTwoAI
 // i don't evne fucking know anymore
+// lol
 UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [16,1] 0 0 0 0 [SteelAxe] GroupFourAI
 UNIT Incendivis Mercenary Nicodemus Level(10,Enemy,True) [15,2] 0 0 0 0 [SteelSword] GroupFourAI
 // UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [18,3] 0 0 0 0 [SteelMusket] GroupFourAI
-UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [22,3] 0 0 0 0 [SteelLance] AttackInTwoAI
+//commenting out this one guy
+//UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [22,3] 0 0 0 0 [SteelLance] AttackInTwoAI
 UNIT Incendivis Curate Nicodemus Level(10,Enemy,True) [5,10] 0 0 0 0 [Heal,Restore] [0x0E,0x03,0x04,0x0]
 UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [20,2] 0 0 0 0 [SteelLance,HandAxe] BossAI
 UNIT Incendivis Warden Nicodemus Level(10,Enemy,True) [21,1] 0 0 0 0 [SteelSword,Javelin] BossAI

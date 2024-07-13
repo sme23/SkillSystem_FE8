@@ -58,6 +58,9 @@ SoundRoomEntry(TheWavesApprenticeID, 0, SongName_TheWavesApprenticeID)
 SoundRoomEntry(TougherTussleID, 0, SongName_TougherTussleID)
 SoundRoomEntry(TimesTickingID, 0, SongName_TimesTickingID)
 SoundRoomEntry(CastawayHeartID, 0, SongName_CastawayHeart)
+SoundRoomEntry(DroppingAnchorID, 0, SongName_DroppingAnchor)
+SoundRoomEntry(CloudsYearningID, 0, SongName_CloudsYearning)
+SoundRoomEntry(StormsBrewingID, 0, SongName_StormsBrewing)
 SoundRoomTerminator
 
 

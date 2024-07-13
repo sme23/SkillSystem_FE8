@@ -1150,6 +1150,14 @@ ORG SkillIcon(ArcaneArtificeID)
 #incbin "SkillIcons/ArcaneBlade.dmp"
 ORG SkillIcon(DismountID)
 #incbin "SkillIcons/AirRaidSpd.dmp"
+ORG SkillIcon(WanderersFocusID)
+#incbin "SkillIcons/AlertStance.dmp"
+ORG SkillIcon(PulverizeID)
+#incbin "SkillIcons/Axefaith.dmp"
+ORG SkillIcon(BreatherID)
+#incbin "SkillIcons/Relief.dmp"
+ORG SkillIcon(DisarmID)
+#incbin "SkillIcons/Swordbreaker.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)

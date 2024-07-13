@@ -146,7 +146,7 @@ UNIT Avocado 0 0 Level(12,NPC,True) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
 UNIT
 
 MagdalenaSquad:
-UNIT Magdalena 0 0 Level(17,NPC,True) [23,12] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
+UNIT Magdalena 0 0 Level(15,NPC,True) [23,12] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
 UNIT
 
 // fadi: to black

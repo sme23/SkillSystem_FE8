@@ -36,7 +36,8 @@ DeathQuote(Fata, AllChapters, 0, FataDQ)
 
 // Bosses
 
-
+DeathQuote(AlonsoChapter3, Chapter3, 2, Ch3AlonsoDQ)
+DeathQuote(Dalila, Chapter3, 10, Ch3DalilaDQ)
 
 DeathQuote(Khazhak,Chapter1, 2, 0)
 
@@ -73,8 +74,5 @@ DeathQuote(RebelThief, HubB_3, 0xF, 0x0)
 DeathQuote(Javier, HubB_4, 0x2, JavierDQ)
 
 DeathQuote(Nicodemus, HubB_5, 0, NicodemusDeathQuote)
-
-DeathQuote(AlonsoChapter3, Chapter3, 0x2, 0)
-DeathQuote(Dalila, Chapter3, 0, 0)
 
 DeathQuote(0xFFFF,0,0,0) // terminator

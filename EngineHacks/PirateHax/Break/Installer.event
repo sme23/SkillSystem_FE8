@@ -22,6 +22,7 @@ BYTE Vanguard
 BYTE General
 BYTE Runeshield
 BYTE Cataphract
+BYTE Marshall
 BYTE 0
 
 //skillsys stuff; comment out if you have it elsewhere
@@ -41,4 +42,8 @@ ALIGN 4
 
 ArcaneArtificeIDLink:
 BYTE ArcaneArtificeID
+ALIGN 4
+
+PulverizeIDLink:
+BYTE PulverizeID
 ALIGN 4

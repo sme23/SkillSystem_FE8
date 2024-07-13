@@ -600,7 +600,7 @@ Objective: Defeat Boss[X]
 Units: Dmitr (Brigand)[X]
 
 ## HubB1Loot
-Loot: TBD?[X]
+Loot: A varied treasure collection.[X]
 
 ## HubB1Confirm
 Explore the desert?[X]
@@ -848,36 +848,38 @@ but watch the clouds roll here.[A]
 We're not too far off of one of[N]
 the more substantial towns out[N]
 here in this wasteland.[AN]
-Perhaps while we're still in a[Beat][N]
-somewhat civilised land it might[N]
-be worth visiting for trade and supplies.[A]
+Perhaps, while we're still in a[Beat][N]
+somewhat civilised land, it might[N]
+be worth visiting for supplies.[A]
 
 [MR][2LB]
-Is that right Orlando?[AN]
-Hm,[.4] I suppose it would be prudent.[AN]
-after all who knows how long it'll be[N]
-before we see anywhere with real trade again.[AN]
-Of course you and I know this is still[N]
-quite far out from the usual trade routes.[AN]
-They'll probably want to fleece us for[N]
-all we're worth especially given our status.[A]
+Is that right, Orlando?[AN]
+Hm, I suppose it would be prudent.[AN]
+After all, who knows how long it'll be[N]
+before we can do any real trading again?[AN]
+Of course, this is still quite far[N]
+from the usual trade routes.[AN]
+They'll want to fleece us for all we're[N]
+we're worth, especially given our status.[A]
 
 [ML][3LB]
-Come now Lua we're both veterans of the[N]
-merchants guild,[.4] I'm sure we can[N]
+Come now, Lua. We're both veteran[N]
+merchants, no? I'm sure we can[N]
 swindle ourselves a good deal.[AN]
-Besides it would certainly make for[N]
-a good break from all this endless fighting.[A]
+Besides, it would make for a good[N]
+break from this endless fighting.[A]
 
-[MR]
-Hmm[Beat] I suppose so.[X]
+[MR][2LB]
+Hmm[Beat][N]
+I suppose so.[A][X]
 
 ## HubB4Accepted
 [ML][LoadOrlando]
 [MR][LoadLua][2LB]
-Alright Orlando you made your case.[A]
-We could do with something less[Beat] Intensive[N]
-and we'll definetly need some money and gear.[A]
+Alright, Orlando. You made your case.[N]
+We could do with something less[Beat][AN]
+intensive, and we'll definitely[N]
+need some money and gear.[A]
 
 [ML][1LB]
 Excellent, I'll make preparations right away.[A][X]
@@ -885,8 +887,8 @@ Excellent, I'll make preparations right away.[A][X]
 ## HubB4Rejected
 [ML][LoadOrlando]
 [MR][LoadLua][2LB]
-Maybe not right now Orlando.[AN]
-I think we have more pressing matters[N]
+Not right now, Orlando.[AN]
+We have more pressing matters,[N]
 but I'll think about it.[A][X]
 
 ## HubB4Title
@@ -921,7 +923,7 @@ Unit: Fata (Monk)[X]
 Loot: Staves, as well as nonweapon items.[X]
 
 ## HubB5Confirm
-Sail to the Ghostwood?[X]
+Fly to the Ghostwood?[X]
 
 
 ## HubB5Pitch

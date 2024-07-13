@@ -37,6 +37,9 @@
 #define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 #define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 #define GotoHubChapterIfYesHubB(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; CUSA Razvan; CUSA Rahel; CUSA Desiderio; CUSA Orlando; CUSA Pilar; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYesHubB(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; CUSA Razvan; CUSA Rahel; CUSA Desiderio; CUSA Orlando; CUSA Pilar; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+
+
 
 #define HubChapterFirstTimeEvent(labelId, seenEID, selectionText) "EVBIT_MODIFY 4; CHECK_EVENTID seenEID; BNE labelId s0 sC; Text(selectionText); ENUT seenEID; LABEL labelId"
 

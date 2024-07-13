@@ -1778,3 +1778,20 @@ this unit's attacks cannot be countered.[X]
 Scouting Ahead: This unit can switch[N]
 between fighting on foot and flying[N]
 by using Dismount and Mount.[X]
+
+## SD_WanderersFocus
+Wanderer's Focus: If this unit has no[N]
+allies within 3 tiles, this unit gains[N]
+WTA for all counterattacks they make.[X]
+
+## SD_Pulverize
+Pulverize: If this unit attacks[N]
+an enemy affected by Break, +40 Crt.[X]
+
+## SD_Breather
+Breather: When this unit uses Wait,[N]
+they heal for 50% of their max HP.[X]
+
+## SD_Disarm
+Disarm: Command. This unit Breaks[N]
+an enemy and reduces their Def by 5.[X]

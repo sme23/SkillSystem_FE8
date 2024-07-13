@@ -1,5 +1,25 @@
 EventPointerTable(Chapter3EventsID, PointerList)
 
+//Flags
+/*  1 - Alonso BQ
+    2 - Alonso DQ
+    7 - Alonso BQ 2
+    8 - Dalila BQ
+    9 - Dalila BQ 2 
+    10 - Dalila DQ //finished to this point
+    11 - Alonso/Lua BQ
+    12 - Alonso/Desiderio BQ
+    13 - Alonso/Orlando BQ
+    14 - Alonso/Carmen BQ
+    15 - Alonso/Ximo BQ
+    16 - Alonso/Ernest BQ
+    17 - Dalila/Pilar BQ
+    18 - Dalila/Razvan BQ
+    19 - Dalila/Rahel BQ
+    20 - Dalila/Fata BQ
+
+*/
+
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -13,12 +33,77 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0, ReinforcementWarning, 5)
+TurnEventPlayer(0, Reinforcements1, 6)
+TurnEventPlayer(0, Reinforcements2, 8)
+TurnEventPlayer(0, Reinforcements3, 10)
+TurnEventPlayer(0, ReinforcementsAllTogetherNow, 12)
+TurnEventPlayer(0, TurnLimit, 13)
 END_MAIN
+
+ReinforcementWarning:
+CameraCursor(Alonso)
+Text(Ch3AlonsoReinforcementWarning)
+NoFade
+ENDA
+
+Reinforcements1:
+SpawnReinforcements(ReinforcementGroup1)
+NoFade
+ENDA
+
+ReinforcementGroup1:
+UNIT Blackheart Brigand 0 Level(15,Enemy,True) [13,27] 0 0 1 REDA12R27 [SteelAxe] PursueWithoutHeedAI
+UNIT Blackheart Gunner 0 Level(15,Enemy,True) [13,27] 0 0 1 REDA13R26 [IronMusket] PursueWithoutHeedAI
+UNIT Blackheart Myrmidon 0 Level(15,Enemy,True) [20,27] 0 0 1 REDA21R27 [IronSword] PursueWithoutHeedAI
+UNIT Blackheart Shaman 0 Level(15,Enemy,True) [20,27] 0 0 1 REDA20R26 [Elfire] PursueWithoutHeedAI
+UNIT
+
+Reinforcements2:
+SpawnReinforcements(ReinforcementGroup2)
+NoFade
+ENDA
+
+ReinforcementGroup2:
+UNIT Blackheart Warden 0 Level(15,Enemy,True) [13,21] 0 0 1 REDA13R21 [SteelSword, SteelLance] PursueWithoutHeedAI
+UNIT Blackheart Vanguard 0 Level(15,Enemy,True) [20,21] 0 0 1 REDA20R21 [SteelAxe, SteelLance] PursueWithoutHeedAI
+UNIT
+
+Reinforcements3:
+SpawnReinforcements(ReinforcementGroup3)
+NoFade
+ENDA
+
+ReinforcementGroup3:
+UNIT Blackheart Thief 0 Level(15,Enemy,True) [15,18] 0 0 1 REDA15R17 [Bloodletter] PursueWithoutHeedAI
+UNIT Blackheart Hunter 0 Level(15,Enemy,True) [15,18] 0 0 1 REDA16R18 [ShiningBow] PursueWithoutHeedAI
+UNIT Blackheart Thief 0 Level(15,Enemy,True) [18,18] 0 0 1 REDA18R17 [Stiletto] PursueWithoutHeedAI
+UNIT Blackheart Hunter 0 Level(15,Enemy,True) [18,18] 0 0 1 REDA17R18 [Tomereaver] PursueWithoutHeedAI
+UNIT
+
+ReinforcementsAllTogetherNow:
+SpawnReinforcements(ReinforcementGroup1)
+SpawnReinforcements(ReinforcementGroup2)
+SpawnReinforcements(ReinforcementGroup3)
+NoFade
+ENDA
+
+TurnLimit:
+CameraCursor(Alonso)
+Text(AlonsoVictoryText)
+CameraCursor(Lua)
+Text(LuaDefeatText)
+CALL GameOverStart
+NoFade
+ENDA
 
 CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Chest(SilverMusket, 3, 16)
+Chest(SilverSword, 32, 15)
+DurabilityChest(SkillScroll,LungeID,16,10)
 END_MAIN
 
 MiscBasedEvents:
@@ -47,31 +132,30 @@ UNIT
 
 LeftSideUnits: //axes, guns, knives
 //turn 1
-UNIT Blackheart Brigand 0 Level(14,Enemy,True) [9,39] 0 0 0 0 [SteelAxe] PursueWithoutHeedAI
-UNIT Blackheart Thief 0 Level(14,Enemy,True) [10,38] 0 0 0 0 [SteelKnife] PursueWithoutHeedAI
+UNIT Blackheart Brigand 0 Level(15,Enemy,True) [9,39] 0 0 0 0 [SteelAxe] PursueWithoutHeedAI
+UNIT Blackheart Thief 0 Level(15,Enemy,True) [10,38] 0 0 0 0 [SteelKnife] PursueWithoutHeedAI
 
 UNIT TorchUnit Rogue 0 Level(16,Enemy,True) [7,3] 0 0 0 0 [Peshkatz, SilverKnife] GroupSixAI
-UNIT Blackheart Gunner 0 Level(14,Enemy,True) [8,2] 0 0 0 0 [SteelMusket] GroupSixAI
-UNIT Blackheart Brigand 0 Level(14,Enemy,True) [8,4] 0 0 0 0 [SteelAxe] GroupSixAI
+UNIT Blackheart Brigand 0 Level(15,Enemy,True) [8,4] 0 0 0 0 [SteelAxe] GroupSixAI
 
 //turn 2
-UNIT Blackheart Thief 0 Level(14,Enemy,True) [3,34] 0 0 0 0 [SteelKnife] GroupSevenAI
-UNIT TorchUnit Marksman 0 Level(16,Enemy,True) [4,35] 0 0 0 0 [SilverMusket, Blunderbuss] GroupSevenAI
-UNIT Blackheart Brigand 0 Level(14,Enemy,True) [3,36] 0 0 0 0 [SteelAxe] GroupSevenAI
+UNIT Blackheart Thief 0 Level(15,Enemy,True) [3,34] 0 0 0 0 [SteelKnife] GroupSevenAI
+UNIT TorchUnit Marksman 0 Level(16,Enemy,True) [5,35] 0 0 0 0 [SteelMusket, Pistol] GroupSevenAI
+UNIT Blackheart Brigand 0 Level(15,Enemy,True) [3,36] 0 0 0 0 [SteelAxe] GroupSevenAI
 
 //turn 3
-UNIT Blackheart Gunner 0 Level(14,Enemy,True) [9,29] 0 0 0 0 [SteelMusket] AttackInRangeAI
-UNIT Blackheart Thief 0 Level(14,Enemy,True) [8,30] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT Blackheart Gunner 0 Level(15,Enemy,True) [9,29] 0 0 0 0 [SteelMusket] GroupNineAI
+UNIT Blackheart Thief 0 Level(15,Enemy,True) [8,30] 0 0 0 0 [SteelKnife] GroupNineAI
 
 //turn 4?
-UNIT Blackheart Gunner 0 Level(14,Enemy,True) [7,17] 0 0 0 0 [SteelMusket] AttackInRangeAI
-UNIT Blackheart Brigand 0 Level(14,Enemy,True) [8,18] 0 0 0 0 [SteelAxe] AttackInRangeAI
+UNIT Blackheart Gunner 0 Level(15,Enemy,True) [7,17] 0 0 0 0 [SteelMusket] GroupEightAI
+UNIT Blackheart Brigand 0 Level(15,Enemy,True) [8,18] 0 0 0 0 [SteelAxe] GroupEightAI
 
 
 //turn 5-6?
-UNIT Blackheart Thief 0 Level(14,Enemy,True) [1,16] 0 0 0 0 [SteelDagger] GroupOneAI
-UNIT TorchUnit Berserker 0 Level(16,Enemy,True) [2,17] 0 0 0 0 [Swordreaver, Crusher] GroupOneAI
-UNIT Blackheart Gunner 0 Level(14,Enemy,True) [1,18] 0 0 0 0 [Culverin] GroupOneAI
+UNIT Blackheart Thief 0 Level(15,Enemy,True) [1,16] 0 0 0 0 [SteelDagger] GroupOneAI
+UNIT TorchUnit Berserker 0 Level(16,Enemy,True) [2,17] 0 0 0 0 [Swordreaver] GroupOneAI
+UNIT Blackheart Gunner 0 Level(15,Enemy,True) [1,18] 0 0 0 0 [Culverin] GroupOneAI
 UNIT
 
 CenterBoatUnits: //armored units, staffers, and bows
@@ -90,7 +174,7 @@ UNIT TorchUnit General 0 Level(16,Enemy,True) [17,6] 0 0 0 0 [FlameSword, Pike] 
 UNIT TorchUnit Dreadnought 0 Level(16,Enemy,True) [19,14] 0 0 0 0 [SilverBow, Bloodaxe] BossAI
 UNIT TorchUnit General 0 Level(16,Enemy,True) [19,15] 0 0 0 0 [Spear, SilverSword] BossAI
 UNIT TorchUnit General 0 Level(16,Enemy,True) [14,14] 0 0 0 0 [Spear, SilverAxe] BossAI
-UNIT TorchUnit Dreadnought 0 Level(16,Enemy,True) [14,15] 0 0 0 0 [SilverAxe, Harpoon] BossAI
+UNIT TorchUnit Dreadnought 0 Level(16,Enemy,True) [14,15] 0 0 0 0 [SilverAxe] BossAI
 
 UNIT TorchUnit Baron 0 Level(16,Enemy,True) [16,22] 0 0 0 0 [Arcfire, Peacekeeper] BossAI
 UNIT TorchUnit Baron 0 Level(16,Enemy,True) [17,22] 0 0 0 0 [SilverSword, Thani] BossAI
@@ -102,31 +186,29 @@ RightSideUnits: //lances, swords, tomes
 UNIT Blackheart Deserter 0 Level(15,Enemy,True) [27,2] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
 UNIT Blackheart Mercenary 0 Level(15,Enemy,True) [28,3] 0 0 0 0 [SteelSword] PursueWithoutHeedAI
 
-UNIT Blackheart Deserter 0 Level(14,Enemy,True) [23,37] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
-UNIT Blackheart Shaman 0 Level(14,Enemy,True) [24,38] 0 0 0 0 [Elfire] PursueWithoutHeedAI
+UNIT Blackheart Deserter 0 Level(15,Enemy,True) [23,37] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
+UNIT Blackheart Shaman 0 Level(15,Enemy,True) [24,38] 0 0 0 0 [Elfire] PursueWithoutHeedAI
 
 //turn 2
-UNIT TorchUnit Halberdier 0 Level(16,Enemy,True) [28,8] 0 0 0 0 [SilverLance, Harpoon] GroupThreeAI
-UNIT Blackheart Deserter 0 Level(14,Enemy,True) [27,9] 0 0 0 0 [SteelLance] GroupThreeAI
-UNIT Blackheart Shaman 0 Level(14,Enemy,True) [29,9] 0 0 0 0 [Elfire] GroupThreeAI
+UNIT TorchUnit Halberdier 0 Level(16,Enemy,True) [28,8] 0 0 0 0 [SilverLance] GroupThreeAI
+UNIT Blackheart Shaman 0 Level(15,Enemy,True) [29,9] 0 0 0 0 [Elfire] GroupThreeAI
 
-UNIT Blackheart Deserter 0 Level(14,Enemy,True) [29,35] 0 0 0 0 [SteelLance] GroupFiveAI
+UNIT Blackheart Deserter 0 Level(15,Enemy,True) [29,35] 0 0 0 0 [SteelLance] GroupFiveAI
 UNIT TorchUnit Swordmaster 0 Level(16,Enemy,True) [30,36] 0 0 0 0 [SilverSword, Onigiri] GroupFiveAI
-UNIT Blackheart Shaman 0 Level(14,Enemy,True) [31,35] 0 0 0 0 [Elfire] GroupFiveAI
+UNIT Blackheart Shaman 0 Level(15,Enemy,True) [31,35] 0 0 0 0 [Elfire] GroupFiveAI
 
 //turn 3
-UNIT Blackheart Mercenary 0 Level(14,Enemy,True) [24,30] 0 0 0 0 [SteelBlade] AttackInRangeAI
-UNIT Blackheart Soldier 0 Level(14,Enemy,True) [25,31] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT Blackheart Mercenary 0 Level(15,Enemy,True) [24,30] 0 0 0 0 [SteelBlade] AttackInRangeAI
+UNIT Blackheart Soldier 0 Level(15,Enemy,True) [25,31] 0 0 0 0 [SteelLance] AttackInRangeAI
 
 //turn 4
-UNIT Blackheart Deserter 0 Level(14,Enemy,True) [26,16] 0 0 0 0 [SteelLance] GroupFourAI
+UNIT Blackheart Deserter 0 Level(15,Enemy,True) [26,16] 0 0 0 0 [SteelLance] GroupFourAI
 UNIT TorchUnit Champion 0 Level(16,Enemy,True) [27,17] 0 0 0 0 [SilverBlade, Spear] GroupFourAI
-UNIT Blackheart Mercenary 0 Level(14,Enemy,True) [26,18] 0 0 0 0 [SteelBlade] GroupFourAI
 
 //(turn 5-6?)
-UNIT Blackheart Mercenary 0 Level(14,Enemy,True) [31,19] 0 0 0 0 [Wingclipper] GroupTwoAI
+UNIT Blackheart Mercenary 0 Level(15,Enemy,True) [31,19] 0 0 0 0 [Wingclipper] GroupTwoAI
 UNIT TorchUnit Slayer 0 Level(16,Enemy,True) [32,18] 0 0 0 0 [FlameSword, Arcfire] GroupTwoAI
-UNIT Blackheart Shaman 0 Level(14,Enemy,True) [33,19] 0 0 0 0 [Sagittae] GroupTwoAI
+UNIT Blackheart Shaman 0 Level(15,Enemy,True) [33,19] 0 0 0 0 [Sagittae] GroupTwoAI
 UNIT
 
 Traps1:
@@ -138,14 +220,33 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+UnsetAllHubChapterFlags
+ENUF LuaInAHubFlag
 SetBackground(Inn)
+MUSC MeetTheCrewID
 Text(Ch3BeginningScene1_1)
+MUSC AvastMeHeartiesID
 Text(Ch3BeginningScene1_2)
 Text(Ch3BeginningScene1_3)
 SetBackground(Ship)
+MUSC SwabbieTalkID
 Text(Ch3BeginningScene2)
 // scene change
+MUSC ABlackheartsPrideID
 Text(Ch3BeginningScene3_1)
+FadeOutMusic
+FADI 15
+EARTHQUAKE 0 True
+STAL 30
+EARTHQUAKE 1 True
+STAL 30
+EARTHQUAKE 0 True
+STAL 30
+EARTHQUAKE 1 True
+STAL 30
+EARTHQUAKE_END
+SetBackground(Ship)
+MUSC FoolsBoldID
 Text(Ch3BeginningScene3_2)
 // camera cursor razvan
 Text(Ch3BeginningScene3_3Razvan)
@@ -155,6 +256,7 @@ Text(Ch3BeginningScene3_3Pilar)
 Text(Ch3BeginningScene3_3Desiderio)
 WEATHER 7
 STAL 5
+FADI 15
 LoadEnemies(LeftSideUnits)
 LoadEnemies(CenterBoatUnits)
 LoadEnemies(RightSideUnits)
@@ -162,25 +264,43 @@ GotoPrepScreen
 NoFade
 ENDA
 
-AlonsoWarningEvent:
-CameraCursor(Alonso)
-Text(Ch3MidMapAlonsoWarning)
-NoFade
-ENDA
-
 EndingScene:
 MUSC 0x7FFF
 //prob load in dudes here
 SetBackground(Ship)
+MUSC WindAmbienceID
 Text(Ch3EndingScene1)
 // some eventing
+MUSC ABlackheartsPrideID
 Text(Ch3EndingScene2)
-// some eventing 
+// some eventing
 Text(Ch3EndingScene3)
 //some eventing
+MUSC FinInTheCloudsID
 Text(Ch3EndingScene4)
+FADI 15
+FadeOutMusic
+STAL 60
 SetBackground(Inn)
-Text(Ch3EndingScene5)
+MUSC OrlandoThemeID
+TEXTSTART
+TEXTSHOW Ch3EndingScene5
+TEXTEND
+SOUN 0x119
+STAL 30
+TEXTCONT
+TEXTEND
+SOUN 0x11A
+STAL 30
+SOUN 0x11A
+STAL 20
+SOUND 0x11A
+STAL 10
+SOUND 0x11A
+TEXTCONT
+TEXTEND
+REMA
+GOTO_TITLE
 NoFade
 ENDA
 

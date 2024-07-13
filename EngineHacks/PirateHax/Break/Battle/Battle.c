@@ -8,8 +8,9 @@ s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defen
 		return FALSE;
 	}
         
+    u32* entry = GetUnitDebuffEntry(&attacker->unit);
 
-	if (gDebuffTable[attacker->unit.index].skillState & SKILLSTATE_BROKEN_IN_BATTLE){
+	if (CheckBit(entry, BreakInBattleBitOffset_Link)){
 		return FALSE; //checks if attacker is not broken and not the battle actor
 	}
 
@@ -32,11 +33,12 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
     if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS)) {
         if (DidUnitBreak() && (attacker->unit.pCharacterData->number == gBattleActor.unit.pCharacterData->number)){
             if (gBattleStats.config & BATTLE_CONFIG_REAL){
-                if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BROKEN_IN_BATTLE){ //if this already set, do not set break
+                u32* entry = GetUnitDebuffEntry(&gBattleTarget.unit);
+                if (CheckBit(entry, BreakInBattleBitOffset_Link)){ //if this already set, do not set break
 
                 }
                 else{
-                    gDebuffTable[gBattleTarget.unit.index].skillState |= SKILLSTATE_BROKEN_IN_BATTLE;
+                    SetBit(entry, BreakInBattleBitOffset_Link);
 			        gBattleHitIterator->attributes |= BATTLE_HIT_BREAK;
                 }
                 
@@ -168,7 +170,9 @@ void New_BattleInitTargetCanCounter(){
 	}
 
 	// defender is broken
-	if (gDebuffTable[gBattleTarget.unit.index].skillState & SKILLSTATE_BREAK){
+    u32* entry = GetUnitDebuffEntry(&gBattleTarget.unit);
+
+	if (CheckBit(entry, BreakBitOffset_Link)){
         gBattleTarget.weapon = 0;
 		gBattleTarget.canCounter = false;
 		return;

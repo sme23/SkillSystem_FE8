@@ -32,7 +32,18 @@ AnalyzeRange_Link:
 WORD 1
 
 ALIGN 4
+WanderersFocusID_Link:
+WORD WanderersFocusID
+
+ALIGN 4
+WanderersFocusRange_Link:
+WORD 3
+
+ALIGN 4
 #include "Analyze/Analyze.lyn.event"
 
 ALIGN 4
 #include "ArmsMaster/ArmsMaster.lyn.event"
+
+ALIGN 4
+#include "WanderersFocus/WanderersFocus.lyn.event"

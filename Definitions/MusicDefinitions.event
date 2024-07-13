@@ -28,6 +28,9 @@
 #define TougherTussleID 0x1F
 #define TimesTickingID 0x20
 #define CastawayHeartID 0x21
+#define DroppingAnchorID 0x22
+#define CloudsYearningID 0x23
+#define StormsBrewingID 0x24
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47

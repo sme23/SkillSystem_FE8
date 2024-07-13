@@ -1,0 +1,13 @@
+#include "Breather.lyn.event"
+
+ALIGN 4
+BreatherIDLink:
+BYTE BreatherID
+
+ALIGN 4
+BreatherMapEvent: //just the breath of life event
+CAM1 0xFFFF
+SOUN 0x111
+STAL 0x16
+NoFade
+ENDA

@@ -196,3 +196,15 @@
 //Shade: Enemies are less likely to target this unit.
 //By Sme
 #define ShadeID 61
+
+//Lunge: Swap places with the opponent after combat. (No effect if Move is --)
+//By Tequila
+#define LungeID 62
+
+#define WanderersFocusID 63
+
+#define PulverizeID 64
+
+#define BreatherID 65
+
+#define DisarmID 66

@@ -229,3 +229,12 @@ An ally's haste quickens.[X]
 
 ## SwiftHelpText
 Select a unit to hasten movement of.[X]
+
+## UM_Disarm
+ Disarm[X]
+ 
+## UM_DisarmDesc
+Debilitates an enemy.[X]
+
+## DisarmHelpText
+Select a unit to disarm.[X]

@@ -16,6 +16,7 @@ POIN GroupAI BreakPostBattle SavageBlow StudiousBlow NailedDown Delegation Clear
 POIN Kleptomania
 POIN ChapterKillCounter
 POIN DeftHands
+POIN BreatherPostBattle
 // POIN StrTaker SklTaker SpdTaker DefTaker ResTaker LukTaker MagTaker MovTaker Hardworking // these should be replaced with versions using the kill counter and be placed in stat getters
 POIN Canto CantoPlus CantoAttack SeaShanty Canter Galeforce ReMove Powerstaff CulturedPostCombat Gridmaster LiquidCourage  //this order for canto and friends is the only one I tested
 POIN DelayedTonicDeletion //this goes last
