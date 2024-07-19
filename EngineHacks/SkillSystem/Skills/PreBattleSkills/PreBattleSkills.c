@@ -1097,3 +1097,207 @@ void Frenzy(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
 	}
 }
 
+//Gamble: A reckless attack with halved hit but doubled crit.
+void Gamble(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if attack type is gamble
+		gDebuffTable.attackType == AT_GAMBLE
+		//and we are the attacker
+		&& bunitA == &gBattleActor
+	) {
+		//halve hit
+		bunitA->battleHitRate /= 2;
+		//double crit
+		bunitA->battleCritRate *= 2;
+	}
+}
+
+// Hawkeye: User will always hit the enemy.
+void Hawkeye(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if we have the skill
+		SkillTester(bunitA, HawkeyeID_Link)
+	) {
+		//perfect hit
+		bunitA->battleHitRate = 100;
+		//no enemy avoid
+		bunitB->battleAvoidRate = 0;
+	}
+}
+
+// Heavy Blade: +4 Damage/-2 Attack Speed when unit's Con is bigger than the enemy.
+void HeavyBlade(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if our con is bigger than the enemy's
+		bunitA->unit.conBonus > bunitB->unit.conBonus
+		//and we have the skill
+		&& SkillTester(bunitA, HeavyBladeID_Link)
+	) {
+		//+4 damage
+		bunitA->battleAttack += 4;
+		//-2 attack speed
+		bunitA->battleSpeed -= 2;
+	}
+}
+
+// Heavy Strikes: Add weapon weight to critical chance.
+void HeavyStrikes(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if we have the skill
+		SkillTester(bunitA, HeavyStrikesID_Link)
+	) {
+		//add weapon weight to critical chance
+		bunitA->battleAttack += GetItemWeight(bunitA->weaponBefore);
+	}
+}
+
+// Holy Aura: Gain +1 damage, +5% hit, +5% avoid, +5% crit when using light.
+void HolyAura(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if we are using light
+		bunitA->weaponType == ITYPE_LIGHT
+		//and we have the skill
+		&& SkillTester(bunitA, HolyAuraID_Link)
+	) {
+		//gain +1 damage,
+		bunitA->battleAttack += 1;
+		//+5% hit,
+		bunitA->battleHitRate += 5;
+		//+5% avoid,
+		bunitA->battleAvoidRate += 5;
+		//+5% crit
+		bunitA->battleCritRate += 5;
+	}
+}
+
+// Insight: Hit +20.
+void Insight(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if we have the skill
+		SkillTester(bunitA, InsightID_Link)
+	) {
+		//hit + 20
+		bunitA->battleHitRate += 20;
+	}
+}
+
+// Keen Fighter: This unit takes 25% less damage if the opponent doubles.
+void KeenFighter(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if foe doubles unit
+		(bunitB->battleSpeed - bunitA->battleSpeed) > BATTLE_FOLLOWUP_SPEED_THRESHOLD
+		//and unit has the skill
+		&& SkillTester(bunitA, KeenFighterID_Link)
+	) {
+		//take 25% less damage
+		int damage = bunitB->battleAttack - bunitB->battleDefense;
+		int newDamage = damage - (damage/4);
+		bunitB->battleAttack = newDamage;
+		bunitA->battleDefense = 0;
+	}
+}
+
+// Knight Aspirant: When above 75% health, +2 damage, +15% avoid.
+void KnightAspirant(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if above 75% health
+		bunitA->unit.curHP > (bunitA->unit.maxHP*3)/4
+		//and unit has the skill
+		&& SkillTester(bunitA, KnightAspirantID_Link)
+	) {
+		//+2 damage
+		bunitA->battleAttack += 2;
+		//+15% avoid
+		bunitA->battleAvoidRate += 15;
+	}
+}
+
+// Lady Blade: If weapon wielder is female, doubles weapon might.
+void LadyBlade(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if unit is female
+		UNIT_CATTRIBUTES(bunitA) & CA_FEMALE
+		//and unit has the skill
+		&& SkillTester(bunitA, LadyBladeID_Link)
+	) {
+		//double weapon might
+		bunitA->battleAttack += GetItemMight(bunitA->weaponBefore);
+	}
+}
+
+// Life and Death: +10 to damage dealt and taken.
+void LifeAndDeath(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if unit has the skill
+		SkillTester(bunitA, LifeAndDeathID_Link)
+	) {
+		//+10 to damage dealt
+		bunitA->battleAttack += 10;
+		//+10 to damage taken
+		bunitB->battleAttack += 10;
+	}
+}
+
+// Light Weight: When holding three or less items, attack speed +3.
+void LightWeight(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if unit has 3 or less items
+		bunitA->unit.items[3] == 0
+		//and unit has the skill
+		&& SkillTester(bunitA, LightWeightID_Link)
+	) {
+		//attack speed +3
+		bunitA->battleSpeed += 3;
+	}
+}
+
+// Loyalty: When within 2 spaces of a Lord, -3 damage taken, +15% hit.
+void Loyalty(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if unit has the skill
+		SkillTester(bunitA, LoyaltyID_Link)
+	) {
+		// get allied units within 2 spaces
+		u8* unitBuffer = GetUnitsInRange(bunitA, 1, 2);
+		//exit if buffer ptr is empty
+		if (unitBuffer == 0) return;
+		
+		while (true) {
+			//exit if buffer is empty
+			if (unitBuffer* == 0) return;
+			//get unit from buffer
+			Unit* unit = GetUnit(unitBuffer*);
+			//if unit is lord
+			if (UNIT_CATTRIBUTES(unit) & CA_LORD) {
+				//-3 damage taken
+				bunitA->battleDefense += 3;
+				//+15% hit
+				bunitA->battleHitRate += 15;
+				return;
+			}
+			//otherwise, increment buffer ptr
+			unitBuffer++;
+		}
+	}
+}
+
+// Lucky Seven: +20 Hit and Avoid until the 7th turn.
+void LuckySeven(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (
+		//if before the 7th turn
+		gPlaySt.chapterTurnNumber < 7
+		//and unit has the skill
+		&& SkillTester(bunitA, LuckySevenID_Link)
+	) {
+		//+20 hit
+		bunitA->battleHitRate += 20;
+		//+20 avoid
+		bunitA->battleAvoidRate += 20;
+	}
+}
+
+
+
+
+
+

@@ -181,7 +181,7 @@ extern u8 IndoorTerrainList;
 // extern functions
 extern bool SkillTester(struct BattleUnit* unit, u8 skillID);
 extern bool NewAuraSkillCheck(struct Unit* unit, u8 skillID, int allyOption, int maxRange);
-
+extern u8* GetUnitsInRange(struct Unit* unit, int allyOption, int range);
 
 // function prototypes
 void AirRaidAtk(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
@@ -251,6 +251,77 @@ void Flank(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 void Swarm(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 void Multiscale(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 void ForeignPrincess(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
-
 void Fortune(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
 void Frenzy(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Gamble(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Hawkeye(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void HeavyBlade(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void HeavyStrikes(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void HolyAura(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Insight(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void KeenFighter(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void KnightAspirant(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void LadyBlade(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void LifeAndDeath(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void LightWeight(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Loyalty(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void LuckySeven(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+
+void LunarBrace(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void MageSlayer(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Merciless(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void NaturalCover(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void NoGuard(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void OddRhythm(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Opportunist(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Outrider(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Perfectionist(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Prescience(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Puissance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Pursuer(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void QuickBurn(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Roll12(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SandRush(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void ShortShield(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SilentPride(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SlowBurn(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SlushRush(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SolarPower(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+
+void BracingStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void DartingStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void FierceStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void KestrelStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void MirrorStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void ReadyStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SteadyStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SturdyStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SwiftStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void WardingStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SpectrumStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void AlertStance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void AlertStancePlus(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+
+void StoneBody(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void StunningSmile(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SuperLuck(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void SwiftSwim(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Technician(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+
+void Thighdeology(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Thotslayer(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Thunderstorm(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+
+void TowerShield(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void TowerShieldPlus(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Trace(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Trample(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void TrueStrike(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Vanity(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Vigilance(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void WindDisciple(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void WonderGuard(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+void Wrath(struct BattleUnit* bunitA, struct BattleUnit* bunitB);
+
+
+
