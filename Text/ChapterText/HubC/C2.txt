@@ -1,0 +1,9 @@
+## HubC_2Title
+Ch. C-2: Nullptr[X]
+
+## HubC_2StatusObjective_A
+Defeat the[N]
+Blackhearts.[X]
+
+## HubC_2GoalWindow_A
+Defeat Boss[X]

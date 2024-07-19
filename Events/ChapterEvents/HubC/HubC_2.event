@@ -1,0 +1,89 @@
+EventPointerTable(HubC_2EventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Units1:
+//Middle Units
+UNIT Lua Captain 0 Level(10,Ally,False) [9,26] 0 0 0 0 [IronSword] NoAI
+//Valerie
+LoadUnit(7,26)
+
+LoadUnit(8,27)
+LoadUnit(10,27)
+LoadUnit(9,28)
+LoadUnit(11,28)
+
+//Right side units
+LoadUnit(16,25)
+LoadUnit(15,26)
+LoadUnit(17,26)
+LoadUnit(16,27)
+
+//Left side units
+LoadUnit(1,26)
+LoadUnit(0,27)
+LoadUnit(2,27)
+UNIT
+
+Traps1:
+RedSigil(19,9)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+ASMC ClearAllDebuffs // now clears tonics, too. If you add a prep screen to this chapter, then restarting the chapter after saving will remove any tonic boosts because this ASMC is being called each time. 
+WEATHER 7
+FadeToBlack
+REMOVEALL_BLUE
+GotoPrepScreen
+NoFade
+ENDA
+
+EnemyGroup:
+UNIT
+
+EndingScene:
+//replace with HubC when editing
+GoToHubChapter(HubB)
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
