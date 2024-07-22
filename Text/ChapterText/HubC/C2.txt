@@ -7,3 +7,8 @@ Blackhearts.[X]
 
 ## HubC_2GoalWindow_A
 Defeat Boss[X]
+
+## C2ExplanationText
+
+(Note: There's no reward for all
+the rebel units surviving the map.)

@@ -63,12 +63,38 @@ ASMC ClearAllDebuffs // now clears tonics, too. If you add a prep screen to this
 WEATHER 7
 FadeToBlack
 REMOVEALL_BLUE
+LoadEnemies(TheEnemy)
 GotoPrepScreen
 NoFade
 ENDA
 
 EnemyGroup:
 UNIT
+
+TheEnemy:
+UNIT BlackheartElite Sniper 0 Level(18, Enemy, True) [12,3] 0 0 0 0 [Greatbow] AttackInRangeAI
+UNIT BlackheartPlus Warrior 0 Level(18, Enemy, True) [9,1] 0 0 0 0 [SilverAxe, SteelBow] AttackInRangeAI
+UNIT BlackheartPlus Brigand 0 Level(16,Enemy,True) [8,2] 0 0 0 0 [SteelAxe] GroupSixAI
+UNIT BlackheartPlus Mercenary_F 0 Level(16,Enemy,True) [9,3] 0 0 0 0 [SteelSword] GroupSixAI
+UNIT BlackheartPlus Fighter 0 Level(16, Enemy, True) [14,5] 0 0 0 0 [Bloodaxe] GroupSevenAI
+//Fort units, left to right
+UNIT BlackheartPlus Shaman 0 Level(16,Enemy,True) [8,21] 0 0 0 0 [Sagittae] GroupOneAI
+UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [11,21] 0 0 0 0 [SteelKnife] AttackInRangeAI
+//Left Units
+UNIT BlackheartPlus Fighter 0 Level(16,Enemy,True) [2,21] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT BlackheartPlus Hunter 0 Level(16,Enemy,True) [3,21] 0 0 0 0 [Longbow] GroupOneAI
+UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [2,24] 0 0 0 0 [SteelLance] GroupOneAI
+//Right Units
+UNIT BlackheartPlus Archer 0 Level(16,Enemy,True) [16,17] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [18,23] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT 
+
+SmallRebelGarrison:
+UNIT Rebel Vanguard 0 Level(13,Enemy,True) [15,17] 0 0 0 0 [SteelSword, HandAxe] AttackInRangeAI
+UNIT Rebel Vanguard 0 Level(13,Enemy,True) [15,17] 0 0 0 0 [SteelSword, HandAxe] AttackInRangeAI
+UNIT Rebel Vanguard 0 Level(13,Enemy,True) [15,17] 0 0 0 0 [SteelSword, HandAxe] AttackInRangeAI
+UNIT
+
 
 EndingScene:
 //replace with HubC when editing

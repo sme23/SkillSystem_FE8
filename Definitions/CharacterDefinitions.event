@@ -191,3 +191,7 @@
 #define Dalila 0x7B
 #define AlonsoChapter3 0x7C
 #define BlackheartElite 0x7D
+
+// Hub C2
+
+#define BlackheartPlus 0x7E
