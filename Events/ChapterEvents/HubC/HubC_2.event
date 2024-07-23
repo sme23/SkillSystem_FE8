@@ -32,21 +32,19 @@ UNIT Lua Captain 0 Level(10,Ally,False) [9,26] 0 0 0 0 [IronSword] NoAI
 //Valerie
 LoadUnit(7,26)
 
+LoadUnit(11,26)
 LoadUnit(8,27)
 LoadUnit(10,27)
+LoadUnit(12,27)
 LoadUnit(9,28)
 LoadUnit(11,28)
 
-//Right side units
-LoadUnit(16,25)
-LoadUnit(15,26)
-LoadUnit(17,26)
-LoadUnit(16,27)
-
 //Left side units
 LoadUnit(1,26)
-LoadUnit(0,27)
+LoadUnit(3,26)
+LoadUnit(1,27)
 LoadUnit(2,27)
+LoadUnit(2,28)
 UNIT
 
 Traps1:
@@ -74,19 +72,34 @@ UNIT
 TheEnemy:
 UNIT BlackheartElite Sniper 0 Level(18, Enemy, True) [12,3] 0 0 0 0 [Greatbow] AttackInRangeAI
 UNIT BlackheartPlus Warrior 0 Level(18, Enemy, True) [9,1] 0 0 0 0 [SilverAxe, SteelBow] AttackInRangeAI
-UNIT BlackheartPlus Brigand 0 Level(16,Enemy,True) [8,2] 0 0 0 0 [SteelAxe] GroupSixAI
-UNIT BlackheartPlus Mercenary_F 0 Level(16,Enemy,True) [9,3] 0 0 0 0 [SteelSword] GroupSixAI
+UNIT BlackheartPlus Brigand 0 Level(16,Enemy,True) [9,2] 0 0 0 0 [SteelAxe] GroupSixAI
+UNIT BlackheartPlus Mercenary_F 0 Level(16,Enemy,True) [10,3] 0 0 0 0 [SteelSword] GroupSixAI
 UNIT BlackheartPlus Fighter 0 Level(16, Enemy, True) [14,5] 0 0 0 0 [Bloodaxe] GroupSevenAI
 //Fort units, left to right
 UNIT BlackheartPlus Shaman 0 Level(16,Enemy,True) [8,21] 0 0 0 0 [Sagittae] GroupOneAI
 UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [11,21] 0 0 0 0 [SteelKnife] AttackInRangeAI
 //Left Units
-UNIT BlackheartPlus Fighter 0 Level(16,Enemy,True) [2,21] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT BlackheartPlus Fighter 0 Level(16,Enemy,True) [1,19] 0 0 0 0 [SteelAxe, HandAxe] AttackInRangeAI
 UNIT BlackheartPlus Hunter 0 Level(16,Enemy,True) [3,21] 0 0 0 0 [Longbow] GroupOneAI
 UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [2,24] 0 0 0 0 [SteelLance] GroupOneAI
+//Middle Units
+UNIT BlackheartPlus Mercenary 0 Level(16,Enemy,True) [9,23] 0 0 0 0 [SteelSword, Vulnerary] ChargeAI
+UNIT BlackheartPlus Fighter 0 Level(16,Enemy,True) [10,22] 0 0 0 0 [SteelAxe] ChargeAI
 //Right Units
-UNIT BlackheartPlus Archer 0 Level(16,Enemy,True) [16,17] 0 0 0 0 [SteelBow] AttackInRangeAI
-UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [18,23] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT BlackheartPlus Archer 0 Level(16,Enemy,True) [16,17] 0 0 0 0 [ShiningBow] ChargeAI
+UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [15,19] 0 0 0 0 [SteelLance] ChargeAI
+UNIT BlackheartPlus Mercenary 0 Level(16,Enemy,True) [17,20] 0 0 0 0 [SteelSword] ChargeAI
+UNIT BlackheartPlus Berserker 0 Level(16,Enemy,True) [15,15] 0 0 0 0 [KillerAxe, BlueGem] ChargeAI
+
+//Left stair formation
+UNIT BlackheartPlus Marksman 0 Level(18,Enemy,True) [4,14] 0 0 0 0 [Pistol, Pistol, HideShield] AttackInTwoAI
+UNIT BlackheartPlus Archer 0 Level(16,Enemy,True) [3,13] 0 0 0 0 [SteelBow] AttackInTwoAI //3-13 archer is back!!
+UNIT BlackheartPlus Brigand 0 Level(16,Enemy,True) [5,13] 0 0 0 0 [IronAxe] AttackInTwoAI 
+
+
+//Misc troops
+UNIT BlackheartPlus Warden 0 Level(16,Enemy,True) [5,17] 0 0 0 0 [SteelAxe, Tomahawk] ChargeAI
+
 UNIT 
 
 SmallRebelGarrison:

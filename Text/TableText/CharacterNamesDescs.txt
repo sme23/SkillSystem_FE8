@@ -900,7 +900,7 @@ that pierce their enemies' hearts.[X]
 Valerie[X]
 
 ## ValerieDesc
-Aspirant[N]
+Aspirant[X]
 
 ## CalistaName
 Calista[X]
