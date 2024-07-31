@@ -10,5 +10,5 @@ Defeat Boss[X]
 
 ## C2ExplanationText
 
-(Note: There's no reward for all
+(Note: There's no reward for all[N]
 the rebel units surviving the map.)[X]
