@@ -208,3 +208,8 @@
 #define BreatherID 65
 
 #define DisarmID 66
+
+#define PotentBrewID 67
+
+
+
