@@ -1800,4 +1800,5 @@ an enemy and reduces their Def by 5.[X]
 Potent Brew: Tonic effectiveness[N]
 is increased by +2 for this unit.[X]
 
-
+## SD_Finesse
+Finesse: Unit gains Skill/2 crit.[X]

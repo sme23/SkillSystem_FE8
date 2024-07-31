@@ -1161,6 +1161,8 @@ ORG SkillIcon(DisarmID)
 
 ORG SkillIcon(PotentBrewID)
 #incbin "SkillIcons/PotentBrew.dmp"
+ORG SkillIcon(FinesseID)
+#incbin "SkillIcons/LifeAndDeath.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)
