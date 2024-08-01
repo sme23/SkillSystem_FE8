@@ -1163,6 +1163,8 @@ ORG SkillIcon(PotentBrewID)
 #incbin "SkillIcons/PotentBrew.dmp"
 ORG SkillIcon(FinesseID)
 #incbin "SkillIcons/LifeAndDeath.dmp"
+ORG SkillIcon(ReapingBladeID)
+#incbin "SkillIcons/DragonFang.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)

@@ -1802,3 +1802,8 @@ is increased by +2 for this unit.[X]
 
 ## SD_Finesse
 Finesse: Unit gains Skill/2 crit.[X]
+
+## SD_ReapingBlade
+Reaping Blade: On kill, unit moves again,[N]
+but their weapon is destroyed. (Command)[X]
+
