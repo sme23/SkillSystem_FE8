@@ -66,7 +66,7 @@ POIN Proc_AetherHeal	//skills that heal based on final damage
 
 POIN Proc_BlackMagic Proc_Petrify Proc_Enrage Proc_Deadeye //skills that apply a status effect
 
-POIN Proc_ReapingBlade
+POIN Proc_ReapingBlade Proc_HandCannon
 
 #ifdef STATUS_WEAPONS
 	POIN Proc_StatusWeapons

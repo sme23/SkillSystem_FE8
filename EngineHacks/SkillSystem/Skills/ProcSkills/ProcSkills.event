@@ -237,3 +237,5 @@ WORD EyeForAnEyeID
 
 #include "_Animations/SkillAnimations.event"
 
+#include "HandCannon/HandCannon.event"
+

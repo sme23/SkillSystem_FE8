@@ -425,3 +425,5 @@ SkillDescription(DisarmID, SD_Disarm)
 SkillDescription(PotentBrewID, SD_PotentBrew)
 SkillDescription(FinesseID, SD_Finesse)
 SkillDescription(ReapingBladeID, SD_ReapingBlade)
+SkillDescription(HandCannonID, SD_HandCannon)
+

@@ -1804,6 +1804,9 @@ is increased by +2 for this unit.[X]
 Finesse: Unit gains Skill/2 crit.[X]
 
 ## SD_ReapingBlade
-Reaping Blade: On kill, unit moves again,[N]
-but their weapon is destroyed. (Command)[X]
+Reaping Blade: On kill, unit moves[N]
+again, but their weapon is destroyed.[X]
 
+## SD_HandCannon
+Hand Cannon: Weapon breaks with[N]
+every attack.[X]
