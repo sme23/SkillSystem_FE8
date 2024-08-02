@@ -1,7 +1,0 @@
-#include "HandCannon.lyn.event"
-
-ALIGN 4
-HandCannonID_Link:
-BYTE HandCannonID
-
-ALIGN 4
