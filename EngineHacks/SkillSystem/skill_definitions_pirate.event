@@ -209,4 +209,12 @@
 
 #define DisarmID 66
 
-#define MomentumID 67
+#define PotentBrewID 67
+
+#define FinesseID 68
+
+#define ReapingBladeID 69
+
+#define HandCannonID 70
+
+#define MomentumID 71

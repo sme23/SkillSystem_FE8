@@ -244,3 +244,12 @@ Select a unit to disarm.[X]
 
 ## UM_ReverseDesc
 Switches weapon triangle.[X]
+
+## UM_ReapingBlade
+ Reap[X]
+
+## UM_ReapingBladeDesc
+On kill, unit moves again.[N]
+Equipped weapon is destroyed.[X]
+
+

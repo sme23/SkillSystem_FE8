@@ -423,3 +423,8 @@ SkillDescription(PulverizeID, SD_Pulverize)
 SkillDescription(BreatherID, SD_Breather)
 SkillDescription(DisarmID, SD_Disarm)
 SkillDescription(MomentumID, SD_Momentum)
+SkillDescription(PotentBrewID, SD_PotentBrew)
+SkillDescription(FinesseID, SD_Finesse)
+SkillDescription(ReapingBladeID, SD_ReapingBlade)
+SkillDescription(HandCannonID, SD_HandCannon)
+

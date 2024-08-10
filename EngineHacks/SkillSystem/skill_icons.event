@@ -1161,6 +1161,15 @@ ORG SkillIcon(DisarmID)
 ORG SkillIcon(MomentumID)
 #incbin "SkillIcons/Tantivy.dmp"
 
+ORG SkillIcon(PotentBrewID)
+#incbin "SkillIcons/PotentBrew.dmp"
+ORG SkillIcon(FinesseID)
+#incbin "SkillIcons/LifeAndDeath.dmp"
+ORG SkillIcon(ReapingBladeID)
+#incbin "SkillIcons/DragonFang.dmp"
+ORG SkillIcon(HandCannonID)
+#incbin "SkillIcons/BlackMage.dmp"
+
 //don't need them
 ORG SkillIcon(ProtectorID)
 #incbin "SkillIcons/Savior.dmp"
