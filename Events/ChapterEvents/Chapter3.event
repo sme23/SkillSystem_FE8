@@ -259,14 +259,9 @@ FADI 15
 LoadEnemies(LeftSideUnits)
 LoadEnemies(CenterBoatUnits)
 LoadEnemies(RightSideUnits)
-LoadPlayerUnits(TestUnits)
 GotoPrepScreen
 NoFade
 ENDA
-
-TestUnits:
-UNIT Bartz Deserter 0 Level(6,Ally,True) [33,19] 0 0 0 0 [SteelLance] NoAI
-UNIT
 
 EndingScene:
 MUSC 0x7FFF
