@@ -19,6 +19,7 @@
 #define A1_GeraldoGenericBattleQuoteSeen 0x28
 
 // not sure where exactly these are meant to go, but eh -RW
-#define HusniyeAccused 0xB1
-#define CruzAccused 0xB2
-#define AvocadoAccused 0xB3
+#define HusniyeAccused 0xEC
+#define CruzAccused 0xED
+#define AvocadoAccused 0xEE
+#define ReverseFlagID 0xEF

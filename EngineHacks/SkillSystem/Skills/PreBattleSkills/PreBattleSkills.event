@@ -383,18 +383,6 @@ POIN SkillTester
 WORD SurpriseAttackID
 
 ALIGN 4
-Hangover:
-#incbin "Hangover/Hangover.dmp"
-POIN SkillTester
-WORD HangoverID
-
-ALIGN 4
-Underhanded:
-#incbin "Underhanded/Underhanded.dmp"
-POIN SkillTester
-WORD UnderhandedID
-
-ALIGN 4
 CatchingUp:
 #incbin "CatchingUp/CatchingUp.dmp"
 POIN SkillTester
@@ -431,6 +419,12 @@ EyepatchPreBattle:
 #incbin "Eyepatch/Eyepatch.dmp"
 POIN SkillTester
 WORD EyepatchID
+
+#include "ArcaneArtifice/ArcaneArtifice.lyn.event"
+
+ALIGN 4
+ArcaneArtificeIDLink:
+WORD ArcaneArtificeID
 
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	ALIGN 4

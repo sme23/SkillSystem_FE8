@@ -12,6 +12,7 @@ POIN TriangleAdept
 POIN Poise
 POIN Analyze
 POIN WanderersFocus
+POIN Momentum
 POIN ArmsMasterSkill
 #ifdef REAVER_SPLIT
 	POIN DoubleWeaponTriangle

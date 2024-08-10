@@ -28,3 +28,6 @@ extern void ApplyDebuff(struct Unit* unit, int amount, int offset);
 
 const void* DisarmMapEvent();
 void CallMapEventEngine(const void* scene, int runKind);
+int GetDisarmExpValue();
+int GetLevelDifference(struct BattleUnit* actor, struct BattleUnit* target);
+void BeginMapAnimForSteal(void);

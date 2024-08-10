@@ -80,3 +80,17 @@ ShiftEffect:
 #incbin "Shift/ShiftEffect.dmp"
 
 #include "Disarm/Installer.event"
+
+ALIGN 4
+NonconformingUsability:
+#include "Nonconforming/NonconformingUsability.lyn.event"
+POIN SkillTester
+WORD NonconformingID
+
+ALIGN 4
+NonconformingEffect:
+#include "Nonconforming/NonconformingEffect.lyn.event"
+
+ALIGN 4
+ReverseFlagLink:
+WORD ReverseFlagID

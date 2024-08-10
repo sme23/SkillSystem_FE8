@@ -92,6 +92,7 @@
 //#define Eclipse 0x48
 #define Galestrike $dc
 #define Elsurge 0xE9
+#define Bolt 0x9a
 
 //KNIVES
 #define IronKnife $bd

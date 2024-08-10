@@ -1,5 +1,6 @@
 .thumb
 .equ NonconformingID, SkillTester+4
+.equ CheckEventId,0x8083da8
 
 push {r4-r7, lr}
 mov r4, r0 @attacker
@@ -23,6 +24,15 @@ pop {r1}
 eor r0, r1 @we need to move on if either attacker or defender has Nonconforming, but not both
 cmp r0, #0x0
 beq End
+
+@ one more thing - check a flag to see if we're reversing or not
+ldr r0,=ReverseFlagLink
+ldrh r0,[r0]
+ldr r1,=CheckEventId
+mov r14,r1
+.short 0xF800
+cmp r0,#0
+beq End 		@ if it's not set, then end
 
 @now we invert WT for attacker
 mov r0, #0x53

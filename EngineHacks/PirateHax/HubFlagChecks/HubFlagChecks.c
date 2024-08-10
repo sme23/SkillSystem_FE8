@@ -71,6 +71,13 @@ int ReturnNumberOfHubChaptersVisited(){
     if (gChapterData.chapterIndex == 1){ //in Hub A, add 1
         hubChapters++;
     }
+    else if (gChapterData.chapterIndex == 10){
+        hubChapters++;
+    }
+    else
+    {
+
+    }
 
     if (hubChapters <= 0){
         return 0;

@@ -36,7 +36,7 @@
 #include "AdaptiveBGM/Installer.event"
 //Huichelaar and 7743
 
-#include "PromoPreview/PromoPreview.event"
+//#include "PromoPreview/PromoPreview.event"
 //Sme
 
 #include "FastBattleAnimation/Install.event"
@@ -125,6 +125,10 @@
 //Tequila
 
 #include "Dismount/Installer.event"
+
+#include "EVENTSCRIPT_COND_ITEM/Installer.event"
+
+#include "ASMCCheckSuite/ASMCGetterSetterInstaller.event"
 
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743

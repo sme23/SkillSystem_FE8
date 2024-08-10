@@ -467,8 +467,8 @@ If Lv. 10 or greater, use to access[N]
 or master the sword, lance, or axe.[X]
 
 ## BraveCrestUseDesc
-Use on a Lv. 10 or higher[N]
-unit to gain great power.[X]
+Use on a Lv. 10 or[N]
+higher unit to promote.[X]
 
 ## KnightPlateName
 Knight Plate[X]
@@ -511,3 +511,9 @@ Supplies[X]
 ## SuppliesItemDesc
 Contains fuel, along with[N]
 other pilfered loot.[X]
+
+## BoltName
+Bolt[X]
+
+## BoltDesc
+Mid-range thunder magic.[X]

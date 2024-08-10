@@ -178,20 +178,6 @@ void New_BattleInitTargetCanCounter(){
 		return;
 	}
 
-    // kai skill
-    if (gSkillTester(&gBattleActor.unit, ArcaneArtificeIDLink)){
-        if (GetItemData(GetItemIndex(gBattleActor.weapon))->attributes & (IA_MAGIC | IA_MAGICDAMAGE)){
-            if (GetItemData(GetItemIndex(gBattleTarget.weapon))->attributes & (IA_MAGIC | IA_MAGICDAMAGE)){
-            
-            }
-            else{
-                gBattleTarget.weapon = 0;
-		        gBattleTarget.canCounter = false;
-		        return;
-            }
-        }
-    }
-
 }
 
 int MapMain_SwitchPhases(void) {

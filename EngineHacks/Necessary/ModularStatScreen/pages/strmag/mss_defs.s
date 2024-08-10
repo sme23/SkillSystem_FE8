@@ -392,19 +392,220 @@
   draw_bar_at \bar_x, \bar_y, ResGetter, 0x18, 5
 .endm
 
-.macro draw_growth_at, bar_x, bar_y
+.macro draw_str_growth_at, bar_x, bar_y
   mov     r14, r0        @r0 = growth getter to bl to
   mov     r0, r8
   .short  0xF800        @returns total growth in r0, base growth in r1
-  sub     r0, r0, r1    @difference between total and base
-  str     r0, [sp, #0x10]
-  mov     r2, r1        @base in r2
-  mov     r1, #0x2        @palette index
+  cmp 	  r0, r1
+  bgt 	  MakeStrGreen
+
+  cmp 	  r0, r1
+  blt	  MakeStrGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawStrGrowthNumber
+
+  MakeStrGreen:
+  mov r1, #0x4
+  b DrawStrGrowthNumber
+
+  MakeStrGrey:
+  mov r1, #0x1
+  b DrawStrGrowthNumber
+
+  DrawStrGrowthNumber:
+  mov     r2, r0    @base in r2
   ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
   blh     DrawDecNumber
-  ldr     r0, [sp, #0x10]    @difference from earlier
-  ldr     r1, =(tile_origin+(0x20*2*\bar_y)+(2*(\bar_x+1)))
-  blh     DrawStatScreenBonusNumber
+.endm
+
+.macro draw_mag_growth_at, bar_x, bar_y
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  cmp 	  r0, r1
+  bgt 	  MakeMagGreen
+
+  cmp 	  r0, r1
+  blt	  MakeMagGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawMagGrowthNumber
+
+  MakeMagGreen:
+  mov r1, #0x4
+  b DrawMagGrowthNumber
+
+  MakeMagGrey:
+  mov r1, #0x1
+  b DrawMagGrowthNumber
+
+  DrawMagGrowthNumber:
+  mov     r2, r0    @base in r2
+  ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
+  blh     DrawDecNumber
+.endm
+
+.macro draw_skl_growth_at, bar_x, bar_y
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  cmp 	  r0, r1
+  bgt 	  MakeSklGreen
+
+  cmp 	  r0, r1
+  blt	  MakeSklGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawSklGrowthNumber
+
+  MakeSklGreen:
+  mov r1, #0x4
+  b DrawSklGrowthNumber
+
+  MakeSklGrey:
+  mov r1, #0x1
+  b DrawSklGrowthNumber
+
+  DrawSklGrowthNumber:
+  mov     r2, r0    @base in r2
+  ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
+  blh     DrawDecNumber
+.endm
+
+.macro draw_spd_growth_at, bar_x, bar_y
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  cmp 	  r0, r1
+  bgt 	  MakeSpdGreen
+
+  cmp 	  r0, r1
+  blt	  MakeSpdGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawSpdGrowthNumber
+
+  MakeSpdGreen:
+  mov r1, #0x4
+  b DrawSpdGrowthNumber
+
+  MakeSpdGrey:
+  mov r1, #0x1
+  b DrawSpdGrowthNumber
+
+  DrawSpdGrowthNumber:
+  mov     r2, r0    @base in r2
+  ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
+  blh     DrawDecNumber
+.endm
+
+.macro draw_lck_growth_at, bar_x, bar_y
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  cmp 	  r0, r1
+  bgt 	  MakeLckGreen
+
+  cmp 	  r0, r1
+  blt	  MakeLckGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawLckGrowthNumber
+
+  MakeLckGreen:
+  mov r1, #0x4
+  b DrawLckGrowthNumber
+
+  MakeLckGrey:
+  mov r1, #0x1
+  b DrawLckGrowthNumber
+
+  DrawLckGrowthNumber:
+  mov     r2, r0    @base in r2
+  ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
+  blh     DrawDecNumber
+.endm
+
+.macro draw_def_growth_at, bar_x, bar_y
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  cmp 	  r0, r1
+  bgt 	  MakeDefGreen
+
+  cmp 	  r0, r1
+  blt	  MakeDefGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawDefGrowthNumber
+
+  MakeDefGreen:
+  mov r1, #0x4
+  b DrawDefGrowthNumber
+
+  MakeDefGrey:
+  mov r1, #0x1
+  b DrawDefGrowthNumber
+
+  DrawDefGrowthNumber:
+  mov     r2, r0    @base in r2
+  ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
+  blh     DrawDecNumber
+.endm
+
+.macro draw_res_growth_at, bar_x, bar_y
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  cmp 	  r0, r1
+  bgt 	  MakeResGreen
+
+  cmp 	  r0, r1
+  blt	  MakeResGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawResGrowthNumber
+
+  MakeResGreen:
+  mov r1, #0x4
+  b DrawResGrowthNumber
+
+  MakeResGrey:
+  mov r1, #0x1
+  b DrawResGrowthNumber
+
+  DrawResGrowthNumber:
+  mov     r2, r0    @base in r2
+  ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
+  blh     DrawDecNumber
+.endm
+
+.macro draw_hp_growth_at, bar_x, bar_y
+  mov     r14, r0        @r0 = growth getter to bl to
+  mov     r0, r8
+  .short  0xF800        @returns total growth in r0, base growth in r1
+  cmp 	  r0, r1
+  bgt 	  MakeHPGreen
+
+  cmp 	  r0, r1
+  blt	  MakeHPGrey
+
+  mov r1, #0x2		@ make it standard blue
+  b DrawHPGrowthNumber
+
+  MakeHPGreen:
+  mov r1, #0x4
+  b DrawHPGrowthNumber
+
+  MakeHPGrey:
+  mov r1, #0x1
+  b DrawHPGrowthNumber
+
+  DrawHPGrowthNumber:
+  mov     r2, r0    @base in r2
+  ldr     r0, =(tile_origin+(0x20*2*\bar_y)+(2*\bar_x))
+  blh     DrawDecNumber
 .endm
 
 .macro draw_move_bar_at, bar_x, bar_y

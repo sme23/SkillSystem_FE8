@@ -330,10 +330,9 @@ BLT 1 sC s1 //if number of supplies items is less than 7, do not play all fuel t
     GiveItemWithDurability(SkillScroll,KeenFighterID,Lua)
     GiveItem(Bloodletter,Lua)
     GiveItem(GlassShield,Lua)
-    GOTO 2
+    GOTO 5
 LABEL 1
 Text(B3EndingScene3_1_SomeFuel)
-LABEL 2
 GetNumberOfSuppliesItemsOnHand
 SVAL s1 5
 BLT 3 sC s1 //check sC's amount, give items accordingly
@@ -355,6 +354,7 @@ BLT 5 sC s1
     GiveItem(GlassShield,Lua)
     GOTO 5
 LABEL 5
+RemoveAllItem(SuppliesItem)
 NoFade
 ENDA
 

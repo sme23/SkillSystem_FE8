@@ -23,5 +23,5 @@ bool IsFollowupAttack(NewBattleHit* battleHit) {
 	
 	 return (&NewBattleHitArray[0] != battleHit);
 }		
-			
+
 			

@@ -31,6 +31,14 @@ POIN IsFollowupAttack
 
 #include "Adept/IsFollowupAttack.lyn.event"
 
+Proc_Underhanded:
+#incbin "Underhanded/Underhanded.dmp"
+POIN SkillTester
+WORD UnderhandedID
+POIN IsFollowupAttack
+POIN DidUnitBreak
+WORD AdeptID
+
 Proc_Astra:
 #incbin "Astra/proc_astra.dmp"
 POIN SkillTester

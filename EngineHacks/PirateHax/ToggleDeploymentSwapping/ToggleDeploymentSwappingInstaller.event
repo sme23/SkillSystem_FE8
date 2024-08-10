@@ -67,6 +67,7 @@ ForcedDeployment(Biko,UnlockedPosition,AllModes,HubA_3)
 ForcedDeployment(Tangyuan,LockedPosition,AllModes, HubA_5)
 ForcedDeployment(Matteo,UnlockedPosition,AllModes,HubA_6)
 ForcedDeployment(Suzanne,UnlockedPosition,AllModes,HubA_6)
+ForcedDeployment(Dmitr,UnlockedPosition,AllModes,HubB_1)
 ForcedDeployment(Ernest,UnlockedPosition,AllModes,HubB_3)
 EndForcedDeploymentList
 

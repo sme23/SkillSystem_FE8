@@ -24,6 +24,8 @@ POIN Proc_Moonbow
 	POIN CombatArt_Adept CombatArt_DragonFang
 #endif // COMBAT_ARTS
 
+POIN Proc_Underhanded
+
 POIN Proc_Eclipse	//skills that do damage and all that
 
 POIN Proc_Impale Proc_Colossus 
@@ -47,6 +49,8 @@ POIN Proc_Vengeance //more damage
 #else // COMBAT_ARTS
 	POIN CombatArt_Astra
 #endif // COMBAT_ARTS
+
+
 
 POIN Proc_Bane DownWithArch Proc_Lethality	//skills that set damage to max
 

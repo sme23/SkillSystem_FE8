@@ -11,9 +11,13 @@ void Analyze(BattleUnit* bunitA, BattleUnit* bunitB) {
 	if(AuraSkillCheck(&bunitA->unit, AnalyzeID_Link, 0x3, AnalyzeRange_Link)) {
 		bunitA->wTriangleHitBonus = -1 * WTHitBonus_Link;
 		bunitA->wTriangleDmgBonus = -1 * WTMtBonus_Link;
+		bunitB->wTriangleHitBonus = 1 * WTHitBonus_Link;
+		bunitB->wTriangleDmgBonus = 1 * WTMtBonus_Link;
 	}
 	if(AuraSkillCheck(&bunitB->unit, AnalyzeID_Link, 0x3, AnalyzeRange_Link)) {
 		bunitB->wTriangleHitBonus = -1 * WTHitBonus_Link;
 		bunitB->wTriangleDmgBonus = -1 * WTMtBonus_Link;
+		bunitA->wTriangleHitBonus = 1 * WTHitBonus_Link;
+		bunitA->wTriangleDmgBonus = 1 * WTMtBonus_Link;
 	}
 }

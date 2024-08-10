@@ -469,7 +469,7 @@ ENUT PeddlerHubAEncounterFlag
 ENUT 4 //port music only
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
-SVAL s1 5 //if 6 chapters completed
+SVAL s1 6 //if 6 chapters completed
 BNE 2 s1 sC 
     SetBackground(Ship)
     MUSC MeetTheCrewID
@@ -849,7 +849,7 @@ UNIT
 
 NewUnits:
 UNIT Estelle Troubadour 0 Level(2,Ally,False) [0,5] 0 0 0 0 [Heal, Torch] NoAI
-UNIT Hermenegildo Myrmidon 0 Level(3,Ally,False) [14,5] 0 0 0 0 [IronSword, LightBrand, Vulnerary] NoAI
+UNIT Hermenegildo Myrmidon 0 Level(2,Ally,False) [14,5] 0 0 0 0 [LightBrand, IronSword, Vulnerary] NoAI
 UNIT
 
 DurghamUnitGroup:
@@ -867,7 +867,7 @@ UNIT MrYodsen Gunner 0 Level(7,NPC,False) [12,16] 0 0 0 0 [SteelMusket, Mortar, 
 UNIT
 
 JaimeUnitGroup:
-UNIT Jaime PegasusRider 0 Level(2,NPC,True) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
+UNIT Jaime PegasusRider 0 Level(3,NPC,True) [11,20] 0 0 0 0 [Onigiri, IronSword] NoAI
 UNIT
 
 OndehBikoUnitGroup:

@@ -48,7 +48,7 @@ beq End
 @ bne End 
 
 @Don't work if we're defending
-ldr r0,=#0x203a56c
+ldr r0,=0x203a56c
 cmp r0,r4
 beq End
 

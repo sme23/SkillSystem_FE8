@@ -10,6 +10,6 @@ POP
 
 ALIGN 4
 PromotesToTextIDLink:
-WORD 0
+WORD PromotesToTextID
 NoUseTextIDLink:
-WORD 0
+WORD NoUseTextID

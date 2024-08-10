@@ -65,13 +65,19 @@ NoFade
 ENDA
 
 ElodiaDecidesToCharge:
-CameraCursor(ElodiaBoss)
-Text(Ch2ElodiasCharge)
-SetAI(ElodiaBoss,0,0,4,0)
-SpawnReinforcements(ElodiaWolfSquad)
-SpawnReinforcements(GriffinSquad)
-Text(Ch2GriffinsShowUp)
-ENUT Ch2ReinforcementFlags
+CHECK_EXISTS ElodiaBoss
+BEQ 776 s0 sC
+    CameraCursor(ElodiaBoss)
+    Text(Ch2ElodiasCharge)
+    SetAI(ElodiaBoss,0,0,4,0)
+    SpawnReinforcements(ElodiaWolfSquad)
+    SpawnReinforcements(GriffinSquad)
+    Text(Ch2GriffinsShowUp)
+    ENUT Ch2ReinforcementFlags
+    NoFade
+    ENDB
+LABEL 776
+CALL TheGangTakesOff
 NoFade
 ENDA
 

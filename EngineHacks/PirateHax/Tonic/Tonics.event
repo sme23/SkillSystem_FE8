@@ -10,7 +10,6 @@
 #define TonicEffectID 0x42
 #define rTonicBonus(stat) "rAdd; rWithConstant(stat); rCallExternal(AddTonicBonus^1)"
 
-
 ALIGN 4
 TonicChapterExclusionTable:
 BYTE 0xFF
@@ -30,7 +29,11 @@ TonicIcons:
 #define MagTonic 8
 #define RainbowTonic 9
 
+ALIGN 4
+TonicInclusion:
 #include "Tonic.lyn.event"
+POIN SkillTester
+WORD HangoverID
 
 #define TonicEffect TonicEffectLadder
 #define TonicUsability TonicUsabilityLadder
