@@ -15,7 +15,7 @@ RazvanMugData:
 #incbin "Dmp/Razvan_frames.dmp"
 #incbin "Dmp/Razvan_palette.dmp"
 #incbin "Dmp/Razvan_minimug.dmp"
-setMugEntryExtend(RazvanMug, RazvanMugData, 3, 5, 3, 3, 10, 4, 0, 0)
+setMugEntryExtend(RazvanMug, RazvanMugData, 3, 5, 3, 3, 10, 4, 254, 8)
 
 ALIGN 16
 LuaMugData:
@@ -469,3 +469,11 @@ BuzuMugData:
 #incbin "Dmp/Buzu_palette.dmp"
 #incbin "Dmp/Buzu_minimug.dmp"
 setMugEntry(BuzuMug, BuzuMugData, 3, 5, 2, 3)
+
+ALIGN 16
+JulianaMugData:
+#incbin "Dmp/Juliana_mug.dmp"
+#incbin "Dmp/Juliana_frames.dmp"
+#incbin "Dmp/Juliana_palette.dmp"
+#incbin "Dmp/Juliana_minimug.dmp"
+setMugEntry(JulianaMug, JulianaMugData, 3, 5, 2, 3)

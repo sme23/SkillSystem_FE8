@@ -6,6 +6,7 @@
 .endm
 .equ AdeptID, SkillTester+4
 .equ IsFollowupAttack, AdeptID+4
+.equ RoundCountRAM, IsFollowupAttack+4
 .equ d100Result, 0x802a52c
 .equ recurse_round, 0x802b83c
 
@@ -39,13 +40,6 @@ ldr r1, AdeptID
 .short 0xf800
 cmp r0, #0
 beq End
-@if user has Adept, check for proc rate
-
-@ ldrb r0, [r4, #0x16] @speed stat as activation rate
-@ mov r1, r4 @skill user
-@ blh d100Result
-@ cmp r0, #1
-@ bne End 
 
 @Don't work if we're defending
 ldr r0,=0x203a56c
@@ -72,11 +66,10 @@ ldrb r0, AdeptID
 strb r0, [r6,#4] @save the skill ID at byte #4
 
 @now add the number of rounds - 
-mov r1, #0x38
-mov r2, sp
-ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
-add r0, #1
-str r0, [r2,r1]
+ldr r1, RoundCountRAM
+ldr r0, [r1]	@ loads what's at round count ram (number of hits)
+add r0, #1	@ adds one round
+str r0, [r1]	@ stores it at round count ram (hopefully)
 
 End:
 pop {r4-r7}

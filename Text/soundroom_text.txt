@@ -91,3 +91,6 @@ Cloud's Yearning[X]
 
 ## SongName_StormsBrewing
 Storm's Brewing[X]
+
+## SongName_CherishTheDead
+Cherish the Dead[X]

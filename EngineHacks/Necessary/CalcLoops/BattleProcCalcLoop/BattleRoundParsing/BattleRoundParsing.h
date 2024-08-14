@@ -16,6 +16,7 @@ enum {
 	BATTLE_HIT_ATTR_SKIP		= (1 << 5),
 	BATTLE_HIT_ATTR_ATKSKILL	= (1 << 14),
 	BATTLE_HIT_ATTR_DEFSKILL	= (1 << 15),
+	BATTLE_HIT_BREAK 			= (1 << 17),
 };
 
 /*

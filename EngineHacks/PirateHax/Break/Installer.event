@@ -47,3 +47,8 @@ ALIGN 4
 HandCannonIDLink:
 BYTE HandCannonID
 ALIGN 4
+
+ALIGN 4
+gRoundCount:
+WORD RoundCountRAM
+ALIGN 4

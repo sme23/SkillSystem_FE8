@@ -61,6 +61,7 @@ SoundRoomEntry(CastawayHeartID, 0, SongName_CastawayHeart)
 SoundRoomEntry(DroppingAnchorID, 0, SongName_DroppingAnchor)
 SoundRoomEntry(CloudsYearningID, 0, SongName_CloudsYearning)
 SoundRoomEntry(StormsBrewingID, 0, SongName_StormsBrewing)
+SoundRoomEntry(CherishTheDeadID, 0, SongName_CherishTheDead)
 SoundRoomTerminator
 
 

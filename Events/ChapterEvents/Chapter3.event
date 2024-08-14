@@ -263,6 +263,7 @@ GotoPrepScreen
 NoFade
 ENDA
 
+
 EndingScene:
 MUSC 0x7FFF
 //prob load in dudes here

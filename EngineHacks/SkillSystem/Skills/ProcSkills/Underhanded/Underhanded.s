@@ -7,7 +7,7 @@
 .equ UnderhandedID, SkillTester+4
 .equ IsFollowupAttack, UnderhandedID+4
 .equ DidUnitBreak, IsFollowupAttack+4
-.equ AdeptID, DidUnitBreak+4
+.equ RoundCountRAM, DidUnitBreak+4
 .equ d100Result, 0x802a52c
 .equ recurse_round, 0x802b83c
 
@@ -42,10 +42,16 @@ ldr r1, UnderhandedID
 cmp r0, #0
 beq End
 
+
+@Don't work if we're defending
+ldr r0,=0x203a56c
+cmp r0,r4
+beq End
+
 @ Don't work if we're not breaking
-@ blh DidUnitBreak
-@ cmp r0, #0
-@ beq End		@ if no break, no effect
+blh DidUnitBreak
+cmp r0, #0
+beq End		@ if no break, no effect
 
 @ Don't work if it's a followup attack
 mov r0,r6
@@ -67,11 +73,10 @@ ldrb r0, UnderhandedID
 strb r0, [r6,#4] @save the skill ID at byte #4
 
 @now add the number of rounds - 
-mov r1, #0x38
-mov r2, sp
-ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
-add r0, #1
-str r0, [r2,r1]
+ldr r1, RoundCountRAM
+ldr r0, [r1]	@ loads what's at round count ram (number of hits)
+add r0, #1	@ adds one round
+str r0, [r1]	@ stores it at round count ram (hopefully)
 
 End:
 pop {r4-r7}

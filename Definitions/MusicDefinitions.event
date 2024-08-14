@@ -31,6 +31,7 @@
 #define DroppingAnchorID 0x22
 #define CloudsYearningID 0x23
 #define StormsBrewingID 0x24
+#define CherishTheDeadID 0x25
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47

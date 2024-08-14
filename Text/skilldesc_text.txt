@@ -1639,7 +1639,7 @@ target this turn increases by unit Mag.[X]
 ## SD_Underhanded
 Underhanded: If this unit attacks and[N]
 Breaks an enemy, they gain an additional[N]
-follow-up attack at the end of battle.[X]
+follow-up attack immediately after.[X]
 
 ## SD_LiquidCourage
 Liquid Courage: Once per turn, unit[N]
@@ -1716,10 +1716,10 @@ Dogfight: If unit's AS > foe's AS, unit[N]
 can counter regardless of foe's range.[X]
 
 ## SD_Equalizer
-Equalizer: If an adjacent ally deals[N]
-less Dmg than their target, both units[N]
-have their Dmg set to their average.[X]
-
+Equalizer: If an ally within 3 tiles[N]
+has less Atk than their target, ally[N]
+and target Atk = average of both.[X]
+ 
 ## SD_Fuse
 Countdown: Lose one HP each turn.[N]
 Game over at zero HP! Attack at melee[N]
@@ -1816,3 +1816,23 @@ again, but their weapon is destroyed.[X]
 ## SD_HandCannon
 Hand Cannon: Weapon breaks with[N]
 every attack.[X]
+
+## SD_Pollenate
+Pollenate: When this unit Staffs, +1 Spd[N]
+(max +5). The boost can be given to[N]
+an ally using the Pollenate command.[X]
+
+## SD_BoardingParty
+Boarding Party: This unit can place[N]
+bridges on adjacent unoccupied tiles.[N]
+Costs X gold to use.[X]
+
+## SD_ContraryWinds
+Contrary Winds: This unit can Summon[N]
+a Kite unit and act again (0 Mov).[N]
+Kites lose 2 Mov each turn.[X]
+
+## SD_LikeDominoes
+Like Dominoes: If this unit initiates,[N]
+they can't miss and will kill foes below[N]
+(5 + Skill) HP, granting another action.[X]
