@@ -1,0 +1,19 @@
+
+//Dynamic Tile Changes by Sme
+
+//Dynamic Tile Changes are single-tile map changes not explicitly defined in the chapter's associated map change data.
+//Trap coordinates determine location, ext2 & ext3 contain the metatile ID as a short
+//Any logic on setting up the trap is to be handled by the functionality that places it
+//The trap rework portion only handles changing the tile visually & terrain type accordingly to whatever is set in the trap
+
+#define DynamicTileChangeTrapID 16
+
+#define DynamicTileChange(XX,YY,tileID) "BYTE DynamicTileChangeTrapID XX YY 0; SHORT tileID"
+
+DynamicTileChangeTrapID_Link:
+BYTE DynamicTileChangeTrapID
+
+SetTrapEventInit(DynamicTileChangeTrapID,InitializeDynamicTileChange)
+
+#include "DynamicTileChanges.lyn.event"
+
