@@ -61,7 +61,6 @@ UNIT
 
 Traps1:
 RedSigil(19,9)
-DynamicTileChange(2,2,0x0578)
 ENDTRAP
 ALIGN 4
 
