@@ -114,6 +114,8 @@ UnitMenuTable:
   MenuCommand(Dismount_Name_TextID, Dismount_Description_TextID, OrangeText, DismountUsability, DismountRoutine)
   MenuCommand(Mount_Name_TextID, Mount_Description_TextID, OrangeText, MountUsability, MountRoutine)
   
+  MenuCommand(UM_BoardingParty, UM_BoardingPartyDesc, NormalText, BoardingPartyUsability, BoardingPartyEffect)
+  
   UM_Staff
   UM_Ride
   UM_Exit

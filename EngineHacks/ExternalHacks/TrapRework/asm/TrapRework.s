@@ -309,10 +309,11 @@ bne LightRunes_LoopStart
 
 ldr r2,=gTrapArray
 
-ldr r1,=DynamicTileChangeTrapID_Link
-ldrb r1,[r1]
+
 
 TileChanges_LoopStart:
+ldr r1,=DynamicTileChangeTrapID_Link
+ldrb r1,[r1]
 ldrb r0,[r2,#2]
 cmp r0,r1
 bne TileChanges_LoopRestart

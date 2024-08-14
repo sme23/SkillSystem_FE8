@@ -252,4 +252,11 @@ Switches weapon triangle.[X]
 On kill, unit moves again.[N]
 Equipped weapon is destroyed.[X]
 
+## UM_BoardingParty
+ Bridge[X]
 
+## UM_BoardingPartyDesc
+Place a bridge.[X]
+
+## BoardingPartySubtitleHelp
+Select a tile to place a bridge on.[X]

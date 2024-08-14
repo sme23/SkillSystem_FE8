@@ -6,7 +6,7 @@
 //Any logic on setting up the trap is to be handled by the functionality that places it
 //The trap rework portion only handles changing the tile visually & terrain type accordingly to whatever is set in the trap
 
-#define DynamicTileChangeTrapID 16
+#define DynamicTileChangeTrapID 32
 
 #define DynamicTileChange(XX,YY,tileID) "BYTE DynamicTileChangeTrapID XX YY 0; SHORT tileID"
 
