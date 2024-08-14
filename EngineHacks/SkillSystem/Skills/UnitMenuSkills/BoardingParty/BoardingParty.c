@@ -2,7 +2,11 @@
 
 struct BridgeAssoc {
 	u16 tileConfigID;
-	u16 tileID;
+	u16 tileID_Up;
+	u16 tileID_Down;
+	u16 tileID_Left;
+	u16 tileID_Right;
+	u16 dummy;
 } typedef BridgeAssoc;
 
 //defined in EA
@@ -11,6 +15,8 @@ extern u8 BoardingPartyID_Link;
 extern BridgeAssoc BoardingPartyBridgeTileList[];
 extern struct ROMChapterData* GetChapterDefinition(u8 chapterID);
 extern u16 BoardingPartySubtitleHelpTextID_Link;
+extern u32 BoardingPartyGoldCost_Link;
+extern u16 BoardingPartyNoUseTextID_Link;
 
 #define UNIT_ACTION_BOARDINGPARTY 0x29
 #define TRAP_DYNAMICTILECHANGE 32
@@ -25,7 +31,7 @@ extern void UpdateAllLightRunes();
 int BoardingPartyUsability(MenuCommandDefinition* command, int number);
 int BoardingPartyEffect(MenuProc* menu, MenuCommandProc* menuItem);
 bool CanBridgeOnCurrentMap();
-u16 GetBridgeTileID();
+BridgeAssoc* GetBridgeTileID();
 void MakeTargetListForBoardingParty(Unit* unit);
 void TryAddToBoardingPartyTargetList(int x, int y);
 void BoardingPartySelection_OnInit(TargetSelectionProc* menu);
@@ -42,14 +48,13 @@ const struct TargetSelectionDefinition gSelectInfo_BoardingParty =
 
 
 
-u16 GetBridgeTileID() {
+BridgeAssoc* GetBridgeTileID() {
 	int configID;
 	struct ROMChapterData* chData = GetChapterDefinition(gChapterData.chapterIndex);
 	configID = chData->mapTileConfigId;
 	for (int i = 0; ; i++) {
-		if (BoardingPartyBridgeTileList[i].tileConfigID == 0xFFFF &&
-			BoardingPartyBridgeTileList[i].tileID == 0xFFFF) return 0xFFFF;
-		if (BoardingPartyBridgeTileList[i].tileConfigID == configID) return BoardingPartyBridgeTileList[i].tileID;
+		if (BoardingPartyBridgeTileList[i].tileConfigID == 0xFFFF) return 0xFFFF;
+		if (BoardingPartyBridgeTileList[i].tileConfigID == configID) return &BoardingPartyBridgeTileList[i];
 	}
 }
 
@@ -76,16 +81,26 @@ void TryAddToBoardingPartyTargetList(int x, int y) {
 }
 
 int BoardingPartyUsability(MenuCommandDefinition* command, int number) {
+	
 	//true if can bridge on current map and target list isn't empty and has skill
 	MakeTargetListForBoardingParty(gActiveUnit);
-	if (CanBridgeOnCurrentMap() &&
+	if (!(CanBridgeOnCurrentMap() &&
 		GetTargetListSize() > 0 &&
 		SkillTester(gActiveUnit, BoardingPartyID_Link)
-		) return MCA_USABLE;
-	return MCA_NONUSABLE;
+		)) return MCA_NONUSABLE;
+	
+	//greyed if not enough gold
+	if (GetPartyGoldAmount() < BoardingPartyGoldCost_Link) return MCA_GRAYED;
+	
+	return MCA_USABLE;
 }
 
 int BoardingPartyEffect(MenuProc* menu, MenuCommandProc* menuItem) {
+	if (menuItem->availability == MCA_GRAYED) {
+        MenuCallHelpBox(menu, BoardingPartyNoUseTextID_Link); 
+        return ME_PLAY_BOOP;
+    }	
+	
 	//start selection with boarding party target list
 	
 	ClearBG0BG1();
@@ -131,7 +146,16 @@ void BoardingPartyAction() {
 	
 	//spawn a trap at the given position
 	struct DynamicTileChangeTrap* trap = (DynamicTileChangeTrap*)AddTrap(xPos, yPos, TRAP_DYNAMICTILECHANGE, 0);
-	trap->tileID = GetBridgeTileID();
+	BridgeAssoc* assoc = GetBridgeTileID();
+	u16 tile = 0;
+	//get direction of tile in association to active unit
+	if (xPos < gActiveUnit->xPos) tile = assoc->tileID_Left;
+	else if (xPos > gActiveUnit->xPos) tile = assoc->tileID_Right;
+	else if (yPos < gActiveUnit->yPos) tile = assoc->tileID_Up;
+	else if (yPos > gActiveUnit->yPos) tile = assoc->tileID_Down;
+	else tile = assoc->tileID_Up; //failsafe
+	
+	trap->tileID = tile;
 	
 	UpdateAllLightRunes();
 	
@@ -139,4 +163,7 @@ void BoardingPartyAction() {
 	
 	PlaySfx(0x3CA);
 	//PlaySfx(0x2F9);
+	
+	//deduct gold cost
+	SetPartyGoldAmount(GetPartyGoldAmount()-BoardingPartyGoldCost_Link);
 }

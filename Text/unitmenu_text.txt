@@ -260,3 +260,6 @@ Place a bridge.[X]
 
 ## BoardingPartySubtitleHelp
 Select a tile to place a bridge on.[X]
+
+## BoardingPartyNoUse
+Not enough gold.[X]

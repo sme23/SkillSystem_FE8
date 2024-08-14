@@ -1,21 +1,29 @@
 #include "BoardingParty.lyn.event"
 
-#define BoardingPartyID 0
-
 ALIGN 4
 BoardingPartyID_Link:
 BYTE BoardingPartyID
 
 ALIGN 4
+BoardingPartyGoldCost_Link:
+WORD 1000
+
+ALIGN 4
 BoardingPartySubtitleHelpTextID_Link:
 SHORT BoardingPartySubtitleHelp
 
-#define BridgeAssociation(configID,tileID) "SHORT configID tileID"
+ALIGN 4
+BoardingPartyNoUseTextID_Link:
+SHORT BoardingPartyNoUse
+
+#define BridgeAssociation(configID,tileID) "SHORT configID tileID tileID tileID tileID 0"
+#define BridgeAssociation2Way(configID,tileID_UpDown,tileID_LeftRight) "SHORT configID tileID_UpDown tileID_UpDown tileID_LeftRight tileID_LeftRight 0"
+#define BridgeAssociation4Way(configID,tileID_Up,tileID_Down,tileID_Left,tileID_Right) "SHORT configID tileID_UP tileID_Down tileID_Left tileID_Right 0"
 #define BridgeAssociationEnd "WORD 0xFFFFFFFF"
 
 ALIGN 4
 BoardingPartyBridgeTileList:
-BridgeAssociation(0x8A,0x0578)
+BridgeAssociation2Way(0x8A,0x05E4,0x0554)
 BridgeAssociationEnd
 
 /*
