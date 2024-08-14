@@ -428,4 +428,6 @@ SkillDescription(FinesseID, SD_Finesse)
 SkillDescription(ReapingBladeID, SD_ReapingBlade)
 SkillDescription(HandCannonID, SD_HandCannon)
 SkillDescription(BoardingPartyID, SD_BoardingParty)
-
+SkillDescription(PollenateID, SD_Pollenate)
+SkillDescription(ContraryWindsID, SD_ContraryWinds)
+SkillDescription(LikeDominoesID, SD_LikeDominoes)
