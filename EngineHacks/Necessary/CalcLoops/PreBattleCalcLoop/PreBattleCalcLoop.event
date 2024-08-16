@@ -46,7 +46,7 @@ POIN AxefaithHit
 POIN StancesASM
 POIN AirRaidSkillCheck
 POIN StudiousBlowAtkBonus FortuneHitBoost
-POIN ArcaneArtificePreBattle
+POIN ArcaneArtificePreBattle 
 POIN FusePreBattle // This needs to happen after any hit modifiers
 #ifdef ENABLE_GBA_LETHALITY
 POIN LethalitySkill 
@@ -70,6 +70,7 @@ POIN CriticalCheck
 #ifdef CANNOT_CRIT
 	POIN NegateCritWeapons //This goes last, so that crit will always be set to 0 if set and never modified from there
 #endif // CANNOT_CRIT
+POIN LikeDominoes
 POIN 0
 
 #define AuraSkillEntry(skillID) "PUSH; ORG AuraSkillTable + skillID; BYTE 0x1; POP"
