@@ -1,6 +1,6 @@
 INLINE PersonalSkillTable,Skill
 0x0,0x0
-0x01 Lua,LikeDominoesID
+0x01 Lua,SuppressiveFireID
 0x02 Pilar,SurpriseAttackID
 0x03 Desiderio,EyeForAnEyeID
 0x04 Razvan,MiraclemakerID
