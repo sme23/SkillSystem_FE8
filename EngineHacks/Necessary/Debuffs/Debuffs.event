@@ -119,6 +119,7 @@ DebuffStatBitOffset_Luk:
 WORD 6*DebuffStatNumberOfBits
 DebuffStatBitOffset_Mov: 
 WORD 7*DebuffStatNumberOfBits
+// 48 bits/6 bytes
 
 #define RalliesOffset 8*DebuffStatNumberOfBits
 ALIGN 4 
@@ -143,6 +144,7 @@ SpecRallyOffset_Link:
 WORD 7+RalliesOffset 
 MagRallyOffset_Link: 
 WORD 8+RalliesOffset 
+// 57 bits/8 bytes
 
 #define MiscOffset 9+RalliesOffset 
 HalfStrBitOffset_Link: 
@@ -169,8 +171,12 @@ LiquidCourageBitOffset_Link:
 WORD MiscOffset+10
 StudiousBlowBitOffset_Link:
 WORD MiscOffset+11
+// 69 bits/9 bytes
+
 HardworkingBitOffset_Link: // stores value 0-5, 3 bits
 WORD MiscOffset+12
+// 72 bits/9 bytes
+
 FortuneStaffBitOffset_Link:
 WORD MiscOffset+15
 MiraclemakerBitOffset_Link:
@@ -181,6 +187,15 @@ DelegationBitOffset_Link:
 WORD MiscOffset+18
 SwiftBitOffset_Link:
 WORD MiscOffset+19
+// 77 bits/10 bytes
+
+PollenateBitOffset_Link: //stores value 0-5, 3 bits
+WORD MiscOffset+20
+// 80 bits/10 bytes
+
+
+
+//out of room after 12 bytes
 
 ALIGN 4 
 RalliesNumberOfBits_Link:

@@ -1,0 +1,11 @@
+#include "Pollenate.lyn.event"
+
+ALIGN 4
+PollenateID_Link:
+BYTE PollenateID
+
+ALIGN 4
+PollenateSubtitleHelpTextID_Link:
+SHORT PollenateSubtitleHelp
+
+ALIGN 4

@@ -116,6 +116,8 @@ UnitMenuTable:
   
   MenuCommand(UM_BoardingParty, UM_BoardingPartyDesc, NormalText, BoardingPartyUsability, BoardingPartyEffect)
   
+  MenuCommand(UM_Pollenate, UM_PollenateDesc, NormalText, PollenateUsability, PollenateEffect)
+  
   UM_Staff
   UM_Ride
   UM_Exit
