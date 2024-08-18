@@ -273,3 +273,9 @@ with an adjacent ally.[X]
 
 ## PollenateSubtitleHelp
 Select a unit to pollenate.[X]
+
+## UM_Kite
+ Kite[X]
+ 
+## UM_KiteDesc
+Summon a kite.[X]

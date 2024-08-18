@@ -193,6 +193,9 @@ PollenateBitOffset_Link: //stores value 0-5, 3 bits
 WORD MiscOffset+20
 // 80 bits/10 bytes
 
+NoMoveBitOffset_Link:
+WORD MiscOffset+23
+
 
 
 //out of room after 12 bytes
