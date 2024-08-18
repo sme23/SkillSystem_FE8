@@ -18,7 +18,7 @@ void LikeDominoes(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
 	) {
 		//can't miss
 		bunitA->battleAvoidRate = 0;
-		bunitB->battleHitRate = 100;
+		bunitB->battleHitRate = 200;
 		//will kill
 		bunitA->battleDefense = 0;
 		bunitB->battleAttack = bunitB->unit.curHP;
