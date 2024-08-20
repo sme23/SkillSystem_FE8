@@ -1836,3 +1836,4 @@ Kites lose 2 Mov each turn.[X]
 Like Dominoes: If this unit initiates,[N]
 they can't miss and will kill foes below[N]
 (5 + Skill) HP, granting another action.[X]
+

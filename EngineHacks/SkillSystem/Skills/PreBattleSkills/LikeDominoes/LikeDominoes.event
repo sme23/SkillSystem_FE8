@@ -1,0 +1,11 @@
+#include "LikeDominoes.lyn.event"
+
+ALIGN 4
+LikeDominoesID_Link:
+BYTE LikeDominoesID
+
+ALIGN 4
+LikeDominoesAttackType_Link:
+BYTE 16 //used to flag that skill activated; change if conflict
+
+ALIGN 4

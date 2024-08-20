@@ -5,6 +5,8 @@
 
 #include "HeroesMovement/HeroesMovement.event"
 
+#include "BoardingParty/BoardingParty.event"
+
 ALIGN 4
 NewDanceUsability:
 #incbin "Dance/NewDanceUsability.dmp"
@@ -23,8 +25,73 @@ ALIGN 4
 NewSummonUsability:
 #incbin "Summon/NewSummonUsability.dmp"
 POIN SkillTester
-WORD SummonID
+//WORD SummonID
+WORD ContraryWindsID
 WORD ALSO_USE_VANILLA_SUMMON_CHECK
+
+
+#define SummonedUnitItem 0
+
+PUSH
+
+	//summons with no weapons
+	ORG $7AEF8
+	BYTE SummonedUnitItem
+	ORG $7AEF4
+	BYTE SummonedUnitItem
+	ORG $7AEE4
+	BYTE SummonedUnitItem
+	ORG $7AECA
+	BYTE SummonedUnitItem
+	ORG $7AEA8
+	BYTE SummonedUnitItem
+	ORG $7AEBC
+	BYTE SummonedUnitItem
+	ORG $7AED6
+	BYTE SummonedUnitItem
+	
+	//summoned class ID
+	ORG $7ADD0
+	BYTE Kite
+	ORG $22BEC
+	BYTE Kite
+	ORG $18EDE
+	BYTE Kite
+	ORG $2304C
+	BYTE Kite
+	ORG $23F78
+	BYTE Kite
+	ORG $23FE2
+	BYTE Kite
+	ORG $2403E
+	BYTE Kite
+	ORG $2409A
+	BYTE Kite
+	ORG $2523E
+	BYTE Kite
+	ORG $25246
+	BYTE Kite
+	ORG $3122E
+	BYTE Kite
+	ORG $232CC
+	BYTE Kite
+	ORG $25366
+	BYTE Kite
+	ORG $2536E
+	BYTE Kite
+	ORG $3122E
+	BYTE Kite
+	ORG $18EDE
+	BYTE Kite
+	
+	//set summon entry for Passarola
+	ORG $95F5A4
+	BYTE Passarola KiteSummon
+	//test entry
+	BYTE Lua KiteSummon
+	
+POP
+
 
 ALIGN 4
 AttackEffect:
@@ -97,3 +164,4 @@ WORD ReverseFlagID
 
 #include "ReapingBlade/ReapingBlade.event"
 
+#include "ContraryWinds/ContraryWinds.lyn.event"

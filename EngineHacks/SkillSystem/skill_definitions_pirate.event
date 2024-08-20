@@ -218,3 +218,14 @@
 #define HandCannonID 70
 
 #define MomentumID 71
+
+#define BoardingPartyID 72
+
+#define PollenateID 73
+
+#define ContraryWindsID 74
+
+#define LikeDominoesID 75
+
+
+

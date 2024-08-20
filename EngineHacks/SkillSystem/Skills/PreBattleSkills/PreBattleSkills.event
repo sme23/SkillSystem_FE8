@@ -432,3 +432,6 @@ WORD ArcaneArtificeID
 #endif //MODULAR_PRE_BATTLE_SKILLS
 
 #include "Finesse/Finesse.event"
+
+#include "LikeDominoes/LikeDominoes.event"
+

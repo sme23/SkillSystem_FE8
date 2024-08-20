@@ -61,6 +61,8 @@
 #define Flint $3E //these two are mutually exclusive
 #define Gerald $3F //these two are mutually exclusive
 
+#define KiteSummon $3D //Passarola's Kite
+
 
 // ENEMY/NPC ($46 through $FF)
 

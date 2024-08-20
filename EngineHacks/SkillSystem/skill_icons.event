@@ -1169,6 +1169,15 @@ ORG SkillIcon(ReapingBladeID)
 #incbin "SkillIcons/DragonFang.dmp"
 ORG SkillIcon(HandCannonID)
 #incbin "SkillIcons/BlackMage.dmp"
+ORG SkillIcon(BoardingPartyID)
+#incbin "SkillIcons/Barricade.dmp"
+ORG SkillIcon(PollenateID)
+#incbin "SkillIcons/Serenity.dmp"
+ORG SkillIcon(ContraryWindsID)
+#incbin "SkillIcons/WindBoost.dmp"
+ORG SkillIcon(LikeDominoesID)
+#incbin "SkillIcons/Gamble.dmp"
+
 
 //don't need them
 ORG SkillIcon(ProtectorID)

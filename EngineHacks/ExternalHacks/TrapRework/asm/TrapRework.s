@@ -46,7 +46,8 @@
 .equ MapAddInRange,0x801AABC
 .equ gTrapArray,0x203A614
 .equ gMapTerrain,0x202E4DC
-
+.equ gMapRawTiles,0x859a9d4   
+.equ gpTileTerrainConfig,0x859a9d0 
 
 
 TrapRework_MapSpriteDisplay:
@@ -303,6 +304,57 @@ add r2,#8
 ldrb r0,[r2,#2]
 cmp r0,#0
 bne LightRunes_LoopStart
+
+@ hijacking this function to also handle dynamic tile changes
+
+ldr r2,=gTrapArray
+
+
+
+TileChanges_LoopStart:
+ldr r1,=DynamicTileChangeTrapID_Link
+ldrb r1,[r1]
+ldrb r0,[r2,#2]
+cmp r0,r1
+bne TileChanges_LoopRestart
+
+TileChanges_LoopCont:
+@is a dynamic tile change
+ldrh r3,[r2,#4] @r3 = ID of metatile
+
+ldr r4,=gMapRawTiles
+ldrb r0,[r2,$1]
+ldr r1,[r4]
+lsl r0,r0,#2
+add r0,r1
+ldrb r1,[r2]
+lsl r1,r1,#1
+ldr r0,[r0]
+add r0,r1 @r0 = offset into table stored in r4
+strh r3,[r0]
+
+ldr r1,=gpTileTerrainConfig
+ldr r1,[r1]
+lsr r3,r3,#2
+add r1,r3
+ldrb r3,[r1]
+
+ldr r4,=gMapTerrain
+ldrb r0,[r2,#1]
+ldr r1,[r4]
+lsl r0,r0,#2
+add r0,r1
+ldrb r1,[r2]
+ldr r0,[r0]
+add r0,r1
+strb r3,[r0]
+
+
+TileChanges_LoopRestart:
+add r2,#8
+ldrb r0,[r2,#2]
+cmp r0,#0
+bne TileChanges_LoopStart
 
 LightRunes_GoBack:
 pop {r4}
