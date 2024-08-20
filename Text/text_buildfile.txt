@@ -231,3 +231,9 @@ Time to march?[X]
 
 ## Mount_Description_TextID
 Ready to ride?[X]
+
+## PromotesToTextID
+Promotes to [X]
+
+## NoUseTextID
+Unit cannot use this.[X]

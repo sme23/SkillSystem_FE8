@@ -486,8 +486,8 @@ UnitPlacement:
 	//#define AttackInTwoGroup1AI		[0x00,0x06,0x09,0x01] //Doesn't actually work (at least not the intended way)
 
 	RecruitableUnits:
-		UNIT Adrian Fighter 0 Level(10,Enemy,True) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] [0x6,0x3,0x4,0x0]
-		UNIT Lexa Myrmidon_F 0 Level(10,Enemy,True) [13,10] 0 0 0 0 [SteelSword,Vulnerary] [0x6,0x3,0x4,0x0]
+		UNIT Adrian Fighter 0 Level(11,Enemy,True) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] [0x6,0x3,0x4,0x0]
+		UNIT Lexa Myrmidon_F 0 Level(11,Enemy,True) [13,10] 0 0 0 0 [SteelSword,Vulnerary] [0x6,0x3,0x4,0x0]
 		UNIT
 
 	NoahUnit:

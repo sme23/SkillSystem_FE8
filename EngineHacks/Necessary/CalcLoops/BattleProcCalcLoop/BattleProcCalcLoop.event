@@ -24,6 +24,8 @@ POIN Proc_Moonbow
 	POIN CombatArt_Adept CombatArt_DragonFang
 #endif // COMBAT_ARTS
 
+POIN Proc_Underhanded
+
 POIN Proc_Eclipse	//skills that do damage and all that
 
 POIN Proc_Impale Proc_Colossus 
@@ -48,6 +50,8 @@ POIN Proc_Vengeance //more damage
 	POIN CombatArt_Astra
 #endif // COMBAT_ARTS
 
+
+
 POIN Proc_Bane DownWithArch Proc_Lethality	//skills that set damage to max
 
 POIN Proc_CapDamage	//check that damage is not over cap
@@ -65,6 +69,8 @@ POIN Proc_StealHP
 POIN Proc_AetherHeal	//skills that heal based on final damage
 
 POIN Proc_BlackMagic Proc_Petrify Proc_Enrage Proc_Deadeye //skills that apply a status effect
+
+POIN Proc_ReapingBlade
 
 #ifdef STATUS_WEAPONS
 	POIN Proc_StatusWeapons

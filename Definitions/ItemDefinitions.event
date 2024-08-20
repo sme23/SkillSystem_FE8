@@ -95,6 +95,7 @@
 #define Galestrike $dc
 #define GaleStrike $dc
 #define Elsurge 0xE9
+#define Bolt 0x9a
 
 //KNIVES
 #define IronKnife $bd

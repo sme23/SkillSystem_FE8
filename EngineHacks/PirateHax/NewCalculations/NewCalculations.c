@@ -800,7 +800,7 @@ int GetUnitLuckCap(Unit* unit){
         return 30; //unpromo'd units get 25 cap
     }
     else{
-        return 20;
+        return 25;
     }
 }
 

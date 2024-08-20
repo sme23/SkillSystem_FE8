@@ -145,7 +145,7 @@ SpawnQuestSigil(WentToHub4, 779, RedSigilTrapID, 2, 23)
 SpawnQuestSigil(WentToHub5, 780, RedSigilTrapID, 7, 23)
 ENUT GoToNextHubFlagID
 CheckHowManyHubChaptersCompleted
-SVAL s1 4 
+SVAL s1 5
 BNE 2 sC s1 //if chapters completed != 5, skip
     AddTrap(GreenSigilTrapID, 5, 17)
     ENUF GoToNextHubFlagID

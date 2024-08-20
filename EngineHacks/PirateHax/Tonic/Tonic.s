@@ -9,6 +9,10 @@
 	RemoveUnitBlankItems = 0x8017984+1
 	Memset = 0x80D1C6C+1
 	gChapterData = 0x202BCF0
+	
+	.equ MaxTonicIndex, 10
+
+	.equ HangoverID, SkillTester+4
 
 	.global SUD_SaveTonic
 	.type   SUD_SaveTonic, function
@@ -24,6 +28,9 @@
 
 	.global CheckTonicBit
 	.type 	CheckTonicBit, function
+
+	.global CheckIfAnyTonic
+	.type 	CheckIfAnyTonic, function
 
 	.global SetTonicBit
 	.type 	SetTonicBit, function
@@ -159,6 +166,44 @@ SetTonicByte:
 
 	.align
 
+CheckIfAnyTonic:
+	@ r0 - unit address
+	
+	push {lr}
+	push {r4-r6}
+
+	mov r4, r0	@ store unit here
+	bl GetTonicByte @ this gets their tonic byte and stores it in r0
+	mov r5, r0	@ stores their tonic byte here
+	mov r6, #1	@ (HP tonic bit starts at 1); looping variable
+	
+	LoopPoint:
+	mov r0, r5	@ moves tonic byte back into r0 then ands it with specific bit we're looking for
+	and r0, r6
+	cmp r0, r5
+	beq checkTonicBitRetTrueTwo @ jumps straight to true if it checks out
+
+	mov r2, #1
+	lsl r2, #MaxTonicIndex
+	cmp r6, r2
+	beq checkTonicBitRetFalseTwo
+	
+	lsl r6, #1	@ if we haven't hit the max, then we can keep looping
+	b LoopPoint
+
+	checkTonicBitRetFalseTwo:
+	mov r0, #0
+	b checkTonicBitEndTwo
+
+
+	checkTonicBitRetTrueTwo:
+	mov r0, #1
+
+	checkTonicBitEndTwo:
+	pop {r4-r6}
+	pop {r1}
+	bx r1
+
 CheckTonicBit:
 	@ r0 - unit address
 	@ r1 - bit to check
@@ -270,7 +315,7 @@ AddTonicBonus:
 	@ ret r0 - stat bonus
 
 	push {lr}
-	push {r4, r5}
+	push {r4-r6}
 
 	mov r4, r0
 	mov r5, r1
@@ -310,8 +355,23 @@ AddTonicBonus:
 	ldr r0, [r0]
 
 	addTonicBonusEnd:
+	@has Hangover
+	mov r6, r0	@ puts the tonic bonus in r0 in r6 for safekeeping
+	ldr r0, SkillTester
+	mov lr, r0
+	mov r0, r4 @Attacker data
+	ldr r1, HangoverID
+	.short 0xf800
+	cmp r0, #0
+	beq End
 
-	pop {r4, r5}
+	mov r2, #3
+	mul r6, r2	@ multiplies the bonus by 3
+	
+	@ if hangover is true for the unit, triple their stat
+	End:
+	mov r0, r6 	@ moves r0 back into r6
+	pop {r4-r6}
 	pop {r1}
 	bx r1
 
@@ -626,13 +686,30 @@ TonicPrepScreenEffectFunc:
 	strh r2, [r0, r1]
 
 	blh RemoveUnitBlankItems
+	
+	mov r3, #1
+	push {r3}
 
+	@ check here if hangover, then triple the bonus
+	ldr r0, SkillTester
+	mov lr, r0
+	mov r0, r4 @Attacker data
+	ldr r1, HangoverID
+	.short 0xf800
+	pop {r3}
+	cmp r0, #0
+	beq SkipSetting
+
+	mov r3, #3
+
+	SkipSetting:
 	@ restore hp to max
 	mov r0, r4
 	ldrb r1, [r0, #0x13] @ current hp
 	ldr r2, =TonicHPBonusPointer
 	ldr r2, [r2]
 	ldr r2, [r2]
+	mul r2, r3	@ hangover multiplier
 	add r1, r2
 	strb r1, [r0, #0x13]
 
@@ -648,3 +725,7 @@ TonicPrepScreenEffectFunc:
 	.pool
 
 	.align
+
+SkillTester:
+@Poin SkillTester
+@WORD ArcaneBladeID

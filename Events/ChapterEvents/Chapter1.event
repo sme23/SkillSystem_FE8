@@ -92,9 +92,9 @@ ENDA
 
 PlayerGroup:
 UNIT Lua Captain 0 Level(8,Ally,False) [6,19] 0 0 0 0 [SteelBlade, IronMusket, Vulnerary] NoAI
-UNIT Desiderio Vanguard 0 Level(6,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [5,19] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] NoAI
-UNIT Razvan Curate 0 Level(3,Ally,False) [5,20] 0 0 0 0 [Mend, Heal, Vulnerary] NoAI
+UNIT Desiderio Vanguard 0 Level(10,Ally,False) [6,20] 0 0 0 0 [SteelAxe, IronLance, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(12,Ally,False) [5,19] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] NoAI
+UNIT Razvan Curate 0 Level(4,Ally,False) [5,20] 0 0 0 0 [Mend, Heal, Vulnerary] NoAI
 UNIT Carmen Mage_F 0 Level(1,Ally,False) [6,18] 0 0 0 0 [Fire, Vulnerary] NoAI
 UNIT Ximo Archer 0 Level(1,Ally,False) [6,21] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT

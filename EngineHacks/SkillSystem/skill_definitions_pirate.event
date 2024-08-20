@@ -209,10 +209,20 @@
 
 #define DisarmID 66
 
+#define PotentBrewID 67
+
+#define FinesseID 68
+
+#define ReapingBladeID 69
+
+#define HandCannonID 70
+
+#define MomentumID 71
+
 //Watchful: This unit cannot be captured or stolen from.
 //By Sme
-#define WatchfulID 67
+#define WatchfulID 72
 
 //Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
-#define LifetakerID 68
+#define LifetakerID 73

@@ -229,7 +229,7 @@ UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 NPCGroup:
-UNIT Juan Thief 0 Level(4, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] BossAI
+UNIT Juan Thief 0 Level(3, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] BossAI
 UNIT
 
 EnemyGroup:
@@ -393,7 +393,7 @@ FADI 60
 LoadCutsceneUnits(CutsceneGreens)
 LoadCutsceneUnits(CutsceneReds)
 CAMERA_CENTERED [9,15]
-TILECHANGE 0x6 //imperial ship tile change
+TILECHANGE 5 //imperial ship tile change
 Music(ScalleywagsOnDeckID)
 EraseBackground
 FADU 13
@@ -492,7 +492,7 @@ MOVE 15 GreagorCaptain [8,19]
 ENUN
 CLEN 0
 SOUN 0xB1 //lockpick sound
-TILECHANGE 0x7 //doors closing
+TILECHANGE 0x6 //doors closing
 STAL 30
 FlashCursor(Stingray, 40)
 SetBackground(Ship)
@@ -500,8 +500,8 @@ Text(A4StartEventBase_7)
 ClearBackground
 
 FADI 60 //fade to black and revert the cutscene tile changes. 
-TILEREVERT 0x6 
-TILEREVERT 0x7
+TILEREVERT 5 
+TILEREVERT 6
 CLEE 0 //clear all cutscene enemies, we want them to be back to their normal forms for the map. 
 CLEN 0 // 
 CAMERA_CENTERED [5,3]
@@ -512,7 +512,7 @@ ENUN
 FADU 15
 STAL 30 
 SOUN 0xAF //snag falling
-TILECHANGE 0x8 //show planks falling
+TILECHANGE 0x7 //show planks falling
 MOVE 8 Lua [5,3]
 MOVE 8 Desiderio [6,2] 
 MOVE 8 Pilar [5,2]
@@ -546,8 +546,8 @@ Text(A4_EndEvent_1)
 MOVE 15 Pilar [18, 18]
 MOVE 5 Desiderio [9, 16]
 ENUN
-DISA Pilar
-DISA Desiderio
+HIDEUNIT Pilar
+HIDEUNIT Desiderio
 STAL 30
 Text(A4_EndEvent_2)
 FADI 15
@@ -556,8 +556,8 @@ MUSC 0x47 //windy day
 
 //Lua and Razvan move onboard the imperial ship. Seems as if there's no sign of life.
 CAMERA_CENTERED [9,14]
-TILECHANGE 0x6 //show imperial ship 
-TILECHANGE 0x7 //doors closed still
+TILECHANGE 0x5 //show imperial ship 
+TILECHANGE 0x6 //doors closed still
 LOAD1 1 EndingSceneLuaAndRazvan
 FADU 15
 
@@ -582,7 +582,7 @@ CAMERA_CENTERED [9,17]
 STAL 20 
 SOUN 0xB1 //lockpick sound
 Music(ABlackheartsPrideID)
-TILECHANGE 9 //doors opening (new tile change was needed, hacky solution so that doors don't reappear.)
+TILECHANGE 8 //doors opening (new tile change was needed, hacky solution so that doors don't reappear.)
 STAL 40
 LOAD1 1 EndingSceneCaptain
 MOVE 10 GreagorCaptain [10,20]
@@ -640,7 +640,7 @@ BEQ 776 s1 sC //Does Razvan have a heal staff?
 		ClearBackground
 		GiveItem(Heal, Razvan)
 LABEL 776 //If either are true, go straight to here.
-DISA Razvan
+HIDEUNIT Razvan
 DISA GreagorVillager
 
 MUSI
@@ -664,10 +664,13 @@ Text(A4_EndEvent_7)
 Music(BeatToQuartersID)
 SetBackground(Inn)
 Text(A4_EndEvent_8)
+FADI 15
+SHOWUNIT Desiderio
+SHOWUNIT Pilar
+SHOWUNIT Razvan
 GoToHubChapter(HubA)
 NoFade
 //note to self (Muffle), add hub text for this chapter
-CLEA 0
 ENDA
 
 Dunno1: //down here because nothing here is really used

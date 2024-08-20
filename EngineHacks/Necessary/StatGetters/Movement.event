@@ -7,7 +7,7 @@ ALIGN 4
 pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
 	POIN prDebuffMov 
-	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prArmorMarchCheck prEquipmentMov prLuaHubMovement
+	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prHangoverTonicCheck prArmorMarchCheck prEquipmentMov prLuaHubMovement
 	POIN WellRested SwiftBoost
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
@@ -38,6 +38,11 @@ prSkillPoise:
 	rIfUnitHasSkill(PoiseID)
 		rAddConst(1)
 
+prHangoverTonicCheck:
+	rIfUnitHasSkill(HangoverID)
+		rIf(prCheckIfUnitHasTonic)
+			rSubConst(1)
+
 prNullifyIfGuardAI:
 	rIfUnitHasNotAllegience(UA_BLUE)
 		rIfUnitHasGuardAI
@@ -65,6 +70,10 @@ prAddEquipMov:
 ALIGN 4
 prCheckIfLuaInHub:
 	rCallExternal(LuaIsInHub)
+
+ALIGN 4
+prCheckIfUnitHasTonic:
+	rCallExternal(CheckIfAnyTonic)
 
 ALIGN 4
 prItemPassiveMov:

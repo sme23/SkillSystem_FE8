@@ -13,7 +13,7 @@ WORD PoiseID
 
 ALIGN 4
 Nonconforming:
-#incbin "Nonconforming/Nonconforming.dmp"
+#include "Nonconforming/Nonconforming.lyn.event"
 POIN SkillTester
 WORD NonconformingID
 
@@ -40,6 +40,10 @@ WanderersFocusRange_Link:
 WORD 3
 
 ALIGN 4
+MomentumIDLink:
+WORD MomentumID
+
+ALIGN 4
 #include "Analyze/Analyze.lyn.event"
 
 ALIGN 4
@@ -47,3 +51,6 @@ ALIGN 4
 
 ALIGN 4
 #include "WanderersFocus/WanderersFocus.lyn.event"
+
+ALIGN 4
+#include "Momentum/Momentum.lyn.event"

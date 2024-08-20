@@ -1,9 +1,11 @@
 #include "Battle.h"
 
-s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defender) {
-    int i, count;
-    u16 attrs; // NOTE: this is a bug! attrs are 19 bits in FE8 (they're 16 bits in previous games)
+extern int* gRoundCount;
 
+s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defender) {
+    int i;
+    unsigned attrs;
+    
     if (!(attacker->weapon)){
 		return FALSE;
 	}
@@ -15,17 +17,17 @@ s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defen
 	}
 
     attrs = gBattleHitIterator->attributes;
-    count = GetBattleUnitHitCount(attacker);
+    *gRoundCount = GetBattleUnitHitCount(attacker);
 
-    for (i = 0; i < count; ++i) {
+    for (i = 0; i < *gRoundCount; ++i) {
         gBattleHitIterator->attributes |= attrs;
-
         if (BattleGenerateHit(attacker, defender))
             return TRUE;
     }
 
     return FALSE;
 }
+
 
 void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* defender) {
     attacker->wexpMultiplier++;
@@ -138,7 +140,6 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
     }
 }
 
-
 void New_BattleInitTargetCanCounter(){
 
 	// eggs
@@ -177,20 +178,6 @@ void New_BattleInitTargetCanCounter(){
 		gBattleTarget.canCounter = false;
 		return;
 	}
-
-    // kai skill
-    if (gSkillTester(&gBattleActor.unit, ArcaneArtificeIDLink)){
-        if (GetItemData(GetItemIndex(gBattleActor.weapon))->attributes & (IA_MAGIC | IA_MAGICDAMAGE)){
-            if (GetItemData(GetItemIndex(gBattleTarget.weapon))->attributes & (IA_MAGIC | IA_MAGICDAMAGE)){
-            
-            }
-            else{
-                gBattleTarget.weapon = 0;
-		        gBattleTarget.canCounter = false;
-		        return;
-            }
-        }
-    }
 
 }
 

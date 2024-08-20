@@ -15,14 +15,7 @@ void BreatherPostBattle()
 			if (unit->curHP < unit->maxHP) //are they damaged?
 			{
 				CallMapEventEngine(BreatherMapEvent, EV_RUN_CUTSCENE);
-				if (unit->curHP >= unit->maxHP / 2) //ex: if they have 10 / 20 HP or higher
-				{
-					unit->curHP = unit->maxHP;
-				}
-				else
-				{
-					unit->curHP += (unit->maxHP / 2);
-				}
+				unit->curHP = unit->maxHP;
 			}
 		}
 	}

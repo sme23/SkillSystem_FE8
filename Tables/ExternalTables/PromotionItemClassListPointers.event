@@ -8,7 +8,7 @@ BYTE Vanguard Warden Shaman Shaman_F Fighter Fighter_F Soldier AxeCav 0x0
 
 ALIGN 4
 HuntersMarkClassList:
-BYTE Archer Archer_F Hunter Hunter_F Thief Ninja Priest Cleric Monk Monk_F Fighter Fighter_F SwordCav Gunner 0x0
+BYTE Archer Archer_F Hunter Hunter_F Thief Priest Cleric Monk Monk_F Fighter Fighter_F SwordCav Gunner 0x0
 
 ALIGN 4
 FliersPermitClassList:

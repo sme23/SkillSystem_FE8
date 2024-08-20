@@ -40,10 +40,15 @@ CritthriftIDLink:
 BYTE CritthriftID
 ALIGN 4
 
-ArcaneArtificeIDLink:
-BYTE ArcaneArtificeID
-ALIGN 4
-
 PulverizeIDLink:
 BYTE PulverizeID
+ALIGN 4
+
+HandCannonIDLink:
+BYTE HandCannonID
+ALIGN 4
+
+ALIGN 4
+gRoundCount:
+WORD RoundCountRAM
 ALIGN 4

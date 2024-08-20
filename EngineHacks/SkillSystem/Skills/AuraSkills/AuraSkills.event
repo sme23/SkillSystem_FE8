@@ -174,12 +174,23 @@ WORD SuppressiveFireID
 POIN NewAuraSkillCheck
 POIN GetUnitsInRange
 
+#include "Equalizer/Equalizer.lyn.event"
+
+ALIGN 4
+EqualizerID_Link:
+BYTE EqualizerID
+
+ALIGN 4
+EqualizerRange_Link:
+BYTE 3
+
+/*
 ALIGN 4
 Equalizer:
 #incbin "Equalizer/Equalizer.dmp"
-POIN SkillTester
-WORD EqualizerID
 POIN NewAuraSkillCheck
+WORD EqualizerID
+*/
 
 #include "ClassTypeSkills/ClassTypeSkills.event"
 

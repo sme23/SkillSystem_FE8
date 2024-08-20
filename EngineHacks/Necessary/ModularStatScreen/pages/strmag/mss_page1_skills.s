@@ -69,28 +69,28 @@ b		ShowStats2
 ShowGrowths:
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#4]		@str growth getter
-draw_growth_at 18, 3
+draw_str_growth_at 18, 3
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#8]		@mag growth getter
-draw_growth_at 18, 5
+draw_mag_growth_at 18, 5
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#12]		@skl growth getter
-draw_growth_at 18, 7
+draw_skl_growth_at 18, 7
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#16]		@spd growth getter
-draw_growth_at 18, 9
+draw_spd_growth_at 18, 9
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#20]		@luk growth getter
-draw_growth_at 26, 3
+draw_lck_growth_at 26, 3
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#24]		@def growth getter
-draw_growth_at 26, 5
+draw_def_growth_at 26, 5
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0,#28]		@res growth getter
-draw_growth_at 26, 7
+draw_res_growth_at 26, 7
 ldr		r0,[sp,#0xC]
 ldr		r0,[r0]			@hp growth getter
-draw_growth_at 26, 9
+draw_hp_growth_at 26, 9
 draw_textID_at 21, 9, textID=0x4E9, growth_func=1 @hp name
 
 b		NextColumn

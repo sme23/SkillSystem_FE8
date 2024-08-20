@@ -24,6 +24,10 @@ bool isFollowupAttack(NewBattleHit* round) {
 	return (round->attributes & BATTLE_HIT_ATTR_FOLLOWUP);
 }
 
+bool isBreakAttack(NewBattleHit* round) {
+	return (round->attributes & BATTLE_HIT_BREAK);
+}
+
 //NOTE: this function may not work as expected on the first iteration of the BattleProcCalcLoop
 NewBattleHit* getFirstDefenderRound(NewBattleHit* round) {
 	//Iterate through rounds until we find one marked as last

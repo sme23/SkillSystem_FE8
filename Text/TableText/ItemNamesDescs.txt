@@ -473,8 +473,8 @@ If Lv. 10 or greater, use to access[N]
 or master the sword, lance, or axe.[X]
 
 ## BraveCrestUseDesc
-Use on a Lv. 10 or higher[N]
-unit to gain great power.[X]
+Use on a Lv. 10 or[N]
+higher unit to promote.[X]
 
 ## KnightPlateName
 Knight Plate[X]
@@ -531,3 +531,9 @@ Hoarder's Charm[X]
 ## HoardersCharmDesc
 Prevents this unit's inventory[N]
 from being captured or stolen.[X]
+
+## BoltName
+Bolt[X]
+
+## BoltDesc
+Mid-range thunder magic.[X]

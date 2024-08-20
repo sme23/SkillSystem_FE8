@@ -28,8 +28,17 @@ Proc_Adept:
 POIN SkillTester
 WORD AdeptID
 POIN IsFollowupAttack
+WORD RoundCountRAM 
 
 #include "Adept/IsFollowupAttack.lyn.event"
+
+Proc_Underhanded:
+#incbin "Underhanded/Underhanded.dmp"
+POIN SkillTester
+WORD UnderhandedID
+POIN IsFollowupAttack
+POIN DidUnitBreak
+WORD RoundCountRAM 
 
 Proc_Astra:
 #incbin "Astra/proc_astra.dmp"
