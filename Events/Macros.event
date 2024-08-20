@@ -125,6 +125,10 @@
 #define FlagNotSet(id, label) "CHECK_EVENTID (id); BNE (label) 0xc 0x0;"
 
 
-// rw helped
+// rw helped :)
 #define FadeToBlack "FADI 16"
 #define FadeBackFromBlack "FADU 16"
+#define MoveNormal(unitId,x,y) "MOVE 16 unitId [x,y]"
+#define MoveFast(unitId,x,y) "MOVE 32 unitId [x,y]"
+#define MoveSlow(unitId,x,y) "MOVE 6 unitId [x,y]"
+#define BrownBoxText(textId) "BROWNBOXTEXT textId [8,8]"

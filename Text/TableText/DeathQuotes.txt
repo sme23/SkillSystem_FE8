@@ -116,8 +116,16 @@ your streets again[Beat][A][X]
 
 ## FataDQ
 [MR][LoadFata]
-Damn it all, if this hasn't
+Damn it all, if this hasn't[N]
 been a long time coming[Beat][AN]
 [HalfCloseEyes]Ismar, Djona[Beat] Morgan[Beat][AN]
 here's hoping you saved[Beat]
 a seat for me, [CloseEyes]huh[Beat]?[A][X]
+
+## RubyDQ
+[MR][LoadRuby]
+[HalfCloseEyes]The captain[Beat] goes down[N]
+with her crew at last[Beat][AN]
+So this is how the[N]
+Rioja Reapers end[Beat][AN]
+[CloseEyes]Yurena[Beat][A][X]

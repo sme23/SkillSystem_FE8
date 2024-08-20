@@ -11,6 +11,7 @@
 // HUB A
 #define Estelle $7
 #define Hermenegildo $8
+#define Hermen $8
 #define MrYodsen $9
 #define Yodsen $9
 #define Durgham $A
@@ -54,12 +55,14 @@
 #define Noah $25
 
 // HUB B BASE UNITS
-
 #define Ponte $20
 #define Passarola $21
 #define Neltume $22
 #define Flint $3E //these two are mutually exclusive
 #define Gerald $3F //these two are mutually exclusive
+
+// HUB C CHAPTER UNITS
+#define Ruby $2C
 
 
 // ENEMY/NPC ($46 through $FF)
@@ -137,6 +140,7 @@
 #define Guard $64
 #define Jozef $65
 #define TheCloser $66
+#define Closer $66
 #define BrickBoys $67
 
 //Hub A6
@@ -191,3 +195,7 @@
 #define Dalila 0x7B
 #define AlonsoChapter3 0x7C
 #define BlackheartElite 0x7D
+
+// Hub C1
+#define Baltasar 0xDC
+#define Krezke 0xDD

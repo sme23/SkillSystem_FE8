@@ -310,7 +310,7 @@ Iron Musket[X]
 ## SteelMusketName
 Steel Musket[X]
 
-## SilverMusketName
+## SilverMusketName ^
 Silver Musket[X]
 
 ## PistolName
@@ -374,6 +374,12 @@ Hexlock Shield[X]
 ## HexlockShieldDesc
 
 Grants +1 Def, +3 Res.[X]
+
+## HeavyShieldName ^
+Heavy Shield[X]
+
+## HeavyShieldDesc
+Grants +8 Def but -8 Spd.[X]
 
 ## ShoveGloveName
 Shove Glove[X]
@@ -511,3 +517,17 @@ Supplies[X]
 ## SuppliesItemDesc
 Contains fuel, along with[N]
 other pilfered loot.[X]
+
+## FlingRingName
+Fling Ring[X]
+
+## FlingRingDesc
+Allows the holder to reposition[N]
+allies to their opposite side.[X]
+
+## HoardersCharmName ^
+Hoarder's Charm[X]
+
+## HoardersCharmDesc
+Prevents this unit's inventory[N]
+from being captured or stolen.[X]

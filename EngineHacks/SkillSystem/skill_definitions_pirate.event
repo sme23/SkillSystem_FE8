@@ -208,3 +208,11 @@
 #define BreatherID 65
 
 #define DisarmID 66
+
+//Watchful: This unit cannot be captured or stolen from.
+//By Sme
+#define WatchfulID 67
+
+//Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
+//Author Unknown (Initial Commit)
+#define LifetakerID 68

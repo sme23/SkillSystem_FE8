@@ -52,3 +52,9 @@
 {
     #include "Chapter3.event"
 }
+{
+    #include "HubC/HubC_1.event"
+}
+{
+    #include "HubC/CutsceneC_1.event"
+}

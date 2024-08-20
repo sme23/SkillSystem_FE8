@@ -161,7 +161,7 @@ UNIT
 
 SuperbossGang:
 UNIT Yurena Champion Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] BossAI
-UNIT Sanz Sage Sanz Level(20, Enemy, False) [13, 21] 0 0 1 REDA13R20 [Tornado, Warp] BossAI
+UNIT Sanz Sage Sanz Level(22, Enemy, False) [13, 21] 0 0 1 REDA13R20 [Tornado, Sagittae, Warp, HoardersCharm] BossAI
 UNIT Orlando 0 Orlando Level(13, Enemy, False) [14, 21] 0 0 1 REDA14R20 [0] BossAI
 UNIT
 

@@ -1,0 +1,678 @@
+EventPointerTable(HubC_1EventsID, PointerList)
+
+#define C1LevelT1 16
+#define C1LevelT2 18
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+// flag tracker
+
+// 0xA: kill Baltasar
+// 0xB: second island risen
+// 0xC: kill Closer
+// 0xD: third island risen
+// 0xE: kill Krezke
+// 0xF: fourth island risen
+// 0x10: baltasar kill event tracker
+// 0x11: closer kill event tracker
+// 0x12: krezke kill event tracker
+
+// 0x13 - 0x22: boss convos
+
+// 0x14: hermen/baltasar talk event OR boss quote
+// 0x1D: hermen left from baltasar talk
+// 0x23: hermen/sanz boss quote
+// 0xB5: hermen secret event (permanent)
+
+TurnBasedEvents:
+TurnEventPlayer(0, Turn1Scene, 1)
+TurnEventPlayer(0, T2_Sanz_Scene, 2)
+TurnEventPlayer(0xB, RaiseIsland2, 1, 255)
+TurnEventPlayer(0xD, RaiseIsland3, 1, 255)
+TurnEventPlayer(0xF, RaiseIsland4, 1, 255)
+TurnEventPlayer(0, SinkChest1, 8)
+TurnEventPlayer(0, SinkChest2, 12)
+TurnEventPlayer(0, SinkChest3, 16)
+// turn 6: warn about chest 1
+TurnEventPlayer(0, WarnChest1, 6)
+// turn 10: warn about chest 2
+TurnEventPlayer(0, WarnChest2, 10)
+// turn 14: warn about chest 3
+TurnEventPlayer(0, WarnChest3, 14)
+// turn 15: change music to time's ticking
+TurnEventPlayer(0x4,MusicChangeWarning,15)
+// game over on turn 20
+TurnEventPlayer(0,TurnLimit,20)
+TurnEventPlayer(0, T7_SanzHermScene, 7)
+TurnEventPlayer(0, T9_HermYurScene, 9)
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(0x14, HermBalTalk, Hermenegildo, Baltasar)
+END_MAIN
+
+LocationBasedEvents:
+Chest(Runesword,11,14)
+Chest(FlingRing,19,21)
+Chest(Bolting,23,6)
+Chest(MagesRing,18,22)
+DurabilityChest(SkillScroll,LifetakerID,25,8)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+AFEV 0x10 Island2Unset 0xA
+AFEV 0x11 Island3Unset 0xC
+AFEV 0x12 Island4Unset 0xE
+END_MAIN
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [3,3] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+// UNIT Ruby Swordmaster_F 0 Level(18,Ally,False) [4,3] 0 0 0 0 [WoDao,IronSword,Lancereaver,Vulnerary] NoAI
+UNIT Ruby Hero_F 0 Level(18,Ally,False) [4,3] 0 0 0 0 [WoDao,SteelAxe,HandAxe,Vulnerary] NoAI
+LoadUnit(4,1)
+LoadUnit(2,2)
+LoadUnit(3,4)
+LoadUnit(5,4)
+LoadUnit(1,3)
+LoadUnit(5,3)
+LoadUnit(5,2)
+LoadUnit(6,3)
+LoadUnit(1,4)
+LoadUnit(2,3)
+LoadUnit(3,1)
+UNIT
+
+RubyGroup:
+// UNIT Ruby Swordmaster_F 0 Level(18,Ally,False) [3,4] 0 0 0 0 [WoDao,IronSword,Lancereaver,Vulnerary] NoAI
+UNIT Ruby Hero_F 0 Level(18,Ally,False) [4,1] 0 0 0x1 REDA4R4 [WoDao,SteelAxe,HandAxe,Vulnerary] NoAI
+UNIT
+
+IntroLuaGroup:
+UNIT Lua Captain 0 Level(10,Ally,False) [3,0] 0 0 0x1 REDA3R3 [IronSword] NoAI
+UNIT Razvan Curate 0 Level(10,Ally,False) [4,0] 0 0 0x1 REDA5R3 [Impaler] NoAI
+UNIT
+
+
+Enemies_Initial:
+UNIT Baltasar Dragoon 0 Level(20, Enemy, False) [6,10] 0 0 0 0 [SilverSword,SilverMusket] BossAI
+// turn 1
+UNIT Sentinel LanceCav Baltasar Level(C1LevelT1, Enemy, True) [0,6] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Sentinel LanceCav Baltasar Level(C1LevelT1, Enemy, True) [3,6] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Sentinel Ranger Baltasar Level(C1LevelT2, Enemy, True) [1,7] 0 0 0 0 [SteelSword,SteelBow] ChargeAI
+UNIT Guard Warrior Baltasar Level(C1LevelT2, Enemy, True) [2,5] 0 0 0 0 [SilverAxe] ChargeAI
+UNIT Sentinel Runeshield Baltasar Level(C1LevelT2, Enemy, True) [5,6] 0 0 0 0 [FlameSword,Purge] BossAI
+UNIT Guard PegasusRider Baltasar Level(C1LevelT1, Enemy, True) [7,7] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Guard Fighter Baltasar Level(C1LevelT1, Enemy, True) [2,8] 0 0 0 0 [SteelAxe] ChargeAI
+// turn 2
+//UNIT Guard Gunner Baltasar Level(C1LevelT1, Enemy, True) [4,11] 0 0 0 0 [SteelMusket] AttackWhenInRangeAI
+//UNIT Guard Marksman Baltasar Level(C1LevelT2, Enemy, True) [6,9] 0 0 0 0 [SteelMusket] AttackWhenInRangeAI
+//UNIT Guard Gunner Baltasar Level(C1LevelT1, Enemy, True) [6,9] 0 0 0 0 [Pistol] AttackWhenInRangeAI
+UNIT Guard Mercenary Baltasar Level(C1LevelT1, Enemy, True) [5,11] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
+UNIT Guard Soldier Baltasar Level(C1LevelT1, Enemy, True) [7,9] 0 0 0 0 [SteelLance] AttackWhenInRangeAI
+UNIT Sentinel Vanguard Baltasar Level(C1LevelT1, Enemy, True) [4,9] 0 0 0 0 [Tomahawk] BossAI
+UNIT Guard PegasusRider Baltasar Level(C1LevelT1, Enemy, True) [0,14] 0 0 0 0 [SteelSword] ChargeAI
+UNIT Guard PegasusRider Baltasar Level(C1LevelT1, Enemy, True) [6,15] 0 0 0 0 [Lancereaver] ChargeAI
+UNIT
+
+Enemies_Island2:
+UNIT TheCloser Warrior 0 Level(20, Enemy, False) [10,20] 0 0 0x1 REDA10R20 [Tomahawk, Battleaxe, SilverBow] GroupOneAI
+// turn 3
+UNIT Sentinel Vanguard TheCloser Level(C1LevelT1, Enemy, True) [4,14] 0 0 0 0 [Tomahawk] BossAI
+UNIT Sentinel Warden TheCloser Level(C1LevelT1, Enemy, True) [6,14] 0 0 0 0 [FlameSword] BossAI
+UNIT Sentinel Runeshield TheCloser Level(C1LevelT2, Enemy, True) [5,13] 0 0 0 0 [FlameSword,Bolting] BossAI
+UNIT Guard Sage TheCloser Level(C1LevelT2, Enemy, True) [5,15] 0 0 0 0 [Elfire,GaleStrike,Mend] [0xE,0x3,0x8,0x0]
+//UNIT Sentinel LanceKnight TheCloser Level(C1LevelT2, Enemy, True) [3,16] 0 0 0 0 [SilverLance] ChargeAI
+// turn 4
+UNIT Sentinel DarkKnight TheCloser Level(C1LevelT2, Enemy, True) [7,20] 0 0 0 0 [Nosferatu] AttackInTwoAI
+UNIT Guard Soldier TheCloser Level(C1LevelT1, Enemy, True) [6,21] 0 0 0 0 [SteelLance,Javelin] AttackInTwoAI
+UNIT Guard Fighter TheCloser Level(C1LevelT1, Enemy, True) [8,19] 0 0 0 0 [SteelAxe] AttackInTwoAI
+UNIT Guard PegasusRider TheCloser Level(C1LevelT1, Enemy, True) [2,22] 0 0 0 0 [Peacekeeper] AttackInTwoAI
+UNIT Guard PegasusRider TheCloser Level(C1LevelT1, Enemy, True) [4,23] 0 0 0 0 [Lancereaver] AttackInTwoAI
+// turn 5
+UNIT Guard Assassin TheCloser Level(C1LevelT2, Enemy, True) [9,21] 0 0 0 0 [SteelDagger] GroupOneAI
+UNIT Sentinel Warden TheCloser Level(C1LevelT1, Enemy, True) [9,19] 0 0 0 0 [SteelLance] GroupOneAI
+UNIT Guard Gunner TheCloser Level(C1LevelT1, Enemy, True) [6,18] 0 0 0 0 [Culverin,Blunderbuss] BossAI
+UNIT Guard PegasusRider TheCloser Level(C1LevelT1, Enemy, True) [6,24] 0 0 0 0 [SteelSword] GroupOneAI
+UNIT
+
+Enemies_Island3:
+UNIT Krezke Slayer_F 0 Level(20, Enemy, False) [19,14] 0 0 0x1 REDA19R14 [Runesword, Arcfire, Statuette] BossAI
+// turn 6
+//  UNIT Guard Shaman Krezke Level(C1LevelT1, Enemy, True) [10,19] 0 0 0 0 [Elfire] AttackInRangeAI
+UNIT Guard Archer Krezke Level(C1LevelT1, Enemy, True) [11,20] 0 0 0 0 [ShiningBow,SteelBow] AttackInRangeAI
+UNIT Guard Shaman Krezke Level(C1LevelT1, Enemy, True) [12,19] 0 0 0 0 [Arcfire] AttackInRangeAI
+UNIT Guard Assassin Krezke Level(C1LevelT2, Enemy, True) [13,20] 0 0 0 0 [SteelKnife] AttackInRangeAI
+UNIT Guard Assassin Krezke Level(C1LevelT2, Enemy, True) [13,18] 0 0 0 0 [SteelDagger] AttackInRangeAI
+// UNIT Guard Gunner Krezke Level(C1LevelT1, Enemy, True) [14,19] 0 0 0 0 [SteelMusket] AttackInRangeAI
+// turn 7
+UNIT Guard Shaman Krezke Level(C1LevelT1, Enemy, True) [16,15] 0 0 0 0 [Elsurge] ChargeAI
+UNIT Guard Hero Krezke Level(C1LevelT2, Enemy, True) [19,17] 0 0 0 0 [SilverAxe,SilverSword] ChargeAI
+// turn 8 and 9? maybe?
+UNIT Sentinel Runeshield Krezke Level(C1LevelT2, Enemy, True) [22,17] 0 0 0 0 [SteelLance,Purge] BossAI
+UNIT Guard Warrior Krezke Level(C1LevelT2, Enemy, True) [18,16] 0 0 0 0 [SteelAxe] AttackInRangeAI
+UNIT Guard Sage Krezke Level(C1LevelT2, Enemy, True) [20,17] 0 0 0 0 [Elfire] AttackInRangeAI
+UNIT Guard Cleric Krezke Level(C1LevelT1, Enemy, True) [15,16] 0 0 0 0 [Physic] [0xE,0x3,0x8,0x20]
+UNIT Sentinel Warden Krezke Level(C1LevelT1, Enemy, True) [23,18] 0 0 0 0 [SteelLance,SteelSword] AttackInTwoAI
+UNIT Sentinel Vanguard Krezke Level(C1LevelT1, Enemy, True) [20,13] 0 0 0 0 [SteelAxe,SteelLance] AttackInRangeAI
+UNIT
+
+Enemies_Island4:
+// UNIT Sanz Sage 0 Level(22, Enemy, False) [15,2] 0 0 0x1 REDA15R2 [Tornado, HerosFlare, Warp, Physic] BossAI
+UNIT Sanz Sage 0 Level(22, Enemy, False) [15,2] 0 0 0x1 REDA15R2 [Tornado, Sagittae, Warp, Physic] BossAI
+// turn 10 initial dudes
+UNIT Sentinel Fighter Sanz Level(C1LevelT1, Enemy, True) [18,11] 0 0 0 0 [SteelAxe] AttackInRangeAI
+UNIT Sentinel Soldier Sanz Level(C1LevelT1, Enemy, True) [20,9] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT Sentinel Assassin Sanz Level(C1LevelT2, Enemy, True) [19,10] 0 0 0 0 [Baselard,Bloodletter] AttackInRangeAI
+UNIT Guard PegasusRider Sanz Level(C1LevelT1, Enemy, True) [21,11] 0 0 0 0 [SteelSword] AttackInRangeAI
+// final wave
+UNIT Guard Warrior Sanz Level(C1LevelT2, Enemy, True) [14,3] 0 0 0 0 [Crusher] GroupFourAI
+UNIT Guard Hero Sanz Level(C1LevelT2, Enemy, True) [18,1] 0 0 0 0 [Wingclipper] GroupFourAI
+UNIT Sentinel General Sanz Level(C1LevelT2, Enemy, True) [15,7] 0 0 0 0 [SteelSword] GroupFourAI
+UNIT Guard Sage Sanz Level(C1LevelT2, Enemy, True) [15,5] 0 0 0 0 [Elfire] GroupFourAI
+// time-wasters
+UNIT Guard Marksman Sanz Level(C1LevelT2, Enemy, True) [17,9] 0 0 0 0 [Culverin,Blunderbuss] BossAI
+UNIT Guard WarMonk Sanz Level(C1LevelT2, Enemy, True) [16,6] 0 0 0 0 [SteelAxe,Physic] [0xE,0x3,0x8,0x20]
+UNIT Sentinel Ranger Sanz Level(C1LevelT2, Enemy, True) [14,6] 0 0 0 0 [Greatbow] BossAI
+// change this guy back to a runeshield, but with a Bolt tome instead of Bolting? once I have access to that
+// UNIT Sentinel Runeshield Sanz Level(C1LevelT2, Enemy, True) [12,1] 0 0 0 0 [Nosferatu,Bolting] BossAI
+UNIT Guard WarMonk Sanz Level(C1LevelT2, Enemy, True) [12,1] 0 0 0 0 [SteelAxe,Silence] BossAI
+UNIT Sentinel Runeshield Krezke Level(C1LevelT2, Enemy, True) [16,3] 0 0 0 0 [Eclipse] BossAI
+UNIT
+
+Enemies_ChestGuards:
+UNIT Guard Mercenary TheCloser Level(C1LevelT1, Enemy, True) [10,13] 0 0 0 0 [SilverSword] AttackInRangeAI
+UNIT Guard Gunner TheCloser Level(C1LevelT1, Enemy, True) [12,14] 0 0 0 0 [SteelMusket] AttackInRangeAI
+UNIT Sentinel Vanguard Krezke Level(C1LevelT1, Enemy, True) [18,20] 0 0 0 0 [Spear] BossAI
+UNIT Sentinel Vanguard Krezke Level(C1LevelT1, Enemy, True) [19,20] 0 0 0 0 [Tomahawk] BossAI
+UNIT Guard Hero Krezke Level(C1LevelT2, Enemy, True) [18,23] 0 0 0 0 [Wingclipper] GroupTwoAI
+UNIT Guard WarMonk Krezke Level(C1LevelT2, Enemy, True) [20,22] 0 0 0 0 [SteelAxe,Restore] GroupTwoAI
+UNIT Sentinel Soldier Sanz Level(C1LevelT1, Enemy, True) [25,6] 0 0 0 0 [SteelLance] GroupThreeAI
+UNIT Guard Warrior Sanz Level(C1LevelT2, Enemy, True) [26,9] 0 0 0 0 [Hammer] GroupThreeAI
+UNIT Sentinel DarkKnight Sanz Level(C1LevelT2, Enemy, True) [22,7] 0 0 0 0 [Elfire,AngelicRobe] GroupThreeAI
+UNIT Guard Archer Sanz Level(C1LevelT1, Enemy, True) [24,5] 0 0 0 0 [SteelBow] GroupThreeAI
+UNIT
+
+
+
+Intro_Cutscene_Trio:
+UNIT Yurena Champion 0 Level(20, Enemy, False) [6,9] 0 0 1 REDA6R6 [BraveLance, Saunion] NoAI
+UNIT Sanz Sage 0 Level(22, Enemy, False) [7,9] 0 0 0x1 REDA7R7 [Tornado, Sagittae, Warp, Physic] NoAI
+UNIT Baltasar Dragoon 0 Level(20, Enemy, False) [8,9] 0 0 0x1 REDA8R6 [SilverSword,SilverMusket] NoAI
+UNIT
+
+Intro_Krezke:
+UNIT Krezke Slayer_F 0 Level(20, Enemy, False) [4,10] 0 0 0x1 REDA4R6 [Runesword, Arcfire, Statuette] NoAI
+UNIT
+
+Outro_Yurena:
+UNIT Yurena Champion 0 Level(20, NPC, False) [7,1] 0 0 0 0 [BraveLance, Saunion] NoAI
+UNIT
+
+Outro_Players:
+UNIT Lua Captain 0 Level(10,Ally,False) [6,9] 0 0 0x1 REDA6R5 [IronSword] NoAI
+UNIT Ruby Hero_F 0 Level(18,Ally,False) [7,9] 0 0 0x1 REDA7R4 [WoDao] NoAI
+UNIT Razvan Curate 0 Level(18,Ally,False) [8,9] 0 0 0x1 REDA8R5 [Heal] NoAI
+UNIT
+
+Outro_Already_Outside:
+UNIT Desiderio Vanguard 0 Level(10,Ally,False) [16,7] 0 0 0 0 [IronSword] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [17,8] 0 0 0 0 [IronSword] NoAI
+UNIT
+
+Outro_Touching_Grass:
+UNIT Lua Captain 0 Level(10,Ally,False) [15,2] 0 0 0x1 REDA15R6 [IronSword] NoAI
+UNIT Ruby Hero_F 0 Level(18,Ally,False) [15,2] 0 0 0x1 REDA13R7 [WoDao] NoAI
+UNIT Razvan Curate 0 Level(18,Ally,False) [15,2] 0 0 0x1 REDA17R6 [Heal] NoAI
+UNIT
+
+BeginningScene:
+	MUSC 0x7FFF
+	// set up the later islands raising
+	ENUT 0xB
+	ENUT 0xD
+	ENUT 0xF
+	// cutscenes with the dudes
+	MUSC WindAmbienceID
+	SetBackground(Ship)
+	FadeBackFromBlack
+
+
+	// hermenegildo scene
+	CHECK_ALIVE Hermenegildo
+	BEQ 0x123 0x0 0xC
+	Text(C1_Intro_HermenScene)
+	STAL 30
+	LABEL 0x123
+
+	// ondeh/biko scene
+	CHECK_ALIVE Ondeh
+	BEQ 0xBEEF 0x0 0xC
+	CHECK_ALIVE Biko
+	BEQ 0xBEEF 0x0 0xC
+	Text(C1_Intro_OndehBikoScene)
+	STAL 30
+	LABEL 0xBEEF
+
+	// lua scene?
+	Text(C1_Intro_LuaRubyBoat)
+
+	FadeToBlack
+	CLEAN
+		// cutscene map in the temple
+	LOMA 0x40
+	STAL 30
+	MUSC OrlandoThemeID
+	FadeBackFromBlack
+	STAL 30
+	BrownBoxText(C1_Location_Popup)
+	STAL 30
+	LOAD1 1 Intro_Cutscene_Trio
+	ENUN
+	STAL 30
+	CameraCursor(Yurena)
+	Text(C1_Flashback_Exordium)
+	MoveNormal(Yurena,7,2)
+	ENUN
+	CameraCursor(Baltasar)
+	Text(C1_Flashback_YurenaWalks)
+	MoveSlow(Sanz,6,4)
+	ENUN
+	CameraCursor(Sanz)
+	Text(C1_Flashback_SanzSus)
+	CameraCursor(Sanz)
+	MoveSlow(Sanz,7,3)
+	ENUN
+	FadeOutMusic
+	STAL 30
+	SOUN 0xD8
+	MoveFast(Yurena,7,1)
+	ENUN
+	BREAKING_SACRED_STONE Yurena
+	TILECHANGE 0x0
+	STAL 30
+	CameraCursor(Sanz)
+	Text(C1_Flashback_PostBetrayal)
+	LOAD1 1 Intro_Krezke
+	CameraCursor(Krezke)
+	Text(C1_Flashback_Krezke)
+	FadeToBlack
+	RemoveAll
+
+	// within the actual chapter
+	LOMA 0x12
+	CAM1 [0,0]
+	LOAD1 1 Enemies_Initial
+	LOAD1 1 Enemies_ChestGuards
+	ENUN
+	MUSC AvastMeHeartiesID
+	FadeBackFromBlack
+	STAL 30
+	CameraCursor(Baltasar)
+	Text(C1_Intro_Baltasar)
+	CAM1 [0,0]
+	STAL 30
+	LOAD1 1 RubyGroup
+	LOAD2 1 IntroLuaGroup
+	ENUN
+	STAL 30
+	CameraCursor(Lua)
+	Text(C1_Intro_PartyShowsUp)
+	FadeToBlack
+	GotoPrepScreen
+	ENDA
+
+EndingScene:
+	FadeOutMusic
+	CameraCursor(Ruby)
+	Text(C1_Outro_FirstDeathReact)
+	FadeToBlack
+	RemoveAll
+	
+	// now inside the temple
+	LOMA 0x40
+	TILECHANGE 0x0
+	STAL 30
+	MUSC CastawayHeartID
+	LOAD1 1 Outro_Yurena
+	FadeBackFromBlack
+	STAL 30
+	LOAD2 1 Outro_Players
+	ENUN
+	CameraCursor(Yurena)
+	CameraCursor(Ruby)
+	Text(C1_Outro_EnteringTemple)
+	CameraCursor(Razvan)
+	Text(C1_Outro_RazvanThing)
+	MoveSlow(Razvan,7,3)
+	ENUN
+	CameraCursor(Yurena)
+	CameraCursor(Razvan)
+	SOUN 0x102
+	TILEREVERT 0x0
+	STAL 30
+	CameraCursor(Razvan)
+	Text(C1_Outro_RazvanThing2)
+	MUSC AvastMeHeartiesID
+	EARTHQUAKE_START 0
+	STAL 60
+	CameraCursor(Lua)
+	Text(C1_Outro_LuaThingPostRazvan)
+	STAL 30
+	MoveNormal(Lua,6,9)
+	MoveNormal(Razvan,7,9)
+	MoveSlow(Ruby,8,9)
+	MoveSlow(Yurena,7,7)
+	ENUN
+	FadeToBlack
+	RemoveAll
+	EARTHQUAKE_END
+	SetBackground(Ship)
+	FadeBackFromBlack
+	Text(C1_Outro_OutsideScene)
+	FadeOutMusic
+	FadeToBlack
+	STAL 60
+
+	// broken wall sound! not sure which one that is
+	SOUN 0xAF
+	// get a rocky island background
+	SetBackground(Forest_Dense)
+
+	STAL 60
+	FadeBackFromBlack
+	Music(CastawayHeartID)
+	Text(C1_Outro_Crash_RazvanRuby)
+
+	// hermen scenes
+
+	// baltasar talk version
+	FlagIsSet(0x1D, 0x1D)
+		ENUT 0xB5
+		STAL 30
+		Text(C1_Outro_HermReturns)
+		REVEAL Hermenegildo
+		PROMOTE Hermenegildo Sage_Hermen HoardersCharm
+		STAL 30
+	LABEL 0x1D
+
+	// sanz bq version
+	FlagIsSet(0x23, 0x23)
+		ENUT 0xB5
+		STAL 30
+		Text(C1_Outro_HermMonologues)
+		PROMOTE Hermenegildo Sage_Hermen HoardersCharm
+		STAL 30
+	LABEL 0x23
+
+	FadeToBlack
+
+	// we straight-up do not need any of this entire section. not sure why i bothered to event it earlier
+	// LOMA 0x12
+	// CAM1 [15,0]
+	// LOAD2 1 Outro_Already_Outside
+	// ENUN
+	// TILECHANGE 0x0
+	// TILECHANGE 0x1
+	// TILECHANGE 0x2
+	// FadeBackFromBlack
+	// STAL 30
+	// LOAD1 1 Outro_Touching_Grass
+	// ENUN
+	// CameraCursor(Desiderio)
+	// CameraCursor(Lua)
+	// Text(C1_Outro_OutsideScene)
+	// FadeToBlack
+
+	// better fix the hub chapter thing!
+	GoToHubChapter(HubC)
+	ENDA
+
+
+Turn1Scene:
+FadeBackFromBlack
+FadeOutMusic
+CameraCursor(Lua)
+Text(C1_TutorialText)
+NoFade
+ENDA
+
+
+Island2Unset:
+ENUF 0xB
+NoFade
+ENDA
+
+Island3Unset:
+ENUF 0xD
+NoFade
+ENDA
+
+Island4Unset:
+ENUF 0xF
+NoFade
+ENDA
+
+RaiseIsland2:
+FadeToBlack
+STAL 30
+SOUN 0xBE
+TILECHANGE 0x0
+LOAD1 1 Enemies_Island2
+ENUN
+CAM1 TheCloser
+STAL 30
+FadeBackFromBlack
+STAL 30
+CameraCursor(TheCloser)
+Text(C1_Highlight_TheCloser)
+CameraCursor(Ruby)
+Text(C1_Highlight_Desiderio)
+NoFade
+ENDA
+
+RaiseIsland3:
+FadeToBlack
+STAL 30
+SOUN 0xBE
+TILECHANGE 0x1
+LOAD1 1 Enemies_Island3
+ENUN
+CAM1 Krezke
+STAL 30
+FadeBackFromBlack 
+STAL 30
+CameraCursor(Krezke)
+Text(C1_Highlight_Krezke)
+NoFade
+ENDA
+
+RaiseIsland4:
+FadeToBlack
+STAL 30
+SOUN 0xBE
+TILECHANGE 0x2
+LOAD1 1 Enemies_Island4
+ENUN 
+CAM1 Sanz
+STAL 30
+FadeBackFromBlack
+STAL 30
+//GiveItem(HoardersCharm,Sanz)
+SilentGiveItem(HoardersCharm,Sanz)
+CameraCursor(Sanz)
+Text(C1_Highlight_Sanz)
+CameraCursor(Ruby)
+Text(C1_Highlight_RubyFinal)
+NoFade
+ENDA
+
+
+SinkChest1:
+CAM1 [11,13]
+STAL 30
+FadeToBlack
+STAL 30
+SOUN 0xBD
+TILEREVERT 0x6
+TILECHANGE 0x3
+STAL 30
+FadeBackFromBlack
+NoFade
+ENDA
+
+SinkChest2:
+CAM1 [19,22]
+STAL 30
+FadeToBlack
+STAL 30
+SOUN 0xBD
+TILEREVERT 0x7
+TILEREVERT 0x8
+TILECHANGE 0x4
+STAL 30
+FadeBackFromBlack
+NoFade
+ENDA
+
+SinkChest3:
+CAM1 [24,8]
+STAL 30
+FadeToBlack
+STAL 30
+SOUN 0xBD
+TILEREVERT 0x9
+TILEREVERT 0xA
+TILECHANGE 0x5
+STAL 30
+FadeBackFromBlack
+NoFade
+ENDA
+
+MusicChangeWarning:
+FadeOutMusic
+CameraCursor(Lua)
+Text(C1_MusicWarning)
+MUSC TimesTickingID
+NoFade
+ENDA
+
+TurnLimit:
+FadeOutMusic
+CameraCursor(Sanz)
+Text(C1_SanzDefeatText)
+CameraCursor(Lua)
+Text(C1_LuaDefeatText)
+CALL GameOverStart
+NoFade
+ENDA
+
+
+WarnChest1:
+CAM1 [11,13]
+STAL 30
+Text(C1_Warn_Chest1)
+NoFade
+ENDA
+
+
+WarnChest2:
+CAM1 [19,22]
+STAL 30
+Text(C1_Warn_ChestLater)
+NoFade
+ENDA
+
+WarnChest3:
+CAM1 [24,8]
+STAL 30
+Text(C1_Warn_ChestLater)
+NoFade
+ENDA
+
+T2_Sanz_Scene:
+Music(OrlandoThemeID)
+CAM1 [15,2]
+STAL 30
+FadeToBlack
+SetBackground(0x2F)
+FadeBackFromBlack
+Text(C1_Sanz_Highlight)
+EraseBackground
+NoFade
+ENDA
+
+HermBalTalk:
+Music(SwabbieTalkID)
+Text(C1_HermBalTalk_Text)
+FadeToBlack
+STAL 30
+SET_ACTIVE 0
+REMU Hermenegildo
+ENUT 0x1D
+STAL 30
+FadeBackFromBlack
+STAL 60
+CenterTextbox(C1_HBT_TutorialText)
+NoFade
+ENDA
+
+T7_SanzHermScene:
+FlagIsSet(0x1D, 0x909)
+Music(OrlandoThemeID)
+CAM1 [15,2]
+STAL 30
+FadeToBlack
+SetBackground(0x2F)
+FadeBackFromBlack
+Text(C1_SanzHerm_Highlight)
+EraseBackground
+LABEL 0x909
+NoFade
+ENDA
+
+
+T9_HermYurScene:
+FlagIsSet(0x1D, 0x909)
+Music(CastawayHeartID)
+CAM1 [15,2]
+STAL 30
+FadeToBlack
+SetBackground(0x2F)
+FadeBackFromBlack
+Text(C1_HermYurena_Highlight)
+EraseBackground
+LABEL 0x909
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

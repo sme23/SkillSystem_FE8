@@ -15,3 +15,5 @@
 #include "HubB/B4.txt
 #include "HubB/B5.txt
 #include "Ch3.txt"
+#include "HubC/Hub.txt"
+#include "HubC/C1.txt"

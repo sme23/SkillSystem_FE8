@@ -68,6 +68,7 @@ ForcedDeployment(Tangyuan,LockedPosition,AllModes, HubA_5)
 ForcedDeployment(Matteo,UnlockedPosition,AllModes,HubA_6)
 ForcedDeployment(Suzanne,UnlockedPosition,AllModes,HubA_6)
 ForcedDeployment(Ernest,UnlockedPosition,AllModes,HubB_3)
+ForcedDeployment(Ruby,UnlockedPosition,AllModes,HubC_1)
 EndForcedDeploymentList
 
 DeploymentGroupChapterList:

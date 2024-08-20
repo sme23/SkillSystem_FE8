@@ -106,6 +106,10 @@
 #include "PortraitHeight/PortraitShiftTable(installthisone).event"
 //2WB
 
+#include "EVENTSCRIPT/EVENTSCRIPT_Installer.event"
+// literally no idea who to credit for this stuff, sorry
+// RW copied it over from bells of byelen, so maybe check that?
+
 
 // use EventMenuCommand instead!
 // there are two versions becaue RW is bad at organizing things

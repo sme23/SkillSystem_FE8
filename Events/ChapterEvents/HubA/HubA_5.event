@@ -116,7 +116,7 @@ UNIT Guard Soldier 0 Level(20, Enemy, True) [14,19] 0 0 0x1 REDA14R18 [SilverLan
 UNIT Guard Mage 0 Level(20, Enemy, True) [12,19] 0 0 0x1 REDA12R19 [Thunder] ChargeAI
 UNIT Guard Mage 0 Level(20, Enemy, True) [13,19] 0 0 0x1 REDA13R19  [Thunder] ChargeAI
 UNIT Guard Mage 0 Level(20, Enemy, True) [14,19] 0 0 0x1 REDA14R19 [Thunder] ChargeAI
-UNIT TheCloser Champion 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R18 [Spear, Sidepierce] ChargeAI
+UNIT TheCloser Warrior 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R18 [Tomahawk, Battleaxe, SilverBow] ChargeAI
 UNIT Jozef Gunner 0 Level(10, Enemy, True) [16,19] 0 0 0x1 REDA16R19 [SilverMusket, Blunderbuss, Mincemaker] ChargeAI
 UNIT
 
