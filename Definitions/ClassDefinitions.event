@@ -145,7 +145,7 @@
 #define BombClass 0x91
 #define HorseClass 0xA9
 
-#define Sage_Hermen 0xAB
+#define Sage_Hermen 0xAC
 
 
 //STANDING MAP SPRITES
