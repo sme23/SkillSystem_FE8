@@ -126,6 +126,8 @@
 #define VillagerMAdult 0x6f
 #define VillagerFAdult 0x70
 
+#define Kite 0xab
+
 
 //HORSE/ARMOR
 #define Cataphract 0x35
@@ -201,3 +203,5 @@
 #define BowKnightMapSprite 0x9b
 #define HorseMapSprite 0x9c
 #define Gryphknight_DMapSprite 0x9d
+#define KiteMapSprite LogMapSprite // 0x9e
+

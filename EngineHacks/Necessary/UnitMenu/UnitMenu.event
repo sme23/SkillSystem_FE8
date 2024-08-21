@@ -114,6 +114,10 @@ UnitMenuTable:
   MenuCommand(Dismount_Name_TextID, Dismount_Description_TextID, OrangeText, DismountUsability, DismountRoutine)
   MenuCommand(Mount_Name_TextID, Mount_Description_TextID, OrangeText, MountUsability, MountRoutine)
   
+  MenuCommand(UM_BoardingParty, UM_BoardingPartyDesc, NormalText, BoardingPartyUsability, BoardingPartyEffect)
+  
+  MenuCommand(UM_Pollenate, UM_PollenateDesc, NormalText, PollenateUsability, PollenateEffect)
+  
   UM_Staff
   UM_Ride
   UM_Exit
@@ -132,7 +136,7 @@ UnitMenuTable:
   UM_Steal
   
   //UM_Summon
-  MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)
+  MenuCommand(UM_Kite,UM_KiteDesc,NormalText,NewSummonUsability,0x244B8)
   
   UM_Summon_DK
   UM_Pick

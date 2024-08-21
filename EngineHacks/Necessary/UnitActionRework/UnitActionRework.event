@@ -72,9 +72,9 @@ pActionRoutineTable:
 	ActionRoutine(_prSwapAction+1)               // 0x25 ACTION_SWAP
 	ActionRoutine(_prPushAction+1)               // 0x26 ACTION_PUSH
 	ActionRoutine(_prSwapAction+1)               // 0x27 ACTION_SWARP
-	NoActionRoutine               // 0x28 FREE
-	NoActionRoutine               // 0x29 FREE
-	NoActionRoutine               // 0x2A FREE
+	NoActionRoutine				  // 0x28 Shop Unit
+	ActionRoutine(BoardingPartyAction)           // 0x29 ACTION_BOARDINGPARTY
+	ActionRoutine(PollenateAction)               // 0x2A ACTION_POLLENATE 
 	NoActionRoutine               // 0x2B FREE
 	NoActionRoutine               // 0x2C FREE
 	NoActionRoutine               // 0x2D FREE

@@ -149,6 +149,7 @@
 
 	#include "Modules/DragonVeins/DragonVeins.event"
 	#include "Modules/HealTiles/HealTiles.event"
+	#include "Modules/DynamicTileChanges/DynamicTileChanges.event"
 
 	#define BlueSigil(x,y) "MapSpriteTrap(BlueSigilTrapID,x,y)"
 	#define RedSigil(x,y) "MapSpriteTrap(RedSigilTrapID,x,y)"

@@ -252,4 +252,30 @@ Switches weapon triangle.[X]
 On kill, unit moves again.[N]
 Equipped weapon is destroyed.[X]
 
+## UM_BoardingParty
+ Bridge[X]
 
+## UM_BoardingPartyDesc
+Place a bridge.[X]
+
+## BoardingPartySubtitleHelp
+Select a tile to place a bridge on.[X]
+
+## BoardingPartyNoUse
+Not enough gold.[X]
+
+## UM_Pollenate
+ Pollenate[X]
+ 
+## UM_PollenateDesc
+Share your Pollenate boost[N]
+with an adjacent ally.[X]
+
+## PollenateSubtitleHelp
+Select a unit to pollenate.[X]
+
+## UM_Kite
+ Kite[X]
+ 
+## UM_KiteDesc
+Summon a kite.[X]

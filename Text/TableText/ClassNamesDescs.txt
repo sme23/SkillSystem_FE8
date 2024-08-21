@@ -387,3 +387,11 @@ Horse[X]
 ## HorseDesc
 Weapons: None[N]
 Traits: It's a horse![X]
+
+## KiteName
+Kite[X]
+
+## KiteDesc
+Weapons: None[N]
+Traits: None[X]
+

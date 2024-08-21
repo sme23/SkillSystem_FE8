@@ -219,10 +219,18 @@
 
 #define MomentumID 71
 
+#define BoardingPartyID 72
+
+#define PollenateID 73
+
+#define ContraryWindsID 74
+
+#define LikeDominoesID 75
+
 //Watchful: This unit cannot be captured or stolen from.
 //By Sme
-#define WatchfulID 72
+#define WatchfulID 76
 
 //Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
-#define LifetakerID 73
+#define LifetakerID 77

@@ -1,0 +1,46 @@
+#include "BoardingParty.lyn.event"
+
+ALIGN 4
+BoardingPartyID_Link:
+BYTE BoardingPartyID
+
+ALIGN 4
+BoardingPartyGoldCost_Link:
+WORD 1000
+
+ALIGN 4
+BoardingPartySubtitleHelpTextID_Link:
+SHORT BoardingPartySubtitleHelp
+
+ALIGN 4
+BoardingPartyNoUseTextID_Link:
+SHORT BoardingPartyNoUse
+
+#define BridgeAssociation(configID,tileID) "SHORT configID tileID tileID tileID tileID 0"
+#define BridgeAssociation2Way(configID,tileID_UpDown,tileID_LeftRight) "SHORT configID tileID_UpDown tileID_UpDown tileID_LeftRight tileID_LeftRight 0"
+#define BridgeAssociation4Way(configID,tileID_Up,tileID_Down,tileID_Left,tileID_Right) "SHORT configID tileID_UP tileID_Down tileID_Left tileID_Right 0"
+#define BridgeAssociationEnd "WORD 0xFFFFFFFF"
+
+ALIGN 4
+BoardingPartyBridgeTileList:
+BridgeAssociation2Way(0x8A,0x05E4,0x0554)
+BridgeAssociation2Way(0x8E,0x0088,0x0008)
+BridgeAssociation2Way(0x96,0x0D60,0x0DEC)
+BridgeAssociation2Way(0x9D,0x095C,0x0FA4)
+BridgeAssociation2Way(0xAA,0x0088,0x0008)
+BridgeAssociation2Way(0xA4,0x0088,0x0008)
+BridgeAssociation2Way(0xAE,0x008C,0x000C)
+BridgeAssociation2Way(0x6E,0x0088,0x0008)
+BridgeAssociationEnd
+
+/*
+struct TargetSelectionDefinition gSelectInfo_BoardingParty = 
+{
+	.onInit = BoardingPartySelection_OnInit,
+	.onEnd = GenericSelection_DeleteBBAndBG,
+	.onAPress = BoardingPartySelection_OnSelect, //compiler gives a warning here. FE-CLib's fault, it's still correct
+	.onBPress = GenericSelection_BackToUM,
+};
+*/
+
+
