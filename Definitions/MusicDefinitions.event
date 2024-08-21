@@ -9,6 +9,7 @@
 #define TheRebelsKnifeID 0xe
 #define RebelsKnifeID 0xe
 #define OrlandoThemeID 0xf
+#define OrlandosThemeID 0xf
 #define SwabbieTalkID 0x10
 #define EmergencyCrewmateID 0x11
 #define NewHandsOnDeckID 0x11

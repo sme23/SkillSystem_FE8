@@ -179,11 +179,15 @@ Traits: Unbreakable, Steal, Locktouch[X]
 Weapons: Tome, Staff[N]
 Traits: Steal, Locktouch[X]
 
+## SageHermenDesc
+Weapons: Tome, Staff, Sword[N]
+Traits: Steal, Locktouch[X]
+
 ## SeraphName
 Seraph[X]
 
 ## SeraphDesc
-Weapons: Staff, Lance[N]
+Weapons: Staff, Sword[N]
 Traits: Flight, Aid+[X]
 
 ## SniperDesc

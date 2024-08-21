@@ -222,6 +222,16 @@ Magistrate[N]
 Governor of Port Receloso, broken[N]
 with stress by the recent murders.[X]
 
+## RubyName
+Ruby[X]
+
+## RubyDesc
+Castaway[N]
+Once, the Rioja Reapers' ruthless[N]
+captain. Now their only survivor.[X]
+
+
+
 ## KhazhakName
 Khazhak[X]
 
@@ -466,12 +476,15 @@ The Dukes[X]
 A fresh mercenary band ready to make[N]
 big money. Obviously not actual dukes.[X]
 
-## GuardName
+## GuardName_Old
 Guard[X]
+
+## GuardName ^
+Closer's Crew[X]
 
 ## GuardDesc
 The finest guards around. Only actually[N]
-helps those that pay them beforehand.[X]
+help those that pay them beforehand.[X]
 
 ## JozefName
 Jozef[X]
@@ -895,3 +908,20 @@ Blackbows[X]
 Elite[N]
 Known for their unflinching arrows[N]
 that pierce their enemies' hearts.[X]
+
+
+## BaltasarName ^
+Baltasar[X]
+
+## BaltasarDesc
+Minder[N]
+A faithful servant to Count Sanz.[N]
+Courteous, despite his dark deeds.[X]
+
+## KrezkeName
+Krezke[X]
+
+## KrezkeDesc
+Outcast[N]
+A banished Balinokan shaman, fighting[N]
+for the only employer left to her.[X]

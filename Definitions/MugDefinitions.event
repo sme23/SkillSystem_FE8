@@ -115,6 +115,13 @@
 // Chapter 3 Placeholder
 #define DalilaMug 0x21
 
+// C-1 Stuff
+#define RubyMug 0x22
+#define KrezkeMug 0x23
+#define TheCloserMug 0x27
+#define CloserMug 0x27
+#define BaltasarMug 0x28
+
 //CLASS CARDS
 
 #define WardenClassCard 0x100

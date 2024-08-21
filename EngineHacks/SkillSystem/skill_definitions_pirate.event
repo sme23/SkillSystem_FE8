@@ -227,5 +227,10 @@
 
 #define LikeDominoesID 75
 
+//Watchful: This unit cannot be captured or stolen from.
+//By Sme
+#define WatchfulID 76
 
-
+//Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
+//Author Unknown (Initial Commit)
+#define LifetakerID 77

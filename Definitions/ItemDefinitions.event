@@ -53,6 +53,7 @@
 //#define Tomahawk $29
 //#define Swordreaver $2a
 #define BattleAxe $2b
+#define Battleaxe $2b
 #define SlimAxe $d7
 #define Oversize $da
 
@@ -82,6 +83,7 @@
 //#define Bolting $3b
 #define Arcfire $3c
 #define HeroFlare $3d
+#define HerosFlare $3d
 #define Tornado $3e
 #define Surge $3f
 #define Thani $40
@@ -91,6 +93,7 @@
 //#define Nosferatu $47
 //#define Eclipse 0x48
 #define Galestrike $dc
+#define GaleStrike $dc
 #define Elsurge 0xE9
 #define Bolt 0x9a
 
@@ -131,6 +134,9 @@
 #define Statuette $e5
 #define SwapShoes 0xF1
 #define IronShield 0xEA
+#define HeavyShield 0xEE
+//#define SteelShield 0xEE
+//#define SilverShield 0xEE
 
 //Items
 
@@ -149,3 +155,6 @@
 #define AshQuiver AshArrow
 #define KnightRing $e6
 #define SuppliesItem $ed
+#define FlingRing 0xEF
+#define HoardersCharm 0xF0
+#define HoarderCharm 0xF0

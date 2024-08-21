@@ -4,7 +4,6 @@
 ALIGN 4
 BossBGMTable:
 BossBGMEntry(Khazhak,FoolsBoldID)
-BossBGMEntry(Sanz,FoolsBoldID)
 BossBGMEntry(Manfred, FoolsBoldID)
 BossBGMEntry(Sargargala,FoolsBoldID)
 BossBGMEntry(Stingray,FoolsBoldID)
@@ -19,6 +18,14 @@ BossBGMEntry(Cruz,TheWavesApprenticeID)
 BossBGMEntry(Azahar,TheWavesApprenticeID)
 BossBGMEntry(Javier,TheWavesApprenticeID)
 BossBGMEntry(Nicodemus,TheWavesApprenticeID)
+// these ones should probably be Tougher Tussle
+BossBGMEntry(Baltasar, TougherTussleID)
+BossBGMEntry(TheCloser, TougherTussleID)
+BossBGMEntry(Krezke, TougherTussleID)
+// these ones should use the hub D boss theme, once that exists
+// i'd like Sanz to use a different boss theme than the other C-1 goons, to make him more intimidating
+BossBGMEntry(Sanz, TheWavesApprenticeID)
+
 BossBGMTerminator
 
 PUSH

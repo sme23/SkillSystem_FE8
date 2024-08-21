@@ -68,7 +68,9 @@ SpecifiedBattleConvo(Yadney,Desiderio,HubB_2,0x13,B2_BQ_YadneyDesiderio)
 SpecifiedBattleConvo(Yadney,Pilar,HubB_2,0x14,B2_BQ_YadneyPilar)
 SpecifiedBattleConvo(Yadney,Lua,HubB_2,0x15,B2_BQ_YadneyLua)
 SpecifiedBattleConvo(Yadney,Jaime,HubB_2,0x16,B2_BQ_YadneyJaime)
+// yadney/ondeh use the same flag because they're the same "yadney vs. archer" joke
 SpecifiedBattleConvo(Yadney,Ximo,HubB_2,0x17,B2_BQ_YadneyXimo)
+SpecifiedBattleConvo(Yadney,Ondeh,HubB_2,0x17,B2_BQ_YadneyOndeh)
 SpecifiedBattleConvo(Yadney,Husniye,HubB_2,0x18,B2_BQ_YadneyHusniye)
 SpecifiedBattleConvo(Yadney,Magdalena,HubB_2,0x19,B2_BQ_YadneyMagdalena)
 UnspecifiedBattleConvo(Yadney,HubB_2,0x1A,B2_BQ_YadneyGeneric)
@@ -101,5 +103,28 @@ SpecifiedBattleConvo(Nicodemus,Pilar,HubB_5,0x14,B5_BQ_NicodemusPilar)
 SpecifiedBattleConvo(Nicodemus,Avocado,HubB_5,0x15,B5_BQ_NicodemusAvocado)
 SpecifiedBattleConvo(Nicodemus,MrYodsen,HubB_5,0x16,B5_BQ_NicodemusYodsen)
 UnspecifiedBattleConvo(Nicodemus,HubB_5,0x17,B5_BQ_NicodemusGeneric)
+
+// Chapter C-1
+SpecifiedBattleConvo(Baltasar,Lua,HubC_1,0x13,C1_BQ_BaltasarLua)
+SpecifiedBattleConvo(Baltasar,Hermenegildo,HubC_1,0x14,C1_BQ_BaltasarHermenegildo)
+SpecifiedBattleConvo(Baltasar,Ruby,HubC_1,0x15,C1_BQ_BaltasarRuby)
+UnspecifiedBattleConvo(Baltasar,HubC_1,0x21,C1_BQ_BaltasarGeneric)
+
+SpecifiedBattleConvo(TheCloser,Lexa,HubC_1,0x16,C1_BQ_TheCloserLexa)
+SpecifiedBattleConvo(TheCloser,Adrian,HubC_1,0x16,C1_BQ_TheCloserAdrian)
+SpecifiedBattleConvo(TheCloser,Tangyuan,HubC_1,0x18,C1_BQ_TheCloserTangyuan)
+UnspecifiedBattleConvo(TheCloser,HubC_1,0x17,C1_BQ_TheCloserGeneric)
+
+SpecifiedBattleConvo(Krezke,Indio,HubC_1,0x19,C1_BQ_KrezkeIndio)
+SpecifiedBattleConvo(Krezke,Ruby,HubC_1,0x1A,C1_BQ_KrezkeRuby)
+UnspecifiedBattleConvo(Krezke,HubC_1,0x22,C1_BQ_KrezkeGeneric)
+
+SpecifiedBattleConvo(Sanz,Lua,HubC_1,0x1B,C1_BQ_SanzLua)
+SpecifiedBattleConvo(Sanz,Ruby,HubC_1,0x1C,C1_BQ_SanzRuby)
+SpecifiedBattleConvo(Sanz,Hermenegildo,HubC_1,0x23,C1_BQ_SanzHermenegildo)
+SpecifiedBattleConvo(Sanz,Leandra,HubC_1,0x1E,C1_BQ_SanzLeandra)
+SpecifiedBattleConvo(Sanz,Indio,HubC_1,0x1F,C1_BQ_SanzIndio)
+SpecifiedBattleConvo(Sanz,Orlando,HubC_1,0x20,C1_BQ_SanzOrlando)
+UnspecifiedBattleConvo(Sanz,HubC_1,0x1,C1_BQ_SanzGeneric)
 
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

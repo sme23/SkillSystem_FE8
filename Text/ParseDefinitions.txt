@@ -84,6 +84,7 @@
 [á] = [0xe1]
 
 [TS] = [ToggleSmile]
+[Smile] = [ToggleSmile]
 
 [CurrentPortrait] = [0xFF][0xFF]
 [LoadCurrent] = [LoadFace][CurrentPortrait]
@@ -99,6 +100,7 @@
 [LoadXimo] = [LoadFace][0x7][0x1]
 [LoadEstelle] = [LoadFace][0x8][0x1]
 [LoadHermenegildo] = [LoadFace][0x9][0x1]
+[LoadHermen] = [LoadFace][0x9][0x1]
 [LoadMrYodsen] = [LoadFace][0xa][0x1]
 [LoadYodsen] = [LoadFace][0xa][0x1]
 [LoadDurgham] = [LoadFace][0xb][0x1]
@@ -139,6 +141,8 @@
 
 [LoadFata] = [LoadFace][0x57][0x1]
 
+[LoadRuby] = [LoadFace][0x22][0x1]
+
 
 
 
@@ -167,8 +171,6 @@
 [LoadSlicer] = [LoadFace][0x40][0x1]
 [LoadDicer] = [LoadFace][0x41][0x1]
 
-[LoadAlonso] = [LoadFace][0x31][0x1]
-
 [LoadGeraldo] = [LoadFace][0x32][0x1]
 [LoadBozo] = [LoadFace][0x33][0x1]
 [LoadBuzu] = [LoadFace][0x34][0x1]
@@ -185,7 +187,8 @@
 [LoadYaoguai] = [LoadFace][0x31][0x1]
 [LoadTheDuke] = [LoadFace][0x31][0x1]
 [LoadJozef] = [LoadFace][0x53][0x1]
-[LoadTheCloser] = [LoadFace][0x31][0x1]
+[LoadTheCloser] = [LoadFace][0x27][0x1]
+[LoadCloser] = [LoadFace][0x27][0x1]
 
 [LoadYadney] = [LoadFace][0x1F][0x1]
 [LoadCruz] = [LoadFace][0x1A][0x1]
@@ -201,6 +204,9 @@
 [LoadJavier] = [LoadFace][0x2F][0x1]
 [LoadKiril] = [LoadFace][0x4A][0x1]
 [LoadNicodemus] = [LoadFace][0x20][0x1]
+
+[LoadKrezke] = [LoadFace][0x23][0x1]
+[LoadBaltasar] = [LoadFace][0x28][0x1]
 
 [LoadIda] = [LoadFace][0x51][0x1]
 [LoadSailor] = [LoadFace][0x6B][0x1]
