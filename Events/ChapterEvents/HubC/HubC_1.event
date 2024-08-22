@@ -120,7 +120,7 @@ UNIT Sentinel LanceCav Baltasar Level(C1LevelT1, Enemy, True) [0,6] 0 0 0 0 [Ste
 UNIT Sentinel LanceCav Baltasar Level(C1LevelT1, Enemy, True) [3,6] 0 0 0 0 [SteelLance] ChargeAI
 UNIT Sentinel Ranger Baltasar Level(C1LevelT2, Enemy, True) [1,7] 0 0 0 0 [SteelSword,SteelBow] ChargeAI
 UNIT Guard Warrior Baltasar Level(C1LevelT2, Enemy, True) [2,5] 0 0 0 0 [SilverAxe] ChargeAI
-UNIT Sentinel Runeshield Baltasar Level(C1LevelT2, Enemy, True) [5,6] 0 0 0 0 [FlameSword,Purge] BossAI
+UNIT Sentinel Runeshield Baltasar Level(C1LevelT2, Enemy, True) [5,6] 0 0 0 0 [FlameSword,Bolt] BossAI
 UNIT Guard PegasusRider Baltasar Level(C1LevelT1, Enemy, True) [7,7] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Guard Fighter Baltasar Level(C1LevelT1, Enemy, True) [2,8] 0 0 0 0 [SteelAxe] ChargeAI
 // turn 2
@@ -153,6 +153,7 @@ UNIT Guard Assassin TheCloser Level(C1LevelT2, Enemy, True) [9,21] 0 0 0 0 [Stee
 UNIT Sentinel Warden TheCloser Level(C1LevelT1, Enemy, True) [9,19] 0 0 0 0 [SteelLance] GroupOneAI
 UNIT Guard Gunner TheCloser Level(C1LevelT1, Enemy, True) [6,18] 0 0 0 0 [Culverin,Blunderbuss] BossAI
 UNIT Guard PegasusRider TheCloser Level(C1LevelT1, Enemy, True) [6,24] 0 0 0 0 [SteelSword] GroupOneAI
+UNIT Guard Falcoknight TheCloser Level(C1LevelT2, Enemy, True) [11,23] 0 0 0 0 [Lancereaver] GroupOneAI
 UNIT
 
 Enemies_Island3:
@@ -169,7 +170,7 @@ UNIT Guard Shaman Krezke Level(C1LevelT1, Enemy, True) [16,15] 0 0 0 0 [Elsurge]
 UNIT Guard Hero Krezke Level(C1LevelT2, Enemy, True) [19,17] 0 0 0 0 [SilverAxe,SilverSword] ChargeAI
 // turn 8 and 9? maybe?
 UNIT Sentinel Runeshield Krezke Level(C1LevelT2, Enemy, True) [22,17] 0 0 0 0 [SteelLance,Purge] BossAI
-UNIT Guard Warrior Krezke Level(C1LevelT2, Enemy, True) [18,16] 0 0 0 0 [SteelAxe] AttackInRangeAI
+UNIT Guard Warrior Krezke Level(C1LevelT2, Enemy, True) [19,16] 0 0 0 0 [SteelAxe] AttackInRangeAI
 UNIT Guard Sage Krezke Level(C1LevelT2, Enemy, True) [20,17] 0 0 0 0 [Elfire] AttackInRangeAI
 UNIT Guard Cleric Krezke Level(C1LevelT1, Enemy, True) [15,16] 0 0 0 0 [Physic] [0xE,0x3,0x8,0x20]
 UNIT Sentinel Warden Krezke Level(C1LevelT1, Enemy, True) [23,18] 0 0 0 0 [SteelLance,SteelSword] AttackInTwoAI
@@ -196,7 +197,7 @@ UNIT Sentinel Ranger Sanz Level(C1LevelT2, Enemy, True) [14,6] 0 0 0 0 [Greatbow
 // change this guy back to a runeshield, but with a Bolt tome instead of Bolting? once I have access to that
 // UNIT Sentinel Runeshield Sanz Level(C1LevelT2, Enemy, True) [12,1] 0 0 0 0 [Nosferatu,Bolting] BossAI
 UNIT Guard WarMonk Sanz Level(C1LevelT2, Enemy, True) [12,1] 0 0 0 0 [SteelAxe,Silence] BossAI
-UNIT Sentinel Runeshield Krezke Level(C1LevelT2, Enemy, True) [16,3] 0 0 0 0 [Eclipse] BossAI
+UNIT Sentinel Runeshield Krezke Level(C1LevelT2, Enemy, True) [16,3] 0 0 0 0 [Bolt] BossAI
 UNIT
 
 Enemies_ChestGuards:

@@ -232,6 +232,8 @@
 [LoadHugo] = [LoadFace][0x31][0x1]
 [LoadJuliana] = [LoadFace][0x31][0x1]
 
+[LoadQuispe] = [LoadFace][0x31][0x1]
+
 [LoadRedFSoldier] = [LoadFace][0x4F][0x1]
 
 [Font] = [0x80][0x26]
