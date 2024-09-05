@@ -192,7 +192,7 @@ LABEL 0x1A1
 
 SetBackground(Inn)
 // idk; some sort of spooky ambient-ish song? Dire Tides?
-Music(NighttimeSoundID)
+Music(OrlandosThemeID)
 Text(B5_Wreckage_Intro)
 CenterTextbox(B5_Journal_Elodia)
 Text(B5_Wreckage_Interlude)
@@ -442,7 +442,7 @@ ENDA
 B5_GraveEvent_A:
 SVAL s2 0
 CALL 0x89EE1B8
-Music(SleepinWithTheSkyFishesID)
+Music(CherishTheDeadID)
 CenterTextbox(B5_Grave_A)
 NoFade
 ENDA
@@ -450,7 +450,7 @@ ENDA
 B5_GraveEvent_B:
 SVAL s2 0
 CALL 0x89EE1B8
-Music(SleepinWithTheSkyFishesID)
+Music(CherishTheDeadID)
 CenterTextbox(B5_Grave_B)
 NoFade
 ENDA
@@ -458,7 +458,7 @@ ENDA
 B5_GraveEvent_C:
 SVAL s2 0
 CALL 0x89EE1B8
-Music(SleepinWithTheSkyFishesID)
+Music(CherishTheDeadID)
 CenterTextbox(B5_Grave_C)
 NoFade
 ENDA

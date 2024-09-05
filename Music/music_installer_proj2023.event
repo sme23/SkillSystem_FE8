@@ -208,6 +208,12 @@ SongTable(CherishTheDeadID,CherishTheDead,MapMusicGroup)
 #include "songs/event/CherishTheDead.event"
 }
 
+//38 - One Last Voyage
+{
+SongTable(OneLastVoyageID,OneLastVoyage,MapMusicGroup)
+#include "songs/preps/OneLastVoyage.event"
+}
+
 
 // --------------- SONGS: GUI AND SFX ---------------
 

@@ -94,3 +94,6 @@ Storm's Brewing[X]
 
 ## SongName_CherishTheDead
 Cherish the Dead[X]
+
+## SongName_OneLastVoyage
+One Last Voyage[X]
