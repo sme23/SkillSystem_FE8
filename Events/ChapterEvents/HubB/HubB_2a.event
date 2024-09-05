@@ -113,7 +113,7 @@ MUSC WindAmbienceID
 SetBackground(Ship)
 Text(B2a_OnBoat)
 FADI 16
-// MUSC GreyMoralityID
+Music(CastawayHeartID)
 SetBackground(Harbor)
 Text(B2a_OnDocks)
 FADI 16
@@ -316,7 +316,7 @@ FlagIsSet(CruzAccused, 0x303)
 	Text(B2a_ArrestCruz)
 LABEL 0x303
 FADI 16
-// MUSC GreyMoralityID
+Music(CastawayHeartID)
 SetBackground(Harbor)
 Text(B2a_MagdalenaGivesMoney)
 GiveGold(2500)

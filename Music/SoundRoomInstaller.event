@@ -30,38 +30,65 @@ POP
 ALIGN 4
 SoundRoomList:
 
-SoundRoomEntry(PortGreagorID,0,SongName_PortGreagor)
-SoundRoomEntry(BeatToQuartersID,0,SongName_BeatToQuarters)
+// put the title screen theme here
+
+// player phase themes
 SoundRoomEntry(DistantSkiesID,0,SongName_DistantSkies)
-SoundRoomEntry(ScalleywagsOnDeckID,0,SongName_ScalleywagsOnDeck)
-SoundRoomEntry(FoolsBoldID,0,SongName_FoolsBold)
-SoundRoomEntry(ABlackheartsPrideID,0,SongName_ABlackheartsPride)
-SoundRoomEntry(AvastMeHeartiesID,0,SongName_AvastMeHearties)
-SoundRoomEntry(StillZephyrsID,0,SongName_StillZephyrs)
-SoundRoomEntry(TheRebelsKnifeID,0,SongName_TheRebelsKnife)
-SoundRoomEntry(OrlandoThemeID,0,SongName_OrlandoTheme)
-SoundRoomEntry(SwabbieTalkID,0,SongName_SwabbieTalk)
-SoundRoomEntry(EmergencyCrewmateID,0,SongName_EmergencyCrewmate)
-SoundRoomEntry(WelcomeAboardMateyID,0,SongName_WelcomeAboardMatey)
-SoundRoomEntry(ToTheCrowsNestID,0,SongName_ToTheCrowsNest)
-SoundRoomEntry(LookAtMeWaresID,0,SongName_LookAtMeWares)
-SoundRoomEntry(SleepinWithTheSkyFishesID,0,SongName_SleepinWithTheSkyFishes)
-SoundRoomEntry(DrownInGoodIntentionsID,0,SongName_DrownInGoodIntentions)
-SoundRoomEntry(MeetTheCrewID, 0, SongName_MeetTheCrew)
-SoundRoomEntry(OutIntoTheOpenSkyID, 0, SongName_OutIntoTheOpenSky)
+SoundRoomEntry(CloudsYearningID, 0, SongName_CloudsYearning)
 SoundRoomEntry(LastDanceSinkingShipID, 0, SongName_LastDanceSinkingShip)
+// hub D theme here
+SoundRoomEntry(TheRebelsKnifeID,0,SongName_TheRebelsKnife)
+SoundRoomEntry(TimesTickingID, 0, SongName_TimesTickingID)
+
+// enemy phase themes
+SoundRoomEntry(ScalleywagsOnDeckID,0,SongName_ScalleywagsOnDeck)
+SoundRoomEntry(StormsBrewingID, 0, SongName_StormsBrewing)
 SoundRoomEntry(WellAndTrulyLostID, 0, SongName_WellAndTrulyLost)
+// hub D theme here
+
+// hub themes
+SoundRoomEntry(PortGreagorID,0,SongName_PortGreagor)
 SoundRoomEntry(ToTheSkiesID, 0, SongName_ToTheSkies)
-SoundRoomEntry(FinInTheCloudsID, 0, SongName_FinInTheClouds)
+// hub C theme here
+// hub D theme here
 SoundRoomEntry(LetterOpenerID, 0, SongName_LetterOpener)
+
+// prep screen themes
+SoundRoomEntry(BeatToQuartersID,0,SongName_BeatToQuarters)
+SoundRoomEntry(DroppingAnchorID, 0, SongName_DroppingAnchor)
+SoundRoomEntry(OutIntoTheOpenSkyID, 0, SongName_OutIntoTheOpenSky)
+SoundRoomEntry(OneLastVoyageID, 0, SongName_OneLastVoyage)
+
+// boss themes
+SoundRoomEntry(FoolsBoldID,0,SongName_FoolsBold)
 SoundRoomEntry(TheWavesApprenticeID, 0, SongName_TheWavesApprenticeID)
 SoundRoomEntry(TougherTussleID, 0, SongName_TougherTussleID)
-SoundRoomEntry(TimesTickingID, 0, SongName_TimesTickingID)
+// hub D boss theme here
+
+
+// cutscene themes
+// happy cutscenes
+SoundRoomEntry(MeetTheCrewID, 0, SongName_MeetTheCrew)
+SoundRoomEntry(StillZephyrsID,0,SongName_StillZephyrs)
+// sad cutscenes
 SoundRoomEntry(CastawayHeartID, 0, SongName_CastawayHeart)
-SoundRoomEntry(DroppingAnchorID, 0, SongName_DroppingAnchor)
-SoundRoomEntry(CloudsYearningID, 0, SongName_CloudsYearning)
-SoundRoomEntry(StormsBrewingID, 0, SongName_StormsBrewing)
 SoundRoomEntry(CherishTheDeadID, 0, SongName_CherishTheDead)
+// recruitment themes
+SoundRoomEntry(EmergencyCrewmateID,0,SongName_EmergencyCrewmate)
+SoundRoomEntry(WelcomeAboardMateyID,0,SongName_WelcomeAboardMatey)
+// spooky cutscenes
+SoundRoomEntry(SwabbieTalkID,0,SongName_SwabbieTalk)
+SoundRoomEntry(OrlandoThemeID,0,SongName_OrlandoTheme)
+SoundRoomEntry(ABlackheartsPrideID,0,SongName_ABlackheartsPride)
+// violence cutscenes
+SoundRoomEntry(FinInTheCloudsID, 0, SongName_FinInTheClouds)
+SoundRoomEntry(AvastMeHeartiesID,0,SongName_AvastMeHearties)
+
+// special mechanics themes
+SoundRoomEntry(LookAtMeWaresID,0,SongName_LookAtMeWares)
+SoundRoomEntry(ToTheCrowsNestID,0,SongName_ToTheCrowsNest)
+SoundRoomEntry(DrownInGoodIntentionsID,0,SongName_DrownInGoodIntentions)
+SoundRoomEntry(SleepinWithTheSkyFishesID,0,SongName_SleepinWithTheSkyFishes)
 SoundRoomTerminator
 
 

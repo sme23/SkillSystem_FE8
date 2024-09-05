@@ -401,7 +401,7 @@ EndingScene:
 
 	STAL 60
 	FadeBackFromBlack
-	Music(CastawayHeartID)
+	Music(CherishTheDeadID)
 	Text(C1_Outro_Crash_RazvanRuby)
 
 	// hermen scenes

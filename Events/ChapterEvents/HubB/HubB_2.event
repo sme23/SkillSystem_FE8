@@ -267,7 +267,7 @@ BEQ 0xBEEF 0xC 0x0
 	Text(B2_IfYadneyAlive)
 LABEL 0xBEEF
 FADI 16
-// MUSC NeutralVictoryTheme
+Music(CastawayHeartID)
 SetBackground(Fort_Ruins)
 Text(B2_Outro_SuppliesSubplot)
 FADI 16
@@ -286,11 +286,11 @@ FlagIsSet(CruzAccused, 0x1A1)
 LABEL 0x1A1
 
 FlagIsSet(AvocadoAccused, 0x2B2)
-	// MUSC NeutralVictoryTheme
+	Music(CastawayHeartID)
 	SetBackground(Inn)
 	FADI 16
 	Text(B2_Outro_Aftermath_Avocado)
-	// MUSC GreyMoralityID
+	Music(CherishTheDeadID)
 	SetBackground(Harbor)
 	FADI 16
 	Text(B2_Outro_RazvanSad)
@@ -302,11 +302,11 @@ FlagIsSet(AvocadoAccused, 0x2B2)
 LABEL 0x2B2
 
 FlagIsSet(HusniyeAccused, 0x3C3)
-	// MUSC NeutralVictoryTheme
+	Music(CastawayHeartID)
 	SetBackground(Inn)
 	FADI 16
 	Text(B2_Outro_Aftermath_Husniye)
-	// MUSC GreyMoralityID
+	Music(CherishTheDeadID)
 	SetBackground(Harbor)
 	FADI 16
 	Text(B2_Outro_RazvanSad)
