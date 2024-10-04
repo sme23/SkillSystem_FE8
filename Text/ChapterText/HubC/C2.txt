@@ -8,7 +8,157 @@ Blackhearts.[X]
 ## HubC_2GoalWindow_A
 Defeat Boss[X]
 
-## C2ExplanationText
+## C2_Synopsis_A
+CURRENT SYNOPSIS OF C2[N]
+(Feel free to skip!)[AN][Clear]
+The Skysabers are attempting to[N]
+purchase supplies in Keeper territory,[N]
+going to a depot village to do so.[AN]
+Little do they know, a large contingent[N]
+of Blackhearts, commanded by another[N]
+one of Alonso's co-captains, approaches.[AN]
+There is a small retinue of imperials[N]
+accompanying them, including the imperial[N]
+captain met in A4, Calista. [AN]
+However, the TORCH members are mostly[N]
+fliers;[....] they were sent off to grab[N]
+more supplies for this large party.[AN]
 
+When the Blackheart warband sights the[N]
+depot, their first instinct is[N]
+to charge and plunder the village.[AN]
+Calista opposes this plan, thanks to[N]
+convincing from Valerie, the recruit[N]
+initally found during A4 too.[AN]
+Enraged by the captain shutting them[N]
+down, they turn hostile.[AN]
+Calista quickly rescues Valerie,[N]
+and retreats toward the village.[AN]
+Knowing the Blackhearts are relentless,[N]
+Calista buys Valerie time to run by[N]
+holding out in an old fort she sighted.[AN]
+Valerie flees towards the village alone.[AN][X]
+
+## C2_Synopsis_B
+Lua attempts to haggle with the Keeper[N]
+supplier, which also gets Orlando to[N]
+throw in Pilar as a reason for a discount.[AN]
+Before Lua voices further disdain, Keeper[N]
+guards report in, citing a fleeing imperial[N]
+soldier coming towards them...[AN]
+...And also a bunch of pirates in pursuit.[AN]
+Lua runs ahead to see more of the commotion,[N]
+and recognizes Valerie from A4.[AN]
+Demanding the Keepers hold their fire,[N]
+Valerie rushes in through the perimeter,[N]
+and quickly helps describe the situation.[AN]
+
+As she does so, the Keepers report taking[N]
+heavy losses, and that the pirates [N]
+are about to breach their lines.[AN]
+The supplier, knowing they don't [N]
+have many able men ready to fight,[N]
+realizes Lua is their only hope.[AN]
+They offer supplies for free to Lua,[N]
+which convinces her to help[N]
+defend the village.[AN]
+Valerie insists that they try[N]
+to push through and help Calista.[AN]
+Lua listens, and agrees, but[N]
+cannot make any promises.[AN][X]
+
+
+## C2ExplanationText_1
+Calista is currently holding[N]
+off against the Blackhearts.[AN]
+Any unit can talk to her[N]
+to rescue and recruit her.[A][X]
+
+## C2ExplanationText_2
+However, the ultimate goal is[N]
+to defeat the co-captain.[AN]
 (Note: There's no reward for all[N]
-the rebel units surviving the map.)[X]
+the rebel units surviving the map.)[A][X]
+
+## CalistaRecruit_Generic
+[ML][LoadActive]
+[MR][LoadA4ImperialCaptain]
+[Beat]Heh.[AN]
+I wasn't expecting to have my[N]
+life saved by you all again.[AN]
+A bit distasteful for a[N]
+captain like myself[Beat][N]
+But, I can lament more later;[....][N]
+the Blackhearts still threat.[AN]
+I've got the firearm just for him.[AN][X]
+
+## C2_CalistaBattleQuote
+[MR][LoadFace][0x6D][0x1]
+Y-You wench[Beat]![AN]
+What the hells[N]
+was that thing[Beat]?![AN]
+[ClearFace]
+[ML][LoadA4ImperialCaptain]
+A special landmine that[N]
+I managed to procure.[AN]
+[ToggleSmile][CloseEyes]Glad even a 'mighty' pirate[N]
+like you gets tripped up.[AN]
+[ToggleSmile](Though...I only was able[N]
+plant so many of these.[AN]
+Hopefully it's enough.)[AN]
+[OpenEyes]Anyway[Beat]time to go where[N]
+you Blackhearts belong.[AN][X]
+
+## C2BridgeLowered_T4
+
+[MR][LoadAlonso]
+Lower that bridge down![AN]
+Start pushing through that route![AN][X]
+
+## C2_GriffonWarning_T6_CalistaAlive
+What the hell's going on here?[AN]
+Where is the captain?[AN]
+
+She's betrayed us!
+We found some rebels, and she[N]
+flipped as soon as we took losses![AN]
+
+And how are we supposed to
+take your word for that?
+
+Sir, I saw a girl wearing imperial 
+armor behind in their lines.[AN]
+With Captain Calista also
+fighting his forces...[AN]
+He's telling the truth.[AN]
+
+Bloody...
+Very well. 
+Lieutenant, follow me and we'll
+send a report back to the camp.
+You two, maneuver from the back,
+flank the captain's position. [AN]
+We won't tolerate traitors in TORCH![AN]
+
+Understood, sir![AN][X]
+
+## C2_GriffonWarning_T7_CalistaDialogue
+[MR][LoadA4ImperialCaptain]
+Those griffins are coming in hot.[AN]
+Not close enough for a shot...[CloseEyes]
+this isn't looking good.[AN][X]
+
+## C2_T11_CalistaAlive
+//All enemies are set to charge AI. 
+[MR][LoadAlonso]
+The crew's on its last legs[Beat][AN] 
+And that imperial dog[N] 
+still managed to live?![AN]
+...Damn Skysabers![AN]
+We aren't going to
+die facing down![....][N]
+All remaining hands,[N]
+charge, now![AN][X]
+
+
+

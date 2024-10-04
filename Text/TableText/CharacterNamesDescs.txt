@@ -901,12 +901,24 @@ Valerie[X]
 
 ## ValerieDesc
 Aspirant[X]
+Well-trained and dedicated to archery,[N]
+but lacks some composure in combat.[AN]
 
 ## CalistaName
 Calista[X]
 
 ## CalistaDesc
-Imperial Captain[X]
+Ex-Captain[X]
+A careful woman who wished for[N]
+calm missions, and yet she's here.[AN]
+
+## SalvadorName
+Salvador[X]
+
+## SalvadorDesc
+Sub-Captain[N]
+Appointed leader of a crack band[N]
+of Blackhearts, ready for vengeance.[X]
 
 ## BlackheartPlusName
 Blackheart[X]

@@ -198,4 +198,5 @@
 
 // Hub C2 
 #define BlackheartPlus 0x7E
-#define KeeperAlly 0x80
+#define KeeperAlly 0x7F
+#define Salvador 0xDE
