@@ -58,3 +58,6 @@
 {
     #include "HubC/CutsceneC_1.event"
 }
+{
+	#include "HubC/HubC_3.event"
+}

@@ -1,0 +1,37 @@
+
+ConditionalMenuCommandNamePairing:
+//WORD textID
+//POIN conditionalRoutine
+
+WORD EarlyLeavePageText
+POIN EditEarlyLeavePageNumberDisplay
+
+WORD EarlyLeaveUnitDeployText
+POIN EditEarlyLeaveDeployQuestion
+
+//end of list
+WORD 0
+
+
+
+//-------------------------------------------
+//WIZARD CHECKPOINT
+//Do not touch anything below unless you know what you're doing
+//-------------------------------------------
+
+
+
+PUSH
+
+ORG 0x4F06E
+BL(ConditionalMenuCommandName)
+PROTECT 0x4F06E CURRENTOFFSET-1
+
+ORG continueInBlRange
+#include "asm/ConditionalMenuCommandName.lyn.event"
+ALIGN 4
+
+#undef continueInBlRange
+#define continueInBlRange currentOffset
+
+POP

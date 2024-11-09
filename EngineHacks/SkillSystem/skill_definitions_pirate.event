@@ -234,3 +234,9 @@
 //Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
 #define LifetakerID 77
+
+#define RerunAndHitID 88
+
+#define EarlyLeaveID 89
+
+#define RebelRebelID 90

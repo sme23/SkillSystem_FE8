@@ -237,3 +237,24 @@ Promotes to [X]
 
 ## NoUseTextID
 Unit cannot use this.[X]
+
+## EarlyLeavePageText
+Page    [X]
+
+## EarlyLeaveNoUnitText
+No Replacement[X]
+
+## EarlyLeaveControlRText
+R: View stat screen[X]
+
+## EarlyLeaveDirectionText1
+Left/Right: Change[X]
+
+## EarlyLeaveDirectionText2
+undeployed unit page[X]
+
+## EarlyLeaveUnitDeployText
+Deploy no one?[X]
+
+## HubC3CaptivesText
+Progress[X]

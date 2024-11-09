@@ -134,6 +134,58 @@
 
 #include "ASMCCheckSuite/ASMCGetterSetterInstaller.event"
 
+ALIGN 4
+ReusableTempRAMPointer:
+WORD 0x03003750
+
+RebelRebelIDLink:
+BYTE RebelRebelID
+
+EscapeHubC3IDLink:
+BYTE HubC_3
+
+ALIGN 4
+
+#include "ModularUnitCommandUsability/ModularUnitCommandUsability.event" //Aura Wolf
+
+ALIGN 4
+#include "DisplayUnitEffectRange/DisplayUnitEffectRange.event" //Aura Wolf
+
+ALIGN 4
+#include "MenuDependentMenuInput/MenuDependentMenuInput.event" //Aura Wolf
+
+ALIGN 4
+#include "ConditionalMenuCommandName/ConditionalMenuCommandName.event" //Aura Wolf
+
+ALIGN 4
+#include "StatScreenNextUnitLogic/StatScreenNextUnitLogic.event" //Aura Wolf
+
+ALIGN 4
+#include "MiniObjectiveSecondDisplay/MiniObjectiveSecondDisplay.event" //Aura Wolf
+
+ALIGN 4
+#include "CheckEscapingAiUnit/CheckEscapingAiUnit.event" //Aura Wolf
+
+ALIGN 4
+#include "GetClosestEscapePoint/GetClosestEscapePoint.event" //Aura Wolf
+
+ALIGN 4
+#include "RustyHook/RustyHook.event" //Aura Wolf
+
+ALIGN 4
+#include "RecoilAxe/RecoilAxe.event" //Aura Wolf
+
+ALIGN 4
+#include "GetItemHealAmount/GetItemHealAmount.event"
+
+ALIGN 4
+#include "AssistStaff/AssistStaff.event" //Aura Wolf
+
+ALIGN 4
+#include "RushStaff/RushStaff.event" //Aura Wolf
+
+ALIGN 4
+
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
 BYTE 0x0 0x0 0x0 0x0

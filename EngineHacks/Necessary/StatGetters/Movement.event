@@ -8,7 +8,7 @@ pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
 	POIN prDebuffMov 
 	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prHangoverTonicCheck prArmorMarchCheck prEquipmentMov prLuaHubMovement
-	POIN WellRested SwiftBoost ContraryWinds_KiteDebuff
+	POIN WellRested SwiftBoost ContraryWinds_KiteDebuff prRebelRebelMovNerf RushStaffExtraMov
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
 	#endif
@@ -61,6 +61,10 @@ prDeftHandsCheck:
 	rIfUnitHasState(0x400)
 		rIfUnitHasSkill(DeftHandsID)
 			rConstant(0)
+
+prRebelRebelMovNerf:
+	rIfUnitHasSkill(RebelRebelID)
+		rSubConst(1)
 
 ALIGN 4
 prAddEquipMov:

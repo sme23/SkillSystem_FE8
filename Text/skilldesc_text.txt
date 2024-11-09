@@ -1837,3 +1837,17 @@ Like Dominoes: If this unit initiates,[N]
 they can't miss and will kill foes below[N]
 (5 + Skill) HP, granting another action.[X]
 
+## SD_RerunAndHit
+Rerun-And-Hit: Whenever this unit[N]
+re-moves (Canto), they can attack[N]
+with Atk and AS reduced by 10.[X]
+
+## SD_EarlyLeave
+Early Leave: On Turn 5, this unit exits[N]
+the map and sends inventory to convoy.[N]
+An undeployed ally can replace them.[X]
+
+## SD_RebelRebel
+Rebel Rebel: This unit can move[N]
+through enemies and won't be[N]
+attacked by them. -1 Mov.[X]

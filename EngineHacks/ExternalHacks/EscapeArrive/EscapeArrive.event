@@ -29,6 +29,9 @@ FinalEscapeThing: //hooks with post-action calc loop
 
 #include "EscapeEvent.event"
 
+#include "C3EscapeWithTraitorCheck.lyn.event"
+ALIGN 4
+
 
 PUSH
 	//fix a jump table allowing for us to be separate map objects
