@@ -16,6 +16,7 @@
 .equ IsUnitEnemyWithActiveUnit,0x803c819
 .equ SkillTester,EALiterals+0
 .equ ShadePlusID,EALiterals+4
+.equ RebelRebelID,EALiterals+8
 
 cmp r4,#0
 beq DoNotTarget
@@ -35,6 +36,14 @@ bl BXR7
 mov r1,r0
 cmp r1,#0
 beq DoNotTarget
+
+ldr r0,SkillTester
+mov r14,r0
+mov r0,r4
+ldr r1,RebelRebelID
+.short 0xF800
+cmp r0,#0
+bne DoNotTarget
 
 ldr r0,SkillTester
 mov r14,r0
@@ -67,3 +76,4 @@ bx r7
 EALiterals:
 @POIN SkillTester
 @WORD ShadePlusID
+@WORD RebelRebelID

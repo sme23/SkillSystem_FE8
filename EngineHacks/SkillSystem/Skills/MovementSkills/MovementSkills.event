@@ -24,3 +24,4 @@ PassCheck:
 #incbin "Pass/Pass.dmp"
 POIN SkillTester
 WORD PassID
+WORD RebelRebelID

@@ -1,0 +1,156 @@
+
+//Terminate lists with WORD 0
+
+AttackUsabilityList:
+//POIN MucuCannotIfCanto
+POIN MucuCannotIfCanto_RerunAndHit
+POIN MucuCannotIfBallista
+POIN MucuRequireInventory
+//POIN MucuCannotIfRebelRebelTraveler
+POIN MucuRequireTargetAttack
+WORD 0
+
+StaffUsabilityList:
+POIN MucuCannotIfCanto
+POIN MucuRequireUsableStaff
+//POIN MucuCannotIfRebelRebelTraveler
+POIN MucuCannotIfMagicBlocked
+WORD 0
+
+GiveUsabilityList:
+POIN MucuCannotIfCanto
+POIN MucuRequireTraveler
+//POIN MucuLimitOneTakeGive
+POIN MucuRequireTargetGive
+WORD 0
+
+	GiveTargetConditionsList:
+	//POIN MucuTargetAllegiancesEqual
+	POIN MucuTargetGiveTakeAllegiancesConditional
+	POIN MucuTargetCannotRescuing
+	POIN MucuTargetCannotBerserkSleep
+	POIN MucuTargetCannotSupply
+	POIN MucuTargetGiveConAid
+	WORD 0
+
+TakeUsabilityList:
+POIN MucuCannotIfCanto
+POIN MucuCannotIfTraveler
+//POIN MucuLimitOneTakeGive
+POIN MucuRequireTargetTake
+WORD 0
+
+	TakeTargetConditionsList:
+	//POIN MucuTargetAllegiancesEqual
+	POIN MucuTargetGiveTakeAllegiancesConditional
+	POIN MucuTargetRequireRescuing
+	POIN MucuTargetCannotSupply
+	POIN MucuTargetTakeConAid
+	WORD 0
+
+MucuTargetGiveTakeAllegiancesConditionalList:
+//WORD chapterID
+//POIN routine
+
+WORD HubC_3
+POIN MucuTargetAllegiancesAllied
+
+//End of list (default allegiance check)
+WORD 0
+POIN MucuTargetAllegiancesEqual
+
+	StealTargetConditionsList:
+	POIN MucuTargetRequireEnemyFaction
+	//POIN MucuTargetRequireSpeedGE
+	POIN MucuTargetRequireStealableItem
+	WORD 0
+
+#include "asm/UnitCommandConditionLoop.lyn.event"
+ALIGN 4
+
+#include "asm/MucuChecks.lyn.event"
+ALIGN 4
+
+#include "asm/MucuChecks_Custom.lyn.event"
+ALIGN 4
+
+PUSH
+
+//Attack
+ORG 0x249AC
+SHORT 0xB500 0x4803 //push {r14}; ldr r0, =AttackUsabilityList
+SHORT 0x4903 0x468E //ldr r1, =UnitCommandConditionLoop; mov lr, r1
+SHORT 0xF800 0xBC02 //bl lr+r0; pop {r1}
+SHORT 0x4708 0 //bx r1 
+POIN AttackUsabilityList
+POIN UnitCommandConditionLoop
+PROTECT 0x249AC CURRENTOFFSET-1
+
+//Staff
+ORG 0x23A54
+SHORT 0xB500 0x4803 //push {r14}; ldr r0, =StaffUsabilityList
+SHORT 0x4903 0x468E //ldr r1, =UnitCommandConditionLoop; mov lr, r1
+SHORT 0xF800 0xBC02 //bl lr+r0; pop {r1}
+SHORT 0x4708 0 //bx r1 
+POIN StaffUsabilityList
+POIN UnitCommandConditionLoop
+PROTECT 0x23A54 CURRENTOFFSET-1
+
+//Give
+ORG 0x229F4
+SHORT 0xB500 0x4803 //push {r14}; ldr r0, =GiveUsabilityList
+SHORT 0x4903 0x468E //ldr r1, =UnitCommandConditionLoop; mov lr, r1
+SHORT 0xF800 0xBC02 //bl lr+r0; pop {r1}
+SHORT 0x4708 0 //bx r1 
+POIN GiveUsabilityList
+POIN UnitCommandConditionLoop
+PROTECT 0x229F4 CURRENTOFFSET-1
+
+	ORG 0x25514
+	SHORT 0xB500 //push {r14}
+	SHORT 0x4903 //ldr r1, =GiveTargetConditionsList
+	SHORT 0x4A03 //ldr r2, =MucuTryAddUnitToTargetList
+	SHORT 0x4696 //mov lr, r2
+	SHORT 0xF800 //bl lr+0
+	SHORT 0xBC01 //pop {r0}
+	SHORT 0x4700 0 //bx r0
+	POIN GiveTargetConditionsList
+	POIN MucuTryAddUnitToTargetList
+	PROTECT 0x25514 CURRENTOFFSET-1
+
+//Take
+ORG 0x2298C
+SHORT 0xB500 0x4803 //push {r14}; ldr r0, =TakeUsabilityList
+SHORT 0x4903 0x468E //ldr r1, =UnitCommandConditionLoop; mov lr, r1
+SHORT 0xF800 0xBC02 //bl lr+r0; pop {r1}
+SHORT 0x4708 0 //bx r1 
+POIN TakeUsabilityList
+POIN UnitCommandConditionLoop
+PROTECT 0x2298C CURRENTOFFSET-1
+
+	ORG 0x25474
+	SHORT 0xB500 //push {r14}
+	SHORT 0x4903 //ldr r1, =TakeTargetConditionsList
+	SHORT 0x4A03 //ldr r2, =MucuTryAddUnitToTargetList
+	SHORT 0x4696 //mov lr, r2
+	SHORT 0xF800 //bl lr+0
+	SHORT 0xBC01 //pop {r0}
+	SHORT 0x4700 0 //bx r0
+	POIN TakeTargetConditionsList
+	POIN MucuTryAddUnitToTargetList
+	PROTECT 0x25474 CURRENTOFFSET-1
+
+//Steal
+	ORG 0x25BA0
+	SHORT 0xB500 //push {r14}
+	SHORT 0x4903 //ldr r1, =StealTargetConditionsList
+	SHORT 0x4A03 //ldr r2, =MucuTryAddUnitToTargetList
+	SHORT 0x4696 //mov lr, r2
+	SHORT 0xF800 //bl lr+0
+	SHORT 0xBC01 //pop {r0}
+	SHORT 0x4700 0 //bx r0
+	POIN StealTargetConditionsList
+	POIN MucuTryAddUnitToTargetList
+	PROTECT 0x25BA0 CURRENTOFFSET-1
+	
+POP

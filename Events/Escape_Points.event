@@ -42,6 +42,18 @@ ChapterB3EnemyEscapeTable:
 EscapePointEntry(28,0, EscapeUp)
 EscapePointTerminator
 
+ChapterC3EnemyEscapeTable: //Used by traitor rebels
+EscapePointEntry(25,14,EscapeRight)
+EscapePointEntry(25,15,EscapeRight)
+EscapePointEntry(25,16,EscapeRight)
+EscapePointTerminator
+
+ChapterC3NPCEscapeTable:
+EscapePointEntry(0,19,EscapeLeft)
+EscapePointEntry(0,20,EscapeLeft)
+EscapePointEntry(0,21,EscapeLeft)
+EscapePointTerminator
+
 SetEnemyEscapePoint(Chapter1,Chapter1EnemyEscapeTable)
 SetEnemyEscapePoint(HubA_1,ChapterA1EnemyEscapeTable)
 SetEnemyEscapePoint(HubA_4,ChapterA4EnemyEscapeTable)
@@ -49,3 +61,5 @@ SetEnemyEscapePoint(HubA_6,ChapterA6EnemyEscapeTable)
 SetEnemyEscapePoint(HubB_1,ChapterB1EnemyEscapeTable)
 SetEnemyEscapePoint(HubB_2,ChapterB2EnemyEscapeTable)
 SetEnemyEscapePoint(HubB_3,ChapterB3EnemyEscapeTable)
+SetEnemyEscapePoint(HubC_3,ChapterC3EnemyEscapeTable)
+SetNPCEscapePoint(HubC_3,ChapterC3NPCEscapeTable)

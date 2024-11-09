@@ -596,3 +596,53 @@ JulianaMugData:
 #incbin "Dmp/Juliana_palette.dmp"
 #incbin "Dmp/Juliana_minimug.dmp"
 setMugEntry(JulianaMug, JulianaMugData, 3, 5, 2, 3)
+
+// C-3 placeholders (all made by JiroPaiPai)
+
+ALIGN 16
+RimaMugData:
+#incbin "Dmp/Rima_mug.dmp"
+#incbin "Dmp/Rima_frames.dmp"
+#incbin "Dmp/Rima_palette.dmp"
+#incbin "Dmp/Rima_minimug.dmp"
+setMugEntry(RimaMug, RimaMugData, 3, 5, 3, 3)
+
+ALIGN 16
+BoltonMugData:
+#incbin "Dmp/Bolton_mug.dmp"
+#incbin "Dmp/Bolton_frames.dmp"
+#incbin "Dmp/Bolton_palette.dmp"
+#incbin "Dmp/Bolton_minimug.dmp"
+setMugEntry(BoltonMug, BoltonMugData, 3, 5, 3, 2)
+
+ALIGN 16
+JasperMugData:
+#incbin "Dmp/Jasper_mug.dmp"
+#incbin "Dmp/Jasper_frames.dmp"
+#incbin "Dmp/Jasper_palette.dmp"
+#incbin "Dmp/Jasper_minimug.dmp"
+setMugEntry(JasperMug, JasperMugData, 3, 5, 3, 3)
+
+ALIGN 16
+RunamelMugData:
+#incbin "Dmp/Runamel_mug.dmp"
+#incbin "Dmp/Runamel_frames.dmp"
+#incbin "Dmp/Runamel_palette.dmp"
+#incbin "Dmp/Runamel_minimug.dmp"
+setMugEntry(RunamelMug, RunamelMugData, 3, 5, 2, 3)
+
+ALIGN 16
+SalmanMugData:
+#incbin "Dmp/Salman_mug.dmp"
+#incbin "Dmp/Salman_frames.dmp"
+#incbin "Dmp/Salman_palette.dmp"
+#incbin "Dmp/Salman_minimug.dmp"
+setMugEntry(SalmanMug, SalmanMugData, 3, 5, 3, 3)
+
+ALIGN 16
+BoruMugData:
+#incbin "Dmp/Boru_mug.dmp"
+#incbin "Dmp/Boru_frames.dmp"
+#incbin "Dmp/Boru_palette.dmp"
+#incbin "Dmp/Boru_minimug.dmp"
+setMugEntry(BoruMug, BoruMugData, 3, 5, 3, 3)

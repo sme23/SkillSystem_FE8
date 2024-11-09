@@ -145,6 +145,18 @@ Oversize[X]
 ## OversizeDesc
 Cannot double or be doubled.[X]
 
+## WildAxeName
+Wild Axe[X]
+
+## WildAxeDesc
++3 Spd. Follow-ups are consecutive.[X]
+
+## RecoilAxeName
+Recoil Axe[X]
+
+## RecoilAxeDesc
+After initiating, move 2 tiles backwards.[X]
+
 //BOWS
 
 ## DeadeyeName
@@ -194,6 +206,12 @@ Scorpio[X]
 
 ## ScorpioDesc
 A long-range crossbow.[X]
+
+## KnifekillerName
+Knifekiller[X]
+
+## KnifekillerDesc
+Eff. vs. knife classes.[X]
 
 //TOMES
 
@@ -340,11 +358,41 @@ Mincemaker[X]
 ## MincemakerDesc
 Does exactly as advertised.[X]
 
+// STAVES
+
 ## TakeAimName
 Take Aim![X]
 
 ## TakeAimDesc
 +30 hit to an ally for 1 turn.[X]
+
+## AssistStaffName
+Assist[X]
+
+## AssistStaffDesc
+Heal an ally for (Mag+10) HP and[N]
+grant them +30 hit for 1 turn.[X]
+
+## AssistStaffUseDesc
+Mag+10 healing and[N]
++30 hit for 1 turn.[X]
+
+## AssistStaffBottomText
+Select an ally to heal and buff.[X]
+
+## RushStaffName
+Rush[X]
+
+## RushStaffDesc
+Grant an ally +2 Mov and Canto+[N]
+for 1 turn. Mov cannot exceed 15.[X]
+
+## RushStaffUseDesc
++2 Mov and Canto+[N]
+for 1 turn.[X]
+
+## RushStaffBottomText
+Select an ally to buff.[X]
 
 // EQUIPS
 
@@ -353,7 +401,6 @@ Hide Shield[X]
 
 ## HideShieldDesc
 Grants +3 Def.[X]
-
 
 ## IronShieldName
 Iron Shield[X]
@@ -537,3 +584,16 @@ Bolt[X]
 
 ## BoltDesc
 Mid-range thunder magic.[X]
+
+## RustyHookName
+Rusty Hook[X]
+
+## RustyHookDesc
+Unit can ignore Spd or Wt when[N]
+stealing, but stolen goods have[N]
+25% durability (min. 1 use).[X]
+
+## RustyHookUseDesc
+Ignore Spd or Wt when[N]
+stealing, but reduce[N]
+uses by 25%.[X]

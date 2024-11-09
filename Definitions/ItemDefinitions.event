@@ -56,6 +56,8 @@
 #define Battleaxe $2b
 #define SlimAxe $d7
 #define Oversize $da
+#define WildAxe $9c
+#define RecoilAxe $9d
 
 //BOWS
 #define DeadeyeBow $2c
@@ -74,6 +76,7 @@
 #define ShiningBow $d4
 #define Snapshot $db
 #define Scorpio $e4
+#define Knifekiller $9b
 
 //TOMES
 
@@ -125,6 +128,8 @@
 
 // STAVES
 #define TakeAim $e3
+#define AssistStaff $b8
+#define RushStaff $b9
 
 // EQUIPS
 #define HideShield $ca
@@ -137,6 +142,7 @@
 #define HeavyShield 0xEE
 //#define SteelShield 0xEE
 //#define SilverShield 0xEE
+#define RustyHook $9e
 
 //Items
 

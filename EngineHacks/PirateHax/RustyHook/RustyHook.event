@@ -1,0 +1,7 @@
+
+RustyHookIDLink:
+BYTE RustyHook
+ALIGN 4
+
+#include "asm/UnitAddStolenItem.lyn.event"
+ALIGN 4

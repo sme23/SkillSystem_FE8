@@ -1,0 +1,8 @@
+
+RecoilAxeIDLink:
+BYTE RecoilAxe
+
+ALIGN 4
+
+#include "asm/RecoilAxe.lyn.event"
+ALIGN 4

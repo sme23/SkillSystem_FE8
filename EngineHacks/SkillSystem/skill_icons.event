@@ -1178,6 +1178,12 @@ ORG SkillIcon(ContraryWindsID)
 ORG SkillIcon(LikeDominoesID)
 #incbin "SkillIcons/Gamble.dmp"
 
+ORG SkillIcon(RerunAndHitID)
+#incbin "SkillIcons/Canto.dmp"
+ORG SkillIcon(EarlyLeaveID)
+#incbin "SkillIcons/Canto.dmp"
+ORG SkillIcon(RebelRebelID)
+#incbin "SkillIcons/Canto.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)

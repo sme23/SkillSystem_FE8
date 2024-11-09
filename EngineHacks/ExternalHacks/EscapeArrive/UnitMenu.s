@@ -17,6 +17,7 @@
 
 .equ CheckEventId,0x8083da8
 .equ GetDeployedPlayerUnitCount,0x8018ff1
+.equ gChapterData,0x0202BCF0
 
 
 ArriveCommandUsability:
@@ -115,7 +116,8 @@ beq EscapeCommandUsability_IsALord
 ldr r0,[r4]
 ldrb r0,[r0,#0x1B]
 cmp r0,#0
-beq EscapeCommandUsability_ReturnTrue
+@beq EscapeCommandUsability_ReturnTrue
+beq EscapeCommandUsability_HubC_3
 
 @are they lord
 ldr r1,=#0x08019431 @GetUnit
@@ -136,7 +138,31 @@ and r0,r1
 cmp r0,#0
 bne EscapeCommandUsability_IsALord
 
+EscapeCommandUsability_HubC_3:
+@HubC_3: units can only escape if they are carrying a unit with RebelRebel
 
+ldr r0,=gChapterData
+ldrb r0,[r0,#0x0E]
+ldr r1,=EscapeHubC3IDLink
+ldrb r1,[r1]
+cmp	r0,r1
+bne	EscapeCommandUsability_ReturnTrue
+
+ldr r0,[r4]
+ldrb r0,[r0,#0x1B]
+cmp r0,#0
+beq EscapeCommandUsability_ReturnFalse
+
+ldr r1,=#0x08019431 @GetUnit
+mov r14,r1
+.short 0xF800
+ldr r1,=RebelRebelIDLink
+ldrb r1,[r1]
+ldr r3,=SkillTester
+mov lr,r3
+.short 0xf800
+cmp r0,#0
+beq EscapeCommandUsability_ReturnFalse
 
 EscapeCommandUsability_ReturnTrue:
 mov r0,#1

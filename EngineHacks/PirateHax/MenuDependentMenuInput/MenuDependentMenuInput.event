@@ -1,0 +1,30 @@
+
+PUSH
+
+ORG 0x4F294
+jumpToHack(NewMenu_HandleDirectionInputs)
+
+ORG 0x4F374
+jumpToHack(NewMenu_HandleSelectInputs)
+
+POP
+
+#include "asm/MenuHandleInputs.lyn.event"
+ALIGN 4
+
+MenuDependentMenuInputList:
+//WORD/POIN Menu
+//POIN HandleDirectionInputs
+//POIN HandleSelectInputs
+
+POIN EarlyLeaveMenuDefinition
+POIN EarlyLeaveMenuDirectionInputs
+POIN EarlyLeaveMenuSelectInputs
+
+POIN EarlyLeaveUnitMenuDefinition
+POIN EarlyLeaveMenuDirectionInputs
+WORD 0
+
+//End of list
+WORD 0
+

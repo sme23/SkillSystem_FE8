@@ -1,0 +1,32 @@
+
+MiniObjectiveSecondDisplayPointers:
+POIN 0x8D354
+POIN 0x8D35C
+POIN 0x8D3B0
+POIN 0x8D354
+POIN 0x8D354
+
+//End of vanilla FE8; add new ones here
+POIN MiniObjectiveSecondDisplayC3Captives
+
+PUSH
+
+ORG 0x8D32A
+//increases id range limit
+//BYTE 5
+
+//completely removes id range limit
+SHORT 0xE001 //b (0x8D330)
+
+ORG 0x8D33C
+POIN MiniObjectiveSecondDisplayPointers
+PROTECT 0x8D32A CURRENTOFFSET-1
+
+POP
+
+#include "asm/MiniObjectiveSecondDisplayC3Captives.lyn.event"
+ALIGN 4
+
+SecondDisplayC3CaptivesParameters:
+SHORT HubC3CaptivesText 5 //total required to win
+ALIGN 4
