@@ -101,7 +101,6 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Seize(21,40)
 Chest(SilverMusket, 3, 16)
 Chest(SilverSword, 32, 15)
 DurabilityChest(SkillScroll,LungeID,16,10)
@@ -301,7 +300,7 @@ SOUND 0x11A
 TEXTCONT
 TEXTEND
 REMA
-MNC2 HubC_4
+MNC2 HubC_4 // Placeholder until hub is implemented
 //GOTO_TITLE
 NoFade
 ENDA

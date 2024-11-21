@@ -17,7 +17,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0, Warning1, 1)
+TurnEventPlayer(0, Warning1, 4)
 TurnEventPlayer(0, Flood1, 5)
 TurnEventPlayer(0, Warning2, 8)
 TurnEventPlayer(0, Flood2, 9)
