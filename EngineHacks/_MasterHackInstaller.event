@@ -48,6 +48,8 @@ ORG FreeSpaceBLRange //defined in custom definitions
   #ifdef USE_STRMAG_SPLIT
 	#include "ExternalHacks/StrMagSplit/BLRange.event"
   #endif // USE_STRMAG_SPLIT
+  
+  #define continueInBlRange CURRENTOFFSET
 	
 #undef inBLRange
 POP

@@ -64,7 +64,11 @@
 
 // HUB C CHAPTER UNITS
 #define Ruby $2C
+
 #define Remora $2D
+
+#define Rima $30
+#define Bolton $31
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -200,6 +204,14 @@
 // Hub C1
 #define Baltasar 0xDC
 #define Krezke 0xDD
+
+// Hub C3
+#define Runamel 0x87
+#define Jasper 0x88
+#define C3Pirate 0x89
+#define C3Traitor 0xB0
+#define Salman 0xB1
+#define Boru 0xB2
 
 // Hub C4
 #define C4Phantom 0x8A

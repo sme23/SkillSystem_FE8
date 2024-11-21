@@ -28,8 +28,11 @@ POP
 
 ALIGN 4
 Rogue_Robbery:
-#incbin "FE8-Rogue_Robbery.dmp"
-POIN prConGetter
+#include "NewIsItemStealable.lyn.event"
+ALIGN 4
+
+//#incbin "FE8-Rogue_Robbery.dmp"
+//POIN prConGetter
 
 //#ifndef prConGetter
 //	ALIGN 4

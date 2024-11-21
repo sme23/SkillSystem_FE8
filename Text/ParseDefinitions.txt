@@ -142,6 +142,8 @@
 [LoadFata] = [LoadFace][0x57][0x1]
 
 [LoadRuby] = [LoadFace][0x22][0x1]
+[LoadRima] = [LoadFace][0x2D][0x1]
+[LoadBolton] = [LoadFace][0x2E][0x1]
 
 [LoadRemora] = [LoadFace][0x4f][0x1]
 
@@ -235,6 +237,10 @@
 [LoadJuliana] = [LoadFace][0x31][0x1]
 
 [LoadQuispe] = [LoadFace][0x31][0x1]
+[LoadJasper] = [LoadFace][0xAE][0x1]
+[LoadRunamel] = [LoadFace][0xAF][0x1]
+[LoadSalman] = [LoadFace][0xB0][0x1]
+[LoadBoru] = [LoadFace][0xB1][0x1]
 
 [LoadRedFSoldier] = [LoadFace][0x4F][0x1]
 

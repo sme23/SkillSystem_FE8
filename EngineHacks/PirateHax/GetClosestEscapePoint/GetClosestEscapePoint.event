@@ -1,0 +1,11 @@
+
+PUSH
+
+ORG 0x3E878
+jumpToHack(AiUnitGetClosestEscapePointData)
+PROTECT 0x3E878 CURRENTOFFSET-1
+
+POP
+
+#include "asm/AiUnitGetClosestEscapePointData.lyn.event"
+ALIGN 4

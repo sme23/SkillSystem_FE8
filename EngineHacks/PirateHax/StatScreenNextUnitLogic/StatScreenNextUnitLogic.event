@@ -1,0 +1,11 @@
+
+PUSH
+
+ORG 0x87920
+jumpToHack(StatScreenNextUnitLogic)
+PROTECT 0x87920 CURRENTOFFSET-1
+
+POP
+
+#include "asm/StatScreenNextUnitLogic.lyn.event"
+ALIGN 4

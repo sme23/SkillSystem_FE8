@@ -19,6 +19,7 @@
 #define Chapter3 16
 #define HubC 17
 #define HubC_1 18
+#define HubC_3 20
 #define HubC_4 21
 
 #define HubB_2a 0x3D
@@ -109,6 +110,10 @@
 #define CutsceneC_1MapID 0x4E
 #define CutsceneC_1MapChangesID 0x4F
 #define CutsceneC_1EventsID 0x50
+
+#define HubC_3MapID 0x51
+#define HubC_3MapChangesID 0x52
+#define HubC_3EventsID 0x53
 
 #define HubC_4MapID 0x51
 #define HubC_4MapChangesID 0x52

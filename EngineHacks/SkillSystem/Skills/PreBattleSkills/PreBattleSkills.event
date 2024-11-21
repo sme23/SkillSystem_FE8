@@ -435,3 +435,7 @@ WORD ArcaneArtificeID
 
 #include "LikeDominoes/LikeDominoes.event"
 
+ALIGN 4
+#include "RerunAndHit/RerunAndHit.lyn.event"
+RerunAndHitIDLink: //also used by ModularUnitCommandUsability and DisplayUnitEffectRangeExt
+WORD RerunAndHitID

@@ -12,6 +12,7 @@ REMA
 CHECK_ACTIVE 
 SADD 0xC2
 ASMC 0x790A4|1		//praise Teq
+ASMC C3EscapeWithTraitorCheck|1
 NoFade
 ENDA
 

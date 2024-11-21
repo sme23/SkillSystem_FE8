@@ -23,8 +23,14 @@ mov	lr, r3
 cmp	r0, #0x00
 beq	End
 
+@check if unit already activated a Canto effect
+ldr r0, [r4,#0x0C]
+mov r1, #0x40
+tst r0, r1
+bne End
+
 @give unit ability to move after combat
-ldr	r0, [r4,#0x0C]	@status bitfield
+@ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x02
 mvn	r1, r1
 and	r0, r1		@unset bit 0x2

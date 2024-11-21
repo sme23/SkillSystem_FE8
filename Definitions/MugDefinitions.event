@@ -122,6 +122,14 @@
 #define CloserMug 0x27
 #define BaltasarMug 0x28
 
+// C-3 Placeholders
+#define RimaMug 0x2D
+#define BoltonMug 0x2E
+#define JasperMug 0xAE
+#define RunamelMug 0xAF
+#define SalmanMug 0xB0
+#define BoruMug 0xB1
+
 //CLASS CARDS
 
 #define WardenClassCard 0x100

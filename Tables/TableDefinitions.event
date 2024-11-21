@@ -146,6 +146,7 @@
 #define MonsterType	0x10
 #define SwordType	0x20
 #define MageType 0x40
+#define KnifeType 0x80
 
 //Status Effects
 #define NoStatusID 0

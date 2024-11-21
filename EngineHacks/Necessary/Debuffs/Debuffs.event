@@ -195,7 +195,11 @@ WORD MiscOffset+20
 
 NoMoveBitOffset_Link:
 WORD MiscOffset+23
+// 81 bits/11 bytes
 
+RushStaffBitOffset_Link:
+WORD MiscOffset+24
+// 82 bits/11 bytes
 
 
 //out of room after 12 bytes

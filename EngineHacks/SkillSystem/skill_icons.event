@@ -1182,6 +1182,12 @@ ORG SkillIcon(BashID)
 ORG SkillIcon(WaterwalkID)
 #incbin "SkillIcons/HoneMov.dmp"
 
+ORG SkillIcon(RerunAndHitID)
+#incbin "SkillIcons/Canto.dmp"
+ORG SkillIcon(EarlyLeaveID)
+#incbin "SkillIcons/Canto.dmp"
+ORG SkillIcon(RebelRebelID)
+#incbin "SkillIcons/Canto.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)

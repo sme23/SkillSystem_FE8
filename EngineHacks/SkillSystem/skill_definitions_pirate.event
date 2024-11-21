@@ -238,3 +238,10 @@
 #define BashID 78
 
 #define WaterwalkID 79
+
+#define RerunAndHitID 88
+
+#define EarlyLeaveID 89
+
+#define RebelRebelID 90
+

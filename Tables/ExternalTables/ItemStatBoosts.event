@@ -44,3 +44,7 @@ ALIGN 4
 SwimwearStatBonuses:
 StatBonus(0,0,0,0,0,(-2),0,4,0,0) 
 // StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB)
+
+WildAxeStatBonuses:
+StatBonus(0,0,0,0,3,0,0,0,0,0)  
+

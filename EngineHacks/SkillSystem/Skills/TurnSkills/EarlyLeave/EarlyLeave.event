@@ -1,0 +1,159 @@
+
+EarlyLeaveCustomChapterConditionList:
+//WORD chapterID; POIN routine
+WORD HubC_3; POIN EarlyLeaveC3Condition
+
+//End of list
+WORD 0xFFFF0000
+
+EarlyLeaveIDLink:
+WORD EarlyLeaveID
+
+#define EarlyLeaveMenuMoreInfoRAM 0x03003750
+#define EarlyLeaveMenuReplacementListRAM EarlyLeaveMenuMoreInfoRAM+0x18
+#define EarlyLeaveMenuCommandDefinitionRAM EarlyLeaveMenuMoreInfoRAM+0x58
+
+EarlyLeaveMenuMoreInfo:
+/*
+0 - 0x0F: Currently displayed unit IDs (currently it only display 6 units at a time)
+0x10: Total number of replacement units
+0x11: Total number of pages
+0x12: Page Number
+0x13: Cursor position of previous menu
+0x14: Selected unit
+*/
+WORD EarlyLeaveMenuMoreInfoRAM
+
+EarlyLeaveMenuReplacementList: //Has each unit ID that can be selected as a replacement
+WORD EarlyLeaveMenuReplacementListRAM
+
+EarlyLeaveMenuCommandDefinition: //As a page is generated, this has each command's text id, usability, and effect
+WORD EarlyLeaveMenuCommandDefinitionRAM
+
+EarlyLeavePortraitParameters:
+BYTE 0xB0 0x0C //x, y (both in pixels)
+
+EarlyLeaveWindowParameters:
+BYTE 15 11 3 //x, y, no idea
+ALIGN 4
+
+EarlyLeaveMenuDefinition:
+BYTE 2 3 12 0 //x, y, width, height
+WORD 0 // style
+WORD EarlyLeaveMenuCommandDefinitionRAM // Command Definitions
+WORD 0 //?
+WORD 0 //?
+WORD 0 //?
+WORD 0 //On B-press
+POIN EarlyLeaveViewStatScreen|1 //On R-Press (helptext/rtext)
+WORD 0 //On B-Press after R-Press (cancel helptext)
+
+EarlyLeaveUnitMenuDefinition:
+BYTE 2 3 12 0 //x, y, width, height
+WORD 0 // style
+POIN EarlyLeaveUnitMenuCommandDefinition // Command Definitions
+WORD 0 //?
+WORD 0 //?
+WORD 0 //?
+POIN EarlyLeaveEffect_UnitCancel|1 //On B-press
+POIN EarlyLeaveViewStatScreen|1 //On R-Press (helptext/rtext)
+WORD 0 //On B-Press after R-Press (cancel helptext)
+
+EarlyLeaveUnitMenuCommandDefinition:
+	
+	//Deploy this unit?
+	WORD 0
+	SHORT EarlyLeaveUnitDeployText 0 //text id; helptext id
+	WORD 0
+	POIN 0x4F448|1 //usability
+	WORD 0
+	WORD 0 //effect
+	WORD 0 0 0
+	
+	//Yes
+	WORD 0
+	SHORT 0x0843 0 //text id; helptext id
+	WORD 0
+	POIN 0x4F448|1 //usability
+	WORD 0
+	POIN EarlyLeaveEffect_UnitConfirm|1 //effect
+	WORD 0 0 0
+	
+	//No
+	WORD 0
+	SHORT 0x0844 0 //text id; helptext id
+	WORD 0
+	POIN 0x4F448|1 //usability
+	WORD 0
+	POIN EarlyLeaveEffect_UnitCancel|1 //effect
+	WORD 0 0 0
+	
+	//End of command definitions
+	WORD 0 0 0 0 0 0 0 0 0 //EventMenuCommandEnd not defined yet, don't feel like adding #ifdef logic to this and other files
+
+EarlyLeaveMenuTextPointers:
+SHORT EarlyLeavePageText
+SHORT EarlyLeaveNoUnitText
+
+EarlyLeaveWindowTextPointers:
+SHORT EarlyLeaveControlRText
+SHORT EarlyLeaveDirectionText1
+SHORT EarlyLeaveDirectionText2
+
+EarlyLeaveCharIDLink:
+BYTE Bolton
+
+EarlyLeaveC3ConditionCharIDLink:
+BYTE Rima
+
+EarlyLeaveTraitorCharIDList:
+BYTE C3Traitor
+BYTE Salman
+BYTE 0 //end of list
+
+ALIGN 4
+
+EarlyLeaveEvent:
+
+//Make Mage Knight leave the map
+CAM1 Bolton
+STAL 10
+FlashCursor(Bolton,40)
+STAL 10
+ASMC EarlyLeaveUnitLeaves|1
+STAL 10
+
+//Menu for selecting replacement
+ASMC StartEarlyLeaveMenu|1
+STAL 4
+
+ASMC EarlyLeaveSetUndeploy|1
+ASMC 0x080271A0|1 //SMS_UpdateFromGameData
+STAL 20
+NoFade
+ENDA
+
+//This is executed after backing out of stat screen
+EarlyLeaveStatScreenTransitionProc:
+PROC_SLEEP(0)
+PROC_CALL_ROUTINE(0x1D6FC|1) //PlayerPhase_ReloadGameGfx
+PROC_SLEEP(0)
+PROC_CALL_ROUTINE(EarlyLeaveStatScreenToMenu|1)
+PROC_END
+
+EarlyLeaveWindowProc:
+PROC_CALL_ROUTINE(StartEarlyLeaveWindow|1)
+PROC_SLEEP(0)
+PROC_CALL_ROUTINE(UpdateEarlyLeaveWindow|1)
+PROC_SLEEP(0)
+PROC_LOOP_ROUTINE(0x4F448|1)
+PROC_END
+
+#include "asm/DrawSemiTransparentMenuBg.lyn.event"
+ALIGN 4
+
+#include "asm/ResetGraphicsForMenuRedraw.lyn.event" //taken from 7743's ShowMenu asm
+ALIGN 4
+
+#include "asm/EarlyLeave.lyn.event"
+ALIGN 4

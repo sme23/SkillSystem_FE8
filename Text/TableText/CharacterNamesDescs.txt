@@ -230,6 +230,28 @@ Castaway[N]
 Once, the Rioja Reapers' ruthless[N]
 captain. Now their only survivor.[X]
 
+## RemoraName
+Remora[X]
+
+## RemoraDesc
+Treasure Hunter[X]
+
+## RimaName
+Rima[X]
+
+## RimaDesc
+Opportunist[N]
+A lively mercenary that abandoned their[N]
+imperial roots for freedom.[X]
+
+## BoltonName
+Bolton[X]
+
+## BoltonDesc
+Hireling[N]
+An easygoing man that partnered with[N]
+Rima to offer manpower at a price.[X]
+
 
 
 ## KhazhakName
@@ -926,16 +948,55 @@ Outcast[N]
 A banished Balinokan shaman, fighting[N]
 for the only employer left to her.[X]
 
-## RemoraName
-Remora[X]
+## JasperName
+Jasper[X]
 
-## RemoraDesc
-Treasure Hunter[X]
+## JasperDesc
+First Mate[N]
+A loyal crewmmate in Runamel's Runaways.[N]
+Eager to gain treasure and reputation.[X]
+
+## RunamelName
+Runamel[X]
+
+## RunamelDesc
+Captain[N]
+The leader of Runamel's Runaways.[N]
+A dangerous man to cross.[X]
+
+## C3GenericName
+Pirate[X]
+
+## C3GenericDesc
+Grunt[N]
+With little talent to speak of,[N]
+they risk their lives instead.[X]
+
+## C3TraitorName
+Traitor[X]
+
+## C3TraitorDesc
+A rebel that has chosen to[N]
+follow Salman over Quispe.[X]
+
+## SalmanName
+Salman[X]
+
+## SalmanDesc
+Ringleader[N]
+The loudest voice of several that[N]
+are leery of Quispe.[X]
+
+## BoruName
+Boru[X]
+
+## BoruDesc
+Grunt[N]
+A nervous rebel that's been[N]
+assigned with Salman's capture.[X]
 
 ## C4PhantomName
 Phantom[X]
 
 ## C4PhantomDesc
 Placeholder description[X]
-
-

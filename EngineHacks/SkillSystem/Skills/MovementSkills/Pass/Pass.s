@@ -1,6 +1,7 @@
 .thumb
 .org 0x0
 .equ PassID, SkillTester+4
+.equ RebelRebelID, PassID+4
 @Bx'd to from 3003D28
 @This function sets the Z flag if the moving unit can cross the other unit's tile, either because they're either both allied/npcs or enemies, or because the mover has Pass
 push  {r0-r6,r14}   @actually necessary to push the scratch registers in this case
@@ -13,6 +14,7 @@ ldr   r0,GetCharData
 mov   r14,r0
 ldrb  r0,[r3,#0xA]
 .short  0xF800      @returns char data pointer of moving unit
+mov r6,r0
 
 @check for option and ability (copied shamelessly from canto code)
 ldr	r5,[r0]		@load character data
@@ -30,6 +32,27 @@ mov	r1,#8		@flight+ bit
 lsl	r1, #28
 and	r5,r1
 cmp	r5,r1
+bne PassCheck
+
+mov r0,#1
+b SetZFlag
+
+PassCheck:
+ldr r1,SkillTester
+mov r14,r1
+ldr r1,PassID
+.short 0xF800
+cmp r0,#0x1     @set z flag if unit has Pass
+beq SetZFlag
+
+mov r0,r6
+ldr r1,SkillTester
+mov r14,r1
+ldr r1,RebelRebelID
+.short 0xF800
+
+SetZFlag:
+cmp r0,#0x1
 
 GoBack:
 pop   {r0-r6}
