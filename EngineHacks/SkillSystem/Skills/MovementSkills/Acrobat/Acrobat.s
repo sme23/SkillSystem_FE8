@@ -3,6 +3,7 @@
 
 .equ AcrobatID, SkillChecker+4
 .equ ForestFriendID, AcrobatID+4
+.equ WaterwalkID, ForestFriendID+4
 @r0=movement cost table. Function originally at 1A4CC, now jumped to here (jumpToHack)
 push  {r4-r6,r14}
 mov   r6,#0
@@ -42,7 +43,8 @@ mov r0,r6
 ldr r1,ForestFriendID
 .short 0xF800
 cmp r0,#0
-beq Exit
+@beq Exit
+beq Waterwalk
 
 ldr r0,MoveCostLoc
 add r0,#0xC @Forest
@@ -52,7 +54,46 @@ mov r1,#2 @set to 2 move
 add r0,#1 @Thicket
 ldrb r2,[r0]
 cmp r2,#1
-beq Exit @if already 1 move cost, don't set it to 2
+@beq Exit @if already 1 move cost, don't set it to 2
+beq Waterwalk @if already 1 move cost, don't set it to 2
+strb r1,[r0]
+
+Waterwalk:
+ldr r0,SkillChecker
+mov r14,r0
+mov r0,r6
+ldr r1,WaterwalkID
+.short 0xF800
+cmp r0,#0
+beq Exit
+
+ldr r0,MoveCostLoc
+mov r1,#2 @set to 2 move
+add r0,#0x10 @River
+ldrb r2,[r0]
+cmp r2,#1
+@beq SkipRiver
+strb r1,[r0]
+
+SkipRiver:
+add r0,#0x5 @Sea
+ldrb r2,[r0]
+cmp r2,#1
+@beq SkipSea
+strb r1,[r0]
+
+SkipSea:
+add r0,#0x1 @Lake
+ldrb r2,[r0]
+cmp r2,#1
+@beq SkipLake
+strb r1,[r0]
+
+SkipLake:
+add r0,#0x26 @Water
+ldrb r2,[r0]
+cmp r2,#1
+@beq Exit
 strb r1,[r0]
 
 Exit:

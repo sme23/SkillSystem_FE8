@@ -300,7 +300,8 @@ SOUND 0x11A
 TEXTCONT
 TEXTEND
 REMA
-GOTO_TITLE
+MNC2 HubC_4 // Placeholder until hub is implemented
+//GOTO_TITLE
 NoFade
 ENDA
 

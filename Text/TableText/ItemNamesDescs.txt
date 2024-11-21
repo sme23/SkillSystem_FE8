@@ -358,6 +358,12 @@ Mincemaker[X]
 ## MincemakerDesc
 Does exactly as advertised.[X]
 
+## InfiltratorName
+Infiltrator[X]
+
+## QuickdrawName
+Quickdraw[X]
+
 // STAVES
 
 ## TakeAimName
@@ -584,6 +590,13 @@ Bolt[X]
 
 ## BoltDesc
 Mid-range thunder magic.[X]
+
+## SwimwearName
+Swimwear[X]
+
+## SwimwearDesc
+Allows the wearer to traverse water[N]
+at 2 cost per tile. -2 Def, +4 Luck.[X]
 
 ## RustyHookName
 Rusty Hook[X]

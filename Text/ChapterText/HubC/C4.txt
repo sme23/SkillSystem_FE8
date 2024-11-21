@@ -1,0 +1,125 @@
+## HubC4Title
+Ch. C-4[X]
+
+## HubC4StatusObjective
+Escape with as much[N]
+loot as you can[X]
+
+## HubC4GoalWindow
+Escape[X]
+
+## HubC4Units
+Units: Remora (Berserker)[X]
+
+## HubC4Loot
+Loot: WIP[X]
+
+## HubC4Confirm
+Should I take this job?[X]
+
+## HubC4Pitch
+[ML][LoadLua][MR][LoadRemora]
+[MR]
+You! You're Captain Lua of the[N]
+Skysabers, aren't you?[A]
+[ML]
+That I am. Has our infamy reached[N]
+the Old World already?[AN]
+Or are you someone I ought to know?[A]
+[MR]
+We've never met, though I certainly[N]
+know of you and your crew.[AN]
+In my hunt for lost treasure, your[N]
+name keeps popping up.[AN]
+Tomb of San Torino? Your crew beat me[N]
+there by a week.[AN]
+The Taklakama dunes? Cleaned out by[N]
+the Skysabers just before I arrived.[AN]
+Every time I get a lead, you're one[N]
+step ahead of me.[AN]
+[ML]
+The dunes were a trap set by bandits[N]
+to pray on treasure seekers.[A]
+[MR]
+Ah, well, I suppose that one worked[N]
+out for me then.[AN]
+Anyway, I propose as fellow treasure[N]
+hunters we team up.[AN]
+I've got a new job lined up but it's[N]
+too big for me to pull off solo.[AN]
+I know you're looking for a way off[N]
+this rock, and with the profits,[AN]
+you'll be well on your way to buying[N]
+yourself a shiny new ship.[A]
+[ML][1LB]
+I'll bite. What's the job?[A]
+[MR][2LB]
+Some 50 years back, the Aquarius[N]
+crashed into Thunderhead Rock,[AN]
+a small isle to the northeast.[N]
+All it's treasure is there for the[N]
+taking, but naturally there's a catch.[AN]
+Through some foul sorcery, the ghosts[N]
+of its crew still guard its treasure.[A]
+[ML][1LB]
+So my Skysabers are the muscle.[A]
+[MR][3LB]
+Yeah. I've had my fair share of[N]
+clashes with pirate ghosts,[N]
+and they're no pushovers.[AN]
+I've already got a buyer for the ship's[N]
+strongbox lined up on this island.[AN]
+We'll split that and the rest of the[N]
+loot 50/50, since I'm providing the[N]
+intel and transport. Sounds good?[A][X]
+
+## HubC4Selection_Yes
+[ML][LoadLua][MR][LoadRemora]
+[ML]
+You've got a deal.[N]
+How soon can we depart?[AN]
+[MR]
+As soon as your crew is ready.[AN]
+I've chartered a skiff that can[N]
+fit a bit over a dozen.[AN]
+By the way, are you a good swimmer?[A]
+[ML]
+Not particularly.[N]
+Is the treasure underwater?[AN]
+[MR]
+Not sure, but the crash site is at[N]
+least partially submerged.[AN]
+I've got some spare swimwear lying[N]
+around. Better safe than sorry, right?[AN]
+[ML][1LB]
+Will this even fit me..?[A]
+[X]
+
+## HubC4Selection_No
+[ML][LoadLua][MR][LoadRemora]
+[ML]
+Sorry, I'm still reviewing my options.[N]
+I'll let you know if I change my mind.[A][X]
+
+## HubC4WaterWarning1
+[R][LoadRemora]
+The water level's still rising.[AN]
+If you can't swim or fly,[N]
+get to higher ground!.[A][X]
+
+## HubC4WaterWarning2
+[R][LoadLua]
+The next level's almost sunk.[AN]
+Hurry up and let's get out of here[N]
+while we still can![A][X]
+
+## HubC4WaterWarning3
+[R][LoadLua]
+We're out of time. Forget fighting[N]
+and looting, just get to the exit![AN][X]
+
+
+
+
+
+

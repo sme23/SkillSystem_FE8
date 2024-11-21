@@ -64,6 +64,9 @@
 
 // HUB C CHAPTER UNITS
 #define Ruby $2C
+
+#define Remora $2D
+
 #define Rima $30
 #define Bolton $31
 
@@ -209,3 +212,7 @@
 #define C3Traitor 0xB0
 #define Salman 0xB1
 #define Boru 0xB2
+
+// Hub C4
+#define C4Phantom 0x8A
+#define C4Elite 0x8B
