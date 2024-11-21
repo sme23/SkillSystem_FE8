@@ -925,3 +925,17 @@ Krezke[X]
 Outcast[N]
 A banished Balinokan shaman, fighting[N]
 for the only employer left to her.[X]
+
+## RemoraName
+Remora[X]
+
+## RemoraDesc
+Treasure Hunter[X]
+
+## C4PhantomName
+Phantom[X]
+
+## C4PhantomDesc
+Placeholder description[X]
+
+

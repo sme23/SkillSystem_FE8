@@ -122,6 +122,8 @@
 #define Blunderbuss $d0
 #define Mortar $d1
 #define Mincemaker $de
+#define InfiltratorGun $f3
+#define Quickdraw $f4
 
 // STAVES
 #define TakeAim $e3
@@ -137,6 +139,7 @@
 #define HeavyShield 0xEE
 //#define SteelShield 0xEE
 //#define SilverShield 0xEE
+#define Swimwear 0xF2
 
 //Items
 

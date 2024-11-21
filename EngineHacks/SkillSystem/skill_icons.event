@@ -1177,6 +1177,10 @@ ORG SkillIcon(ContraryWindsID)
 #incbin "SkillIcons/WindBoost.dmp"
 ORG SkillIcon(LikeDominoesID)
 #incbin "SkillIcons/Gamble.dmp"
+ORG SkillIcon(BashID)
+#incbin "SkillIcons/Colossus.dmp"
+ORG SkillIcon(WaterwalkID)
+#incbin "SkillIcons/HoneMov.dmp"
 
 
 //don't need them

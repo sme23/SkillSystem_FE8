@@ -64,6 +64,7 @@
 
 // HUB C CHAPTER UNITS
 #define Ruby $2C
+#define Remora $2D
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -199,3 +200,7 @@
 // Hub C1
 #define Baltasar 0xDC
 #define Krezke 0xDD
+
+// Hub C4
+#define C4Phantom 0x8A
+#define C4Elite 0x8B

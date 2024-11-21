@@ -254,3 +254,17 @@ PUSH
 ORG $86FE0
 BYTE 0x0 0x1C 0x0 0x1C 0x00 0x1C 0x00 0x1C //nops the check entirely
 POP
+
+// Fix to allow variable status durations to be set in combat (instead of always 5)
+PUSH
+ORG $178E6
+SHORT 0x21FF
+ORG $178EA
+SHORT 0x2100
+POP
+
+// Water movement cost for berserker
+PUSH
+ORG $80B948 
+BYTE 0x02
+POP

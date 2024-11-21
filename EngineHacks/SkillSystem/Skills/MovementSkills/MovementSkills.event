@@ -18,6 +18,7 @@ AcrobatCheck:
 POIN SkillTester
 WORD AcrobatID
 WORD ForestFriendID
+WORD WaterwalkID
 
 ALIGN 4
 PassCheck:

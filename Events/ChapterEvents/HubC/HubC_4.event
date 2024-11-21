@@ -1,0 +1,210 @@
+EventPointerTable(HubC_4EventsID, PointerList)
+
+#define C4LevelT1 16
+#define C4LevelT2 17
+#define C4LevelElite 19
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0, Warning1, 1)
+TurnEventPlayer(0, Flood1, 5)
+TurnEventPlayer(0, Warning2, 8)
+TurnEventPlayer(0, Flood2, 9)
+TurnEventEnemy(0, Flood3, 12)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Escape(0,6)
+Escape(0,7)
+Escape(0,15)
+Escape(0,16)
+Escape(1,6)
+Escape(1,7)
+Escape(1,15)
+Escape(1,16)
+Chest(IronSword,15,21)
+Chest(IronLance,1,19)
+Chest(IronAxe,11,14)
+Chest(IronBow,9,11)
+Chest(IronKnife,18,8)
+Chest(IronMusket,0,7)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [7,19] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+LoadUnit(8,19)
+LoadUnit(9,19)
+LoadUnit(10,19)
+LoadUnit(6,20)
+LoadUnit(7,20)
+LoadUnit(8,20)
+LoadUnit(9,20)
+LoadUnit(10,20)
+LoadUnit(7,21)
+LoadUnit(8,21)
+LoadUnit(9,21)
+LoadUnit(10,21)
+UNIT
+
+NewUnits:
+UNIT Remora Berserker 0 Level(16,Ally,False) [15,19] 0 0 0 0 [Oversize, Swordreaver, Swimwear, Swimwear] NoAI
+UNIT
+
+EnemyUnits1:
+// Bosses
+UNIT C4Elite Slayer 0 Level(21, Enemy, True) [9,6] 0 0 0 0 [HeroFlare, BraveSword] BossAI
+UNIT C4Elite Marksman 0 Level(20, Enemy, True) [8,2] 0 0 0 0 [SilverMusket] AttackInRangeAI
+UNIT C4Elite Assassin 0 Level(20, Enemy, True) [5,5] 0 0 0 0 [Heartpiercer, Pursuer] AttackInRangeAI
+UNIT C4Elite Warrior 0 Level(20, Enemy, True) [14,2] 0 0 0 0 [BattleAxe, SilverBow] AttackInRangeAI
+
+// Chest guards, north
+UNIT C4Elite General 0 Level(C4LevelElite, Enemy, True) [0,7] 0 0 0 0 [Spear, SilverSword] BossAI
+UNIT C4Elite Runeshield 0 Level(C4LevelElite, Enemy, True) [18,8] 0 0 0 0 [Thani, SilverLance] BossAI
+UNIT C4Elite Swordmaster 0 Level(C4LevelElite, Enemy, True) [9,11] 0 0 0 0 [FlameSword, Lancereaver] BossAI
+
+// Chest guards, south
+UNIT C4Elite Warrior 0 Level(C4LevelElite, Enemy, True) [11,14] 0 0 0 0 [Tomahawk] BossAI
+UNIT C4Elite Sage 0 Level(C4LevelElite, Enemy, True) [1,19] 0 0 0 0 [HeroFlare] BossAI
+UNIT C4Elite Rogue 0 Level(C4LevelElite, Enemy, True) [15,21] 0 0 0 0 [Baselard] BossAI
+UNIT
+
+EnemyUnits2:
+// South
+UNIT C4Phantom Brigand 0 Level(C4LevelT1, Enemy, True) [3,14] 0 0 0 0 [Oversize] AttackInRangeAI
+UNIT C4Phantom Warden 0 Level(C4LevelT1, Enemy, True) [3,20] 0 0 0 0 [Harpoon, Estoc] AttackInRangeAI
+
+UNIT C4Phantom Hero 0 Level(C4LevelT2, Enemy, True) [4,19] 0 0 0 0 [SilverAxe, Wingclipper] AttackInRangeAI
+
+UNIT C4Phantom Marshall 0 Level(C4LevelT2, Enemy, True) [7,16] 0 0 0 0 [Spear, Longbow] AttackInRangeAI
+UNIT C4Phantom Mage 0 Level(C4LevelT1, Enemy, True) [10,17] 0 0 0 0 [Thunder] AttackInRangeAI
+
+UNIT C4Phantom Brigand 0 Level(C4LevelT1, Enemy, True) [13,18] 0 0 0 0 [Oversize] AttackInRangeAI
+UNIT C4Phantom Thief 0 Level(C4LevelT1, Enemy, True) [15,15] 0 0 0 0 [SteelDagger] AttackInRangeAI
+UNIT C4Phantom Champion 0 Level(C4LevelT2, Enemy, True) [14,19] 0 0 0 0 [SilverLance, LightBrand] AttackInRangeAI
+
+UNIT C4Phantom Shaman 0 Level(C4LevelT1, Enemy, True) [18,16] 0 0 0 0 [Elsurge] AttackInRangeAI
+UNIT
+
+EnemyUnits3:
+// Middle
+UNIT C4Phantom Warrior 0 Level(C4LevelT2, Enemy, True) [1,11] 0 0 0 0 [Oversize, SteelBow] AttackInRangeAI
+UNIT C4Phantom Hunter 0 Level(C4LevelT1, Enemy, True) [4,10] 0 0 0 0 [SteelBow, MiniBow] AttackInRangeAI
+UNIT C4Phantom Thief 0 Level(C4LevelT1, Enemy, True) [5,11] 0 0 0 0 [SteelDagger] AttackInRangeAI
+
+UNIT C4Phantom Deserter 0 Level(C4LevelT2, Enemy, True) [7,7] 0 0 0 0 [SteelLance] AttackInRangeAI
+
+UNIT C4Phantom Myrmidon 0 Level(C4LevelT2, Enemy, True) [8,9] 0 0 0 0 [Onigiri] AttackInRangeAI
+UNIT C4Phantom Shaman 0 Level(C4LevelT2, Enemy, True) [10,9] 0 0 0 0 [Surge] AttackInRangeAI
+
+UNIT C4Phantom Hunter 0 Level(C4LevelT2, Enemy, True) [12,7] 0 0 0 0 [SteelBow] AttackInRangeAI
+UNIT C4Phantom General 0 Level(C4LevelT2, Enemy, True) [14,8] 0 0 0 0 [Oversize,PureWater] AttackInRangeAI
+
+UNIT C4Phantom Mercenary 0 Level(C4LevelT2, Enemy, True) [16,6] 0 0 0 0 [SteelSword] AttackInRangeAI
+
+UNIT C4Phantom Brigand 0 Level(C4LevelT2, Enemy, True) [14,11] 0 0 0 0 [Oversize] AttackInRangeAI
+UNIT C4Phantom Thief 0 Level(C4LevelT2, Enemy, True) [16,11] 0 0 0 0 [SteelKnife, SteelDagger] AttackInRangeAI
+UNIT
+
+EnemyUnits4:
+// North
+UNIT C4Phantom Mage 0 Level(C4LevelT2, Enemy, True) [1,6] 0 0 0 0 [Nosferatu] AttackInRangeAI
+
+UNIT C4Phantom Deserter 0 Level(C4LevelT2, Enemy, True) [2,3] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT C4Phantom Deserter 0 Level(C4LevelT2, Enemy, True) [10,3] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT
+
+BeginningScene:
+LoadPlayerUnits(NewUnits)
+LoadEnemies(EnemyUnits1)
+LoadEnemies(EnemyUnits2)
+LoadEnemies(EnemyUnits3)
+LoadEnemies(EnemyUnits4)
+GotoPrepScreen
+NoFade
+ENDA
+
+EndingScene:
+NoFade
+ENDA
+
+Warning1:
+Text(HubC4WaterWarning1)
+NoFade
+ENDA
+
+Warning2:
+Text(HubC4WaterWarning2)
+NoFade
+ENDA
+
+Warning3:
+Text(HubC4WaterWarning3)
+NoFade
+ENDA
+
+Flood1:
+FadeToBlack
+//SOUN 0xBE
+EARTHQUAKE 0 1
+TILECHANGE 0x7
+ENUN
+STAL 48
+EARTHQUAKE_END
+FadeBackFromBlack
+NoFade
+ENDA
+
+Flood2:
+FadeToBlack
+//SOUN 0xBE
+EARTHQUAKE 0 1
+TILECHANGE 0x8
+ENUN
+STAL 48
+EARTHQUAKE_END
+FadeBackFromBlack
+NoFade
+ENDA
+
+Flood3:
+CALL GameOverStart
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

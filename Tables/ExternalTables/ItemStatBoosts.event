@@ -39,3 +39,8 @@ ALIGN 4
 HeavyShieldStatBonuses:
 StatBonus(0,0,0,0,(-8),8,0,0,0,0) 
 // StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB)
+
+ALIGN 4
+SwimwearStatBonuses:
+StatBonus(0,0,0,0,0,(-2),0,4,0,0) 
+// StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB)

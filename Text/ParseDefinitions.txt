@@ -143,6 +143,8 @@
 
 [LoadRuby] = [LoadFace][0x22][0x1]
 
+[LoadRemora] = [LoadFace][0x4f][0x1]
+
 
 
 

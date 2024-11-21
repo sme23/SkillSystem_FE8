@@ -17,6 +17,7 @@ BYTE ShoveGlove
 BYTE SwapShoes
 BYTE FlingRing
 BYTE HoardersCharm
+BYTE Swimwear
 BYTE 0x00 //terminator
 
 // Defense equipment loses durability on each hit taken
