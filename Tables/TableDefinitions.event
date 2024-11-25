@@ -18,12 +18,12 @@
 
 //Weapon Ranks
 #define NoRank 0
-#define ERank 1
-#define DRank 51 // D to C -> 25 hits (this feels fine)
-#define CRank 76 // C to B -> 40 hits (honestly? too low, could bump to 50)
-#define BRank 116 // B to A -> 60 hits (definitely too low, could bump to 75)
-#define ARank 176 // A to S -> 75 hits (probably too low, could bump to 100)
-#define SRank 251 // from D to S -> 200 WEXP
+#define DRank 1
+#define ERank DRank
+#define CRank 26 // D to C -> 25 hits (this feels fine)
+#define BRank 76 // C to B -> 50 hits (feels fine)
+#define ARank 151 // B to A -> 75 hits (definitely too low, could bump to 75)
+#define SRank 251 // A to S -> 75 hits (probably too low, could bump to 100)
 
 //planned weapon rank progression (at some point)
 

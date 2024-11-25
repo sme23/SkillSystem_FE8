@@ -82,7 +82,7 @@ Dragon Rider[X]
 
 ## DragonRiderDesc
 Weapons: Axe[N]
-Traits: Flight, Aid+[X]
+Traits: Flight, Canto, Aid+[X]
 
 ## MageDesc
 Weapons: Tome[N]
@@ -105,7 +105,7 @@ Peg. Rider[X]
 
 ## PegasusRiderDesc
 Weapons: Sword[N]
-Traits: Flight, Aid+[X]
+Traits: Flight, Canto, Aid+[X]
 
 ## TroubadourDesc
 Weapons: Staff[N]
@@ -134,7 +134,7 @@ Griffin Rider[X]
 
 ## GriffinRiderDesc
 Weapons: Lance[N]
-Traits: Flight, Aid+[X]
+Traits: Flight, Canto, Aid+[X]
 
 ## ChampionName
 Champion[X]
@@ -188,7 +188,7 @@ Seraph[X]
 
 ## SeraphDesc
 Weapons: Staff, Sword[N]
-Traits: Flight, Aid+[X]
+Traits: Flight, Canto, Aid+[X]
 
 ## SniperDesc
 Weapons: Bow[N]
@@ -206,7 +206,7 @@ Bombardier[X]
 
 ## BombardierDesc
 Weapons: Bow, Lance[N]
-Traits: Flight, Aid+[X]
+Traits: Flight, Canto, Aid+[X]
 
 ## MonkDesc
 Weapons: Tome[N]
@@ -293,7 +293,7 @@ Malig Knight[X]
 
 ## MaligKnightDesc
 Weapons: Axes, Tomes[N]
-Traits: Flight, Aid+[X]
+Traits: Flight, Canto, Aid+[X]
 
 ## WarriorDesc
 Weapons: Axes, Bows[N]
@@ -318,7 +318,7 @@ Gryphoknight[X]
 
 ## GryphknightDesc
 Weapons: Lances[N]
-Traits: Flight+, Aid+[X]
+Traits: Flight+, Canto, Aid+[X]
 
 ## GryphknightDismountedDesc
 Weapons: Lances[N]
@@ -329,11 +329,11 @@ Dracoknight[X]
 
 ## DracoknightDesc
 Weapons: Axes[N]
-Traits: Flight+, Aid+[X]
+Traits: Flight+, Canto, Aid+[X]
 
 ## FalcoknightDesc
 Weapons: Swords[N]
-Traits: Flight+, Aid+[X]
+Traits: Flight+, Canto, Aid+[X]
 
 ## RogueDesc
 Weapons: Knives[N]

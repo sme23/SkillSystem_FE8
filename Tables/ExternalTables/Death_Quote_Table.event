@@ -43,7 +43,7 @@ DeathQuote(Ruby, AllChapters, 0, RubyDQ)
 DeathQuote(AlonsoChapter3, Chapter3, 2, Ch3AlonsoDQ)
 DeathQuote(Dalila, Chapter3, 10, Ch3DalilaDQ)
 
-DeathQuote(Khazhak,Chapter1, 2, 0)
+DeathQuote(Khazhak,Chapter1, 2, Ch1KhazhakDQ)
 
 DeathQuote(Geraldo, HubA_1, 0x0, GeraldoDeathQuote)
 DeathQuote(Bozo, HubA_1, 0x0, BozoDeathQuote)

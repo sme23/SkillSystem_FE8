@@ -22,7 +22,7 @@ CherishTheDead_001:
  BYTE   KEYSH   CherishTheDead_key+0
  BYTE   TEMPO   110*CherishTheDead_tbs/2
  BYTE   VOICE   46
- BYTE   VOL   55*CherishTheDead_mvl/mxv
+ BYTE   VOL   75*CherishTheDead_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   En3  v064
  BYTE   En3
@@ -237,7 +237,7 @@ CherishTheDead_002:
  BYTE   KEYSH   CherishTheDead_key+0
  BYTE   VOICE   46
  BYTE   PAN   c_v+27
- BYTE   VOL   55*CherishTheDead_mvl/mxv
+ BYTE   VOL   75*CherishTheDead_mvl/mxv
  BYTE   BEND   c_v+0
  BYTE   N96  As2  v096
  BYTE   W01
@@ -414,7 +414,7 @@ CherishTheDead_003:
 // 000   ----------------------------------------
  BYTE   KEYSH   CherishTheDead_key+0
  BYTE   VOICE   1
- BYTE   VOL   43*CherishTheDead_mvl/mxv
+ BYTE   VOL   63*CherishTheDead_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   En3  v064
  BYTE   En3
@@ -543,7 +543,7 @@ CherishTheDead_004:
 // 000   ----------------------------------------
  BYTE   KEYSH   CherishTheDead_key+0
  BYTE   VOICE   8
- BYTE   VOL   28*CherishTheDead_mvl/mxv
+ BYTE   VOL   48*CherishTheDead_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   En3  v064
  BYTE   En3
@@ -675,7 +675,7 @@ CherishTheDead_005:
 // 000   ----------------------------------------
  BYTE   KEYSH   CherishTheDead_key+0
  BYTE   VOICE   77
- BYTE   VOL   22*CherishTheDead_mvl/mxv
+ BYTE   VOL   42*CherishTheDead_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   En3  v064
  BYTE   En3
@@ -837,7 +837,7 @@ CherishTheDead_006:
 // 000   ----------------------------------------
  BYTE   KEYSH   CherishTheDead_key+0
  BYTE   VOICE   54
- BYTE   VOL   27*CherishTheDead_mvl/mxv
+ BYTE   VOL   47*CherishTheDead_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   En3  v064
  BYTE   En3
@@ -951,7 +951,7 @@ CherishTheDead_007:
  BYTE   KEYSH   CherishTheDead_key+0
  BYTE   VOICE   21
  BYTE   PAN   c_v-10
- BYTE   VOL   25*CherishTheDead_mvl/mxv
+ BYTE   VOL   45*CherishTheDead_mvl/mxv
  BYTE   BEND   c_v+0
  BYTE   W96
 // 001   ----------------------------------------

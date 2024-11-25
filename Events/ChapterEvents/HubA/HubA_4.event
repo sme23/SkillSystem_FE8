@@ -229,7 +229,7 @@ UNIT Lua Captain 0x0 Level(1, Ally, False) [8,0] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 NPCGroup:
-UNIT Juan Thief 0 Level(3, NPC, True) [13,4] 0 0 0 0 [IronDagger, IronKnife, Vulnerary] BossAI
+UNIT Juan Thief 0 Level(2, NPC, True) [13,4] 0 0 0 0 [IronKnife, Vulnerary] BossAI
 UNIT
 
 EnemyGroup:

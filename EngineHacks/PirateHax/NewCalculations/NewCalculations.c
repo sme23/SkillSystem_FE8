@@ -8,11 +8,11 @@ int GetCurrentPromotedLevelBonus(){
 }
 
 void ComputeBattleUnitHitRate(BattleUnit* bu) {
-    bu->battleHitRate = (bu->unit.skl * 3) + GetItemHit(bu->weapon) + bu->wTriangleHitBonus;
+    bu->battleHitRate = (bu->unit.skl * 5) + GetItemHit(bu->weapon) + bu->wTriangleHitBonus;
 }
 
 void ComputeBattleUnitAvoidRate(BattleUnit* bu) {
-    bu->battleAvoidRate = bu->terrainAvoid + (bu->unit.lck * 3);
+    bu->battleAvoidRate = bu->terrainAvoid + (bu->unit.lck * 5);
 
     if (bu->battleAvoidRate < 0){
         bu->battleAvoidRate = 0;
@@ -119,7 +119,7 @@ int GetUnitEffectiveLevel(Unit* unit){
 	int effectiveLevel = unit->level;
 
     if (unit->pClassData->attributes & CA_PROMOTED){
-        effectiveLevel += 5;
+        effectiveLevel += 10;
     }
 
 	return effectiveLevel;
@@ -196,7 +196,7 @@ s8 ActionSteal(Proc* proc) {
 
     UnitRemoveItem(GetUnit(gActionData.targetIndex), gActionData.itemSlotIndex);
     
-    UnitAddItem(GetUnit(gActionData.subjectIndex), item);
+    UnitAddStolenItem(GetUnit(gActionData.subjectIndex), item);
 
     BattleInitItemEffect(GetUnit(gActionData.subjectIndex), -1);
     gBattleTarget.terrainId = 0x1; //plains id
@@ -511,7 +511,20 @@ int GetBattleUnitUpdatedWeaponExp(BattleUnit* battleUnit) {
             
 	}
     
-	result = battleUnit->unit.ranks[battleUnit->weaponType] + 1;
+	result = battleUnit->unit.ranks[battleUnit->weaponType];
+
+    if (battleUnit->wexpMultiplier <= 0)
+    {
+        // we don't do anything because you missed or didn't hit anything
+    }
+    else if (gBattleTarget.unit.curHP <= 0)
+    {
+        result += 2; //you killed a guy, here's your reward
+    }
+    else
+    {
+        result++; //otherwise, here's some wexp
+    }
 
     for (i = 0; i < 8; ++i) {
         if (i == battleUnit->weaponType){

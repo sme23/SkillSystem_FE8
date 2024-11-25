@@ -29,17 +29,26 @@ void ArmsMasterSkill(BattleUnit* bunitA, BattleUnit* bunitB) {
 }
 
 bool CheckArmsMasterLegality(BattleUnit* bunit1, BattleUnit* bunit2){
-	if (CheckSameWType(bunit1, bunit2) == false){
-		return false; //if not same wType, fail
+	if (CheckSameWType(bunit1, bunit2)){
+		if ((bunit1->unit.pClassData->attributes & CA_ARMSMASTER) && (bunit2->unit.pClassData->attributes & CA_ARMSMASTER))
+		{
+			return false; //if both have it, fail
+		}
+
+		return true; //if only one has it and it works, then return true
 	}
-	if ((bunit1->unit.pClassData->attributes & CA_ARMSMASTER) && (bunit2->unit.pClassData->attributes & CA_ARMSMASTER)){
-		return false; //if both have it, fail
-	}
-	return true; //legal to use, just need to check if they have it
+
+	return false; //if not same wType, fail
 }
 
 bool CheckSameWType(BattleUnit* bunit1, BattleUnit* bunit2) {
 	int wType1 = GetItemData(GetItemIndex(bunit1->weapon))->weaponType;
 	int wType2 = GetItemData(GetItemIndex(bunit2->weapon))->weaponType;
-	return (wType1 == wType2);
+	if (wType1 == wType2)
+	{
+		return true;
+	}
+	else{
+		return false;
+	}
 }

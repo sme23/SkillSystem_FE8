@@ -1657,9 +1657,9 @@ units within 3 spaces randomly gain[N]
 SPD+2, SKL+3, or LCK+4 for that turn.[X]
 
 ## SD_CatchingUp
-Catching Up: If foe doubles unit, unit's[N]
-damage increases by the amount foe is[N]
-above the doubling threshold.[X]
+Catching Up: If an enemy would follow[N]
+up against this unit, Atk increases by[N]
+(Enemy Spd - Unit Spd - 5).[X]
 
 ## SD_Nonconforming
 Nonconforming: This unit can reverse[N]

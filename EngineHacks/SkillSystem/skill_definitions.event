@@ -27,10 +27,6 @@
 //By Sme
 #define BloodTideID 255
 
-//Charisma: Grants +10 Hit/Avoid to all allies within three tiles.
-//By Darrman
-#define CharismaID 255
-
 //Charm: Allies within 2 tiles deal +2 damage.
 //Author Unknown (Initial Commit)
 #define CharmID 255

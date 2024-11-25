@@ -6,10 +6,10 @@ int GetNPCStatIncrease(int growth);
 #define CA_NO_EXP CA_NEGATE_LETHALITY
 
 #define NO_WEXP 0
-#define D_WEXP 51
-#define C_WEXP 76
-#define B_WEXP 116
-#define A_WEXP 176
+#define D_WEXP 1
+#define C_WEXP 26
+#define B_WEXP 76
+#define A_WEXP 151
 #define S_WEXP 251
 
 #define NO_RANK 0
@@ -102,6 +102,8 @@ static const struct ProcInstruction sProcScr_BattleAnimSimpleLock[] = {
 
 int GenUnitDefinitionFinalPosition(const struct UnitDefinition* uDef, s8* xOut, s8* yOut, s8 findNearest);
 void SetUnitAiFromDefinition(struct Unit* unit, const struct UnitDefinition* uDef);
+
+bool UnitAddStolenItem(struct Unit* unit, int item);
 
 int ReturnNumberOfHubChaptersVisited();
 

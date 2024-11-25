@@ -73,8 +73,8 @@ ENDA
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Jaime PegasusRider 0 Level(3,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Jaime PegasusRider 0 Level(4,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(8,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -86,8 +86,8 @@ UNIT
 
 Units2:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Jaime PegasusRider 0 Level(3,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Jaime PegasusRider 0 Level(4,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Leonor Cleric 0 Level(8,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -100,12 +100,12 @@ UNIT Pilar 0 0 Level(10,Ally,False) [11,15] 0 0 0 0 [Cutlass, IronSword, IronMus
 UNIT
 
 JaimeAndLua:
-UNIT Jaime PegasusRider 0 Level(3,Ally,True) [11,18] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
+UNIT Jaime PegasusRider 0 Level(4,Ally,True) [11,18] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
 UNIT Lua Captain 0 Level(10,Ally,False) [12,18] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 NPCs:
-UNIT Leonor Cleric 0 Level(6,Ally,True) [7,5] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Leonor Cleric 0 Level(8,Ally,True) [7,5] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [7,10] 0 0 0 0 [IronLance] ChargeAI
 UNIT Rebel Warden 0 Level(1,NPC,True) [10,8] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [12,9] 0 0 0 0 [IronLance] ChargeAI

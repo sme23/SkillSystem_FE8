@@ -27,7 +27,9 @@ bool DidUnitBreak(){
 		
 	}
 	//Hand Cannon skill
-	if (gSkillTester(&gBattleActor.unit,HandCannonIDLink)) return true;
+	if (gSkillTester(&gBattleActor.unit,HandCannonIDLink)){
+		return true;
+	} 
 	return false;
 }
 

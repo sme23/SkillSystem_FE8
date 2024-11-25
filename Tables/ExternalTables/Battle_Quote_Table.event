@@ -20,7 +20,7 @@ UnspecifiedAttackerConvo(Dalila, Chapter3, 8, Ch3DalilaAttackerBQ)
 UnspecifiedAttackedConvo(Dalila, Chapter3, 9, Ch3DalilaAttackedBQ)
 
 // Chapter 1
-UnspecifiedBattleConvo(Khazhak, Chapter1, 1, 0)
+UnspecifiedBattleConvo(Khazhak, Chapter1, 1, Ch1KhazhakBQ)
 
 // Chapter A-1
 SpecifiedBattleConvo(Geraldo, Lua, 			HubA_1, A1_GeraldoLuaBattleQuoteSeen, 			GeraldoLuaBattleQuote)

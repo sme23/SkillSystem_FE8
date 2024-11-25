@@ -235,8 +235,13 @@
 //Author Unknown (Initial Commit)
 #define LifetakerID 77
 
+//Charisma: Grants +10 Hit/Avoid to all allies within three tiles.
+//By Darrman
+#define CharismaID 78
+
 #define RerunAndHitID 88
 
 #define EarlyLeaveID 89
 
 #define RebelRebelID 90
+

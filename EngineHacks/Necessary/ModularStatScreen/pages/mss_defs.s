@@ -270,6 +270,30 @@
   blh     DrawBar, r4
 .endm
 
+.macro draw_speed_bar_at bar_x, bar_y, getter, offset, bar_id
+  mov     r0, r8
+  blh     \getter
+  mov     r1, r8  
+  mov     r3, #\offset
+  ldsb    r3, [r1, r3] @ and this is the base
+  cmp 	  r0, #1
+  bge 	  NoChange	@ if the stat is higher than 0, we leave it
+	
+	mov r0, #0	@ we set the total to be this before storing it
+  
+  NoChange:     
+  str     r0, [sp]     @ this must be storing the total
+  ldr     r0, [r1, #0x4]  @class
+  ldrb    r0, [r0, #\offset]  @stat cap
+  lsl     r0, r0, #0x18    
+  asr     r0, r0, #0x18    
+  str     r0, [sp, #0x4] @ this is storing the cap as an input 
+  mov     r0, #(\bar_id)     
+  mov     r1, #(\bar_x-11)
+  mov     r2, #(\bar_y-2)
+  blh     DrawBar, r4
+.endm
+
 .macro draw_bar_at_with_cap_getter bar_x, bar_y, statgetter, capgetter, offset, bar_id  
   mov     r0, r8
   blh     \statgetter
@@ -338,16 +362,8 @@
   draw_bar_at \bar_x, \bar_y, SklGetter, 0x15, 2
 .endm
 
-.macro draw_skl_reduced_bar_at, bar_x, bar_y @for rescuing
-  draw_halved_bar_at \bar_x, \bar_y, SklGetter, 0x15, 2
-.endm
-
 .macro draw_spd_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
-.endm
-
-.macro draw_spd_reduced_bar_at, bar_x, bar_y @for rescuing
-  draw_halved_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
+  draw_speed_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
 .endm
 
 .macro draw_luck_bar_at, bar_x, bar_y

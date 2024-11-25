@@ -1,6 +1,6 @@
 
-void DismountRoutine(Proc* procState);
-void MountRoutine(Proc* procState);
+u8 DismountRoutine(Proc* procState);
+u8 MountRoutine(Proc* procState);
 int DismountUsability();
 int MountUsability();
 const ClassData* GetDismountedClass(Unit* unit);

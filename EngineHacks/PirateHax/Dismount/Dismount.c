@@ -6,18 +6,20 @@ extern bool(*gSkillTester)(Unit* unit, int skillID);
 Unit* GetUnitStructFromEventParameter(unsigned eventSlot);
 extern u8 DismountIDLink;
 
-void DismountRoutine(Proc* procState){
+u8 DismountRoutine(Proc* procState){
 	Unit* unit = gActiveUnit;
 	UnitChangeClass(unit, GetDismountedClass(unit));
 	gActionData.unitActionType = UNIT_ACTION_TAKE;
 	ProcGoto(procState, 1);
+	return 0xD9;
 }
 
-void MountRoutine(Proc* procState){
+u8 MountRoutine(Proc* procState){
 	Unit* unit = gActiveUnit;
 	UnitChangeClass(unit, GetMountedClass(unit));
 	gActionData.unitActionType = UNIT_ACTION_TAKE;
 	ProcGoto(procState, 1);
+	return 0xD9;
 }
 
 int DismountUsability(){
