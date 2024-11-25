@@ -230,6 +230,12 @@ Castaway[N]
 Once, the Rioja Reapers' ruthless[N]
 captain. Now their only survivor.[X]
 
+## RemoraName
+Remora[X]
+
+## RemoraDesc
+Treasure Hunter[X]
+
 ## RimaName
 Rima[X]
 
@@ -988,3 +994,9 @@ Boru[X]
 Grunt[N]
 A nervous rebel that's been[N]
 assigned with Salman's capture.[X]
+
+## C4PhantomName
+Phantom[X]
+
+## C4PhantomDesc
+Placeholder description[X]

@@ -145,6 +145,8 @@
 [LoadRima] = [LoadFace][0x2D][0x1]
 [LoadBolton] = [LoadFace][0x2E][0x1]
 
+[LoadRemora] = [LoadFace][0x4f][0x1]
+
 
 
 

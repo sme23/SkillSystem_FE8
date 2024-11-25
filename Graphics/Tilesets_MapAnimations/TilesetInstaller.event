@@ -112,6 +112,11 @@
     FlasubanFrontierConfig:
     #incbin "Dmp/Config/frontier_comp.dmp"
 
+    // Mapchip changes
+    ALIGN 4
+    MountainousConfig:
+    #incbin "Dmp/Config/mountainous_v2_comp.dmp"
+
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
@@ -148,3 +153,6 @@
     EventPointerTable(FlasubanFrontierObjectID, FlasubanFrontierObject)
     EventPointerTable(FlasubanFrontierPaletteID, FlasubanFrontierPalette)
     EventPointerTable(FlasubanFrontierConfigID, FlasubanFrontierConfig)
+
+    // Fix mapchip for this tileset
+    EventPointerTable(0x6e, MountainousConfig)

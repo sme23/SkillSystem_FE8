@@ -239,6 +239,11 @@
 //By Darrman
 #define CharismaID 78
 
+#define WaterwalkID 79
+
+#define BashID 80
+
+
 #define RerunAndHitID 88
 
 #define EarlyLeaveID 89

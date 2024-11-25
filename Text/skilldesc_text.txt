@@ -1837,6 +1837,15 @@ Like Dominoes: If this unit initiates,[N]
 they can't miss and will kill foes below[N]
 (5 + Skill) HP, granting another action.[X]
 
+## SD_Bash
+Bash: If this unit attacks and Breaks[N]
+an enemy, inflicts sleep until the end[N]
+of the next player phase.[X]
+
+## SD_Waterwalk
+Waterwalk: Unit can traverse water[N]
+for 2 movement cost per tile.[X]
+
 ## SD_RerunAndHit
 Rerun-And-Hit: Whenever this unit[N]
 re-moves (Canto), they can attack[N]

@@ -20,6 +20,7 @@
 #define HubC 17
 #define HubC_1 18
 #define HubC_3 20
+#define HubC_4 21
 
 #define HubB_2a 0x3D
 
@@ -113,6 +114,10 @@
 #define HubC_3MapID 0x51
 #define HubC_3MapChangesID 0x52
 #define HubC_3EventsID 0x53
+
+#define HubC_4MapID 0x54
+#define HubC_4MapChangesID 0x55
+#define HubC_4EventsID 0x56
 
 //TILESET IDs (START FROM 0x88 when replacing stuff)
 #define FlasubanVillageSkyObjectID 0x88
