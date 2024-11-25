@@ -899,7 +899,7 @@ Rebel Captain[N]
 The leader of a group of rebels[N]
 who have sunk to plundering.[X]
 
-## NicodemusName ^
+## NicodemusName
 Nicodemus[X]
 
 ## NicodemusDesc
@@ -930,7 +930,6 @@ Blackbows[X]
 Elite[N]
 Known for their unflinching arrows[N]
 that pierce their enemies' hearts.[X]
-
 
 ## BaltasarName ^
 Baltasar[X]
@@ -1000,3 +999,35 @@ Phantom[X]
 
 ## C4PhantomDesc
 Placeholder description[X]
+
+## ValerieName
+Valerie[X]
+
+## ValerieDesc
+Aspirant[N]
+Well-trained and dedicated to archery,[N]
+but lacks some composure in combat.[X]
+
+## CalistaName
+Calista[X]
+
+## CalistaDesc
+Ex-Captain[N]
+A careful woman who wished for[N]
+quiet deployments, but she's here.[X]
+
+## SalvadorName
+Salvador[X]
+
+## SalvadorDesc
+Sub-Captain[N]
+Appointed leader of a crack band[N]
+of Blackhearts, ready for vengeance.[X]
+
+## BlackheartPlusName
+Blackheart[X]
+
+## BlackheartPlusDesc
+Raider[N]
+Hardened grunts of the Blackhearts,[N]
+proven with sheer brutality.[X]

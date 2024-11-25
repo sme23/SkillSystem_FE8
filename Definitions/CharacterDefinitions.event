@@ -63,12 +63,16 @@
 #define KiteSummon $3D //Passarola's Kite
 
 // HUB C CHAPTER UNITS
-#define Ruby $2C
+#define Valerie $26
+#define Calista $27
 
+#define Ruby $2C
 #define Remora $2D
 
 #define Rima $30
 #define Bolton $31
+
+
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -205,6 +209,11 @@
 #define Baltasar 0xDC
 #define Krezke 0xDD
 
+// Hub C2 
+#define BlackheartPlus 0x7E
+#define KeeperAlly 0x7F
+#define Salvador 0xDE
+
 // Hub C3
 #define Runamel 0x87
 #define Jasper 0x88
@@ -216,3 +225,4 @@
 // Hub C4
 #define C4Phantom 0x8A
 #define C4Elite 0x8B
+

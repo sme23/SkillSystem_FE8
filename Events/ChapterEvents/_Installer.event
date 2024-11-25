@@ -64,3 +64,6 @@
 {
 	#include "HubC/HubC_3.event"
 }
+{
+	#include "HubC/HubC_2.event"
+}

@@ -125,8 +125,12 @@
 #define Blunderbuss $d0
 #define Mortar $d1
 #define Mincemaker $de
-#define InfiltratorGun $f3
-#define Quickdraw $f4
+#define Toradar $f3
+#define HandCannon $f4
+#define InfiltratorGun $f5
+#define Quickdraw $f6
+#define QuickdrawTwo $f7
+
 
 // STAVES
 #define TakeAim $e3

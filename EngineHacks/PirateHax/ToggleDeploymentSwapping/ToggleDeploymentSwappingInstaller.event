@@ -72,6 +72,7 @@ ForcedDeployment(Ernest,UnlockedPosition,AllModes,HubB_3)
 ForcedDeployment(Ruby,UnlockedPosition,AllModes,HubC_1)
 ForcedDeployment(Bolton,UnlockedPosition,AllModes,HubC_3)
 ForcedDeployment(Remora,UnlockedPosition,AllModes,HubC_4)
+ForcedDeployment(Valerie,UnlockedPosition,AllModes,HubC_2)
 EndForcedDeploymentList
 
 DeploymentGroupChapterList:

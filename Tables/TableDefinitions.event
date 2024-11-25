@@ -147,6 +147,7 @@
 #define SwordType	0x20
 #define MageType 0x40
 #define KnifeType 0x80
+#define InfantryType 0x100 //We finally have poison dagger at home (used for the Turador weapon)
 
 //Status Effects
 #define NoStatusID 0
