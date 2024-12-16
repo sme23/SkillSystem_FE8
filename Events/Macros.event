@@ -62,6 +62,28 @@
 #define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 #define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; FADU 15"
 
+///
+/// HUB B MACROS
+///
+
+// These are called whenever Lua goes into any floor that requires a TC. 
+
+#define InitiateFloorSwapHubB_Leftship(addTraps, tilechangeId) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_LeftshipFloor1; TILECHANGE tilechangeId; SET_ACTIVE 0; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+#define InitiateFloorSwapHubB_Midship(addTraps, tilechangeId) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_MidshipFloor1; TILEREVERT TC_MidshipFloor2; TILEREVERT TC_MidshipFloor3; TILECHANGE tilechangeId; SET_ACTIVE 0; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+#define InitiateFloorSwapHubB_Rightship(addTraps, tilechangeId) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_RightshipFloor1; TILEREVERT TC_RightshipFloor2; TILECHANGE tilechangeId; SET_ACTIVE 0; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+//These are called whenever Lua returns to the deck of a ship, respawning the questgiver units. 
+
+#define InitiateFloorRevertHubB_Leftship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_LeftshipFloor1; SET_ACTIVE 0; CALL Spawn_LeftShipDeck ; CALL Spawn_MiddleShipDeck ; CALL Spawn_RightShipDeck ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+#define InitiateFloorRevertHubB_Midship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_MidshipFloor1; TILEREVERT TC_MidshipFloor2; TILEREVERT TC_MidshipFloor3; SET_ACTIVE 0; CALL Spawn_LeftShipDeck ; CALL Spawn_MiddleShipDeck ; CALL Spawn_RightShipDeck ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+#define InitiateFloorRevertHubB_Rightship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_RightshipFloor1; TILEREVERT TC_RightshipFloor2; SET_ACTIVE 0; CALL Spawn_LeftShipDeck ; CALL Spawn_MiddleShipDeck ; CALL Spawn_RightShipDeck ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+//This is called whenever a questgiver is spawned, and easily 'cutscene' swap them into a green unit. 
+#define LoadHubBQuestgiverIfEIDNotSet(eventId, labelId, unitGroup, unitName) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); CUSN unitName ; LABEL labelId"
 
 #define InitiateTileRevertInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILEREVERT tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 

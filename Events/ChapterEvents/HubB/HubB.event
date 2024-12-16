@@ -1,3 +1,12 @@
+//Tile change IDS
+#define TC_LeftshipFloor1 0x0
+#define TC_MidshipFloor1 0x1
+#define TC_MidshipFloor2 0x2
+#define TC_MidshipFloor3 0x3
+#define TC_RightshipFloor1 0x4
+#define TC_RightshipFloor2 0x5
+
+
 #define SeenHubB1Pitch 7
 #define SeenHubB2Pitch 8
 #define SeenHubB3Pitch 9
@@ -5,6 +14,18 @@
 #define SeenHubB5Pitch 11
 #define Turn1EventFlag 12
 #define GoToNextHubFlagID 20
+
+//hub maneuvering flags
+//Middle ShipFlags
+#define Flag_MidShip_DeckToFloor1 	0x20
+#define Flag_MidShip_Floor1ToDeck 	0x21
+#define Flag_MidShip_Floor1ToFloor2 0x22
+#define Flag_MidShip_Floor2ToDeck	0x23
+#define Flag_MidShip_Floor2ToFloor1 0x24
+#define Flag_MidShip_Floor2ToFloor3 0x25
+#define Flag_MidShip_Floor3ToFloor2 0x26
+#define Flag_MidShip_Floor3ToDeck 	0x27
+
 
 EventPointerTable(HubBEventsID, PointerList)
 
@@ -25,8 +46,17 @@ TurnEventPlayer(Turn1EventFlag, Turn1Event, 1)
 END_MAIN
 
 Turn1Event:
-LoadCutsceneUnits(HubBQuestGivers)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub1, 1, RazvanUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub2, 2, RahelUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub3, 3, DesiderioUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub4, 4, OrlandoUnitGroup)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub5, 5, PilarUnitGroup)
 CALL QuestGiversGreen
+CALL EnableAllMidshipFlags
+CALL Traps_MidshipDeck
+CALL Traps_LeftshipDeck
+Call Traps_RightshipDeck
+ENUF Flag_MidShip_DeckToFloor1
 NoFade
 ENDA
 
@@ -43,6 +73,45 @@ END_MAIN
 
 MiscBasedEvents:
 AREA GoToNextHubFlagID GotoChapter3 [5,17] [5,17]
+//Left ship
+AREA Flag_MidShip_DeckToFloor1 Travel_LeftShipDeck_ToFloor1 [4,16] [5,16]
+AREA Flag_MidShip_DeckToFloor1 Travel_LeftShipDeck_ToFloor1 [2,23] [2,23]
+AREA Flag_MidShip_DeckToFloor1 Travel_LeftShipDeck_ToFloor1 [7,23] [7,23]
+//Floor1
+AREA Flag_MidShip_Floor1ToDeck Travel_LeftShipFloor1_ToDeck [4,16] [5,16]
+AREA Flag_MidShip_Floor1ToDeck Travel_LeftShipFloor1_ToDeck [2,23] [2,23]
+AREA Flag_MidShip_Floor1ToDeck Travel_LeftShipFloor1_ToDeck [7,23] [7,23]
+
+//Mid ship
+AREA Flag_MidShip_DeckToFloor1 Travel_MidshipDeck_ToFloor1 [17,10] [18,10]
+AREA Flag_MidShip_DeckToFloor1 Travel_MidshipDeck_ToFloor1 [20,8] [20,8]
+AREA Flag_MidShip_DeckToFloor1 Travel_MidshipDeck_ToFloor1 [13,12] [13,12]
+//Floor1
+AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [17,11] [18,12]
+AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [20,8] [20,8]
+AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [13,12] [13,12]
+AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [15,23] [15,23]
+AREA Flag_MidShip_Floor1ToFloor2 Travel_MidshipFloor1_ToFloor2 [19,11] [20,11]
+//Floor2
+AREA Flag_MidShip_Floor2ToFloor1 Travel_MidshipFloor2_ToFloor1 [19,10] [20,11]
+AREA Flag_MidShip_Floor2ToFloor3 Travel_MidshipFloor2_ToFloor3 [15,22] [16,23]
+//Floor3
+AREA Flag_MidShip_Floor3ToFloor2 Travel_MidshipFloor3_ToFloor2 [15,22] [16,23]
+AREA Flag_MidShip_Floor3ToDeck Travel_MidshipFloor3_ToDeck [20,8] [20,8]
+
+//Right ship
+AREA Flag_MidShip_DeckToFloor1 Travel_RightShipDeck_ToFloor1 [27,17] [27,17]
+AREA Flag_MidShip_DeckToFloor1 Travel_RightShipDeck_ToFloor1 [32,17] [32,17]
+AREA Flag_MidShip_DeckToFloor1 Travel_RightShipDeck_ToFloor1 [33,12] [33,12]
+//Floor1
+AREA Flag_MidShip_Floor1ToDeck Travel_RightShipFloor1_ToDeck [27,17] [27,17]
+AREA Flag_MidShip_Floor1ToDeck Travel_RightShipFloor1_ToDeck [32,17] [32,17]
+AREA Flag_MidShip_Floor1ToDeck Travel_RightShipFloor1_ToDeck [33,12] [33,12]
+AREA Flag_MidShip_Floor1ToFloor2 Travel_RightShipFloor1_ToFloor2 [29,9] [30,10]
+//Floor2 
+AREA Flag_MidShip_Floor2ToFloor1 Travel_RightShipFloor2_ToFloor1 [29,9] [30,10]
+AREA Flag_MidShip_Floor2ToDeck Travel_RightShipFloor2_ToDeck [33,12] [33,12]
+
 AFEV 0 RefreshLua 0
 END_MAIN
 
@@ -50,6 +119,320 @@ GotoChapter3:
 GotoHubChapterIfYesHubB(2, Chapter3)
 NoFade
 ENDA
+
+EmptyEvent:
+ENDA
+
+//Just disable the relevant flags after running this function.
+EnableAllMidshipFlags:
+ENUT Flag_MidShip_DeckToFloor1
+ENUT Flag_MidShip_Floor1ToDeck
+ENUT Flag_MidShip_Floor1ToFloor2
+ENUT Flag_MidShip_Floor2ToFloor1
+ENUT Flag_MidShip_Floor2ToDeck
+ENUT Flag_MidShip_Floor2ToFloor3
+ENUT Flag_MidShip_Floor3ToDeck
+ENUT Flag_MidShip_Floor3ToFloor2
+ENDA
+
+RemoveAllLeftshipTraps:
+//Hub Units
+RemoveTrapAtCoords(6,17)
+//Entrances
+RemoveTrapAtCoords(4,11)
+RemoveTrapAtCoords(5,11)
+RemoveTrapAtCoords(4,16)
+RemoveTrapAtCoords(5,16)
+RemoveTrapAtCoords(2,23)
+RemoveTrapAtCoords(7,23)
+ENDA
+
+RemoveAllMidshipTraps:
+//Hub unit locations
+RemoveTrapAtCoords(18,21)
+RemoveTrapAtCoords(16,11)
+//Entrances
+RemoveTrapAtCoords(17,10)
+RemoveTrapAtCoords(18,10)
+RemoveTrapAtCoords(19,10)
+RemoveTrapAtCoords(20,10)
+RemoveTrapAtCoords(13,12)
+RemoveTrapAtCoords(17,12)
+RemoveTrapAtCoords(18,12)
+RemoveTrapAtCoords(19,11)
+RemoveTrapAtCoords(20,11)
+RemoveTrapAtCoords(17,20)
+RemoveTrapAtCoords(16,22)
+RemoveTrapAtCoords(16,23)
+RemoveTrapAtCoords(15,22)
+RemoveTrapAtCoords(15,23)
+RemoveTrapAtCoords(20,8)
+ENDA
+
+RemoveAllRightshipTraps:
+//Hub unit locations
+RemoveTrapAtCoords(26,21)
+RemoveTrapAtCoords(28,18)
+//Entrancees
+RemoveTrapAtCoords(27,17)
+RemoveTrapAtCoords(32,17)
+RemoveTrapAtCoords(33,12)
+RemoveTrapAtCoords(29,9)
+RemoveTrapAtCoords(29,10)
+RemoveTrapAtCoords(30,9)
+RemoveTrapAtCoords(30,10)
+ENDA
+
+//On the left ship, Orlando is chilling here.
+Spawn_LeftShipDeck:
+SpawnQuestSigil(WentToHub4, 776, RedSigilTrapID, 6, 17)
+LoadHubBQuestgiverIfEIDNotSet(WentToHub4, 4, OrlandoUnitGroup, Orlando)
+ENDA
+
+//On the middle ship, Desiderio and Rahel are there. 
+Spawn_MiddleShipDeck:
+SpawnQuestSigil(WentToHub3, 776, RedSigilTrapID, 18, 21)
+LoadHubBQuestgiverIfEIDNotSet(WentToHub3, 3, DesiderioUnitGroup, Desiderio)
+SpawnQuestSigil(WentToHub2, 777, RedSigilTrapID, 16, 11)
+LoadHubBQuestgiverIfEIDNotSet(WentToHub2, 2, RahelUnitGroup, Rahel)
+ENDA
+
+//On the right ship, Pilar and Razvan are there.
+Spawn_RightShipDeck:
+SpawnQuestSigil(WentToHub1, 776, RedSigilTrapID, 28, 18)
+LoadHubBQuestgiverIfEIDNotSet(WentToHub1, 1, RazvanUnitGroup, Razvan)
+SpawnQuestSigil(WentToHub5, 777, RedSigilTrapID, 26, 21)
+LoadHubBQuestgiverIfEIDNotSet(WentToHub5, 5, PilarUnitGroup, Pilar)
+ENDA
+
+SetQuestGiversBackToAlly:
+TurnUnitBlueIfAlive(Razvan, 1)
+TurnUnitBlueIfAlive(Rahel, 2)
+TurnUnitBlueIfAlive(Desiderio, 3)
+TurnUnitBlueIfAlive(Orlando, 4)
+TurnUnitBlueIfAlive(Desiderio, 5)
+ENDA
+
+//Unimplemented for now, but this may be good to have something like this innate to every 
+//room, so we don't have to worry about painstakingly track specific units every transition...
+SetEveryUnitBackToAlly:
+ENDA
+
+Travel_LeftShipFloor1_ToDeck:
+CALL RemoveAllLeftshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_DeckToFloor1
+InitiateFloorRevertHubB_Leftship(Traps_LeftshipDeck)
+NoFade
+ENDA
+
+Travel_LeftShipDeck_ToFloor1:
+CALL RemoveAllLeftshipTraps
+CALL EnableAllMidshipFlags
+CALL SetQuestGiversBackToAlly
+ENUF Flag_MidShip_Floor1ToDeck
+ENUF Flag_MidShip_Floor1ToFloor2
+InitiateFloorSwapHubB_Leftship(Traps_LeftshipFloor1, TC_LeftshipFloor1)
+NoFade
+ENDA
+
+//returning to deck
+Travel_MidshipFloor1_ToDeck:
+CALL RemoveAllMidshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_DeckToFloor1
+InitiateFloorRevertHubB_Midship(Traps_MidshipDeck)
+NoFade
+ENDA
+
+Travel_MidshipDeck_ToFloor1:
+CALL RemoveAllMidshipTraps
+CALL EnableAllMidshipFlags
+CALL SetQuestGiversBackToAlly
+ENUF Flag_MidShip_Floor1ToDeck
+ENUF Flag_MidShip_Floor1ToFloor2
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor1, TC_MidshipFloor1)
+NoFade
+ENDA
+
+Travel_MidshipFloor1_ToFloor2:
+CALL RemoveAllMidshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_Floor2ToFloor1
+ENUF Flag_MidShip_Floor2ToFloor3
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor2, TC_MidshipFloor2)
+LoadCutsceneUnits(UnitGroup_MF1_Honses)
+NoFade
+ENDA
+
+Travel_MidshipFloor2_ToFloor1:
+CALL RemoveAllMidshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_Floor1ToDeck
+ENUF Flag_MidShip_Floor1ToFloor2
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor1, TC_MidshipFloor1)
+NoFade
+ENDA
+
+Travel_MidshipFloor2_ToFloor3:
+CALL RemoveAllMidshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_Floor3ToFloor2
+ENUF Flag_MidShip_Floor3ToDeck
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor3, TC_MidshipFloor3)
+NoFade
+ENDA
+
+Travel_MidshipFloor3_ToFloor2:
+CALL RemoveAllMidshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_Floor2ToFloor1
+ENUF Flag_MidShip_Floor2ToFloor3
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor2, TC_MidshipFloor2)
+LoadCutsceneUnits(UnitGroup_MF1_Honses)
+NoFade
+ENDA
+
+Travel_MidshipFloor3_ToDeck:
+CALL RemoveAllMidshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_DeckToFloor1
+InitiateFloorRevertHubB_Midship(Traps_MidshipDeck)
+NoFade
+ENDA
+
+Travel_RightShipDeck_ToFloor1:
+CALL RemoveAllRightshipTraps
+CALL EnableAllMidshipFlags
+CALL SetQuestGiversBackToAlly
+ENUF Flag_MidShip_Floor1ToDeck
+ENUF Flag_MidShip_Floor1ToFloor2
+InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor1, TC_RightshipFloor1)
+NoFade
+ENDA
+
+Travel_RightShipFloor1_ToDeck:
+CALL RemoveAllRightshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_DeckToFloor1
+InitiateFloorRevertHubB_Rightship(Traps_RightshipDeck)
+NoFade
+ENDA
+
+Travel_RightShipFloor1_ToFloor2:
+CALL RemoveAllRightshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_Floor2ToDeck
+ENUF Flag_MidShip_Floor2ToFloor1
+InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor2, TC_RightshipFloor2)
+NoFade
+ENDA
+
+Travel_RightShipFloor2_ToFloor1:
+CALL RemoveAllRightshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_Floor1ToDeck
+ENUF Flag_MidShip_Floor1ToFloor2
+InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor1, TC_RightshipFloor1)
+NoFade
+ENDA
+
+Travel_RightShipFloor2_ToDeck:
+CALL RemoveAllRightshipTraps
+CALL EnableAllMidshipFlags
+ENUF Flag_MidShip_DeckToFloor1
+InitiateFloorRevertHubB_Rightship(Traps_RightshipDeck)
+NoFade
+ENDA
+
+Traps_LeftshipDeck:
+AddTrap(BlueSigilTrapID, 4, 16)
+AddTrap(BlueSigilTrapID, 5, 16)
+AddTrap(BlueSigilTrapID, 2, 23)
+AddTrap(BlueSigilTrapID, 7, 23)
+ENDA
+
+Traps_LeftshipFloor1:
+AddTrap(BlueSigilTrapID, 4, 16)
+AddTrap(BlueSigilTrapID, 5, 16)
+AddTrap(BlueSigilTrapID, 2, 23)
+AddTrap(BlueSigilTrapID, 7, 23)
+AddTrap(BlueSigilTrapID, 4, 11) //These are unaccessible at first. 
+AddTrap(BlueSigilTrapID, 5, 11) //These are unaccessible at first. 
+ENDA
+
+Traps_MidshipDeck:
+AddTrap(BlueSigilTrapID, 17, 10)
+AddTrap(BlueSigilTrapID, 18, 10)
+AddTrap(BlueSigilTrapID, 20, 8)
+AddTrap(BlueSigilTrapID, 13, 12)
+ENDA
+
+Traps_MidshipFloor1:
+//back to dock
+AddTrap(BlueSigilTrapID, 17, 12)
+AddTrap(BlueSigilTrapID, 18, 12)
+AddTrap(BlueSigilTrapID, 20, 8)
+AddTrap(BlueSigilTrapID, 13, 12)
+//to second floor
+AddTrap(BlueSigilTrapID, 19, 11)
+AddTrap(BlueSigilTrapID, 20, 11)
+AddTrap(BlueSigilTrapID, 17, 20)
+ENDA
+
+UnitGroup_MF1_Honses:
+UNIT HorseUnit HorseClass 0 Level(10,NPC,False) [13,13] 0 0 0 0 [0x0] NoAI
+UNIT HorseUnit HorseClass 0 Level(10,NPC,False) [15,8] 0 0 0 0 [0x0] NoAI
+UNIT
+
+Traps_MidshipFloor2:
+//To floor 1
+AddTrap(BlueSigilTrapID, 19, 10)
+AddTrap(BlueSigilTrapID, 20, 10)
+//To deck
+AddTrap(BlueSigilTrapID, 20, 8)
+//To floor 3
+AddTrap(BlueSigilTrapID, 16, 22)
+AddTrap(BlueSigilTrapID, 16, 23)
+ENDA
+
+Traps_MidshipFloor3:
+//To floor 2
+AddTrap(BlueSigilTrapID, 15, 22)
+AddTrap(BlueSigilTrapID, 15, 23)
+//To deck
+AddTrap(BlueSigilTrapID, 20, 8)
+ENDA
+
+Traps_RightshipDeck:
+AddTrap(BlueSigilTrapID, 27, 17)
+AddTrap(BlueSigilTrapID, 32, 17)
+AddTrap(BlueSigilTrapID, 33, 12)
+ENDA
+
+Traps_RightshipFloor1:
+AddTrap(BlueSigilTrapID, 27, 17)
+AddTrap(BlueSigilTrapID, 32, 17)
+AddTrap(BlueSigilTrapID, 33, 12)
+AddTrap(BlueSigilTrapID, 30, 9)
+AddTrap(BlueSigilTrapID, 30, 10)
+ENDA
+
+Traps_RightshipFloor2:
+AddTrap(BlueSigilTrapID, 29, 9)
+AddTrap(BlueSigilTrapID, 29, 10)
+AddTrap(BlueSigilTrapID, 33, 12)
+ENDA
+
+ALIGN 4
+//Compared to Hub A, perhaps add Javelins/Handaxes/Wingclipper/Horseslayer/Hammer/Tomereaver/Pistol?
+HubBShopOrlando:
+SHLI SteelSword Wingclipper SteelLance Javelin Horseslayer SteelAxe HandAxe Hammer SteelBow Tomereaver SteelKnife SteelDagger SteelMusket Pistol Fire Elfire Surge Heal Mend Vulnerary (HPTonic << 8)|Tonic (StrTonic << 8)|Tonic (MagTonic << 8)|Tonic (SklTonic << 8)|Tonic (SpdTonic << 8)|Tonic (LuckTonic << 8)|Tonic  (DefTonic << 8)|Tonic (ResTonic << 8)|Tonic
+ALIGN 4
+
+///
+/// HUB TRAVEL
+///
 
 GotoHubB1:
 // razvan
@@ -111,11 +494,6 @@ NoFade
 ENDA
 
 Traps1:
-RedSigil(4, 12)
-RedSigil(2, 17)
-RedSigil(7, 17)
-RedSigil(2, 23)
-RedSigil(7, 23)
 ENDTRAP
 ALIGN 4
 
@@ -138,11 +516,6 @@ ENUT LuaInAHubFlag
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
 STAL 1
 FADI 15
-SpawnQuestSigil(WentToHub1, 776, RedSigilTrapID, 4, 12)
-SpawnQuestSigil(WentToHub2, 777, RedSigilTrapID, 2, 17)
-SpawnQuestSigil(WentToHub3, 778, RedSigilTrapID, 7, 17)
-SpawnQuestSigil(WentToHub4, 779, RedSigilTrapID, 2, 23)
-SpawnQuestSigil(WentToHub5, 780, RedSigilTrapID, 7, 23)
 ENUT GoToNextHubFlagID
 CheckHowManyHubChaptersCompleted
 SVAL s1 5
@@ -174,11 +547,31 @@ NoFade
 ENDA
 
 HubBQuestGivers:
-UNIT Razvan Curate 0 Level(10,Ally,False) [4,12] 0 0 0 0 [0x0] NoAI
-UNIT Rahel BowCav 0 Level(10,Ally,False) [2,17] 0 0 0 0 [0x0] NoAI
-UNIT Desiderio Vanguard 0 Level(10,Ally,False) [7,17] 0 0 0 0 [0x0] NoAI
-UNIT Orlando Trickster 0 Level(10,Ally,False) [2,23] 0 0 0 0 [0x0] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [7,23] 0 0 0 0 [0x0] NoAI
+UNIT Razvan Curate 0 Level(10,Ally,False) [28,18] 0 0 0 0 [0x0] NoAI
+UNIT Rahel BowCav 0 Level(10,Ally,False) [16,11] 0 0 0 0 [0x0] NoAI
+UNIT Desiderio Vanguard 0 Level(10,Ally,False) [18,21] 0 0 0 0 [0x0] NoAI
+UNIT Orlando Trickster 0 Level(10,Ally,False) [6,17] 0 0 0 0 [0x0] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [26,21] 0 0 0 0 [0x0] NoAI
+UNIT
+
+RazvanUnitGroup:
+UNIT Razvan Curate 0 Level(10,Ally,False) [28,18] 0 0 0 0 [0x0] NoAI
+UNIT
+
+RahelUnitGroup:
+UNIT Rahel BowCav 0 Level(10,Ally,False) [16,11] 0 0 0 0 [0x0] NoAI
+UNIT
+
+DesiderioUnitGroup:
+UNIT Desiderio Vanguard 0 Level(10,Ally,False) [18,21] 0 0 0 0 [0x0] NoAI
+UNIT
+
+OrlandoUnitGroup:
+UNIT Orlando Trickster 0 Level(10,Ally,False) [6,17] 0 0 0 0 [0x0] NoAI
+UNIT
+
+PilarUnitGroup:
+UNIT Pilar Ninja 0 Level(10,Ally,False) [26,21] 0 0 0 0 [0x0] NoAI
 UNIT
 
 BeginningSceneFirstTimeInHuB:

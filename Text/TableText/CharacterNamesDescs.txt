@@ -1031,3 +1031,10 @@ Blackheart[X]
 Raider[N]
 Hardened grunts of the Blackhearts,[N]
 proven with sheer brutality.[X]
+
+## HorseUnitName
+Horse[X]
+
+## HorseUnitDesc
+Equine[N]
+Why the long face?[X]
