@@ -51,6 +51,11 @@ LoadNPCUnitGroupIfEIDNotSet(WentToHub2, 2, RahelUnitGroup)
 LoadNPCUnitGroupIfEIDNotSet(WentToHub3, 3, DesiderioUnitGroup)
 LoadNPCUnitGroupIfEIDNotSet(WentToHub4, 4, OrlandoUnitGroup)
 LoadNPCUnitGroupIfEIDNotSet(WentToHub5, 5, PilarUnitGroup)
+SpawnQuestSigil(WentToHub4, 776, RedSigilTrapID, 6, 17)
+SpawnQuestSigil(WentToHub3, 777, RedSigilTrapID, 18, 21)
+SpawnQuestSigil(WentToHub2, 778, RedSigilTrapID, 16, 11)
+SpawnQuestSigil(WentToHub1, 779, RedSigilTrapID, 28, 18)
+SpawnQuestSigil(WentToHub5, 780, RedSigilTrapID, 26, 21)
 CALL QuestGiversGreen
 CALL EnableAllMidshipFlags
 CALL Traps_MidshipDeck
@@ -210,7 +215,7 @@ TurnUnitBlueIfAlive(Razvan, 1)
 TurnUnitBlueIfAlive(Rahel, 2)
 TurnUnitBlueIfAlive(Desiderio, 3)
 TurnUnitBlueIfAlive(Orlando, 4)
-TurnUnitBlueIfAlive(Desiderio, 5)
+TurnUnitBlueIfAlive(Pilar, 5)
 ENDA
 
 //Unimplemented for now, but this may be good to have something like this innate to every 
@@ -423,12 +428,6 @@ AddTrap(BlueSigilTrapID, 29, 9)
 AddTrap(BlueSigilTrapID, 29, 10)
 AddTrap(BlueSigilTrapID, 33, 12)
 ENDA
-
-ALIGN 4
-//Compared to Hub A, perhaps add Javelins/Handaxes/Wingclipper/Horseslayer/Hammer/Tomereaver/Pistol?
-HubBShopOrlando:
-SHLI SteelSword Wingclipper SteelLance Javelin Horseslayer SteelAxe HandAxe Hammer SteelBow Tomereaver SteelKnife SteelDagger SteelMusket Pistol Fire Elfire Surge Heal Mend Vulnerary (HPTonic << 8)|Tonic (StrTonic << 8)|Tonic (MagTonic << 8)|Tonic (SklTonic << 8)|Tonic (SpdTonic << 8)|Tonic (LuckTonic << 8)|Tonic  (DefTonic << 8)|Tonic (ResTonic << 8)|Tonic
-ALIGN 4
 
 ///
 /// HUB TRAVEL

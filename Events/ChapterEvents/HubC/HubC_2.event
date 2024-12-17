@@ -69,7 +69,8 @@ ALIGN 4
 EnemiesAttackingCalista:
 //First wave attacking the other captain
 
-UNIT BlackheartPlus Berserker 0 Level(19,Enemy,True) [5,5] 0 0 0 0 [BraveAxe, BattleAxe, Swordreaver, Eyepatch] ChargeAI
+//This dude gets popped lmao, but his stats need to be nerfed because he's too good! 
+UNIT BerserkerThatDiesC2 Berserker 0 Level(18,Enemy,True) [5,5] 0 0 0 0 [BraveAxe, BattleAxe, Swordreaver, Eyepatch] ChargeAI
 UNIT BlackheartPlus Archer 0 Level(16,Enemy,True) [10,6] 0 0 0 0 [SteelBow] ChargeAI
 UNIT BlackheartPlus Vanguard 0 Level(15,Enemy,True) [7,4] 0 0 0 0 [SteelAxe] ChargeAI
 UNIT BlackheartPlus WyvernRider 0 Level(16,Enemy,True) [7,2] 0 0 0 0 [SteelAxe, HandAxe] WaitOneTurnAI
@@ -79,21 +80,21 @@ MainAssault:
 UNIT BlackheartPlus Shaman 0 Level(16,Enemy,True) [8,21] 0 0 0 0 [Sagittae] GroupOneAI
 UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [11,21] 0 0 0 0 [SteelKnife] AttackInRangeAI
 //Left Units
-UNIT BlackheartPlus Warrior 0 Level(16,Enemy,True) [0,15] 0 0 0 0 [SteelAxe] GroupOneAI
+UNIT BlackheartPlus Warrior 0 Level(18,Enemy,True) [0,15] 0 0 0 0 [SteelAxe] GroupOneAI
 UNIT BlackheartPlus Fighter 0 Level(16,Enemy,True) [1,19] 0 0 0 0 [SteelAxe, HandAxe] GroupOneAI
 UNIT BlackheartPlus Hunter 0 Level(16,Enemy,True) [3,21] 0 0 0 0 [Longbow] GroupOneAI
-UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [2,24] 0 0 0 0 [SteelLance, Vulnerary] GroupOneAI
+UNIT BlackheartPlus Champion 0 Level(17,Enemy,True) [2,24] 0 0 0 0 [Javelin, SilverLance, Vulnerary] GroupOneAI
 UNIT BlackheartPlus WyvernRider 0 Level(16,Enemy,True) [7,15] 0 0 0 0 [SteelAxe, Vulnerary] ChargeAI
 //Middle Units
 UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [5,17] 0 0 0 0 [ArcaneKnife] ChargeAI 
-UNIT BlackheartPlus Mercenary 0 Level(16,Enemy,True) [9,23] 0 0 0 0 [SteelSword, Vulnerary] ChargeAI
+UNIT BlackheartPlus Hero 0 Level(17,Enemy,True) [9,23] DropItem 0 0 0 [SilverSword, Elixir] ChargeAI
 UNIT BlackheartPlus Fighter 0 Level(16,Enemy,True) [10,22] 0 0 0 0 [SteelAxe] ChargeAI
-UNIT BlackheartPlus Vanguard 0 Level(16,Enemy,True) [9,19] 0 0 0 0 [HandAxe, Vulnerary] ChargeAI
+UNIT BlackheartPlus Vanguard 0 Level(16,Enemy,True) [9,18] 0 0 0 0 [HandAxe, Vulnerary] ChargeAI
 //Right Units
-UNIT BlackheartPlus Archer 0 Level(16,Enemy,True) [16,17] 0 0 0 0 [ShiningBow] ChargeAI
+UNIT BlackheartElite Sniper 0 Level(18,Enemy,True) [16,17] 0 0 0 0 [SilverBow] ChargeAI
 UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [15,18] 0 0 0 0 [SteelLance] ChargeAI
 UNIT BlackheartPlus Mercenary 0 Level(16,Enemy,True) [17,19] 0 0 0 0 [SteelSword] ChargeAI
-UNIT BlackheartPlus Berserker 0 Level(18,Enemy,True) [15,15] 0 0 0 0 [KillerAxe] ChargeAI
+UNIT BlackheartPlus Berserker 0 Level(17,Enemy,True) [15,15] 0 0 0 0 [SteelAxe] ChargeAI
 UNIT BlackheartPlus Shaman 0 Level(16,Enemy,True) [15,12] 0 0 0 0 [Luna, SecretBook] WaitOneTurnAI
 UNIT BlackheartPlus Gunner 0 Level(16,Enemy,True) [16,11] 0 0 0 0 [Blunderbuss] WaitOneTurnAI
 UNIT BlackheartPlus WyvernRider 0 Level(16,Enemy,True) [19,12] 0 0 0 0 [Tomahawk, TealGem] WaitOneTurnAI
@@ -107,7 +108,7 @@ UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [8,13] 0 0 0 0 [Impaler, Jav
 UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [12,10] 0 0 0 0 [SilverDagger] ChargeAI 
 
 //Right middle, protecting the chests
-UNIT BlackheartPlus Gunner 1 Level(17,Enemy,True) [21,9] 0 0 0 0 [Culverin, Quickdraw] GroupTwoAI
+UNIT BlackheartPlus Gunner 1 Level(17,Enemy,True) [21,9] 0 0 0 0 [Culverin, InfiltratorGun] GroupTwoAI
 UNIT BlackheartPlus Hunter 1 Level(15,Enemy,True) [20,7] 0 0 0 0 [Longbow, Vulnerary] GroupTwoAI
 UNIT BlackheartPlus Hero_F 1 Level(18,Enemy,True) [21,12] 0 0 0 0 [SilverSword] WaitOneTurnAI
 
@@ -132,7 +133,7 @@ UNIT BlackheartPlus Warrior 0 Level(18, Enemy, True) [8,1] 0 0 0 0 [SilverAxe, I
 
 UNIT Salvador 0 0 Level(20,Enemy,True) [19,1] DropItem 0 0 0 [KillingEdge, KillerLance, HexlockShield] AttackInRangeAI
 UNIT BlackheartPlus Assassin 1 Level(19,Enemy,True) [18,0] 0 0 0 0 [SteelKnife, Stiletto] AttackInRangeAI
-UNIT BlackheartPlus Marksman 0 Level(19,Enemy,True) [20,2] 0 0 0 0 [Quickdraw] AttackInRangeAI
+UNIT BlackheartPlus Marksman 0 Level(19,Enemy,True) [20,2] 0 0 0 0 [InfiltratorGun] AttackInRangeAI
 
 //These guys are going to go charge on Turn 4, when the bridge gets dropped
 UNIT BlackheartPlus Fighter 0 Level(16, Enemy, True) [14,5] DropItem 0 0 0 [HandAxe, Tonic] AttackInRangeAI
