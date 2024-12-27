@@ -11,6 +11,9 @@ DeathQuote(Carmen, AllChapters, 0, CarmenDQ)
 DeathQuote(Ximo, AllChapters, 0, XimoDQ)
 DeathQuote(Hermenegildo, AllChapters, 0, HermenegildoDQ)
 DeathQuote(Estelle, AllChapters, 0, EstelleDQ)
+//B-2a unique death for Magdalena in cutscene.
+DeathQuote(Magdalena, CutsceneHubB_2a, 0, B2a_DQ_Magdalena)
+
 // the B-2 trio have game over death quotes inside B-2 to save on conditionals
 DeathQuote(Husniye, HubB_2, 0x65, HusniyeDQ)
 DeathQuote(Husniye, AllChapters, 0, HusniyeDQ)

@@ -63,7 +63,19 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [5,4] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [6,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+IntroUnits:
+UNIT Lua Captain 0 Level(10,Ally,False) [0,8] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [0,9] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Magdalena 0 0 Level(17,NPC,False) [6,7] 0 0 0 0 [Thunder,Mend] NoAI
+UNIT GreagorGuard Deserter 0 Level(3,NPC, False) [5, 8] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT GreagorGuard Deserter 0 Level(3,NPC, False) [2, 11] 0 0 0 0 [IronLance, Vulnerary] NoAI
+UNIT
+
+IntroRazvan:
+UNIT Razvan 0 0 Level(1,Ally,True) [0,8] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 OutroLua:
@@ -86,9 +98,38 @@ OutroCruz:
 UNIT CruzFake 0 0 Level(11,NPC,False) [16,14] 0 0 0 0 [TealGem] NoAI
 UNIT
 
+CutsceneMagdalena:
+UNIT Magdalena 0 0 Level(17,NPC,False) [3,2] 0 0 0 0 [] NoAI
+UNIT
+
+//These are used when Cruz is free, and not accused.
+CutsceneCruz_Free:
+UNIT Cruz Shaman CruzFake Level(11,Enemy,True) [14,7] 0 0 0 0 [Sagittae, Elfire, Vulnerary, Eyepatch] NoAI
+UNIT
+
+CutsceneYadney_CruzFree:
+UNIT Yadney GriffinRider CruzFake Level(15,Enemy,True) [18,2] 0 0 0 0 [ShortSpear,KillerLance] NoAI
+UNIT
+
+//These are used when Cruz is captured, and Magdalena stays alive. 
+//This one is the first scene when Yadney flies past.
+CutsceneYadney_CruzCaptured_A:
+UNIT Yadney GriffinRider Cruz Level(15,Enemy,True) [18,9] 0 0 0 0 [ShortSpear,KillerLance] NoAI
+UNIT
+
+//...And this one is when Yadney breaks Cruz out. 
+CutsceneYadney_CruzCaptured_B:
+UNIT Yadney GriffinRider Cruz Level(15,Enemy,True) [17,1] 0 0 0 0 [ShortSpear,KillerLance] NoAI
+UNIT
+
+CutsceneCruz_Captured:
+UNIT Cruz Shaman CruzFake Level(11,Enemy,True) [11,1] 0 0 0 0 [Sagittae, Elfire, Vulnerary, Eyepatch] NoAI
+UNIT
+
+
 MainCastTrio:
 UNIT Desiderio 0 0 Level(4,Ally,True) [2,8] 0x0 0x0 0 0 [0x0] NoAI
-UNIT Pilar 0 0 Level(1,Ally,True) [10,18] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [11,17] 0x0 0x0 0 0 [0x0] NoAI
 UNIT Razvan 0 0 Level(1,Ally,True) [16,16] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
@@ -113,11 +154,39 @@ MUSC WindAmbienceID
 SetBackground(Ship)
 Text(B2a_OnBoat)
 FADI 16
-Music(CastawayHeartID)
-SetBackground(Harbor)
-Text(B2a_OnDocks)
-FADI 16
+STAL 16
+SOUN 0x02D7
+STAL 40
+SOUN 0x02D7
+STAL 40
+LoadCutsceneUnits(IntroUnits)
 EraseBackground
+FADU 16
+CAMERA_CENTERED [5,8]
+Music(CastawayHeartID)
+STAL 40
+MOVE 5 Lua [2,8]
+MOVE 5 Pilar [1,9]
+ENUN
+CameraCursor(Magdalena)
+MOVE 6 Magdalena [3,9]
+ENUN
+STAL 30
+SetBackground(Harbor)
+Text(B2a_OnDocks_1)
+EraseBackground
+LoadCutsceneUnits(IntroRazvan)
+MOVE 5 Razvan [1,8]
+ENUN
+CameraCursor(Razvan)
+SetBackground(Harbor)
+Text(B2a_OnDocks_2)
+
+//Cut to Lua and Magdalena walking
+CLEA 0
+CLEN 0
+CLEE 0
+FADI 16
 LoadCutsceneUnits(MainCastTrio)
 CUSN Desiderio
 CUSN Pilar
@@ -129,10 +198,15 @@ ENUN
 SetUnitItemDurability(9, 23, 1, SklTonic)
 SetUnitItemDurability(9, 23, 2, LuckTonic) 
 ENUT LuaInAHubFlag
-CAM1 Lua
+CAMERA_CENTERED [9,20]
+EraseBackground
 FADU 16
 MUSC LetterOpenerID
 ASMC MakeMusicAhoyASMC
+//Lua and Magdalena walk down
+MOVE 5 Lua [10,18]
+MOVE 5 Magdalena [9,18]
+ENUN
 CameraCursor(Lua)
 ASMC MakeMusicAhoyASMC
 Text(B2a_MagExplainsHusniye)
@@ -142,6 +216,8 @@ CameraCursor(CruzFake)
 Text(B2a_MagExplainsAvocado)
 CameraCursor(Avocado)
 Text(B2a_MagExplainsRest)
+MOVE 5 Magdalena [5,8]
+ENUN
 CenterTextbox(B2a_MechanicalExplanation)
 NoFade 
 ENDA
@@ -151,6 +227,7 @@ ENDA
 
 
 B2a_Magdalena:
+EVBIT_MODIFY 3 //scene skipping causing a softlock, disable that. 
 Text(B2a_TalkToMag)
 ASMC (prCallSecondChoiceMenu+1) // hus, cruz, avo, none
 SVAL s1 0
@@ -158,26 +235,33 @@ BNE 11 s1 sC // only continue if Husniye, otherwise jump to 11
 	ENUT HusniyeAccused
 	ENUT 0x3
 	//CALL EndingScene
-	GOTO 0xD00
+	GOTO 0x776
 LABEL 11
 SVAL s1 1
 BNE 22 s1 sC // only continue if Cruz, otherwise jump to 22
 	ENUT CruzAccused
 	ENUT 0x3
 	//CALL EndingScene
-	GOTO 0xD00
+	GOTO 0x776
 LABEL 22
 SVAL s1 2
 BNE 33 s1 sC // only continue if Avocado, otherwise jump to 33
 	ENUT AvocadoAccused
 	ENUT 0x3
 	//CALL EndingScene
-	GOTO 0xD00
+	GOTO 0x776
 LABEL 33
 // should only be here if nobody was accused
 ENUF 0x11
 Text(B2a_TalkToMagAlt)
+GOTO 0xD00 //skip confirmation text
+
+//Confirmation text.
+LABEL 0x776
+Text(B2a_TalkToMagConfirm)
+
 LABEL 0xD00
+EVBIT_MODIFY 0 
 NoFade
 ENDA
 
@@ -278,6 +362,7 @@ LOAD1 1 OutroLua
 LOAD1 1 OutroMagdalena
 CAM1 Lua
 CAM1 Magdalena
+CAMERA_CENTERED [15,14]
 ENUN
 FlagIsSet(HusniyeAccused, 0x11)
 	LOAD1 1 OutroHusniye
@@ -292,14 +377,22 @@ FlagIsSet(CruzAccused, 0x33)
 	ENUN
 LABEL 0x33
 FADU 16
-CameraCursor(Lua)
-CameraCursor(Magdalena)
+STAL 30
 FlagIsSet(HusniyeAccused, 0x101)
 	CameraCursor(Husniye)
 	CUSE Husniye
 	STAL 30
 	CameraCursor(Husniye)
-	Text(B2a_ArrestHusniye)
+	TEXTSTART
+	TEXTSHOW B2a_ArrestHusniye
+	TEXTEND //Lua grabs Husniye
+	MOVE 4 Lua [16,14]
+	ENUN
+	REMOVEUNIT Husniye
+	STAL 20
+	TEXTCONT
+	TEXTEND
+	REMA
 LABEL 0x101
 FlagIsSet(AvocadoAccused, 0x202)
 	CameraCursor(Avocado)
@@ -307,6 +400,7 @@ FlagIsSet(AvocadoAccused, 0x202)
 	STAL 30
 	CameraCursor(Avocado)
 	Text(B2a_ArrestAvocado)
+	MOVE 5 Avocado [9,14]
 LABEL 0x202
 FlagIsSet(CruzAccused, 0x303)
 	CameraCursor(CruzFake)
@@ -314,62 +408,179 @@ FlagIsSet(CruzAccused, 0x303)
 	STAL 30
 	CameraCursor(CruzFake)
 	Text(B2a_ArrestCruz)
+	MOVE 5 CruzFake [9,14]
 LABEL 0x303
+MOVE 5 Lua [8,15]
+STAL 35
+MOVE 6 Magdalena [8,16]
 FADI 16
+ENUN 
 Music(CastawayHeartID)
 SetBackground(Harbor)
 Text(B2a_MagdalenaGivesMoney)
 GiveGold(2500)
 FADI 16
-MUSC LetterOpenerID
+MUSC 0x4A //night ambience
 ASMC MakeMusicAhoyASMC
+CLEA 0
+CLEN 0
+CLEE 0
+//This is to set the coordinates of the newly loaded night time map to 0,0
+SVAL sB 0 
+LOMA CutsceneHubB_2a
+WEATHER 7
 
 // delete this later - for reference purposes
 // #define TextCont(id,music) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
 
 FlagIsSet(CruzAccused, 0x666)
-	SetBackground(Prison_Cell) // if cruz in jail
-	ASMC MakeMusicAhoyASMC
-	ASMC MakeMusicAhoyASMC
-	// cruz conversation here
+	LOAD1 1 CutsceneMagdalena
+	STAL 60
+	FADU 16 
+	MOVE 5 Magdalena [8,6]
+	ENUN
+	STAL 30
+	MOVE 5 Magdalena [12,6]
+	ENUN
+	FlashCursor(Magdalena, 60)
+	SetBackground(Woodland_Night)
 	TEXTSTART
-	TEXTSHOW B2a_CruzBreakout
+	TEXTSHOW B2a_MagdalenaDoesntFuckingDie
 	TEXTEND
-	ASMC MakeMusicAvastASMC
+	//stop music when cruz appears mid convo
+	SOUN 0xA6 //play pegasus sound
+	STAL 20
+	MUSC 0x7FFF
+	SOUN 0xA6 //play pegasus sound
+	STAL 20
+	SOUN 0xA6 //play pegasus sound
+	STAL 30
 	TEXTCONT
 	TEXTEND
 	REMA
-	// more cruz conversation
-	GOTO 0x777
-LABEL 0x666
-	SetBackground(Woodland_Night) // if cruz spared
+	EraseBackground
+	
+	LOAD1 1 CutsceneYadney_CruzCaptured_A
+	CAMERA_CENTERED Yadney
+	MUSC LetterOpenerID
 	ASMC MakeMusicAhoyASMC
+	//Yadney moves off screen
+	MOVE 5 Yadney [16, 0]
+	ENUN
+	REMOVEUNIT Yadney
+	FlashCursor(Magdalena, 60)
+	Text(B2a_MagdalenaSeesAFuckingGriffin)
+	FADI 16
+	REMOVEUNIT Magdalena
+	
+	//2nd part of this branch of cutscene, cutting to Magdalena's house.
+	TILECHANGE 0x0
+	CAMERA [0,0]
+	LOAD1 1 CutsceneYadney_CruzCaptured_B
+	FADU 16
+	MOVE 5 Yadney [13, 1]
+	ENUN
+	FlashCursor(Yadney, 60)
+	ASMC MakeMusicAvastASMC
+	Text(B2a_CruzBreakout_1)
+	//Yadney breaks through the wall
+	FADI 0x16
+	TILECHANGE 0x1
+	SOUN 0xAF //wall broken
+	STAL 30
+	LOAD1 1 CutsceneCruz_Captured
+	FADU 0x16
+	
+	STAL 20
+	FlashCursor(Cruz, 60)
+	SetBackground(Prison_Cell) // if cruz in jail
+	// cruz conversation here
+	Text(B2a_CruzBreakout_2)
+	// more cruz conversation
+	EraseBackground
+	MOVE 3 Cruz [13,1]
+	ENUN
+	REMOVEUNIT Cruz
+	STAL 10
+	MOVE 3 Yadney [14, 3]
+	STAL 25
+	GOTO 0x777
+	
+LABEL 0x666 // if cruz spared, will kill Magdalena
+	
+	LOAD1 1 CutsceneMagdalena
+	FADU 16 
+	STAL 60
+	MOVE 5 Magdalena [8,6]
+	ENUN
+	STAL 30
+	MOVE 5 Magdalena [12,6]
+	ENUN
+	FlashCursor(Magdalena, 60)
+	SetBackground(Woodland_Night) 
 	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 
 	TEXTSTART
-	TEXTSHOW B2a_MagdalenaFuckingDies
+	TEXTSHOW B2a_MagdalenaFuckingDies_1
 	TEXTEND
-	ASMC MakeMusicAvastASMC
+	//stop music when cruz appears mid convo
+	SOUN 0xFE //play flashing sound
+	STAL 15
+	MUSC 0x7FFF
+	STAL 30
 	TEXTCONT
 	TEXTEND
-	// sagittae sound effects. hopefully correct
-	//SOUN 0xD8
-	SOUN 0x0100
-	STAL 40
-	SOUN 0x02BC
-	TEXTCONT
-	TEXTEND
-	// death sound effect
-	SOUN 0xD6
-	TEXTCONT
-	TEXTEND
+	REMA
+	
+	EraseBackground
+	STAL 30
+	//Needed to manually reduce Magda's resistance stat here; imagine she's caught completely off-guard! 
+	SetUnitStatus(Magdalena, Resistance, 3)
+	//Also increasing skill to show a 100% hit rate 
+	LOAD1 1 CutsceneCruz_Free
+	SetUnitStatus(Cruz, Skill, 30)
+	FlashCursor(Cruz, 40)
+	StartBattle
+	CriticalHit(0, 54)
+	EndAttack
+	FIGHT Cruz Magdalena 0x00 0x00
+	ENUN
+	KILL Magdalena
+	AWAIT_KILL Magdalena
+	//disable boss music flag manually 
+	ENUF 0xEE
+	MUSC LetterOpenerID
+	STAL 60
+	MOVE 3 Cruz [13,6]
+	ENUN
+	FlashCursor(Cruz, 40)
+	Text(B2a_MagdalenaFuckingDies_2)
+	
+	//Yadney appears, flies in from cliffside.
+	LOAD1 1 CutsceneYadney_CruzFree
+	CAMERA_CENTERED Yadney
+	STAL 20
+	CURSOR_FLASHING Yadney
+	STAL 30
+	REMOVE_CURSORS
+	MOVE 10 Yadney [13,5]
+	ENUN
+	STAL 30
+	Text(B2a_MagdalenaFuckingDies_3)
+	
+	MOVE 2 Cruz [13,5]
+	ENUN
+	REMOVEUNIT Cruz
+	STAL 10
+	MOVE 5 Yadney [19, 8]
+	STAL 25
 	REMA
 
 	// more cruz conversation here
 LABEL 0x777
 ASMC MakeMusicAhoyASMC
-FADI 16
+FADI 8
 MNC2 HubB_2
 NoFade
 ENDA
