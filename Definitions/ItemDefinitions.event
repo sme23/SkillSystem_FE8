@@ -129,7 +129,6 @@
 #define HandCannon $f4
 #define InfiltratorGun $f5
 #define Quickdraw $f6
-#define QuickdrawTwo $f7
 
 
 // STAVES

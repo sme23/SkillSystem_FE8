@@ -25,6 +25,7 @@
 
 
 #define HubB_2a 0x3D
+#define CutsceneHubB_2a 0x3F
 #define HubC_2_Cutscene 0x3E
 
 #define CutsceneC_1 0x40
@@ -98,6 +99,10 @@
 #define HubB_2aMapChangesID 0x43
 #define HubB_2aEventsID 0x44
 
+#define CutsceneHubB_2aMapID 0x5A
+#define CutsceneHubB_2aMapChangesID 0x5B
+#define CutsceneHubB_2aEventsID 0x5C
+
 #define Chapter3MapID 0x45
 #define Chapter3MapChangesID 0x46
 #define Chapter3EventsID 0x47
@@ -125,6 +130,8 @@
 #define HubC_4MapID 0x54
 #define HubC_4MapChangesID 0x55
 #define HubC_4EventsID 0x56
+
+//5A - 5C currently used by b_2a cutscene
 
 
 //TILESET IDs (START FROM 0x88 when replacing stuff)

@@ -31,12 +31,17 @@ ShopUnitTargetSelectionStruct:
 ALIGN 4
 ShopUnitList:
 //ShopUnitListEntry(Barkeep,3,HubATonicList)
+ShopUnitListEntry(Orlando,3,HubBShopOrlando)
 ShopUnitListEnd
 
 //ALIGN 4
 //HubATonicList:
 //SHLI (HPTonic << 8)|Tonic (StrTonic << 8)|Tonic (MagTonic << 8)|Tonic (SklTonic << 8)|Tonic (SpdTonic << 8)|Tonic (LuckTonic << 8)|Tonic  (DefTonic << 8)|Tonic (ResTonic << 8)|Tonic
 
+ALIGN 4
+//Compared to Hub A, perhaps add Javelins/Handaxes/Wingclipper/Horseslayer/Hammer/Tomereaver/Pistol?
+HubBShopOrlando:
+SHLI SteelSword Wingclipper SteelLance Javelin Horseslayer SteelAxe HandAxe Hammer SteelBow Tomereaver SteelKnife SteelDagger SteelMusket Pistol Fire Elfire Surge Heal Mend Vulnerary (HPTonic << 8)|Tonic (StrTonic << 8)|Tonic (MagTonic << 8)|Tonic (SklTonic << 8)|Tonic (SpdTonic << 8)|Tonic (LuckTonic << 8)|Tonic  (DefTonic << 8)|Tonic (ResTonic << 8)|Tonic
 ALIGN 4
 
 #endif // SHOP_UNIT_INSTALLED

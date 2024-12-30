@@ -931,7 +931,7 @@ Elite[N]
 Known for their unflinching arrows[N]
 that pierce their enemies' hearts.[X]
 
-## BaltasarName ^
+## BaltasarName
 Baltasar[X]
 
 ## BaltasarDesc
