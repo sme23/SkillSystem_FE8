@@ -559,8 +559,8 @@ You are dismissed.[AN]
 ## ChA1EndingDialogue3
 [ML][LoadYurena]
 [MR][LoadSanz]
-[MR]You called, milord?[AN]
-[ML]Bring me Alonso. [.....]Now![A][X]
+[ML]You called, milord?[AN]
+[MR]Bring me Alonso. [.....]Now![A][X]
 
 ## ChA1EndingDialogue4
 [ML][LoadAlonso][MR][LoadSanz]

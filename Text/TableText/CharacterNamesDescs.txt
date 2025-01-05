@@ -84,7 +84,7 @@ Indio[X]
 ## IndioDesc
 Wayfarer[N]
 A Balinokan shaman making the[N]
-most of their short time on Earth.[X]
+most of their time in the world.[X]
 
 ## LeandraName
 Leandra[X]

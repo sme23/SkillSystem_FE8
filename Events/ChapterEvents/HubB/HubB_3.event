@@ -189,7 +189,7 @@ UNIT Desiderio 0 0 Level(10,Ally,False) [6,2] 0 0 0 0 [Cutlass, IronSword, IronM
 UNIT
 
 NewUnits:
-UNIT Ernest Gryphoknight 0 Level(10,Ally,True) [10,12] 0 0 0 0 [SilverLance, Pike, Javelin] NoAI
+UNIT Ernest Gryphoknight 0 Level(11,Ally,True) [10,12] 0 0 0 0 [SilverLance, Pike, Javelin] NoAI
 UNIT
 
 EnemyUnits:

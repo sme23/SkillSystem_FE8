@@ -34,6 +34,7 @@
 #define StormsBrewingID 0x24
 #define CherishTheDeadID 0x25
 #define OneLastVoyageID 0x26
+#define TheStormUponUsID 0x27
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47

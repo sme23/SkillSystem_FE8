@@ -45,30 +45,30 @@ one chapter.[X]
 Spd Tonic[X]
 
 ## SpdTonicDescription
-Spd +2 for one chapter.[X]
+Spd +3 for one chapter.[X]
 
 ## SpdTonicUseText
-Spd +2 for[N]
+Spd +3 for[N]
 one chapter.[X]
 
 ## DefTonicName
 Def Tonic[X]
 
 ## DefTonicDescription
-Def +2 for one chapter.[X]
+Def +3 for one chapter.[X]
 
 ## DefTonicUseText
-Def +2 for[N]
+Def +3 for[N]
 one chapter.[X]
 
 ## ResTonicName
 Res Tonic[X]
 
 ## ResTonicDescription
-Res +3 for one chapter.[X]
+Res +5 for one chapter.[X]
 
 ## ResTonicUseText
-Res +3 for[N]
+Res +5 for[N]
 one chapter.[X]
 
 ## LuckTonicName
@@ -95,11 +95,11 @@ one chapter.[X]
 Rnbw Tonic[X]
 
 ## RainbowTonicDescription
-HP +5, Lck/Res +3, and all other[N]
+HP/Res +5, Def/Lck +3, and all other[N]
 stats +2 for one chapter.[X]
 
 ## RainbowTonicUseText
-Lck/Res +3, others[N]
+Def/Lck/Res +3, others[N]
 +2, and HP +5 for[N]
 one chapter.[X]
 

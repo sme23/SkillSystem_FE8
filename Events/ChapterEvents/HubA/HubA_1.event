@@ -115,7 +115,7 @@ UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [24, 12] 0 0 0 0 [IronSwo
 UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [23, 11] 0 0 0 0 [IronBow] AttackInTwoAI
 
 UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [5, 8] 0 0 0 0 [IronSword] AttackInTwoAI
-UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [7, 8] 0 0 0 0 [IronSword] AttackInTwoAI
+//UNIT Contractor Myrmidon Geraldo Level(3, Enemy, True) [7, 8] 0 0 0 0 [IronSword] AttackInTwoAI
 UNIT Contractor Hunter Geraldo Level(3, Enemy, True) [6, 9] 0 0 0 0 [IronBow] AttackInTwoAI
 
 UNIT Contractor Shaman Geraldo Level(3, Enemy, True) [14, 16] 0 0 0 0 [Fire] GroupOneAI
@@ -205,6 +205,7 @@ ENUN
 MOVE 20 Desiderio [5, 2] // Because dark before initial event sucks
 MOVE 20 Lua [6, 2]
 ENUN
+MUSC SwabbieTalkID
 Text(ChA1BeginningScene1)
 CAMERA [26, 9]
 CURSOR_FLASHING [26, 9]
@@ -217,10 +218,13 @@ Text(ChA1BeginningScene3)
 CAMERA Lua
 LOAD1 0 IndioCutsceneUnit
 ENUN
+MUSC WelcomeAboardMateyID
 Text(ChA1BeginningScene4)
 POPUP ChA1IndioRecruitPopup 0x5a // Item get! sfx, will hopefully get a def later
 ENUT A1_EscapeDisallowed
 ENUT AllUnitsMustEscapeFlag
+FADI 15
+STAL 1
 LOAD1 1 ContractorInitialEnemies
 ENUN
 LOAD1 1 SentinelInitialEnemies
@@ -430,6 +434,7 @@ MUSC 0x7FFF
 SetBackground(Ship)
 CHECK_ALIVE Indio
 BEQ 8 0x0 0xC
+MUSC StillZephyrsID
 Text(ChA1EndingDialogue1IndioAlive)
 GOTO 9
 LABEL 8
@@ -442,6 +447,7 @@ Text(ChA1EndingDialogueLeandraRecruited)
 LABEL 10
 EVBIT_F 2
 FADI 30
+FadeOutMusic
 CLEE 0 //clear all units for upcoming cutscene
 CLEN 0
 CLEA 0

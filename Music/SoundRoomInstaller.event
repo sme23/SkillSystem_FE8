@@ -63,6 +63,7 @@ SoundRoomEntry(OneLastVoyageID, 0, SongName_OneLastVoyage)
 SoundRoomEntry(FoolsBoldID,0,SongName_FoolsBold)
 SoundRoomEntry(TheWavesApprenticeID, 0, SongName_TheWavesApprenticeID)
 SoundRoomEntry(TougherTussleID, 0, SongName_TougherTussleID)
+SoundRoomEntry(TheStormUponUsID, 0, SongName_TheStormUponUs)
 // hub D boss theme here
 
 

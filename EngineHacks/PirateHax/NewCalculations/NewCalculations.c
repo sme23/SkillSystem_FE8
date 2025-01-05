@@ -119,7 +119,7 @@ int GetUnitEffectiveLevel(Unit* unit){
 	int effectiveLevel = unit->level;
 
     if (unit->pClassData->attributes & CA_PROMOTED){
-        effectiveLevel += 10;
+        effectiveLevel += 5;
     }
 
 	return effectiveLevel;
@@ -755,21 +755,21 @@ void UnitAutolevelWExp(struct Unit* unit, const struct UnitDefinition* uDef) {
             unit->ranks[wType] = GetItemRequiredExp(item);
         }
 
-        if (LuaIsInHub(unit)){ //actual unit passed in doesn't matter
-            return; //don't autolevel their wexp if player
-        }
+        //if (LuaIsInHub(unit)){ //actual unit passed in doesn't matter
+          //  return; //don't autolevel their wexp if player
+        //}
 
         int j;
         
         bool isUnitPlayer = (unit->pCharacterData->number <= 0x45);
         if (isUnitPlayer){ //if player unit, autolevel their wexp too
             for (j = 0; j < 8; j++){
-                if (unit->ranks[j] > 1 && unit->ranks[j] < 251){ //if it is an existent rank that is not S rank
+                if (unit->ranks[j] >= 1 && unit->ranks[j] < 251){ //if it is an existent rank that is not S rank
                     if (unit->ranks[j] >= 246){
                         unit->ranks[j] = 251; //if it would go above 251, just set it to be 251 (S rank)
                     }
                     else{
-                        unit->ranks[j] += (5 * (unit-> level - uDef->level)); //increase wexp by 5 in all ranks the unit has by however many levels they've gotten
+                        unit->ranks[j] += (5 * (unit->level - uDef->level)); //increase wexp by 5 in all ranks the unit has by however many levels they've gotten
                     }
                 }
             }

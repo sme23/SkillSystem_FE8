@@ -187,11 +187,10 @@ We need every blade we can get![AN][X]
 [MidLeft][3LB]
 What? The Empire's here?[N]
 Damn! I hate those scoundrels![N]
-I was going to give this scroll[AN]
+I was going to give this staff[AN]
 to the rebel Leonor, so could[N]
 you get it to her? I hadn't even[N]
-seen her yet[Beat][AN]
-[X]
+seen her yet[Beat][AN][X]
 
 ## A2ReinforcementWarning
 [MidLeft][LoadFelipe]

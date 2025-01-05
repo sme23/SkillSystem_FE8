@@ -83,11 +83,11 @@ ENDA
 
 LuaRahelBeginningCutscene:
 UNIT Lua Captain 0 Level(1, Ally, False) [19,18] 0 0 0 0 [0, 0, 0, 0] NoAI 
-UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,21] 0x0 0x0 0 0 [0x0] NoAI
+UNIT GreagorVillager Civilian_F_2 0 Level(1,NPC,False) [19,21] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 OrlandoBeginningCutscene:
-UNIT Orlando 0 0 Level(10,NPC,False) [19,25] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Khazhak Trickster 0 Level(10,NPC,False) [19,25] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 Unit 
 
 LuaTheHorseIsHere:
@@ -108,18 +108,18 @@ UNIT Razvan 0x0 0x0 Level(1, Ally, False) [11,10] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 CutsceneUnitsOnShip:
-UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
+UNIT GreagorVillager Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT GreagorLibrarian HorseClass 0 Level(1, NPC, False) [20, 10] 0 0 0 0 [0, 0, 0, 0] NoAI
 UNIT Pilar Ninja 0x0 Level(1, Ally, False) [19,13] 0 0 0 0 [Vulnerary] NoAI
 UNIT
 
 CutsceneDesiOrlandoComeUp:
 UNIT Desiderio 0x0 0x0 Level(1, Ally, False) [21,9] 0 0 0 0 [Vulnerary] NoAI
-UNIT Orlando 0 0 Level(10,NPC,False) [22,9] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Khazhak Trickster 0 Level(10,NPC,False) [22,9] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT
 
 CutsceneRahelTurnsIntoBowCav:
-UNIT Rahel BowCav 0 Level(1,Ally,False) [15,10] 0x0 0x0 0 0 [0x0] NoAI
+UNIT GreagorVillager BowCav 0 Level(1,Ally,False) [15,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 
@@ -165,10 +165,13 @@ UNIT Igniswords Mage Ignacio Level(8,Enemy,True) [30,5] 0 0 1 REDA30R6 [Fire] Ch
 UNIT
 
 HugoReinforcements:
+CHECK_EXISTS Hugo
+BEQ 776 s0 sC
 CameraCursor(Hugo)
 STAL 30
 Text(HugoWarning)
 SpawnReinforcements(HugoReinforcementsGroup)
+LABEL 776
 NoFade
 ENDA
 
@@ -392,11 +395,12 @@ NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(10,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(13,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 GotoPortGreagorFirstTime:
+SHOWUNIT Razvan
 InitiateLoadMapHub(HubA, LuaInDaHubFirstTime, PortGreagorSpawnEventFirstTime)
 Text(HubABeginningScene3_1)
 CamOn
@@ -520,7 +524,7 @@ ENDA
 
 Units1:
 UNIT Lua 0 0 Level(10,Ally,False) [15,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Orlando 0 0 Level(10,Ally,False) [28,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(13,Ally,False) [28,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 //Lua's Group - 7
 UNIT Rahel 0 0 Level(1,Ally,False) [15,10] 0 0 0 0 [IronBow, Vulnerary] NoAI
 LoadUnit(16,10)
@@ -630,15 +634,15 @@ ENUN
 STAL 40
 MOVE 4 Lua [19,18]
 ENUN
-FlashCursor(Rahel, 60)
+FlashCursor(GreagorVillager, 60)
 SetBackground(Fort)
 Text(Ch2BeginningScene1)
 ClearBackground
 
 LoadCutsceneUnits(OrlandoBeginningCutscene)
-MOVE 6 Orlando [18,22]
+MOVE 6 Khazhak [18,22]
 ENUN
-FlashCursor(Orlando, 60)
+FlashCursor(Khazhak, 60)
 SetBackground(Fort)
 Text(Ch2BeginningScene2)
 ClearBackground
@@ -648,18 +652,18 @@ MUSC SwabbieTalkID
 MOVE 10 GreagorLibrarian [19,23]
 ENUN
 STAL 20 
-MOVE 8 Rahel [20,23]
+MOVE 8 GreagorVillager [20,23]
 ENUN
-FlashCursor(Rahel, 60)
+FlashCursor(GreagorVillager, 60)
 SetBackground(Fort)
 Text(Ch2BeginningScene3)
 ClearBackground
 
-MOVE 10 Orlando [19,25]
+MOVE 10 Khazhak [19,25]
 ENUN 
-DISA Orlando
+DISA Khazhak
 STAL 15
-MOVE 8 Rahel [22,22]
+MOVE 8 GreagorVillager [22,22]
 MOVE 8 GreagorLibrarian [22,23]
 MOVE 8 Lua [19,22]
 ENUN
@@ -733,30 +737,30 @@ CAMERA_CENTERED [17,11]
 MUSC EmergencyCrewmateID
 STAL 80
 LoadCutsceneUnits(CutsceneDesiOrlandoComeUp)
-MOVE 10 Orlando [17,10]
+MOVE 10 Khazhak [17,10]
 MOVE 7 Desiderio [17,12]
 ENUN
-FlashCursor(Orlando,60)
+FlashCursor(Khazhak,60)
 Text(Ch2BeginningScene8)
 
-CUSA Orlando
-MOVE 10 Orlando [26,10]
+CUSA Khazhak
+MOVE 10 Khazhak [26,10]
 MOVE 7 Desiderio [27,12]
 ENUN
-DISA Orlando 
+DISA Khazhak 
 ENUN
 STAL 10
-FlashCursor(Rahel, 60)
-MOVE 7 Rahel [16, 10]
+FlashCursor(GreagorVillager, 60)
+MOVE 7 GreagorVillager [16, 10]
 MOVE 7 GreagorLibrarian [15,10]
 ENUN
 Text(Ch2BeginningScene9)
 
-CUSA Rahel
+CUSA GreagorVillager
 CUSA GreagorLibrarian
-MOVE 30 Rahel [15, 10]
+MOVE 30 GreagorVillager [15, 10]
 ENUN
-DISA Rahel
+DISA GreagorVillager
 DISA GreagorLibrarian
 LoadCutsceneUnits(CutsceneRahelTurnsIntoBowCav)
 STAL 60
@@ -782,7 +786,7 @@ NoFade
 ENDA
 
 NewPlayerGroup:
-UNIT Orlando 0 0 Level(10,Ally,False) [15,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(13,Ally,False) [15,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
@@ -804,7 +808,6 @@ UNIT
 
 TORCHGroupLeft:
 UNIT Hugo 0 Hugo Level(12, Enemy, True) [2,1] 0 0 0 0 [SilverSword, BravesCrest] AttackWhenInRangeAI
-UNIT TorchUnit Soldier Hugo Level(9,Enemy,True) [2,0] 0 0 0 0 [Pike] AttackInTwoAI
 
 UNIT TorchUnit2 WyvernRider Hugo Level(9, Enemy, True) [11,4] 0 0 0 0 [IronAxe] GoForThroneAI
 
@@ -822,7 +825,7 @@ UNIT TorchUnit Archer Hugo Level(9,Enemy,True) [0,5] 0 0 0 0 [IronBow] GroupTwoA
 UNIT
 
 TORCHGroupBottom:
-UNIT ElodiaBoss 0 0 Level(15, Enemy, False) [38, 23] 0 0 0 0 [Baselard, SilverLance, KnightRing] GroupSixAI
+UNIT ElodiaBoss 0 0 Level(15, Enemy, False) [38, 23] 0 0 0 0 [Baselard, KnightRing] GroupSixAI
 UNIT TorchUnit AxeCav ElodiaBoss Level(10,Enemy,True) [33,22] 0 0 0 0 [SteelAxe] GroupSixAI
 UNIT TorchUnit LanceCav ElodiaBoss Level(10,Enemy,True) [33,23] 0 0 0 0 [IronLance] GroupSixAI
 
@@ -839,10 +842,9 @@ UNIT TorchUnit2 AxeCav ElodiaBoss Level(10,Enemy,True) [39,24] 0 0 0 0 [IronAxe]
 UNIT
 
 TORCHMagiDivisionGroup:
-UNIT Juliana 0 ElodiaBoss Level(12,Enemy,True) [0,24] 0 0 0 0 [Arcfire, MagesRing] GroupTwelveAI
-UNIT TorchUnit Monk ElodiaBoss Level(9,Enemy,True) [0,23] 0 0 0 0 [Luna] GroupTwelveAI
+UNIT Juliana 0 ElodiaBoss Level(12,Enemy,False) [0,24] 0 0 0 0 [Arcfire, MagesRing] GroupTwelveAI
 UNIT TorchUnit Shaman ElodiaBoss Level(9,Enemy,True) [3,23] 0 0 0 0 [Nosferatu] GroupTwelveAI
-UNIT TorchUnit Mage ElodiaBoss Level(9,Enemy,True) [3,24] 0 0 0 0 [Elfire] GroupTwelveAI
+UNIT TorchUnit Mage ElodiaBoss Level(9,Enemy,True) [3,24] 0 0 0 0 [Luna] GroupTwelveAI
 UNIT
 
 EndingSceneCutsceneUnits:
@@ -851,7 +853,7 @@ UNIT Desiderio 0x0 0x0 Level(1, Ally, False) [20,12] 0 0 0 0 [Vulnerary] NoAI
 UNIT Rahel 0x0 0 Level(1,Ally,False) [20,15] 0x0 0x0 0 0 [0x0] NoAI
 UNIT Pilar 0x81 0x0 Level(1, Ally, False) [31,10] 0 0 0 0 [Vulnerary] NoAI
 UNIT Razvan 0x0 0 Level(1,Ally,False) [22,10] 0x0 0x0 0 0 [0x0] NoAI
-UNIT Orlando 0 0 Level(10,Ally,False) [30,12] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(13,Ally,False) [30,12] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT
 
 EndingSceneElodiaCutscene:
@@ -859,7 +861,8 @@ UNIT ElodiaBoss 0 0 Level(15, Enemy, False) [12, 20] 0 0 0 0 [Baselard, SilverLa
 UNIT
 
 EndingSceneAlonsoCutscene:
-UNIT GreagorSailor Trickster 0 Level(20, Enemy, False) [3, 14] 0 0 0 0 [0] NoAI //alonso, modify here once adventurer is completeUNIT
+UNIT GreagorSailor Adventurer 0 Level(20, Enemy, False) [3, 14] 0 0 0 0 [0] NoAI //alonso, modify here once adventurer is completeUNIT
+UNIT
 
 EndingSceneMysteriousFigureCutscene:
 UNIT GreagorVillager MaligKnight 0 Level(20, NPC, False) [39, 0] 0 0 0 0 [0] NoAI //alonso, modify here once adventurer is complete
@@ -867,22 +870,21 @@ UNIT
 
 
 EndingScene:
+FADI 15
 RemoveTrapAtCoords(18,10)
 RemoveTrapAtCoords(18,11)
 RemoveTrapAtCoords(18,12)
 RemoveTrapAtCoords(25,10)
 RemoveTrapAtCoords(25,11)
 RemoveTrapAtCoords(25,12)
-REMOVEALL_GREEN
-REMOVEALL_RED
-REMOVEALL_BLUE
-MUSC FoolsBoldID
+RemoveAll
 LoadCutsceneUnits(EndingSceneCutsceneUnits)
 LoadCutsceneUnits(EndingSceneElodiaCutscene)
-FADU 15
 CAMERA_CENTERED [18,10]
+FADU 15
 STAL 30
 FlashCursor(Lua, 60)
+MUSC FoolsBoldID
 Text(Ch2EndingScene1)
 STAL 30
 CAMERA_CENTERED [26,10]
@@ -937,7 +939,8 @@ Text(Ch2EndingScene6)
 
 CAMERA_CENTERED [37, 2]
 STAL 30
-LoadCutsceneUnits(EndingSceneMysteriousFigureCutscene)
+LOAD1 1 EndingSceneMysteriousFigureCutscene
+ENUN
 MOVE 4 GreagorVillager [33,7]
 ENUN
 STAL 30

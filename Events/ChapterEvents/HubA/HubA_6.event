@@ -302,8 +302,8 @@ UNIT
 CutsceneNPCS_2: //Lua and new units + rochefort showing up
 UNIT Lua Captain 0 Level(1, Ally, False) [7,25] 0 0 0 0 [0, 0, 0, 0] NoAI 
 UNIT Rochefort 0 0 Level(1,NPC,False) [5,25] 0x0 0x0 0 0 [SteelMusket] NoAI
-UNIT Matteo Mercenary 0 Level(4,NPC,True) [6,25] 0 0 0 0 [SteelSword, IronBlade, ShoveGlove, Vulnerary] NoAI
-UNIT Suzanne Gunner 0 Level(4,NPC,True) [8,25] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
+UNIT Sargargala Mercenary 0 Level(4,NPC,True) [6,25] 0 0 0 0 [SteelSword, IronBlade, ShoveGlove, Vulnerary] NoAI
+UNIT Khazhak Gunner 0 Level(4,NPC,True) [8,25] 0 0 0 0 [Pistol, IronMusket, Blunderbuss, Vulnerary] NoAI
 UNIT
 
 CutsceneNPCS_3: //Slicer and Dicer, who show up to walk down towards Lua.
@@ -436,8 +436,8 @@ CLEE 0
 MUSC AvastMeHeartiesID
 LoadCutsceneUnits(CutsceneNPCS_2)
 MOVE 10 Lua [7,22]
-MOVE 10 Suzanne [8,23]
-MOVE 10 Matteo [6, 23]
+MOVE 10 Sargargala [8,23]
+MOVE 10 Khazhak [6, 23]
 MOVE 8 Rochefort [7,24]
 ENUN
 FlashCursor(Lua, 40)

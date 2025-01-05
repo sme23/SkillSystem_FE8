@@ -508,7 +508,7 @@ Use this to place[N]
 down a mine.[X]
 
 ## MetisTomeName
-Meti's Tome[X]
+Metis's Tome[X]
 
 ## MetisTomeDesc
 A knowledgeable tome that grants[N]
@@ -610,7 +610,8 @@ stealing, but stolen goods have[N]
 Ignore Spd or Wt when[N]
 stealing, but reduce[N]
 uses by 25%.[X]
-## QuickdrawName
+
+## QuickdrawTwoName
 Quickdraw[X]
 
 ## QuickdrawDesc
