@@ -175,7 +175,7 @@ UNIT
 IntroCutsceneDesertCrew2:
 UNIT Pilar 0 0 Level(1,Ally,True) [10,0] 0x0 0x0 0 0 [0x0] NoAI
 UNIT Razvan 0 0 Level(1,Ally,True) [9,0] 0x0 0x0 0 0 [0x0] NoAI
-UNIT Desiderio Cataphract 0 Level(4,Ally,True) [8,0] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Desiderio 0 0 Level(4,Ally,True) [8,0] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 IntroCutsceneAntlionScout:
