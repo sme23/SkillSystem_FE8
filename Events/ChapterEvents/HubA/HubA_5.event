@@ -102,7 +102,7 @@ UNIT TheDukes Hunter 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [MiniBow] AttackInRa
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [9,18] 0 0 0 0 [Fire] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [11,8] 0 0 0 0 [Surge] AttackInRangeAI
 UNIT TheDukes Shaman 0 Level(3, Enemy, True) [0,0] 0 0 0 0 [Thani] AttackInTwoAI
-UNIT BigBrick Fighter 0 Level(5, Enemy, True) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
+UNIT BigBrick Fighter 0 Level(8, Enemy, True) [9,0] 0 0 0 0 [Oversize] AttackInRangeAI
 UNIT Hakman Myrmidon 0 Level(5, Enemy, True) [8,1] 0 0 0 0 [Peacekeeper] AttackInRangeAI
 UNIT MrMist Mage 0 Level(6, Enemy, True) [12,17] 0 0 0 0 [Galestrike] AttackInRangeAI
 UNIT Yaoguai Ninja 0 Level(6, Enemy, True) [8,6] 0 0 0 0 [Compass] BossAI

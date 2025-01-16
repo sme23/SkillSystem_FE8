@@ -217,7 +217,7 @@ END_MAIN
 
 
 FataTemp:
-UNIT Fata Monk 0 Level(10,Ally,True) [3,6] 0 0 1 REDA3R6 [Elfire,Luna] NoAI
+UNIT Fata Monk 0 Level(11,Ally,True) [3,6] 0 0 1 REDA3R6 [Elfire,Luna] NoAI
 UNIT
 
 BadGuys:

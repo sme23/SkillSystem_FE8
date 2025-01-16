@@ -74,7 +74,7 @@ ENDA
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Jaime PegasusRider 0 Level(4,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(8,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -87,7 +87,7 @@ UNIT
 Units2:
 UNIT Lua Captain 0 Level(10,Ally,False) [11,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Jaime PegasusRider 0 Level(4,Ally,True) [10,13] 0 0 0 0 [SteelSword, IronSword, Vulnerary] NoAI
-UNIT Leonor Cleric 0 Level(8,Ally,True) [11,11] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Leonor Cleric 0 Level(6,Ally,True) [11,11] 0 0 0 0 [Barrier, Heal] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [8,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT Pilar 0 0 Level(10,Ally,False) [11,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
@@ -105,7 +105,7 @@ UNIT Lua Captain 0 Level(10,Ally,False) [12,18] 0 0 0 0 [Cutlass, IronSword, Iro
 UNIT
 
 NPCs:
-UNIT Leonor Cleric 0 Level(8,Ally,True) [7,5] 0 0 0 0 [Rescue, Barrier, Heal] NoAI
+UNIT Leonor Cleric 0 Level(6,Ally,True) [7,5] 0 0 0 0 [Barrier, Heal] NoAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [7,10] 0 0 0 0 [IronLance] ChargeAI
 UNIT Rebel Warden 0 Level(1,NPC,True) [10,8] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Rebel Deserter 0 Level(1,NPC,True) [12,9] 0 0 0 0 [IronLance] ChargeAI
@@ -116,12 +116,13 @@ UNIT
 Enemies:
 // Bottom Left
 UNIT Incendivis Monk 0 Level(3,Enemy,True) [0,3] 0 0 0 0 [Bolt] BossAI
+UNIT Incendivis Monk 0 Level(3,Enemy,True) [0,11] 0 0 0 0 [Bolt] BossAI
 
 UNIT Incendivis Fighter 0 Level(4,Enemy,True) [1,9] 0 0 0 0 [SteelAxe] GroupTwoAI
 UNIT Incendivis Myrmidon 0 Level(3,Enemy,True) [0,8] 0 0 0 0 [IronSword] GroupTwoAI
 
 //will eventually end up at [3,14], but for cutscene. he'll be elsewhere. 
-UNIT Felipe Soldier 0 Level(5,Enemy,True) [4,1] 0 0 0 0 [Javelin, Pike] BossAI 
+UNIT Felipe Soldier 0 Level(4,Enemy,True) [4,1] 0 0 0 0 [Javelin, Pike] BossAI 
 //also praise the 3,13 archer
 UNIT Incendivis Archer 0 Level(3,Enemy,True) [3,13] 0 0 0 0 [Longbow] BossAI
 
@@ -136,7 +137,7 @@ UNIT Incendivis LanceCav 0 Level(3,Enemy,True) [4,2] 0 0 0 0 [IronLance] ChargeA
 UNIT Incendivis AxeCav 0 Level(3,Enemy,True) [6,2] 0 0 0 0 [IronAxe] ChargeAI
 
 UNIT Incendivis Vanguard 0 Level(4,Enemy,True) [5,3] 0 0 0 0 [HandAxe] BossAI
-UNIT Manfred Mercenary 0 Level(4,Enemy,True) [21,0] 0 0 0 0 [SteelSword,KillingEdge] GroupThreeAI
+UNIT Manfred Mercenary 0 Level(5,Enemy,True) [21,0] 0 0 0 0 [SteelSword,KillingEdge] GroupThreeAI
 UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [21,2] 0 0 0 0 [IronAxe] GroupThreeAI
 UNIT CrimsonHeart Brigand 0 Level(4,Enemy,True) [19,0] 0 0 0 0 [IronAxe] GroupThreeAI
 
@@ -271,7 +272,7 @@ ScrollVillage:
 SetBackground(HouseBG)
 Text(A2Village)
 EraseBackground
-GiveItemWithDurability(SkillScroll,ResoluteSacrificeID,0xFFFF)
+GiveItem(Rescue,0xFFFF)
 NoFade
 ENDA
 

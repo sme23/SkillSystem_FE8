@@ -1708,7 +1708,7 @@ a chapter, +2 MOV. If deployed two maps[N]
 in a row, -1 MOV (Min: Base, Max: 15).[X]
 
 ## SD_ForestFriend
-Forest Friend: Unit can traverse[N]
+Forester: Unit can traverse[N]
 Thickets/Forests for 2/1 MOV.[X]
 
 ## SD_Dogfight

@@ -214,6 +214,12 @@ SongTable(OneLastVoyageID,OneLastVoyage,MapMusicGroup)
 #include "songs/preps/OneLastVoyage.event"
 }
 
+//39 - The Storm Upon Us
+{
+SongTable(TheStormUponUsID,TheStormUponUs,MapMusicGroup)
+#include "songs/boss/TheStormUponUs.event" 
+}
+
 
 // --------------- SONGS: GUI AND SFX ---------------
 

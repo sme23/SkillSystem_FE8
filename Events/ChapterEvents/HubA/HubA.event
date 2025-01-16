@@ -465,7 +465,6 @@ BranchIfHubNotVisited(1, BeginningSceneFirstTimeCave)
 ENUT DocksToPort
 ENUT TavernToPort
 ENUT GotoChapter2Flag
-ENUT PeddlerHubAEncounterFlag
 ENUT 4 //port music only
 CALL PortSpawnEvent
 CheckHowManyHubChaptersCompleted
@@ -659,6 +658,8 @@ ENDA
 CameBackFromDocksFirstTime:
 ENUF WentToHubA4
 ENUF WentToHubA5
+ENUF PeddlerHubAEncounterFlag
+
 InitiateTileRevertInHub(CUSADockBlues, ClearDockTraps, AddHubABackToBaseTraps, 0, LuaBackFromDaDocks, PortSpawnEventFirstTime)
 SetAllHubChapterFlags
 ENUT PortToBase
@@ -779,15 +780,45 @@ NoFade
 ENDA
 
 LuaFirstTripCaveGroup:
-UNIT Lua Captain 0 Level(10,Ally,False) [9,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [15,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Curate 0 Level(10,Ally,False) [17,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+HermenArrives:
+UNIT Hermenegildo Myrmidon 0 Level(2,Ally,False) [5,13] 0 0 1 REDA13R11 [LightBrand, IronSword, Vulnerary] NoAI
 UNIT
 
 BeginningSceneFirstTimeCave:
 SetBackground(Ship)
 MUSC StillZephyrsID
 Text(HubABeginningScene1)
-SetBackground(Fort)
-Text(HubABeginningScene2)
+FADI 10
+LOMA Chapter2
+RemoveAll
+CALL ClearChapter2Traps
+LOAD1 0 LuaFirstTripCaveGroup
+ENUN
+CAMERA_CENTERED Lua
+EraseBackground
+FlashCursor(Lua,30)
+FlashCursor(Razvan,30)
+TEXTSTART
+TEXTSHOW HubABeginningScene2
+TEXTEND
+LOAD1 1 HermenArrives
+TEXTCONT
+TEXTEND
+REMA
+ENUN
+FlashCursor(Hermenegildo,60)
+Text(HubABeginningScene2_2)
+MOVE 15 Razvan [0,17]
+MOVE 15 Hermenegildo [0,18]
+STAL 30
+Text(HubABeginningScene2_3)
+ENUN
+HIDEUNIT Razvan
+REMOVEUNIT Hermenegildo
 ENUT 4
 ENUT MainRoomToPort //sets immediate temp flag that i don't want triggered
 ENUT WentToPortGreagorDocks //sets future flag EIDs that I don't want triggered yet
@@ -806,14 +837,6 @@ ENUT PilarEstelleHubATalkFlag
 ENUT DesiderioIdaHubATalkFlag
 ENUT GotoChapter2Flag
 ENUT ElodiaChargeFlag
-FADI 10
-LOMA Chapter2
-RemoveAll
-CAMERA_CENTERED [9,12]
-CALL ClearChapter2Traps
-EraseBackground
-LOAD1 0 LuaFirstTripCaveGroup
-ENUN
 ENUT 4
 CAMERA_CENTERED [2,0]
 CenterTextbox(HubTutorial)
@@ -912,7 +935,7 @@ UNIT GreagorVillagerC VillagerMAdult 0 Level(1,NPC, False) [26,13] 0 0 0 0 [] No
 UNIT
 
 NPCSailorGroup: //docks
-UNIT GreagorSailor PirateClass 0 Level(3,NPC, False) [8,5] 0 0 0 0 [SlimAxe] NoAI
+UNIT GreagorSailor Fighter 0 Level(3,NPC, True) [8,5] 0 0 0 0 [SlimAxe] NoAI
 UNIT
 
 NPCPatrollerGroup: //main
@@ -1064,7 +1087,7 @@ PortSpawnEventFirstTime:
 LoadNPCUnitGroupIfEIDNotSet(WentToHubA2, 3, JaimeUnitGroup)
 LoadNPCUnitGroupIfEIDNotSet(WentToHubA3, 1, OndehBikoUnitGroup)
 LoadNPCUnitGroupIfEIDNotSet(WentToHubA6, 2, RochefortUnitGroup)
-Call PortSpawnEventNPCs
+Call PortSpawnEventNPCsFirstTime
 NoFade
 ENDA
 
@@ -1090,6 +1113,11 @@ BEQ 777 s0 sC
 	LoadCutsceneUnits(PeddlerGroupAfterInitial)
 LABEL 777
 ENDA
+
+PortSpawnEventNPCsFirstTime:
+NoFade
+ENDA
+
 
 // Spawn the sailor at the beginning.
 // After 1 chapter cleared, spawn the arguing NPCs.

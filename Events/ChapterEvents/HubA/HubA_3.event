@@ -176,8 +176,8 @@ ENDA
 
 CutsceneUnits:
 UNIT Lua 0 0 Level(10,Ally,False) [2,15]  0 0 1 REDA2R6 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Ondeh 0 0 Level(4,NPC,False) [2,16]  0x0 0 1 REDA3R7 [ShiningBow,IronBow,Vulnerary] NoAI
-UNIT Biko 0 0 Level(1,NPC,False) [3,16]   0x0 0 1 REDA1R7 [IronLance,Vulnerary] NoAI
+UNIT Ondeh 0 0 Level(4,Ally,True) [2,16]  0x0 0 1 REDA3R7 [ShiningBow,IronBow,Vulnerary] NoAI
+UNIT Biko 0 0 Level(1,Ally,True) [3,16]   0x0 0 1 REDA1R7 [IronLance,Vulnerary] NoAI
 UNIT
 
 Units1:
@@ -249,7 +249,7 @@ UNIT RiojaReaper Myrmidon 0 Level(3, Enemy, True) [5,15] 0 0 0 0 [Onigiri] Group
 UNIT RiojaReaper Thief 0 Level(3, Enemy, True) [7,12] 0 0 0 0 [SteelKnife] AttackWhenInRangeAI
 
 UNIT RiojaReaper Mage 0 Level(3, Enemy, True) [14,1] 0 0 1 REDA6R0 [Fire] GroupTwoAI
-UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [14,4] 0 0 1 REDA10R4 [Pike, Pitchfork] GroupTwoAI
+UNIT RiojaReaper Soldier 0 Level(4, Enemy, True) [14,4] 0 0 1 REDA10R4 [Pike, Pitchfork] AttackInTwoAI
 UNIT RiojaReaper Mercenary 0 Level(3, Enemy, True) [4,10] 0 0 1 REDA6R16 [SteelSword] GroupTwoAI
 UNIT RiojaReaper Brigand 0 Level(3, Enemy, True) [15,0] 0 0 0 0 [IronAxe] GroupTwoAI
 
@@ -334,6 +334,7 @@ CHECK_ALIVE Biko
 BEQ 775 s0 sC
 	CHECK_ALIVE Ondeh
 	BEQ 775 s0 sC
+        MUSC CherishTheDeadID
 		Text(A3_Ending_AllAlive) //If both Biko and Ondeh are alive, then play cutscene with all of them.
 		GOTO 776
 LABEL 775
