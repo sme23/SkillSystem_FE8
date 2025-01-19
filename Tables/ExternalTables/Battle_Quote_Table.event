@@ -105,7 +105,11 @@ SpecifiedBattleConvo(Azahar,Lua,      HubB_3,0xD,LuaAzaharBQ)
 UnspecifiedBattleConvo(Azahar,        HubB_3,0x1,AzaharBQ)
 
 // Chapter B-4
-UnspecifiedBattleConvo(Javier,HubB_4,0x14,JavierBQ)
+SpecifiedBattleConvo(Javier,Lexa,HubB_4,0x20,B4_BossQuote_Lexa)
+SpecifiedBattleConvo(Javier,Adrian,HubB_4,0x21,B4_BossQuote_Adrian)
+SpecifiedBattleConvo(Javier,Noah,HubB_4,0x22,B4_BossQuote_Noah)
+SpecifiedBattleConvo(Javier,Magdalena,HubB_4,0x23,B4_BossQuote_Magdalena)
+UnspecifiedBattleConvo(Javier,HubB_4,0x15,JavierBQ)
 
 // Chapter B-5
 SpecifiedBattleConvo(Nicodemus,Fata,HubB_5,0x11,B5_BQ_NicodemusFata)
