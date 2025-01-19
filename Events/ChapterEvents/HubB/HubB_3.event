@@ -6,10 +6,9 @@
 #define RebelThiefDeathQuoteFlag 0xF
 #define WasARebelKilledFlag 0x10
 
-#define TC_B3CutsceneVillage 		0x3
-#define TC_B3CutsceneFortOutside 	0x4
-#define TC_B3CutsceneFortInterior 	0x5
-#define TC_B3CutsceneFortOpenDoor 	0x6
+#define TC_B3CutsceneVillage 		0x0
+#define TC_B3CutsceneFortOutside 	0x1
+#define TC_B3CutsceneFortInterior 	0x2
 
 EventPointerTable(HubB_3EventsID, PointerList)
 

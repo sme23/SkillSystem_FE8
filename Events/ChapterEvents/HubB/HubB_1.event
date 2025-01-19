@@ -1,7 +1,7 @@
 EventPointerTable(HubB_1EventsID, PointerList)
 
-#define TC_B1Cutscene1 0xB
-#define TC_B1Cutscene2 0xC
+#define TC_B1Cutscene1 0x0
+#define TC_B1Cutscene2 0x1
 
 PointerList:
 POIN TurnBasedEvents

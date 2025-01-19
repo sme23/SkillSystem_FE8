@@ -111,7 +111,7 @@ Dunno:
 MainEvents:
 	BeginningScene:
 		FADI 99
-		TILECHANGE 0x3
+		TILECHANGE 0x0
 		CAMERA_CENTERED [0,13]
 		FADU 12
 		BROWNBOX HubB_4TownName [0,0]
@@ -136,7 +136,7 @@ MainEvents:
 		EraseBackground
 		FADI 12
 		CUSA 0
-		TILEREVERT 0x3
+		TILEREVERT 0x0
 		CAMERA_CENTERED [14,26]
 		FADI 12
 		STAL 60
