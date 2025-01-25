@@ -6,6 +6,10 @@
 #define RebelThiefDeathQuoteFlag 0xF
 #define WasARebelKilledFlag 0x10
 
+#define TC_B3CutsceneVillage 		0x0
+#define TC_B3CutsceneFortOutside 	0x1
+#define TC_B3CutsceneFortInterior 	0x2
+
 EventPointerTable(HubB_3EventsID, PointerList)
 
 PointerList:
@@ -220,7 +224,7 @@ UNIT Rebel Thief 0 Level(11,Enemy,True) [19,0] 0 0 0 0 [SteelKnife] BossAI
 UNIT Rebel Deserter 0 Level(10,Enemy,True) [8,12] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
 UNIT Rebel Thief 0 Level(10,Enemy,True) [6,10] 0 0 0 0 [IronKnife] PursueWithoutHeedAI
 UNIT Rebel Deserter 0 Level(10,Enemy,True) [4,12] 0 0 0 0 [SteelLance] PursueWithoutHeedAI
-UNIT Rebel Mercenary 0 Level(10,Enemy,True) [8,3] 0 0 0 0 [SteelSword] PursueWithoutHeedAI
+UNIT Rebel Mercenary 0 Level(10,Enemy,True) [8,4] 0 0 0 0 [SteelSword] PursueWithoutHeedAI
 
 //fleeing thieves
 UNIT RebelThief Thief 0 Level(10,Enemy,True) [7,8] 0 0 0 0 [IronKnife, SuppliesItem] EscapeOnlyAI
@@ -242,40 +246,231 @@ UNIT Rebel Deserter 0 Level(10,Enemy,True) [24,11] 0 0 0 0 [SteelLance] AttackIn
 UNIT Rebel Myrmidon 0 Level(10,Enemy,True) [26,14] 0 0 0 0 [IronSword] AttackInRangeAI
 UNIT
 
+//Cutscene Units
+
+IntroCutsceneVillage:
+UNIT Lua Captain 0 Level(10,Ally,False) [5,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [6,11] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Razvan 0 0 Level(1,Ally,True) [5,12] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Desiderio 0 0 Level(4,Ally,True) [6,12] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+IntroCutsceneFortEntrance:
+UNIT Lua Captain 0 Level(10,Ally,False) [8,13] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [10,14] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Razvan 0 0 Level(1,Ally,True) [9,14] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Desiderio 0 0 Level(4,Ally,True) [9,13] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+IntroCutsceneErnieSwoopingIn:
+UNIT Ernest Gryphoknight 0 Level(10,NPC,True) [9,2] 0 0 0 0 [SilverLance, Pike, Javelin] NoAI
+UNIT
+
+IntroCutsceneFortNight:
+UNIT Lua Captain 0 Level(10,Ally,False) [15,2] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [28,6] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Razvan 0 0 Level(1,Ally,True) [21,4] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Desiderio 0 0 Level(4,Ally,True) [6,8] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+IntroCutsceneFortDay:
+UNIT Desiderio 0 0 Level(4,Ally,True) [16,5] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
+IntroCutsceneLuaArrives:
+UNIT Lua Captain 0 Level(10,Ally,False) [26,8] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+
+IntroCutsceneUnitsGathered:
+UNIT Pilar 0 0 Level(1,Ally,True) [4,4] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Razvan 0 0 Level(1,Ally,True) [5,2] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Ernest Gryphoknight 0 Level(10,NPC,True) [7,3] 0 0 0 0 [SilverLance, Pike, Javelin] NoAI
+UNIT
+
+IntroCutsceneLuaAndDesiderio:
+UNIT Lua Captain 0 Level(10,Ally,False) [6,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Desiderio 0 0 Level(4,Ally,True) [5,0] 0x0 0x0 0 0 [0x0] NoAI
+UNIT
+
 BeginningScene:
-SetBackground(0x8) //Boat
+//Village entrance; they arrive there, about to head north to the fort.
+FADI 99
+TILECHANGE TC_B3CutsceneVillage
+CAMERA_CENTERED [0,0]
 MUSC WindGustSoundID
+FADU 12
+BROWNBOX HubB_3TownName [0,0]
+STAL 60
+LoadCutsceneUnits(IntroCutsceneVillage)
+MOVE 3 Desiderio [6,4]
+STAL 15
+MOVE 3 Lua [7,5]
+STAL 30
+MOVE 3 Pilar [5,5]
+STAL 20
+MOVE 3 Razvan [6,6]
+ENUN
+FlashCursor(Desiderio, 60)
 Text(HubB3BeginningScene1_1)
+
+//They walk off.
+STAL 10
+MOVE 6 Desiderio [9,0]
+STAL 15
+MOVE 6 Lua [8,0]
+MOVE 6 Pilar [8,1]
+MOVE 6 Razvan [9,1]
 FADI 10
-STAL 30
-SetBackground(0x29) //outside a ruined fort
+ENUN
+CLEA 0
+
+//In front of the fort now. 
+CAMERA_CENTERED [0,7]
+STAL 60
+TILEREVERT TC_B3CutsceneVillage
+TILECHANGE TC_B3CutsceneFortOutside
+LoadCutsceneUnits(IntroCutsceneFortEntrance)
+STAL 10
+FADU 10
+MOVE 4 Lua [8,9]
+MOVE 4 Desiderio [9,8]
+STAL 40
+MOVE 4 Pilar [10,9]
+MOVE 4 Razvan [9,10]
+ENUN
+STAL 60
+//outside a ruined fort
+MUSC 0x7FFF
 Text(HubB3BeginningScene1_2)
+
+//Ernest appears, but isn't quite hostile!
+LoadCutsceneUnits(IntroCutsceneErnieSwoopingIn)
+MOVE 6 Ernest [9,7]
 MUSC StillZephyrsID
-Text(HubB3BeginningScene1_3)
-FADI 10
+ENUN
+FlashCursor(Ernest, 60)
+Text(HubB3BeginningScene1_3A)
+
+//Others move up.
+
+MOVE 6 Pilar [10,1]
+MOVE 6 Razvan [9,1]
+MOVE 6 Desiderio [9,0]
+MOVE 6 Ernest [10,0]
+ENUN
 STAL 30
-SetBackground(0x11) //night building?
+FlashCursor(Lua, 60)
+
+Text(HubB3BeginningScene1_3B)
+FADI 10
+CLEA 0
+CLEE 0
+CLEN 0
+
+//Time skipping to a new area.
+STAL 60
 MUSC NighttimeSoundID
-Text(HubB3BeginningScene2_1)
+TILEREVERT TC_B3CutsceneFortOutside
+TILECHANGE TC_B3CutsceneFortInterior
+LoadCutsceneUnits(IntroCutsceneFortNight)
+CAMERA_CENTERED [21,8]
+FADU 3
+STAL 60
+FlashCursor(Razvan, 60)
+Text(HubB3BeginningScene2_1A)
+STAL 20
+
+MOVE 2 Razvan [20,5]
+ENUN
+STAL 30
+Text(HubB3BeginningScene2_1B)
+MOVE 3 Razvan [16,9]
+ENUN
+STAL 30
+CameraCursor(Desiderio)
+MUSC 0x7FFF
 Text(HubB3BeginningScene2_2)
-FADI 10
+
+//Razvan approaches Desiderio.
+MOVE 4 Razvan [7,9]
+STAL 85
+WEATHER 1
+ENUN
 STAL 30
-SetBackground(0x20) //night forest area
+FlashCursor(Razvan, 60)
 MUSC CastawayHeartID                    
-Text(HubB3BeginningScene2_3)
-FADI 10
+Text(HubB3BeginningScene2_3A)
+
+//Camera pans to the graves of the fallen Roseblades. 
+CAMERA_CENTERED [5,2]
+STAL 60
+MOVE 2 Razvan [7,8]
+ENUN
 STAL 30
-SetBackground(0x0) //house background
+Text(HubB3BeginningScene2_3B)
+
+//Razvan runs off. 
+MOVE 4 Razvan [20,9]
+ENUN
+STAL 60
+Text(HubB3BeginningScene2_3C)
+
+STAL 10
+MOVE 3 Desiderio [5,4]
+ENUN
+FlashCursor(5, 2, 60)
+Text(HubB3BeginningScene2_3D)
+STAL 30
+
+FADI 3
+CLEN 0
+CLEA 0
+MUSC 0x7FFF
+STAL 30
+WEATHER 0 
+
+LoadCutsceneUnits(IntroCutsceneFortDay) //desiderio in his room alone 
+CAMERA_CENTERED Desiderio
+SetBackground(0x35)
+FADU 3
+CenterTextbox(HubB3BeginningScene3_NarratorMessage)
+EraseBackground
+STAL 40
+FlashCursor(Desiderio, 60)
+Text(HubB3BeginningScene3_1A)
+
 MUSC SwabbieTalkID
-Text(HubB3BeginningScene3_1)
+LoadCutsceneUnits(IntroCutsceneLuaArrives)
+MOVE 10 Lua [16,7]
+ENUN
+FlashCursor(Lua, 60)
+Text(HubB3BeginningScene3_1B)
+STAL 30
 FADI 10
 STAL 30
+
+TILEREVERT TC_B3CutsceneFortInterior
+CAMERA_CENTERED [0,0]
+CLEN 0
+LoadCutsceneUnits(IntroCutsceneUnitsGathered)
+LoadEnemies(EnemyUnits)
+FADU 3
+STAL 50
+LoadCutsceneUnits(IntroCutsceneLuaAndDesiderio)
+MOVE 3 Lua [6,2]
+MOVE 3 Desiderio [5,1]
+ENUN 
+FlashCursor(Lua, 60)
+
 SetBackground(0xA) //inner castle area
 MUSC FinInTheCloudsID
 Text(HubB3BeginningScene3_2)
+EraseBackground
+STAL 10
+CUSA Ernest
+STAL 40
 FADI 10
-LoadPlayerUnits(NewUnits) 
-LoadEnemies(EnemyUnits)
+CLEA 0
+LoadPlayerUnits(NewUnits)
 GotoPrepScreen
 NoFade 
 ENDA
@@ -292,7 +487,7 @@ BEQ 776 s0 sC //if ernest is dead, skip the rest
     CHECK_EVENTID RebelThiefDeathQuoteFlag
     BNE 777 s0 sC
         Text(B3EndingScene2ThievesSpared) //if the flag is not set, the thieves were spared
-        GiveItem(Impaler, Lua)
+        GiveItem(Thorn, Desiderio)
         GOTO 778
     LABEL 777
         Text(B3EndingScene2ThievesNotSpared)

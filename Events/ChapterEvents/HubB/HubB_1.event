@@ -1,7 +1,7 @@
 EventPointerTable(HubB_1EventsID, PointerList)
 
-#define TC_B1Cutscene1 0xB
-#define TC_B1Cutscene2 0xC
+#define TC_B1Cutscene1 0x0
+#define TC_B1Cutscene2 0x1
 
 PointerList:
 POIN TurnBasedEvents
@@ -175,7 +175,7 @@ UNIT
 IntroCutsceneDesertCrew2:
 UNIT Pilar 0 0 Level(1,Ally,True) [10,0] 0x0 0x0 0 0 [0x0] NoAI
 UNIT Razvan 0 0 Level(1,Ally,True) [9,0] 0x0 0x0 0 0 [0x0] NoAI
-UNIT Desiderio Cataphract 0 Level(4,Ally,True) [8,0] 0x0 0x0 0 0 [0x0] NoAI
+UNIT Desiderio 0 0 Level(4,Ally,True) [8,0] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 IntroCutsceneAntlionScout:

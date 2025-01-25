@@ -38,6 +38,7 @@
 #define Sidepierce $d9
 #define Pitchfork $df
 #define GuBalg $e8
+#define Thorn $f7
 
 //AXES
 //#define IronAxe $1f

@@ -19,6 +19,7 @@ PointerList:
 	//12-13 (Avenge Quotes)
 	//14-16 (Boss Quotes (15/16 Not done yet))
 	//17 (Seperate flag for keeping track of one or both units being dead)
+	//20-23 (additional boss quotes)
 
 
 //Todo List
@@ -39,7 +40,7 @@ PointerList:
 	// - Game Over Event (X)
 	// - Playtest Feedback Addressment (X)
 	// - Personal Playtest (X)
-	// - Post Map Lexa/Adrian & Noah Convos if they survive (Maybe)
+	// - Post Map Lexa/Adrian & Noah Convos if they survive (X) [Done by Muffle!] 
 	// - Water Animations
 	// - Playtesting/feedback addressing
 
@@ -109,13 +110,36 @@ Dunno:
 
 MainEvents:
 	BeginningScene:
-		//LOAD1 1 CutsceneUnits1
-		//ENUN
-		MUSC 0x47
-		//FlagIsSet(10,1)
-		CAMERA_CENTERED Lua
+		FADI 99
+		TILECHANGE 0x0
+		CAMERA_CENTERED [0,13]
+		FADU 12
+		BROWNBOX HubB_4TownName [0,0]
+		LOAD1 1 CutsceneUnits0
+		MOVE 4 Lua [7,15]
+		MOVE 4 Orlando [8,15]
+		MOVE 3 Desiderio [6,16]
+		MOVE 3 Pilar [9,16]
+		ENUN
+		STAL 60
 		SetBackground(Desert)
-		Text(HubB_4BeginningScene1)
+		MUSC 0x47
+		CHECK_EVENTID WentToHub2
+		BNE 777 s0 sC
+			Text(HubB_4BeginningScene1_B2Cleared) //if the flag is not set, the party has seen a desert already
+			GOTO 778
+		LABEL 777
+			Text(HubB_4BeginningScene1_B2NotCleared)
+		LABEL 778
+		//ENUN
+		//FlagIsSet(10,1)
+		EraseBackground
+		FADI 12
+		CUSA 0
+		TILEREVERT 0x0
+		CAMERA_CENTERED [14,26]
+		FADI 12
+		STAL 60
 		CALL $9EE2C4
 		CamOn
 		LOAD1 1 CutsceneUnits1
@@ -127,11 +151,15 @@ MainEvents:
 		ENUN
 		CamOff
 		CAMERA_CENTERED Lua
+		SetBackground(Desert)
 		Text(HubB_4BeginningScene2)
+		EraseBackground
 		LOAD1 1 CutsceneUnits2
 		STAL 20
 		MUSC AvastMeHeartiesID
+		SetBackground(Desert)
 		Text(HubB_4BeginningScene3)
+		EraseBackground
 		FADI 10
 		STAL 20
 		REMOVEALL_BLUE
@@ -143,6 +171,8 @@ MainEvents:
 		LOAD1 1 EnemyUnits3
 		LOAD1 1 JavierUnits
 		//LOAD1 1 TestUnit
+		SetUnitItemDurability(6, 14, 1, MagTonic) //Give enemy a magic tonic
+		SetUnitItemDurability(15, 6, 1, StrTonic) //Give enemy a strength tonic
 		GoToPrepScreen2
 		CAMERA_CENTERED[14,23]
 		FADU 10
@@ -162,9 +192,19 @@ MainEvents:
 		GiveItem(BlueGem,Lua)
 		//CALL $9EE2C4
 		FADI 3
+		CHECK_ALIVE Noah
+		BEQ 775 0xC 0x0 //If Noah is still alive, play his little sequence.
+			CLEAN
+			SetBackground(Desert)
+			MUSC WelcomeAboardMateyID
+			STAL 30
+			Text(HubB_4EndingScene_NoahAlive)
+			FADI 3
+			CLEAN
+		LABEL 775
 		CLEAN
 		MUSC SwabbieTalkID
-		STAL 60
+		STAL 30
 		FADU 2
 		TEXTSTART
 		TEXTSHOW(HubB_4EndingScene2)
@@ -175,11 +215,37 @@ MainEvents:
 		TEXTCONT
 		TEXTEND
 		REMA
+		
 		FADI 2
+		CLEAN
+		
+		CHECK_ALIVE Adrian
+		BEQ 776 0xC 0x0 //If Adrian is alive, continue, otherwise end. 
+			CHECK_ALIVE Lexa
+			BEQ 776 0xC 0x0 //If Lexa is alive, continue to an additional cutscene., otherwise end. 
+				MUSC StillZephyrsID
+				STAL 30 
+				SetBackground(Ship)
+				CHECK_ALIVE Noah
+				BEQ 777 0xC 0x0 //If Noah is still alive, play a little sequence before playing their cutscene. 
+					Text(HubB_4EndingScene_AdrianLexaAlive_NoahAlive)
+				LABEL 777
+					Text(HubB_4EndingScene_AdrianLexaAlive)
+				FADI 2
+				CLEAN
+		LABEL 776
+		
 		GoToHubChapter(HubB)
 		ENDA
 
 	CutsceneUnits:
+		CutsceneUnits0:
+			UNIT Lua Captain 0 Level(1, Ally, False) [7,19] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT Orlando Trickster 0 Level(1, Ally, False) [8,19] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT Desiderio Vanguard 0 Level(1, Ally, False) [6,20] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT Pilar Ninja 0 Level(1, Ally, False) [9,20] 0 0 0 0 [0, 0, 0, 0] NoAI
+			UNIT
+	
 		CutsceneUnits1:
 			UNIT Lua Captain 0 Level(1, Ally, False) [14,26] 0 0 0 0 [0, 0, 0, 0] NoAI
 			UNIT Orlando Trickster 0 Level(1, Ally, False) [15,26] 0 0 0 0 [0, 0, 0, 0] NoAI
@@ -387,7 +453,7 @@ UnitPlacement:
 	EnemyUnits2:
 		UNIT B4Bandit Fighter		Javier Level(9,Enemy,True) [8,15] 0 0 0 0 [SteelAxe] TwoRangeAI
 		UNIT B4Bandit Mercenary		Javier Level(9,Enemy,True) [13,13] 0 0 0 0 [SteelSword] AttackInRangeAI
-		UNIT B4Bandit Shaman		Javier Level(9,Enemy,True) [6,14] 0 0 0 0 [Elfire] AttackInRangeAI
+		UNIT B4Bandit Shaman		Javier Level(9,Enemy,True) [6,14] 0 0 0 0 [Elfire, Tonic] AttackInRangeAI
 		UNIT B4Bandit Cavalier		Javier Level(9,Enemy,True) [1,13] 0 0 0 0 [IronLance] AttackInRangeAI
 		UNIT B4Bandit GriffinRider	Javier Level(9,Enemy,True) [8,15] 0 0 0 0 [IronLance] AttackInRangeAI
 		UNIT B4Bandit Thief			Javier Level(9,Enemy,True) [17,13] 0 0 0 0 [SteelKnife] AttackInRangeAI
@@ -402,10 +468,10 @@ UnitPlacement:
 	EnemyUnits3:
 		UNIT B4Bandit Deserter		Javier Level(9,Enemy,True) [17,9] 0 0 0 0 [SteelLance] AttackInRangeAI
 		UNIT B4Bandit AxeCav		Javier Level(9,Enemy,True) [12,7] 0 0 0 0 [IronAxe] AttackInRangeAI
-		UNIT B4Bandit Mage			Javier Level(9,Enemy,True) [17,7] 0 0 0 0 [Elsurge] GroupThreeAI
+		UNIT B4Bandit Mage			Javier Level(9,Enemy,True) [17,7] 0 0 0 0 [Elsurge, Vulnerary] GroupThreeAI
 		UNIT B4Bandit Mercenary		Javier Level(9,Enemy,True) [13,5] 0 0 0 0 [Onigiri] GroupThreeAI
 		UNIT B4Bandit Vanguard		Javier Level(10,Enemy,True) [8,7] 0 0 0 0 [Oversize] AttackInRangeAI
-		UNIT B4Bandit Warrior		Javier Level(12,Enemy,True) [15,6] 0 0 0 0 [SteelAxe] GroupThreeAI
+		UNIT B4Bandit Warrior		Javier Level(12,Enemy,True) [15,6] 0 0 0 0 [SteelAxe, Tonic] GroupThreeAI
 		UNIT B4Bandit Myrmidon		Javier Level(9,Enemy,True) [5,10] 0 0 0 0 [SteelSword] AttackInRangeAI
 		UNIT B4Bandit Brigand		Javier Level(9,Enemy,True) [2,10] 0 0 0 0 [Bloodaxe] AttackInRangeAI
 		UNIT B4Bandit PegasusRider	Javier Level(9,Enemy,True) [7,1] 0 0 0 0 [SteelSword] GroupFourAI
@@ -419,7 +485,7 @@ UnitPlacement:
 		UNIT B4Bandit SwordCav		Javier Level(10,Enemy,True) [26,8] 0 0 0 0 [IronBlade] GroupFiveAI
 		UNIT B4Bandit Myrmidon		Javier Level(10,Enemy,True) [22,8] 0 0 0 0 [Rapier] GroupFiveAI
 		UNIT B4Bandit Brigand		Javier Level(10,Enemy,True) [28,7] 0 0 0 0 [Crusher] GroupFiveAI
-		UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [21,4] 0 0 0 0 [SteelBlade] TwoRangeAI
+		UNIT B4Bandit Mercenary		Javier Level(10,Enemy,True) [21,4] 0 0 0 0 [SteelBlade, Vulnerary] TwoRangeAI
 		UNIT B4Bandit Deserter		Javier Level(10,Enemy,True) [23,5] 0 0 0 0 [Pike] AttackInRangeAI
 		UNIT B4Bandit Hunter		Javier Level(10,Enemy,True) [24,2] 0 0 0 0 [Greatbow] AttackInRangeAI
 		UNIT B4Bandit Ninja			Javier Level(10,Enemy,True) [28,3] 0 0 0 0 [SteelDagger,Stiletto] AttackInRangeAI

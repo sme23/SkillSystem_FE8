@@ -17,7 +17,10 @@ Rout enemies in turn limit.[N]
 [ML][LoadLua]
 Haiii[A][X]
 
-## HubB_4BeginningScene1
+## HubB_4TownName
+Saint Domingo[X]
+
+## HubB_4BeginningScene1_B2NotCleared
 [FL][LoadOrlando]
 [L][LoadPilar]
 [R][LoadLua]
@@ -44,8 +47,36 @@ Let's keep our guard up, then.[AN]
 You never truly know what you'll find,[N]
 this far from the empire's center.[A][X]
 
+## HubB_4BeginningScene1_B2Cleared
+[FL][LoadOrlando]
+[L][LoadPilar]
+[R][LoadLua]
+[FR][LoadDesiderio]
+[R][2LB]
+Finally,[.4] I can see the gates.[AN]
+[CloseEyes]Didn't imagine we'd be walking[N]
+through the desert again so soon[Beat][AN][OpenEyes]
 
+[FR][2LB]
+Have to agree here boss.[A] If I have to[N]
+see sand again after all of this[Beat][AN]
 
+[FL][3LB]
+Yes, I enjoyed that little excursion[N]
+out into the middle of the desert.[AN]
+We're here now, either way.[.4][N]
+Best look presentable and try and act[N]
+like we aren't pirates on the run.[A]
+
+[R][2LB]
+Looks a bit quiet up ahead,[.4] not a guard[N]
+in sight.[.4] Bit unusual if you ask me.[A]
+
+[FL][2LB]
+Hmm.[.4] Now that you mention it[Beat][N]
+Let's keep our guard up, then.[AN]
+You never truly know what you'll find,[N]
+this far from the empire's center.[A][X]
 
 ## HubB_4BeginningScene2
 [FL][LoadOrlando]
@@ -187,7 +218,232 @@ Sir-[.4] we can't-[.4][A]
 But you can,[.4] now go before they get[N]
 here.[.4] Lest you get into another scuffle.[A][X]
 
+## HubB_4EndingScene_NoahAlive
+[ML][LoadLua]
+Skysabers, back through the entrance![AN]
+The imperials are close to landing, we'll[N]
+need to hoof it back to the ship![AN]
+[FFR][LoadNoah]
+*Huff, huff[Beat]*[AN]
+J-[.4]Just a moment captain![AN][CSS]
+[MoMR]
+[ML]
+Oh, you're one of the town[N]
+guard in this place, right?[AN]
+We appreciate the help you gave in[N]
+the fight, but we're moving out now.[AN]
+[MR]
+H-[.4]Heh, that's exactly it, captain.[AN]
+I need to keep up with y-[.4]you all, if[N]
+I'm gonna join up w-[.4]with you all![AN]
+[ML]
+You want to fully join the crew?[AN]
+I'm flattered, but wouldn't you want to[N]
+rebuild?[A] Isn't this place your home?[AN]
+[MR]
+I-[.4]I am, but uh[Beat]those bandits you wiped[N]
+out already killed the rest of the guard[Beat][AN]
+I don't have anything left here, a-[.4]as[N]
+depressing as that is to say[Beat][AN]
+B-[.4]But, you all, exploring the world,[N]
+crushing bad guys right in the face?[AN]
+That's s-[.4]something I always told my[N]
+friends I'd be doing one day.[AN]
+No b-[.4]better time like the present,[N]
+wouldn't that be right, captain?[AN]
+[ML][3LB]
+You make it sound all so simple[Beat]but[N]
+you've got the right notions.[AN]
+Noah, was it?[A] I'm Captain Lua, and[N]
+as long as you don't fall behind in[N]
+the sands, then you're onboard.[AN]
+[MR][MoMR][2LB]
+Y-[.4]Yeah![A] [ToggleSmile]Thank you captain, [N]
+I-[.4]I won't let you down![AN][X]
 
+//...I definitely think this guy and Bolton should get some dialogue.
+
+//Additional little preamble mentioning Noah if he's still alive.
+## HubB_4EndingScene_AdrianLexaAlive_NoahAlive
+[MR][LoadOrlando]
+[L][LoadLua]
+Everyone back on the ship, Orlando?[AN]
+[MR]
+Quite right, Lua, everyone's[N]
+accounted for.[AN]
+That young fellow, Noah?[AN]
+He's asked where the cots were[N]
+as soon as he got on-board.[AN]
+To think an old [OQ]fossil[CQ][N]
+like me has more energy, eh?[AN]
+
+[FFR]
+Hey, don't count us out either![AN][X]
+
+## HubB_4EndingScene_AdrianLexaAlive
+[L][LoadLua]
+[FL][LoadOrlando]
+[FR][LoadAdrian]
+[R][LoadLexa]
+[R]
+Gotta say, place looks cleaner than[N]
+the last ship I was on-board.[AN]
+Little impressed, 'least for a pirate ship.[AN]
+
+[FL]
+A pirate [OQ]fleet[CQ], if I might correct.[AN]
+We have two other ships waiting[N]
+for us a distance away.[AN]
+
+[FR][3LB]
+A fleet?[A] Haha![.6][N]
+Guess our gang was already pretty screwed[N]
+when they ambushed you at the gates.[AN]
+Now that's the part you should be[N]
+impressed by Lex, with how thoroughly[N]
+they kicked our asses back there.[AN]
+
+[L][2LB]
+As typical for many of the blowhards[N]
+that tried to mess with us in the past.[AN]
+We only wanted to trade with the town,[N]
+only to find it overrun with your gang.[AN]
+It's real low to be part of a place[N]
+that was extorting a town like that.[AN]
+
+[FR]
+[Beat]Well, yeah, Javier was a[N]
+real piece of work, I'll say that.[AN]
+Always fantasized himself to be a king,[N]
+to rule with an iron fist and all that crap.[AN]
+Glad you all decided to put[N]
+him into the dirt and--[AN]
+
+[R][CloseEyes]
+Don't lie to them Adrian.[AN][OpenEyes]
+You and I both know we were[N]
+swindling people there too.[AN]
+
+[L][1LB]
+Oh?[AN]
+
+[FR][MoFR]
+Lexa?! Why would you--[AN]
+
+[R][2LB]
+For the fact that these guys seem[N]
+a lot smarter than our last boss.[AN]
+You want us to sleep with an eye open?[AN]
+
+[FR]
+[Beat][CloseEyes]Fair enough, sis.[AN]
+
+[R]
+Look captain, me and my bro will be front;[.5][N]
+we've jumped from gang to gang a lotta times.[AN]
+Some real messed up kinds of people, sure[Beat][AN]
+[Beat]But joining up with them tended to be better[N]
+than either of us being sorry victims instead.[AN]
+No matter what decisions they made afterwards.[AN]
+
+[L][1LB]
+[Beat][AN]
+
+[R][2LB]
+[Beat]As long as you don't get us killed,[N]
+we'll be content wherever you take us.[AN]
+Scratch our backs, and you can recline[N]
+down for us to scratch yours.[A] Capiche?[AN]
+
+[L][1LB]
+[Beat][.5][CloseEyes][AN]
+
+[FR]
+[Beat][.5][AN]
+
+[L][2LB][OpenEyes]
+Capiche.[AN]
+I appreciate the honesty.[AN] 
+Keep in mind that, in spite of our flag,[N]
+I'm not running things like a gang.[AN]
+I won't tolerate any behaviors of[N]
+the sort as a part of my crew.[AN]
+
+[FR][2LB][OpenEyes]
+Well duh, it all really just boiled down to[N]
+not wanting getting cleaved in the head.[AN]
+We'll be on our good behavior outside[N]
+of any fight or brawl you throw us in.[AN]
+[Beat]Though, some liquor would be nice too.[AN]
+
+[FL][3LB]
+We don't carry alcohol on-board.[AN]
+Might not be what you expect[N]
+from pirates, but that's just[N]
+how the good captain runs things.[AN]
+If we manage to make it to a[N]
+port, then you can drink there.[AN]
+
+[FR][2LB]
+[Beat]Tch, well you can forget[N]
+those back scratches then.[AN]
+[ToggleSmile](Guess the next time we reach[N]
+port, I'll just go to a bar and--)[AN]
+
+[L]
+And don't even think about[N]
+trying to smuggle some aboard.[AN]
+Desiderio's got a real sniffer[N]
+for any rum he smells on deck.[AN]
+
+[1LB]
+[FR][ToggleSmile][MoFR]
+[Beat]How did you--[AN]
+
+[2LB]
+[R]
+Maker, are you some sorta mind-reader?[AN]
+Yeah bro, let's not mess around with[N]
+these guys in a serious matter.[AN]
+At least, while we're not[N]
+[OQ]landlubbering[CQ] on solid ground.[AN]
+
+[MR]
+[Beat]You got that right, sis.[AN]
+Let's just see where we're[N]
+sleeping, mingle around a bit.[AN]
+See if any of these guys got[N]
+as much mettle as the boss.[AN]
+
+[R][1LB]
+Sounds like a plan![AN]
+[CSSCF]
+[FR][CF][.6]
+
+[FL][2LB]
+Are you certain we should've[N]
+let these ruffians join us?[AN]
+Your crew has some interesting[N]
+figures, but they seem the rowdiest.[AN]
+
+[L]
+Rowdy, sure[Beat]but they're siblings.[AN]
+If we look out for the both of them, then[N]
+I think the other will be happy.[AN]
+That's what I felt when you took me[N]
+and[Beat]my brother under your wing.[AN]
+
+[FL]
+[Beat]
+And if we accidentally[N]
+wrong one of them?[AN]
+
+[L]
+[Beat][CloseEyes]Let's hope it doesn't come[N]
+down to that, simply put.[OpenEyes][AN]
+
+[FL]
+Let's.[AN][X]
 
 ## HubB_4EndingScene2
 [ML][LoadRedFSoldier]
@@ -223,11 +479,6 @@ Private,[.4] I want you to get[N]
 a message sent to Captain Elodia.[AN]
 I think we might have a tip[N]
 on her target's whereabouts[Beat][A][X]
-
-
-
-
-
 
 ## AdrianLexaWarningText
 [ML][LoadAdrian]
@@ -391,14 +642,6 @@ Forget joining you,[.4] I'm gonna bury you![A][X]
 Adrian?![.4] No,[.4] damnit you idiot[Beat][.4][N]
 If that's how you wanna play it then![A][X]
 
-
-
-
-
-
-
-
-
 ## LunarBladeText
 [MR][LoadCurrent][2LB]
 Huh?[.4] What's that[N]
@@ -442,13 +685,120 @@ Oh,[.4] wait,[.4] just let me get my armor on.[A]
 [ML][LoadNoah]
 Alright-[.4][MoveMidLeft] *huff*[.5] I'm ready![A][X]
 
-
-
-
 ## B4HurryWarning
 [MR][LoadPilar]
 We might want to get a move on,[N]
 Incendivis is closing in![A][X]
+
+## B4_BossQuote_Adrian
+[ML][LoadJavier]
+Hell, the two of you are[N]
+abandoning ship now, eh?[AN]
+Should've known you've always[N]
+cared more about your own hides.[AN][CSSCF]
+
+[MR][LoadAdrian][2LB]
+Hey, we were both pretty genuine[N]
+on it after Sarif's gang got wiped.[AN][Clear]
+But truth be told[Beat][ToggleSmile][N]
+you're kinda an ass.[N]
+I'll take any sorta pirate[N]
+compared to the likes of you.[AN][CSSCF]
+
+[ML][LoadJavier][MoML]
+Oh, you son of a...[AN]
+I'm going to enjoy spilling[N]
+your blood all over the ground![A][X]
+
+## B4_BossQuote_Lexa
+[ML][LoadJavier][2LB]
+Hell, the two of you are[N]
+abandoning ship now, eh?[AN]
+Should've known you've always[N]
+cared more about your own hides.[AN][CSSCF]
+
+[MR][LoadLexa]
+Sorry man, but you're the one[N]
+who thought this was a good idea.[AN]
+Did'ya really think 'conquering' a[N]
+village was going to just slide?[AN]
+Now we've got pirates and imperials[N]
+on our asses[Beat]no thank you![AN]
+I'm sure if you were in my spot,[N]
+you'd dip out with the pirates too![AN][CSSCF]
+
+[ML][LoadJavier]
+At least I'd show some loyalty[N]
+to the damn gang that I was in![AN]
+Should've booted you and your[N]
+brother out of here way before[Beat][AN][CSSCF]
+
+[MR][LoadLexa]
+Well, I'm glad you've got[N]
+your regrets in mind[Beat][AN][ToggleSmile]
+Now then, how about I make sure[N]
+you won't worry about 'em again![A][X]
+
+## B4_BossQuote_Noah
+[ML][LoadJavier][2LB]
+Wait a minute[Beat]you're[N]
+one of the dolts living here![AN]
+And all dressed up in uniform[Beat][AN]
+I can't believe we missed--[AN][CSSCF]
+
+[MR][LoadNoah]
+*Huff, huff[Beat]*
+A-Ah, give me a moment, I'm[N]
+still getting used to the armor.[AN][CSSCF]
+
+[ML][LoadJavier]
+Tch[Beat]you look like you[N]
+could fall over any moment![AN]
+Were you too tired to try[N]
+and raise a sword before?[.5] Hah![AN][CSSCF]
+
+[MR][LoadNoah]
+H-[.4]Heh...you think I'm[N]
+going to give into taunts?[AN]
+You're the one who's made[N]
+this town a terrible place[Beat][AN]
+The one that's killed the[N]
+rest of my friends![AN]
+I-[.4]I'll avenge them, and make[N]
+you regret ever coming here![AN][CSSCF]
+
+[ML][LoadJavier]
+So, maybe you do have a[N]
+little spunk in you, huh?[AN]
+See how good it does when you[N]
+join the rest of your guard![A][X]
+
+## B4_BossQuote_Magdalena
+[ML][LoadJavier][2LB]
+Well, you're pretty well-[N]
+dressed for a pirate.[AN]
+In fact[Beat]you supposed to[N]
+be some kind of other mayor?[AN][CSSCF]
+
+[MR][LoadMagdalena]
+No[Beat]I am no mayor, not any longer.[AN]
+[CloseEyes]
+I failed to protect my town and home[Beat][AN]
+[OpenEyes]
+But[Beat]though I was not able to use[N]
+my authority to bring justice[Beat][AN]
+From this town's state[Beat]there would[N]
+be no use for authority anyways[Beat][AN]
+Thus[Beat]I see action as the[N]
+proper way to bring about justice.[AN]
+I will stamp out the tyranny your[N]
+band ennacted upon the populace[Beat][AN][CSSCF]
+
+[ML][LoadJavier][2LB]
+[Beat]Lady, you're speaking[N]
+far, far too much.[AN]
+Whatever fancy magic you want[N]
+to bear down, bring it on![A][X]
 
 ## JavierBQ
 [ML][LoadJavier]

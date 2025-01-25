@@ -113,6 +113,13 @@ Gu'Balg[X]
 ## GuBalgDesc
 It's... quite the weapon, alright.[X]
 
+## ThornName
+Thorn[X]
+
+//This 
+## ThornDesc 
+If user's Str > target's Str, Break.[X]
+
 //AXES
 
 ## BloodaxeName
@@ -630,4 +637,5 @@ Hand Cannon[X]
 ## HandCannonDesc
 Fires staggering shells that[N]
 Break, but cannot follow-up.[X]
+
 
