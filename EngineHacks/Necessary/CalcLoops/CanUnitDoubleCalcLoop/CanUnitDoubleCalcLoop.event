@@ -29,6 +29,8 @@ BidingBlowID_Link:
 WORD BidingBlowID
 ArmsMasteryID_Link:
 WORD ArmsMasteryID
+InvidiaSkillID_Link:
+WORD InvidiaSkillID
 
 ALIGN 4
 CanUnitDoubleCalcLoop: //r0 = attacker unit ptr, r1 = defender unit ptr, r2 = AS check result; return 0 for forcing unable to double, 1 for forcing able to double, 2 for keeping AS result/no change
@@ -37,6 +39,7 @@ POIN IsAttackerWeaponUnableToDouble //makes weapon effect 0xC make it unable to 
 POIN WaryFighter CombatArtsRestrictDoubling MoonlightDoublingFunc  QuickRiposte //skills that prevent doubling first 
 POIN RecklessFighter PridefulWarrior BoldFighter VengefulFighter 
 POIN LastWord QuickLearner PassionsFlow BidingBlow ArmsMastery
+POIN InvidiaEffect
 WORD 0 //terminator
 
 

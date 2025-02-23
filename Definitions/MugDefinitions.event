@@ -115,6 +115,9 @@
 // Chapter 3 Placeholder
 #define DalilaMug 0x21
 
+// Hub C Stuff
+#define WayraMug KhazhakMug //placeholder
+
 // C-1 Stuff
 #define RubyMug 0x22
 #define KrezkeMug 0x23
@@ -129,6 +132,8 @@
 #define RunamelMug 0xAF
 #define SalmanMug 0xB0
 #define BoruMug 0xB1
+
+
 
 //CLASS CARDS
 

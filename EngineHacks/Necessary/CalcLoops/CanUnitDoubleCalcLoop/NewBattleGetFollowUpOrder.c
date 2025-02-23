@@ -33,6 +33,7 @@ extern int PassionsFlowID_Link;
 extern int QuickRiposteID_Link; 
 extern int BidingBlowID_Link;
 extern int ArmsMasteryID_Link;
+extern int InvidiaSkillID_Link;
 
 struct UnitDoubleCalcLoop_Struct { 
 	int(*function)(struct BattleUnit* attacker, struct BattleUnit* defender);
@@ -50,19 +51,38 @@ NoChange = 2,
 }; 
 
 int ArmsMastery(struct BattleUnit* bunitA, struct BattleUnit* bUnitB) {
-	if (gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE)) {
-		if (SkillTester(&bunitA->unit, ArmsMasteryID_Link)) {
-			if (bunitA == &gBattleActor) { //if unit has skill and is initiating
-				int actorWeaponRank = GetItemData(GetItemIndex(gBattleActor.weaponBefore))->weaponRank;
-				int targetWeaponRank = GetItemData(GetItemIndex(gBattleTarget.weaponBefore))->weaponRank;
-				if (actorWeaponRank > targetWeaponRank){
-					return ForceDouble; //if unit has a weapon with higher rank, always double
-				}
+	if (gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE))
+	{
+		if (SkillTester(&bunitA->unit, InvidiaSkillID_Link))
+		{
+			int actorWeaponRank = GetItemData(GetItemIndex(gBattleActor.weaponBefore))->weaponRank;
+			int targetWeaponRank = GetItemData(GetItemIndex(gBattleTarget.weaponBefore))->weaponRank;
+			if (actorWeaponRank > targetWeaponRank)
+			{
+				return ForceDouble; //if unit has a weapon with higher rank, always double
 			} 
 		}
 	}
 	return NoChange;
 }
+
+int InvidiaEffect(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {
+	if (gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE))
+	{
+		int threshold = DoublingThresholdLink;
+		if (SkillTester(&bunitA->unit, InvidiaSkillID_Link) && ((bunitB->battleSpeed - threshold) >= bunitA->battleSpeed)) 
+		{
+			return ForceDouble; //if you have Invidia AND enemy speed is 5 or more higher than yours, then you steal their double
+		}
+		if (SkillTester(&bunitB->unit, InvidiaSkillID_Link))
+		{
+			return CannotDouble; //if enemy unit has Invidia, you can never double
+		} 
+	}
+	return NoChange;
+}
+
+
 
 int BidingBlow(struct BattleUnit* bunitA, struct BattleUnit* bunitB) { 
 	if (gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE)) {

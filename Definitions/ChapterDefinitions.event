@@ -22,12 +22,16 @@
 #define HubC_2 19
 #define HubC_3 20
 #define HubC_4 21
+#define Chapter4 22
+#define HubD 23
+#define HubD_1 24
+#define HubD_2 25
+#define HubD_3 26
 
 
 #define HubB_2a 0x3D
-#define CutsceneHubB_2a 0x3F
 #define HubC_2_Cutscene 0x3E
-
+#define CutsceneHubB_2a 0x3F
 #define CutsceneC_1 0x40
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
@@ -131,6 +135,27 @@
 #define HubC_4MapChangesID 0x55
 #define HubC_4EventsID 0x56
 
+#define Chapter4MapID 0x5d
+#define Chapter4MapChangesID 0x5e
+#define Chapter4EventsID 0x5f
+
+#define HubDMapID 0x60
+#define HubDMapChangesID 0x61
+#define HubDEventsID 0x62
+
+#define HubD_1MapID 0x63
+#define HubD_1MapChangesID 0x64
+#define HubD_1EventsID 0x65
+
+#define HubD_2MapID 0x66
+#define HubD_2MapChangesID 0x67
+#define HubD_2EventsID 0x68
+
+#define HubD_3MapID 0x69
+#define HubD_3MapChangesID 0x6A
+#define HubD_3EventsID 0x6B
+
+
 //5A - 5C currently used by b_2a cutscene
 
 
@@ -188,3 +213,7 @@
 #define FlasubanFrontierPaletteID 0xAD
 #define FlasubanFrontierConfigID 0xAE
 #define FlasubanFrontierAnimationsID 0xB1
+
+#define SunsetTempleObjectID 0xB2
+#define SunsetTemplePaletteID 0xB3
+#define SunsetTempleConfigID 0xB4

@@ -59,7 +59,7 @@ Multi-Skill Scroll,MultiScrollUsability|IsPointer,MultiScrollPrepUsability|IsPoi
 Take Aim,FortuneUsabilityWrapper|IsPointer,0x802a100,0x8028fac,FortuneEffectWrapper|IsPointer,0x0
 Assist Staff,AssistStaffUsability|IsPointer,0x802a100,AssistStaffTargeting|IsPointer,AssistStaffEffect|IsPointer,0x0
 Rush Staff,RushStaffUsability|IsPointer,0x802a100,RushStaffTargeting|IsPointer,RushStaffEffect|IsPointer,0x0
-0x3c,0x8028c04,0x802a100,0x802905c,0x802ff76,0x0
+Again Staff,AgainStaff_Usability|IsPointer,0x802a100,AgainStaff_Targeting|IsPointer,AgainStaff_Effect|IsPointer,0x0
 0x3d,0x8028c04,0x802a100,0x802905c,0x802ff76,0x0
 0x3e,0x8028b60,0x802a100,0x802905c,0x802ff76,0x0
 0x3f,0x8028c04,0x802a100,0x802905c,0x802ff76,0x0

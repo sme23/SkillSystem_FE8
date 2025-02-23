@@ -462,7 +462,7 @@ UnitPlacement:
 		UNIT B4Bandit Hunter		Javier Level(9,Enemy,True) [20,11] 0 0 0 0 [Longbow,MiniBow] GroupTwoAI
 		UNIT B4Bandit Fighter		Javier Level(9,Enemy,True) [23,13] 0 0 0 0 [Hammer] GroupTwoAI
 		UNIT B4Bandit Monk			Javier Level(9,Enemy,True) [25,18] 0 0 0 0 [Thunder] TwoRangeAI
-		UNIT B4Bandit Champion		Javier Level(12,Enemy,True) [21,14] 0 0 0 0 [SteelLance,IronShield,TealGem] GroupTwoAI
+		UNIT B4Bandit Champion		Javier Level(10,Enemy,True) [21,14] 0 0 0 0 [SteelLance,IronShield] GroupTwoAI
 		UNIT
 
 	EnemyUnits3:
@@ -471,12 +471,12 @@ UnitPlacement:
 		UNIT B4Bandit Mage			Javier Level(9,Enemy,True) [17,7] 0 0 0 0 [Elsurge, Vulnerary] GroupThreeAI
 		UNIT B4Bandit Mercenary		Javier Level(9,Enemy,True) [13,5] 0 0 0 0 [Onigiri] GroupThreeAI
 		UNIT B4Bandit Vanguard		Javier Level(10,Enemy,True) [8,7] 0 0 0 0 [Oversize] AttackInRangeAI
-		UNIT B4Bandit Warrior		Javier Level(12,Enemy,True) [15,6] 0 0 0 0 [SteelAxe, Tonic] GroupThreeAI
+		UNIT B4Bandit Warrior		Javier Level(10,Enemy,True) [15,6] 0 0 0 0 [SteelAxe, TealGem] GroupThreeAI
 		UNIT B4Bandit Myrmidon		Javier Level(9,Enemy,True) [5,10] 0 0 0 0 [SteelSword] AttackInRangeAI
 		UNIT B4Bandit Brigand		Javier Level(9,Enemy,True) [2,10] 0 0 0 0 [Bloodaxe] AttackInRangeAI
 		UNIT B4Bandit PegasusRider	Javier Level(9,Enemy,True) [7,1] 0 0 0 0 [SteelSword] GroupFourAI
 		UNIT B4Bandit PegasusRider	Javier Level(9,Enemy,True) [1,3] 0 0 0 0 [Wingclipper] GroupFourAI
-		UNIT B4Bandit Bombardier	Javier Level(12,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] GroupFourAI
+		UNIT B4Bandit Bombardier	Javier Level(10,Enemy,True) [3,0] 0 0 0 0 [Pitchfork,Pursuer] GroupFourAI
 		UNIT
 
 	JavierUnits:
@@ -552,8 +552,8 @@ UnitPlacement:
 	//#define AttackInTwoGroup1AI		[0x00,0x06,0x09,0x01] //Doesn't actually work (at least not the intended way)
 
 	RecruitableUnits:
-		UNIT Adrian Fighter 0 Level(11,Enemy,True) [12,9] 0 0 0 0 [KillerAxe,Vulnerary] [0x6,0x3,0x4,0x0]
-		UNIT Lexa Myrmidon_F 0 Level(11,Enemy,True) [13,10] 0 0 0 0 [SteelSword,Vulnerary] [0x6,0x3,0x4,0x0]
+		UNIT Adrian Fighter 0 Level(11,Enemy,True) [12,9] 0 0 0 0 [Swordreaver, KillerAxe, Vulnerary] [0x6,0x3,0x4,0x0]
+		UNIT Lexa Myrmidon_F 0 Level(11,Enemy,True) [13,10] 0 0 0 0 [SilverSword, KillingEdge, Vulnerary] [0x6,0x3,0x4,0x0]
 		UNIT
 
 	NoahUnit:

@@ -23,6 +23,7 @@ TurnEventPlayer(0, Turn3_Reinforcements, 3)
 TurnEventPlayer(0, Turn5_BridgeLowered, 5)
 TurnEventPlayer(0, Turn8_SpawnGriffons, 8)
 TurnEventPlayer(0, Turn11_AggroBoss, 11)
+TurnEventPlayer(0, EndingScene,1,255)
 END_MAIN
 
 CharacterBasedEvents:
@@ -30,8 +31,17 @@ CharacterEventBothWays(9, CalistaRecruitment, 0x0, Calista) //anyone can talk wi
 END_MAIN
 
 LocationBasedEvents:
-Chest(Pursuer, 21, 9)
+Chest(BraveBow, 21, 9)
+Village(20,QuickdrawVillage,13,24)
 END_MAIN
+
+QuickdrawVillage:
+//SetBackground(HouseBG)
+//Text(A2Village)
+//EraseBackground
+GiveItem(Quickdraw,0xFFFF)
+NoFade
+ENDA
 
 MiscBasedEvents:
 DefeatBoss(EndingScene)
@@ -42,7 +52,7 @@ Units1:
 //Middle Units
 UNIT Lua Captain 0 Level(10,Ally,False) [9,26] 0 0 0 0 [IronSword] NoAI
 //Valerie
-UNIT Valerie Archer 0 Level(3,Ally,False) [7,26] 0 0 0 0 [SteelBow, Snapshot, Tonic] NoAI
+UNIT Valerie Archer 0 Level(5,Ally,True) [7,26] 0 0 0 0 [SteelBow, Snapshot, Tonic,] NoAI
 LoadUnit(11,26)
 LoadUnit(8,27)
 LoadUnit(10,27)
@@ -87,7 +97,7 @@ UNIT BlackheartPlus Champion 0 Level(17,Enemy,True) [2,24] 0 0 0 0 [Javelin, Sil
 UNIT BlackheartPlus WyvernRider 0 Level(16,Enemy,True) [7,15] 0 0 0 0 [SteelAxe, Vulnerary] ChargeAI
 //Middle Units
 UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [5,17] 0 0 0 0 [ArcaneKnife] ChargeAI 
-UNIT BlackheartPlus Hero 0 Level(17,Enemy,True) [9,23] DropItem 0 0 0 [SilverSword, Elixir] ChargeAI
+UNIT BlackheartPlus Hero 0 Level(17,Enemy,True) [9,23] 0 0 0 0 [SilverSword, Elixir] ChargeAI
 UNIT BlackheartPlus Fighter 0 Level(16,Enemy,True) [10,22] 0 0 0 0 [SteelAxe] ChargeAI
 UNIT BlackheartPlus Vanguard 0 Level(16,Enemy,True) [9,18] 0 0 0 0 [HandAxe, Vulnerary] ChargeAI
 //Right Units
@@ -103,7 +113,7 @@ UNIT
 MiddleUnits:
 UNIT BlackheartPlus WarMonk 0 Level(17,Enemy,True) [9,14] 0 0 0 0 [IronAxe, Silence] BossAI
 UNIT BlackheartPlus WarMonk 0 Level(17,Enemy,True) [10,14] 0 0 0 0 [HandAxe, Physic] [0xE, 0x3, 0x4, 0x20]
-UNIT BlackheartPlus Sniper 0 Level(16,Enemy,True) [11,13] DropItem 0 0 0 [Greatbow, MiniBow] BossAI
+UNIT BlackheartPlus Sniper 0 Level(16,Enemy,True) [11,13] 0 0 0 0 [Greatbow, MiniBow] BossAI
 UNIT BlackheartPlus Deserter 0 Level(16,Enemy,True) [8,13] 0 0 0 0 [Impaler, Javelin] WaitOneTurnAI
 UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [12,10] 0 0 0 0 [SilverDagger] ChargeAI 
 
@@ -131,12 +141,12 @@ UNIT BlackheartPlus Warrior 0 Level(18, Enemy, True) [8,1] 0 0 0 0 [SilverAxe, I
 
 //Boss group
 
-UNIT Salvador 0 0 Level(20,Enemy,True) [19,1] DropItem 0 0 0 [KillingEdge, KillerLance, HexlockShield] AttackInRangeAI
-UNIT BlackheartPlus Assassin 1 Level(19,Enemy,True) [18,0] 0 0 0 0 [SteelKnife, Stiletto] AttackInRangeAI
-UNIT BlackheartPlus Marksman 0 Level(19,Enemy,True) [20,2] 0 0 0 0 [InfiltratorGun] AttackInRangeAI
+UNIT Salvador 0 0 Level(20,Enemy,True) [18,1] 0 0 0 0 [KillingEdge, KillerLance, FliersPermit] AttackInRangeAI
+UNIT BlackheartPlus Assassin 1 Level(19,Enemy,True) [17,0] 0 0 0 0 [SteelKnife, Stiletto] AttackInRangeAI
+UNIT BlackheartPlus Marksman 0 Level(19,Enemy,True) [19,2] 0 0 0 0 [InfiltratorGun] AttackInRangeAI
 
 //These guys are going to go charge on Turn 4, when the bridge gets dropped
-UNIT BlackheartPlus Fighter 0 Level(16, Enemy, True) [14,5] DropItem 0 0 0 [HandAxe, Tonic] AttackInRangeAI
+UNIT BlackheartPlus Fighter 0 Level(16, Enemy, True) [14,5] 0 0 0 0 [HandAxe, Tonic] AttackInRangeAI
 UNIT BlackheartPlus Ninja 0 Level(16,Enemy,True) [17,6] 0 0 0 0 [SteelKnife, SteelDagger] AttackInRangeAI
 UNIT BlackheartPlus Hero 0 Level(18,Enemy,True) [16,5] 0 0 0 0 [SteelSword, HandAxe, Elixir] AttackInRangeAI
 UNIT
@@ -160,7 +170,7 @@ UNIT TorchUnit Gryphoknight 0 Level(18,Enemy,True) [4,0] 0 0 0 0 [SteelLance, Ho
 UNIT
 
 CalistaTrapped:
-UNIT Calista Dragoon 0 Level(17,NPC,False) [0,5] 0 0 0 0 [Toradar, SteelSword, Elixir, Mine] BossAI
+UNIT Calista Dragoon 0 Level(20,NPC,True) [0,5] 0 0 0 0 [Toradar, SteelSword, Elixir, Mine] BossAI
 UNIT
 
 SmallRebelGarrison:
@@ -216,6 +226,7 @@ ENDA
 
 Turn3_Reinforcements:
 LoadReinforcements(Reinforcements_T3)
+NoFade
 ENDA
 
 Turn5_BridgeLowered:
@@ -232,10 +243,12 @@ CHAI [14, 5]
 CHAI [17, 6]
 CHAI [16, 5]
 LoadReinforcements(Reinforcements_T5)
+NoFade
 ENDA
 
 Turn8_SpawnGriffons:
 LoadReinforcements(GriffonReinforcements)
+NoFade
 ENDA
 
 Turn11_AggroBoss:
@@ -246,6 +259,8 @@ STAL 30
 SVAL s1 0
 CHAI BlackheartElite
 CHAI BlackheartPlus
+NoFade
+ENDA
 
 CalistaRecruitment:
 MUSS WelcomeAboardMateyID
@@ -258,7 +273,7 @@ ENDA
 
 EndingScene:
 //replace with HubC when editing
-GoToHubChapter(HubB)
+GoToHubChapter(HubC)
 NoFade
 ENDA
 

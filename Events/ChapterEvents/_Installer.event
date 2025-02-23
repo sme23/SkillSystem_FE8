@@ -53,6 +53,9 @@
     #include "Chapter3.event"
 }
 {
+    #include "HubC/HubC.event"
+}
+{
     #include "HubC/HubC_1.event"
 }
 {
@@ -66,4 +69,10 @@
 }
 {
 	#include "HubC/HubC_2.event"
+}
+{
+    #include "Chapter4.event"
+}
+{
+    #include "HubD/HubD.event"
 }

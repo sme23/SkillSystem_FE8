@@ -2,6 +2,7 @@
 
 //LORD
 #define Captain 0x80
+#define Admiral 0xAE
 
 //INFANTRY
 
@@ -146,6 +147,7 @@
 #define HorseClass 0xA9
 
 #define Sage_Hermen 0xAC
+#define Airship 0xAD
 
 
 //STANDING MAP SPRITES
@@ -203,5 +205,7 @@
 #define BowKnightMapSprite 0x9b
 #define HorseMapSprite 0x9c
 #define Gryphknight_DMapSprite 0x9d
+#define AirshipMapSprite 0x9e
 #define KiteMapSprite LogMapSprite // 0x9e
+#define AdmiralMapSprite CaptainMapSprite
 

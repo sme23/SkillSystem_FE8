@@ -1,5 +1,5 @@
 #define Negative(Number) "0x100 - Number"
-#define WTHitBonus 20
+#define WTHitBonus 15
 #define WTMtBonus 2
 #define WTInteraction(AdvantageType, DisadvantageType) "BYTE AdvantageType DisadvantageType WTHitBonus WTMtBonus DisadvantageType AdvantageType Negative(WTHitBonus) Negative(WTMtBonus)"
 #define WTTerminator "BYTE 0xFF 0 0 0"

@@ -1782,7 +1782,7 @@ by using Dismount and Mount.[X]
 
 ## SD_WanderersFocus
 Wanderer's Focus: If this unit has no[N]
-allies within 3 tiles, this unit gains[N]
+allies within 2 tiles, this unit gains[N]
 WTA for all counterattacks they make.[X]
 
 ## SD_Pulverize

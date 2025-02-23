@@ -38,7 +38,7 @@
 #define Sidepierce $d9
 #define Pitchfork $df
 #define GuBalg $e8
-#define Thorn $f7
+#define Thorn $b7
 
 //AXES
 //#define IronAxe $1f
@@ -171,3 +171,21 @@
 #define FlingRing 0xEF
 #define HoardersCharm 0xF0
 #define HoarderCharm 0xF0
+
+// Gunblade
+#define IgnisTrigger 0xF7
+
+// Superbia
+#define Superbia 0xF8
+// Ira
+#define Ira 0xF9
+// Tristitia
+#define Tristitia 0xFA
+// Gula
+#define Gula 0xFB
+// Avaritia
+#define Avaritia 0xFC
+// Luxuria
+#define Luxuria 0xFD
+// Acedia
+#define Acedia 0xFE

@@ -20,7 +20,7 @@ None,0,0
 0x12 Juan,1,10
 0x13 Matteo,1,10
 0x14 Suzanne,2,20
-0x15 Orlando,2,25
+0x15 Orlando,3,25
 0x16 Rahel,2,15
 0x17 Dmitr,5,40
 0x18 Husniye,5,20
@@ -31,24 +31,24 @@ None,0,0
 0x1D Adrian,4,15
 0x1E Lexa,3,20
 0x1F Fata,10,55
-0x20 Ponte,5,40
-0x21 Passarola,1,30
+0x20 Ponte,3,30
+0x21 Passarola,3,30
 0x22 Neltume,(-1),35
 0x23 Lyon,13,50
 0x24 Orson,3,10
 0x25 Noah,(-1),20
-0x26 Valerie,6,50
-0x27 Calista,0,10
+0x26 Valerie,5,25
+0x27 Calista,(-1),5
 0x28 Riev,10,45
 0x29 Caellach,2,5
 0x2A Fado,4,5
 0x2B Ismaire,7,15
-0x2C Ruby,7,25
-0x2D Remora,9,20
+0x2C Ruby,9,25
+0x2D Remora,3,25
 0x2E -,0,0
 0x2F -,0,0
-0x30 Rima,2,15
-0x31 Bolton,15,55
+0x30 Rima,1,5
+0x31 Bolton,20,70
 0x32 -,0,0
 0x33 -,0,0
 0x34 -,0,0
@@ -221,8 +221,8 @@ None,0,0
 0xDB - Nicodemus,6,15
 0xDC - Baltasar,1,5
 0xDD - Krezke,7,50
-Grado Soldier 6,0,0
-Grado Soldier 7,0,0
+0xDE -,0,0
+0xDF - Wayra,12,0
 Grado Soldier 8,0,0
 Grado Soldier 9,0,0
 Grado Soldier 10 (Duessel's),0,0

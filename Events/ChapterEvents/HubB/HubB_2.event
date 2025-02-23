@@ -48,6 +48,7 @@ ALIGN 4
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [23,11] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+LoadUnit(23,12)
 LoadUnit(22,10)
 LoadUnit(23,10)
 LoadUnit(24,10)
@@ -90,15 +91,12 @@ UNIT Rebel Fighter Cruz Level(B2Level,Enemy,True) [17,15] 0 0 0 0 [IronAxe] Char
 // turn 3 yadney squad
 UNIT Rebel Myrmidon Cruz Level(B2Level, Enemy, True) [9,10] 0 0 0 0 [Onigiri,TealGem] GroupOneAI
 UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [9,12] 0 0 0 0 [Hammer,Crusher] GroupOneAI
-UNIT Rebel GriffinRider Cruz Level(B2Level, Enemy, True) [10,8] 0 0 0 0 [IronLance] GroupOneAI
-UNIT Rebel SwordCav Cruz Level(B2Level, Enemy, True) [10,14] 0 0 0 0 [IronSword] GroupOneAI
 
 // turn 4
 UNIT Rebel Curate Cruz Level(B2Level,Enemy,True) [9,11] 0 0 0 0 [Physic] [0xE,0x3,0x0,0x20]
 // BL room
 UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [12,20] 0 0 0 0 [IronLance] ChargeAI
 UNIT Rebel Fighter Cruz Level(B2Level, Enemy, True) [13,21] 0 0 0 0 [IronAxe] ChargeAI
-UNIT Rebel Deserter Cruz Level(B2Level, Enemy, True) [14,20] 0 0 0 0 [IronLance,Pike] ChargeAI
 
 // turn 5
 // TL room
@@ -138,15 +136,15 @@ UNIT
 
 
 HusniyeSquad:
-UNIT Husniye 0 0 Level(10,NPC,True) [23,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
+UNIT Husniye 0 0 Level(10,Ally,True) [23,12] 0 0 0 0 [Bloodletter,Stiletto,TealGem] NoAI
 UNIT
 
 AvocadoSquad:
-UNIT Avocado 0 0 Level(12,NPC,True) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
+UNIT Avocado 0 0 Level(12,Ally,True) [23,12] 0 0 0 0 [SteelLance,Javelin] NoAI
 UNIT
 
 MagdalenaSquad:
-UNIT Magdalena 0 0 Level(15,NPC,True) [23,12] 0 0 0 0 [Thunder,Mend,TakeAim] NoAI
+UNIT Magdalena 0 0 Level(15,Ally,True) [23,12] 0 0 0 0 [Thunder,Physic,TakeAim] NoAI
 UNIT
 
 // fadi: to black
@@ -228,20 +226,14 @@ FADU 16
 FlagIsSet(HusniyeAccused, 0x11)
 	CameraCursor(Avocado)
 	Text(B2_AvocadoAnim)
-	CUSA Avocado
-	CameraCursor(Avocado)
 LABEL 0x11
 FlagIsSet(AvocadoAccused, 0x22)
 	CameraCursor(Husniye)
 	Text(B2_HusniyeAnim)
-	CUSA Husniye
-	CameraCursor(Husniye)
 LABEL 0x22
 FlagIsSet(CruzAccused, 0x33)
 	CameraCursor(Magdalena)
 	Text(B2_MagdalenaAnim)
-	CUSA Magdalena
-	CameraCursor(Magdalena)
 LABEL 0x33
 NoFade
 ENDA
@@ -278,25 +270,28 @@ FADI 16
 FlagIsSet(CruzAccused, 0x1A1)
 	MUSC StillZephyrsID
 	SetBackground(Inn)
-	FADI 16
 	Text(B2_Outro_Romance)
+	FADI 10
+	STAL 30
+	FADU 10
 	MUSC WelcomeAboardMateyID
-	FADI 16
 	Text(B2_Outro_MagdalenaPermanent)
 LABEL 0x1A1
 
 FlagIsSet(AvocadoAccused, 0x2B2)
 	Music(CastawayHeartID)
 	SetBackground(Inn)
-	FADI 16
 	Text(B2_Outro_Aftermath_Avocado)
-	Music(CherishTheDeadID)
+	FADI 15
+	STAL 30
 	SetBackground(Harbor)
-	FADI 16
+	Music(CherishTheDeadID)
 	Text(B2_Outro_RazvanSad)
-	MUSC WindAmbienceID
+	
+	FADI 15
+	STAL 30
 	SetBackground(Ship)
-	FADI 16
+	MUSC WindAmbienceID
 	Text(B2_Outro_HusniyePermanent)
 	FADI 16
 LABEL 0x2B2
@@ -304,19 +299,20 @@ LABEL 0x2B2
 FlagIsSet(HusniyeAccused, 0x3C3)
 	Music(CastawayHeartID)
 	SetBackground(Inn)
-	FADI 16
 	Text(B2_Outro_Aftermath_Husniye)
-	Music(CherishTheDeadID)
+	FADI 15
+	STAL 30
 	SetBackground(Harbor)
-	FADI 16
+	Music(CherishTheDeadID)
 	Text(B2_Outro_RazvanSad)
-	MUSC WindAmbienceID
+	FADI 15
+	STAL 30
 	SetBackground(Ship)
-	FADI 16
+	MUSC WindAmbienceID
 	Text(B2_Outro_AvocadoPermanent)
 	FADI 16
 LABEL 0x3C3
-
+FADI 15
 GoToHubChapter(HubB)
 NoFade
 ENDA

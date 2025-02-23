@@ -1038,3 +1038,19 @@ Horse[X]
 ## HorseUnitDesc
 Equine[N]
 Why the long face?[X]
+
+## WayraName
+Quispe[X]
+
+## WayraDesc
+Chieftain[N]
+A newly elected leader of the Keepers[N]
+who will do anything for their people.[X]
+
+## KeeperName
+Keeper[X]
+
+## KeeperDesc
+Zealot[N]
+Warriors who adhere to Wayra's vision,[N]
+no matter the price that must be paid.[X]

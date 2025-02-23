@@ -57,6 +57,7 @@ TurnEventPlayer(0, T7_SanzHermScene, 7)
 TurnEventPlayer(0, T9_HermYurScene, 9)
 END_MAIN
 
+
 CharacterBasedEvents:
 CharacterEventBothWays(0x14, HermBalTalk, Hermenegildo, Baltasar)
 END_MAIN
@@ -87,7 +88,6 @@ ALIGN 4
 
 Units1:
 UNIT Lua Captain 0 Level(10,Ally,False) [3,3] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-// UNIT Ruby Swordmaster_F 0 Level(18,Ally,False) [4,3] 0 0 0 0 [WoDao,IronSword,Lancereaver,Vulnerary] NoAI
 UNIT Ruby Hero_F 0 Level(18,Ally,False) [4,3] 0 0 0 0 [WoDao,SteelAxe,HandAxe,Vulnerary] NoAI
 LoadUnit(4,1)
 LoadUnit(2,2)
@@ -412,6 +412,7 @@ EndingScene:
 		STAL 30
 		Text(C1_Outro_HermReturns)
 		REVEAL Hermenegildo
+		SendAll(Hermenegildo)
 		PROMOTE Hermenegildo Sage_Hermen HoardersCharm
 		STAL 30
 	LABEL 0x1D
@@ -421,29 +422,11 @@ EndingScene:
 		ENUT 0xB5
 		STAL 30
 		Text(C1_Outro_HermMonologues)
+		SendAll(Hermenegildo)
 		PROMOTE Hermenegildo Sage_Hermen HoardersCharm
 		STAL 30
 	LABEL 0x23
-
 	FadeToBlack
-
-	// we straight-up do not need any of this entire section. not sure why i bothered to event it earlier
-	// LOMA 0x12
-	// CAM1 [15,0]
-	// LOAD2 1 Outro_Already_Outside
-	// ENUN
-	// TILECHANGE 0x0
-	// TILECHANGE 0x1
-	// TILECHANGE 0x2
-	// FadeBackFromBlack
-	// STAL 30
-	// LOAD1 1 Outro_Touching_Grass
-	// ENUN
-	// CameraCursor(Desiderio)
-	// CameraCursor(Lua)
-	// Text(C1_Outro_OutsideScene)
-	// FadeToBlack
-
 	// better fix the hub chapter thing!
 	GoToHubChapter(HubC)
 	ENDA

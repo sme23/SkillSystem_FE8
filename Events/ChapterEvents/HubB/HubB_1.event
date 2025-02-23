@@ -17,10 +17,18 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0, WyvernWarning, 4)
-TurnEventEnemy(0, WyvernSpawn, 5)
+TurnEventPlayer(0, WyvernSpawn, 6)
 TurnEventPlayer(0, ThiefSpawnB, 6)
 TurnEventPlayer(0, ThiefSpawnC, 7)
+TurnEventPlayer(0, KirilGoesAggressive, 7)
 END_MAIN
+
+KirilGoesAggressive:
+CameraCursor(Kiril)
+Text(KirilChargesText)
+SetAI(Kiril,0,0,0,0)
+NoFade
+ENDA
 
 CharacterBasedEvents:
 END_MAIN
@@ -28,7 +36,7 @@ END_MAIN
 LocationBasedEvents:
 Chest(HexlockShield, 2, 2)
 Chest(Elsurge, 5, 2)
-Chest(FliersPermit, 12, 9)
+Chest(FliersPermit, 13, 9)
 Chest(SilverBow, 16, 12)
 Chest(FlameSword, 0, 15)
 Chest(InfiltratorGun, 2, 15)
@@ -71,9 +79,9 @@ AntlionsInitial:
 //Temp
 //UNIT Kiril MasterNinja 0 Level(13,Enemy,True) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] BossAI
 //boss squad
-UNIT Kiril MasterNinja 0 Level(13,Enemy,True) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] GroupOneAI
+UNIT Kiril MasterNinja 0 Level(13,Enemy,True) [9,20] 0 0 0 0 [SteelDagger, Wingclipper] AttackInRangeAI
 UNIT Antlion Brigand 0 Level(10, Enemy, True) [7,21] 0 0 0 0 [Crusher] GroupOneAI
-UNIT Antlion Deserter 0 Level(10, Enemy, True) [10,21] 0 0 0 0 [Pike] GroupOneAI
+UNIT Antlion Deserter 0 Level(10, Enemy, True) [11,21] 0 0 0 0 [Pike] GroupOneAI
 //turn 1
 UNIT Antlion Mercenary 0 Level(9, Enemy, True) [11,3] 0 0 0 0 [SteelSword] ChargeAI
 UNIT Antlion Brigand 0 Level(9, Enemy, True) [13,1] 0 0 0 0 [SteelAxe] ChargeAI
@@ -99,8 +107,7 @@ UNIT Antlion SwordCav 0 Level(9, Enemy, True) [12,16] 0 0 0 0 [SteelSword] Attac
 //turn 5
 UNIT Antlion Mercenary 0 Level(9, Enemy, True) [6,18] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
 UNIT Antlion Myrmidon 0 Level(9, Enemy, True) [11,17] 0 0 0 0 [Lancereaver] AttackWhenInRangeAI
-UNIT Antlion Shaman 0 Level(10, Enemy, True) [12,20] 0 0 0 0 [Elfire] AttackWhenInRangeAI
-UNIT Antlion Warden 0 Level(10, Enemy, True) [5,19] 0 0 0 0 [SteelBlade,Horseslayer] AttackInTwoAI
+UNIT Antlion Shaman 0 Level(10, Enemy, True) [14,20] 0 0 0 0 [Elfire] AttackWhenInRangeAI
 UNIT Antlion Gunner 0 Level(10, Enemy, True) [16,17] 0 0 0 0 [SteelMusket,Pistol] AttackWhenInRangeAI
 UNIT Antlion Mercenary 0 Level(10, Enemy, True) [17,19] 0 0 0 0 [SteelSword] AttackWhenInRangeAI
 //nw chest room
@@ -134,7 +141,7 @@ UNIT Antlion Thief 0 Level(9, Enemy, True) [0,8] 0 0 0 0 [IronKnife,ChestKey,Doo
 UNIT
 
 DmitrSpawn:
-UNIT Dmitr Brigand 0 Level(7,Ally,True) [1,1] 0 0 0 0 [Bloodaxe] NoAI
+UNIT Dmitr Brigand 0 Level(7,Ally,True) [1,1] 0 0 0 0 [Bloodaxe, RecoilAxe, Vulnerary] NoAI
 UNIT
 
 IntroCutsceneNPCs:
@@ -157,7 +164,7 @@ UNIT Pilar 0 0 Level(1,Ally,True) [2,2] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
 IntroCutsceneDmitr:
-UNIT Dmitr Brigand 0 Level(9,NPC,True) [8,3] 0 0 0 0 [Bloodaxe] NoAI
+UNIT Khazhak Brigand 0 Level(9,NPC,True) [8,3] 0 0 0 0 [Bloodaxe] NoAI
 UNIT
 
 IntroCutsceneDesiderio:
@@ -169,7 +176,7 @@ UNIT
 
 IntroCutsceneDesertCrew1:
 UNIT Lua Captain 0 Level(10,Ally,False) [9,0] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Dmitr Brigand 0 Level(9,NPC,True) [10,0] 0 0 0 0 [Bloodaxe] NoAI
+UNIT Khazhak Brigand 0 Level(9,NPC,True) [10,0] 0 0 0 0 [Bloodaxe] NoAI
 UNIT
 
 IntroCutsceneDesertCrew2:
@@ -198,7 +205,7 @@ UNIT
 
 CutsceneUnits:
 UNIT Lua Captain 0 Level(10,Ally,False) [18,0] 0 0 1 REDA16R4 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Dmitr Brigand 0 Level(10,NPC,False) [17,0] 0 0 1 REDA15R3 [Bloodaxe, RecoilAxe, Vulnerary] NoAI
+UNIT Khazhak Brigand 0 Level(10,NPC,False) [17,0] 0 0 1 REDA15R3 [Bloodaxe, RecoilAxe, Vulnerary] NoAI
 UNIT Desiderio Captain 0 Level(10,Ally,False) [16,0] 0 0 1 REDA15R5 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
@@ -247,9 +254,9 @@ BeginningScene:
 	
 	//Dmitr comes in, inquires about the ruins. 
 	LoadCutsceneUnits(IntroCutsceneDmitr)
-	MOVE 5 Dmitr [5,4]
+	MOVE 5 Khazhak [5,4]
 	ENUN
-	CameraCursor(Dmitr)
+	CameraCursor(Khazhak)
 	SetBackground(Outside_Village_Evening)
 	Text(HubB_1BeginningScene4)
 	EraseBackground
@@ -287,7 +294,7 @@ BeginningScene:
 	LoadCutsceneUnits(IntroCutsceneDesertCrew1)
 	FADU 16
 	MOVE 5 Lua [12,5]
-	MOVE 5 Dmitr [11,6]
+	MOVE 5 Khazhak [11,6]
 	ENUN
 	LoadCutsceneUnits(IntroCutsceneDesertCrew2)
 	MOVE 4 Desiderio [9,4]
@@ -301,7 +308,7 @@ BeginningScene:
 	EraseBackground
 	
 	MOVE 5 Lua [12,12]
-	MOVE 5 Dmitr [13,12]
+	MOVE 5 Khazhak [13,12]
 	ENUN
 	MOVE 3 Desiderio [11,8]
 	MOVE 4 Razvan [12,7] 
@@ -381,24 +388,22 @@ BeginningScene:
 	CAMERA Lua
 	MUSC AvastMeHeartiesID
 	Text(HubB_1BeginningScene11)
-	CUSA Dmitr
+	CUSA Khazhak
 	STAL 40
 	FADI 10
+	CUSN Khazhak
+	STAL 1
+	RemoveAll
+	STAL 30
 	LOAD1 1 DmitrSpawn
+	LOAD1 1 AntlionsInitial
+	ENUN
 	REMOVEALL_BLUE
 	GoToPrepScreen2
 	CAMERA_CENTERED[14,4]
 	FADU 10
 	NoFade
-	//CALL EndingScene
 	ENDA
-
-	/*LOAD1 1 DmitrSpawn
-	LOAD1 1 AntlionsInitial
-	Text(HubB_1EndingScene1_B)
-	GotoPrepScreen
-	NoFade
-	ENDA*/
 
 
 EndingScene:

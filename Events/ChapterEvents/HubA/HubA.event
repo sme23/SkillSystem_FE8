@@ -723,7 +723,7 @@ NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(10,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(15,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
@@ -912,7 +912,7 @@ UNIT
 
 EstelleOrlandoDocksGroup:
 UNIT Estelle Troubadour 0 Level(2,NPC,False) [8,4] 0 0 0 0 [Heal, Torch] NoAI
-UNIT Orlando 0 0 Level(10,NPC,False) [8,20] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(15,NPC,False) [8,20] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT
 
 DocksGroup:

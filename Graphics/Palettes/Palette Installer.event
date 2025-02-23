@@ -30,3 +30,21 @@ MatteoRanger:
 TrianaShaman:
 	#incbin "./_palettes/TrianaShaman.lzpal" 
 
+KhazhakFighter:
+	#incbin "./_palettes/KhazhakFighter.lzpal" 
+
+BuzuVanguard:
+	#incbin "./_palettes/BuzuVanguard.lzpal" 
+
+BozoWarden:
+	#incbin "./_palettes/BozoWarden.lzpal" 
+
+PilarNinja:
+	#incbin "./_palettes/PilarNinja.lzpal" 
+
+RazvanCurate:
+	#incbin "./_palettes/RazvanCurate.lzpal" 
+
+XimoArcher:
+	#incbin "./_palettes/XimoArcher.lzpal" 
+

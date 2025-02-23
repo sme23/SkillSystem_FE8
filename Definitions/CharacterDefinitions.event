@@ -230,3 +230,7 @@
 #define C4Phantom 0x8A
 #define C4Elite 0x8B
 
+// Chapter 4
+#define Wayra 0xdf
+#define Keeper 0xe0
+

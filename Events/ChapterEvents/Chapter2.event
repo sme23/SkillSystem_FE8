@@ -395,7 +395,7 @@ NoFade
 ENDA
 
 OrlandoRahelUnitGroup:
-UNIT Orlando 0 0 Level(13,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(15,NPC,False) [17,11] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT Rahel Civilian_F_2 0 Level(1,NPC,False) [19,10] 0x0 0x0 0 0 [0x0] NoAI
 UNIT
 
@@ -524,7 +524,7 @@ ENDA
 
 Units1:
 UNIT Lua 0 0 Level(10,Ally,False) [15,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Orlando 0 0 Level(13,Ally,False) [28,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(15,Ally,False) [28,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 //Lua's Group - 7
 UNIT Rahel 0 0 Level(1,Ally,False) [15,10] 0 0 0 0 [IronBow, Vulnerary] NoAI
 LoadUnit(16,10)
@@ -786,7 +786,7 @@ NoFade
 ENDA
 
 NewPlayerGroup:
-UNIT Orlando 0 0 Level(13,Ally,False) [15,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
+UNIT Orlando 0 0 Level(15,Ally,False) [15,11] 0 0 0 0 [SilverDagger, Thani, Vulnerary] NoAI
 UNIT Rahel 0 0 Level(1,Ally,False) [16,11] 0 0 0 0 [IronBow, Vulnerary] NoAI
 UNIT
 
@@ -853,7 +853,7 @@ UNIT Desiderio 0x0 0x0 Level(1, Ally, False) [20,12] 0 0 0 0 [Vulnerary] NoAI
 UNIT Rahel 0x0 0 Level(1,Ally,False) [20,15] 0x0 0x0 0 0 [0x0] NoAI
 UNIT Pilar 0x81 0x0 Level(1, Ally, False) [31,10] 0 0 0 0 [Vulnerary] NoAI
 UNIT Razvan 0x0 0 Level(1,Ally,False) [22,10] 0x0 0x0 0 0 [0x0] NoAI
-UNIT Orlando 0 0 Level(13,Ally,False) [30,12] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
+UNIT Orlando 0 0 Level(15,Ally,False) [30,12] 0x0 0x0 0 0 [SilverDagger, Thani] NoAI
 UNIT
 
 EndingSceneElodiaCutscene:
