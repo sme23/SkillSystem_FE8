@@ -379,6 +379,9 @@ Take Aim![X]
 ## TakeAimDesc
 +30 hit to an ally for 1 turn.[X]
 
+## FortuneStaffSubtitleText
+Select ally to instruct aim.[X]
+
 ## AssistStaffName
 Assist[X]
 
