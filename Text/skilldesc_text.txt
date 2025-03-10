@@ -1860,3 +1860,7 @@ An undeployed ally can replace them.[X]
 Rebel Rebel: This unit can move[N]
 through enemies and won't be[N]
 attacked by them. -1 Mov.[X]
+
+## SD_DoubleFalcon
+Double Falcon: On a kill, unit's[N]
+attacks are brave next combat.[X]

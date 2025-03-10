@@ -1189,6 +1189,9 @@ ORG SkillIcon(EarlyLeaveID)
 ORG SkillIcon(RebelRebelID)
 #incbin "SkillIcons/Canto.dmp"
 
+ORG SkillIcon(DoubleFalconID)
+#incbin "SkillIcons/DoubleLion.dmp"
+
 //don't need them
 ORG SkillIcon(ProtectorID)
 #incbin "SkillIcons/Savior.dmp"
