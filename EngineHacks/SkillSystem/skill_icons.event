@@ -1192,6 +1192,9 @@ ORG SkillIcon(RebelRebelID)
 ORG SkillIcon(DoubleFalconID)
 #incbin "SkillIcons/DoubleLion.dmp"
 
+ORG SkillIcon(ThornSkillID)
+#incbin "SkillIcons/Axefaith.dmp"
+
 //don't need them
 ORG SkillIcon(ProtectorID)
 #incbin "SkillIcons/Savior.dmp"

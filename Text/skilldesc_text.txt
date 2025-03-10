@@ -1864,3 +1864,7 @@ attacked by them. -1 Mov.[X]
 ## SD_DoubleFalcon
 Double Falcon: On a kill, unit's[N]
 attacks are brave next combat.[X]
+
+## SD_Thorn
+If unit's Str > enemy's Str,[N]
+unit always Breaks on hit.[X]
