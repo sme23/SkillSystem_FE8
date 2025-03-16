@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno1 Dunno2 Dunno3 Tutorial
 POIN Traps1 Traps2
 POIN Units1 Units1
-POIN $0 $0 $0 
+POIN $0 $0 $0
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -78,11 +78,6 @@ LoadUnit(12,13)
 UNIT
 
 BeginningScene:
-TILECHANGE 0x1
-TILECHANGE 0x3
-TILECHANGE 0xB
-TILECHANGE 0xC
-TILECHANGE 0xE
 
 SetBackground(Ship)
 // storm ambience specifically
@@ -109,7 +104,7 @@ TEXTEND
 REMA
 
 FadeToBlack
-
+MUSC 0x7FFF
 STAL 30
 SOUN 0x11A
 STAL 20
@@ -117,35 +112,141 @@ SOUN 0x11A
 SOUN 0x119
 STAL 10
 SOUN 0x11A
+STAL 50
+SOUN 0xAF
+STAL 20
+SOUN 0xAF
+STAL 20
+SOUN 0xAF
+STAL 40
+SOUN 0x2F0
+STAL 120
 // should be Dire Tides instead
 Music(NighttimeSoundID)
+ENUF 0x84
 STAL 60
-EraseBackground
+//This is to set the coordinates of the newly loaded night time map to 0,0
+SVAL sB 0
+LOMA CutsceneHubB_5
 LOAD1 1 CutsceneNicoSquad
-CAM1 Nicodemus
-STAL 30
-CameraCursor(Nicodemus)
-Text(B5_NicodemusCrash)
-CameraCursor(Fata)
-Text(B5_FataMocksNicodemus)
+SVAL s1 0x14 //set hp values to lower ones for all the units
+SET_HP 0x91
+SET_HP 0x92
+SET_HP 0x93
+SET_HP 0x95
+SET_HP 0x96
+SET_HP 0x97
+SVAL s1 0x20 //'nico' is a little healthier
+SET_HP 0x90
+SVAL s1 0x01 //meanwhile this fighter dies next to a curate RIP
+SET_HP 0x94
+EraseBackground
 
+CAM1 0x90
+STAL 30
+CameraCursor(0x90)
+Text(B5_NicodemusCrash_1)
+
+MOVE 9 0x91 [10,13] //soldier that'll find a healer
+ENUN
+STAL 30
+Text(B5_NicodemusCrash_2)
+
+MOVE 10 0x92 [0,4]
+ENUN
+REMOVEUNIT 0x92
+CAMERA_CENTERED Fata
+STAL 30
+FlashCursor(0x94, 60)
+SET_SOMETHING 0x94
+SOUN 0xD6 //death sfz
+DISA 0x94
+STAL 60
+Text(B5_FataMocksNicodemus_1)
+
+CAMERA_CENTERED [0,0]
+STAL 30
+LOAD1 1 CutsceneNicoAdditionalTroops
+MOVE 5 0x98 [3,5] //cavs
+MOVE 5 0x9A [4,4] //curate
+STAL 15
+MOVE 5 0x99 [5,5] //slightly delayed
+ENUN
+STAL 30
+CameraCursor(Fata)
+Text(B5_FataMocksNicodemus_2)
+
+ENUT 0x84 //setting back on the suppression of boss icons, no longer needed
 FadeToBlack
+LOMA HubB_5
+TILECHANGE 0x1
+TILECHANGE 0x3
+TILECHANGE 0xB
+TILECHANGE 0xC
+TILECHANGE 0xE
 Music(NighttimeSoundID)
 SetBackground(Forest_Dense)
 Text(B5_LuaCrash)
 FadeToBlack
-EraseBackground
 
-CAM1 [14,17]
+CAM1 [13,13]
 REMOVEALL_RED
 REMOVEALL_GREEN
 DISA Fata
-LOAD1 1 BadGuys
+
 LoadCutsceneUnits(LuaIntroSquad)
-Music(AvastMeHeartiesID)
+
+EraseBackground
 FadeBackFromBlack
+
+MOVE 4 Lua [13, 17]
+MOVE 4 Desiderio [15, 15]
+STAL 30
+MOVE 10 Razvan [13, 15]
+ENUN
+FlashCursor(Razvan, 60)
+
+TEXTSTART
+TEXTSHOW B5_LuaWandering
+TEXTEND
+//stop music when cavalry is heard
+SOUN 0x19A //play pegasus sound
+STAL 20
+MUSC 0x7FFF
+SOUN 0x19A //play pegasus sound
+STAL 20
+SOUN 0x19C //play pegasus sound
+STAL 30
+TEXTCONT
+TEXTEND
+REMA
+
+//Horsemen appear, imperials now spreading word
+Music(AvastMeHeartiesID)
+LoadCutsceneUnits(CutsceneImperialScouts)
+CAM1 [11,13]
+MOVE 8 0x98 [10,14] //cavs
+MOVE 8 0x99 [11,13]
+STAL 20
+MOVE 10 Razvan [13,17]
+MOVE 8 Lua [12, 16]
+MOVE 6 Desiderio [13, 15]
+ENUN
 STAL 30
 Text(B5_SoldierFindsLua)
+
+//cavalry split off, quickly retreat
+MOVE 12 0x98 [1,9] //cavs
+MOVE 12 0x99 [11,6]
+ENUN
+REMOVEALL_RED
+STAL 40
+CAM1 [13,13]
+STAL 20
+MOVE 8 Razvan [13,16]
+MOVE 8 Lua [14, 15]
+MOVE 8 Desiderio [15, 16]
+ENUN
 CameraCursor(Lua)
 Text(B5_LuaPrepares)
 STAL 30
@@ -156,50 +257,190 @@ Text(B5_HillHighlight)
 CenterTextbox(B5_GraveExplanation)
 FadeToBlack
 REMOVEALL_BLUE
+LOAD1 1 BadGuys
+//very subtle detail, but making the healers on the map spawn with very low durability on their heal staves post-crash
+SetUnitItemDurability(5, 10, 0, 5)
+SetUnitItemDurability(17, 5, 1, 3)
+//now these are tonics
+SetUnitItemDurability(15, 2, 1, DefTonic) //merc
+SetUnitItemDurability(3, 9, 1, StrTonic) //soldier
 GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
 FadeOutMusic
+//check if it's Lua doing the signalling, 
+//she'll have unique dialogue
+
+SVAL s1 Lua //store Lua ID
+CHECK_ACTIVE
+BNE 775 0xC 0x1 //If Lua isn't active, then have generic text
+		Text(B5_LuaSignals)
+		GOTO 776
+LABEL 775
 Text(B5_CurrentCharacterSignals)
+LABEL 776
 FadeToBlack
-Music(CastawayHeartID)
+REMOVEALL_BLUE
+REMOVEALL_RED
+CAM1 [0,0]
+TILECHANGE 0x10
+LoadCutsceneUnits(CutsceneLuaHill)
+FadeBackFromBlack
+
+//Hilltop has been routed, Lua, Desi and Pilar rally at the top. 
+Music(StillZephyrsID)
+MOVE 5 Pilar [9,6]
+MOVE 5 Desiderio [10,5]
+ENUN
+STAL 10
+FlashCursor(Lua, 60)
 SetBackground(Forest_Dense)
-Text(B5_ChatOnHill)
+Text(B5_ChatOnHill_1)
+EraseBackground
+
+//They walk further along to get a better view.
+//Desiderio sees smoke in the distance.
+STAL 10
+MOVE 4 Lua [10,3]
+MOVE 4 Pilar [11,4]
+STAL 20
+MOVE 4 Desiderio [11,2]
+ENUN
+STAL 60
+FlashCursor(Desiderio, 60)
+SetBackground(Forest_Dense)
+Text(B5_ChatOnHill_2)
+
+//They walk off towards the crashed ship, in search of answers. 
 FadeToBlack
+STAL 10
+MOVE 4 Lua [12,7]
+MOVE 6 Pilar [12,6]
+MOVE 4 Desiderio [13,5]
+ENUN
+STAL 20
+REMOVEALL_BLUE
+LOMA CutsceneHubB_5
 
-FlagIsSet(0x10, 0x1A1)
-	CHECK_ALIVE Fata
-	BEQ 0x1A1 s0 sC
-		FadeBackFromBlack
-		Music(WelcomeAboardMateyID)
-		// fata scene will happen (either way)
-		FlagIsSet(0x10, 0x2B2)
-		FlagIsSet(0x10, 0x2B2)
-		FlagIsSet(0x10, 0x2B2)
-		// fata scene: all flags on
-		Text(B5_Fata_Graves)
-		GiveItemWithDurability(SkillScroll,ShadeID,Fata)
-		GOTO 0x3C3
-		LABEL 0x2B2
-		// fata scene: missed a grave
-		Text(B5_Fata_NoGraves)
-		LABEL 0x3C3
-		// done with either fata scene
-		FadeToBlack
-LABEL 0x1A1
+//They arrive at the ship, Razvan now in tow.
 
-SetBackground(Inn)
 // idk; some sort of spooky ambient-ish song? Dire Tides?
 Music(OrlandosThemeID)
-Text(B5_Wreckage_Intro)
+LoadCutsceneUnits(CutsceneLuaShipwreck_1)
+CAM1 [13,4]
+FadeBackFromBlack
+STAL 30
+FlashCursor(Pilar, 60)
+Text(B5_Wreckage_1)
+
+//They enter the ship, to see the interior mostly intact.
+TILECHANGE 0x0 //cabin
+STAL 20
+MOVE 4 Lua [12,2]
+MOVE 6 Pilar [10,0]
+MOVE 4 Razvan [9,3]
+STAL 20
+MOVE 4 Desiderio [11,3]
+ENUN
+STAL 20
+FlashCursor(Lua, 60)
+SetBackground(Inn)
+Text(B5_Wreckage_2)
+EraseBackground
+
+//Desiderio finds a wine stash, and is happy to indulge.
+MOVE 3 Desiderio [13,4]
+ENUN
+STAL 10
+SOUN 0xB1 //lockpick sound
+TILECHANGE 0x1
+STAL 25
+FlashCursor(Desiderio, 60)
+TEXTSTART
+TEXTSHOW B5_Wreckage_3
+TEXTEND
+
+//Lua yoinks it away mid-dialogue.
+MOVE 12 Lua [13,3]
+ENUN
+MUSI
+STAL 15
+SOUN 0xA0 //steal sfx
+STAL 20
+MUNO
+TEXTCONT
+TEXTEND
+//The 'wine' is a rainbow tonic. Enjoy!
+GiveItemWithDurability(Tonic,9,Lua)
+
+//Pilar finds something useful; a journal written by the imperial captain.
+FlashCursor(Pilar, 60)
+SetBackground(Inn)
+Text(B5_Wreckage_4)
+EraseBackground
+MOVE 3 Lua [10,2]
+MOVE 3 Razvan [9,2]
+STAL 20
+MOVE 3 Desiderio [11,2]
+ENUN
+STAL 20
+FlashCursor(Lua, 60)
+SetBackground(Inn)
+
+//From here, the text is straight-forward.
+Text(B5_Wreckage_5)
 CenterTextbox(B5_Journal_Elodia)
-Text(B5_Wreckage_Interlude)
+Text(B5_Wreckage_6)
 Music(ABlackheartsPrideID)
 CenterTextbox(B5_Journal_Alonso)
-Text(B5_Wreckage_Outro)
+Text(B5_Wreckage_7)
+EraseBackground
 FadeToBlack
+
+//Before we end the chapter, we see the
+//crew has removed some spoils, but Lua
+//has gotta talk to Fata first (if alive).
+FlagIsSet(0x10, 0x1A1)
+CHECK_ALIVE Fata
+BEQ 0x1A1 s0 sC
+
+//Play an additional little cutscene
+REMOVEALL_BLUE
+LoadCutsceneUnits(CutsceneLuaShipwreck_2)
+LoadCutsceneUnits(CutsceneLuaShipwreck_Filler)
+TILEREVERT 0x1
+TILEREVERT 0x0
+TILECHANGE 0x2
+TILECHANGE 0x3
+TILECHANGE 0x4
+CAM1 [0,7]
+//make sure to check lua being active for split scene
+FADU 5
+
+STAL 20
+Music(WelcomeAboardMateyID)
+FlashCursor(Lua, 60)
+SetBackground(Forest_Dense)
+// fata scene will happen (either way)
+FlagIsSet(0xA, 0x2B2)
+FlagIsSet(0xB, 0x2B2)
+FlagIsSet(0xC, 0x2B2)
+// fata scene: all flags on
+Text(B5_Fata_Graves)
+GiveItemWithDurability(SkillScroll,ShadeID,Fata)
+GOTO 0x3C3
+LABEL 0x2B2
+// fata scene: missed a grave
+Text(B5_Fata_NoGraves)
+LABEL 0x3C3
+// done with either fata scene
+EraseBackground
+STAL 30
+FadeToBlack
+
+LABEL 0x1A1
 GoToHubChapter(HubB)
 ENDA
 
@@ -244,7 +485,7 @@ UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [4,19] 0 0 0 0 [SteelLanc
 // t3
 UNIT Incendivis Shaman Nicodemus Level(10,Enemy,True) [0,8] 0 0 0 0 [Elfire] ChargeAI
 UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [1,9] 0 0 0 0 [SteelLance] ChargeAI
-UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [3,9] 0 0 0 0 [SteelLance] ChargeAI
+UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [3,9] 0 0 0 0 [SteelLance, Tonic] ChargeAI
 UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [4,7] 0 0 0 0 [SteelMusket] ChargeAI
 // t4
 // UNIT Incendivis Myrmidon Nicodemus Level(10,Enemy,True) [5,1] 0 0 0 0 [Lancereaver] ChargeAI
@@ -253,9 +494,9 @@ UNIT Incendivis Halberdier Nicodemus Level(12,Enemy,True) [8,3] 0 0 0 0 [SteelLa
 UNIT Incendivis SwordCav Nicodemus Level(10,Enemy,True) [10,1] 0 0 0 0 [Wingclipper] ChargeAI
 // UNIT Incendivis Vanguard Nicodemus Level(10,Enemy,True) [1,3] 0 0 0 0 [SteelAxe,Oversize] ChargeAI
 // t5
-UNIT Incendivis Curate Nicodemus Level(10,Enemy,True) [17,5] 0 0 0 0 [Silence] BossAI
+UNIT Incendivis Curate Nicodemus Level(10,Enemy,True) [17,5] 0 0 0 0 [Silence, Mend] BossAI
 UNIT Incendivis DragonRider Nicodemus Level(10,Enemy,True) [5,4] 0 0 0 0 [HandAxe] GroupTwoAI
-UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [9,5] 0 0 0 0 [SteelAxe] GroupTwoAI
+UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [9,5] 0 0 0 0 [SteelAxe, Vulnerary] GroupTwoAI
 UNIT Incendivis Warden Nicodemus Level(10,Enemy,True) [13,8] 0 0 0 0 [SteelSword] GroupTwoAI
 // UNIT Incendivis Archer Nicodemus Level(10,Enemy,True) [11,4] 0 0 0 0 [SteelBow,Tomereaver] GroupTwoAI
 // UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [13,5] 0 0 0 0 [SilverLance] GroupTwoAI
@@ -270,7 +511,7 @@ UNIT Incendivis SwordKnight Nicodemus Level(12,Enemy,True) [20,7] 0 0 0 0 [Rapie
 // i don't evne fucking know anymore
 // lol
 UNIT Incendivis Fighter Nicodemus Level(10,Enemy,True) [16,1] 0 0 0 0 [SteelAxe] GroupFourAI
-UNIT Incendivis Mercenary Nicodemus Level(10,Enemy,True) [15,2] 0 0 0 0 [SteelSword] GroupFourAI
+UNIT Incendivis Mercenary Nicodemus Level(10,Enemy,True) [15,2] 0 0 0 0 [SteelSword, Tonic] GroupFourAI
 // UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [18,3] 0 0 0 0 [SteelMusket] GroupFourAI
 //commenting out this one guy
 //UNIT Incendivis LanceCav Nicodemus Level(10,Enemy,True) [22,3] 0 0 0 0 [SteelLance] AttackInTwoAI
@@ -282,6 +523,7 @@ UNIT
 
 Reinforcements_T6:
 UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [16,0] 0 0 1 REDA16R0 [Javelin,SteelLance] ChargeAI
+UNIT Incendivis Curate Nicodemus Level(10,Enemy,True) [22,0] 0 0 0 REDA22R0 [Heal,Mend] [0x0E,0x03,0x04,0x0] //added this guy to make up for lost healing charges
 UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [17,0] 0 0 1 REDA17R0 [SteelLance,Javelin] ChargeAI
 UNIT
 
@@ -297,16 +539,66 @@ UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [8,0] 0 0 1 REDA8R0 [Pisto
 UNIT Incendivis Gunner Nicodemus Level(10,Enemy,True) [10,0] 0 0 1 REDA10R0 [Blunderbuss,Pistol] ChargeAI
 UNIT
 
+//these units will be injured in the cutscene, as they just crashed lol
+//need the injured enemies to be seperate unit IDs, so using filler here
+//also have nico as injured, thus need to have him as a generic in the cutscene too
 CutsceneNicoSquad:
-UNIT Nicodemus Cataphract 0 Level(13,Enemy,False) [12,6] 0 0 0 0 [Pike,Tomahawk,RiderBadge] NoAI
-UNIT Incendivis Soldier Nicodemus Level(10,Enemy,True) [9,5] 0 0 0 0 [SteelLance] NoAI
-UNIT Incendivis Mercenary_F Nicodemus Level(10,Enemy,True) [10,7] 0 0 0 0 [SteelSword] NoAI
-UNIT Fata Monk 0 Level(10,NPC,True) [3,5] 0 0 0 0 [Elfire,Luna] NoAI
+UNIT 0x90 Cataphract 0 Level(13,Enemy,False) [8,6] 0 0 0 0 [Pike,Tomahawk,RiderBadge] NoAI // Nico
+UNIT 0x91 Soldier Nicodemus Level(10,Enemy,True) [7,7] 0 0 0 0 [SteelLance] NoAI //soldier that moves
+UNIT 0x92 Mercenary_F Nicodemus Level(10,Enemy,True) [6,6] 0 0 0 0 [SteelSword] NoAI
+UNIT 0x93 Curate Nicodemus Level(10,Enemy,True) [11,13] 0 0 0 0 [Heal] GroupOneAI
+UNIT 0x94 Fighter Nicodemus Level(10,Enemy,True) [12,13] 0 0 0 0 [SteelLance] NoAI
+UNIT 0x95 Mage Nicodemus Level(10,Enemy,True) [2,7] 0 0 0 0 [SteelMusket] GroupOneAI
+UNIT 0x96 Gunner Nicodemus Level(10,Enemy,True) [12,10] 0 0 0 0 [SteelMusket] GroupOneAI
+UNIT 0x97 Shaman Nicodemus Level(10,Enemy,True) [10,1] 0 0 0 0 [SteelLance] NoAI
+UNIT Fata Monk 0 Level(10,NPC,True) [1,15] 0 0 0 0 [Elfire,Luna] NoAI
+UNIT
+
+//these guys appear mid-cutscene to show troops re-rallying
+CutsceneNicoAdditionalTroops:
+UNIT 0x98 LanceCav Nicodemus Level(10,Enemy,True) [0,3] 0 0 0 0 [SteelMusket] GroupOneAI
+UNIT 0x99 AxeCav Nicodemus Level(10,Enemy,True) [0,5] 0 0 0 0 [SteelMusket] GroupOneAI
+UNIT 0x9A Curate Nicodemus Level(10,Enemy,True) [0,4] 0 0 0 0 [SteelMusket] GroupOneAI
 UNIT
 
 LuaIntroSquad:
-UNIT Lua Captain 0 Level(10,Ally,False) [13,17] 0 0 0 0 [IronSword] NoAI
-UNIT Desiderio Vanguard 0 Level(10,Ally,False) [15,15] 0 0 0 0 [IronAxe] NoAI
+UNIT Lua 0 0 Level(10,Ally,False) [14,19] 0 0 0 0 [IronSword] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [15,19] 0 0 0 0 [IronAxe] NoAI
+UNIT Razvan 0 0 Level(1,Ally,True) [4,14] 0x0 0x0 0 0 [Heal] NoAI
+UNIT
+
+CutsceneImperialScouts:
+UNIT 0x98 LanceCav Nicodemus Level(10,Enemy,True) [8,5] 0 0 0 0 [SteelMusket] GroupOneAI
+UNIT 0x99 AxeCav Nicodemus Level(10,Enemy,True) [9,6] 0 0 0 0 [SteelMusket] GroupOneAI
+UNIT
+
+CutsceneLuaHill:
+UNIT Lua 0 0 Level(10,Ally,False) [9,4] 0 0 0 0 [IronSword] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [10,8] 0 0 0 0 [IronAxe] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [11,9] 0x0 0x0 0 0 [IronKnife] NoAI
+UNIT
+
+CutsceneLuaShipwreck_1:
+UNIT Lua 0 0 Level(10,Ally,False) [10,6] 0 0 0 0 [IronSword] NoAI
+UNIT Desiderio 0 0 Level(10,Ally,False) [12,6] 0 0 0 0 [IronAxe] NoAI
+UNIT Razvan 0 0 Level(1,Ally,True) [10,8] 0x0 0x0 0 0 [Heal] NoAI
+UNIT Pilar 0 0 Level(1,Ally,True) [11,7] 0x0 0x0 0 0 [IronKnife] NoAI
+UNIT
+
+//Used for the final convo between Fata and Lua
+CutsceneLuaShipwreck_2:
+UNIT Lua 0 0 Level(10,Ally,False) [2,8] 0 0 0 0 [IronSword] NoAI
+UNIT Fata Monk 0 Level(10,Ally,True) [3,8] 0 0 0 0 [Elfire,Luna] NoAI
+UNIT
+
+//Will be replaced with the units you deployed this chapter as flavor, woo
+CutsceneLuaShipwreck_Filler:
+UNIT Pilar 0 0 Level(10,Ally,False) [1,3] 0 0 0 0 [IronSword] NoAI
+UNIT Razvan 0 0 Level(10,Ally,False) [8,2] 0 0 0 0 [IronSword] NoAI
+UNIT Ximo 0 0 Level(10,Ally,False) [9,3] 0 0 0 0 [IronSword] NoAI
+UNIT Carmen 0 0 Level(10,Ally,False) [12,11] 0 0 0 0 [IronSword] NoAI
+UNIT Orlando 0 0 Level(10,Ally,False) [7,11] 0 0 0 0 [IronSword] NoAI
+UNIT Hermen 0 0 Level(10,Ally,False) [4,10] 0 0 0 0 [IronSword] NoAI
 UNIT
 
 Trees_T2:
@@ -407,18 +699,21 @@ ENDA
 
 Reinforcements1:
 SpawnReinforcements(Reinforcements_T6)
+//Another curate spawns in, but with only mildly used healing staves. 
+SetUnitItemDurability(22, 0, 0, 27)
+SetUnitItemDurability(22, 0, 1, 18)
 NoFade
-ENDA 
+ENDA
 
 Reinforcements2:
 SpawnReinforcements(Reinforcements_T8)
 NoFade
-ENDA 
+ENDA
 
 Reinforcements3:
 SpawnReinforcements(Reinforcements_T7)
 NoFade
-ENDA 
+ENDA
 
 
 FataHouse:
