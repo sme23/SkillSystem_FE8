@@ -242,7 +242,7 @@ UNIT Razorblood Mercenary 0 Level(3, Enemy, True) [8,4] 0 0 0 0 [IronSword] Atta
 UNIT Razorblood Vanguard 0 Level(3, Enemy, True) [11,2] 0 0 0 0 [IronAxe] AttackInRangeAI
 //turn 2
 UNIT Razorblood Brigand 0 Level(3, Enemy, True) [9,8] 0 0 0 0 [IronAxe] AttackInRangeAI
-UNIT Razorblood Hunter 0 Level(3, Enemy, False) [12,12] 0 0 0 0 [IronBow] ChargeAI 
+UNIT A4FunnyArcher Hunter 0 Level(3, Enemy, False) [12,12] 0 0 0 0 [IronBow] ChargeAI 
 UNIT Razorblood Shaman 0 Level(3, Enemy, True) [9,11] 0 0 0 0 [Elfire, Tonic, TealGem] ChargeAI //speed tonic guy
 UNIT Razorblood Ninja 0 Level(3, Enemy, True) [5,12] 0 0 0 0 [IronKnife] ChargeAI
 //turn 3

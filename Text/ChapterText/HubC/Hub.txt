@@ -1,3 +1,6 @@
+## HubCTitle
+Hub C - Village of the Keepers[X]
+
 ## HubCBeginningScene1
 [MidLeft][LoadPilar]
 [MidRight][LoadLua]

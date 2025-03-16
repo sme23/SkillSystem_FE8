@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
+<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
  <tileset firstgid="1" name="FlasubanVillageNight" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
   <image source="Tilesets/FlasubanVillageNight.png" width="512" height="512"/>
  </tileset>
- <layer id="1" name="PortOutskirts" width="20" height="10" visible="0" opacity="0.9">
+ <layer id="1" name="PortOutskirts" width="20" height="10" opacity="0.9">
   <properties>
    <property name="Anims1" value="0"/>
    <property name="Anims2" value="0"/>
@@ -218,7 +218,7 @@
    <tile gid="197"/>
   </data>
  </layer>
- <layer id="4" name="MagdelenaHouse" width="20" height="10">
+ <layer id="4" name="MagdelenaHouse" width="20" height="10" visible="0">
   <data>
    <tile gid="499"/>
    <tile gid="355"/>
@@ -422,7 +422,7 @@
    <tile/>
   </data>
  </layer>
- <layer id="5" name="MagdelenaHouseBroken" width="20" height="10">
+ <layer id="5" name="MagdelenaHouseBroken" width="20" height="10" visible="0">
   <data>
    <tile/>
    <tile/>

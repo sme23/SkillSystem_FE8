@@ -603,7 +603,7 @@ Swimwear[X]
 
 ## SwimwearDesc
 Allows the wearer to traverse water[N]
-at 2 cost per tile. -2 Def, +4 Luck.[X]
+at 2 cost per tile. -2 Def, +2 Luck.[X]
 
 ## RustyHookName
 Rusty Hook[X]
@@ -638,4 +638,50 @@ Hand Cannon[X]
 Fires staggering shells that[N]
 Break, but cannot follow-up.[X]
 
+## IgnisTriggerName
+Ignis Trigger[X]
 
+## IgnisTriggerDesc
+[LockIcon]Lua. Sword at 1 RNG. Hits Res at RNG.[X]
+
+## SuperbiaName
+Superbia[X]
+
+## SuperbiaDesc
+Always grants user WTA.[X]
+
+## IraName
+Ira[X]
+
+## IraDesc
+Crit is increased by missing HP.[X]
+
+## TristitiaName
+Tristitia[X]
+
+## TristitiaDesc
+Halves all damage taken.[X]
+
+## GulaName
+Gula[X]
+
+## GulaDesc
+Drains HP.[X]
+
+## AvaritiaName
+Avaritia[X]
+
+## AvaritiaDesc
+Grants 1000 Gold on kill.[X]
+
+## LuxuriaName
+Invidia[X]
+
+## LuxuriaDesc
+If enemy would follow up, user does.[X]
+
+## AcediaName
+Acedia[X]
+
+## AcediaDesc
+Allows the target to act again.[X]

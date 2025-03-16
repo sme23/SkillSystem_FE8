@@ -514,11 +514,10 @@ WEATHER 7
 ENUT LuaInAHubFlag
 BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
 STAL 1
-FADI 15
 ENUT GoToNextHubFlagID
 CheckHowManyHubChaptersCompleted
-SVAL s1 4
-BNE 2 sC s1 //if chapters completed != 4, skip
+SVAL s1 5
+BNE 2 sC s1 //if chapters completed != 5, skip
     AddTrap(GreenSigilTrapID, 5, 17)
     ENUF GoToNextHubFlagID
 LABEL 2

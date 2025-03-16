@@ -1212,6 +1212,7 @@ Hm, let me take a look[Beat][A][X]
 ## B3EndingScene3_1_AllFuel
 [ML][LoadLua]
 [MR][LoadDesiderio]
+[ML]
 Alright, I'm done gathering[N]
 what scraps I could find.[AN]
 How's the haul looking?[AN]

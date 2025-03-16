@@ -37,11 +37,15 @@ WORD WanderersFocusID
 
 ALIGN 4
 WanderersFocusRange_Link:
-WORD 3
+WORD 2
 
 ALIGN 4
 MomentumIDLink:
 WORD MomentumID
+
+ALIGN 4
+SuperbiaEffectID_Link:
+WORD SuperbiaEffectID
 
 ALIGN 4
 #include "Analyze/Analyze.lyn.event"
@@ -54,3 +58,6 @@ ALIGN 4
 
 ALIGN 4
 #include "Momentum/Momentum.lyn.event"
+
+ALIGN 4
+#include "Superbia/Superbia.lyn.event"

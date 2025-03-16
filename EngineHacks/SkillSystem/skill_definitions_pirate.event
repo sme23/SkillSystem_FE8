@@ -250,3 +250,19 @@
 
 #define RebelRebelID 90
 
+#define IgnisTriggerID 91
+
+//Despoil: Obtain a Red Gem after attacking and defeating an enemy. (Luck % activation)
+//Author Unknown (Initial Commit)
+#define DespoilID 92
+
+#define AvengerID 93
+
+#define SuperbiaEffectID 94
+
+//Dragonskin: Halve damage taken
+//By Jopettajah
+#define DragonSkinID 95
+#define DragonskinID DragonSkinID //Alias
+
+#define InvidiaSkillID 96

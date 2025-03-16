@@ -58,6 +58,11 @@ POP
 StandingMapSprite(CaptainMapSprite,MapSprite16x16,CaptainSMS)
 MovingMapSprite(Captain, $1C3D7C, CaptainMMS)
 
+//StandingMapSprite(AdmiralMapSprite,MapSprite16x16,AdmiralSMS)
+//MovingMapSprite(Admiral, $1C3D7C, AdmiralMMS)
+MovingMapSprite(Admiral, $1C3D7C, CaptainMMS)
+
+
 ALIGN 4
 CaptainSMS:
 #incbin "Dmp/Trickster (M) Redone {StreetHero, blood}-stand.dmp"
@@ -610,3 +615,16 @@ Gryphknight_DSMS:
 ALIGN 4
 Gryphknight_DMMS:
 #incbin "Dmp/dismountlancemmove (archerbias).dmp"
+
+StandingMapSprite(AirshipMapSprite,MapSprite32x32, AirshipSMS)
+MovingMapSprite(Airship, $1C3D7C, AirshipMMS)
+
+ALIGN 4
+AirshipSMS:
+#incbin "Dmp/Ship (U) {daemoth, Zarg}-stand.dmp"
+
+ALIGN 4
+AirshipMMS:
+#incbin "Dmp/Ship (U) {daemoth, Zarg}-walk.dmp"
+
+MovingMapSprite(Sage_Hermen, $1D9B58, $1D91E4)

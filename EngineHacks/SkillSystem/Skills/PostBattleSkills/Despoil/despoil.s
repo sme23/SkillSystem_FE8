@@ -22,18 +22,6 @@ ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 cmp	r0, r1		@check if same character
 bne	End
 
-@check for inventory space, but only if not a player unit
-cmp	r1, #0x40
-blo	SkipInventoryCheck
-
-ldr	r0,=#0x80179D8	@inventory space check routine
-mov	lr, r0
-mov	r0, r4		@attacker
-.short	0xF800
-cmp	r0, #0x04
-bhi	End
-SkipInventoryCheck:
-
 @check if killed enemy
 ldrb	r0, [r5,#0x13]	@currhp
 cmp	r0, #0
@@ -48,21 +36,9 @@ mov	lr, r3
 cmp	r0, #0x00
 beq	End
 
-@killed enemy, roll luck
-ldr	r0,=#0x8019298	@luck getter
-mov	lr, r0
-mov	r0, r4		@attacker
-.short	0xF800
-ldr	r2,=#0x802a52c	@1rn routine
-mov	r1, r4		@attacker
-mov	lr, r2
-.short	0xF800
-cmp	r0, #0x01
-bne	End
-
 @successful roll, give item/money
 Event:
-ldr	r0,=#0x800D07C		@event engine thingy
+ldr	r0,=0x800D07C		@event engine thingy
 mov	lr, r0
 ldr	r0, DespoilEvent	@this event is just "give gem"
 mov	r1, #0x01		@0x01 = wait for events

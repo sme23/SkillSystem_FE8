@@ -233,22 +233,19 @@ ASMC (prCallSecondChoiceMenu+1) // hus, cruz, avo, none
 SVAL s1 0
 BNE 11 s1 sC // only continue if Husniye, otherwise jump to 11
 	ENUT HusniyeAccused
-	ENUT 0x3
-	//CALL EndingScene
+	//ENUT 0x3
 	GOTO 0x776
 LABEL 11
 SVAL s1 1
 BNE 22 s1 sC // only continue if Cruz, otherwise jump to 22
 	ENUT CruzAccused
-	ENUT 0x3
-	//CALL EndingScene
+	//ENUT 0x3
 	GOTO 0x776
 LABEL 22
 SVAL s1 2
 BNE 33 s1 sC // only continue if Avocado, otherwise jump to 33
 	ENUT AvocadoAccused
-	ENUT 0x3
-	//CALL EndingScene
+	//ENUT 0x3
 	GOTO 0x776
 LABEL 33
 // should only be here if nobody was accused
@@ -259,7 +256,7 @@ GOTO 0xD00 //skip confirmation text
 //Confirmation text.
 LABEL 0x776
 Text(B2a_TalkToMagConfirm)
-
+CALL EndingScene
 LABEL 0xD00
 EVBIT_MODIFY 0 
 NoFade
@@ -428,13 +425,13 @@ CLEE 0
 //This is to set the coordinates of the newly loaded night time map to 0,0
 SVAL sB 0 
 LOMA CutsceneHubB_2a
-WEATHER 7
 
 // delete this later - for reference purposes
 // #define TextCont(id,music) "TEXTSTART; TEXTSHOW id; TEXTEND; MUSC music; TEXTCONT; TEXTEND; REMA"
 
 FlagIsSet(CruzAccused, 0x666)
 	LOAD1 1 CutsceneMagdalena
+	ENUN
 	STAL 60
 	FADU 16 
 	MOVE 5 Magdalena [8,6]
@@ -444,6 +441,7 @@ FlagIsSet(CruzAccused, 0x666)
 	ENUN
 	FlashCursor(Magdalena, 60)
 	SetBackground(Woodland_Night)
+	WEATHER 7
 	TEXTSTART
 	TEXTSHOW B2a_MagdalenaDoesntFuckingDie
 	TEXTEND
@@ -461,6 +459,7 @@ FlagIsSet(CruzAccused, 0x666)
 	EraseBackground
 	
 	LOAD1 1 CutsceneYadney_CruzCaptured_A
+	ENUN
 	CAMERA_CENTERED Yadney
 	MUSC LetterOpenerID
 	ASMC MakeMusicAhoyASMC
@@ -517,7 +516,8 @@ LABEL 0x666 // if cruz spared, will kill Magdalena
 	MOVE 5 Magdalena [12,6]
 	ENUN
 	FlashCursor(Magdalena, 60)
-	SetBackground(Woodland_Night) 
+	SetBackground(Woodland_Night)
+	WEATHER 7
 	ASMC MakeMusicAhoyASMC
 	// cruz conversation here
 

@@ -395,3 +395,16 @@ Kite[X]
 Weapons: None[N]
 Traits: None[X]
 
+## AirshipName
+Airship[X]
+
+## AirshipDesc
+Weapons: None[N]
+Traits: None[X]
+
+## AdmiralName
+Admiral[X]
+
+## AdmiralDesc
+Weapons: Sword, Gun[N]
+Traits: Steal, Locktouch[X]

@@ -426,6 +426,16 @@ ALIGN 4
 ArcaneArtificeIDLink:
 WORD ArcaneArtificeID
 
+#include "IgnisTrigger/IgnisTrigger.lyn.event"
+
+ALIGN 4
+IgnisTriggerIDLink:
+WORD IgnisTriggerID
+
+ALIGN 4
+IgnisTriggerMtLink:
+BYTE 15
+
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	ALIGN 4
 	#include "ModularPreBattleSkills/ModularPreBattleSkill.event"
@@ -439,3 +449,9 @@ ALIGN 4
 #include "RerunAndHit/RerunAndHit.lyn.event"
 RerunAndHitIDLink: //also used by ModularUnitCommandUsability and DisplayUnitEffectRangeExt
 WORD RerunAndHitID
+
+ALIGN 4
+IraEffect:
+#incbin "IraEffect/IraEffect.dmp"
+POIN SkillTester
+WORD AvengerID

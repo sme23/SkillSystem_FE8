@@ -39,3 +39,27 @@
 // TrianaShaman
 	setPalette(9,TrianaShaman)
 	setCBSP(9,Triana, 1, Shaman_F)
+
+// KhazhakFighter
+	setPalette(10,KhazhakFighter)
+	setCBSP(10,Khazhak, 1, Fighter)
+
+// BuzuVanguard
+	setPalette(11,BuzuVanguard)
+	setCBSP(11,Buzu, 1, Vanguard)
+
+// BozoWarden
+	setPalette(12,BozoWarden)
+	setCBSP(12,Bozo, 1, Warden)
+
+// PilarNinja
+	setPalette(13,PilarNinja)
+	setCBSP(13,Pilar, 1, Ninja)
+
+// RazvanCurate
+	setPalette(14,RazvanCurate)
+	setCBSP(14,Razvan, 1, Curate)
+
+// XimoArcher
+	setPalette(15,XimoArcher)
+	setCBSP(15,Ximo, 1, Archer)

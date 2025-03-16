@@ -38,6 +38,9 @@ DeathQuote(Fata, AllChapters, 0, FataDQ)
 DeathQuote(Ruby, HubC_1, 0x65, RubyDQ)
 DeathQuote(Ruby, AllChapters, 0, RubyDQ)
 
+//C-2
+DeathQuote(Salvador, HubC_2, 0x2, 0)
+
 
 //DeathQuote()
 

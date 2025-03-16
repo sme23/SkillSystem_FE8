@@ -1,0 +1,103 @@
+EventPointerTable(HubDEventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AREA WentToHub1 GotoHubD1 [8,8] [8,8]
+AREA WentToHub2 GotoHubD2 [9,11] [9,11]
+AREA WentToHub3 GotoHubD3 [8,16] [8,16]
+AFEV 0 RefreshLua 0
+END_MAIN
+
+GotoHubD1:
+MNC2 HubD_1
+ENUF LuaInAHubFlag
+NoFade
+ENDA
+
+GotoHubD2:
+MNC2 HubD_2
+ENUF LuaInAHubFlag
+NoFade
+ENDA
+
+GotoHubD3:
+MNC2 HubD_3
+ENUF LuaInAHubFlag
+NoFade
+ENDA
+
+RefreshLua:
+SVAL s1 0x42
+UNSET_CONDITION Lua
+NoFade
+ENDA
+
+Traps1:
+RedSigil(8, 8)
+RedSigil(9, 11)
+RedSigil(8, 16)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [7,12] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+TestEnemyGroup:
+UNIT Rebel MasterNinja 0 Level(25,Enemy,True) [8,11] 0 0 0 0 [IronKnife] NoAI
+UNIT Rebel Seraph 0 Level(25,Enemy,True) [6,11] 0 0 0 0 [IronSword] NoAI
+UNIT
+
+
+BeginningScene:
+WEATHER 7
+STAL 30
+ENUN
+ENUT LuaInAHubFlag
+FADI 15
+//LOAD1 1 TestEnemyGroup
+//ENUN
+GotoPrepScreenHub
+NoFade
+ENDA
+
+EndingScene:
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

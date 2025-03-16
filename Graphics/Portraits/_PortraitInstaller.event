@@ -49,6 +49,13 @@ KhazhakMugData:
 #incbin "Dmp/Khazhak_minimug.dmp"
 setMugEntry(KhazhakMug, KhazhakMugData, 3, 5, 3, 3)
 
+ALIGN 16
+IdaMugData:
+#incbin "Dmp/Ida_mug.dmp"
+#incbin "Dmp/Ida_frames.dmp"
+#incbin "Dmp/Ida_palette.dmp"
+#incbin "Dmp/Ida_minimug.dmp"
+setMugEntry(IdaMug, IdaMugData, 3, 4, 3, 2)
 
 ALIGN 16
 PilarMugData:
@@ -240,7 +247,7 @@ AdrianMugData:
 #incbin "Dmp/Adrian_frames.dmp"
 #incbin "Dmp/Adrian_palette.dmp"
 #incbin "Dmp/Adrian_minimug.dmp"
-setMugEntry(AdrianMug, AdrianMugData, 2, 5, 3, 3)
+setMugEntry(AdrianMug, AdrianMugData, 3, 4, 3, 2)
 
 ALIGN 16
 LexaMugData:
@@ -248,7 +255,7 @@ LexaMugData:
 #incbin "Dmp/Lexa_frames.dmp"
 #incbin "Dmp/Lexa_palette.dmp"
 #incbin "Dmp/Lexa_minimug.dmp"
-setMugEntry(LexaMug, LexaMugData, 2, 6, 3, 4)
+setMugEntry(LexaMug, LexaMugData, 2, 5, 2, 3)
 
 ALIGN 16
 NoahMugData:

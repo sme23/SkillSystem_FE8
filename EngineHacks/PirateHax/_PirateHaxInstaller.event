@@ -134,6 +134,8 @@
 
 #include "ASMCCheckSuite/ASMCGetterSetterInstaller.event"
 
+#include "FE8U-Fancy-Items-main/_MasterHackInstaller.event"
+
 ALIGN 4
 ReusableTempRAMPointer:
 WORD 0x03003750
@@ -185,6 +187,7 @@ ALIGN 4
 #include "RushStaff/RushStaff.event" //Aura Wolf
 
 ALIGN 4
+#include "NarrowFontExtension/SerifExtension.event"
 
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
@@ -319,4 +322,19 @@ POP
 PUSH
 ORG $80B948 
 BYTE 0x02
+POP
+
+//max stat bar is now 40
+
+PUSH
+ORG $87132
+BYTE 40
+ORG $87142
+BYTE 40
+ORG $870fe
+BYTE 40
+ORG $87102
+BYTE 40
+ORG $87154
+BYTE 40
 POP

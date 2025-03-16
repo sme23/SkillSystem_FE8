@@ -160,19 +160,19 @@ int GetBattleUnitStaffExp(BattleUnit* actor){
 
     int exp = 0;
     if (staffRank == D_WEXP){
-        exp += 15;
-    }
-    else if (staffRank == C_WEXP){
         exp += 18;
     }
-    else if (staffRank == B_WEXP){
+    else if (staffRank == C_WEXP){
         exp += 21;
     }
-    else if (staffRank == A_WEXP){
+    else if (staffRank == B_WEXP){
         exp += 24;
     }
+    else if (staffRank == S_RANK){
+        exp += 27;
+    }
     else{
-        exp += 30;
+        exp += 33;
     }
 
     int levelDiff = GetLevelDifference(actor, &gBattleTarget);
@@ -810,7 +810,7 @@ s8 IsUnitEnemyWithActiveUnit(struct Unit* unit) {
 
 int GetUnitLuckCap(Unit* unit){
     if (unit->pClassData->attributes & CA_PROMOTED){
-        return 30; //unpromo'd units get 25 cap
+        return 40; //unpromo'd units get 25 cap
     }
     else{
         return 25;

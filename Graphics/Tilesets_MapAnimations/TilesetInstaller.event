@@ -117,6 +117,18 @@
     MountainousConfig:
     #incbin "Dmp/Config/mountainous_v2_comp.dmp"
 
+    ALIGN 4
+    SunsetTempleObject:
+    #incbin "Dmp/Object/sunset_temple.dmp"
+
+    ALIGN 4
+    SunsetTemplePalette:
+    #incbin "Dmp/Palette/sunset_temple_pal.dmp"
+
+    ALIGN 4
+    SunsetTempleConfig:
+    #incbin "Dmp/Config/sunset_temple_comp.dmp"
+
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
@@ -153,6 +165,10 @@
     EventPointerTable(FlasubanFrontierObjectID, FlasubanFrontierObject)
     EventPointerTable(FlasubanFrontierPaletteID, FlasubanFrontierPalette)
     EventPointerTable(FlasubanFrontierConfigID, FlasubanFrontierConfig)
+
+    EventPointerTable(SunsetTempleObjectID, SunsetTempleObject)
+    EventPointerTable(SunsetTemplePaletteID, SunsetTemplePalette)
+    EventPointerTable(SunsetTempleConfigID, SunsetTempleConfig)
 
     // Fix mapchip for this tileset
     EventPointerTable(0x6e, MountainousConfig)

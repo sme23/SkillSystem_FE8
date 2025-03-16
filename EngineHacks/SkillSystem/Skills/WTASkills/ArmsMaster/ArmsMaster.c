@@ -42,6 +42,10 @@ bool CheckArmsMasterLegality(BattleUnit* bunit1, BattleUnit* bunit2){
 }
 
 bool CheckSameWType(BattleUnit* bunit1, BattleUnit* bunit2) {
+	if (bunit1->weapon == 0 || bunit2->weapon == 0)
+	{
+		return false;
+	}
 	int wType1 = GetItemData(GetItemIndex(bunit1->weapon))->weaponType;
 	int wType2 = GetItemData(GetItemIndex(bunit2->weapon))->weaponType;
 	if (wType1 == wType2)
