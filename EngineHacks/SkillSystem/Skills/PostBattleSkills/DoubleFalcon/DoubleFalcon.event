@@ -1,0 +1,11 @@
+ALIGN 4
+DoubleFalconID_Link:
+WORD DoubleFalconID
+
+ALIGN 4
+DoubleFalconEvent:
+SOUN 0x37B // manakete roar
+NoFade
+ENDA
+
+#include "DoubleFalcon.lyn.event"

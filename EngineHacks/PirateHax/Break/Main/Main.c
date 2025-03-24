@@ -30,6 +30,11 @@ bool DidUnitBreak(){
 	if (gSkillTester(&gBattleActor.unit,HandCannonIDLink)){
 		return true;
 	} 
+	
+	//Thorn (Lance) skill
+	if (gBattleActor.unit.pow > gBattleTarget.unit.pow && gSkillTester(&gBattleActor.unit, ThornSkillID_Link)) {
+		return true;
+	}
 	return false;
 }
 

@@ -45,6 +45,13 @@ void ApplyHelpBoxContentSize(struct HelpBoxProc* proc, int width, int height){
     break;
     */
     } // switch (GetHelpBoxItemInfoKind(proc->item))
+	int textID = proc->mid;
+	if(DoesHelpTextHaveOccupation(textID)) {
+		if(width < 0x90) {
+			width = 0x90;
+		}
+		height = height + 0x10;
+	}
 
     proc->wBoxFinal = width;
     proc->hBoxFinal = height;
@@ -76,6 +83,12 @@ void DrawHelpBoxLabels(struct HelpBox8A01650Proc* proc) {
             proc->unk_64 = 1;
             break;
     }
+	
+	int textID = proc->unk_5c;
+	if(DoesHelpTextHaveOccupation(textID)) {
+		DrawHelpBoxOccupationLabels(textID);
+		proc->unk_64 = 1;
+	}
 
     Text_SetFont(0);
     BreakProcLoop((Proc*) proc);
@@ -94,3 +107,24 @@ int DrawHelpBoxStaffLabels(Item item) {
     return 1;
 }
 
+int DrawHelpBoxOccupationLabels(u16 textID) {
+	int i = 0;
+	while(OccupationList[i][0] != 0) {
+		if(OccupationList[i][0] == textID) {
+			Text_InsertString(&gHelpBoxSt.text[0], 0, 8, GetStringFromIndex(OccupationName_Link)); // TODO: msg id "Staff[.]"
+			Text_InsertString(&gHelpBoxSt.text[0], 54, 7, GetStringFromIndex(OccupationList[i][1]));
+		}
+		i++;
+	}
+}
+
+bool DoesHelpTextHaveOccupation(u16 textID) {
+	int i = 0;
+	while(OccupationList[i][0] != 0) {
+		if(OccupationList[i][0] == textID) {
+			return true;
+		}
+		i++;
+	}
+	return false;
+}

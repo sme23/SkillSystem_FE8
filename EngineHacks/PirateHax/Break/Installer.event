@@ -49,6 +49,10 @@ BYTE HandCannonID
 ALIGN 4
 
 ALIGN 4
+ThornSkillID_Link:
+BYTE ThornSkillID
+
+ALIGN 4
 gRoundCount:
 WORD RoundCountRAM
 ALIGN 4

@@ -266,3 +266,10 @@
 #define DragonskinID DragonSkinID //Alias
 
 #define InvidiaSkillID 96
+
+// Double Falcon: On a kill, next attack is brave
+#define DoubleFalconID 97
+
+// Thorn: If str greater than enemy, inflict break in combat
+#define ThornSkillID 98
+

@@ -13,7 +13,7 @@ void UnsetFortuneBit(Unit* unit) {
 }
 
 void FortuneHitBoost(BattleUnit* bunitA, BattleUnit* bunitB) {
-	if (IsFortuneBitSet(&bunitA->unit)) bunitA->battleHitRate += 30;
+	if (IsFortuneBitSet(&bunitA->unit)) bunitA->battleHitRate += FortuneStaffBuffAmount_Link;
 }
 
 void ClearFortuneBitEachTurn() {
@@ -70,15 +70,15 @@ void AddUnitToTargetListIfUnfortunate(Unit* unit) {
 	}
 }
 
-void MakeTargetListForFortune(Unit* unit, int item) {
+void MakeTargetListForFortune(Unit* unit) {
 	int x = unit->xPos;
 	int y = unit->yPos;
 	gUnitSubject = unit;
 	
-	BmMapFill(gMapRange, 0);
-	MapIncInBoundedRange(x, y, GetItemMinRange(item), GetItemMaxRange(item));
+	InitTargets(x, y);
 	
-	ForEachUnitInRange(AddUnitToTargetListIfUnfortunate);
+	// ier thingamabob
+	Item_TURange(unit, AddUnitToTargetListIfUnfortunate, FortuneStaffID_Link);
 }
 
 void FortuneUsabilityWrapper() {
@@ -91,8 +91,8 @@ void FortuneUsabilityWrapper() {
 	");	
 }
 
-bool FortuneUsability(Unit* unit, u16 item) {
-	MakeTargetListForFortune(unit, item);
+bool FortuneUsability(Unit* unit) {
+	MakeTargetListForFortune(unit);
 	return GetTargetListSize() != 0;
 }
 
@@ -105,3 +105,59 @@ void FortuneEffectWrapper() {
 	
 }
 
+void FortuneStaffTargeting(struct Unit* unit) {
+
+	MakeTargetListForFortune(unit);
+	
+	BmMapFill(gMapMovement, -1);
+	
+	StartBottomHelpText(
+		StartTargetSelection(&FortuneStaffSelectInfo),
+		GetStringFromIndex(FortuneStaffSubtitleText_Link));
+}
+
+void FortuneStaffTargetingWrapper() {
+	asm("	mov r0, r5; \
+			mov r2, r4; \
+			bl FortuneStaffTargeting; \
+			pop {r4-r5}; \
+			pop {r0}; \
+			bx r0; \
+	");
+}
+
+void StartUnitHitChangeInfoWindow(struct Proc* parent) {
+	struct UnitInfoWindowProc* proc = NewUnitInfoWindow(parent);
+	Text_InitDB(proc->lines, 10); // second parameter is width
+}
+
+void DrawUnitHitChangeText(struct TextHandle* text, struct Unit* unit, int bonus) {
+    Text_Clear(text);
+
+    Text_InsertString(text, 0, 3, GetStringFromIndex(0x4F4)); // Hit[.][X]
+    Text_InsertString(text, 40, 3, GetStringFromIndex(0x53A)); // --
+
+    Text_InsertNumberOr2Dashes(text, 64, 2, (GetUnitSkill(unit) * 5) + GetItemHit(GetUnitEquippedWeapon(unit)) + bonus);
+    Text_InsertNumberOr2Dashes(text, 32, 2, (GetUnitSkill(unit) * 5) + GetItemHit(GetUnitEquippedWeapon(unit)));
+
+    return;
+}
+
+void RefreshUnitHitChangeInfoWindow(struct Unit* unit) {
+	int y = 0;
+    int x = GetUnitInfoWindowX(unit, 11);
+
+    struct UnitInfoWindowProc* proc = UnitInfoWindow_DrawBase(0, unit, x, y, 11, 1); // last parameter is lines
+	
+    DrawUnitHitChangeText(proc->lines + 0, unit, FortuneStaffBuffAmount_Link);
+    Text_Display(proc->lines, gBg0MapBuffer + TILEMAP_INDEX(x + 1, y + 3));
+}
+
+int FortuneStaffInitSelect(struct Proc* proc) {
+    StartUnitHitChangeInfoWindow(proc);
+}
+
+u8 FortuneStaffTargetChange(struct Proc* proc, struct TargetEntry* target) {
+    ChangeActiveUnitFacing(target->x, target->y);
+    RefreshUnitHitChangeInfoWindow(GetUnit(target->unitIndex));
+}
