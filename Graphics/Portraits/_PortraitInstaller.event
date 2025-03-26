@@ -604,6 +604,17 @@ JulianaMugData:
 #incbin "Dmp/Juliana_minimug.dmp"
 setMugEntry(JulianaMug, JulianaMugData, 3, 5, 2, 3)
 
+// c-2 placeholder, i guess?
+// made by RW
+
+ALIGN 16
+SalvadorMugData:
+#incbin "Dmp/Salvador_mug.dmp"
+#incbin "Dmp/Salvador_frames.dmp"
+#incbin "Dmp/Salvador_palette.dmp"
+#incbin "Dmp/Salvador_minimug.dmp"
+setMugEntry(SalvadorMug, SalvadorMugData, 3, 5, 3, 3)
+
 // C-3 placeholders (all made by JiroPaiPai)
 
 ALIGN 16
@@ -653,3 +664,61 @@ BoruMugData:
 #incbin "Dmp/Boru_palette.dmp"
 #incbin "Dmp/Boru_minimug.dmp"
 setMugEntry(BoruMug, BoruMugData, 3, 5, 3, 3)
+
+
+ALIGN 16
+SolangeMugData:
+#incbin "Dmp/Solange_mug.dmp"
+#incbin "Dmp/Solange_frames.dmp"
+#incbin "Dmp/Solange_palette.dmp"
+#incbin "Dmp/Solange_minimug.dmp"
+setMugEntry(SolangeMug, SolangeMugData, 3, 5, 2, 3)
+
+ALIGN 16
+RogelioMugData:
+#incbin "Dmp/Rogelio_mug.dmp"
+#incbin "Dmp/Rogelio_frames.dmp"
+#incbin "Dmp/Rogelio_palette.dmp"
+#incbin "Dmp/Rogelio_minimug.dmp"
+setMugEntry(RogelioMug, RogelioMugData, 2, 5, 3, 3)
+
+ALIGN 16
+BurtMugData:
+#incbin "Dmp/Burt_mug.dmp"
+#incbin "Dmp/Burt_frames.dmp"
+#incbin "Dmp/Burt_palette.dmp"
+#incbin "Dmp/Burt_minimug.dmp"
+setMugEntry(BurtMug, BurtMugData, 3, 5, 3, 3)
+
+ALIGN 16
+WindyMugData:
+#incbin "Dmp/Windy_mug.dmp"
+#incbin "Dmp/Windy_frames.dmp"
+#incbin "Dmp/Windy_palette.dmp"
+#incbin "Dmp/Windy_minimug.dmp"
+setMugEntry(WindyMug, WindyMugData, 2, 5, 3, 3)
+
+ALIGN 16
+TheanaMugData:
+#incbin "Dmp/Theana_mug.dmp"
+#incbin "Dmp/Theana_frames.dmp"
+#incbin "Dmp/Theana_palette.dmp"
+#incbin "Dmp/Theana_minimug.dmp"
+setMugEntry(TheanaMug, TheanaMugData, 2, 6, 3, 4)
+
+ALIGN 16
+ElodiaMugData:
+#incbin "Dmp/Elodia_mug.dmp"
+#incbin "Dmp/Elodia_frames.dmp"
+#incbin "Dmp/Elodia_palette.dmp"
+#incbin "Dmp/Elodia_minimug.dmp"
+setMugEntry(ElodiaMug, ElodiaMugData, 2, 5, 3, 3)
+
+// credit to, uh, obsidian daddy? i think?
+ALIGN 16
+QuispeMugData:
+#incbin "Dmp/Quispe_mug.dmp"
+#incbin "Dmp/Quispe_frames.dmp"
+#incbin "Dmp/Quispe_palette.dmp"
+#incbin "Dmp/Quispe_minimug.dmp"
+setMugEntry(QuispeMug, QuispeMugData, 2, 5, 3, 3)

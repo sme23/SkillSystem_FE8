@@ -143,4 +143,20 @@ SpecifiedBattleConvo(Sanz,Indio,HubC_1,0x1F,C1_BQ_SanzIndio)
 SpecifiedBattleConvo(Sanz,Orlando,HubC_1,0x20,C1_BQ_SanzOrlando)
 UnspecifiedBattleConvo(Sanz,HubC_1,0x1,C1_BQ_SanzGeneric)
 
+// Chapter D-1
+// DalilaRematch
+SpecifiedBattleConvo(DalilaRematch,Lua,HubD_1, 0xA, D1_BQ_DalilaLua)
+SpecifiedBattleConvo(DalilaRematch,Desiderio,HubD_1, 0xB, D1_BQ_DalilaDesiderio)
+SpecifiedBattleConvo(DalilaRematch,Pilar,HubD_1, 0xC, D1_BQ_DalilaPilar)
+SpecifiedBattleConvo(DalilaRematch,Razvan,HubD_1, 0xD, D1_BQ_DalilaRazvan)
+UnspecifiedBattleConvo(DalilaRematch,HubD_1, 0xE, D1_BQ_DalilaGeneric)
+// Solange
+SpecifiedBattleConvo(Solange,Desiderio,HubD_1, 0xF, D1_BQ_SolangeDesiderio)
+SpecifiedBattleConvo(Solange,Ernest,HubD_1, 0x10, D1_BQ_SolangeErnest)
+SpecifiedBattleConvo(Solange,Kai,HubD_1, 0x11, D1_BQ_SolangeKai)
+SpecifiedBattleConvo(Solange,Leandra,HubD_1, 0x14, D1_BQ_SolangeLeandra)
+UnspecifiedBattleConvo(Solange,HubD_1, 0x13, D1_BQ_SolangeGeneric)
+// Rogelio
+UnspecifiedBattleConvo(Rogelio,HubD_1, 0x1, D1_BQ_Rogelio)
+
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

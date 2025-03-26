@@ -1054,3 +1054,46 @@ Keeper[X]
 Zealot[N]
 Warriors who adhere to Wayra's vision,[N]
 no matter the price that must be paid.[X]
+
+## SolangeName
+Solange[X]
+
+## SolangeDesc
+Rebel Captain[N]
+One of the former Roseblades,[N]
+and Rogelio's closest companion.[X]
+
+## RogelioName
+Rogelio[X]
+
+## RogelioDesc
+Traitor[N]
+A pirate, once. A rebel, once.[N]
+Now, only a broken man.[X]
+
+// hub C interlude units
+// rw helped :)
+
+## WindyName
+Windy[X]
+
+## WindyDesc
+Questant[N]
+A trainee Keeper whose... fervent[N]
+wanderlust outweighs self-preservation.[X]
+
+## BurtName
+Burt[X]
+
+## BurtDesc
+Drifter[N]
+A mercenary who is in constant search[N]
+of money but has constant misfortune.[X]
+
+## TheanaName
+Theana[X]
+
+## TheanaDesc
+Assassin[N]
+A drifting hitman for hire who[N]
+doesn't like to talk about her past.[X]

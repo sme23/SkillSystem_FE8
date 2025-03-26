@@ -129,6 +129,14 @@
     SunsetTempleConfig:
     #incbin "Dmp/Config/sunset_temple_comp.dmp"
 
+    ALIGN 4
+    SnowyBernObjectCloudy:
+    #incbin "Dmp/Object/SnowyBernImageCloudy.dmp"
+
+    ALIGN 4
+    SnowyBernConfigCloudy:
+    #incbin "Dmp/Config/SnowyBernCloudyConfig_comp.dmp"
+
     EventPointerTable(FlasubanVillageSkyObjectID,FlasubanVillageSkyObject)
     EventPointerTable(FlasubanVillageSkyPaletteID,FlasubanVillageSkyPalette)
     EventPointerTable(FlasubanVillageSkyConfigID,FlasubanVillageSkyMapchipConfig)
@@ -159,8 +167,10 @@
 	EventPointerTable(ZoramineImprovedStrongholdConfigID, ZoramineImprovedStrongholdConfig)
 
     EventPointerTable(SnowyBernObjectID, SnowyBernObject)
+    EventPointerTable(SnowyBernObjectCloudyID, SnowyBernObjectCloudy)
     EventPointerTable(SnowyBernPaletteID, SnowyBernPalette)
     EventPointerTable(SnowyBernConfigID, SnowyBernConfig)
+    EventPointerTable(SnowyBernConfigCloudyID, SnowyBernConfigCloudy)
 
     EventPointerTable(FlasubanFrontierObjectID, FlasubanFrontierObject)
     EventPointerTable(FlasubanFrontierPaletteID, FlasubanFrontierPalette)

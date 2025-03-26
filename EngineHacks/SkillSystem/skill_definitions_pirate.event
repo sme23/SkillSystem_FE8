@@ -266,3 +266,9 @@
 #define DragonskinID DragonSkinID //Alias
 
 #define InvidiaSkillID 96
+
+#define LastWordID 97
+
+//Swarp: Allows unit to swap positions with a distant ally.
+//Be Sme
+#define SwarpID 98

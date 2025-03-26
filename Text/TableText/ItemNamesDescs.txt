@@ -685,3 +685,11 @@ Acedia[X]
 
 ## AcediaDesc
 Allows the target to act again.[X]
+
+## PortShortsName
+'Port Shorts[X]
+
+## PortShortsDesc
+Short for [OpenQuote]Teleport Shorts".[N]
+Allows the holder to swap with[N]
+an ally within Mag/2 range.[X]

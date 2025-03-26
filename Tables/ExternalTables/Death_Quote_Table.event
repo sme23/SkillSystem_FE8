@@ -90,4 +90,8 @@ DeathQuote(TheCloser, HubC_1, 0xC, TheCloserDQ)
 DeathQuote(Krezke, HubC_1, 0xE, KrezkeDQ)
 DeathQuote(Sanz, HubC_1, 0x2, SanzDQ)
 
+DeathQuote(DalilaRematch, HubD_1, 0, DalilaRematchDQ)
+DeathQuote(Solange, HubD_1, 0, SolangeDQ)
+DeathQuote(Rogelio, HubD_1, 0x2, RogelioDQ)
+
 DeathQuote(0xFFFF,0,0,0) // terminator

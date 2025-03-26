@@ -19,14 +19,21 @@ BossBGMEntry(Azahar,TheWavesApprenticeID)
 BossBGMEntry(Javier,TheWavesApprenticeID)
 BossBGMEntry(Nicodemus,TheWavesApprenticeID)
 // these ones should probably be Tougher Tussle
+BossBGMEntry(Alonso, TougherTussleID)
+BossBGMEntry(Dalila, TougherTussleID)
 BossBGMEntry(Baltasar, TougherTussleID)
 BossBGMEntry(TheCloser, TougherTussleID)
 BossBGMEntry(Krezke, TougherTussleID)
 BossBGMEntry(Jasper, TougherTussleID)
 BossBGMEntry(Runamel, TougherTussleID)
-// these ones should use the hub D boss theme, once that exists
 // i'd like Sanz to use a different boss theme than the other C-1 goons, to make him more intimidating
-BossBGMEntry(Sanz, TheWavesApprenticeID)
+BossBGMEntry(Sanz, TheStormUponUsID)
+// these ones should use the hub D boss theme, once that exists
+BossBGMEntry(Quispe, TheStormUponUsID)
+BossBGMEntry(DalilaRematch, TheStormUponUsID)
+BossBGMEntry(Solange, TheStormUponUsID)
+// rogelio specifically gets a milder boss theme, since he's not exactly a threat
+BossBGMEntry(Rogelio, TheWavesApprenticeID)
 
 BossBGMTerminator
 
