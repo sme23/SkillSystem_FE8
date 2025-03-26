@@ -272,3 +272,9 @@
 //Swarp: Allows unit to swap positions with a distant ally.
 //Be Sme
 #define SwarpID 98
+
+// Double Falcon: On a kill, next attack is brave
+#define DoubleFalconID 99
+
+// Thorn: If str greater than enemy, inflict break in combat
+#define ThornSkillID 100

@@ -25,6 +25,7 @@ void SetEventId(int eventId);
 extern u8 DazzleIDLink;
 extern u8 PulverizeIDLink;
 extern u8 HandCannonIDLink;
+extern u8 ThornSkillID_Link;
 
 extern bool(*gSkillTester)(Unit* unit, int skillID);
 

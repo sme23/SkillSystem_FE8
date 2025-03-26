@@ -57,6 +57,8 @@ struct HelpBoxInfo
 int GetHelpBoxItemInfoKind(Item item);
 void ApplyHelpBoxContentSize(struct HelpBoxProc* proc, int width, int height);
 
+bool DoesHelpTextHaveOccupation(u16 textID);
+int DrawHelpBoxOccupationLabels(u16 textID);
 int DrawHelpBoxWeaponLabels(Item item);
 int DrawHelpBoxStaffLabels(Item item);
 void DrawHelpBoxSaveMenuLabels(void);
@@ -159,3 +161,6 @@ enum text_special_char
 void DrawUiSmallNumber(u16 *tm, int color, int number);
 extern u16 gpStatScreenPageBg0Map[0x280];
 extern u16 gpStatScreenPageBg2Map[0x240];
+
+extern u16 OccupationName_Link;
+extern u16 OccupationList[][2];

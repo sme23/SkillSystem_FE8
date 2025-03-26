@@ -55,8 +55,8 @@ ALIGN 4; SSS_MuralPal:
   ALIGN 4; SSS_StatsBoxPal4:
   #incbin "Tiled/Tilesets/FE6/EquipmentBox/YellowPal.dmp"
   ALIGN 4; SSS_StatsBoxPalTable:
-  POIN SSS_StatsBoxPal1 SSS_StatsBoxPal2
-  POIN SSS_StatsBoxPal3 SSS_StatsBoxPal4
+  POIN SSS_StatsBoxPal1 SSS_StatsBoxPal1
+  POIN SSS_StatsBoxPal1 SSS_StatsBoxPal1
   
   // Other.
   ALIGN 4; SSS_StatsBoxGfx:
