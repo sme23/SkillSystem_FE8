@@ -171,6 +171,9 @@
 #define FlingRing 0xEF
 #define HoardersCharm 0xF0
 #define HoarderCharm 0xF0
+#define PortShorts 0xA7
+#define TeleportShorts 0xA7
+#define SwarpShorts 0xA7
 
 // Gunblade
 #define IgnisTrigger 0xF7

@@ -1,0 +1,413 @@
+EventPointerTable(HubD_1EventsID, PointerList)
+
+// flag tracker
+
+// 0x1: boss quote (rogelio)
+// 0x2: defeat boss flag
+// 0x0A-0x11: misc. boss quotes
+// 0x12: rogelio talk
+// 0x13-14: more boss quotes
+
+// 0xB7: Rogelio Spared
+
+#define D1LevelThief 18
+#define D1Level 21
+#define D1LevelBoss 25
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventEnemy(0, EP1_DalilaEvent, 1)
+TurnEventPlayer(0, SpawnThievesT3, 3)
+TurnEventPlayer(0, SpawnThievesT5, 5)
+TurnEventPlayer(0, SpawnTRFliers, 5)
+TurnEventPlayer(0, SpawnThievesT7, 7)
+TurnEventPlayer(0, SpawnTMFliers, 7)
+TurnEventPlayer(0, SpawnZerkers, 7)
+TurnEventPlayer(0, SpawnTLFliers, 8)
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEventBothWays(0x12, DesiRogelioTalk, Desiderio, Rogelio)
+END_MAIN
+
+LocationBasedEvents:
+Chest(PortShorts, 5,18)
+Chest(Scorpio, 5,20)
+Chest(HeavyShield, 16,18)
+// feel free to replace Last Word here with some other, cooler skill
+DurabilityChest(SkillScroll,LastWordID, 18,20)
+Chest(Mortar, 28,20)
+Chest(Rescue, 30,18)
+// Door(28,6)
+// Door(29,6)
+// Door(30,6)
+LOCA 0x4 OpenRogelioDoor [28,6] 0x12
+LOCA 0x4 OpenRogelioDoor [29,6] 0x12
+LOCA 0x4 OpenRogelioDoor [30,6] 0x12
+// DurabilityChest(SkillScroll,LastWordID,13,3)
+// Chest(HeavyShield, 13,23)
+// Chest(Scorpio, 14,20)
+// Chest(Warp, 31,22)
+// add another funny accessory or something
+// Chest(PortShorts, 14,3)
+END_MAIN
+
+MiscBasedEvents:
+DefeatBoss
+CauseGameOverIfLordDies
+END_MAIN
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [12,8] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+LoadUnit(11,8)
+LoadUnit(10,9)
+LoadUnit(13,9)
+LoadUnit(11,10)
+LoadUnit(12,10)
+LoadUnit(10,7)
+LoadUnit(13,7)
+LoadUnit(11,6)
+LoadUnit(12,6)
+LoadUnit(13,11)
+LoadUnit(10,11)
+LoadUnit(9,10)
+LoadUnit(14,10)
+// uncomment these two if i decide i need more deploy slots
+// LoadUnit(10,8)
+// LoadUnit(13,8)
+UNIT
+
+TheEnemies:
+// turn 1 formation
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [15,11] 0 0 0 0 [SilverKnife] PursueWithoutHeedAI
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [16,12] 0 0 0 0 [SilverDagger] PursueWithoutHeedAI
+UNIT BlackheartPlus Hero DalilaRematch Level(D1Level,Enemy,True) [7,12] 0 0 0 0 [BraveSword] PursueWithoutHeedAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [9,14] 0 0 0 0 [Bloodaxe] PursueWithoutHeedAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [12,13] 0 0 0 0 [SilverAxe] PursueWithoutHeedAI
+UNIT BlackheartElite Sniper DalilaRematch Level(D1Level,Enemy,True) [11,15] 0 0 0 0 [ShiningBow,SilverBow] PursueWithoutHeedAI
+UNIT Rebel Runeshield Solange Level(D1Level,Enemy,True) [15,14] 0 0 0 0 [Spear,Sagittae] BossAI
+// turn 2 formation
+UNIT BlackheartElite Warrior DalilaRematch Level(D1Level,Enemy,True) [9,18] 0 0 0 0 [Tomahawk,Greatbow] BossAI
+UNIT BlackheartElite Warrior DalilaRematch Level(D1Level,Enemy,True) [13,18] 0 0 0 0 [Tomahawk,Greatbow] BossAI
+UNIT BlackheartElite Sniper DalilaRematch Level(D1Level,Enemy,True) [6,14] 0 0 0 0 [SilverBow] PursueWithoutHeedAI
+UNIT BlackheartPlus Hero DalilaRematch Level(D1Level,Enemy,True) [11,20] 0 0 0 0 [Wingclipper] PursueWithoutHeedAI
+UNIT Rebel LanceKnight Solange Level(D1Level,Enemy,True) [19,10] 0 0 0 0 [SilverLance] PursueWithoutHeedAI
+// UNIT Rebel Slayer Solange Level(D1Level,Enemy,True) [19,12] 0 0 0 0 [SilverSword] PursueWithoutHeedAI
+UNIT Rebel Slayer Solange Level(D1Level,Enemy,True) [21,13] 0 0 0 0 [Elsurge] PursueWithoutHeedAI
+// t3 formation?
+UNIT BlackheartElite Warrior DalilaRematch Level(D1Level,Enemy,True) [7,20] 0 0 0 0 [Tomahawk,Greatbow] BossAI
+UNIT BlackheartPlus Halberdier DalilaRematch Level(D1Level,Enemy,True) [3,19] 0 0 0 0 [SilverLance,Axereaver] AttackInRangeAI
+UNIT Rebel Slayer Solange Level(D1Level,Enemy,True) [23,7] 0 0 0 0 [Arcfire] PursueWithoutHeedAI
+UNIT Rebel Champion Solange Level(D1Level,Enemy,True) [25,9] 0 0 0 0 [Horseslayer] PursueWithoutHeedAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [16,17] 0 0 0 0 [SilverAxe] AttackInRangeAI
+// UNIT BlackheartElite Sniper DalilaRematch Level(D1Level,Enemy,True) [23,19] 0 0 0 0 [Pursuer,Tomereaver] AttackInTwoAI
+UNIT BlackheartPlus DarkKnight DalilaRematch Level(D1Level,Enemy,True) [17,21] 0 0 0 0 [Arcfire] AttackInRangeAI
+// t4 formation?
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [21,15] 0 0 0 0 [SilverDagger] GroupTwoAI
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [22,14] 0 0 0 0 [Compass] GroupTwoAI
+UNIT Rebel Marksman Solange Level(D1Level,Enemy,True) [21,8] 0 0 0 0 [SilverMusket] GroupTwoAI
+UNIT Rebel MaligKnight Solange Level(D1Level,Enemy,True) [21,3] 0 0 0 0 [Tornado] GroupTwoAI
+UNIT BlackheartPlus Halberdier DalilaRematch Level(D1Level,Enemy,True) [19,18] 0 0 0 0 [SilverLance] AttackInRangeAI
+UNIT BlackheartElite Warrior DalilaRematch Level(D1Level,Enemy,True) [15,20] 0 0 0 0 [Tomahawk,Greatbow] BossAI
+UNIT DalilaRematch Assassin 0 Level(D1LevelBoss,Enemy,False) [17,19] 0 0 0 0 [Baselard,Scorpio,HoardersCharm] BossAI
+// t5 formation
+UNIT BlackheartPlus Hero DalilaRematch Level(D1Level,Enemy,True) [22,19] 0 0 0 0 [SilverSword] AttackInRangeAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [27,20] 0 0 0 0 [WildAxe] AttackInTwoAI
+UNIT BlackheartPlus DarkKnight DalilaRematch Level(D1Level,Enemy,True) [31,20] 0 0 0 0 [Thani] AttackInTwoAI
+UNIT Rebel Runeshield Solange Level(D1Level,Enemy,True) [20,11] 0 0 0 0 [Sagittae,Arcfire] BossAI
+UNIT Rebel Champion Solange Level(D1Level,Enemy,True) [21,6] 0 0 0 0 [Lancereaver,Axereaver] AttackInRangeAI
+UNIT Rebel Champion Solange Level(D1Level,Enemy,True) [24,10] 0 0 0 0 [SilverLance] GroupTwoAI
+// t6 formation???
+UNIT BlackheartElite Warrior DalilaRematch Level(D1Level,Enemy,True) [26,19] 0 0 0 0 [Tomahawk,Greatbow] BossAI
+UNIT Rebel Marksman DalilaRematch Level(D1Level,Enemy,True) [30,17] 0 0 0 0 [SilverMusket] AttackInRangeAI
+UNIT Rebel Slayer Solange Level(D1Level,Enemy,True) [25,16] 0 0 0 0 [Lancereaver] AttackInTwoAI
+// also count the TR fliers
+UNIT Rebel Runeshield Solange Level(D1Level,Enemy,True) [25,12] 0 0 0 0 [Saunion] BossAI
+// t7 formation
+UNIT Solange Ranger_F 0 Level(D1LevelBoss,Enemy,False) [30,12] 0 0 0 0 [BraveSword,BraveBow,KnightRing] GroupOneAI
+UNIT Rebel Slayer Solange Level(D1Level,Enemy,True) [28,11] 0 0 0 0 [Onigiri] GroupOneAI
+UNIT Rebel Champion Solange Level(D1Level,Enemy,True) [28,13] 0 0 0 0 [Pike] GroupOneAI
+UNIT Rebel LanceKnight Solange Level(D1Level,Enemy,True) [30,9] 0 0 0 0 [SilverLance] GroupOneAI
+UNIT Rebel LanceKnight Solange Level(D1Level,Enemy,True) [30,15] 0 0 0 0 [Axereaver] GroupOneAI
+UNIT BlackheartElite Warrior DalilaRematch Level(D1Level,Enemy,True) [29,16] 0 0 0 0 [Tomahawk,Greatbow] BossAI
+// t8+ formation
+UNIT Rebel MaligKnight Solange Level(D1Level,Enemy,True) [29,7] 0 0 0 0 [BraveAxe] AttackInRangeAI
+UNIT
+
+Thieves_T3:
+UNIT Blackheart Thief DalilaRematch Level(D1LevelThief,Enemy,True) [3,17] 0 0 0 0 [SilverDagger, ChestKey] ThiefAI
+UNIT Blackheart Thief DalilaRematch Level(D1LevelThief,Enemy,True) [3,21] 0 0 0 0 [SilverKnife, ChestKey] ThiefAI
+UNIT
+
+Thieves_T5:
+UNIT Blackheart Thief DalilaRematch Level(D1LevelThief,Enemy,True) [19,17] 0 0 0 0 [ArcaneKnife, ChestKey] ThiefAI
+UNIT Blackheart Thief DalilaRematch Level(D1LevelThief,Enemy,True) [19,21] 0 0 0 0 [Peshkatz, ChestKey] ThiefAI
+UNIT
+
+Thieves_T7:
+UNIT Blackheart Thief DalilaRematch Level(D1LevelThief,Enemy,True) [31,17] 0 0 0 0 [Heartpiercer, GlassShield, ChestKey] ThiefAI
+UNIT Blackheart Thief DalilaRematch Level(D1LevelThief,Enemy,True) [31,21] 0 0 0 0 [Compass, GlassShield, ChestKey] ThiefAI
+UNIT
+
+RogelioGroup:
+UNIT Rogelio Pirate 0 Level(17,Enemy,False) [29,3] 0 0 0 0 [Oversize,GlassShield] [0x6,0x3,0xC,0x0]
+UNIT
+
+TRFliers:
+UNIT Rebel MaligKnight Solange Level(D1Level,Enemy,True) [24,0] 0 0 1 REDA24R2 [SilverAxe] ChargeAI
+UNIT Rebel Gryphoknight Solange Level(D1Level,Enemy,True) [25,0] 0 0 1 REDA25R3 [SilverLance] ChargeAI
+UNIT
+
+TMFliers:
+UNIT Rebel Gryphoknight Solange Level(D1Level,Enemy,True) [19,0] 0 0 1 REDA19R1 [SilverLance] ChargeAI
+UNIT Rebel MaligKnight Solange Level(D1Level,Enemy,True) [20,0] 0 0 1 REDA20R2 [SilverAxe] ChargeAI
+UNIT Rebel Gryphoknight Solange Level(D1Level,Enemy,True) [21,0] 0 0 1 REDA21R1 [Axereaver] ChargeAI
+UNIT
+
+TLFliers:
+UNIT Rebel Gryphoknight Solange Level(D1Level,Enemy,True) [16,0] 0 0 1 REDA16R3 [BraveLance] ChargeAI
+UNIT Rebel MaligKnight Solange Level(D1Level,Enemy,True) [17,0] 0 0 1 REDA17R1 [HerosFlare] ChargeAI
+UNIT
+
+FourZerkers:
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [3,3] 0 0 0 0 [Oversize] PursueWithoutHeedAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [7,3] 0 0 0 0 [Tomahawk] PursueWithoutHeedAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [3,7] 0 0 0 0 [BattleAxe] PursueWithoutHeedAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [7,7] 0 0 0 0 [BraveAxe] PursueWithoutHeedAI
+UNIT
+
+
+
+
+OLD_TheEnemies:
+UNIT DalilaRematch Assassin 0 Level(D1LevelBoss,Enemy,False) [8,15] 0 0 0 0 [Baselard,Scorpio,HoardersCharm] BossAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [1,1] 0 0 0 0 [SilverAxe] NoAI
+//
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [1,1] 0 0 0 0 [SilverDagger] NoAI
+//
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [29,23] 0 0 0 0 [SilverKnife,SilverSword] GroupOneAI
+UNIT Rebel Champion Solange Level(D1Level,Enemy,True) [29,21] 0 0 0 0 [SilverSword,Spear] GroupOneAI
+UNIT Solange Ranger_F 0 Level(D1LevelBoss,Enemy,False) [30,22] 0 0 0 0 [BraveSword,BraveBow,KnightRing] GroupOneAI
+UNIT Rebel LanceKnight Solange Level(D1Level,Enemy,True) [30,13] 0 0 0 0 [SilverLance] GroupOneAI
+UNIT Rebel LanceKnight Solange Level(D1Level,Enemy,True) [31,13] 0 0 0 0 [Axereaver] GroupOneAI
+
+UNIT Rebel Marshall Solange Level(D1Level,Enemy,True) [29,8] 0 0 0 0 [KillerAxe,Greatbow] GroupTwoAI
+UNIT Rebel Marshall Solange Level(D1Level,Enemy,True) [32,8] 0 0 0 0 [KillerLance,Greatbow] GroupTwoAI
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [28,9] 0 0 0 0 [Compass] GroupTwoAI
+UNIT Rebel MasterNinja Solange Level(D1Level,Enemy,True) [33,9] 0 0 0 0 [Runesword] GroupTwoAI
+//
+UNIT Rogelio Pirate 0 Level(17,Enemy,False) [30,5] 0 0 0 0 [Oversize] NoAI
+UNIT
+
+
+
+Intro_RogelioSolange:
+UNIT Solange Ranger_F 0 Level(D1LevelBoss,Enemy,False) [10,12] 0 0 0 0 [BraveSword,BraveBow,KnightRing] NoAI
+UNIT Rogelio Pirate 0 Level(17,Enemy,False) [13,13] 0 0 0 0 [Oversize] NoAI
+UNIT
+
+Intro_DalilaSquad:
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [10,0] 0 0 1 REDA10R9 [SilverAxe] NoAI
+UNIT Dalila Assassin 0 Level(D1LevelBoss,Enemy,False) [11,0] 0 0 1 REDA11R10 [Baselard,Scorpio,HoardersCharm] NoAI
+UNIT BlackheartPlus Berserker DalilaRematch Level(D1Level,Enemy,True) [12,0] 0 0 1 REDA12R9 [SilverAxe] NoAI
+UNIT
+
+
+BeginningScene:
+// fade in on the rebels hanging out
+Music(WindAmbienceID)
+CAM1 [12,12]
+LOAD1 1 Intro_RogelioSolange
+WEATHER Clouds
+FadeBackFromBlack
+STAL 60
+CameraCursor(Solange)
+CameraCursor(Rogelio)
+Text(D1_Intro_RogSolDepressed)
+// dalila and co. enter
+Music(ABlackheartsPrideID)
+LOAD1 1 Intro_DalilaSquad
+STAL 60
+CameraCursor(Dalila)
+// they talk with rogelio and co. about some bullshit
+Text(D1_Intro_RogSolDalilaEnters)
+FadeToBlack
+RemoveAll
+// party on the boat
+Music(OutIntoTheOpenSkyID)
+SetBackground(Ship)
+// conditonal
+CHECK_ALIVE Ernest
+BEQ 0xABDFA 0x0 0xC
+CHECK_ALIVE Leandra
+BEQ 0xABDFA 0x0 0xC
+Text(D1_Intro_Conditional)
+LABEL 0xdABDFA
+// main talk
+TextWithMusicChange(D1_Intro_OnBoat,AvastMeHeartiesID)
+FadeToBlack
+// mechanics basics
+LOAD1 1 TheEnemies
+GotoPrepScreen
+NoFade
+ENDA
+
+EP1_DalilaEvent:
+Music(ABlackheartsPrideID)
+CameraCursor(DalilaRematch)
+Text(D1_DalilaBrags)
+NoFade
+ENDA
+
+OpenRogelioDoor:
+Music(WindAmbienceID)
+ENUT 0x4
+FadeToBlack
+STAL 60
+TILECHANGE 6
+LOAD1 1 RogelioGroup
+CAM1 Rogelio
+STAL 60
+FadeBackFromBlack
+STAL 60
+CameraCursor(Rogelio)
+NoFade
+ENDA
+
+DesiRogelioTalk:
+Music(CherishTheDeadID)
+Text(D1_DesiRogTalk)
+ENUT 0x2
+CUSN Rogelio
+NoFade
+ENDA
+
+EndingScene:
+// turn flag on if rogelio's alive
+CHECK_ALIVE Rogelio
+BEQ 0xD3ADDAD 0x0 0xC
+ENUT 0xB7
+LABEL 0xD3ADDAD
+// finish this later
+
+FadeToBlack
+SetBackground(Ship)
+// FadeBackFromBlack
+
+FlagIsSet(0xB7, 0xA)
+
+// rogelio alive event
+Music(CherishTheDeadID)
+Text(D1_Outro_RogelioAlive)
+CHECK_ALIVE Ernest
+BEQ 0xABDA 0x0 0xC
+CHECK_ALIVE Leandra
+BEQ 0xABDA 0x0 0xC
+Text(D1_OutroConditional_RogelioAlive)
+LABEL 0xdABDA
+
+GOTO 0xB
+LABEL 0xA
+
+// rogelio dead event
+Music(CherishTheDeadID)
+Text(D1_Outro_RogelioDead)
+CHECK_ALIVE Ernest
+BEQ 0xADFA 0x0 0xC
+CHECK_ALIVE Leandra
+BEQ 0xADFA 0x0 0xC
+Text(D1_OutroConditional_RogelioDead)
+LABEL 0xADFA
+
+LABEL 0xB
+
+FadeToBlack
+
+// also, if dalila survived the map, throw in a conditional where her goons kill her
+// make this fancier map eventing, maybe?
+CHECK_ALIVE DalilaRematch
+BEQ 0x303 0x0 0xC
+Music(SwabbieTalkID)
+SetBackground(0x26) // TODO: find the actual definition for this
+// FadeBackFromBlack
+TextWithMusicChange(D1_Outro_DalilaDies, 0x7FFF)
+FadeToBlack
+LABEL 0x303
+
+GoToHubChapter(HubD)
+NoFade
+ENDA
+
+
+
+SpawnThievesT3:
+SpawnReinforcements(Thieves_T3)
+NoFade
+ENDA
+
+SpawnThievesT5:
+SpawnReinforcements(Thieves_T5)
+NoFade
+ENDA
+
+SpawnThievesT7:
+SpawnReinforcements(Thieves_T7)
+NoFade
+ENDA
+
+SpawnTRFliers:
+SpawnReinforcements(TRFliers)
+NoFade
+ENDA
+
+SpawnTMFliers:
+SpawnReinforcements(TMFliers)
+NoFade
+ENDA
+
+SpawnTLFliers:
+SpawnReinforcements(TLFliers)
+NoFade
+ENDA
+
+SpawnZerkers:
+SpawnReinforcements(FourZerkers)
+NoFade
+ENDA
+
+
+
+
+
+
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

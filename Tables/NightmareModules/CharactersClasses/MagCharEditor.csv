@@ -42,11 +42,11 @@ None,0,0
 0x28 Riev,10,45
 0x29 Caellach,2,5
 0x2A Fado,4,5
-0x2B Ismaire,7,15
+0x2B Windy,13,55
 0x2C Ruby,9,25
 0x2D Remora,3,25
-0x2E -,0,0
-0x2F -,0,0
+0x2E Burt,5,25
+0x2F Theana,3,15
 0x30 Rima,1,5
 0x31 Bolton,20,70
 0x32 -,0,0
@@ -60,12 +60,12 @@ None,0,0
 0x3A -,0,0
 0x3B Lyon's Summon,0,0
 0x3C <Summon>,0,0
-0x3D <'Summonern'>,0,0
+0x3D Summoned Kite,0,0
 0x3E Flint,0,15
 0x3F Gerald,2,25
-0x40 Lyon (Ch 17),13,50
-0x41 Morva (Ch 20),6,85
-0x42 Orson (Ch 5x),3,10
+0x40 idk yet,13,50
+0x41 Alonso,6,85
+0x42 Elodia,3,10
 0x43 Triana,4,60
 0x44 Medwyn,1,30
 0x45 Bartz,4,20
@@ -78,7 +78,7 @@ None,0,0
 0x4C Sanz,10,100
 0x4D Contractor,3,15
 0x4E Sentinel,2,10
-0x4F Scoundrel,8,50
+0x4F,8,50
 0x50 Slicer,1,10
 0x51 Dicer,1,10
 0x52 Santiago,2,20
@@ -125,20 +125,20 @@ None,0,0
 0x7B Dalila,4,0
 0x7C AlonsoChapter3,9,50
 0x7D BlackheartElite,0,0
-0x7E -,2,5
-0x7F -,5,30
+0x7E BlackheartPlus,2,5
+0x7F - Keeper,5,30
 0x80 Grado Soldier (Main),3,5
-0x81 -,8,50
-0x82 -,0,0
+0x81 - Horse,8,50
+0x82 - C2BerserkerThatGetsShot,0,0
 0x83 -,10,65
 0x84 -,10,45
 0x85 -,0,0
 0x86 -,0,0
-0x87 -,2,5
-0x88 HubC3Boss,6,10
-0x89 Grado (Duessel's),2,5
-0x8A Grado (Duessel's),2,5
-0x8B Grado (Duessel's),3,5
+0x87 Runamel,2,5
+0x88 Jasper,6,10
+0x89 C3 Generic Pirate,2,5
+0x8A Phantom,2,5
+0x8B Phantom Elite,3,5
 0x8C Grado,3,5
 0x8D Grado Remnant (Main),0,0
 0x8E Cutthroat,10,65
@@ -159,25 +159,25 @@ None,0,0
 0x9D -,0,0
 0x9E -,0,5
 0x9F -,0,0
-0xA0 -,0,5
-0xA1 -,0,5
-0xA2 -,0,5
-0xA3 -,0,5
-0xA4 -,0,0
-0xA5 -,0,0
-0xA6 -,0,0
-0xA7 Mercenary (Ch 9A),3,10
-0xA8 Mercenary (Ch 10A),0,0
-0xA9 Remnant/Merc (Ch 13A),0,0
-0xAA Monster,0,0
-0xAB Monster,0,5
-0xAC Monster,0,0
-0xAD Monster,0,0
-0xAE Monster,0,0
-0xAF Monster,0,0
-0xB0 Monster,0,0
-0xB1 Monster,0,0
-0xB2 Monster,0,0
+0xA0 - GreagorVillager,0,5
+0xA1 - GreagorSailor,0,5
+0xA2 - GreagorPatroller,0,5
+0xA3 - GreagorLibrarian,0,5
+0xA4 - GreagorGuard,0,0
+0xA5 - GreagorSmuggler,0,0
+0xA6 - GreagorShipwright,0,0
+0xA7 - GreagorCaptain,3,10
+0xA8 - GreagorPatron,0,0
+0xA9 - GreagorPeddler,0,0
+0xAA - GreagorLibrarian2,0,0
+0xAB - GreagorVillager2,0,5
+0xAC - GreagorPatron,0,0
+0xAD - IncendivisCutscene mage,0,0
+0xAE - GreagorVillager3,0,0
+0xAF RebelThief,0,0
+0xB0 C3 Traitor Rebel,0,0
+0xB1 Salman,0,0
+0xB2 Boru,0,0
 0xB3 Monster,0,0
 0xB4 Monster,0,0
 0xB5 Monster,0,0
@@ -221,36 +221,37 @@ None,0,0
 0xDB - Nicodemus,6,15
 0xDC - Baltasar,1,5
 0xDD - Krezke,7,50
-0xDE -,0,0
+0xDE - Salvador,0,0
 0xDF - Wayra,12,0
-Grado Soldier 8,0,0
-Grado Soldier 9,0,0
-Grado Soldier 10 (Duessel's),0,0
-Grado Soldier 11 (Duessel's),0,0
-Grado Soldier 12 (Duessel's),0,0
-Grado Soldier 13,0,0
-Grado Remnant 1 (Main),0,0
-Cutthroat,0,0
-Grado Remnant 2 (Cutscene and C16 only?),0,0
-Grado Remnant 3 (C16 only?),0,0
-Grado Remnant 4 (C16 only?),0,0
-Wraith (Sage),0,0
-Wraith (Swords),0,0
-Wraith (Axes),0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-0,0,0
-Mercenary (C9A),0,0
+0xE0 - Keeper,0,0
+0xE1 - Dalila Rematch,4,0
+0xE2 - Solange,6,0
+0xE3 - Rogelio,6,0
+0xE4 -,0,0
+0xE5 -,0,0
+0xE6 -,0,0
+0xE7 -,0,0
+0xE8 -,0,0
+0xE9 -,0,0
+0xEA -,0,0
+0xEB -,0,0
+0xEC -,0,0
+0xED -,0,0
+0xEE -,0,0
+0xEF -,0,0
+0xF0 -,0,0
+0xF1 -,0,0
+0xF2 -,0,0
+0xF3 -,0,0
+0xF4 River Folk Child (F),0,0
+0xF5 River Folk (F),0,0
+0xF6 River Folk (M),0,0
+0xF7 River Folk (F),0,0
+0xF8 River Folk Child,0,0
+0xF9 Renais Citizen 1 (Child),0,0
+0xFA Renais Citizen 2,0,0
+0xFB Renais Citizen 3,0,0
+0xFC Old 'Citizen',0,0
+0xFD Enemy (Arena),0,0
+0xFE Wall,0,0
+0xFF Snag,0,0

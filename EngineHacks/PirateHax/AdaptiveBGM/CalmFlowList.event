@@ -17,4 +17,6 @@ CalmFlowSong(TougherTussleID,7)
 CalmFlowSong(TimesTickingID,7)
 CalmFlowSong(CloudsYearningID,6)
 CalmFlowSong(StormsBrewingID,7)
+// 7, 8, and 9 are avast-only
+CalmFlowSong(TheStormUponUsID,6)
 CalmFlowSongListEnd

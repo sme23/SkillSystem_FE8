@@ -76,3 +76,6 @@
 {
     #include "HubD/HubD.event"
 }
+{
+    #include "HubD/HubD_1.event"
+}

@@ -64,7 +64,7 @@
 #define LuaHatlessMug $46
 #define ElodiaMug $47
 #define AlonsoMug $48
-#define RebelLeaderMug $49
+#define RebelLeaderMug $B9
 
 #define IdaMug $51
 #define SargargalaMug $52
@@ -82,6 +82,7 @@
 
 // A-4 mugs, currently placeholders
 #define ValerieMug $54
+#define CalistaMug $55
 #define A4ImperialCaptainMug $55
 
 
@@ -116,7 +117,8 @@
 #define DalilaMug 0x21
 
 // Hub C Stuff
-#define WayraMug KhazhakMug //placeholder
+#define WayraMug 0xB9
+#define QuispeMug 0xB9
 
 // C-1 Stuff
 #define RubyMug 0x22
@@ -132,6 +134,21 @@
 #define RunamelMug 0xAF
 #define SalmanMug 0xB0
 #define BoruMug 0xB1
+
+// D-1 Placeholders
+#define SolangeMug 0xB3
+#define RogelioMug 0xB4
+
+// hub C interlude unit placeholders
+#define WindyMug 0xB5
+#define BurtMug 0xB6
+#define TheanaMug 0xB7
+
+// C-2 placeholder
+#define SalvadorMug 0xB8
+
+// note: wayra is 0xB9
+
 
 
 

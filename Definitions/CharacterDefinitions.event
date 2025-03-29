@@ -72,6 +72,11 @@
 #define Rima $30
 #define Bolton $31
 
+// HUB C BASE UNITS
+#define Windy $2B
+#define Burt $2E
+#define Theana $2F
+
 
 
 // ENEMY/NPC ($46 through $FF)
@@ -232,5 +237,10 @@
 
 // Chapter 4
 #define Wayra 0xdf
+#define Quispe 0xdf
 #define Keeper 0xe0
 
+// Hub D1
+#define DalilaRematch 0xE1
+#define Solange 0xE2
+#define Rogelio 0xE3
