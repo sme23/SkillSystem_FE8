@@ -1099,23 +1099,26 @@ ORG SkillIcon(AstralBlessingID)
 ORG SkillIcon(AdaptableID)
 #incbin "SkillIcons/Versatile.dmp"
 
+ORG SkillIcon(DogfightID)
+#incbin "SkillIcons/Dogfight.dmp"
+ORG SkillIcon(RunningStartID)
+#incbin "SkillIcons/RunningStart.dmp"
+ORG SkillIcon(WellRestedID)
+#incbin "SkillIcons/WellRested.dmp"
+ORG SkillIcon(HardworkingID)
+#incbin "SkillIcons/Hardworking.dmp"
+
 //placeholder
 ORG SkillIcon(PanacheID)
 #incbin "SkillIcons/SuppressiveFire.dmp"
 ORG SkillIcon(SeaShantyID)
 #incbin "SkillIcons/ReMove.dmp"
-ORG SkillIcon(RunningStartID)
-#incbin "SkillIcons/SpurSpd.dmp"
 ORG SkillIcon(ArmsMasteryID)
 #incbin "SkillIcons/SpurStr.dmp"
 ORG SkillIcon(StudiousBlowID)
 #incbin "SkillIcons/HoneMag.dmp"
 ORG SkillIcon(ResoluteSacrificeID)
 #incbin "SkillIcons/ResoluteSacrifice.dmp"
-ORG SkillIcon(WellRestedID)
-#incbin "SkillIcons/DriveSpd.dmp"
-ORG SkillIcon(HardworkingID)
-#incbin "SkillIcons/DriveStr.dmp"
 ORG SkillIcon(DeftHandsID)
 #incbin "SkillIcons/Galeforce.dmp"
 ORG SkillIcon(CatchingUpID)
@@ -1134,8 +1137,7 @@ ORG SkillIcon(ForestFriendID)
 #incbin "SkillIcons/Resourceful.dmp"
 ORG SkillIcon(CanterID)
 #incbin "SkillIcons/Canto.dmp"
-ORG SkillIcon(DogfightID)
-#incbin "SkillIcons/AirRaidSpd.dmp"
+
 ORG SkillIcon(EqualizerID)
 #incbin "SkillIcons/DarkBargain.dmp"
 ORG SkillIcon(DelegationID)

@@ -53,17 +53,21 @@ NoChange = 2,
 int ArmsMastery(struct BattleUnit* bunitA, struct BattleUnit* bUnitB) {
 	if (gBattleStats.config & (BATTLE_CONFIG_REAL | BATTLE_CONFIG_SIMULATE))
 	{
-		if (SkillTester(&bunitA->unit, InvidiaSkillID_Link))
+		if (SkillTester(&bunitA->unit, ArmsMasteryID_Link))
 		{
-			int actorWeaponRank = GetItemData(GetItemIndex(gBattleActor.weaponBefore))->weaponRank;
-			int targetWeaponRank = GetItemData(GetItemIndex(gBattleTarget.weaponBefore))->weaponRank;
-			if (actorWeaponRank > targetWeaponRank)
-			{
-				return ForceDouble; //if unit has a weapon with higher rank, always double
-			} 
+			if (bunitA == &gBattleActor)
+			{ //if unit has skill and is initiating
+				
+				int actorWeaponRank = GetItemData(GetItemIndex(gBattleActor.weaponBefore))->weaponRank;
+				int targetWeaponRank = GetItemData(GetItemIndex(gBattleTarget.weaponBefore))->weaponRank;
+				if (actorWeaponRank > targetWeaponRank)
+				{
+					return ForceDouble; //if unit has a weapon with higher rank, always double
+				} 
+			}
 		}
+		return NoChange;
 	}
-	return NoChange;
 }
 
 int InvidiaEffect(struct BattleUnit* bunitA, struct BattleUnit* bunitB) {

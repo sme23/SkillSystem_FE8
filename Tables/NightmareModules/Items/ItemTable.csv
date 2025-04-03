@@ -250,7 +250,7 @@ Ignis Trigger,IgnisTriggerName,IgnisTriggerDesc,0x0,IgnisTrigger,Sword,IsWeapon|
 Superbia,SuperbiaName,SuperbiaDesc,0x0,Superbia,Sword,IsWeapon|Unsellable|Indestructible,0x0,0x0,255,14,90,10,0,0x13,0,SRank,0x9d,0x0,NoEffect,1,0x0,0x0,SuperbiaEffectID
 Ira,IraName,IraDesc,0x0,Ira,Axe,IsWeapon|Unsellable|Indestructible,0x0,0x0,255,18,70,15,0,0x11,0,SRank,0x9d,0x0,NoEffect,1,0x0,0x0,AvengerID
 Tristitia,TristitiaName,TristitiaDesc,0x0,Tristitia,Lance,IsWeapon|Unsellable|Indestructible,0x0,0x0,255,6,80,13,0,0x11,0,SRank,0x9d,0x0,NoEffect,1,0x0,0x0,DragonSkinID
-Gula,GulaName,GulaDesc,0x0,Gula,Bow,IsWeapon|Unsellable|Indestructible,0x0,0x0,255,15,80,11,0,0x23,0,SRank,0x9d,0x0,NosferatuEffect,1,0x0,0x0,0x0
+Gula,GulaName,GulaDesc,0x0,Gula,Bow,IsWeapon|Unsellable|Indestructible,0x0,FlierEffectiveness|IsPointer,255,15,80,11,0,0x23,0,SRank,0x9d,0x0,NosferatuEffect,1,0x0,0x0,0x0
 Avaritia,AvaritiaName,AvaritiaDesc,0x0,Avaritia,Knife,IsWeapon|Unsellable|Indestructible,0x0,0x0,255,8,100,7,0,0x12,0,SRank,0x9d,0x0,NoEffect,1,0x0,0x0,DespoilID
 Invidia,LuxuriaName,LuxuriaDesc,0x0,Luxuria,Tome,IsWeapon|Unsellable|Indestructible|IsMagic,0x0,0x0,255,12,90,9,0,0x12,0,SRank,0x9d,0x0,NoEffect,1,0x0,0x0,InvidiaSkillID
 Acedia,AcediaName,AcediaDesc,0x0,Acedia,Staff,IsStaff|Unsellable|Indestructible,0x0,0x0,255,0,100,20,0,0x15,0,SRank,0x9d,0x3C,NoEffect,1,0x0,0x0,0x0

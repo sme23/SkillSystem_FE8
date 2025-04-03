@@ -100,3 +100,12 @@ One Last Voyage[X]
 
 ## SongName_TheStormUponUs
 The Storm Upon Us[X]
+
+## SongName_MaroonedAlive
+Marooned Alive[X]
+
+## SongName_DeadWindsStillTides
+Dead Winds, Still Tides[X]
+
+## SongName_FallingFallout
+Falling Fallout[X]

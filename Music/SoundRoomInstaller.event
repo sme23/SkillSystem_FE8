@@ -36,7 +36,9 @@ SoundRoomList:
 SoundRoomEntry(DistantSkiesID,0,SongName_DistantSkies)
 SoundRoomEntry(CloudsYearningID, 0, SongName_CloudsYearning)
 SoundRoomEntry(LastDanceSinkingShipID, 0, SongName_LastDanceSinkingShip)
-// hub D theme here
+SoundRoomEntry(FallingFalloutID, 0, SongName_FallingFallout)
+
+//alt PP themes
 SoundRoomEntry(TheRebelsKnifeID,0,SongName_TheRebelsKnife)
 SoundRoomEntry(TimesTickingID, 0, SongName_TimesTickingID)
 
@@ -49,8 +51,8 @@ SoundRoomEntry(WellAndTrulyLostID, 0, SongName_WellAndTrulyLost)
 // hub themes
 SoundRoomEntry(PortGreagorID,0,SongName_PortGreagor)
 SoundRoomEntry(ToTheSkiesID, 0, SongName_ToTheSkies)
-// hub C theme here
-// hub D theme here
+SoundRoomEntry(MaroonedAliveID, 0, SongName_MaroonedAlive)
+SoundRoomEntry(DeadWindsStillTidesID, 0, SongName_DeadWindsStillTides)
 SoundRoomEntry(LetterOpenerID, 0, SongName_LetterOpener)
 
 // prep screen themes
@@ -64,7 +66,6 @@ SoundRoomEntry(FoolsBoldID,0,SongName_FoolsBold)
 SoundRoomEntry(TheWavesApprenticeID, 0, SongName_TheWavesApprenticeID)
 SoundRoomEntry(TougherTussleID, 0, SongName_TougherTussleID)
 SoundRoomEntry(TheStormUponUsID, 0, SongName_TheStormUponUs)
-// hub D boss theme here
 
 
 // cutscene themes

@@ -1,0 +1,3170 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    MaroonedAlive_grp  voicegroup000
+        #define    MaroonedAlive_pri  0
+        #define    MaroonedAlive_rev  0
+        #define    MaroonedAlive_key  0
+
+        // .rodata
+        // MaroonedAlive
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+MaroonedAlive_0:
+        BYTE   KEYSH   MaroonedAlive_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   110/2
+MaroonedAlive_0_LOOP:
+        BYTE           VOICE   114
+        BYTE           PAN     c_v+10
+        BYTE           N12     Dn4   v050
+        BYTE           VOL     127
+        BYTE   W18
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W06
+// 001   ----------------------------------------
+MaroonedAlive_0_1:
+        BYTE           N06     Cn4   v050
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W15
+        BYTE           N03
+        BYTE   W05
+        BYTE           N04     Gn3
+        BYTE   W04
+        BYTE   PEND
+// 002   ----------------------------------------
+MaroonedAlive_0_2:
+        BYTE           N12     An3   v050
+        BYTE   W18
+        BYTE           N06     Gn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE                   En3
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W06
+        BYTE   PEND
+// 003   ----------------------------------------
+MaroonedAlive_0_3:
+        BYTE           N06     Gn3   v050
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE           N12     En3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE   PEND
+// 004   ----------------------------------------
+        BYTE   W72
+// 005   ----------------------------------------
+        BYTE   W72
+// 006   ----------------------------------------
+        BYTE   W72
+// 007   ----------------------------------------
+        BYTE   W72
+// 008   ----------------------------------------
+        BYTE   W72
+// 009   ----------------------------------------
+        BYTE   W72
+// 010   ----------------------------------------
+        BYTE   W72
+// 011   ----------------------------------------
+        BYTE   W72
+// 012   ----------------------------------------
+MaroonedAlive_0_12:
+        BYTE           N12     Dn4   v050
+        BYTE   W18
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W06
+        BYTE   PEND
+// 013   ----------------------------------------
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W14
+        BYTE           N04
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W04
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_12
+// 017   ----------------------------------------
+        BYTE           N06     Cn4   v050
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W15
+        BYTE           N03
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W03
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_2
+// 019   ----------------------------------------
+        BYTE           N06     Gn3   v050
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE           N12     En3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W24
+// 020   ----------------------------------------
+        BYTE           PAN     c_v+41
+        BYTE           N12     Dn4
+        BYTE   W18
+        BYTE           N06     Cn4
+        BYTE   W12
+        BYTE                   Bn3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W06
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_1
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_2
+// 023   ----------------------------------------
+        BYTE           N06     Gn3   v050
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W48
+// 024   ----------------------------------------
+        BYTE   TEMPO   90/2
+        BYTE   W72
+// 025   ----------------------------------------
+        BYTE   W72
+// 026   ----------------------------------------
+        BYTE   W72
+// 027   ----------------------------------------
+        BYTE   W72
+// 028   ----------------------------------------
+        BYTE   W72
+// 029   ----------------------------------------
+        BYTE   W72
+// 030   ----------------------------------------
+        BYTE   W72
+// 031   ----------------------------------------
+        BYTE   W48
+        BYTE                   Gn4   v040
+        BYTE   W08
+        BYTE           N07
+        BYTE   W10
+        BYTE           N06
+        BYTE   W06
+// 032   ----------------------------------------
+MaroonedAlive_0_32:
+        BYTE           N12     Cn4   v063
+        BYTE   W18
+        BYTE                   Gn3   v055
+        BYTE   W18
+        BYTE                   Ds3   v050
+        BYTE   W18
+        BYTE                   Cn3
+        BYTE   W18
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Ds3
+        BYTE   W12
+        BYTE   PEND
+// 033   ----------------------------------------
+MaroonedAlive_0_33:
+        BYTE           N12     Fn3   v063
+        BYTE   W18
+        BYTE                   Cn3   v055
+        BYTE   W18
+        BYTE                   An2   v050
+        BYTE   W18
+        BYTE                   Fn2
+        BYTE   W18
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE   PEND
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_32
+// 035   ----------------------------------------
+MaroonedAlive_0_35:
+        BYTE           N12     As3   v063
+        BYTE   W18
+        BYTE                   Fn3   v055
+        BYTE   W18
+        BYTE                   Dn3   v050
+        BYTE   W18
+        BYTE                   As2
+        BYTE   W18
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE   PEND
+// 036   ----------------------------------------
+MaroonedAlive_0_36:
+        BYTE           N12     Ds3   v063
+        BYTE   W18
+        BYTE                   As2   v055
+        BYTE   W18
+        BYTE                   Gn2   v050
+        BYTE   W18
+        BYTE                   Ds2
+        BYTE   W18
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE   PEND
+// 037   ----------------------------------------
+MaroonedAlive_0_37:
+        BYTE           N12     Fn2   v063
+        BYTE   W18
+        BYTE                   Cn3   v055
+        BYTE   W18
+        BYTE                   An2   v050
+        BYTE   W18
+        BYTE                   Cn3
+        BYTE   W18
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE   PEND
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_32
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_35
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_36
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_37
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_32
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_33
+// 044   ----------------------------------------
+        BYTE   TEMPO   100/2
+        BYTE           N12     Cn4   v063
+        BYTE   W18
+        BYTE                   Gn3   v055
+        BYTE   W18
+        BYTE                   Ds3   v050
+        BYTE   W18
+        BYTE                   Cn3
+        BYTE   W18
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Ds3
+        BYTE   W12
+// 045   ----------------------------------------
+        BYTE                   Fn3   v063
+        BYTE   W18
+        BYTE                   Cn3   v055
+        BYTE   W18
+        BYTE                   An2   v050
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W18
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W18
+// 046   ----------------------------------------
+        BYTE   TEMPO   110/2
+        BYTE                   Cn4   v063
+        BYTE   W18
+        BYTE                   Gn3   v055
+        BYTE   W18
+        BYTE                   Ds3   v050
+        BYTE   W18
+        BYTE                   Cn3
+        BYTE   W18
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Ds3
+        BYTE   W12
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_0_33
+// 048   ----------------------------------------
+        BYTE   TEMPO   120/2
+        BYTE           N12     Cn4   v063
+        BYTE   W18
+        BYTE                   Gn3   v055
+        BYTE   W18
+        BYTE                   Ds3   v050
+        BYTE   W18
+        BYTE                   Cn3
+        BYTE   W18
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Ds3
+        BYTE   W12
+// 049   ----------------------------------------
+        BYTE                   Fn3   v063
+        BYTE   W18
+        BYTE                   Cn3   v055
+        BYTE   W18
+        BYTE                   An2   v050
+        BYTE   W60
+// 050   ----------------------------------------
+        BYTE   TEMPO   110/2
+        BYTE   W96
+// 051   ----------------------------------------
+        BYTE   W96
+// 052   ----------------------------------------
+        BYTE   W96
+// 053   ----------------------------------------
+        BYTE   W96
+// 054   ----------------------------------------
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   W96
+// 056   ----------------------------------------
+        BYTE   W96
+// 057   ----------------------------------------
+        BYTE   W96
+// 058   ----------------------------------------
+        BYTE   W96
+// 059   ----------------------------------------
+        BYTE   W96
+// 060   ----------------------------------------
+        BYTE           PAN     c_v+10
+        BYTE   GoTo
+         POIN2  MaroonedAlive_0_LOOP
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+MaroonedAlive_1:
+        BYTE   KEYSH   MaroonedAlive_key+0
+// 000   ----------------------------------------
+MaroonedAlive_1_LOOP:
+        BYTE           VOICE   64
+        BYTE           PAN     c_v-11
+        BYTE           N12     Gn2   v047
+        BYTE           VOL     127
+        BYTE   W18
+        BYTE           N06     Fn2   v037
+        BYTE   W06
+        BYTE           N12     Gn2   v041
+        BYTE   W18
+        BYTE           N06     Fn2   v037
+        BYTE   W06
+        BYTE           N12     Gn2   v041
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+// 001   ----------------------------------------
+        BYTE           N72     Cn3   v047
+        BYTE   W72
+// 002   ----------------------------------------
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE           N06     Fn2   v037
+        BYTE   W06
+        BYTE           N12     Gn2   v041
+        BYTE   W18
+        BYTE           N36
+        BYTE   W36
+// 003   ----------------------------------------
+        BYTE           N72     En2   v033
+        BYTE   W72
+// 004   ----------------------------------------
+MaroonedAlive_1_4:
+        BYTE           N12     Gn2   v050
+        BYTE   W18
+        BYTE           N06     Gn2   v040
+        BYTE   W06
+        BYTE                   Gn2   v044
+        BYTE   W06
+        BYTE                   Bn2
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W06
+        BYTE           N24     Dn3
+        BYTE   W24
+        BYTE   PEND
+// 005   ----------------------------------------
+MaroonedAlive_1_5:
+        BYTE           N24     Cn3   v050
+        BYTE   W30
+        BYTE           N18     Bn2   v044
+        BYTE   W18
+        BYTE           N24     Gn2
+        BYTE   W24
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE           N12     Dn2
+        BYTE   W18
+        BYTE           N06     An2
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE   W12
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE   W03
+        BYTE           N03     Cn3   v050
+        BYTE   W03
+// 007   ----------------------------------------
+        BYTE           N24     Bn2
+        BYTE   W24
+        BYTE           N48     Gn2   v044
+        BYTE   W48
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_4
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_5
+// 010   ----------------------------------------
+        BYTE           N12     Dn2   v044
+        BYTE   W18
+        BYTE           N06     An2
+        BYTE   W12
+        BYTE                   Bn2
+        BYTE   W12
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE   W02
+        BYTE           N04     Cn3   v050
+        BYTE   W04
+// 011   ----------------------------------------
+        BYTE           N24     Bn2
+        BYTE   W24
+        BYTE           N18     Dn3   v044
+        BYTE   W18
+        BYTE                   Bn2
+        BYTE   W18
+        BYTE           N12     An2
+        BYTE   W12
+// 012   ----------------------------------------
+        BYTE           N72     Gn2   v040
+        BYTE   W72
+// 013   ----------------------------------------
+        BYTE                   Fn2
+        BYTE   W72
+// 014   ----------------------------------------
+        BYTE                   Dn2
+        BYTE   W72
+// 015   ----------------------------------------
+        BYTE                   Cn2
+        BYTE   W72
+// 016   ----------------------------------------
+        BYTE                   Bn2
+        BYTE   W72
+// 017   ----------------------------------------
+        BYTE                   An2
+        BYTE   W72
+// 018   ----------------------------------------
+        BYTE                   Dn2
+        BYTE   W72
+// 019   ----------------------------------------
+        BYTE                   En2
+        BYTE   W72
+// 020   ----------------------------------------
+        BYTE           PAN     c_v-17
+        BYTE           N72     Bn2
+        BYTE   W72
+// 021   ----------------------------------------
+        BYTE                   An2
+        BYTE   W72
+// 022   ----------------------------------------
+        BYTE                   Dn2
+        BYTE   W72
+// 023   ----------------------------------------
+        BYTE                   En2
+        BYTE   W72
+// 024   ----------------------------------------
+        BYTE   W72
+// 025   ----------------------------------------
+        BYTE   W72
+// 026   ----------------------------------------
+        BYTE   W72
+// 027   ----------------------------------------
+        BYTE   W72
+// 028   ----------------------------------------
+        BYTE   W72
+// 029   ----------------------------------------
+        BYTE   W72
+// 030   ----------------------------------------
+        BYTE   W72
+// 031   ----------------------------------------
+        BYTE   W72
+// 032   ----------------------------------------
+MaroonedAlive_1_32:
+        BYTE           N48     Cn3   v030
+        BYTE   W48
+        BYTE                   Gn2
+        BYTE   W48
+        BYTE   PEND
+// 033   ----------------------------------------
+MaroonedAlive_1_33:
+        BYTE           N48     An2   v030
+        BYTE   W48
+        BYTE                   Fn2
+        BYTE   W48
+        BYTE   PEND
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_32
+// 035   ----------------------------------------
+MaroonedAlive_1_35:
+        BYTE           N48     As2   v030
+        BYTE   W48
+        BYTE                   Fn2
+        BYTE   W48
+        BYTE   PEND
+// 036   ----------------------------------------
+MaroonedAlive_1_36:
+        BYTE           N48     Ds2   v030
+        BYTE   W48
+        BYTE                   As2
+        BYTE   W48
+        BYTE   PEND
+// 037   ----------------------------------------
+        BYTE           N96     An2
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_32
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_35
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_36
+// 041   ----------------------------------------
+        BYTE           N96     An2   v030
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_32
+// 043   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_33
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_32
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_33
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_32
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_33
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_32
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_33
+// 050   ----------------------------------------
+MaroonedAlive_1_50:
+        BYTE           N48     Fn3   v030
+        BYTE   W48
+        BYTE                   Fn3   v025
+        BYTE   W48
+        BYTE   PEND
+// 051   ----------------------------------------
+MaroonedAlive_1_51:
+        BYTE           N48     Gs3   v030
+        BYTE   W48
+        BYTE                   Cs3   v025
+        BYTE   W48
+        BYTE   PEND
+// 052   ----------------------------------------
+MaroonedAlive_1_52:
+        BYTE           N48     Fs3   v030
+        BYTE   W48
+        BYTE                   Fs3   v025
+        BYTE   W48
+        BYTE   PEND
+// 053   ----------------------------------------
+MaroonedAlive_1_53:
+        BYTE           N48     En3   v030
+        BYTE   W48
+        BYTE           N24     An3
+        BYTE   W24
+        BYTE                   En3
+        BYTE   W24
+        BYTE   PEND
+// 054   ----------------------------------------
+        BYTE           N96     Dn3
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_50
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_51
+// 057   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_52
+// 058   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_1_53
+// 059   ----------------------------------------
+        BYTE           N36     Dn3   v030
+        BYTE   W36
+        BYTE                   Fs3
+        BYTE   W36
+        BYTE           N24     An3
+        BYTE   W24
+// 060   ----------------------------------------
+        BYTE           PAN     c_v-11
+        BYTE   GoTo
+         POIN2  MaroonedAlive_1_LOOP
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+MaroonedAlive_2:
+        BYTE   KEYSH   MaroonedAlive_key+0
+// 000   ----------------------------------------
+MaroonedAlive_2_LOOP:
+        BYTE           VOICE   71
+        BYTE           VOL     127
+        BYTE   W72
+// 001   ----------------------------------------
+        BYTE   W72
+// 002   ----------------------------------------
+        BYTE   W72
+// 003   ----------------------------------------
+        BYTE   W72
+// 004   ----------------------------------------
+        BYTE   W72
+// 005   ----------------------------------------
+        BYTE   W72
+// 006   ----------------------------------------
+        BYTE   W72
+// 007   ----------------------------------------
+        BYTE   W72
+// 008   ----------------------------------------
+        BYTE   W72
+// 009   ----------------------------------------
+        BYTE   W72
+// 010   ----------------------------------------
+        BYTE   W72
+// 011   ----------------------------------------
+        BYTE   W72
+// 012   ----------------------------------------
+        BYTE   W72
+// 013   ----------------------------------------
+        BYTE   W72
+// 014   ----------------------------------------
+        BYTE   W72
+// 015   ----------------------------------------
+        BYTE   W72
+// 016   ----------------------------------------
+        BYTE   W72
+// 017   ----------------------------------------
+        BYTE   W72
+// 018   ----------------------------------------
+        BYTE   W72
+// 019   ----------------------------------------
+        BYTE   W72
+// 020   ----------------------------------------
+        BYTE   W72
+// 021   ----------------------------------------
+        BYTE   W72
+// 022   ----------------------------------------
+        BYTE   W72
+// 023   ----------------------------------------
+        BYTE   W72
+// 024   ----------------------------------------
+        BYTE   W72
+// 025   ----------------------------------------
+        BYTE   W72
+// 026   ----------------------------------------
+        BYTE   W72
+// 027   ----------------------------------------
+        BYTE   W72
+// 028   ----------------------------------------
+        BYTE   W72
+// 029   ----------------------------------------
+        BYTE   W72
+// 030   ----------------------------------------
+        BYTE   W72
+// 031   ----------------------------------------
+        BYTE   W72
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+MaroonedAlive_2_34:
+        BYTE           N12     Gn3   v053
+        BYTE   W18
+        BYTE           N06     Gn3   v040
+        BYTE   W06
+        BYTE                   Gn3   v045
+        BYTE   W06
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE                   Ds4
+        BYTE   W06
+        BYTE           N48     Dn4
+        BYTE   W48
+        BYTE   PEND
+// 035   ----------------------------------------
+        BYTE           N24     Cn4   v053
+        BYTE   W30
+        BYTE           N18     As3   v045
+        BYTE   W18
+        BYTE           N48     Fn3
+        BYTE   W48
+// 036   ----------------------------------------
+        BYTE           N12     Ds3
+        BYTE   W18
+        BYTE           N06     As3
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE           N48     As3
+        BYTE   W48
+        BYTE   W03
+        BYTE           N03     As3   v053
+        BYTE   W03
+// 037   ----------------------------------------
+        BYTE           N24     An3
+        BYTE   W24
+        BYTE           N72     Fn3   v045
+        BYTE   W72
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_2_34
+// 039   ----------------------------------------
+        BYTE           N24     Cn4   v053
+        BYTE   W30
+        BYTE           N18     As3   v045
+        BYTE   W18
+        BYTE           N48     Dn4
+        BYTE   W48
+// 040   ----------------------------------------
+        BYTE           N12     Ds4
+        BYTE   W18
+        BYTE           N06     As3
+        BYTE   W12
+        BYTE                   Cn4
+        BYTE   W12
+        BYTE           N48     As3
+        BYTE   W48
+        BYTE   W03
+        BYTE           N03     Cs4   v053
+        BYTE   W03
+// 041   ----------------------------------------
+        BYTE           N24     Cn4
+        BYTE   W24
+        BYTE           N72     An3   v045
+        BYTE   W72
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   W96
+// 045   ----------------------------------------
+        BYTE   W96
+// 046   ----------------------------------------
+        BYTE   W96
+// 047   ----------------------------------------
+        BYTE   W96
+// 048   ----------------------------------------
+        BYTE   W96
+// 049   ----------------------------------------
+        BYTE   W96
+// 050   ----------------------------------------
+        BYTE   W96
+// 051   ----------------------------------------
+        BYTE   W96
+// 052   ----------------------------------------
+        BYTE   W96
+// 053   ----------------------------------------
+        BYTE   W96
+// 054   ----------------------------------------
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   W96
+// 056   ----------------------------------------
+        BYTE   W96
+// 057   ----------------------------------------
+        BYTE   W96
+// 058   ----------------------------------------
+        BYTE   W96
+// 059   ----------------------------------------
+        BYTE   W96
+// 060   ----------------------------------------
+        BYTE   GoTo
+         POIN2  MaroonedAlive_2_LOOP
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+MaroonedAlive_3:
+        BYTE   KEYSH   MaroonedAlive_key+0
+// 000   ----------------------------------------
+MaroonedAlive_3_LOOP:
+        BYTE           VOICE   22
+        BYTE           PAN     c_v-1
+        BYTE           VOL     127
+        BYTE   W72
+// 001   ----------------------------------------
+        BYTE   W72
+// 002   ----------------------------------------
+        BYTE   W72
+// 003   ----------------------------------------
+        BYTE   W72
+// 004   ----------------------------------------
+        BYTE   W72
+// 005   ----------------------------------------
+        BYTE   W72
+// 006   ----------------------------------------
+        BYTE   W72
+// 007   ----------------------------------------
+        BYTE   W72
+// 008   ----------------------------------------
+        BYTE   W72
+// 009   ----------------------------------------
+        BYTE   W72
+// 010   ----------------------------------------
+        BYTE   W72
+// 011   ----------------------------------------
+        BYTE   W72
+// 012   ----------------------------------------
+        BYTE   W72
+// 013   ----------------------------------------
+        BYTE   W72
+// 014   ----------------------------------------
+        BYTE   W72
+// 015   ----------------------------------------
+        BYTE   W72
+// 016   ----------------------------------------
+        BYTE   W72
+// 017   ----------------------------------------
+        BYTE   W72
+// 018   ----------------------------------------
+        BYTE   W72
+// 019   ----------------------------------------
+        BYTE   W72
+// 020   ----------------------------------------
+        BYTE   W72
+// 021   ----------------------------------------
+        BYTE   W72
+// 022   ----------------------------------------
+        BYTE   W72
+// 023   ----------------------------------------
+        BYTE   W72
+// 024   ----------------------------------------
+        BYTE           N36     Bn3   v045
+        BYTE   W36
+        BYTE           N24     An3   v040
+        BYTE   W24
+        BYTE           N12     Gn3
+        BYTE   W12
+// 025   ----------------------------------------
+        BYTE           N48     Gn3   v045
+        BYTE   W48
+        BYTE           N24     Gn3   v025
+        BYTE   W24
+// 026   ----------------------------------------
+        BYTE           N36     An3   v045
+        BYTE   W36
+        BYTE           N24     Fn3   v040
+        BYTE   W24
+        BYTE           N12     En3
+        BYTE   W12
+// 027   ----------------------------------------
+        BYTE           N18     Gn3   v045
+        BYTE   W18
+        BYTE                   An3
+        BYTE   W18
+        BYTE                   Bn3
+        BYTE   W18
+        BYTE           N06     An3
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W06
+        BYTE                   An3
+        BYTE   W06
+// 028   ----------------------------------------
+        BYTE           N36     Bn3
+        BYTE   W36
+        BYTE           N24     Gn4   v040
+        BYTE   W24
+        BYTE           N12     En4
+        BYTE   W12
+// 029   ----------------------------------------
+        BYTE           N48     En4   v045
+        BYTE   W48
+        BYTE           N24     En4   v025
+        BYTE   W24
+// 030   ----------------------------------------
+        BYTE           N36     Fn4   v045
+        BYTE   W36
+        BYTE           N24     En4   v040
+        BYTE   W24
+        BYTE           N12     Dn4
+        BYTE   W12
+// 031   ----------------------------------------
+        BYTE           N72     Fn4   v045
+        BYTE   W72
+// 032   ----------------------------------------
+        BYTE   W96
+// 033   ----------------------------------------
+        BYTE   W96
+// 034   ----------------------------------------
+        BYTE   W96
+// 035   ----------------------------------------
+        BYTE   W96
+// 036   ----------------------------------------
+        BYTE   W96
+// 037   ----------------------------------------
+        BYTE   W96
+// 038   ----------------------------------------
+        BYTE   W96
+// 039   ----------------------------------------
+        BYTE   W96
+// 040   ----------------------------------------
+        BYTE   W96
+// 041   ----------------------------------------
+        BYTE   W96
+// 042   ----------------------------------------
+        BYTE   W96
+// 043   ----------------------------------------
+        BYTE   W96
+// 044   ----------------------------------------
+        BYTE   W96
+// 045   ----------------------------------------
+        BYTE   W96
+// 046   ----------------------------------------
+        BYTE   W96
+// 047   ----------------------------------------
+        BYTE   W96
+// 048   ----------------------------------------
+        BYTE   W96
+// 049   ----------------------------------------
+        BYTE   W96
+// 050   ----------------------------------------
+        BYTE   W96
+// 051   ----------------------------------------
+        BYTE   W96
+// 052   ----------------------------------------
+        BYTE   W96
+// 053   ----------------------------------------
+        BYTE   W96
+// 054   ----------------------------------------
+        BYTE   W96
+// 055   ----------------------------------------
+        BYTE   W96
+// 056   ----------------------------------------
+        BYTE   W96
+// 057   ----------------------------------------
+        BYTE   W96
+// 058   ----------------------------------------
+        BYTE   W96
+// 059   ----------------------------------------
+        BYTE   W96
+// 060   ----------------------------------------
+        BYTE   GoTo
+         POIN2  MaroonedAlive_3_LOOP
+        BYTE   FINE
+
+//****************** Track 4 (Midi-Chn.4) ******************//
+
+MaroonedAlive_4:
+        BYTE   KEYSH   MaroonedAlive_key+0
+// 000   ----------------------------------------
+MaroonedAlive_4_LOOP:
+        BYTE           VOICE   25
+        BYTE           PAN     c_v-1
+        BYTE           N12     Gn2   v032
+        BYTE           N12     Bn2
+        BYTE           VOL     127
+        BYTE   W01
+        BYTE           N11     Dn3
+        BYTE   W11
+        BYTE           N12     Gn2
+        BYTE           N12     Dn3
+        BYTE           N12     Bn2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE           N12     Bn2
+        BYTE   W01
+        BYTE           N11     Dn3
+        BYTE   W11
+        BYTE           N12     Gn2
+        BYTE           N12     Bn2
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE   W12
+// 001   ----------------------------------------
+        BYTE                   Fn2
+        BYTE           N12     An2
+        BYTE   W01
+        BYTE           N11     Cn3
+        BYTE   W11
+        BYTE           N12     Fn2
+        BYTE           N12     An2
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Fn2
+        BYTE           N12     An2
+        BYTE   W01
+        BYTE           N11     Cn3
+        BYTE   W11
+        BYTE           N12
+        BYTE           N12     An2
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE                   Cn2
+        BYTE   W12
+// 002   ----------------------------------------
+        BYTE                   Dn2
+        BYTE           N12     Fn2
+        BYTE   W01
+        BYTE           N11     An2
+        BYTE   W11
+        BYTE           N12     Dn2
+        BYTE           N12     Fn2
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE                   Cn2
+        BYTE   W12
+        BYTE                   Dn2
+        BYTE           N12     Fn2
+        BYTE   W01
+        BYTE           N11     An2
+        BYTE   W11
+        BYTE           N12
+        BYTE           N12     Fn2
+        BYTE           N12     Dn2
+        BYTE   W12
+        BYTE                   An1
+        BYTE   W12
+// 003   ----------------------------------------
+        BYTE           N48     Cn2
+        BYTE           N48     En2
+        BYTE   W01
+        BYTE           N44     Gn2   v032   gtp3
+        BYTE   W68
+        BYTE   W03
+// 004   ----------------------------------------
+MaroonedAlive_4_4:
+        BYTE           N48     Gn1   v032
+        BYTE   W01
+        BYTE           N44     Dn2   v032   gtp3
+        BYTE   W01
+        BYTE           N44     Gn2   v032   gtp2
+        BYTE   W44
+        BYTE   W02
+        BYTE           N24     Gn1
+        BYTE   W01
+        BYTE           N23     Cn2
+        BYTE   W01
+        BYTE           N22     Fn2
+        BYTE   W22
+        BYTE   PEND
+// 005   ----------------------------------------
+        BYTE           N48     Fn1
+        BYTE   W01
+        BYTE           N44     Cn2   v032   gtp3
+        BYTE   W02
+        BYTE           N44     Fn2   v032   gtp1
+        BYTE   W44
+        BYTE   W01
+        BYTE           N24     En1
+        BYTE   W01
+        BYTE           N23     Bn1
+        BYTE   W01
+        BYTE           N22     En2
+        BYTE   W22
+// 006   ----------------------------------------
+MaroonedAlive_4_6:
+        BYTE           N48     Gn1   v032
+        BYTE   W01
+        BYTE           N44     Dn2   v032   gtp3
+        BYTE   W02
+        BYTE           N44     Gn2   v032   gtp1
+        BYTE   W44
+        BYTE   W01
+        BYTE           N24     Gn1
+        BYTE   W01
+        BYTE           N23     Cn2
+        BYTE   W02
+        BYTE           N21     Fn2
+        BYTE   W21
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE           N72     Fn1
+        BYTE   W01
+        BYTE           N68     Cn2   v032   gtp3
+        BYTE   W01
+        BYTE           N68     Fn2   v032   gtp2
+        BYTE   W68
+        BYTE   W02
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_6
+// 009   ----------------------------------------
+        BYTE           N48     Fn1   v032
+        BYTE   W01
+        BYTE           N44     Cn2   v032   gtp3
+        BYTE   W02
+        BYTE           N44     Fn2   v032   gtp1
+        BYTE   W44
+        BYTE   W01
+        BYTE           N24     En1
+        BYTE   W01
+        BYTE           N23     Bn1
+        BYTE   W02
+        BYTE           N21     En2
+        BYTE   W21
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_4
+// 011   ----------------------------------------
+        BYTE           N72     Fn1   v032
+        BYTE   W01
+        BYTE           N68     Cn2   v032   gtp3
+        BYTE   W02
+        BYTE           N68     Fn2   v032   gtp1
+        BYTE   W68
+        BYTE   W01
+// 012   ----------------------------------------
+        BYTE           N72     Gn2
+        BYTE           N72     Dn3
+        BYTE   W72
+// 013   ----------------------------------------
+        BYTE                   Cn3
+        BYTE           N72     Fn2
+        BYTE   W72
+// 014   ----------------------------------------
+        BYTE                   An2
+        BYTE           N72     Dn2
+        BYTE   W72
+// 015   ----------------------------------------
+        BYTE                   Cn2
+        BYTE           N72     Gn2
+        BYTE   W72
+// 016   ----------------------------------------
+        BYTE                   Gn2   v050
+        BYTE   W06
+        BYTE           N06     Dn3   v036
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W24
+        BYTE                   Bn2
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+// 017   ----------------------------------------
+        BYTE           N72     Fn2   v050
+        BYTE   W06
+        BYTE           N06     Cn3   v036
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   Ds3
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+// 018   ----------------------------------------
+        BYTE           N72     Dn2   v050
+        BYTE   W06
+        BYTE           N06     An2   v036
+        BYTE   W06
+        BYTE                   Dn3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE                   Gn2
+        BYTE   W12
+        BYTE                   An2
+        BYTE   W12
+// 019   ----------------------------------------
+        BYTE           N72     Cn2   v050
+        BYTE   W06
+        BYTE           N06     Gn2   v036
+        BYTE   W06
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE                   As2
+        BYTE   W12
+        BYTE                   En2
+        BYTE   W12
+        BYTE                   Gn2
+        BYTE   W06
+        BYTE                   En2
+        BYTE   W06
+// 020   ----------------------------------------
+        BYTE           N72     Gn2   v050
+        BYTE   W06
+        BYTE           N06     Bn3   v036
+        BYTE   W06
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W24
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   Dn3
+        BYTE   W12
+// 021   ----------------------------------------
+        BYTE           N72     Fn2   v050
+        BYTE   W06
+        BYTE           N06     An3   v036
+        BYTE   W06
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   Ds3
+        BYTE   W12
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W06
+        BYTE                   An2
+        BYTE   W06
+// 022   ----------------------------------------
+        BYTE           N72     Dn2   v050
+        BYTE   W06
+        BYTE           N06     An2   v036
+        BYTE   W06
+        BYTE                   Fn3
+        BYTE   W12
+        BYTE                   Fn3
+        BYTE   W24
+        BYTE                   An3
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W12
+// 023   ----------------------------------------
+        BYTE           N72     Cn2   v050
+        BYTE   W06
+        BYTE           N06     Cn3   v036
+        BYTE   W06
+        BYTE                   En3
+        BYTE   W12
+        BYTE                   Gn3
+        BYTE   W12
+        BYTE                   As3
+        BYTE   W36
+// 024   ----------------------------------------
+        BYTE           N72     Gn1   v024
+        BYTE   W01
+        BYTE           N68     Bn1   v024   gtp3
+        BYTE   W02
+        BYTE           N68     Dn2   v024   gtp1
+        BYTE   W01
+        BYTE           N68     An2
+        BYTE   W68
+// 025   ----------------------------------------
+        BYTE           N72     Cn2
+        BYTE   W01
+        BYTE           N68     En2   v024   gtp3
+        BYTE   W02
+        BYTE           N68     Gn2   v024   gtp1
+        BYTE   W01
+        BYTE           N68     Dn3
+        BYTE   W68
+// 026   ----------------------------------------
+        BYTE           N72     Dn2
+        BYTE   W01
+        BYTE           N68     Fn2   v024   gtp3
+        BYTE   W02
+        BYTE           N68     An2   v024   gtp1
+        BYTE   W01
+        BYTE           N68     Cn3
+        BYTE   W68
+// 027   ----------------------------------------
+        BYTE           N72     Gn1
+        BYTE   W01
+        BYTE           N68     Bn1   v024   gtp3
+        BYTE   W01
+        BYTE           N68     Dn2   v024   gtp2
+        BYTE   W02
+        BYTE           N68     Gn2
+        BYTE   W68
+// 028   ----------------------------------------
+        BYTE           N72     En1
+        BYTE   W01
+        BYTE           N68     Gn1   v024   gtp3
+        BYTE   W01
+        BYTE           N68     Bn1   v024   gtp2
+        BYTE   W02
+        BYTE           N68     An2
+        BYTE   W68
+// 029   ----------------------------------------
+        BYTE           N72     An1
+        BYTE   W01
+        BYTE           N68     Cn2   v024   gtp3
+        BYTE   W01
+        BYTE           N68     En2   v024   gtp2
+        BYTE   W02
+        BYTE           N68     Bn2
+        BYTE   W68
+// 030   ----------------------------------------
+        BYTE           N72     Fn1
+        BYTE   W01
+        BYTE           N68     An1   v024   gtp3
+        BYTE   W02
+        BYTE           N68     Cn2   v024   gtp1
+        BYTE   W01
+        BYTE           N68     Gn2
+        BYTE   W68
+// 031   ----------------------------------------
+        BYTE           N72     Gn1
+        BYTE   W01
+        BYTE           N68     Bn1   v024   gtp3
+        BYTE   W02
+        BYTE           N68     Dn2   v024   gtp1
+        BYTE   W01
+        BYTE           N68     Fn2
+        BYTE   W68
+// 032   ----------------------------------------
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Ds2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE           N24     Gn1   v028
+        BYTE   W12
+        BYTE           N12     Ds2   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Ds2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE           N24     Gn1   v028
+        BYTE   W12
+        BYTE           N12     Gn2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+// 033   ----------------------------------------
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Fn2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     Fn2   v024
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     An2
+        BYTE   W12
+// 034   ----------------------------------------
+MaroonedAlive_4_34:
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Ds2
+        BYTE   W12
+        BYTE           N24     Gn1   v028
+        BYTE   W12
+        BYTE           N12     Ds2   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Ds2
+        BYTE   W12
+        BYTE           N24     Gn1   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE   PEND
+// 035   ----------------------------------------
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     As2   v024
+        BYTE           N12     Dn2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     Dn2   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     As2   v024
+        BYTE           N12     Dn2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     As2   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+// 036   ----------------------------------------
+        BYTE           N24     Ds2   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     Gn2   v024
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE           N24     Ds2   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     As2
+        BYTE   W12
+// 037   ----------------------------------------
+        BYTE           N24     Fn2   v028
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     An2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE           N24     Fn2   v028
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+// 038   ----------------------------------------
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Ds2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE           N24     Gn1   v028
+        BYTE   W12
+        BYTE           N12     Ds2   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Ds2
+        BYTE   W12
+        BYTE           N24     Gn1   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+// 039   ----------------------------------------
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     Dn2   v024
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     Dn2   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     Dn2   v024
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     Fn2   v024
+        BYTE           N12     As2
+        BYTE   W12
+// 040   ----------------------------------------
+        BYTE           N24     Ds2   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     As2   v024
+        BYTE           N12     Gn2
+        BYTE   W12
+        BYTE           N24     Ds2   v028
+        BYTE   W12
+        BYTE           N12     Gn2   v024
+        BYTE           N12     Ds3
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     As2
+        BYTE   W12
+// 041   ----------------------------------------
+        BYTE           N24     Fn2   v028
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE           N24     Fn2   v028
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     An2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+// 042   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_34
+// 043   ----------------------------------------
+MaroonedAlive_4_43:
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     An2   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     An2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE   PEND
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_34
+// 045   ----------------------------------------
+MaroonedAlive_4_45:
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     Fn1   v028
+        BYTE   W12
+        BYTE           N12     An2   v024
+        BYTE           N12     Fn2
+        BYTE   W12
+        BYTE           N24     Cn2   v028
+        BYTE   W12
+        BYTE           N12     Cn3   v024
+        BYTE           N12     Fn2
+        BYTE   W36
+        BYTE   PEND
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_34
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_43
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_34
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_45
+// 050   ----------------------------------------
+        BYTE           N24     Fn2   v028
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     As2   v024
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE           N24     As2   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     As3
+        BYTE   W12
+        BYTE           N24     Ds2   v028
+        BYTE   W12
+        BYTE           N12     As3   v024
+        BYTE           N12     Gn3
+        BYTE   W12
+// 051   ----------------------------------------
+MaroonedAlive_4_51:
+        BYTE           N24     Ds2   v028
+        BYTE   W12
+        BYTE           N12     Gs2   v024
+        BYTE           N12     Ds3
+        BYTE   W12
+        BYTE           N24     Gs1   v028
+        BYTE   W12
+        BYTE           N12     Gs2   v024
+        BYTE           N12     Cn3
+        BYTE   W12
+        BYTE           N24     Gs2   v028
+        BYTE   W12
+        BYTE           N12     Cs3   v024
+        BYTE           N12     Gs3
+        BYTE   W12
+        BYTE           N24     Cs2   v028
+        BYTE   W12
+        BYTE           N12     Gs3   v024
+        BYTE           N12     Fn3
+        BYTE   W12
+        BYTE   PEND
+// 052   ----------------------------------------
+MaroonedAlive_4_52:
+        BYTE           N24     Cs2   v028
+        BYTE   W12
+        BYTE           N12     Fs2   v024
+        BYTE           N12     Cs3
+        BYTE   W12
+        BYTE           N24     Fs1   v028
+        BYTE   W12
+        BYTE           N12     Fs2   v024
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE           N24     Fs2   v028
+        BYTE   W12
+        BYTE           N12     Fs3   v024
+        BYTE           N12     Bn2
+        BYTE   W12
+        BYTE           N24     Bn1   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     Fs3
+        BYTE   W12
+        BYTE   PEND
+// 053   ----------------------------------------
+MaroonedAlive_4_53:
+        BYTE           N24     Bn1   v028
+        BYTE   W12
+        BYTE           N12     Bn2   v024
+        BYTE           N12     En2
+        BYTE   W12
+        BYTE           N24     En1   v028
+        BYTE   W12
+        BYTE           N12     Gs2   v024
+        BYTE           N12     En2
+        BYTE   W12
+        BYTE           N24     En2   v028
+        BYTE   W12
+        BYTE           N12     An2   v024
+        BYTE           N12     En3
+        BYTE   W12
+        BYTE           N24     An1   v028
+        BYTE   W12
+        BYTE           N12     Cs3   v024
+        BYTE           N12     En3
+        BYTE   W12
+        BYTE   PEND
+// 054   ----------------------------------------
+        BYTE           N24     An1   v028
+        BYTE   W12
+        BYTE           N12     An2   v024
+        BYTE           N12     Dn2
+        BYTE   W12
+        BYTE           N24     Dn1   v028
+        BYTE   W12
+        BYTE           N12     Dn2   v024
+        BYTE           N12     Fs2
+        BYTE   W12
+        BYTE           N24     An2   v028
+        BYTE   W12
+        BYTE           N12     Dn3   v024
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE           N24     Dn2   v028
+        BYTE   W12
+        BYTE           N12     Dn3   v024
+        BYTE           N12     Fs3
+        BYTE   W12
+// 055   ----------------------------------------
+        BYTE           N01     An3
+        BYTE           N01     Fs3
+        BYTE           N01     Dn2   v028
+        BYTE           N24     Fn2
+        BYTE   W12
+        BYTE           N12     Fn3   v024
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE           N24     As1   v028
+        BYTE   W12
+        BYTE           N12     As2   v024
+        BYTE           N12     Dn3
+        BYTE   W12
+        BYTE           N24     As2   v028
+        BYTE   W12
+        BYTE           N12     Ds3   v024
+        BYTE           N12     As3
+        BYTE   W12
+        BYTE           N24     Ds2   v028
+        BYTE   W12
+        BYTE           N12     As3   v024
+        BYTE           N12     Gn3
+        BYTE   W12
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_51
+// 057   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_52
+// 058   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_4_53
+// 059   ----------------------------------------
+        BYTE           N96     Dn2   v028
+        BYTE   W12
+        BYTE           N12     An3   v024
+        BYTE           N12     Fs3
+        BYTE   W24
+        BYTE                   An3
+        BYTE           N12     Fs3
+        BYTE   W24
+        BYTE           N36     Cn4   v028
+        BYTE           N36     An3   v024
+        BYTE           N36     Fs3
+        BYTE   W36
+// 060   ----------------------------------------
+        BYTE   GoTo
+         POIN2  MaroonedAlive_4_LOOP
+        BYTE   FINE
+
+//****************** Track 5 (Midi-Chn.5) ******************//
+
+MaroonedAlive_5:
+        BYTE   KEYSH   MaroonedAlive_key+0
+// 000   ----------------------------------------
+MaroonedAlive_5_LOOP:
+        BYTE           VOICE   33
+        BYTE           N24     Gn1   v063
+        BYTE           VOL     127
+        BYTE   W36
+        BYTE           N12     Gn1   v055
+        BYTE   W24
+        BYTE           N06
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+// 001   ----------------------------------------
+MaroonedAlive_5_1:
+        BYTE           N24     Fn1   v063
+        BYTE   W36
+        BYTE           N12     Fn1   v055
+        BYTE   W24
+        BYTE           N06
+        BYTE   W06
+        BYTE                   Gn1
+        BYTE   W06
+        BYTE   PEND
+// 002   ----------------------------------------
+MaroonedAlive_5_2:
+        BYTE           N24     Dn1   v063
+        BYTE   W36
+        BYTE           N12     Dn1   v055
+        BYTE   W24
+        BYTE           N06
+        BYTE   W06
+        BYTE                   En1
+        BYTE   W06
+        BYTE   PEND
+// 003   ----------------------------------------
+MaroonedAlive_5_3:
+        BYTE           N24     Cn1   v063
+        BYTE   W36
+        BYTE           N12     Fn1   v055
+        BYTE   W24
+        BYTE           N06     En1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE   PEND
+// 004   ----------------------------------------
+MaroonedAlive_5_4:
+        BYTE           N12     Gn1   v063
+        BYTE   W24
+        BYTE           N06     Gn1   v055
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE           N12     Gn1
+        BYTE   W12
+        BYTE                   Cn2
+        BYTE   W12
+        BYTE   PEND
+// 005   ----------------------------------------
+MaroonedAlive_5_5:
+        BYTE           N48     Gn1   v063
+        BYTE   W54
+        BYTE           N06     Gn1   v055
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE   PEND
+// 006   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_4
+// 007   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_5
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_4
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_5
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_4
+// 011   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_5
+// 012   ----------------------------------------
+MaroonedAlive_5_12:
+        BYTE           N24     Gn1   v063
+        BYTE   W36
+        BYTE           N12     Gn1   v055
+        BYTE   W24
+        BYTE           N06
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE   PEND
+// 013   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_1
+// 014   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_2
+// 015   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_3
+// 016   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_12
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_1
+// 018   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_2
+// 019   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_3
+// 020   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_12
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_1
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_2
+// 023   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_3
+// 024   ----------------------------------------
+        BYTE           N12     Gn1   v063
+        BYTE   W24
+        BYTE           N48
+        BYTE   W48
+// 025   ----------------------------------------
+        BYTE           N12     Cn2
+        BYTE   W24
+        BYTE           N48
+        BYTE   W48
+// 026   ----------------------------------------
+        BYTE           N12     Dn2
+        BYTE   W24
+        BYTE           N48
+        BYTE   W48
+// 027   ----------------------------------------
+        BYTE           N72     Gn1
+        BYTE   W72
+// 028   ----------------------------------------
+        BYTE           N12     En1
+        BYTE   W24
+        BYTE           N48
+        BYTE   W48
+// 029   ----------------------------------------
+        BYTE           N12     An1
+        BYTE   W24
+        BYTE           N48
+        BYTE   W48
+// 030   ----------------------------------------
+        BYTE           N12     Fn1
+        BYTE   W24
+        BYTE           N48
+        BYTE   W48
+// 031   ----------------------------------------
+        BYTE           N72     Gn1
+        BYTE   W72
+// 032   ----------------------------------------
+MaroonedAlive_5_32:
+        BYTE           N18     Cn2   v063
+        BYTE   W24
+        BYTE           N06     Cn2   v050
+        BYTE   W12
+        BYTE                   Cn2   v045
+        BYTE   W06
+        BYTE                   Cn2   v055
+        BYTE   W06
+        BYTE           N18     Cn2   v063
+        BYTE   W24
+        BYTE           N06     Cn2   v050
+        BYTE   W12
+        BYTE                   As1   v045
+        BYTE   W06
+        BYTE                   Cn2   v055
+        BYTE   W06
+        BYTE   PEND
+// 033   ----------------------------------------
+        BYTE           N18     Fn2   v063
+        BYTE   W24
+        BYTE           N06     Fn2   v050
+        BYTE   W12
+        BYTE                   Fn2   v045
+        BYTE   W06
+        BYTE                   Fn2   v055
+        BYTE   W06
+        BYTE           N18     Fn2   v063
+        BYTE   W24
+        BYTE           N06     Fn2   v050
+        BYTE   W12
+        BYTE                   Ds2   v045
+        BYTE   W06
+        BYTE                   Fn2   v055
+        BYTE   W06
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_32
+// 035   ----------------------------------------
+MaroonedAlive_5_35:
+        BYTE           N18     As1   v063
+        BYTE   W24
+        BYTE           N06     As1   v050
+        BYTE   W12
+        BYTE                   As1   v045
+        BYTE   W06
+        BYTE                   As1   v055
+        BYTE   W06
+        BYTE           N18     As1   v063
+        BYTE   W24
+        BYTE           N06     As1   v050
+        BYTE   W12
+        BYTE                   An1   v045
+        BYTE   W06
+        BYTE                   As1   v055
+        BYTE   W06
+        BYTE   PEND
+// 036   ----------------------------------------
+MaroonedAlive_5_36:
+        BYTE           N18     Ds2   v063
+        BYTE   W24
+        BYTE           N06     Ds2   v050
+        BYTE   W12
+        BYTE                   Ds2   v045
+        BYTE   W06
+        BYTE                   Ds2   v055
+        BYTE   W06
+        BYTE           N18     Ds2   v063
+        BYTE   W24
+        BYTE           N06     Ds2   v050
+        BYTE   W12
+        BYTE                   Dn2   v045
+        BYTE   W06
+        BYTE                   Ds2   v055
+        BYTE   W06
+        BYTE   PEND
+// 037   ----------------------------------------
+MaroonedAlive_5_37:
+        BYTE           N18     Fn2   v063
+        BYTE   W24
+        BYTE           N06     Fn2   v050
+        BYTE   W12
+        BYTE                   Fn2   v045
+        BYTE   W06
+        BYTE                   Fn2   v055
+        BYTE   W06
+        BYTE           N18     Fn2   v063
+        BYTE   W24
+        BYTE           N06     Fn2   v050
+        BYTE   W12
+        BYTE                   Cn2   v045
+        BYTE   W06
+        BYTE                   Gn1   v055
+        BYTE   W06
+        BYTE   PEND
+// 038   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_32
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_35
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_36
+// 041   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_37
+// 042   ----------------------------------------
+        BYTE           N18     Cn2   v063
+        BYTE   W24
+        BYTE           N06     Cn2   v050
+        BYTE   W12
+        BYTE                   Cn2   v045
+        BYTE   W06
+        BYTE                   Cn2   v055
+        BYTE   W54
+// 043   ----------------------------------------
+MaroonedAlive_5_43:
+        BYTE           N18     Fn2   v063
+        BYTE   W24
+        BYTE           N06     Fn2   v050
+        BYTE   W12
+        BYTE                   Fn2   v045
+        BYTE   W06
+        BYTE                   Fn2   v055
+        BYTE   W06
+        BYTE           N24
+        BYTE   W24
+        BYTE                   Cn2
+        BYTE   W24
+        BYTE   PEND
+// 044   ----------------------------------------
+MaroonedAlive_5_44:
+        BYTE           N18     Cn2   v063
+        BYTE   W24
+        BYTE           N06     Cn2   v050
+        BYTE   W12
+        BYTE                   Cn2   v045
+        BYTE   W06
+        BYTE                   Cn2   v055
+        BYTE   W06
+        BYTE           N24
+        BYTE   W24
+        BYTE                   Fn2
+        BYTE   W24
+        BYTE   PEND
+// 045   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_43
+// 046   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_44
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_43
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_44
+// 049   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_43
+// 050   ----------------------------------------
+MaroonedAlive_5_50:
+        BYTE           N18     As1   v063
+        BYTE   W24
+        BYTE           N06     As1   v050
+        BYTE   W12
+        BYTE                   As1   v045
+        BYTE   W06
+        BYTE                   As1   v055
+        BYTE   W06
+        BYTE           N18     Ds2   v063
+        BYTE   W24
+        BYTE           N06     Ds2   v050
+        BYTE   W12
+        BYTE                   Ds2   v045
+        BYTE   W06
+        BYTE                   Ds2   v055
+        BYTE   W06
+        BYTE   PEND
+// 051   ----------------------------------------
+MaroonedAlive_5_51:
+        BYTE           N18     Gs1   v063
+        BYTE   W24
+        BYTE           N06     Gs1   v050
+        BYTE   W12
+        BYTE                   Gs1   v045
+        BYTE   W06
+        BYTE                   Gs1   v055
+        BYTE   W06
+        BYTE           N18     Cs2   v063
+        BYTE   W24
+        BYTE           N06     Cs2   v050
+        BYTE   W12
+        BYTE                   Cs2   v045
+        BYTE   W06
+        BYTE                   Cs2   v055
+        BYTE   W06
+        BYTE   PEND
+// 052   ----------------------------------------
+MaroonedAlive_5_52:
+        BYTE           N18     Fs1   v063
+        BYTE   W24
+        BYTE           N06     Fs1   v050
+        BYTE   W12
+        BYTE                   Fs1   v045
+        BYTE   W06
+        BYTE                   Fs1   v055
+        BYTE   W06
+        BYTE           N18     Bn1   v063
+        BYTE   W24
+        BYTE           N06     Bn1   v050
+        BYTE   W12
+        BYTE                   Bn1   v045
+        BYTE   W06
+        BYTE                   Bn1   v055
+        BYTE   W06
+        BYTE   PEND
+// 053   ----------------------------------------
+MaroonedAlive_5_53:
+        BYTE           N18     En2   v063
+        BYTE   W24
+        BYTE           N06     En2   v050
+        BYTE   W12
+        BYTE                   En2   v045
+        BYTE   W06
+        BYTE                   En2   v055
+        BYTE   W06
+        BYTE           N18     An2   v063
+        BYTE   W24
+        BYTE           N06     An2   v050
+        BYTE   W12
+        BYTE                   An2   v045
+        BYTE   W06
+        BYTE                   An2   v055
+        BYTE   W06
+        BYTE   PEND
+// 054   ----------------------------------------
+        BYTE           N48     Dn2   v063
+        BYTE   W48
+        BYTE                   Dn2
+        BYTE   W48
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_50
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_51
+// 057   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_52
+// 058   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_5_53
+// 059   ----------------------------------------
+        BYTE           N96     Dn2   v063
+        BYTE   W96
+// 060   ----------------------------------------
+        BYTE   GoTo
+         POIN2  MaroonedAlive_5_LOOP
+        BYTE   FINE
+
+//****************** Track 6 (Midi-Chn.6) ******************//
+
+MaroonedAlive_6:
+        BYTE   KEYSH   MaroonedAlive_key+0
+// 000   ----------------------------------------
+MaroonedAlive_6_LOOP:
+        BYTE           VOICE   122
+        BYTE           N24     Cs1   v040
+        BYTE           N18     Ds2
+        BYTE           VOL     127
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N24     Fs1   v035
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N12     Fs1   v028
+        BYTE   W12
+        BYTE                   Fs1   v032
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 001   ----------------------------------------
+        BYTE           N18     Ds2   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N18     Fs1   v035
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE           N06     Cs1   v035
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N12     Cs1   v028
+        BYTE   W12
+        BYTE                   Dn1   v032
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 002   ----------------------------------------
+        BYTE           N18     Ds2   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N24     Fs1   v035
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N12     Fs1   v028
+        BYTE   W12
+        BYTE                   Fs1   v032
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 003   ----------------------------------------
+MaroonedAlive_6_3:
+        BYTE           N18     Ds2   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Fs1   v035
+        BYTE           N18     Ds2   v032
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE           N06     Cs1   v035
+        BYTE   W06
+        BYTE           N12     Cs1   v028
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N12     Dn1
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE   PEND
+// 004   ----------------------------------------
+MaroonedAlive_6_4:
+        BYTE           N24     Cs1   v040
+        BYTE           N12     Gs1
+        BYTE   W12
+        BYTE                   Gs1   v032
+        BYTE   W12
+        BYTE           N24     Ds1   v035
+        BYTE   W12
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+        BYTE           N06     Gs1   v035
+        BYTE   W06
+        BYTE                   Gs1
+        BYTE   W06
+        BYTE           N12
+        BYTE   W12
+        BYTE   PEND
+// 005   ----------------------------------------
+MaroonedAlive_6_5:
+        BYTE           N12     Gs1   v040
+        BYTE           N18     Cs1
+        BYTE   W12
+        BYTE           N12     Gs1   v032
+        BYTE   W06
+        BYTE           N06     Dn1   v035
+        BYTE   W06
+        BYTE           N24     Ds1
+        BYTE   W12
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+        BYTE           N06     Gs1   v035
+        BYTE   W06
+        BYTE                   Gs1
+        BYTE   W06
+        BYTE           N12     As1
+        BYTE   W12
+        BYTE   PEND
+// 006   ----------------------------------------
+MaroonedAlive_6_6:
+        BYTE           N12     Gs1   v040
+        BYTE           N24     Cs1
+        BYTE   W12
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+        BYTE           N24     Ds1   v035
+        BYTE   W12
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+        BYTE           N06     Gs1   v035
+        BYTE   W06
+        BYTE                   Gs1
+        BYTE   W06
+        BYTE           N12
+        BYTE   W12
+        BYTE   PEND
+// 007   ----------------------------------------
+        BYTE           N18     Cs1   v040
+        BYTE           N12     Gs1
+        BYTE   W12
+        BYTE                   Gs1   v032
+        BYTE   W06
+        BYTE           N06     Dn1   v035
+        BYTE   W06
+        BYTE                   Dn1   v025
+        BYTE   W08
+        BYTE                   Dn1   v028
+        BYTE   W10
+        BYTE                   Dn1   v032
+        BYTE   W06
+        BYTE                   Cs1   v025
+        BYTE   W09
+        BYTE                   Cs1   v028
+        BYTE   W09
+        BYTE                   Cs1   v032
+        BYTE   W06
+// 008   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_4
+// 009   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_5
+// 010   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_6
+// 011   ----------------------------------------
+        BYTE           N12     Cs1   v040
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W12
+        BYTE           N06     Gn1   v035
+        BYTE           N12     Dn1   v040
+        BYTE   W06
+        BYTE           N06     Gn1   v035
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W12
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Fn1
+        BYTE   W06
+        BYTE                   Dn1
+        BYTE   W12
+// 012   ----------------------------------------
+        BYTE           N24     Cs1   v040
+        BYTE           N24     An2
+        BYTE   W24
+        BYTE                   Fs1   v035
+        BYTE           N18     Ds2   v032
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N12     Fs1   v028
+        BYTE   W12
+        BYTE                   Fs1   v032
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 013   ----------------------------------------
+        BYTE           N24     Cs1   v040
+        BYTE           N18     Ds2
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N18     Fs1   v035
+        BYTE   W18
+        BYTE           N06     Cs1
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N12     Cs1
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N12     Dn1
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 014   ----------------------------------------
+        BYTE           N24     Cs1   v040
+        BYTE           N18     Ds2
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N24     Fs1   v035
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N12     Fs1
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N12     Fs1
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 015   ----------------------------------------
+        BYTE           N24     Cs1   v040
+        BYTE           N18     Ds2
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N06     Dn1   v025
+        BYTE   W09
+        BYTE           N05     Dn1   v028
+        BYTE   W09
+        BYTE           N06     Ds2
+        BYTE           N06     Dn1   v032
+        BYTE   W06
+        BYTE           N18     Ds2
+        BYTE           N06     Cs1   v025
+        BYTE   W08
+        BYTE           N07     Cs1   v028
+        BYTE   W10
+        BYTE           N06     Ds2
+        BYTE           N06     Cs1   v032
+        BYTE   W06
+// 016   ----------------------------------------
+        BYTE           N18     Ds2   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N24     Fs1   v035
+        BYTE           N18     Ds2   v032
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N12     Fs1   v028
+        BYTE   W12
+        BYTE                   Fs1   v032
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 017   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_3
+// 018   ----------------------------------------
+        BYTE           N24     Cs1   v040
+        BYTE           N18     Ds2
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N24     Fs1   v035
+        BYTE           N18     Ds2   v032
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N12     Fs1   v028
+        BYTE   W12
+        BYTE                   Fs1   v032
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+// 019   ----------------------------------------
+        BYTE           N18     Ds2   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N06     Dn1   v025
+        BYTE   W08
+        BYTE           N07     Dn1   v028
+        BYTE   W10
+        BYTE           N06     Ds2
+        BYTE           N06     Dn1   v032
+        BYTE   W06
+        BYTE                   Cs1   v025
+        BYTE           N18     Ds2   v032
+        BYTE   W09
+        BYTE           N05     Cs1   v028
+        BYTE   W09
+        BYTE           N06     Ds2
+        BYTE           N06     Cs1   v032
+        BYTE   W06
+// 020   ----------------------------------------
+MaroonedAlive_6_20:
+        BYTE           N18     Ds2   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N18     Ds2   v032
+        BYTE           N24     Fs1   v035
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE           N12     Fs1
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N12     Fs1
+        BYTE   W06
+        BYTE           N06     Ds2   v028
+        BYTE   W06
+        BYTE   PEND
+// 021   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_3
+// 022   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_20
+// 023   ----------------------------------------
+        BYTE           N12     Cs1   v040
+        BYTE           N18     Ds2
+        BYTE   W18
+        BYTE           N06     Ds2   v028
+        BYTE   W18
+        BYTE           N12     Ds2   v040
+        BYTE   W24
+        BYTE                   Dn1
+        BYTE   W12
+// 024   ----------------------------------------
+        BYTE           N24     Cs2   v035
+        BYTE           N24     Cs1   v040
+        BYTE           N12     Gs1   v036
+        BYTE   W24
+        BYTE                   Gs1   v032
+        BYTE   W12
+        BYTE           N24     Dn1
+        BYTE   W12
+        BYTE           N12     Gs1
+        BYTE   W24
+// 025   ----------------------------------------
+MaroonedAlive_6_25:
+        BYTE           N12     Gs1   v036
+        BYTE           N24     Cs1   v040
+        BYTE   W24
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+        BYTE           N24     Dn1
+        BYTE   W12
+        BYTE           N12     Gs1
+        BYTE   W24
+        BYTE   PEND
+// 026   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_25
+// 027   ----------------------------------------
+        BYTE           N12     Gs1   v036
+        BYTE           N24     Cs1   v040
+        BYTE   W12
+        BYTE           N12     Gs1   v028
+        BYTE   W12
+        BYTE                   An1   v032
+        BYTE   W12
+        BYTE           N24     Dn1
+        BYTE           N06     Bn1   v028
+        BYTE   W06
+        BYTE                   An1
+        BYTE   W06
+        BYTE           N12     Cn2   v032
+        BYTE   W12
+        BYTE                   Gs1   v028
+        BYTE   W12
+// 028   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_25
+// 029   ----------------------------------------
+MaroonedAlive_6_29:
+        BYTE           N24     Cs1   v040
+        BYTE           N12     Gs1   v036
+        BYTE   W24
+        BYTE                   Gs1   v032
+        BYTE   W12
+        BYTE           N24     Dn1
+        BYTE   W12
+        BYTE           N12     Gs1
+        BYTE   W24
+        BYTE   PEND
+// 030   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_29
+// 031   ----------------------------------------
+        BYTE           N24     Cs1   v040
+        BYTE           N12     Gs1   v036
+        BYTE   W12
+        BYTE                   Gs1   v028
+        BYTE   W12
+        BYTE           N18     An1   v032
+        BYTE           N18     Cn2
+        BYTE           N48     En2   v040
+        BYTE   W18
+        BYTE           N18     Gn1   v032
+        BYTE           N12     Bn1
+        BYTE   W12
+        BYTE           N06     An1
+        BYTE   W06
+        BYTE           N12     Fn1
+        BYTE           N12     Gn1
+        BYTE   W12
+// 032   ----------------------------------------
+        BYTE                   Cs3   v040
+        BYTE           N18     Ds2   v032
+        BYTE           N48     Cs2   v050
+        BYTE   W12
+        BYTE           N24     En3   v044
+        BYTE   W06
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE           N24     Cs3   v040
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE           N24     En3   v044
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+// 033   ----------------------------------------
+MaroonedAlive_6_33:
+        BYTE           N12     Cs3   v040
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N24     En3   v044
+        BYTE   W06
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE           N24     Cs3   v040
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE           N24     En3   v044
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE   PEND
+// 034   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_33
+// 035   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_33
+// 036   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_33
+// 037   ----------------------------------------
+        BYTE           N12     Cs3   v040
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N24     En3   v044
+        BYTE   W06
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE                   En3   v040
+        BYTE   W06
+        BYTE                   En3
+        BYTE   W06
+        BYTE           N12     Ds3
+        BYTE   W12
+        BYTE           N06     Cs3
+        BYTE   W06
+        BYTE                   Ds3
+        BYTE   W06
+        BYTE           N12     Cn3
+        BYTE   W12
+// 038   ----------------------------------------
+MaroonedAlive_6_38:
+        BYTE           N12     Cs3   v040
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N24     En3   v040
+        BYTE   W06
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE           N24     Cs3   v040
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE           N24     En3   v040
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE   PEND
+// 039   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_38
+// 040   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_38
+// 041   ----------------------------------------
+        BYTE           N12     Cs3   v040
+        BYTE           N18     Ds2   v032
+        BYTE   W12
+        BYTE           N24     En3   v040
+        BYTE   W06
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE           N18     Ds2   v028
+        BYTE   W18
+        BYTE           N06     Ds2   v024
+        BYTE   W06
+        BYTE                   En3   v040
+        BYTE   W06
+        BYTE                   En3
+        BYTE   W06
+        BYTE                   Ds3
+        BYTE   W06
+        BYTE           N03     Cs3
+        BYTE   W03
+        BYTE                   Ds3
+        BYTE   W03
+        BYTE           N02     En3
+        BYTE   W02
+        BYTE           N04     Ds3
+        BYTE   W04
+        BYTE           N06     Cs3
+        BYTE   W06
+        BYTE                   Ds3
+        BYTE   W06
+        BYTE                   Ds3
+        BYTE   W06
+// 042   ----------------------------------------
+MaroonedAlive_6_42:
+        BYTE           N12     Gs1   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N12     Gs1   v036
+        BYTE   W06
+        BYTE           N24     Dn1   v040
+        BYTE   W12
+        BYTE           N06     Gs1   v032
+        BYTE   W06
+        BYTE                   Gs1
+        BYTE   W06
+        BYTE           N12     Gs1   v040
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W06
+        BYTE                   Gs1   v036
+        BYTE   W06
+        BYTE           N24     Dn1   v040
+        BYTE   W12
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+        BYTE   PEND
+// 043   ----------------------------------------
+MaroonedAlive_6_43:
+        BYTE           N12     Gs1   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N12     Gs1   v036
+        BYTE   W06
+        BYTE           N24     Dn1   v040
+        BYTE   W12
+        BYTE           N06     Gs1   v032
+        BYTE   W06
+        BYTE                   Gs1
+        BYTE   W06
+        BYTE           N12     Gs1   v040
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W06
+        BYTE                   Gs1   v036
+        BYTE   W06
+        BYTE                   Dn1   v040
+        BYTE   W12
+        BYTE                   Dn1
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+        BYTE   PEND
+// 044   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_42
+// 045   ----------------------------------------
+        BYTE           N12     Gs1   v040
+        BYTE           N24     Cs1
+        BYTE   W18
+        BYTE           N12     Gs1   v036
+        BYTE   W06
+        BYTE           N24     Dn1   v040
+        BYTE   W12
+        BYTE           N06     Gs1   v032
+        BYTE   W06
+        BYTE                   Gs1
+        BYTE   W06
+        BYTE           N12     Gs1   v040
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W06
+        BYTE                   Gs1   v036
+        BYTE   W06
+        BYTE                   Dn1   v040
+        BYTE   W12
+        BYTE                   Gs1   v032
+        BYTE           N12     Dn1   v040
+        BYTE   W12
+// 046   ----------------------------------------
+        BYTE           N24     Cs1
+        BYTE           N12     Gs1
+        BYTE   W18
+        BYTE                   Gs1   v036
+        BYTE   W06
+        BYTE           N24     Dn1   v040
+        BYTE   W12
+        BYTE           N06     Gs1   v032
+        BYTE   W06
+        BYTE                   Gs1
+        BYTE   W06
+        BYTE           N12     Gs1   v040
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE   W06
+        BYTE                   Gs1   v036
+        BYTE   W06
+        BYTE           N24     Dn1   v040
+        BYTE   W12
+        BYTE           N12     Gs1   v032
+        BYTE   W12
+// 047   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_43
+// 048   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_42
+// 049   ----------------------------------------
+        BYTE           N01     Cs1   v040
+        BYTE           N01     Gs1
+        BYTE           N24     Cn1
+        BYTE   W36
+        BYTE                   Ds1
+        BYTE   W24
+        BYTE           N12     As2
+        BYTE           N24     Dn1
+        BYTE   W12
+        BYTE           N12     As2
+        BYTE   W12
+        BYTE                   Cs1
+        BYTE           N12     As2
+        BYTE   W12
+// 050   ----------------------------------------
+MaroonedAlive_6_50:
+        BYTE           N24     An3   v040
+        BYTE           N24     Cn3   v032
+        BYTE           N96     As2   v040
+        BYTE   W24
+        BYTE           N24     An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE           N24     An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W06
+        BYTE           N06     Fn4
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE   W06
+        BYTE   PEND
+// 051   ----------------------------------------
+MaroonedAlive_6_51:
+        BYTE           N24     An3   v040
+        BYTE           N24     Cn3   v032
+        BYTE   W12
+        BYTE           N06     En4
+        BYTE   W12
+        BYTE           N24     An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE           N12     En4
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE                   An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE           N12     En4
+        BYTE   W12
+        BYTE   PEND
+// 052   ----------------------------------------
+MaroonedAlive_6_52:
+        BYTE           N24     An3   v040
+        BYTE           N24     Cn3   v032
+        BYTE   W24
+        BYTE                   An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE   W12
+        BYTE           N24     An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W06
+        BYTE           N06     En4
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE   W06
+        BYTE                   En4
+        BYTE   W06
+        BYTE   PEND
+// 053   ----------------------------------------
+        BYTE           N24     An3   v040
+        BYTE           N24     Cn3   v032
+        BYTE   W12
+        BYTE           N06     Fn4
+        BYTE   W12
+        BYTE           N24     An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE           N12     Fn4
+        BYTE           N24     Cn3
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE   W06
+        BYTE                   An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE           N12     Fn4
+        BYTE   W12
+// 054   ----------------------------------------
+        BYTE                   Fn4
+        BYTE   W18
+        BYTE                   En4
+        BYTE   W18
+        BYTE                   Fn4
+        BYTE   W12
+        BYTE           N24
+        BYTE   W24
+        BYTE                   En4
+        BYTE   W24
+// 055   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_50
+// 056   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_51
+// 057   ----------------------------------------
+        BYTE   PATT
+         POIN2  MaroonedAlive_6_52
+// 058   ----------------------------------------
+        BYTE           N24     An3   v040
+        BYTE           N24     Cn3   v032
+        BYTE   W12
+        BYTE           N06     Fn4
+        BYTE   W12
+        BYTE           N24     An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE                   Cn3
+        BYTE           N12     Fn4
+        BYTE   W12
+        BYTE                   An3
+        BYTE   W06
+        BYTE                   Fn4
+        BYTE   W06
+        BYTE                   An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE           N12     An3
+        BYTE           N12     Fn4
+        BYTE   W12
+// 059   ----------------------------------------
+        BYTE           N24     Cn3
+        BYTE           N24     An3   v040
+        BYTE   W24
+        BYTE                   An3   v036
+        BYTE           N24     En3   v032
+        BYTE   W12
+        BYTE                   Fs4
+        BYTE   W12
+        BYTE           N18     An1
+        BYTE           N18     Cn2
+        BYTE   W12
+        BYTE           N36     En2   v040
+        BYTE   W06
+        BYTE           N12     Bn1   v032
+        BYTE           N18     Gn1
+        BYTE   W12
+        BYTE           N06     An1
+        BYTE   W06
+        BYTE           N12     Gn1
+        BYTE           N12     Fn1
+        BYTE   W12
+// 060   ----------------------------------------
+        BYTE   GoTo
+         POIN2  MaroonedAlive_6_LOOP
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+MaroonedAlive:
+        BYTE   7                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   MaroonedAlive_pri        // Priority
+        BYTE   MaroonedAlive_rev        // Reverb
+
+        POIN2   MaroonedAlive_grp       
+
+        POIN2   MaroonedAlive_0
+        POIN2   MaroonedAlive_1
+        POIN2   MaroonedAlive_2
+        POIN2   MaroonedAlive_3
+        POIN2   MaroonedAlive_4
+        POIN2   MaroonedAlive_5
+        POIN2   MaroonedAlive_6
+
+        

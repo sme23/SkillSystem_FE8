@@ -36,7 +36,7 @@ Skl[X]
 Spd[X]
 
 # 0x4EE
-Lck[X]
+Eva[X]
 
 # 0x4ef
 Def[X]
@@ -68,8 +68,8 @@ Speed. Determines whether a unit can[N]
 perform a follow-up attack on an enemy.[X]
 
 # 0x054A
-Luck. Increases evasion[N]
-and little else, save fortune.[X]
+Evasion. Increases the chance[N]
+that this unit will avoid harm.[X]
 
 # 0x50C
 Gun[X]

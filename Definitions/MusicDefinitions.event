@@ -35,6 +35,10 @@
 #define CherishTheDeadID 0x25
 #define OneLastVoyageID 0x26
 #define TheStormUponUsID 0x27
+#define MaroonedAliveID 0x28
+#define DeadWindsStillTidesID 0x29
+#define FallingFalloutID 0x2A
+
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47

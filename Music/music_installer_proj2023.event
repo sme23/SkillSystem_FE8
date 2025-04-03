@@ -220,6 +220,23 @@ SongTable(TheStormUponUsID,TheStormUponUs,MapMusicGroup)
 #include "songs/boss/TheStormUponUs.event" 
 }
 
+//40 - Marooned Alive
+{
+  SongTable(MaroonedAliveID,MaroonedAlive,MapMusicGroup)
+  #include "songs/map/MaroonedAlive.event" 
+}
+
+//41 - Dead Winds, Still Tides
+{
+  SongTable(DeadWindsStillTidesID,DeadWindsStillTides,MapMusicGroup)
+  #include "songs/map/DeadWindsStillTides.event" 
+}
+
+//42 - Falling Fallout
+{
+  SongTable(FallingFalloutID,FallingFallout,MapMusicGroup)
+  #include "songs/map/FallingFallout.event" 
+}
 
 // --------------- SONGS: GUI AND SFX ---------------
 
