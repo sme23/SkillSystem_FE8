@@ -39,26 +39,7 @@ EventPointerTable(HubAEventsID, PointerList)
 #define TrianaSpokeToOnce 38
 #define MedwynSpokeToOnce 39
 #define BartzSpokeToOnce 40
-//global flags
-#define WentToPortGreagor 0x92
-#define WentToPortGreagorDocks 0x93
-#define WentToBaseAgain 0x94
-#define CameBackFromDocks 0x95
-#define DurghamRecruitFlag 0x96
-#define HubASamsonArranRecruitFlag 0x97
-#define FirstTimeInTavern 0x98
-#define MrYodsenRecruitFlag 0x99
-#define TavernFirstTime 0xA1
-#define OrlandoHubATalk 0xA2
-#define RahelOrlandoHubATalkFlag 0xA3
-#define CarmenXimoHubATalkFlag 0xA4
-#define PilarEstelleHubATalkFlag 0xA5
-#define DesiderioIdaHubATalkFlag 0xA6
-#define RazvanHermenegildoHubATalkFlag 0xA7
-#define PeddlerHubAEncounterFlag 0xB0
-#define ShipwrightCaptainHubATalkFlag 0xB1
-#define TwoPatronsHubATalkFlag 0xB2
-// The peddler will be on the map as long as this flag is triggered. 1st hub event that occurs after two maps.
+
 
 PointerList:
 POIN TurnBasedEvents

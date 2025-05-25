@@ -169,11 +169,11 @@ Axe Knight,CavalrySound
 Lance Knight,CavalrySound
 Bow Knight,CavalrySound
 Horse,CavalrySound
-0xaa,0
-0xab,0
-0xac,0
-0xad,0
-0xae,0
+Gryphoknight_D,InfantrySound
+Kite,PegasusSound
+Sage_Hermen,InfantrySound
+Airship,WyvernSound
+Admiral,InfantrySound
 0xaf,0
 0xb0,0
 0xb1,0

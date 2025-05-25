@@ -31,7 +31,6 @@ ShopUnitTargetSelectionStruct:
 ALIGN 4
 ShopUnitList:
 //ShopUnitListEntry(Barkeep,3,HubATonicList)
-ShopUnitListEntry(Orlando,3,HubBShopOrlando)
 ShopUnitListEnd
 
 //ALIGN 4

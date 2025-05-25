@@ -435,7 +435,7 @@ IgnacioMugData:
 #incbin "Dmp/Ignacio_frames.dmp"
 #incbin "Dmp/Ignacio_palette.dmp"
 #incbin "Dmp/Ignacio_minimug.dmp"
-setMugEntry(IgnacioMug, IgnacioMugData, 2, 5, 2, 3)
+setMugEntry(IgnacioMug, IgnacioMugData, 4, 4, 4, 2)
 
 ALIGN 16
 SantiagoMugData:
@@ -500,7 +500,7 @@ JaimeMugData:
 #incbin "Dmp/Jaime_frames.dmp"
 #incbin "Dmp/Jaime_palette.dmp"
 #incbin "Dmp/Jaime_minimug.dmp"
-setMugEntry(JaimeMug, JaimeMugData, 2, 6, 3, 4)
+setMugEntry(JaimeMug, JaimeMugData, 3, 5, 3, 3)
 
 // credit to LaurentLacroix
 ALIGN 16
@@ -511,15 +511,15 @@ LeandraMugData:
 #incbin "Dmp/Leandra_minimug.dmp"
 setMugEntry(LeandraMug, LeandraMugData, 4, 5, 3, 3)
 
-// C-1 placeholders
-
 ALIGN 16
 RubyMugData:
 #incbin "Dmp/Ruby_mug.dmp"
 #incbin "Dmp/Ruby_frames.dmp"
 #incbin "Dmp/Ruby_palette.dmp"
 #incbin "Dmp/Ruby_minimug.dmp"
-setMugEntry(RubyMug, RubyMugData, 2, 5, 3, 3)
+setMugEntry(RubyMug, RubyMugData, 3, 5, 3, 3)
+
+// C-1 placeholders
 
 ALIGN 16
 KrezkeMugData:
@@ -603,6 +603,14 @@ JulianaMugData:
 #incbin "Dmp/Juliana_palette.dmp"
 #incbin "Dmp/Juliana_minimug.dmp"
 setMugEntry(JulianaMug, JulianaMugData, 3, 5, 2, 3)
+
+ALIGN 16
+HugoMugData:
+#incbin "Dmp/Hugo_mug.dmp"
+#incbin "Dmp/Hugo_frames.dmp"
+#incbin "Dmp/Hugo_palette.dmp"
+#incbin "Dmp/Hugo_minimug.dmp"
+setMugEntry(HugoMug, HugoMugData, 2, 5, 2, 3)
 
 // c-2 placeholder, i guess?
 // made by RW

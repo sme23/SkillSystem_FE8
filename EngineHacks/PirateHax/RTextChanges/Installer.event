@@ -126,8 +126,13 @@ SetOccupation(CalistaDesc, CalistaOccupation)
 SetOccupation(SalvadorDesc, SalvadorOccupation)
 SetOccupation(BlackheartPlusDesc, BlackheartPlusOccupation)
 SetOccupation(HorseUnitDesc, HorseUnitOccupation)
-SetOccupation(WayraDesc, WayraOccupation)
+SetOccupation(QuispeDesc, QuispeOccupation)
 SetOccupation(KeeperDesc, KeeperOccupation)
+SetOccupation(LiberatorDesc, LiberatorOccupation)
+SetOccupation(ExplorerDesc, ExplorerOccupation)
+SetOccupation(ArmorerDesc, ArmorerOccupation)
+SetOccupation(SkyfisherDesc, SkyfisherOccupation)
+SetOccupation(WoodsmanDesc, WoodsmanOccupation)
 SHORT 0 0 // terminator
 
 #include "RTextChanges.lyn.event"

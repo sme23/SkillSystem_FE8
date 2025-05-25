@@ -32,8 +32,8 @@ None,0,0
 0x1E Lexa,3,20
 0x1F Fata,10,55
 0x20 Ponte,3,30
-0x21 Passarola,3,30
-0x22 Neltume,(-1),35
+0x21 Passarola,1,30
+0x22 Neltume,1,35
 0x23 Lyon,13,50
 0x24 Orson,3,10
 0x25 Noah,(-1),20

@@ -36,8 +36,8 @@
 
 #define GotoHubChapterIfYes(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 #define GotoHubChapterIfYes(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
-#define GotoHubChapterIfYesHubB(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; CUSA Razvan; CUSA Rahel; CUSA Desiderio; CUSA Orlando; CUSA Pilar; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
-#define GotoHubChapterIfYesHubB(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; CUSA Razvan; CUSA Rahel; CUSA Desiderio; CUSA Orlando; CUSA Pilar; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYesHubB(labelId, chapterId, dialogue) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; Text(dialogue); ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; SHOWUNIT Lua; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
+#define GotoHubChapterIfYesHubB(labelId, chapterId) "SVAL s1 0x1; BNE labelId s1 sC; EVBIT_MODIFY 0; ENUF LuaInAHubFlag; ASMC EyeForAnEyeResetASMC; SHOWUNIT Lua; MNC2 chapterId; NoFade; ENDB; LABEL labelId"
 
 
 
@@ -59,6 +59,9 @@
 #define HubRejectUnit(rejectedTextID, convoEID) "Text(rejectedTextID); ENUF convoEID"
 #define UnsetAllHubChapterFlags "ASMC UnsetAllHubChapterFlagsASMC"
 
+//use for pre and post text ids
+#define DisplayTextBasedOnHubEID(hubFlagEID, textBeforeID, textAfterID, labelBeforeID, labelAfterID) "CHECK_EVENTID hubFlagEID; BNE labelBeforeID s0 sC; Text(textBeforeID); GOTO labelAfterID; LABEL labelBeforeID; Text(textAfterID); LABEL labelAfterID"
+
 #define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup, spawn) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; CALL spawn; FADU 15"
 #define InitiateTileChangeInHub(clearTraps, addTraps, tilechangeId, luaGroup) "FADI 10; SET_ACTIVE 0; RemoveAll; CALL clearTraps; STAL 10; CALL addTraps; STAL 10; TILECHANGE tilechangeId; LoadPlayerUnits(luaGroup); CAMERA_CENTERED Lua; FADU 15"
 
@@ -68,19 +71,19 @@
 
 // These are called whenever Lua goes into any floor that requires a TC. 
 
-#define InitiateFloorSwapHubB_Leftship(addTraps, tilechangeId) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_LeftshipFloor1; TILECHANGE tilechangeId; SET_ACTIVE 0; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
+#define InitiateFloorSwapHubB_Leftship(addTraps, tilechangeId, unitGroupEvent) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_LeftshipFloor1; TILECHANGE tilechangeId; SET_ACTIVE 0; CALL unitGroupEvent; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
-#define InitiateFloorSwapHubB_Midship(addTraps, tilechangeId) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_MidshipFloor1; TILEREVERT TC_MidshipFloor2; TILEREVERT TC_MidshipFloor3; TILECHANGE tilechangeId; SET_ACTIVE 0; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
+#define InitiateFloorSwapHubB_Midship(addTraps, tilechangeId, unitGroupEvent) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_MidshipFloor1; TILEREVERT TC_MidshipFloor2; TILEREVERT TC_MidshipFloor3; TILECHANGE tilechangeId; SET_ACTIVE 0; CALL unitGroupEvent; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
-#define InitiateFloorSwapHubB_Rightship(addTraps, tilechangeId) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_RightshipFloor1; TILEREVERT TC_RightshipFloor2; TILECHANGE tilechangeId; SET_ACTIVE 0; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
+#define InitiateFloorSwapHubB_Rightship(addTraps, tilechangeId, unitGroupEvent) "FADI 10; MUSI; SOUN 0x96; STAL 15; RemoveAll; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_RightshipFloor1; TILEREVERT TC_RightshipFloor2; TILECHANGE tilechangeId; SET_ACTIVE 0; CALL unitGroupEvent; STAL 10; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
 //These are called whenever Lua returns to the deck of a ship, respawning the questgiver units. 
 
-#define InitiateFloorRevertHubB_Leftship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_LeftshipFloor1; SET_ACTIVE 0; CALL Spawn_LeftShipDeck ; CALL Spawn_MiddleShipDeck ; CALL Spawn_RightShipDeck ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+#define InitiateFloorRevertHubB_Leftship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_LeftshipFloor1; SET_ACTIVE 0; CALL SpawnDeckUnits ; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
-#define InitiateFloorRevertHubB_Midship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_MidshipFloor1; TILEREVERT TC_MidshipFloor2; TILEREVERT TC_MidshipFloor3; SET_ACTIVE 0; CALL Spawn_LeftShipDeck ; CALL Spawn_MiddleShipDeck ; CALL Spawn_RightShipDeck ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+#define InitiateFloorRevertHubB_Midship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_MidshipFloor1; TILEREVERT TC_MidshipFloor2; TILEREVERT TC_MidshipFloor3; SET_ACTIVE 0; CALL SpawnDeckUnits; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
-#define InitiateFloorRevertHubB_Rightship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_RightshipFloor1; TILEREVERT TC_RightshipFloor2; SET_ACTIVE 0; CALL Spawn_LeftShipDeck ; CALL Spawn_MiddleShipDeck ; CALL Spawn_RightShipDeck ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+#define InitiateFloorRevertHubB_Rightship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_RightshipFloor1; TILEREVERT TC_RightshipFloor2; SET_ACTIVE 0; CALL SpawnDeckUnits ; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
 //This is called whenever a questgiver is spawned, and easily 'cutscene' swap them into a green unit. 
 #define LoadHubBQuestgiverIfEIDNotSet(eventId, labelId, unitGroup, unitName) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); CUSN unitName ; LABEL labelId"
@@ -96,6 +99,11 @@
 #define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); LABEL labelId"
 #define LoadNPCUnitGroupIfEIDNotSet(eventId, labelId, unitGroup, eventOffset) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); CALL eventOffset; LABEL labelId"
 
+//used mostly for spawning in hub guys that have already joined
+#define LoadAllyUnitGroupIfEIDSet(eventId, labelId, unitGroup) "CHECK_EVENTID eventId; BEQ labelId s0 sC; LoadPlayerUnits(unitGroup); LABEL labelId"
+#define LoadAllyUnitGroupIfEIDSetAndCharAlive(eventId, charId, labelId, unitGroup) "CHECK_EVENTID eventId; BEQ labelId s0 sC; CHECK_ALIVE charId; BEQ labelId s0 sC; LoadPlayerUnits(unitGroup); LABEL labelId"
+#define LoadAllyUnitGroupIfAlive(charId, labelId, unitGroup) "CHECK_ALIVE charId; BEQ labelId s0 sC; LoadPlayerUnits(unitGroup); LABEL labelId"
+
 #define CallEventIfEIDNotSet(eventId, labelId, eventOffset) "CHECK_EVENTID eventId; BNE labelId s0 sC; CALL eventOffset; LABEL labelId"
 
 #define CalculateYodsenPrice "ASMC CalculateYodsenPriceASMC"
@@ -104,27 +112,15 @@
 #define TurnUnitGreenIfAlive(charId, labelId) "CHECK_ALIVE charId; BEQ labelId s0 sC; CUSN charId; LABEL labelId"
 #define TurnUnitBlueIfAlive(charId, labelId) "CHECK_ALIVE charId; BEQ labelId s0 sC; CUSA charId; LABEL labelId"
 
+//used for deciding if a temp talk flag should be turned on or not, or related to this
+#define CheckIfHubBTalkLegalOneChar(char1, label1, label2, globalFlag, tempFlag) "CHECK_ALIVE char1; BEQ label1 s0 sC; CHECK_EVENTID globalFlag; BNE label1 s0 sC; GOTO label2; LABEL label1; ENUT tempFlag; LABEL label2"
+#define CheckIfHubBTalkLegalTwoChar(char1, char2, label1, label2, globalFlag, tempFlag) "CHECK_ALIVE char1; BEQ label1 s0 sC; CHECK_ALIVE char2; BEQ label1 s0 sC; CHECK_EVENTID globalFlag; BNE label1 s0 sC; GOTO label2; LABEL label1; ENUT tempFlag; LABEL label2"
+#define CheckIfHubBTalkLegalThreeChar(char1, char2, char3, label1, label2, globalFlag, tempFlag) "CHECK_ALIVE char1; BEQ label1 s0 sC; CHECK_ALIVE char2; BEQ label1 s0 sC; CHECK_ALIVE char3; BEQ label1 s0 sC; CHECK_EVENTID globalFlag; BNE label1 s0 sC; GOTO label2; LABEL label1; ENUT tempFlag; LABEL label2"
+#define DisplayTextThenSetGlobalFlag(textID, globalFlag) "Text(textID); ENUT globalFlag"
 
 #define GoToHubChapter(chapterId) "ASMC EyeForAnEyeResetASMC; MNC2 chapterId"
 
 #define SetAllHubChapterFlags "ENUT WentToHubA1; ENUT WentToHubA2; ENUT WentToHubA3; ENUT WentToHubA4; ENUT WentToHubA5; ENUT WentToHubA6"
-
-#define WentToHubA1 0x83
-#define WentToHubA2 0x8B
-#define WentToHubA3 0x8C
-#define WentToHubA4 0x8D
-#define WentToHubA5 0x8E
-#define WentToHubA6 0x8F
-
-#define WentToHub1 WentToHubA1
-#define WentToHub2 WentToHubA2
-#define WentToHub3 WentToHubA3
-#define WentToHub4 WentToHubA4
-#define WentToHub5 WentToHubA5
-#define WentToHub6 WentToHubA6
-
-
-#define LuaInAHubFlag 0xA0
 
 //A3 macros
 #define BranchIfNotUnitAtCoords(xcoord, ycoord, unitId, labelId) "CHECK_AT [xcoord, ycoord]; SVAL s1 unitId; BNE labelId s1 sC"
@@ -137,8 +133,6 @@
 
 //SetUnitItemDurability(xcoord, ycoord, itemslot, durability)
 //SetUnitItemDurability(unitid, itemslot, durability)
-
-#define InAHubFlag 0xA0
 
 #define DefeatBoss "AFEV 3 EndingScene 2"
 #define DefeatAll "AFEV 3 EndingScene 6"

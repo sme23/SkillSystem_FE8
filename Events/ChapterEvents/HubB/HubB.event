@@ -6,26 +6,48 @@
 #define TC_RightshipFloor1 0x4
 #define TC_RightshipFloor2 0x5
 
-
-#define SeenHubB1Pitch 7
-#define SeenHubB2Pitch 8
-#define SeenHubB3Pitch 9
-#define SeenHubB4Pitch 10
-#define SeenHubB5Pitch 11
+//7-14: all used already (here or in outskirts map)
 #define Turn1EventFlag 12
-#define GoToNextHubFlagID 20
 
-//hub maneuvering flags
-//Middle ShipFlags
-#define Flag_MidShip_DeckToFloor1 	0x20
-#define Flag_MidShip_Floor1ToDeck 	0x21
-#define Flag_MidShip_Floor1ToFloor2 0x22
-#define Flag_MidShip_Floor2ToDeck	0x23
-#define Flag_MidShip_Floor2ToFloor1 0x24
-#define Flag_MidShip_Floor2ToFloor3 0x25
-#define Flag_MidShip_Floor3ToFloor2 0x26
-#define Flag_MidShip_Floor3ToDeck 	0x27
+//15-19: hub b talk convo flags
+#define HubBDesiTempTalkFlag 15
+#define HubBOrlandoTempTalkFlag 16
+#define HubBNeltumeTempTalkFlag 17
+#define HubBTrianaTempTalkFlag 18
+#define HubBMagdalenaTempTalkFlag 19
+#define HubBEstelleIndioTempTalkFlag 20
+#define HubBPilarTempTalkFlag 21
+#define HubBJuanTempTalkFlag 22
+#define HubBOndehBikoTempTalkFlag 23
+#define HubBAdrianLexaTempTalkFlag 24
+#define HubBHermenegildoPonteTempTalkFlag 25
+#define HubBNoahTempTalkFlag 26
+#define HubBMedwynTempTalkFlag 27
+#define HubBCarmenFataTempTalkFlag 29
+#define HubBBartzTempTalkFlag 30
+#define HubBAvocadoTempTalkFlag 31
+#define HubBPassarolaXimoTempTalkFlag 32
+#define HubBHusniyeTempTalkFlag 33
+#define HubBRazvanRahelTempTalkFlag 34
+#define HubBSuzanneMatteoTangyuanTempTalkFlag 35
+#define HubBYodsenDmitrTempTalkFlag 36
 
+
+//hub maneuvering flags (37-40)
+#define Flag_Midship_ToDeck 37
+#define Flag_MidShip_Floor1ToDeck Flag_Midship_ToDeck
+#define Flag_MidShip_Floor2ToDeck Flag_Midship_ToDeck
+#define Flag_MidShip_Floor3ToDeck Flag_Midship_ToDeck
+#define Flag_Midship_ToFloor1 38
+#define Flag_MidShip_DeckToFloor1 Flag_Midship_ToFloor1
+#define Flag_MidShip_Floor2ToFloor1 Flag_Midship_ToFloor1
+#define Flag_MidShip_ToFloor2 39
+#define Flag_MidShip_Floor1ToFloor2 Flag_MidShip_ToFloor2
+#define Flag_MidShip_Floor3ToFloor2 Flag_MidShip_Floor1ToFloor2
+#define Flag_MidShip_ToFloor3 40
+#define Flag_MidShip_Floor2ToFloor3 Flag_MidShip_ToFloor3
+
+//I don't think different flags are needed for each way you could go to a floor, so trying to cut down here and save some temp flags - Loog
 
 EventPointerTable(HubBEventsID, PointerList)
 
@@ -46,79 +68,360 @@ TurnEventPlayer(Turn1EventFlag, Turn1Event, 1)
 END_MAIN
 
 Turn1Event:
-LoadNPCUnitGroupIfEIDNotSet(WentToHub1, 1, RazvanUnitGroup)
-LoadNPCUnitGroupIfEIDNotSet(WentToHub2, 2, RahelUnitGroup)
-LoadNPCUnitGroupIfEIDNotSet(WentToHub3, 3, DesiderioUnitGroup)
-LoadNPCUnitGroupIfEIDNotSet(WentToHub4, 4, OrlandoUnitGroup)
-LoadNPCUnitGroupIfEIDNotSet(WentToHub5, 5, PilarUnitGroup)
-SpawnQuestSigil(WentToHub4, 776, RedSigilTrapID, 6, 17)
-SpawnQuestSigil(WentToHub3, 777, RedSigilTrapID, 18, 21)
-SpawnQuestSigil(WentToHub2, 778, RedSigilTrapID, 16, 11)
-SpawnQuestSigil(WentToHub1, 779, RedSigilTrapID, 28, 18)
-SpawnQuestSigil(WentToHub5, 780, RedSigilTrapID, 26, 21)
-CALL QuestGiversGreen
-CALL EnableAllMidshipFlags
-CALL Traps_MidshipDeck
-CALL Traps_LeftshipDeck
-Call Traps_RightshipDeck
-ENUF Flag_MidShip_DeckToFloor1
+FADI 15
+CALL SpawnDeckUnits
+CALL Traps_Deck
+CALL SetAllHubBTalkFlags
+ENUT Flag_Midship_ToDeck
+ENUT Flag_MidShip_ToFloor2
+ENUT Flag_MidShip_ToFloor3 //turn off all flags except the ones that go to floor 1
+ENUF Flag_Midship_ToFloor1
+CheckHowManyHubChaptersCompleted
+SVAL s1 0 
+BNE 2 sC s1 //if chapters completed != 5, skip
+    CenterTextbox(HubBArmadaExplanation)
+LABEL 2
 NoFade
 ENDA
 
+//left ship deck: Desiderio, Ernest, Leandra
+//mid ship deck: Jaime, Leonor, Neltume, Triana
+//right ship deck: Orlando, Durgham, Magdalena
+
+//mid ship floor 1: Passarola/Ximo, Husniye
+//mid ship floor 2 (stable): Razvan/Rahel, Suzanne/Matteo/Tangyuan
+//mid ship floor 3: Estelle/Indio, Yodsen/Dmitr
+
+//right ship floor 1 (mess hall?): Biko/Ondeh, Adrian/Lexa, Hermenegildo/Ponte, Medwyn, Noah
+//right ship floor 2 (treasure room): Pilar/Kai, Juan
+
+SetAllHubBTalkFlags: // logic here: 
+// I need to check to make sure all the characters are present: if not, set the temp talk flag so that the talk can't take place
+// should just be check_alive for whoever's there
+// I also need to make sure the talk hasn't already happened, which means i need to check a global flag for each of the talks
+// if the global flag is set, then set the temp talk flag as well so that the talk can't take place twice
+
+//Top Deck Checks
+CheckIfHubBTalkLegalThreeChar(Desiderio, Ernest, Leandra, 1, 2, HubBDesiGlobalTalkFlag, HubBDesiTempTalkFlag)
+CheckIfHubBTalkLegalTwoChar(Orlando, Durgham, 3, 4, HubBOrlandoGlobalTalkFlag, HubBOrlandoTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Neltume, 5, 6, HubBNeltumeGlobalTalkFlag, HubBNeltumeTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Triana, 7, 8, HubBTrianaGlobalTalkFlag, HubBTrianaTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Magdalena, 9, 10, HubBMagdalenaGlobalTalkFlag, HubBMagdalenaTempTalkFlag)
+
+//Right Ship Floor 2
+CheckIfHubBTalkLegalTwoChar(Pilar, Kai, 11, 12, HubBPilarGlobalTalkFlag, HubBPilarTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Juan, 13, 14, HubBJuanGlobalTalkFlag, HubBJuanTempTalkFlag)
+
+//Right Ship Floor 1
+CheckIfHubBTalkLegalTwoChar(Ondeh, Biko, 15, 16, HubBOndehBikoGlobalTalkFlag, HubBOndehBikoTempTalkFlag)
+CheckIfHubBTalkLegalTwoChar(Adrian, Lexa, 17, 18, HubBAdrianLexaGlobalTalkFlag, HubBAdrianLexaTempTalkFlag)
+CheckIfHubBTalkLegalTwoChar(Hermenegildo, Ponte, 19, 20, HubBHermenegildoPonteGlobalTalkFlag, HubBHermenegildoPonteTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Noah, 21, 22, HubBNoahGlobalTalkFlag, HubBNoahTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Medwyn, 23, 24, HubBMedwynGlobalTalkFlag, HubBMedwynTempTalkFlag)
+
+//Left Ship Floor 1
+CheckIfHubBTalkLegalTwoChar(Carmen, Fata, 25, 26, HubBCarmenFataGlobalTalkFlag, HubBCarmenFataTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Bartz, 27, 28, HubBBartzGlobalTalkFlag, HubBBartzTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Avocado, 29, 30, HubBAvocadoGlobalTalkFlag, HubBAvocadoTempTalkFlag)
+
+//Midship Floor 1
+CheckIfHubBTalkLegalTwoChar(Passarola, Ximo, 31, 32, HubBPassarolaXimoGlobalTalkFlag, HubBPassarolaXimoTempTalkFlag)
+CheckIfHubBTalkLegalOneChar(Husniye, 33, 34, HubBHusniyeGlobalTalkFlag, HubBHusniyeTempTalkFlag)
+
+//Midship Floor 2
+CheckIfHubBTalkLegalThreeChar(Suzanne, Matteo, Tangyuan, 35, 36, HubBDesiGlobalTalkFlag, HubBDesiTempTalkFlag)
+CheckIfHubBTalkLegalTwoChar(Razvan, Rahel, 37, 38, HubBRazvanRahelGlobalTalkFlag, HubBRazvanRahelTempTalkFlag)
+
+//Midship Floor 3
+CheckIfHubBTalkLegalTwoChar(Estelle, Indio, 39, 40, HubBEstelleIndioGlobalTalkFlag, HubBEstelleIndioTempTalkFlag)
+CheckIfHubBTalkLegalTwoChar(Yodsen, Dmitr, 41, 42, HubBYodsenDmitrGlobalTalkFlag, HubBYodsenDmitrTempTalkFlag)
+NoFade
+ENDA
+
+
 CharacterBasedEvents:
-CharacterEvent(WentToHub1, GotoHubB1, Lua, Razvan)
-CharacterEvent(WentToHub2, GotoHubB2, Lua, Rahel)
-CharacterEvent(WentToHub3, GotoHubB3, Lua, Desiderio)
-CharacterEvent(WentToHub4, GotoHubB4, Lua, Orlando)
-CharacterEvent(WentToHub5, GotoHubB5, Lua, Pilar)
+//top deck
+CharacterEvent(HubBDesiTempTalkFlag, HubBDesiderioErnestLeandraConvo, Lua, Desiderio)
+CharacterEvent(HubBDesiTempTalkFlag, HubBDesiderioErnestLeandraConvo, Lua, Ernest)
+CharacterEvent(HubBDesiTempTalkFlag, HubBDesiderioErnestLeandraConvo, Lua, Leandra)
+
+CharacterEvent(HubBOrlandoTempTalkFlag, HubBOrlandoDurghamConvo, Lua, Orlando)
+CharacterEvent(HubBOrlandoTempTalkFlag, HubBOrlandoDurghamConvo, Lua, Durgham)
+
+CharacterEvent(HubBNeltumeTempTalkFlag, HubBNeltumeConvo, Lua, Neltume)
+
+CharacterEvent(HubBTrianaTempTalkFlag, HubBTrianaConvo, Lua, Triana)
+
+CharacterEvent(HubBMagdalenaTempTalkFlag, HubBMagdalenaConvo, Lua, Magdalena)
+
+//right ship
+CharacterEvent(HubBPilarTempTalkFlag, HubBPilarConvo, Lua, Pilar)
+CharacterEvent(HubBPilarTempTalkFlag, HubBPilarConvo, Lua, Kai)
+
+CharacterEvent(HubBJuanTempTalkFlag, HubBJuanConvo, Lua, Juan)
+
+CharacterEvent(HubBOndehBikoTempTalkFlag, HubBOndehBikoConvo, Lua, Ondeh)
+CharacterEvent(HubBOndehBikoTempTalkFlag, HubBOndehBikoConvo, Lua, Biko)
+
+CharacterEvent(HubBAdrianLexaTempTalkFlag, HubBAdrianLexaConvo, Lua, Adrian)
+CharacterEvent(HubBAdrianLexaTempTalkFlag, HubBAdrianLexaConvo, Lua, Lexa)
+
+CharacterEvent(HubBHermenegildoPonteTempTalkFlag, HubBHermenegildoPonteConvo, Lua, Hermenegildo)
+CharacterEvent(HubBHermenegildoPonteTempTalkFlag, HubBHermenegildoPonteConvo, Lua, Ponte)
+
+CharacterEvent(HubBNoahTempTalkFlag, HubBNoahConvo, Lua, Noah)
+
+CharacterEvent(HubBMedwynTempTalkFlag, HubBMedwynConvo, Lua, Medwyn)
+
+//left ship
+CharacterEvent(HubBCarmenFataTempTalkFlag, HubBCarmenFataConvo, Lua, Carmen)
+CharacterEvent(HubBCarmenFataTempTalkFlag, HubBCarmenFataConvo, Lua, Fata)
+
+CharacterEvent(HubBBartzTempTalkFlag, HubBBartzConvo, Lua, Bartz)
+
+CharacterEvent(HubBAvocadoTempTalkFlag, HubBAvocadoConvo, Lua, Avocado)
+
+//middle ship
+CharacterEvent(HubBPassarolaXimoTempTalkFlag, HubBPassarolaXimoConvo, Lua, Passarola)
+CharacterEvent(HubBPassarolaXimoTempTalkFlag, HubBPassarolaXimoConvo, Lua, Ximo)
+
+CharacterEvent(HubBHusniyeTempTalkFlag, HubBHusniyeConvo, Lua, Husniye)
+
+CharacterEvent(HubBRazvanRahelTempTalkFlag, HubBRazvanRahelConvo, Lua, Razvan)
+CharacterEvent(HubBRazvanRahelTempTalkFlag, HubBRazvanRahelConvo, Lua, Rahel)
+
+CharacterEvent(HubBSuzanneMatteoTangyuanTempTalkFlag, HubBSuzanneMatteoTangyuanConvo, Lua, Suzanne)
+CharacterEvent(HubBSuzanneMatteoTangyuanTempTalkFlag, HubBSuzanneMatteoTangyuanConvo, Lua, Matteo)
+CharacterEvent(HubBSuzanneMatteoTangyuanTempTalkFlag, HubBSuzanneMatteoTangyuanConvo, Lua, Tangyuan)
+
+CharacterEvent(HubBEstelleIndioTempTalkFlag, HubBEstelleIndioConvo, Lua, Estelle)
+CharacterEvent(HubBEstelleIndioTempTalkFlag, HubBEstelleIndioConvo, Lua, Indio)
+
+CharacterEvent(HubBYodsenDmitrTempTalkFlag, HubBYodsenDmitrConvo, Lua, Yodsen)
+CharacterEvent(HubBYodsenDmitrTempTalkFlag, HubBYodsenDmitrConvo, Lua, Dmitr)
+
 END_MAIN
+
+HubBDesiderioErnestLeandraConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaDesiderioErnestLeandraTalk, HubBDesiGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBOrlandoDurghamConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaOrlandoDurghamTalk, HubBOrlandoGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBNeltumeConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaNeltumeTalk, HubBNeltumeGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBTrianaConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaTrianaTalk, HubBTrianaGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBMagdalenaConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaMagdalenaTalk, HubBMagdalenaGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBPilarConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaPilarKaiTalk, HubBPilarGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBJuanConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaJuanTalk, HubBJuanGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBOndehBikoConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaOndehBikoTalk, HubBOndehBikoGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBAdrianLexaConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaAdrianLexaTalk, HubBAdrianLexaGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBHermenegildoPonteConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaHermenegildoPonteTalk, HubBHermenegildoPonteGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBNoahConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaNoahTalk, HubBNoahGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBMedwynConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaMedwynTalk, HubBMedwynGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBCarmenFataConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaCarmenFataTalk, HubBCarmenFataGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBBartzConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaBartzTalk, HubBBartzGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBAvocadoConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaAvocadoTalk, HubBAvocadoGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBPassarolaXimoConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaPassarolaXimoTalk, HubBPassarolaXimoGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBHusniyeConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaHusniyeTalk, HubBHusniyeGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBRazvanRahelConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaRazvanRahelTalk, HubBRazvanRahelGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBSuzanneMatteoTangyuanConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaSuzanneMatteoTangyuanTalk, HubBSuzanneMatteoTangyuanGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBEstelleIndioConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaEstelleIndioTalk, HubBEstelleIndioGlobalTalkFlag) 
+NoFade
+ENDA
+
+HubBYodsenDmitrConvo:
+DisplayTextThenSetGlobalFlag(HubBLuaYodsenDmitrTalk, HubBYodsenDmitrGlobalTalkFlag) 
+NoFade
+ENDA
 
 LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-AREA GoToNextHubFlagID GotoChapter3 [5,17] [5,17]
+AREA 0 SwitchToFlyingMode [17,5] [17,5]
+AREA GoToNextHubFlagID GotoChapter3 [4,18] [4,18]
 //Left ship
-AREA Flag_MidShip_DeckToFloor1 Travel_LeftShipDeck_ToFloor1 [4,16] [5,16]
-AREA Flag_MidShip_DeckToFloor1 Travel_LeftShipDeck_ToFloor1 [2,23] [2,23]
-AREA Flag_MidShip_DeckToFloor1 Travel_LeftShipDeck_ToFloor1 [7,23] [7,23]
+AREA Flag_Midship_ToFloor1 Travel_LeftShipDeck_ToFloor1 [4,16] [5,16]
+AREA Flag_Midship_ToFloor1 Travel_LeftShipDeck_ToFloor1 [2,23] [2,23]
+AREA Flag_Midship_ToFloor1 Travel_LeftShipDeck_ToFloor1 [7,23] [7,23]
 //Floor1
-AREA Flag_MidShip_Floor1ToDeck Travel_LeftShipFloor1_ToDeck [4,16] [5,16]
-AREA Flag_MidShip_Floor1ToDeck Travel_LeftShipFloor1_ToDeck [2,23] [2,23]
-AREA Flag_MidShip_Floor1ToDeck Travel_LeftShipFloor1_ToDeck [7,23] [7,23]
+AREA Flag_Midship_ToDeck Travel_LeftShipFloor1_ToDeck [4,16] [5,16]
+AREA Flag_Midship_ToDeck Travel_LeftShipFloor1_ToDeck [2,23] [2,23]
+AREA Flag_Midship_ToDeck Travel_LeftShipFloor1_ToDeck [7,23] [7,23]
 
 //Mid ship
-AREA Flag_MidShip_DeckToFloor1 Travel_MidshipDeck_ToFloor1 [17,10] [18,10]
-AREA Flag_MidShip_DeckToFloor1 Travel_MidshipDeck_ToFloor1 [20,8] [20,8]
-AREA Flag_MidShip_DeckToFloor1 Travel_MidshipDeck_ToFloor1 [13,12] [13,12]
+AREA Flag_Midship_ToFloor1 Travel_MidshipDeck_ToFloor1 [17,10] [18,10]
+AREA Flag_Midship_ToFloor1 Travel_MidshipDeck_ToFloor1 [20,8] [20,8]
+AREA Flag_Midship_ToFloor1 Travel_MidshipDeck_ToFloor1 [13,12] [13,12]
 //Floor1
-AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [17,11] [18,12]
-AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [20,8] [20,8]
-AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [13,12] [13,12]
-AREA Flag_MidShip_Floor1ToDeck Travel_MidshipFloor1_ToDeck [15,23] [15,23]
-AREA Flag_MidShip_Floor1ToFloor2 Travel_MidshipFloor1_ToFloor2 [19,11] [20,11]
+AREA Flag_Midship_ToDeck Travel_MidshipFloor1_ToDeck [17,11] [18,12]
+AREA Flag_Midship_ToDeck Travel_MidshipFloor1_ToDeck [20,8] [20,8]
+AREA Flag_Midship_ToDeck Travel_MidshipFloor1_ToDeck [13,12] [13,12]
+AREA Flag_Midship_ToDeck Travel_MidshipFloor1_ToDeck [15,23] [15,23]
+AREA Flag_MidShip_ToFloor2 Travel_MidshipFloor1_ToFloor2 [19,11] [20,11]
 //Floor2
-AREA Flag_MidShip_Floor2ToFloor1 Travel_MidshipFloor2_ToFloor1 [19,10] [20,11]
-AREA Flag_MidShip_Floor2ToFloor3 Travel_MidshipFloor2_ToFloor3 [15,22] [16,23]
+AREA Flag_Midship_ToFloor1 Travel_MidshipFloor2_ToFloor1 [19,10] [20,11]
+AREA Flag_MidShip_ToFloor3 Travel_MidshipFloor2_ToFloor3 [15,22] [16,23]
 //Floor3
-AREA Flag_MidShip_Floor3ToFloor2 Travel_MidshipFloor3_ToFloor2 [15,22] [16,23]
-AREA Flag_MidShip_Floor3ToDeck Travel_MidshipFloor3_ToDeck [20,8] [20,8]
+AREA Flag_MidShip_ToFloor2 Travel_MidshipFloor3_ToFloor2 [15,22] [16,23]
+AREA Flag_Midship_ToDeck Travel_MidshipFloor3_ToDeck [20,8] [20,8]
 
 //Right ship
-AREA Flag_MidShip_DeckToFloor1 Travel_RightShipDeck_ToFloor1 [27,17] [27,17]
-AREA Flag_MidShip_DeckToFloor1 Travel_RightShipDeck_ToFloor1 [32,17] [32,17]
-AREA Flag_MidShip_DeckToFloor1 Travel_RightShipDeck_ToFloor1 [33,12] [33,12]
+AREA Flag_Midship_ToFloor1 Travel_RightShipDeck_ToFloor1 [27,17] [27,17]
+AREA Flag_Midship_ToFloor1 Travel_RightShipDeck_ToFloor1 [32,17] [32,17]
+AREA Flag_Midship_ToFloor1 Travel_RightShipDeck_ToFloor1 [33,12] [33,12]
 //Floor1
-AREA Flag_MidShip_Floor1ToDeck Travel_RightShipFloor1_ToDeck [27,17] [27,17]
-AREA Flag_MidShip_Floor1ToDeck Travel_RightShipFloor1_ToDeck [32,17] [32,17]
-AREA Flag_MidShip_Floor1ToDeck Travel_RightShipFloor1_ToDeck [33,12] [33,12]
-AREA Flag_MidShip_Floor1ToFloor2 Travel_RightShipFloor1_ToFloor2 [29,9] [30,10]
+AREA Flag_Midship_ToDeck Travel_RightShipFloor1_ToDeck [27,17] [27,17]
+AREA Flag_Midship_ToDeck Travel_RightShipFloor1_ToDeck [32,17] [32,17]
+AREA Flag_Midship_ToDeck Travel_RightShipFloor1_ToDeck [33,12] [33,12]
+AREA Flag_MidShip_ToFloor2 Travel_RightShipFloor1_ToFloor2 [29,9] [30,10]
 //Floor2 
-AREA Flag_MidShip_Floor2ToFloor1 Travel_RightShipFloor2_ToFloor1 [29,9] [30,10]
-AREA Flag_MidShip_Floor2ToDeck Travel_RightShipFloor2_ToDeck [33,12] [33,12]
-
+AREA Flag_Midship_ToFloor1 Travel_RightShipFloor2_ToFloor1 [29,9] [30,10]
+AREA Flag_Midship_ToDeck Travel_RightShipFloor2_ToDeck [33,12] [33,12]
 AFEV 0 RefreshLua 0
 END_MAIN
+
+SwitchToFlyingMode:
+FADI 15
+SET_ACTIVE 0
+STAL 30
+RemoveAll
+LOMA HubBTheOutskirts
+ENUN
+LOAD1 1 LiberatorShipGroup
+ENUN
+LoadNPCUnitGroupIfEIDNotSet(PassarolaRecruitedFlag, 1337, PassarolaUnitGroup)
+SET_ACTIVE Liberator
+CAMERA_CENTERED Liberator
+HIDEUNIT Lua
+CALL SpawnInHubBQuests
+ENUN
+FADU 15
+NoFade
+ENDA
+
+LiberatorShipGroup:
+UNIT Liberator Airship 0 Level(20,Ally,False) [20,14] 0 0 0 0 [0x0] NoAI
+// a variety of NPCs who are always around
+
+// B-1: two guys: one by the oasis, one by the ruins
+UNIT Explorer Myrmidon_F 0 Level(5,NPC,False) [7,6] 0 0 0 0 [0x0] BossAI
+UNIT Incendivis Soldier 0 Level(10,NPC,False) [12,10] 0 0 0 0 [0x0] BossAI
+
+// B-2: one guy by the armory, one guy by the forest in the south
+UNIT Armorer Civilian_F_3 0 Level(1,NPC,False) [27,24] 0 0 0 0 [0x0] BossAI
+UNIT Rebel Ninja 0 Level(10,NPC,False) [31,32] 0 0 0 0 [0x0] BossAI
+
+
+// B-3: one guy up fishing by the former ruins of the place, isolated
+UNIT Skyfisher Fighter 0 Level(10,NPC,False) [28,4] 0 0 0 0 [0x0] BossAI
+
+// B-4: two guys hanging around with Passarola, Flint and Gerald (not actually playable lol), and a third by the armory/vendor
+UNIT Flint Gunner 0 Level(10,NPC,False) [4,26] 0 0 0 0 [0x0] BossAI
+UNIT Gerald Gunner 0 Level(1,NPC,False) [4,27] 0 0 0 0 [0x0] BossAI
+UNIT A6Pirate Brigand 0 Level(5,NPC,False) [6,21] 0 0 0 0 [0x0] BossAI
+
+// B-5 area: one feller hanging out in the forest
+UNIT Woodsman Hunter 0 Level(10,NPC,False) [7,35] 0 0 0 0 [0x0] BossAI
+UNIT
+
+PassarolaUnitGroup:
+UNIT Passarola Adventurer 0 Level(10,NPC,True) [3,28] 0 0 0 0 [Rescue, MiniBow, Vulnerary] BossAI
+UNIT 
+
+SpawnInHubBQuests:
+SpawnQuestSigil(WentToHub1, 1, RedSigilTrapID, 11, 6)
+SpawnQuestSigil(WentToHub1, 2, RedSigilTrapID, 12, 6)
+SpawnQuestSigil(WentToHub2, 3, RedSigilTrapID, 25, 27)
+SpawnQuestSigil(WentToHub2, 4, RedSigilTrapID, 25, 28)
+SpawnQuestSigil(WentToHub2, 5, RedSigilTrapID, 25, 29)
+SpawnQuestSigil(WentToHub3, 6, RedSigilTrapID, 31, 7)
+SpawnQuestSigil(WentToHub3, 7, RedSigilTrapID, 32, 7)
+SpawnQuestSigil(WentToHub3, 8, RedSigilTrapID, 33, 7)
+SpawnQuestSigil(WentToHub4, 9, RedSigilTrapID, 8, 26)
+SpawnQuestSigil(WentToHub4, 10, RedSigilTrapID, 9, 26)
+SpawnQuestSigil(WentToHub4, 11, RedSigilTrapID, 10, 26)
+SpawnQuestSigil(WentToHub4, 12, RedSigilTrapID, 11, 26)
+SpawnQuestSigil(WentToHub4, 13, RedSigilTrapID, 12, 26)
+SpawnQuestSigil(WentToHub5, 14, RedSigilTrapID, 11, 34)
+SpawnQuestSigil(WentToHub5, 15, RedSigilTrapID, 12, 34)
+SpawnQuestSigil(WentToHub5, 16, RedSigilTrapID, 13, 34)
+ENUN
+NoFade
+ENDA
 
 GotoChapter3:
 GotoHubChapterIfYesHubB(2, Chapter3)
@@ -126,37 +429,12 @@ NoFade
 ENDA
 
 EmptyEvent:
+NoFade
 ENDA
 
-//Just disable the relevant flags after running this function.
-EnableAllMidshipFlags:
-ENUT Flag_MidShip_DeckToFloor1
-ENUT Flag_MidShip_Floor1ToDeck
-ENUT Flag_MidShip_Floor1ToFloor2
-ENUT Flag_MidShip_Floor2ToFloor1
-ENUT Flag_MidShip_Floor2ToDeck
-ENUT Flag_MidShip_Floor2ToFloor3
-ENUT Flag_MidShip_Floor3ToDeck
-ENUT Flag_MidShip_Floor3ToFloor2
-ENDA
-
-RemoveAllLeftshipTraps:
-//Hub Units
-RemoveTrapAtCoords(6,17)
-//Entrances
-RemoveTrapAtCoords(4,11)
-RemoveTrapAtCoords(5,11)
-RemoveTrapAtCoords(4,16)
-RemoveTrapAtCoords(5,16)
-RemoveTrapAtCoords(2,23)
-RemoveTrapAtCoords(7,23)
-ENDA
-
-RemoveAllMidshipTraps:
-//Hub unit locations
-RemoveTrapAtCoords(18,21)
-RemoveTrapAtCoords(16,11)
-//Entrances
+RemoveAllTraps: //clears all traps, disables all hub movement flags
+RemoveTrapAtCoords(4,18)
+RemoveTrapAtCoords(17,5)
 RemoveTrapAtCoords(17,10)
 RemoveTrapAtCoords(18,10)
 RemoveTrapAtCoords(19,10)
@@ -172,13 +450,12 @@ RemoveTrapAtCoords(16,23)
 RemoveTrapAtCoords(15,22)
 RemoveTrapAtCoords(15,23)
 RemoveTrapAtCoords(20,8)
-ENDA
-
-RemoveAllRightshipTraps:
-//Hub unit locations
-RemoveTrapAtCoords(26,21)
-RemoveTrapAtCoords(28,18)
-//Entrancees
+RemoveTrapAtCoords(4,11)
+RemoveTrapAtCoords(5,11)
+RemoveTrapAtCoords(4,16)
+RemoveTrapAtCoords(5,16)
+RemoveTrapAtCoords(2,23)
+RemoveTrapAtCoords(7,23)
 RemoveTrapAtCoords(27,17)
 RemoveTrapAtCoords(32,17)
 RemoveTrapAtCoords(33,12)
@@ -186,175 +463,222 @@ RemoveTrapAtCoords(29,9)
 RemoveTrapAtCoords(29,10)
 RemoveTrapAtCoords(30,9)
 RemoveTrapAtCoords(30,10)
-ENDA
-
-//On the left ship, Orlando is chilling here.
-Spawn_LeftShipDeck:
-SpawnQuestSigil(WentToHub4, 776, RedSigilTrapID, 6, 17)
-LoadHubBQuestgiverIfEIDNotSet(WentToHub4, 4, OrlandoUnitGroup, Orlando)
-ENDA
-
-//On the middle ship, Desiderio and Rahel are there. 
-Spawn_MiddleShipDeck:
-SpawnQuestSigil(WentToHub3, 776, RedSigilTrapID, 18, 21)
-LoadHubBQuestgiverIfEIDNotSet(WentToHub3, 3, DesiderioUnitGroup, Desiderio)
-SpawnQuestSigil(WentToHub2, 777, RedSigilTrapID, 16, 11)
-LoadHubBQuestgiverIfEIDNotSet(WentToHub2, 2, RahelUnitGroup, Rahel)
-ENDA
-
-//On the right ship, Pilar and Razvan are there.
-Spawn_RightShipDeck:
-SpawnQuestSigil(WentToHub1, 776, RedSigilTrapID, 28, 18)
-LoadHubBQuestgiverIfEIDNotSet(WentToHub1, 1, RazvanUnitGroup, Razvan)
-SpawnQuestSigil(WentToHub5, 777, RedSigilTrapID, 26, 21)
-LoadHubBQuestgiverIfEIDNotSet(WentToHub5, 5, PilarUnitGroup, Pilar)
-ENDA
-
-SetQuestGiversBackToAlly:
-TurnUnitBlueIfAlive(Razvan, 1)
-TurnUnitBlueIfAlive(Rahel, 2)
-TurnUnitBlueIfAlive(Desiderio, 3)
-TurnUnitBlueIfAlive(Orlando, 4)
-TurnUnitBlueIfAlive(Pilar, 5)
-ENDA
-
-//Unimplemented for now, but this may be good to have something like this innate to every 
-//room, so we don't have to worry about painstakingly track specific units every transition...
-SetEveryUnitBackToAlly:
+ENUT Flag_Midship_ToDeck
+ENUT Flag_MidShip_ToFloor2
+ENUT Flag_MidShip_ToFloor3 
+ENUT Flag_Midship_ToFloor1
+NoFade
 ENDA
 
 Travel_LeftShipFloor1_ToDeck:
-CALL RemoveAllLeftshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_DeckToFloor1
-InitiateFloorRevertHubB_Leftship(Traps_LeftshipDeck)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToFloor1
+InitiateFloorRevertHubB_Leftship(Traps_Deck)
 NoFade
 ENDA
 
 Travel_LeftShipDeck_ToFloor1:
-CALL RemoveAllLeftshipTraps
-CALL EnableAllMidshipFlags
-CALL SetQuestGiversBackToAlly
-ENUF Flag_MidShip_Floor1ToDeck
-ENUF Flag_MidShip_Floor1ToFloor2
-InitiateFloorSwapHubB_Leftship(Traps_LeftshipFloor1, TC_LeftshipFloor1)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToDeck
+InitiateFloorSwapHubB_Leftship(Traps_LeftshipFloor1, TC_LeftshipFloor1, EmptyEvent)
 NoFade
 ENDA
 
 //returning to deck
 Travel_MidshipFloor1_ToDeck:
-CALL RemoveAllMidshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_DeckToFloor1
-InitiateFloorRevertHubB_Midship(Traps_MidshipDeck)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToFloor1
+InitiateFloorRevertHubB_Midship(Traps_Deck)
 NoFade
 ENDA
 
 Travel_MidshipDeck_ToFloor1:
-CALL RemoveAllMidshipTraps
-CALL EnableAllMidshipFlags
-CALL SetQuestGiversBackToAlly
-ENUF Flag_MidShip_Floor1ToDeck
-ENUF Flag_MidShip_Floor1ToFloor2
-InitiateFloorSwapHubB_Midship(Traps_MidshipFloor1, TC_MidshipFloor1)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToDeck
+ENUF Flag_MidShip_ToFloor2
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor1, TC_MidshipFloor1, SpawnMidshipFloor1Units)
 NoFade
 ENDA
 
+SpawnMidshipFloor1Units:
+LoadPlayerUnits(XimoGroup)
+LoadAllyUnitGroupIfAlive(Passarola, 1, PassarolaGroup)
+LoadAllyUnitGroupIfAlive(Husniye, 2, HusniyeGroup)
+NoFade
+ENDA
+
+XimoGroup:
+UNIT Ximo Archer 0 Level(1,Ally,False) [14,15] 0 0 0 0 [0x0] NoAI //talks to Kai
+UNIT
+
+PassarolaGroup:
+UNIT Passarola Adventurer 0 Level(1,Ally,False) [14,16] 0 0 0 0 [0x0] NoAI 
+UNIT
+
+HusniyeGroup:
+UNIT Husniye Thief 0 Level(1,Ally,False) [19,16] 0 0 0 0 [0x0] NoAI 
+UNIT
+
 Travel_MidshipFloor1_ToFloor2:
-CALL RemoveAllMidshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_Floor2ToFloor1
-ENUF Flag_MidShip_Floor2ToFloor3
-InitiateFloorSwapHubB_Midship(Traps_MidshipFloor2, TC_MidshipFloor2)
-LoadCutsceneUnits(UnitGroup_MF1_Honses)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToFloor1
+ENUF Flag_MidShip_ToFloor3
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor2, TC_MidshipFloor2, LoadMidshipFloor2Units)
 NoFade
 ENDA
 
 Travel_MidshipFloor2_ToFloor1:
-CALL RemoveAllMidshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_Floor1ToDeck
-ENUF Flag_MidShip_Floor1ToFloor2
-InitiateFloorSwapHubB_Midship(Traps_MidshipFloor1, TC_MidshipFloor1)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToDeck
+ENUF Flag_MidShip_ToFloor2
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor1, TC_MidshipFloor1, SpawnMidshipFloor1Units) 
 NoFade
 ENDA
 
 Travel_MidshipFloor2_ToFloor3:
-CALL RemoveAllMidshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_Floor3ToFloor2
-ENUF Flag_MidShip_Floor3ToDeck
-InitiateFloorSwapHubB_Midship(Traps_MidshipFloor3, TC_MidshipFloor3)
+CALL RemoveAllTraps
+ENUF Flag_MidShip_ToFloor2
+ENUF Flag_Midship_ToDeck
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor3, TC_MidshipFloor3, LoadMidshipFloor3Units)
 NoFade
 ENDA
+
+LoadMidshipFloor3Units:
+LoadPlayerUnits(EstelleIndioGroup)
+LoadAllyUnitGroupIfAlive(Yodsen, 1, YodsenGroup)
+LoadAllyUnitGroupIfAlive(Dmitr, 2, DmitrGroup)
+NoFade
+ENDA
+
+EstelleIndioGroup:
+UNIT Estelle Troubadour 0 Level(1,Ally,False) [13,10] 0 0 0 0 [0x0] NoAI 
+UNIT Indio Shaman 0 Level(1,Ally,False) [13,11] 0 0 0 0 [0x0] NoAI 
+UNIT
+
+YodsenGroup:
+UNIT Yodsen Gunner 0 Level(1,Ally,False) [19,15] 0 0 0 0 [0x0] NoAI 
+UNIT
+
+DmitrGroup:
+UNIT Dmitr Brigand 0 Level(1,Ally,False) [18,16] 0 0 0 0 [0x0] NoAI 
+UNIT
 
 Travel_MidshipFloor3_ToFloor2:
-CALL RemoveAllMidshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_Floor2ToFloor1
-ENUF Flag_MidShip_Floor2ToFloor3
-InitiateFloorSwapHubB_Midship(Traps_MidshipFloor2, TC_MidshipFloor2)
-LoadCutsceneUnits(UnitGroup_MF1_Honses)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToFloor1
+ENUF Flag_MidShip_ToFloor3
+InitiateFloorSwapHubB_Midship(Traps_MidshipFloor2, TC_MidshipFloor2, LoadMidshipFloor2Units)
 NoFade
 ENDA
 
+LoadMidshipFloor2Units:
+LoadPlayerUnits(RazvanRahelUnitGroup)
+LoadPlayerUnits(UnitGroup_MF1_Honses)
+NoFade
+ENDA
+
+RazvanRahelUnitGroup:
+UNIT Razvan Curate 0 Level(1,Ally,False) [15,16] 0 0 0 0 [0x0] NoAI //these 2 will talk with Lua
+UNIT Rahel BowCav 0 Level(1,Ally,False) [16,16] 0 0 0 0 [0x0] NoAI
+UNIT Suzanne Gunner  0 Level(1,Ally,False) [20,17] 0 0 0 0 [0x0] NoAI //these 3 can have a talk
+UNIT Matteo Mercenary  0 Level(1,Ally,False) [20,20] 0 0 0 0 [0x0] NoAI
+UNIT Tangyuan DragonRider 0 Level(1,Ally,False) [18,18] 0 0 0 0 [0x0] NoAI
+UNIT
+
+DmitrUnitGroup:
+UNIT Dmitr Brigand 0 Level(1,Ally,False) [15,6] 0 0 0 0 [0x0] NoAI
+UNIT 
+
 Travel_MidshipFloor3_ToDeck:
-CALL RemoveAllMidshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_DeckToFloor1
-InitiateFloorRevertHubB_Midship(Traps_MidshipDeck)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToFloor1
+InitiateFloorRevertHubB_Midship(Traps_Deck)
 NoFade
 ENDA
 
 Travel_RightShipDeck_ToFloor1:
-CALL RemoveAllRightshipTraps
-CALL EnableAllMidshipFlags
-CALL SetQuestGiversBackToAlly
-ENUF Flag_MidShip_Floor1ToDeck
-ENUF Flag_MidShip_Floor1ToFloor2
-InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor1, TC_RightshipFloor1)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToDeck
+ENUF Flag_MidShip_ToFloor2
+InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor1, TC_RightshipFloor1, SpawnRightShipFloor1Units)
 NoFade
 ENDA
 
 Travel_RightShipFloor1_ToDeck:
-CALL RemoveAllRightshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_DeckToFloor1
-InitiateFloorRevertHubB_Rightship(Traps_RightshipDeck)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToFloor1
+InitiateFloorRevertHubB_Rightship(Traps_Deck)
 NoFade
 ENDA
 
 Travel_RightShipFloor1_ToFloor2:
-CALL RemoveAllRightshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_Floor2ToDeck
-ENUF Flag_MidShip_Floor2ToFloor1
-InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor2, TC_RightshipFloor2)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToDeck
+ENUF Flag_Midship_ToFloor1
+InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor2, TC_RightshipFloor2, SpawnRightShipFloor2Units)
 NoFade
 ENDA
+
+SpawnRightShipFloor2Units:
+LoadPlayerUnits(PilarGroup)
+LoadAllyUnitGroupIfEIDSetAndCharAlive(WentToHub3, Kai, 1, KaiGroup) //only spawn in kai if you went to B-3
+NoFade
+ENDA
+
+PilarGroup:
+UNIT Pilar Ninja 0 Level(1,Ally,False) [32,18] 0 0 0 0 [0x0] NoAI //talks to Kai
+UNIT Juan Thief 0 Level(1,Ally,False) [26,21] 0 0 0 0 [0x0] NoAI //talks to Lua
+UNIT
+
+KaiGroup:
+UNIT Kai Ninja 0 Level(1,Ally,False) [33,17] 0 0 0 0 [0x0] NoAI 
+UNIT
 
 Travel_RightShipFloor2_ToFloor1:
-CALL RemoveAllRightshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_Floor1ToDeck
-ENUF Flag_MidShip_Floor1ToFloor2
-InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor1, TC_RightshipFloor1)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToDeck
+ENUF Flag_MidShip_ToFloor2
+InitiateFloorSwapHubB_Rightship(Traps_RightshipFloor1, TC_RightshipFloor1, SpawnRightShipFloor1Units)
 NoFade
 ENDA
+
+SpawnRightShipFloor1Units:
+LoadPlayerUnits(RSFloor1Group)
+LoadAllyUnitGroupIfAlive(Medwyn, 1, MedwynGroup)
+LoadAllyUnitGroupIfEIDSetAndCharAlive(WentToHub4, Adrian, 2, AdrianGroup)
+LoadAllyUnitGroupIfEIDSetAndCharAlive(WentToHub4, Lexa, 3, LexaGroup)
+LoadAllyUnitGroupIfEIDSetAndCharAlive(WentToHub4, Noah, 4, NoahGroup)
+NoFade
+ENDA
+
+RSFloor1Group:
+UNIT Biko Soldier 0 Level(1,Ally,False) [27,23] 0 0 0 0 [0x0] NoAI
+UNIT Ondeh Hunter_F 0 Level(1,Ally,False) [28,23] 0 0 0 0 [0x0] NoAI
+UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [27,19] 0 0 0 0 [0x0] NoAI
+UNIT Ponte Brigand 0 Level(1,Ally,False) [28,19] 0 0 0 0 [0x0] NoAI
+UNIT
+
+AdrianGroup:
+UNIT Adrian Fighter 0 Level(1,Ally,False) [31,23] 0 0 0 0 [0x0] NoAI
+UNIT
+
+LexaGroup:
+UNIT Lexa Myrmidon_F 0 Level(1,Ally,False) [32,23] 0 0 0 0 [0x0] NoAI
+UNIT
+
+NoahGroup:
+UNIT Noah Warden 0 Level(1,Ally,False) [26,12] 0 0 0 0 [0x0] NoAI
+UNIT
+
+MedwynGroup:
+UNIT Medwyn Warden 0 Level(1,Ally,False) [29,13] 0 0 0 0 [0x0] NoAI
+UNIT
 
 Travel_RightShipFloor2_ToDeck:
-CALL RemoveAllRightshipTraps
-CALL EnableAllMidshipFlags
-ENUF Flag_MidShip_DeckToFloor1
-InitiateFloorRevertHubB_Rightship(Traps_RightshipDeck)
+CALL RemoveAllTraps
+ENUF Flag_Midship_ToFloor1
+InitiateFloorRevertHubB_Rightship(Traps_Deck)
 NoFade
-ENDA
-
-Traps_LeftshipDeck:
-AddTrap(BlueSigilTrapID, 4, 16)
-AddTrap(BlueSigilTrapID, 5, 16)
-AddTrap(BlueSigilTrapID, 2, 23)
-AddTrap(BlueSigilTrapID, 7, 23)
 ENDA
 
 Traps_LeftshipFloor1:
@@ -362,15 +686,14 @@ AddTrap(BlueSigilTrapID, 4, 16)
 AddTrap(BlueSigilTrapID, 5, 16)
 AddTrap(BlueSigilTrapID, 2, 23)
 AddTrap(BlueSigilTrapID, 7, 23)
-AddTrap(BlueSigilTrapID, 4, 11) //These are unaccessible at first. 
-AddTrap(BlueSigilTrapID, 5, 11) //These are unaccessible at first. 
-ENDA
-
-Traps_MidshipDeck:
-AddTrap(BlueSigilTrapID, 17, 10)
-AddTrap(BlueSigilTrapID, 18, 10)
-AddTrap(BlueSigilTrapID, 20, 8)
-AddTrap(BlueSigilTrapID, 13, 12)
+CHECK_EVENTID GoToNextHubFlagID
+BNE 776 s0 sC //if the flag is set, then skip over this part
+    AddTrap(GreenSigilTrapID, 4, 18)
+LABEL 776
+// //These are unaccessible at first. 
+//AddTrap(BlueSigilTrapID, 5, 11) //These are unaccessible at first.
+//for some event, I guess? I'll comment it out for now - Loog
+NoFade
 ENDA
 
 Traps_MidshipFloor1:
@@ -382,7 +705,8 @@ AddTrap(BlueSigilTrapID, 13, 12)
 //to second floor
 AddTrap(BlueSigilTrapID, 19, 11)
 AddTrap(BlueSigilTrapID, 20, 11)
-AddTrap(BlueSigilTrapID, 17, 20)
+//AddTrap(BlueSigilTrapID, 17, 20) - not sure what this is for, so commenting it out for now - Loog
+NoFade
 ENDA
 
 UnitGroup_MF1_Honses:
@@ -399,6 +723,7 @@ AddTrap(BlueSigilTrapID, 20, 8)
 //To floor 3
 AddTrap(BlueSigilTrapID, 16, 22)
 AddTrap(BlueSigilTrapID, 16, 23)
+NoFade
 ENDA
 
 Traps_MidshipFloor3:
@@ -407,12 +732,7 @@ AddTrap(BlueSigilTrapID, 15, 22)
 AddTrap(BlueSigilTrapID, 15, 23)
 //To deck
 AddTrap(BlueSigilTrapID, 20, 8)
-ENDA
-
-Traps_RightshipDeck:
-AddTrap(BlueSigilTrapID, 27, 17)
-AddTrap(BlueSigilTrapID, 32, 17)
-AddTrap(BlueSigilTrapID, 33, 12)
+NoFade
 ENDA
 
 Traps_RightshipFloor1:
@@ -421,70 +741,19 @@ AddTrap(BlueSigilTrapID, 32, 17)
 AddTrap(BlueSigilTrapID, 33, 12)
 AddTrap(BlueSigilTrapID, 30, 9)
 AddTrap(BlueSigilTrapID, 30, 10)
+NoFade
 ENDA
 
 Traps_RightshipFloor2:
 AddTrap(BlueSigilTrapID, 29, 9)
 AddTrap(BlueSigilTrapID, 29, 10)
 AddTrap(BlueSigilTrapID, 33, 12)
+NoFade
 ENDA
 
 ///
 /// HUB TRAVEL
 ///
-
-GotoHubB1:
-// razvan
-HubChapterFirstTimeEvent(1, SeenHubB1Pitch, HubB1Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubB_1, Castle_Hall_Night, HubB)
-GotoHubChapterIfYesHubB(2, HubB_1, HubB1Accepted)
-ENUF WentToHub1
-NoFade
-ENDA
-
-GotoHubB2:
-// changing this to rahel
-HubChapterFirstTimeEvent(1, SeenHubB2Pitch, HubB2Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubB_2a, Harbor, HubB)
-// FancyChapterPreview(HubB_2a, Harbor, HubB)
-GotoHubChapterIfYesHubB(2, HubB_2a, HubB2Selection_Yes)
-ENUF WentToHub2
-Text(HubB2Selection_No)
-NoFade
-ENDA
-
-GotoHubB3:
-// desiderio's 
-HubChapterFirstTimeEvent(1, SeenHubB3Pitch, HubB3Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubB_3, Castle_Hall_Night, HubB)
-GotoHubChapterIfYesHubB(2, HubB_3, HubB3Accepted)
-ENUF WentToHub3
-NoFade
-ENDA
-
-GotoHubB4:
-// orlando
-HubChapterFirstTimeEvent(1, SeenHubB4Pitch, HubB4Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubB_4, Castle_Hall_Night, HubB)
-GotoHubChapterIfYesHubB(2, HubB_4, HubB4Accepted)
-ENUF WentToHub4
-NoFade
-ENDA
-
-GotoHubB5:
-// should be triggered by talking to Pilar
-HubChapterFirstTimeEvent(1, SeenHubB5Pitch, HubB5Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubB_5, Forest_Dense, HubB)
-GotoHubChapterIfYesHubB(2, HubB_5, HubB5Accepted)
-ENUF WentToHub5
-Text(HubB5Rejected)
-NoFade
-ENDA
 
 RefreshLua:
 SVAL s1 0x42
@@ -493,6 +762,7 @@ NoFade
 ENDA
 
 Traps1:
+GreenSigil(17,5)
 ENDTRAP
 ALIGN 4
 
@@ -501,7 +771,7 @@ ENDTRAP
 ALIGN 4
 
 Units1:
-UNIT Lua Captain 0 Level(10,Ally,False) [5,22] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Lua Captain 0 Level(10,Ally,False) [17,5] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
 
 NewUnits:
@@ -518,7 +788,7 @@ ENUT GoToNextHubFlagID
 CheckHowManyHubChaptersCompleted
 SVAL s1 5
 BNE 2 sC s1 //if chapters completed != 5, skip
-    AddTrap(GreenSigilTrapID, 5, 17)
+    CenterTextbox(HubBSayWhereToGo)
     ENUF GoToNextHubFlagID
 LABEL 2
 STAL 1
@@ -629,6 +899,28 @@ STAL 60
 SetBackground(Inn)
 LocationText(HubB_BeginningScene_4_1, 8, 8)
 Text(HubB_BeginningScene_4_2)
+//here we unset all hub A flags that will be reused for hub B
+ENUF HubBDesiGlobalTalkFlag
+ENUF HubBOrlandoGlobalTalkFlag
+ENUF HubBNeltumeGlobalTalkFlag
+ENUF HubBTrianaGlobalTalkFlag
+ENUF HubBMagdalenaGlobalTalkFlag
+ENUF HubBPilarGlobalTalkFlag
+ENUF HubBJuanGlobalTalkFlag
+ENUF HubBOndehBikoGlobalTalkFlag
+ENUF HubBAdrianLexaGlobalTalkFlag
+ENUF HubBHermenegildoPonteGlobalTalkFlag
+ENUF HubBNoahGlobalTalkFlag
+ENUF HubBMedwynGlobalTalkFlag
+ENUF HubBCarmenFataGlobalTalkFlag
+ENUF HubBBartzGlobalTalkFlag
+ENUF HubBAvocadoGlobalTalkFlag
+ENUF HubBPassarolaXimoGlobalTalkFlag
+ENUF HubBHusniyeGlobalTalkFlag
+ENUF HubBRazvanRahelGlobalTalkFlag
+ENUF HubBSuzanneMatteoTangyuanGlobalTalkFlag
+ENUF HubBEstelleIndioGlobalTalkFlag
+ENUF HubBYodsenDmitrGlobalTalkFlag
 NoFade
 ENDA
 

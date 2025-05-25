@@ -7,7 +7,7 @@ ALIGN 4
 pMovModifiers: // Movement
 	POIN prAddUnitBaseMov prAddUnitMovBonus prGetItemMovBonus 
 	POIN prDebuffMov 
-	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prHangoverTonicCheck prArmorMarchCheck prEquipmentMov prLuaHubMovement
+	POIN prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prHangoverTonicCheck prArmorMarchCheck prEquipmentMov prHubMovement prLuaHubMovement
 	POIN WellRested SwiftBoost ContraryWinds_KiteDebuff prRebelRebelMovNerf RushStaffExtraMov
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff
@@ -52,9 +52,14 @@ prNullifyIfFreeze:
 	rIfUnitHasStatus(0x9)
 		rConstant(0)
 
+prHubMovement:
+	rIf(prCheckIfLuaInHub)
+		rIfUnitHasAllegience(UA_BLUE)
+			rConstant(0)
+
 prLuaHubMovement:
-	rIfUnitHasSkill(SuppressiveFireID)
-		rIf(prCheckIfLuaInHub)
+	rIf(prCheckIfLuaInHub)
+		rIfUnitHasSkill(SuppressiveFireID)
 			rConstant(15)
 
 prDeftHandsCheck:

@@ -278,3 +278,6 @@
 
 // Thorn: If str greater than enemy, inflict break in combat
 #define ThornSkillID 100
+
+//fake, do not implement - Loog
+#define IncantationID 101

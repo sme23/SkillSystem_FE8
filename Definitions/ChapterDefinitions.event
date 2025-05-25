@@ -27,6 +27,8 @@
 #define HubD_1 24
 #define HubD_2 25
 #define HubD_3 26
+#define Endgame 27
+#define HubBTheOutskirts 28
 
 
 #define CutsceneHubB_5 0x3C
@@ -159,8 +161,9 @@
 #define HubD_3MapChangesID 0x6A
 #define HubD_3EventsID 0x6B
 
-
-
+#define HubBTheOutskirtsMapID 0x71
+#define HubBTheOutskirtsMapChangesID 0x72
+#define HubBTheOutskirtsEventsID 0x73
 
 //5A - 5C currently used by b_2a cutscene
 

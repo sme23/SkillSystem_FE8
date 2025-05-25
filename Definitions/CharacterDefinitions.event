@@ -36,8 +36,10 @@
 #define Mentor $15
 #define Orlando Mentor
 #define Rahel $16
+#define Quispe $40
 #define Alonso $41
 #define Elodia $42
+
 
 // HUB B CHAPTER UNITS
 
@@ -61,6 +63,7 @@
 #define Flint $3E //these two are mutually exclusive
 #define Gerald $3F //these two are mutually exclusive
 #define KiteSummon $3D //Passarola's Kite
+#define Liberator $3A
 
 // HUB C CHAPTER UNITS
 #define Valerie $26
@@ -176,7 +179,10 @@
 
 //Hub B
 #define HorseUnit $81
-
+#define Explorer $83
+#define Armorer $84
+#define Skyfisher $85
+#define Woodsman $86
 
 //Hub B1
 #define Antlion $79
@@ -236,8 +242,7 @@
 #define C4Elite 0x8B
 
 // Chapter 4
-#define Wayra 0xdf
-#define Quispe 0xdf
+#define QuispeChapter4 0xdf
 #define Keeper 0xe0
 
 // Hub D1

@@ -1,0 +1,376 @@
+#define SeenHubB1Pitch 7
+#define SeenHubB2Pitch 8
+#define SeenHubB3Pitch 9
+#define SeenHubB4Pitch 10
+#define SeenHubB5Pitch 11
+
+#define SeenNeltumeBefore 13
+#define SeenFlintGeraldBefore 14
+
+EventPointerTable(HubBTheOutskirtsEventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1
+POIN $0 $0 $0 
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+
+//passarola and some NPCs should be hanging out on the map, passarola will join and then unlock a minigame on the main ship
+//dunno about other talks but i'll throw in some filler convos on the map
+CharacterBasedEvents:
+CharacterEvent(0, ExplorerTalk, Liberator, Explorer)
+CharacterEvent(0, IncendivisTalk, Liberator, Incendivis)
+CharacterEvent(0, ArmorerTalk, Liberator, Armorer)
+CharacterEvent(0, RebelTalk, Liberator, Rebel)
+CharacterEvent(0, SkyfisherTalk, Liberator, Skyfisher)
+CharacterEvent(FlintGeraldGunGiveoutFlag, FlintGeraldGunTalk, Liberator, Flint)
+CharacterEvent(FlintGeraldGunGiveoutFlag, FlintGeraldGunTalk, Liberator, Gerald)
+CharacterEvent(0, A6PirateTalk, Liberator, A6Pirate)
+CharacterEvent(0, WoodsmanTalk, Liberator, Woodsman)
+CharacterEvent(PassarolaRecruitedFlag, PassarolaRecruitment, Liberator, Passarola)
+END_MAIN
+
+ExplorerTalk: 
+DisplayTextBasedOnHubEID(WentToHub1, HubBExplorerTalkPreB1, HubBExplorerTalkPostB1, 1, 2)
+NoFade
+ENDA
+
+IncendivisTalk: 
+Text(HubBIncendivisTalk)
+NoFade
+ENDA
+
+ArmorerTalk:
+Text(HubBArmorerTalk)
+NoFade
+ENDA
+
+RebelTalk:
+DisplayTextBasedOnHubEID(WentToHub2, HubBRebelTalkPreB2, HubBRebelTalkPostB2, 1, 2)
+NoFade
+ENDA
+
+SkyfisherTalk:
+DisplayTextBasedOnHubEID(WentToHub3, HubBSkyfisherTalkPreB3, HubBSkyfisherTalkPostB3, 1, 2)
+NoFade
+ENDA
+
+FlintGeraldGunTalk:
+EVBIT_MODIFY 4
+HubChapterFirstTimeEvent(1, SeenFlintGeraldBefore, HubBFlintGeraldTalkPreGunChoice)
+TutorialYesNoText(HubBFlintGeraldTalkChoice)
+SVAL s1 0x1 //if you said yes, then skip ahead
+BEQ 776 s1 sC //could change items out at some point, and if so, flint should get a killer musket and gerald should get... something inaccurate
+    Text(HubBFlintChoice) //if you say no, then you value flair above skill, which flint approves of
+    GiveItem(Pistol, Lua)
+    GOTO 777
+LABEL 776
+Text(HubBGeraldChoice) //yes = the opposite, so gerald gives you something
+GiveItem(Blunderbuss, Lua)
+LABEL 777
+NoFade
+ENDA
+
+A6PirateTalk:
+DisplayTextBasedOnHubEID(WentToHub4, HubBPirateTalkPreB4, HubBPirateTalkPostB4, 1, 2)
+NoFade
+ENDA
+
+WoodsmanTalk:
+DisplayTextBasedOnHubEID(WentToHub5, HubBWoodsmanTalkPreB5, HubBWoodsmanTalkPostB5, 1, 2)
+NoFade
+ENDA
+
+PassarolaRecruitment: 
+MUSS WelcomeAboardMateyID
+Text(HubBPassarolaRecruitment)
+FlashCursor(Passarola, 30)
+CUSA Passarola
+FADI 15
+SetAI(Passarola,0,0,0,0)
+SVAL s1 0x9 //should hide and undeploy
+SET_CONDITION Passarola
+FADU 15
+MURE 2
+NoFade
+ENDA
+
+//places to buy neat stuff
+LocationBasedEvents:
+Vendor(HubBVendor,8,20)
+Armory(HubBArmory1,11,20)
+Vendor(HubBArmory2,27,23)
+END_MAIN
+
+ALIGN 4
+HubBVendor: //non basic tomes and staves, along with a couple items: 10 items
+SHLI Surge Elfire Luna Thunder Mend Barrier Unlock TakeAim GlassShield PureWater 
+
+ALIGN 4
+HubBArmory1: //steel and 1 range: 12 items
+SHLI SteelSword LightBrand SteelLance Javelin SteelAxe HandAxe SteelBow MiniBow SteelKnife SteelDagger SteelMusket Blunderbuss
+
+ALIGN 4
+HubBArmory2: //Effectives + quirked up weapons that are not common
+SHLI Estoc Wingclipper Harpoon Horseslayer Hammer Oversize Longbow Tomereaver Stiletto RuneDagger Culverin Pistol
+ALIGN 4
+
+//neltume recruitment (visit an odd tile in a forest and have one unit with forest friend skill) (lol)
+//hub change events
+//switching back to ship hub
+//move refresh event
+MiscBasedEvents:
+AREA NeltumeRecruitedFlag NeltumeRecruitmentEvent [34,15] [34,15]
+AREA WentToHub1 GotoHubB1 [11,6] [12,6]
+AREA WentToHub2 GotoHubB2 [25,27] [25,29]
+AREA WentToHub3 GotoHubB3 [31,7] [33,7]
+AREA WentToHub4 GotoHubB4 [8,26] [12,26]
+AREA WentToHub5 GotoHubB5 [11,34] [13,34]
+AREA 0 SwitchBackToArmada [20,14] [20,14]
+AFEV 0 RefreshLiberator 0
+END_MAIN
+
+NeltumeRecruitmentEvent:
+HubChapterFirstTimeEvent(1, SeenNeltumeBefore, HubBNeltumeFirstSpeech)
+DoesAnyUnitHaveForestFriend
+BEQ 776 s0 sC //if the answer is No, then skip ahead
+    MUSS WelcomeAboardMateyID
+    Text(HubBNeltumeJoinsYou)
+    LoadPlayerUnits(NeltumeGroup)
+    SVAL s1 0x9 //should hide him and undeploy?
+    SET_CONDITION Neltume
+    MURE 2
+    GOTO 777
+LABEL 776
+Text(HubBNeltumeDeniesRecruitment)
+ENUF NeltumeRecruitedFlag
+LABEL 777
+NoFade
+ENDA
+
+NeltumeGroup:
+UNIT Neltume Priest 0 Level(10,Ally,True) [0,0] 0 0 0 0 [Barrier, Heal] NoAI
+UNIT
+
+SwitchBackToArmada:
+FADI 15
+SET_ACTIVE 0
+REMOVEUNIT Liberator
+STAL 30
+RemoveAll
+CALL RemoveOutskirtsTraps
+ENUN
+LOMA HubB
+SHOWUNIT Lua
+LOAD1 1 LuaArmadaGroup
+ENUN
+CALL SpawnDeckUnits
+CAMERA_CENTERED Lua
+SET_ACTIVE Lua
+CALL Traps_Deck
+ENUN
+FADU 15
+NoFade
+ENDA
+
+RemoveOutskirtsTraps:
+RemoveTrapAtCoords(11, 6)
+RemoveTrapAtCoords(12, 6)
+RemoveTrapAtCoords(25, 27)
+RemoveTrapAtCoords(25, 28)
+RemoveTrapAtCoords(25, 29)
+RemoveTrapAtCoords(31, 7)
+RemoveTrapAtCoords(32, 7)
+RemoveTrapAtCoords(33, 7)
+RemoveTrapAtCoords(8, 26)
+RemoveTrapAtCoords(9, 26)
+RemoveTrapAtCoords(10, 26)
+RemoveTrapAtCoords(11, 26)
+RemoveTrapAtCoords(12, 26)
+RemoveTrapAtCoords(11, 34)
+RemoveTrapAtCoords(12, 34)
+RemoveTrapAtCoords(13, 34)
+NoFade
+ENDA
+
+Traps_RightshipDeck:
+AddTrap(BlueSigilTrapID, 27, 17)
+AddTrap(BlueSigilTrapID, 32, 17)
+AddTrap(BlueSigilTrapID, 33, 12)
+NoFade
+ENDA
+
+Traps_LeftshipDeck:
+AddTrap(BlueSigilTrapID, 4, 16)
+AddTrap(BlueSigilTrapID, 5, 16)
+AddTrap(BlueSigilTrapID, 2, 23)
+AddTrap(BlueSigilTrapID, 7, 23)
+NoFade
+ENDA
+
+Traps_MidshipDeck:
+AddTrap(BlueSigilTrapID, 17, 10)
+AddTrap(BlueSigilTrapID, 18, 10)
+AddTrap(BlueSigilTrapID, 20, 8)
+AddTrap(BlueSigilTrapID, 13, 12)
+NoFade
+ENDA
+
+LuaArmadaGroup:
+UNIT Lua Captain 0 Level(10,Ally,False) [17,5] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+//here's where I load in everyone else who's on the top deck
+UNIT
+
+///
+/// HUB TRAVEL
+///
+
+GotoHubB1:
+// razvan
+HubChapterFirstTimeEvent(1, SeenHubB1Pitch, HubB1Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_1, Castle_Hall_Night, HubBTheOutskirts, HubBCallback)
+GotoHubChapterIfYesHubB(2, HubB_1, HubB1Accepted)
+ENUF WentToHub1
+AddTrap(RedSigilTrapID, 11, 6)
+AddTrap(RedSigilTrapID, 12, 6)
+ENUN
+Text(HubB1Rejected)
+NoFade
+ENDA
+
+GotoHubB2:
+// changing this to rahel
+HubChapterFirstTimeEvent(1, SeenHubB2Pitch, HubB2Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_2a, Harbor, HubBTheOutskirts, HubBCallback)
+GotoHubChapterIfYesHubB(2, HubB_2a, HubB2Selection_Yes)
+ENUF WentToHub2
+AddTrap(RedSigilTrapID, 25, 27)
+AddTrap(RedSigilTrapID, 25, 28)
+AddTrap(RedSigilTrapID, 25, 29)
+ENUN
+Text(HubB2Selection_No)
+NoFade
+ENDA
+
+GotoHubB3:
+// desiderio's 
+HubChapterFirstTimeEvent(1, SeenHubB3Pitch, HubB3Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_3, Castle_Hall_Night, HubBTheOutskirts, HubBCallback)
+GotoHubChapterIfYesHubB(2, HubB_3, HubB3Accepted)
+ENUF WentToHub3
+AddTrap(RedSigilTrapID, 31, 7)
+AddTrap(RedSigilTrapID, 32, 7)
+AddTrap(RedSigilTrapID, 33, 7)
+ENUN
+Text(HubB3Rejected)
+NoFade
+ENDA
+
+GotoHubB4:
+// orlando
+HubChapterFirstTimeEvent(1, SeenHubB4Pitch, HubB4Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_4, Castle_Hall_Night, HubBTheOutskirts, HubBCallback)
+GotoHubChapterIfYesHubB(2, HubB_4, HubB4Accepted)
+ENUF WentToHub4
+AddTrap(RedSigilTrapID, 8, 26)
+AddTrap(RedSigilTrapID, 9, 26)
+AddTrap(RedSigilTrapID, 10, 26)
+AddTrap(RedSigilTrapID, 11, 26)
+AddTrap(RedSigilTrapID, 12, 26)
+ENUN
+Text(HubB4Rejected)
+NoFade
+ENDA
+
+GotoHubB5:
+// should be triggered by talking to Pilar
+HubChapterFirstTimeEvent(1, SeenHubB5Pitch, HubB5Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubB_5, Forest_Dense, HubBTheOutskirts, HubBCallback)
+GotoHubChapterIfYesHubB(2, HubB_5, HubB5Accepted)
+ENUF WentToHub5
+AddTrap(RedSigilTrapID, 11, 34)
+AddTrap(RedSigilTrapID, 12, 34)
+AddTrap(RedSigilTrapID, 13, 34)
+ENUN
+Text(HubB5Rejected)
+NoFade
+ENDA
+
+HubBCallback:
+CAMERA_CENTERED Liberator //refocus on the airship
+//restores all the quest sigils 
+SpawnQuestSigil(WentToHub1, 1, RedSigilTrapID, 11, 6)
+SpawnQuestSigil(WentToHub1, 2, RedSigilTrapID, 12, 6)
+SpawnQuestSigil(WentToHub2, 3, RedSigilTrapID, 25, 27)
+SpawnQuestSigil(WentToHub2, 4, RedSigilTrapID, 25, 28)
+SpawnQuestSigil(WentToHub2, 5, RedSigilTrapID, 25, 29)
+SpawnQuestSigil(WentToHub3, 6, RedSigilTrapID, 31, 7)
+SpawnQuestSigil(WentToHub3, 7, RedSigilTrapID, 32, 7)
+SpawnQuestSigil(WentToHub3, 8, RedSigilTrapID, 33, 7)
+SpawnQuestSigil(WentToHub4, 9, RedSigilTrapID, 8, 26)
+SpawnQuestSigil(WentToHub4, 10, RedSigilTrapID, 9, 26)
+SpawnQuestSigil(WentToHub4, 11, RedSigilTrapID, 10, 26)
+SpawnQuestSigil(WentToHub4, 12, RedSigilTrapID, 11, 26)
+SpawnQuestSigil(WentToHub4, 13, RedSigilTrapID, 12, 26)
+SpawnQuestSigil(WentToHub5, 14, RedSigilTrapID, 11, 34)
+SpawnQuestSigil(WentToHub5, 15, RedSigilTrapID, 12, 34)
+SpawnQuestSigil(WentToHub5, 16, RedSigilTrapID, 13, 34)
+NoFade
+ENDA
+
+RefreshLiberator:
+CHECK_EXISTS Liberator
+BEQ 776 s0 sC //if it does not, then branch past this
+SVAL s1 0x42
+UNSET_CONDITION Liberator
+LABEL 776
+NoFade
+ENDA
+
+Traps1:
+GreenSigil(20,14)
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+Units1:
+UNIT Lua Captain 0 Level(10,Ally,False) [5,22] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT
+
+BeginningScene:
+NoFade
+ENDA
+
+EndingScene:
+NoFade
+ENDA
+
+Dunno1: //down here because nothing here is really used
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN

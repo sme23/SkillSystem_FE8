@@ -1818,9 +1818,9 @@ Hand Cannon: Weapon breaks with[N]
 every attack.[X]
 
 ## SD_Pollenate
-Pollenate: When this unit Staffs, +1 Spd[N]
+Pollinate: When this unit Staffs, +1 Spd[N]
 (max +5). The boost can be given to[N]
-an ally using the Pollenate command.[X]
+an ally using the Pollinate command.[X]
 
 ## SD_BoardingParty
 Boarding Party: This unit can place[N]
@@ -1868,3 +1868,7 @@ attacks are brave next combat.[X]
 ## SD_Thorn
 If unit's Str > enemy's Str,[N]
 unit always Breaks on hit.[X]
+
+## SD_Incantation
+Incantation: Command. Gain +4 Mt[N]
+and +30% Crit on unit's next attack.[X]

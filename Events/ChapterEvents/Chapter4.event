@@ -149,7 +149,7 @@ NoFade
 ENDA
 
 EnemyUnits:
-UNIT Wayra MaligKnight 0 Level(30,Enemy,False) [14,39] 0 0 0 0 [HerosFlare, BraveAxe] GroupOneAI
+UNIT QuispeChapter4 MaligKnight 0 Level(30,Enemy,False) [14,39] 0 0 0 0 [HerosFlare, BraveAxe] GroupOneAI
 UNIT Keeper MaligKnight 0 Level(25,Enemy,True) [12,39] 0 0 0 0 [Nosferatu, SilverAxe] GroupOneAI
 UNIT Keeper MaligKnight 0 Level(25,Enemy,True) [16,39] 0 0 0 0 [Arcfire, Crusher] GroupOneAI
 UNIT Keeper MaligKnight 0 Level(25,Enemy,True) [13,38] 0 0 0 0 [SilverAxe, Sagittae] GroupOneAI

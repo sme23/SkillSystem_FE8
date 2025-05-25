@@ -18,8 +18,78 @@
 #define A1_YurenaGenericBattleQuoteSeen 0x27
 #define A1_GeraldoGenericBattleQuoteSeen 0x28
 
+// used everywhere, do not touch - Loog
+#define LuaInAHubFlag 0xA0
+#define InAHubFlag 0xA0
+
+// Hub A globals
+#define WentToHubA1 0x83
+#define WentToHubA2 0x8B
+#define WentToHubA3 0x8C
+#define WentToHubA4 0x8D
+#define WentToHubA5 0x8E
+#define WentToHubA6 0x8F
+
+#define WentToHub1 WentToHubA1
+#define WentToHub2 WentToHubA2
+#define WentToHub3 WentToHubA3
+#define WentToHub4 WentToHubA4
+#define WentToHub5 WentToHubA5
+#define WentToHub6 WentToHubA6
+
+#define WentToPortGreagor 0x92
+#define WentToPortGreagorDocks 0x93
+#define WentToBaseAgain 0x94
+#define CameBackFromDocks 0x95
+#define DurghamRecruitFlag 0x96
+#define HubASamsonArranRecruitFlag 0x97
+#define FirstTimeInTavern 0x98
+#define MrYodsenRecruitFlag 0x99
+#define TavernFirstTime 0xA1
+#define OrlandoHubATalk 0xA2
+#define RahelOrlandoHubATalkFlag 0xA3
+#define CarmenXimoHubATalkFlag 0xA4
+#define PilarEstelleHubATalkFlag 0xA5
+#define DesiderioIdaHubATalkFlag 0xA6
+#define RazvanHermenegildoHubATalkFlag 0xA7
+#define PeddlerHubAEncounterFlag 0xB0
+#define ShipwrightCaptainHubATalkFlag 0xB1
+#define TwoPatronsHubATalkFlag 0xB2
+// The peddler will be on the map as long as this flag is triggered. 1st hub event that occurs after two maps.
+
+
+// Hub B globals
 // not sure where exactly these are meant to go, but eh -RW
 #define HusniyeAccused 0xEC
 #define CruzAccused 0xED
 #define AvocadoAccused 0xEE
 #define ReverseFlagID 0xEF
+
+#define NeltumeRecruitedFlag 0x78
+#define PassarolaRecruitedFlag 0x79
+#define FlintGeraldGunGiveoutFlag 0x7A
+
+
+//i'm going to reuse a bunch of Hub A flags to save some headache - Loog
+#define HubBDesiGlobalTalkFlag 0x92
+#define HubBOrlandoGlobalTalkFlag 0x93
+#define HubBNeltumeGlobalTalkFlag 0x94
+#define HubBTrianaGlobalTalkFlag 0x95
+#define HubBMagdalenaGlobalTalkFlag 0x96
+#define HubBPilarGlobalTalkFlag 0x97
+#define HubBJuanGlobalTalkFlag 0x98
+#define HubBOndehBikoGlobalTalkFlag 0x99
+#define HubBAdrianLexaGlobalTalkFlag 0xA1
+#define HubBHermenegildoPonteGlobalTalkFlag 0xA2
+#define HubBNoahGlobalTalkFlag 0xA3
+#define HubBMedwynGlobalTalkFlag 0xA4
+#define HubBCarmenFataGlobalTalkFlag 0xA5
+#define HubBBartzGlobalTalkFlag 0xA6
+#define HubBAvocadoGlobalTalkFlag 0xA7
+#define GoToNextHubFlagID 0xA8 //for going to the next hub
+#define HubBPassarolaXimoGlobalTalkFlag 0xA9
+#define HubBHusniyeGlobalTalkFlag 0xAA
+#define HubBRazvanRahelGlobalTalkFlag 0xAB
+#define HubBSuzanneMatteoTangyuanGlobalTalkFlag 0xAC
+#define HubBEstelleIndioGlobalTalkFlag 0xAD
+#define HubBYodsenDmitrGlobalTalkFlag 0xAE

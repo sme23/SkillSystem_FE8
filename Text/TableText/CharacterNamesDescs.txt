@@ -1,3 +1,13 @@
+## LiberatorName
+Armada[X]
+
+## LiberatorOccupation
+Ships[X]
+
+## LiberatorDesc
+The trusty fleet of the Skysabers[N]
+that delivers them across the skies.[X]
+
 ## OccupationName
 Occupation[X]
 
@@ -713,6 +723,10 @@ Commander[X]
 A senior member of TORCH[N]
 known as the [OQ]Pirate Hunter.[CQ][X]
 
+## ElodiaEnemyDesc
+A senior member of TORCH[N]
+known as the [OQ]Pirate Hunter.[CQ][X]
+
 ## HugoName
 Hugo[X]
 
@@ -1138,6 +1152,10 @@ Alonso[X]
 ## AlonsoEnemyOccupation
 Captain[X]
 
+## AlonsoDesc
+A ruthless pirate boss who has sworn[N]
+to hunt Lua til the horizon ends.[X]
+
 ## AlonsoEnemyDesc
 A ruthless pirate boss who has sworn[N]
 to hunt Lua til the horizon ends.[X]
@@ -1284,13 +1302,17 @@ Equine[X]
 ## HorseUnitDesc
 Why the long face?[X]
 
-## WayraName
+## QuispeName
 Quispe[X]
 
-## WayraOccupation
+## QuispeOccupation
 Chieftain[X]
 
-## WayraDesc
+## QuispeDesc
+A newly elected leader of the Keepers[N]
+who will do anything for their people.[X]
+
+## QuispeEnemyDesc
 A newly elected leader of the Keepers[N]
 who will do anything for their people.[X]
 
@@ -1346,3 +1368,43 @@ Theana[X]
 Assassin[N]
 A drifting hitman for hire who[N]
 doesn't like to talk about her past.[X]
+
+## ExplorerName
+Explorer[X]
+
+## ExplorerOccupation
+Adventurer[X]
+
+## ExplorerDesc
+A free spirit who hunts for treasure[N]
+and pursues its scent across the skies.[X]
+
+## ArmorerName
+Armorer[X]
+
+## ArmorerOccupation
+Blacksmith[X]
+
+## ArmorerDesc
+The daughter of a local weapons maker[N]
+who tries her best to get sales.[X]
+
+## SkyfisherName
+Drifter[X]
+
+## SkyfisherOccupation
+Skyfisher[X]
+
+## SkyfisherDesc
+A man forgotten by society who passes[N]
+his time fishing in the frigid north.[X]
+
+## WoodsmanName
+Woodsman[X]
+
+## WoodsmanOccupation
+Trapper[X]
+
+## WoodsmanDesc
+A huntsman who now relies on nature's[N]
+bounty instead of living with others.[X]

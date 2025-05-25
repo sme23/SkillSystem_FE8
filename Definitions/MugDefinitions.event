@@ -56,7 +56,7 @@
 #define SanzMug $39
 #define IgnacioMug $3A
 #define JulianaMug $AD
-
+#define HugoMug $BA
 
 #define TrianaMug $43
 #define MedwynMug $44

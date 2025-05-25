@@ -5,6 +5,8 @@ extern u8 SuppliesItemIDLink;
 void SetEventId(int eventId);
 void UnsetEventId(int eventId);
 extern u8 BombCharIDLink;
+extern bool(*gSkillTester)(Unit* unit, int skillID);
+extern u8 ForestFriendIDLink;
 
 void A3ReturnLogDroppedStatusASMC(){
 
@@ -171,4 +173,17 @@ void PlayBombMusicIfEitherBombReadyASMC(){
         return;
     }
     UnsetEventId(0x4); //otherwise, we unset it just to be safe
+}
+
+void DoesAnyUnitHaveForestFriendASMC(){ //here, we will loop through our entire group of units and see if any have Forest Friend
+    Unit* someUnit;
+    gEventSlot[0xC] = 0; //set sC to False in advance
+    for (int i = 0; i <= 60; i++){
+        someUnit = &gUnitArrayBlue[i]; //current unit in the party at this array index
+        if (gSkillTester(someUnit, ForestFriendIDLink))
+        {
+            gEventSlot[0xC] = 1; // return True if someone is a friend of the forest, then break
+            break;
+        }
+    }
 }

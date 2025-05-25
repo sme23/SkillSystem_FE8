@@ -8,6 +8,7 @@
 .equ ListSummonTargets,0x8025CA5
 .equ GetTargetListSize,0x804FD29
 .equ GetUnit,0x8019431
+.equ CheckEventId,0x8083da8
 
 .macro blh to, reg=r3
 	ldr \reg, =\to
@@ -18,9 +19,9 @@
 @old at 80243D8
 
 push {r4-r6,r14}
+
 ldr r5,=gActiveUnit
 ldr r2,[r5]
-
 
 ldr r0, SkillTester
 mov lr, r0

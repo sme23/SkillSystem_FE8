@@ -134,6 +134,8 @@
 [LoadPonte] = [LoadFace][0x2A][0x1]
 [LoadPassarola] = [LoadFace][0x2B][0x1]
 [LoadNeltume] = [LoadFace][0x2C][0x1]
+[LoadFlint] = [LoadFace][0x2C][0x1]
+[LoadGerald] = [LoadFace][0x2C][0x1]
 
 [LoadHusniye] = [LoadFace][0x1B][0x1]
 [LoadAvocado] = [LoadFace][0x19][0x1]
@@ -194,6 +196,9 @@
 [LoadTheCloser] = [LoadFace][0x27][0x1]
 [LoadCloser] = [LoadFace][0x27][0x1]
 
+
+[LoadArmorerDaughter] = [LoadFace][0x61][0x1]
+
 [LoadYadney] = [LoadFace][0x1F][0x1]
 [LoadCruz] = [LoadFace][0x1A][0x1]
 [LoadQuim] = [LoadFace][0x5B][0x1]
@@ -236,7 +241,7 @@
 [LoadGreagorPatronB] = [LoadFace][0x5A][0x1]
 [LoadGreagorVillagerC] = [LoadFace][0x58][0x1]
 
-[LoadHugo] = [LoadFace][0x31][0x1]
+[LoadHugo] = [LoadFace][0xBA][0x1]
 [LoadJuliana] = [LoadFace][0xAD][0x1]
 
 [LoadQuispe] = [LoadFace][0xB9][0x1]
