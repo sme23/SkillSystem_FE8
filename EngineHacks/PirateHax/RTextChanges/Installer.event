@@ -133,6 +133,7 @@ SetOccupation(ExplorerDesc, ExplorerOccupation)
 SetOccupation(ArmorerDesc, ArmorerOccupation)
 SetOccupation(SkyfisherDesc, SkyfisherOccupation)
 SetOccupation(WoodsmanDesc, WoodsmanOccupation)
+SetOccupation(KeeperC2Desc, KeeperC2Occupation)
 SHORT 0 0 // terminator
 
 #include "RTextChanges.lyn.event"

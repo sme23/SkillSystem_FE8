@@ -82,3 +82,6 @@
 {
     #include "HubD/HubD_1.event"
 }
+{
+    #include "HubD/HubD_3.event"
+}

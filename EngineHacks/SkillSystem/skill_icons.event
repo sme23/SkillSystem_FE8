@@ -1181,21 +1181,21 @@ ORG SkillIcon(LikeDominoesID)
 #incbin "SkillIcons/Gamble.dmp"
 ORG SkillIcon(BashID)
 #incbin "SkillIcons/Colossus.dmp"
-ORG SkillIcon(WaterwalkID)
-#incbin "SkillIcons/HoneMov.dmp"
-
 ORG SkillIcon(RerunAndHitID)
 #incbin "SkillIcons/Canto.dmp"
 ORG SkillIcon(EarlyLeaveID)
 #incbin "SkillIcons/Canto.dmp"
 ORG SkillIcon(RebelRebelID)
 #incbin "SkillIcons/Canto.dmp"
-
 ORG SkillIcon(DoubleFalconID)
 #incbin "SkillIcons/DoubleLion.dmp"
+ORG SkillIcon(ThunderingHoovesID)
+#incbin "SkillIcons/Charge.dmp"
+ORG SkillIcon(PrecisionID)
+#incbin "SkillIcons/BowRangeUp.dmp"
+ORG SkillIcon(MisfortuneID)
+#incbin "SkillIcons/Fortune.dmp"
 
-ORG SkillIcon(ThornSkillID)
-#incbin "SkillIcons/Axefaith.dmp"
 
 //don't need them
 ORG SkillIcon(ProtectorID)
@@ -1204,6 +1204,10 @@ ORG SkillIcon(KleptomaniaID)
 #incbin "SkillIcons/Steal.dmp"
 ORG SkillIcon(FuseID)
 #incbin "SkillIcons/FieryBlood.dmp"
+ORG SkillIcon(WaterwalkID)
+#incbin "SkillIcons/HoneMov.dmp"
+ORG SkillIcon(ThornSkillID)
+#incbin "SkillIcons/Axefaith.dmp"
 
 //fake skill
 ORG SkillIcon(IncantationID)

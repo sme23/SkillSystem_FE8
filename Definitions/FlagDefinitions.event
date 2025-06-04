@@ -21,6 +21,7 @@
 // used everywhere, do not touch - Loog
 #define LuaInAHubFlag 0xA0
 #define InAHubFlag 0xA0
+#define GoToNextHubFlagID 0xA8 //for going to the next hub
 
 // Hub A globals
 #define WentToHubA1 0x83
@@ -86,10 +87,33 @@
 #define HubBCarmenFataGlobalTalkFlag 0xA5
 #define HubBBartzGlobalTalkFlag 0xA6
 #define HubBAvocadoGlobalTalkFlag 0xA7
-#define GoToNextHubFlagID 0xA8 //for going to the next hub
+
 #define HubBPassarolaXimoGlobalTalkFlag 0xA9
 #define HubBHusniyeGlobalTalkFlag 0xAA
 #define HubBRazvanRahelGlobalTalkFlag 0xAB
 #define HubBSuzanneMatteoTangyuanGlobalTalkFlag 0xAC
 #define HubBEstelleIndioGlobalTalkFlag 0xAD
 #define HubBYodsenDmitrGlobalTalkFlag 0xAE
+
+
+//and again for Hub C - Loog
+#define HubC_Desiderio_Noah_Medwyn_Global_Talk_Flag 0x92
+#define HubC_Adrian_Tangyuan_Rima_Global_Talk_Flag 0x93
+#define HubC_Jaime_Carmen_Global_Talk_Flag 0x94
+#define HubC_Razvan_Valerie_Calista_Global_Talk_Flag 0x95
+#define HubC_Pilar_Windy_Global_Talk_Flag 0x96
+#define HubC_Indio_Dmitr_Leandra_Global_Talk_Flag 0x97
+#define HubC_Ondeh_Hermenegildo_Ruby_Global_Talk_Flag 0x98
+#define HubC_Rahel_Ximo_Global_Talk_Flag 0x99
+#define HubC_Matteo_Kurt_Global_Talk_Flag 0xA1
+#define HubC_Orlando_Remora_Triana_Global_Talk_Flag 0xA2
+#define HubC_Fata_Neltume_Husniye_Global_Talk_Flag 0xA3
+#define HubC_Leonor_Estelle_Magdalena_Global_Talk_Flag 0xA4
+#define HubC_Lexa_Suzanne_Bartz_Global_Talk_Flag 0xA5
+#define HubC_Kai_Theana_Global_Talk_Flag 0xA6
+#define HubC_Durgham_Yodsen_Juan_Global_Talk_Flag 0xA7
+#define HubC_Biko_Ernest_Avocado_Global_Talk_Flag 0xA9
+#define HubC_Ponte_Passarola_Bolton_Global_Talk_Flag 0xAA
+#define HubC_Windy_Recruited_Flag 0xAB
+#define HubC_Kurt_Recruited_Flag 0xAC
+#define HubC_Theana_Recruited_Flag 0xAD

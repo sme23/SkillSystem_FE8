@@ -281,3 +281,12 @@
 
 //fake, do not implement - Loog
 #define IncantationID 101
+
+//Thundering Hooves
+#define ThunderingHoovesID 102
+
+//Precision
+#define PrecisionID 103
+
+//Misfortune
+#define MisfortuneID 104

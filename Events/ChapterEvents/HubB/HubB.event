@@ -72,15 +72,21 @@ FADI 15
 CALL SpawnDeckUnits
 CALL Traps_Deck
 CALL SetAllHubBTalkFlags
+CAMERA_CENTERED Lua
 ENUT Flag_Midship_ToDeck
 ENUT Flag_MidShip_ToFloor2
 ENUT Flag_MidShip_ToFloor3 //turn off all flags except the ones that go to floor 1
 ENUF Flag_Midship_ToFloor1
+FADU 15
 CheckHowManyHubChaptersCompleted
 SVAL s1 0 
 BNE 2 sC s1 //if chapters completed != 5, skip
-    CenterTextbox(HubBArmadaExplanation)
+    CenterTextbox(HubBArmadaExplanation) //initial explanation
 LABEL 2
+SVAL s1 5
+BNE 3 sC s1
+    CenterTextbox(HubBSayWhereToGo) //note that you can move on
+LABEL 3
 NoFade
 ENDA
 
@@ -203,7 +209,10 @@ CharacterEvent(HubBYodsenDmitrTempTalkFlag, HubBYodsenDmitrConvo, Lua, Dmitr)
 END_MAIN
 
 HubBDesiderioErnestLeandraConvo:
-DisplayTextThenSetGlobalFlag(HubBLuaDesiderioErnestLeandraTalk, HubBDesiGlobalTalkFlag) 
+SET_ACTIVE 0
+ENUN
+DisplayTextThenSetGlobalFlag(HubBLuaDesiderioErnestLeandraTalk, HubBDesiGlobalTalkFlag)
+SET_ACTIVE Lua
 NoFade
 ENDA
 
@@ -293,7 +302,9 @@ NoFade
 ENDA
 
 HubBSuzanneMatteoTangyuanConvo:
-DisplayTextThenSetGlobalFlag(HubBLuaSuzanneMatteoTangyuanTalk, HubBSuzanneMatteoTangyuanGlobalTalkFlag) 
+SET_ACTIVE 0
+DisplayTextThenSetGlobalFlag(HubBLuaSuzanneMatteoTangyuanTalk, HubBSuzanneMatteoTangyuanGlobalTalkFlag)
+SET_ACTIVE Lua
 NoFade
 ENDA
 
@@ -621,12 +632,16 @@ ENDA
 
 SpawnRightShipFloor2Units:
 LoadPlayerUnits(PilarGroup)
+LoadAllyUnitGroupIfAlive(Juan, 3, JuanGroup)
 LoadAllyUnitGroupIfEIDSetAndCharAlive(WentToHub3, Kai, 1, KaiGroup) //only spawn in kai if you went to B-3
 NoFade
 ENDA
 
 PilarGroup:
 UNIT Pilar Ninja 0 Level(1,Ally,False) [32,18] 0 0 0 0 [0x0] NoAI //talks to Kai
+UNIT
+
+JuanGroup:
 UNIT Juan Thief 0 Level(1,Ally,False) [26,21] 0 0 0 0 [0x0] NoAI //talks to Lua
 UNIT
 
@@ -788,7 +803,6 @@ ENUT GoToNextHubFlagID
 CheckHowManyHubChaptersCompleted
 SVAL s1 5
 BNE 2 sC s1 //if chapters completed != 5, skip
-    CenterTextbox(HubBSayWhereToGo)
     ENUF GoToNextHubFlagID
 LABEL 2
 STAL 1

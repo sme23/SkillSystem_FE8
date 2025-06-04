@@ -1,27 +1,3 @@
-## HubC3Title
-C-3: A Lurking Threat[X]
-
-## HubC3Objective
-Objective: Escort Traitors[X]
-
-## HubC3Units
-Units: Bolton (Dark Knight), Rima (Axe Cav)[X]
-
-## HubC3Loot
-Loot:[X]
-
-## HubC3Confirm
-Take Boru's job?[X]
-
-## HubC3Pitch
-[X]
-
-## HubC3Accepted
-[X]
-
-## HubC3Rejected
-[X]
-
 ## HubC_3Title
 Ch. C-3: A Lurking Threat[X]
 

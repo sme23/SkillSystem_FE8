@@ -1322,6 +1322,13 @@ Keeper[X]
 ## KeeperOccupation
 Zealot[X]
 
+## KeeperC2Occupation
+Guardsman[X]
+
+## KeeperC2Desc
+A humble and lazy guardsman who[N]
+nevertheless keeps a watchful eye.[X]
+
 ## KeeperDesc
 Warriors who adhere to Wayra's vision,[N]
 no matter the price that must be paid.[X]
@@ -1354,7 +1361,7 @@ A trainee Keeper whose... fervent[N]
 wanderlust outweighs self-preservation.[X]
 
 ## BurtName
-Burt[X]
+Kurt[X]
 
 ## BurtDesc
 Drifter[N]

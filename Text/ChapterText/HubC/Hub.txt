@@ -1,10 +1,41 @@
+## HubCOneDayLater
+One day later...[X]
+
 ## HubCTitle
 Hub C - Village of the Keepers[X]
+
+## HubCGiveInitialTutorial
+[MidRight][LoadLua][3LB]
+Looks like there are a few folks[N]
+who might have work for us[Beat][AN]
+Well, we'll need every bit of help[N]
+that we can get if we're going to[N]
+fly out of here any time soon,[AN]
+and I've got no hope of strongarming[N]
+them with Quispe and their guards[N]
+watching our movements like hawks.[AN]
+I'll see what the people have to[N]
+say and deal with their problems,[N]
+if they pay the right price.[A][X]
+
+## HubCSayWhereToGo
+[MidRight][LoadLua][3LB]
+Hm[Beat] That's enough of the odd jobs.[N]
+Any more, and I'll die of boredom.[N]
+It's time for a bigger heist[Beat][AN]
+Pilar should've gotten my message[N]
+earlier. Tonight, I'll hear her[N]
+final decision. To stay with us[Beat][AN]
+Or to go back to her everyday life.[N]
+[Beat]Damn, I'm all nervous now.[AN]
+I'd better go back to my room[N]
+and settle my nerves before then.[AN][X]
 
 ## HubCBeginningScene1
 [MidLeft][LoadPilar]
 [MidRight][LoadLua]
 [ML]
+[Beat]The shaking's finally stopped.[N]
 It seems we've landed, Lua.[AN]
 And no worse for wear,[N]
 thanks to this saferoom.[AN]
@@ -66,7 +97,7 @@ can be directed to me, instead.[AN][X]
 [Right]
 What the[Beat] Who are you?[N]
 The leader of Pilar's old pals?[AN]
-[MidLeft]
+[MidLeft][3LB]
 If you need a name, we are Keepers[N]
 of a forgotten age with no masters,[N]
 one Incendivis would like you to forget.[AN]
@@ -220,7 +251,7 @@ Ready to go make the rounds?[AN]
 Fill me in on the details.[AN]
 What's with these requests[N]
 that Quispe mentioned yesterday?[AN]
-[ML]
+[ML][3LB]
 They're no different from those[N]
 you'd find in any other part[N]
 of the world. People have problems,[AN]
@@ -229,12 +260,12 @@ recourse beyond brute force.[AN]
 That's where a roving pirate crew[N]
 comes in handy, doesn't it?[AN]
 No connections to the community[N]
-means no negative effects to it.[AN]
+means no pain if they fail.[AN]
 [MR]
 In other words, we're hired guns[N]
 that are just as good dead as we[N]
 are alive, to these Keepers. Wonderful.[AN]
-[ML]
+[ML][2LB]
 As Quispe said, us Keepers have tangled[N]
 with pirates before and suffered for it.[AN]
 I'm more open-minded than the others,[N]
@@ -244,14 +275,14 @@ A fake one, but whatever you say.[N]
 Let's get moving already, Pilar.[AN]
 That way, you can get back to your[N]
 perfect life here all the sooner.[A][CSSCF]
-[ML]
+[ML][3LB]
 [Beat]You couldn't be further from the truth,[N]
 Lua. If Wayra still led the Keepers,[N]
 perhaps, but Quispe[Beat] Who knows?[AN]
 Since Wayra passed a few months back,[N]
-things haven't been the same here.[AN]
-[Beat]Old age, they said? We'll see[N]
-what I can dig up while I'm here,[N]
+things around here[Beat] They've changed.[AN]
+Old age, they said? We'll see what[N]
+I can discover while I'm here,[N]
 and what the truth really is[Beat][A][X]
 
 
@@ -495,7 +526,7 @@ else it is you want to do.[AN]
 [CloseEyes]I've got nowhere else to go[Beat][A][X]
 
 ## HubC1Title
-Ch. C-1: Wages of Greed[X]
+C-1: Wages of Greed[X]
 
 ## HubC1Objective
 Objective: Defeat Boss[X]
@@ -508,3 +539,614 @@ Loot: Sword and tome users will benefit.[X]
 
 ## HubC1Confirm
 Accept Ruby's request?[X]
+
+// pitch idea: Lua talks to a soldier who mentions that there's a supply depot not far from the village, where she can buy on the cheap!
+// But the soldier mentions that he thought he saw some ships flying that way, and to expect trouble
+
+## HubC2Title
+C-2: Supply and Demand[X]
+
+## HubC2Objective
+Objective: Defeat Boss[X]
+
+## HubC2Units
+Units: Calista (Dragoon), Valerie (Archer)[X]
+
+## HubC2Loot
+Loot: Bows and guns.[X]
+
+## HubC2Confirm
+Inspect the brawl?[X]
+
+## HubC2Pitch
+[X]
+
+## HubC2Accepted
+[X]
+
+## HubC2Rejected
+[X]
+
+## HubC3Title
+C-3: A Lurking Threat[X]
+
+## HubC3Objective
+Objective: Escort Traitors[X]
+
+## HubC3Units
+Units: Bolton (Dark Knight), Rima (Axe Cav)[X]
+
+## HubC3Loot
+Loot: Unique staves and equippables.[X]
+
+## HubC3Confirm
+Take Boru's job?[X]
+
+// boru pitch: he's looking to hire someone to deal with Salman and some people who left the village and are conspiring against Quispe
+
+## HubC3Pitch
+[X]
+
+## HubC3Accepted
+[X]
+
+## HubC3Rejected
+[X]
+
+## HubC4Title
+C-4[X]
+
+## HubC4Objective
+Objective: Escape[X]
+
+## HubC4Units
+Units: Remora (Berserker)[X]
+
+## HubC4Loot
+Loot: Rare treasure beyond compare.[X]
+
+## HubC4Confirm
+Should I take this job?[X]
+
+## HubC4Pitch
+[ML][LoadLua][MR][LoadRemora]
+[MR]
+You! You're Captain Lua of the[N]
+Skysabers, aren't you?[A]
+[ML]
+That I am. Has our infamy reached[N]
+the Old World already?[AN]
+Or are you someone I ought to know?[A]
+[MR]
+We've never met, though I certainly[N]
+know of you and your crew.[AN]
+In my hunt for lost treasure, your[N]
+name keeps popping up.[AN]
+Tomb of San Torino? Your crew beat me[N]
+there by a week.[AN]
+The Taklakama dunes? Cleaned out by[N]
+the Skysabers just before I arrived.[AN]
+Every time I get a lead, you're one[N]
+step ahead of me.[AN]
+[ML]
+The dunes were a trap set by bandits[N]
+to pray on treasure seekers.[A]
+[MR]
+Ah, well, I suppose that one worked[N]
+out for me then.[AN]
+Anyway, I propose as fellow treasure[N]
+hunters we team up.[AN]
+I've got a new job lined up, but it's[N]
+too big for me to pull off solo.[AN]
+I know you're looking for a way off[N]
+this rock, and with the profits,[AN]
+you'll be well on your way to buying[N]
+yourself a shiny new ship.[A]
+[ML][1LB]
+I'll bite. What's the job?[A]
+[MR][2LB]
+Some 50 years back, the Aquarius[N]
+crashed into Thunderhead Rock,[AN]
+a small isle to the northeast.[AN]
+All its treasure is there for the[N]
+taking, but naturally there's a catch.[AN]
+Through some foul sorcery, the ghosts[N]
+of its crew still guard its treasure.[A]
+[ML][1LB]
+So my Skysabers are the muscle.[A]
+[MR][3LB]
+Yeah. I've had my fair share of[N]
+clashes with pirate ghosts,[N]
+and they're no pushovers.[AN]
+I've already got a buyer for the ship's[N]
+strongbox lined up on this island.[AN]
+We'll split that and the rest of the[N]
+loot 50/50, since I'm providing the[N]
+intel and transport. Sounds good?[A][X]
+
+## HubC4Accepted
+[ML][LoadLua][MR][LoadRemora]
+[ML]
+You've got a deal.[N]
+How soon can we depart?[AN]
+[MR]
+As soon as your crew is ready.[AN]
+I've chartered a skiff that can[N]
+fit a bit over a dozen.[AN]
+By the way, are you a good swimmer?[A]
+[ML]
+Not particularly.[N]
+Is the treasure underwater?[AN]
+[MR]
+Not sure, but the crash site is at[N]
+least partially submerged.[AN]
+I've got some spare swimwear lying[N]
+around. Better safe than sorry, right?[AN]
+[ML][1LB]
+Will this even fit me[Beat]?[A]
+[X]
+
+## HubC4Rejected
+[ML][LoadLua][MR][LoadRemora]
+[ML]
+Sorry, I'm still reviewing my options.[N]
+I'll let you know if I change my mind.[A]
+[MR]
+Suit yourself. I'll go hunting for[N]
+sites that I can handle myself.[AN][X]
+
+//hub recruitments, windy's can be in progress
+## HubCWindyRecruitmentFirstTime
+[MidLeft][LoadWindy]
+[MidRight][LoadLua]
+[MidLeft]
+O-Oh, you're the famous Captain Lua![N]
+It's an honor to meet you, ma'am![AN]
+[MidRight]
+An honor? I didn't expect that any[N]
+Keeper would respond to pirates so[N]
+warmly. What's your deal, kid?[AN]
+[MidLeft]
+Ha, well, I'm not just any Keeper![N]
+To tell you the truth, I've always[N]
+wanted to go on a grand journey.[AN]
+And pirates like you guys must[N]
+do that all the time, right?[AN]
+[MidRight]
+Uh, I wouldn't really say-[AN]
+[MidLeft]
+No need to be modest, captain![N]
+Now, I have a small request.[N]
+[Beat]Can I join your crew? Please?[AN]
+[MidRight]
+You? I don't even know your name,[N]
+and you hardly look like a fighter.[N]
+Why should I bring you on board?[AN]
+[MidLeft]
+Oh, right! I'm Windy, captain![N]
+And yes, I admit that I'm a novice,[N]
+but my teacher says I have potential.[AN]
+If that's not enough, then I'm[N]
+even willing to work for free.[N]
+Please[Beat] Just bring me with you![A][X]
+
+## HubCWindyRecruitmentChoice
+[MidRight][LoadLua][ToggleMouthMove]
+(Should I let Windy join?)[Yes][X]
+
+## HubCWindyRecruitmentYes
+[MidLeft][LoadWindy]
+[MidRight][LoadLua][3LB]
+[Beat]Well, you wouldn't be the first[N]
+rugrat that I've taken with me,[N]
+but you'd better get this straight.[AN]
+This isn't going to be some scenic[N]
+cruise. You're going to work harder[N]
+than you've ever worked in your life![AN]
+[MidLeft]
+I-If it means that I can see the[N]
+world[Beat] That I can finally leave[N]
+my boring home behind in the dust[Beat][AN]
+Then I'll take on any risk![N]
+I'll do whatever you ask![N]
+What are your orders, captain?![AN]
+[MidRight]
+[Beat]For now?[A][ToggleSmile] Take it easy, Windy.[N]
+We'll be setting out soon enough.[A][CSSCF]
+[MidLeft]
+[Beat]That's it? After all that buildup?[N]
+Then I'll use this time to train![AN]
+If I'm going to stay with the Skysabers[N]
+and see the world outside the village,[N]
+then I can't waste even a single second![A][X]
+
+## HubCWindyRecruitmentNo
+[MidLeft][LoadWindy]
+[MidRight][LoadLua][3LB]
+Sorry, but I've got no need[N]
+for a crewmate as green as you.[AN]
+But hey, maybe I'll change my mind.[N]
+You'd best keep training if you[N]
+want to convince me, Windy.[AN]
+[MidLeft]
+If it means I can leave home,[N]
+then I'll do whatever it takes![N]
+I'll get to work right away![A][X]
+
+## HubCKurtRecruitmentFirstTime
+[MidLeft][LoadKurt]
+[MidRight][LoadLua]
+[MidLeft]
+Ah, hello there, Captain Lua![AN]
+I've heard a lot about you[N]
+from the villagers recently.[AN]
+[MidRight]
+And I can't say I've heard anything[N]
+about you. What's your name, man?[AN]
+[MidLeft][3LB]
+I'm Kurt, a mercenary. Ended up here[N]
+after a job gone wrong, so I've been[N]
+stuck doing odds and ends for Keepers.[AN]
+I've kept watch for promising crews[N]
+coming in and out of the harbor,[N]
+but none showed up til you guys.[AN]
+I'd like to offer my services[N]
+to you, if you'll have me.[AN]
+[MidRight]
+What services might those be, and[N]
+what am I meant to pay for them?[AN]
+[MidLeft]
+Besides my wolf buddy here?[N]
+I've got a solid speararm,[N]
+and I'm not bad with knives.[AN]
+Beyond that[Beat] This might sound odd,[N]
+but I've always been luckily unlucky.[AN]
+In battle, strange things always happen[N]
+to me, but somehow, whoever I'm fighting[N]
+always pays for it. Weird, isn't it?[AN]
+But it might help you out, captain.[N]
+I'm like a good bad luck charm![N]
+At the low, low price of 1000 gold![A][X]
+
+## HubCKurtRecruitmentChoice
+[MidRight][LoadLua][ToggleMouthMove]
+(Should I hire Kurt now?)[Yes][X]
+
+## HubCKurtRecruitmentYes
+[MidLeft][LoadKurt]
+[MidRight][LoadLua]
+Ha, you really thought that was[N]
+a good way to sell yourself?[N]
+Telling me you've got bad luck?[AN]
+[MidLeft]
+I-Is that a no, captain?[AN]
+[MidRight]
+It isn't. You've definitely got the look[N]
+of a capable fighter, and I'm not going[N]
+to turn down any of those right now.[AN]
+Just[Beat] Stay far away from everyone[N]
+else on the crew, if that story about[N]
+your luck's real. Otherwise, you're out.[AN]
+[MidLeft]
+You got it, boss! I swear, I'll follow[N]
+every one of your orders to the letter.[N]
+Man[Beat] I'm just so glad to have a job![AN]
+This would've been my fiftieth rejection,[N]
+so I[Beat] I can't thank you enough![N]
+I'll earn my keep. Count on it![AN][CSSCF]
+[MidRight]
+He was shot down that many times?[N]
+I might've made a big mistake[Beat][AN][X]
+
+## HubCKurtRecruitmentNo
+[MidLeft][LoadKurt]
+[MidRight][LoadLua][3LB]
+[Beat]Those are some dubious selling[N]
+points, so I'll pass on hiring you.[AN]
+For now, I have enough crewmates[N]
+to get by, and you sound like[N]
+more trouble than you're worth.[AN]
+[MidLeft]
+Just my luck, huh[Beat] Well,[N]
+suit yourself, captain.[AN]
+If you change your mind,[N]
+I'll be around for a while[N]
+unless somebody hires me.[AN]
+Which[Beat] I don't see that[N]
+happening any time soon.[AN]
+[MidRight]
+You know[Beat] You really shouldn't[N]
+tell a potential employer that[N]
+they've got no competition, Kurt.[A][X]
+
+## HubCKurtTellsLuaShesBroke
+[MidLeft][LoadKurt]
+[MidRight][LoadLua]
+[MidLeft][3LB]
+Oh, you uh, don't have it?[AN]
+Wow, that's[Beat] Hm. Guess[N]
+you all did just crash,[N]
+so maybe I shouldn't judge.[AN]
+Let me know if you scrounge[N]
+up some gold and find some[N]
+room in the budge to hire me.[AN][X]
+
+## HubCTheanaRecruitmentFirstTime
+[MidLeft][LoadTheana]
+[MidRight][LoadLua]
+[MidLeft]
+[Beat]You the new captain[N]
+strutting around here?[A]
+[MidRight]
+You could say that.[N]
+Who's asking?[AN]
+[MidLeft]
+The name's Theana. I need a job,[N]
+and you need a stronger crew.[AN]
+So I figured I'd cut to the chase.[N]
+How about you hire me, captain?[AN]
+[MidRight][3LB]
+Well, you're certainly direct[Beat][N]
+I've got plenty of crewmates as it is.[N]
+What makes you so special, Theana?[AN]
+[MidLeft]
+I'm the best at what I do; murder.[N]
+I can see the ambition in your eyes.[N]
+You've got big plans here, right?[AN]
+Hire me, and I'll see them through[N]
+by killing anyone in your way.[AN]
+Upfront, I want[Beat] Mm, 2000 gold.[X]
+
+## HubCTheanaTellsLuaShesBroke
+[MidLeft][LoadTheana]
+[MidRight][LoadLua]
+[MidLeft][3LB]
+[Beat]You don't have the money?[N]
+I don't work on IOUs, captain.[N]
+Our conversation ends here.[A][X]
+
+## HubCTheanaRecruitmentChoice
+[MidRight][LoadLua][ToggleMouthMove]
+(Should I hire Theana now?)[Yes][X]
+
+## HubCTheanaRecruitmentYes
+[MidLeft][LoadTheana]
+[MidRight][LoadLua]
+[Beat]Sure, why not? Having another warm[N]
+body's always helpful, so even if[N]
+your bite doesn't match your bark,[AN]
+I'll find a use for you, Theana.[AN]
+[MidLeft][ToggleSmile]
+[Beat]Doubting me, huh? Be that way.[N]
+I'll show you why I'm worth the[N]
+gold, soon enough. Count on it.[A][X]
+
+## HubCTheanaRecruitmentNo
+[MidLeft][LoadTheana]
+[MidRight][LoadLua]
+I respect the gusto, but sorry,[N]
+I'm not interested right now.[N]
+If I change my mind, I'll let you know.[AN]
+[MidLeft]
+Fair enough. I've got business[N]
+to settle, so I'll stick around[N]
+a bit longer. Don't keep me waiting.[AN][X]
+
+//Group 1: Desiderio/Noah/Medwyn (armor trio, Desi trying to train them: If Medwyn not chosen, then just Desi and Noah)
+## HubC_Desiderio_Noah_Text
+[X]
+
+## HubC_Desiderio_Noah_Medwyn_Text
+[X]
+
+//Group 2: Adrian/Tangyuan/Rima (all axe users with dubious morals, maybe they can be competing in some bet)
+## HubC_Adrian_Tangyuan_Rima_Text
+[X]
+
+//Group 3: Jaime/Carmen (they're relatives, probably should talk at some point)
+## HubC_Jaime_Carmen_Text
+[FarLeft][LoadJaime][3LB]
+I'm telling you: I'm not going[N]
+anywhere, Carmen. So give me[N]
+a break already, will you?[AN]
+[Left][LoadCarmen]
+No, I don't think that I will.[N]
+[Beat]Oh, here comes the captain![N]
+How about I tell her the truth?[AN]
+[FarLeft]
+Oh, you petty-[AN]
+[MidRight][LoadLua]
+What's all this about, you two?[N]
+I could hear your bickering[N]
+from across the damn village.[AN]
+[FarLeft]
+Uh, sorry about that, Captain Lua.[N]
+It's nothing worth your time,[N]
+though. Just small stuff, really.[AN]
+[Left][ToggleSmile]
+[Beat]Heh.[AN]
+[MidRight][ToggleSmile]
+If it's enough to draw my attention,[N]
+then yes, it is worth my time.[AN]
+But if you won't tell me what's[N]
+going on, then maybe she will.[N]
+Carmen, you'd better explain. Now.[AN]
+[Left]
+Well, well, it looks like I have no[N]
+choice. Ah, what a shame it is to spill[N]
+Jaime's deepest and darkest secrets![AN]
+[FarLeft]
+[Beat]You're gonna regret this, Carmen.[AN]
+[Left]
+Again, I don't think that I will.[N]
+Get this, captain: Jaime's actually[Beat][N]
+Drum roll, if you will[Beat] My cousin![AN]
+[MidRight]
+[Beat]Oh, so that's what it was.[N]
+I already could tell you two[N]
+were related. Pretty obvious.[AN]
+[Left]
+H-Huh?! Was it our hair?[AN]
+[MidRight]
+Hair color? Who would use that[N]
+as sole proof that you're family?[AN]
+No, I just observed you two[N]
+closely, just like everyone else.[N]
+Even way back in Port Greagor,[N]
+it was clear as day to me that[N]
+you had some kind of past.[AN]
+And Carmen doesn't seem the type[N]
+to have many friends, so when put[N]
+together with your resemblance[Beat][AN]
+[Left]
+How rude! I do have friends! Lots![N]
+Like Miss Fata, who teaches me[N]
+some of her magical tricks[Beat][AN]
+Or Ximo! Yes, Ximo and I are[N]
+the best of friends, captain![N]
+Boon companions, even![AN]
+[MidRight]
+[Beat]Anyway, that still doesn't explain[N]
+what the two of you were arguing[N]
+about. What's the issue, exactly?[AN]
+[Left]
+Hold on, you cannot just insult me[N]
+and then change the subject-[AN]
+[FarLeft]
+Ah, well[Beat] Carmen's mad that I won't[N]
+tell her more about why I left the[N]
+del Rias family. Says I owe it to her.[AN]
+But I don't think it's her business,[N]
+or anyone else's. So long as I'm doing[N]
+my job, my secrets are my own, right?[AN]
+[MidRight]
+That's always been my policy, yeah.[N]
+Besides, it isn't hard to tell why[N]
+you went your own way, is it?[AN]
+Can't fight against the empire[N]
+trapped inside a gilded cage.[AN]
+[FarLeft]
+[Beat]There's more to it, but yeah,[N]
+that's pretty much the crux of it.[AN]
+[Left]
+[Beat]It isn't just that I should know,[N]
+captain. Hector[Beat] Or rather, Jaime,[N]
+was the heir apparent of our family.[AN]
+I wouldn't be surprised if there were[N]
+search parties looking for him, now[Beat][N]
+That would mean trouble for us, yes?[AN]
+[FarLeft]
+And like I said, they're not looking[N]
+for me. They wouldn't want to, y'know?[N]
+[Beat]My sis was the golden child, not me.[AN]
+So it's like I was telling Carmen,[N]
+before you got here. I'm not going[N]
+anywhere, and no one's coming for me.[AN]
+[MidRight]
+That so? Well, if you say so.[N]
+You've stuck by us long enough[N]
+that I'll trust you on that.[AN]
+[Left]
+[Beat]If the captain has no objections,[N]
+then I suppose I should drop mine, too.[N]
+For your many flaws, Jaime, you're[Beat][AN]
+Capable, more than you credit yourself.[N]
+We would be lucky if you stayed with us.[AN]
+[FarLeft]
+Ha[Beat] What's got into you, Carmen?[N]
+Kindness really doesn't suit you.[AN]
+[Left]
+Y-You oaf! For once, I make the mistake[N]
+of attempting to lift your spirits,[N]
+and you respond like this? Why, I ought-[AN][CSSCF]
+[FarLeft][CSSCF]
+[MidRight]
+Ugh, again? I'll just leave them[N]
+alone and let them get it all out.[AN]
+Damned del Rias family[Beat] If I ever[N]
+meet them myself, I'm gonna make[N]
+them pay for all the trouble![AN][X]
+
+//Group 4: Razvan/Valerie/Calista (the empire-friendly characters, razvan helped them out before)
+## HubC_Razvan_Valerie_Calista_Text
+[X]
+
+//Group 5: Pilar/Windy (both Keepers, Windy in training and Pilar experienced)
+## HubC_Pilar_Windy_Text
+[X]
+
+//Group 6: Indio/Dmitr/Leandra (all wanderers, Indio and Leandra joined at the same time)
+## HubC_Indio_Dmitr_Leandra_Text
+[X]
+
+//Group 7: Ondeh/Hermenegildo/Ruby (victims of the Rioja Reapers and the last one remaining)
+## HubC_Ondeh_Hermenegildo_Ruby_Text
+[X]
+
+//Group 8: Rahel/Ximo (two archers who are both interested in mechanics)
+## HubC_Rahel_Ximo_Text
+[X]
+
+//Group 9: Matteo/Kurt (both mercs, very different personalities)
+## HubC_Matteo_Kurt_Text
+[X]
+
+//Group 10: Orlando/Remora/Triana (triad of adventurer types, 3rd member conditional)
+## HubC_Orlando_Remora_Text
+[X]
+
+## HubC_Orlando_Remora_Triana_Text
+[X]
+
+//Group 11: Fata/Neltume/Husniye (nature dwellers/antisocial, 3rd member conditional)
+## HubC_Fata_Neltume_Text
+[X]
+
+## HubC_Fata_Neltume_Husniye_Text
+[X]
+
+//Group 12: Leonor/Estelle/Magdalena (all staffers, 3rd member conditional)
+## HubC_Leonor_Estelle_Text
+[X]
+
+## HubC_Leonor_Estelle_Magdalena_Text
+[X]
+
+//Group 13: Lexa/Suzanne/Bartz (all pretty overconfident, except bartz, 3rd member conditional)
+## HubC_Lexa_Suzanne_Text
+[X]
+
+## HubC_Lexa_Suzanne_Bartz_Text
+[X]
+
+//Group 14: Kai/Theana (a shared past?)
+## HubC_Kai_Theana_Text
+[X]
+
+//Group 15: Durgham/Yodsen/Juan (morally ambiguous but funny fellas)
+## HubC_Durgham_Yodsen_Juan_Text
+[X]
+
+//Group 16: Biko/Ernest/Avocado (triad of lance users, 3rd member conditional)
+## HubC_Biko_Ernest_Text
+[X]
+
+## HubC_Biko_Ernest_Avocado_Text
+[X]
+
+//Group 17: Ponte/Passarola/Bolton (two inventor/builders and Bolton, who Passarola is fascinated with)
+## HubC_Ponte_Passarola_Bolton_Text
+[X]
+
+
+
+
+
+
+
+
+
+
+
+
+

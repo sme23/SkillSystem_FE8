@@ -1654,7 +1654,7 @@ the foe's, perform a followup attack.[X]
 ## SD_AstralBlessing
 Astral Blessing: At start of turn,[N]
 units within 3 spaces randomly gain[N]
-SPD+2, SKL+3, or LCK+4 for that turn.[X]
+SPD+2, SKL+3, or EVA+4 for that turn.[X]
 
 ## SD_CatchingUp
 Catching Up: If an enemy would follow[N]
@@ -1872,3 +1872,16 @@ unit always Breaks on hit.[X]
 ## SD_Incantation
 Incantation: Command. Gain +4 Mt[N]
 and +30% Crit on unit's next attack.[X]
+
+## SD_ThunderingHooves
+Thundering Hooves: Each turn, enemies[N]
+within 2 tiles of this unit take damage[N]
+equal to 25% of their max HP.[X]
+
+## SD_Precision
+Killer's Precision: When attacking at[N]
+range, this unit's Skl is added to Crit.[X]
+
+## SD_Misfortune
+Lucky Misfortune: All units within 2[N]
+tiles of this unit have halved Avoid.[X]

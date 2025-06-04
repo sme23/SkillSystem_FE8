@@ -256,7 +256,7 @@
 [LoadRogelio] = [LoadFace][0xB4][0x1]
 
 [LoadWindy] = [LoadFace][0xB5][0x1]
-[LoadBurt] = [LoadFace][0xB6][0x1]
+[LoadKurt] = [LoadFace][0xB6][0x1]
 [LoadTheana] = [LoadFace][0xB7][0x1]
 
 [LoadSalvador] = [LoadFace][0xB8][0x1]

@@ -42,6 +42,7 @@
 
 
 #define HubChapterFirstTimeEvent(labelId, seenEID, selectionText) "EVBIT_MODIFY 4; CHECK_EVENTID seenEID; BNE labelId s0 sC; Text(selectionText); ENUT seenEID; LABEL labelId"
+#define HubChapterFirstTimeEvent_DeathConditional(skipLabel, deathLabel, charID, seenEID, aliveText, deadText) "EVBIT_MODIFY 4; CHECK_EVENTID seenEID; BNE skipLabel s0 sC; ENUT seenEID; CHECK_ALIVE charID; BEQ deathLabel s0 sC; Text(aliveText); GOTO skipLabel; LABEL deathLabel; Text(deadText); LABEL skipLabel"
 
 #define CheckIfHubVisited "ASMC CheckIfHubVisitedASMC"
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
@@ -53,9 +54,14 @@
 #define CheckIfHubAChapterCompleted "ASMC CheckIfOneHubAChapterCompletedASMC"
 
 #define HubFirstTimeTalkToUnit(firstTalkEID, labelID, textID) "CHECK_EVENTID firstTalkEID; BNE labelID s0 sC; Text(textID); ENUT firstTalkEID"
+#define HubTalkToUnitFirstTime(firstTalkEID, labelID, textID) "CHECK_EVENTID firstTalkEID; BNE labelID s0 sC; Text(textID); ENUT firstTalkEID; LABEL labelID"
+
 #define RecruitThenHideCharacter(charID, textID) "Text(textID); CUSA charID; FlashCursor(charID, 60); FADI 10; SVAL s1 0x1; SET_CONDITION charID; FADU 10"
+#define RecruitThenHideCharacter(charID, textID, songID) "MUSS songID; Text(textID); CUSA charID; SetAI(charID,0,0,0,0); FlashCursor(charID, 60); FADI 10; SVAL s1 0x9; SET_CONDITION charID; FADU 10; MURE 2"
 #define HubRecruitUnit(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); GOTO finalLabelID"
+#define HubRecruitUnit(charID, rejectedlabelID, recruitedTextID, finalLabelID, songID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID, songID); GOTO finalLabelID"
 #define HubRecruitMoney(charID, rejectedlabelID, recruitedTextID, finalLabelID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID); TAKEMONEY; GOTO finalLabelID"
+#define HubRecruitMoney(charID, rejectedlabelID, recruitedTextID, finalLabelID, songID) "SVAL s1 0x1; BNE rejectedlabelID s1 sC; RecruitThenHideCharacter(charID, recruitedTextID, songID); TAKEMONEY; GOTO finalLabelID"
 #define HubRejectUnit(rejectedTextID, convoEID) "Text(rejectedTextID); ENUF convoEID"
 #define UnsetAllHubChapterFlags "ASMC UnsetAllHubChapterFlagsASMC"
 
@@ -104,6 +110,8 @@
 #define LoadAllyUnitGroupIfEIDSetAndCharAlive(eventId, charId, labelId, unitGroup) "CHECK_EVENTID eventId; BEQ labelId s0 sC; CHECK_ALIVE charId; BEQ labelId s0 sC; LoadPlayerUnits(unitGroup); LABEL labelId"
 #define LoadAllyUnitGroupIfAlive(charId, labelId, unitGroup) "CHECK_ALIVE charId; BEQ labelId s0 sC; LoadPlayerUnits(unitGroup); LABEL labelId"
 
+#define LoadAllyOrNPCUnitGroupIfEIDSet(eventId, charId, unrecruitedLabelId, skipLabelId, allyGroup, npcGroup) "CHECK_EVENTID eventId; BEQ unrecruitedLabelId s0 sC; CHECK_ALIVE charId; BEQ skipLabelId s0 sC; LoadPlayerUnits(allyGroup); GOTO skipLabelId; LABEL unrecruitedLabelId; LoadPlayerUnits(npcGroup); LABEL skipLabelId"
+
 #define CallEventIfEIDNotSet(eventId, labelId, eventOffset) "CHECK_EVENTID eventId; BNE labelId s0 sC; CALL eventOffset; LABEL labelId"
 
 #define CalculateYodsenPrice "ASMC CalculateYodsenPriceASMC"
@@ -116,7 +124,11 @@
 #define CheckIfHubBTalkLegalOneChar(char1, label1, label2, globalFlag, tempFlag) "CHECK_ALIVE char1; BEQ label1 s0 sC; CHECK_EVENTID globalFlag; BNE label1 s0 sC; GOTO label2; LABEL label1; ENUT tempFlag; LABEL label2"
 #define CheckIfHubBTalkLegalTwoChar(char1, char2, label1, label2, globalFlag, tempFlag) "CHECK_ALIVE char1; BEQ label1 s0 sC; CHECK_ALIVE char2; BEQ label1 s0 sC; CHECK_EVENTID globalFlag; BNE label1 s0 sC; GOTO label2; LABEL label1; ENUT tempFlag; LABEL label2"
 #define CheckIfHubBTalkLegalThreeChar(char1, char2, char3, label1, label2, globalFlag, tempFlag) "CHECK_ALIVE char1; BEQ label1 s0 sC; CHECK_ALIVE char2; BEQ label1 s0 sC; CHECK_ALIVE char3; BEQ label1 s0 sC; CHECK_EVENTID globalFlag; BNE label1 s0 sC; GOTO label2; LABEL label1; ENUT tempFlag; LABEL label2"
-#define DisplayTextThenSetGlobalFlag(textID, globalFlag) "Text(textID); ENUT globalFlag"
+#define DisplayTextThenSetGlobalFlag(textID, globalFlag) "SET_ACTIVE 0; Text(textID); ENUT globalFlag; SET_ACTIVE Lua"
+#define DisplayConditionalTextOnCharAndSetEID(labelNotAliveID, labelEndID, charID, aliveTextID, notAliveTextID, globalFlag) "SET_ACTIVE 0; ENUN; ENUT globalFlag; CHECK_ALIVE charID; BEQ labelNotAliveID s0 sC; Text(aliveTextID); GOTO labelEndID; LABEL labelNotAliveID; Text(notAliveTextID); LABEL labelEndID; SET_ACTIVE Lua"
+
+#define CheckIfHubCTalkLegalTwoChar(char1, char2, label1, label2, globalFlag, tempFlag) "CHECK_ALIVE char1; BEQ label1 s0 sC; CHECK_ALLEGIANCE char1; BNE label1 s0 sC; CHECK_ALIVE char2; BEQ label1 s0 sC; CHECK_ALLEGIANCE char2; BNE label1 s0 sC; CHECK_EVENTID globalFlag; BNE label1 s0 sC; GOTO label2; LABEL label1; ENUT tempFlag; LABEL label2"
+
 
 #define GoToHubChapter(chapterId) "ASMC EyeForAnEyeResetASMC; MNC2 chapterId"
 

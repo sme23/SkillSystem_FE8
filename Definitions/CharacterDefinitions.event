@@ -78,6 +78,7 @@
 // HUB C BASE UNITS
 #define Windy $2B
 #define Burt $2E
+#define Kurt Burt
 #define Theana $2F
 
 
@@ -218,6 +219,10 @@
 #define Dalila 0x7B
 #define AlonsoChapter3 0x7C
 #define BlackheartElite 0x7D
+
+// Hub C
+#define KeeperC2 0x95
+#define KeeperC4 0x96
 
 // Hub C1
 #define Baltasar 0xDC

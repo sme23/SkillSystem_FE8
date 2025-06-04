@@ -12,12 +12,378 @@ POIN $0 $0 $0
 POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
+#define SeenHubC1Pitch 7
+#define SeenHubC2Pitch 8
+#define SeenHubC3Pitch 9
+#define SeenHubC4Pitch 10
+#define HubC_Desiderio_Noah_Medwyn_Temp_Talk_Flag 11
+#define HubC_Adrian_Tangyuan_Rima_Temp_Talk_Flag 12
+#define HubC_Jaime_Carmen_Temp_Talk_Flag 13
+#define HubC_Razvan_Valerie_Calista_Temp_Talk_Flag 14
+#define HubC_Pilar_Windy_Temp_Talk_Flag 15
+#define HubC_Indio_Dmitr_Leandra_Temp_Talk_Flag 16
+#define HubC_Ondeh_Hermenegildo_Ruby_Temp_Talk_Flag 17
+#define HubC_Rahel_Ximo_Temp_Talk_Flag 18
+#define HubC_Matteo_Kurt_Temp_Talk_Flag 19
+#define HubC_Orlando_Remora_Triana_Temp_Talk_Flag 20
+#define HubC_Fata_Neltume_Husniye_Temp_Talk_Flag 21
+#define HubC_Leonor_Estelle_Magdalena_Temp_Talk_Flag 22
+#define HubC_Lexa_Suzanne_Bartz_Temp_Talk_Flag 23
+#define HubC_Kai_Theana_Temp_Talk_Flag 24
+#define HubC_Durgham_Yodsen_Juan_Temp_Talk_Flag 25
+#define HubC_Biko_Ernest_Avocado_Temp_Talk_Flag 26
+#define HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag 27
+#define HubC_KurtSpokenToOnceFlag 28
+#define HubC_TheanaSpokenToOnceFlag 29
+#define HubC_WindySpokenToOnceFlag 30
 
 TurnBasedEvents:
+TurnEventPlayer(Turn1EventFlag, Turn1Event, 1)
 END_MAIN
 
+Turn1Event:
+FADI 15
+CALL SpawnHubCUnits
+CALL SetAllHubCTalkFlags
+CAMERA_CENTERED Lua
+FADU 15
+CheckHowManyHubChaptersCompleted
+BNE 2 s0 sC //if it's not 0, don't give initial tutorial
+    Text(HubCGiveInitialTutorial)
+    GOTO 3
+LABEL 2
+SVAL s1 5
+BNE 3 sC s1
+    Text(HubCSayWhereToGo) //note that you can move on
+LABEL 3
+NoFade
+ENDA
+
+SpawnHubCUnits:
+LoadPlayerUnits(HubC_StartingCrewGuaranteed)
+LoadAllyUnitGroupIfAlive(Ruby, 1, RubyGroup)
+LoadAllyUnitGroupIfAlive(Leandra, 2, LeandraGroup)
+LoadAllyUnitGroupIfAlive(Adrian, 3, AdrianGroup)
+LoadAllyUnitGroupIfAlive(Valerie, 4, ValerieGroup)
+LoadAllyUnitGroupIfAlive(Calista, 5, CalistaGroup)
+LoadAllyUnitGroupIfAlive(Noah, 6, NoahGroup)
+LoadAllyUnitGroupIfAlive(Medwyn, 7, MedwynGroup)
+LoadAllyOrNPCUnitGroupIfEIDSet(HubC_Windy_Recruited_Flag, Windy, 8, 9, WindyAllyGroup, WindyNPCGroup)
+LoadAllyUnitGroupIfAlive(Rima, 10, RimaGroup)
+LoadAllyOrNPCUnitGroupIfEIDSet(HubC_Kurt_Recruited_Flag, Kurt, 11, 12, KurtAllyGroup, KurtNPCGroup)
+LoadAllyUnitGroupIfAlive(Remora, 13, RemoraAllyGroup)
+LoadAllyUnitGroupIfAlive(Triana, 14, TrianaGroup)
+LoadAllyUnitGroupIfAlive(Fata, 15, FataGroup)
+LoadAllyUnitGroupIfAlive(Neltume, 16, NeltumeGroup)
+LoadAllyUnitGroupIfAlive(Husniye, 17, HusniyeGroup)
+LoadAllyUnitGroupIfAlive(Magdalena, 18, MagdalenaGroup)
+LoadAllyUnitGroupIfAlive(Lexa, 19, LexaGroup)
+LoadAllyUnitGroupIfAlive(Bartz, 20, BartzGroup)
+LoadAllyUnitGroupIfAlive(Kai, 21, KaiGroup)
+LoadAllyOrNPCUnitGroupIfEIDSet(HubC_Theana_Recruited_Flag, Theana, 22, 23, TheanaAllyGroup, TheanaNPCGroup)
+LoadAllyUnitGroupIfAlive(Durgham, 24, DurghamGroup)
+LoadAllyUnitGroupIfAlive(Yodsen, 25, YodsenGroup)
+LoadAllyUnitGroupIfAlive(Juan, 26, JuanGroup)
+LoadAllyUnitGroupIfAlive(Passarola, 27, PassarolaGroup)
+LoadAllyUnitGroupIfAlive(Bolton, 28, BoltonGroup)
+//hub guys need to come after
+LoadNPCUnitGroupIfEIDNotSet(WentToHub1, 776, RubyNPCUnitGroup, C1Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub2, 777, Keeper1UnitGroup, C2Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub3, 778, BoruUnitGroup, C3Indicator)
+LoadNPCUnitGroupIfEIDNotSet(WentToHub4, 779, RemoraNPCUnitGroup, C4Indicator)
+NoFade
+ENDA
+
+SetAllHubCTalkFlags:
+//need to add conditional checks here for the convos where it could be 2 or 3 guys
+CheckIfHubBTalkLegalThreeChar(Adrian, Tangyuan, Rima, 1, 2, HubC_Adrian_Tangyuan_Rima_Global_Talk_Flag, HubC_Adrian_Tangyuan_Rima_Temp_Talk_Flag)
+CheckIfHubBTalkLegalTwoChar(Jaime, Carmen, 3, 4, HubC_Jaime_Carmen_Global_Talk_Flag, HubC_Jaime_Carmen_Temp_Talk_Flag)
+CheckIfHubBTalkLegalThreeChar(Razvan, Valerie, Calista, 5, 6, HubC_Razvan_Valerie_Calista_Global_Talk_Flag, HubC_Razvan_Valerie_Calista_Temp_Talk_Flag)
+
+CheckIfHubBTalkLegalThreeChar(Indio, Dmitr, Leandra, 9, 10, HubC_Indio_Dmitr_Leandra_Global_Talk_Flag, HubC_Indio_Dmitr_Leandra_Temp_Talk_Flag)
+CheckIfHubBTalkLegalThreeChar(Ondeh, Hermenegildo, Ruby, 11, 12, HubC_Ondeh_Hermenegildo_Ruby_Global_Talk_Flag, HubC_Ondeh_Hermenegildo_Ruby_Temp_Talk_Flag)
+CheckIfHubBTalkLegalTwoChar(Rahel, Ximo, 13, 14, HubC_Rahel_Ximo_Global_Talk_Flag, HubC_Rahel_Ximo_Temp_Talk_Flag)
+CheckIfHubBTalkLegalThreeChar(Durgham, Yodsen, Juan, 17, 18, HubC_Durgham_Yodsen_Juan_Global_Talk_Flag, HubC_Durgham_Yodsen_Juan_Temp_Talk_Flag)
+CheckIfHubBTalkLegalThreeChar(Ponte, Passarola, Bolton, 19, 20, HubC_Ponte_Passarola_Bolton_Global_Talk_Flag, HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag)
+
+//hub c diff is it checks for allegiance as well
+CheckIfHubCTalkLegalTwoChar(Pilar, Windy, 7, 8, HubC_Pilar_Windy_Global_Talk_Flag, HubC_Pilar_Windy_Temp_Talk_Flag)
+CheckIfHubCTalkLegalTwoChar(Kai, Theana, 15, 16, HubC_Kai_Theana_Global_Talk_Flag, HubC_Kai_Theana_Temp_Talk_Flag)
+CheckIfHubCTalkLegalTwoChar(Matteo, Kurt, 33, 34, HubC_Matteo_Kurt_Global_Talk_Flag, HubC_Matteo_Kurt_Temp_Talk_Flag)
+
+// the conditional ones will only check for the first 2: third is irrelevant
+CheckIfHubBTalkLegalTwoChar(Desiderio, Noah, 21, 22, HubC_Desiderio_Noah_Medwyn_Global_Talk_Flag, HubC_Desiderio_Noah_Medwyn_Temp_Talk_Flag)
+CheckIfHubBTalkLegalTwoChar(Orlando, Remora, 23, 24, HubC_Orlando_Remora_Triana_Global_Talk_Flag, HubC_Orlando_Remora_Triana_Temp_Talk_Flag)
+CheckIfHubBTalkLegalTwoChar(Fata, Neltume, 25, 26, HubC_Fata_Neltume_Husniye_Global_Talk_Flag, HubC_Fata_Neltume_Husniye_Temp_Talk_Flag)
+CheckIfHubBTalkLegalTwoChar(Leonor, Estelle, 27, 28, HubC_Leonor_Estelle_Magdalena_Global_Talk_Flag, HubC_Leonor_Estelle_Magdalena_Temp_Talk_Flag)
+CheckIfHubBTalkLegalTwoChar(Lexa, Suzanne, 29, 30, HubC_Lexa_Suzanne_Bartz_Global_Talk_Flag, HubC_Lexa_Suzanne_Bartz_Temp_Talk_Flag)
+CheckIfHubBTalkLegalTwoChar(Biko, Ernest, 31, 32, HubC_Biko_Ernest_Avocado_Global_Talk_Flag, HubC_Biko_Ernest_Avocado_Temp_Talk_Flag)
+NoFade
+ENDA
+
 CharacterBasedEvents:
+//hub recruitment talks
+CharacterEvent(HubC_Windy_Recruited_Flag, Windy_Recruitment_Convo, Lua, Windy)
+CharacterEvent(HubC_Kurt_Recruited_Flag, Kurt_Recruitment_Convo, Lua, Kurt)
+CharacterEvent(HubC_Theana_Recruited_Flag, Theana_Recruitment_Convo, Lua, Theana)
+
+//hub chapter talks take top priority
+CharacterEvent(WentToHub1, GotoHubC1, Lua, Ruby) 
+CharacterEvent(WentToHub2, GotoHubC2, Lua, KeeperC2) //idk but given the script, it probably should be a Keeper who mentions that they saw some scuffle between pirates and imperials 
+CharacterEvent(WentToHub3, GotoHubC3, Lua, Boru)
+CharacterEvent(WentToHub4, GotoHubC4, Lua, Remora)
+
+//hub talk setup
+CharacterEvent(HubC_Desiderio_Noah_Medwyn_Temp_Talk_Flag, HubC_Desiderio_Noah_Medwyn_Convo, Lua, Desiderio)
+CharacterEvent(HubC_Desiderio_Noah_Medwyn_Temp_Talk_Flag, HubC_Desiderio_Noah_Medwyn_Convo, Lua, Noah)
+CharacterEvent(HubC_Desiderio_Noah_Medwyn_Temp_Talk_Flag, HubC_Desiderio_Noah_Medwyn_Convo, Lua, Medwyn)
+
+CharacterEvent(HubC_Adrian_Tangyuan_Rima_Temp_Talk_Flag, HubC_Adrian_Tangyuan_Rima_Convo, Lua, Adrian)
+CharacterEvent(HubC_Adrian_Tangyuan_Rima_Temp_Talk_Flag, HubC_Adrian_Tangyuan_Rima_Convo, Lua, Tangyuan)
+CharacterEvent(HubC_Adrian_Tangyuan_Rima_Temp_Talk_Flag, HubC_Adrian_Tangyuan_Rima_Convo, Lua, Rima)
+
+CharacterEvent(HubC_Jaime_Carmen_Temp_Talk_Flag, HubC_Jaime_Carmen_Convo, Lua, Jaime)
+CharacterEvent(HubC_Jaime_Carmen_Temp_Talk_Flag, HubC_Jaime_Carmen_Convo, Lua, Carmen)
+
+CharacterEvent(HubC_Razvan_Valerie_Calista_Temp_Talk_Flag, HubC_Razvan_Valerie_Calista_Convo, Lua, Razvan)
+CharacterEvent(HubC_Razvan_Valerie_Calista_Temp_Talk_Flag, HubC_Razvan_Valerie_Calista_Convo, Lua, Valerie)
+CharacterEvent(HubC_Razvan_Valerie_Calista_Temp_Talk_Flag, HubC_Razvan_Valerie_Calista_Convo, Lua, Calista)
+
+CharacterEvent(HubC_Pilar_Windy_Temp_Talk_Flag, HubC_Pilar_Windy_Convo, Lua, Pilar)
+CharacterEvent(HubC_Pilar_Windy_Temp_Talk_Flag, HubC_Pilar_Windy_Convo, Lua, Windy)
+
+CharacterEvent(HubC_Indio_Dmitr_Leandra_Temp_Talk_Flag, HubC_Indio_Dmitr_Leandra_Convo, Lua, Indio)
+CharacterEvent(HubC_Indio_Dmitr_Leandra_Temp_Talk_Flag, HubC_Indio_Dmitr_Leandra_Convo, Lua, Dmitr)
+CharacterEvent(HubC_Indio_Dmitr_Leandra_Temp_Talk_Flag, HubC_Indio_Dmitr_Leandra_Convo, Lua, Leandra)
+
+CharacterEvent(HubC_Ondeh_Hermenegildo_Ruby_Temp_Talk_Flag, HubC_Ondeh_Hermenegildo_Ruby_Convo, Lua, Ondeh)
+CharacterEvent(HubC_Ondeh_Hermenegildo_Ruby_Temp_Talk_Flag, HubC_Ondeh_Hermenegildo_Ruby_Convo, Lua, Hermenegildo)
+CharacterEvent(HubC_Ondeh_Hermenegildo_Ruby_Temp_Talk_Flag, HubC_Ondeh_Hermenegildo_Ruby_Convo, Lua, Ruby)
+
+CharacterEvent(HubC_Rahel_Ximo_Temp_Talk_Flag, HubC_Rahel_Ximo_Convo, Lua, Rahel)
+CharacterEvent(HubC_Rahel_Ximo_Temp_Talk_Flag, HubC_Rahel_Ximo_Convo, Lua, Ximo)
+
+CharacterEvent(HubC_Matteo_Kurt_Temp_Talk_Flag, HubC_Matteo_Kurt_Convo, Lua, Matteo)
+CharacterEvent(HubC_Matteo_Kurt_Temp_Talk_Flag, HubC_Matteo_Kurt_Convo, Lua, Kurt)
+
+CharacterEvent(HubC_Orlando_Remora_Triana_Temp_Talk_Flag, HubC_Orlando_Remora_Triana_Convo, Lua, Orlando)
+CharacterEvent(HubC_Orlando_Remora_Triana_Temp_Talk_Flag, HubC_Orlando_Remora_Triana_Convo, Lua, Remora)
+CharacterEvent(HubC_Orlando_Remora_Triana_Temp_Talk_Flag, HubC_Orlando_Remora_Triana_Convo, Lua, Triana)
+
+CharacterEvent(HubC_Fata_Neltume_Husniye_Temp_Talk_Flag, HubC_Fata_Neltume_Husniye_Convo, Lua, Fata)
+CharacterEvent(HubC_Fata_Neltume_Husniye_Temp_Talk_Flag, HubC_Fata_Neltume_Husniye_Convo, Lua, Neltume)
+CharacterEvent(HubC_Fata_Neltume_Husniye_Temp_Talk_Flag, HubC_Fata_Neltume_Husniye_Convo, Lua, Husniye)
+
+CharacterEvent(HubC_Leonor_Estelle_Magdalena_Temp_Talk_Flag, HubC_Leonor_Estelle_Magdalena_Convo, Lua, Leonor)
+CharacterEvent(HubC_Leonor_Estelle_Magdalena_Temp_Talk_Flag, HubC_Leonor_Estelle_Magdalena_Convo, Lua, Estelle)
+CharacterEvent(HubC_Leonor_Estelle_Magdalena_Temp_Talk_Flag, HubC_Leonor_Estelle_Magdalena_Convo, Lua, Magdalena)
+
+CharacterEvent(HubC_Lexa_Suzanne_Bartz_Temp_Talk_Flag, HubC_Lexa_Suzanne_Bartz_Convo, Lua, Lexa)
+CharacterEvent(HubC_Lexa_Suzanne_Bartz_Temp_Talk_Flag, HubC_Lexa_Suzanne_Bartz_Convo, Lua, Suzanne)
+CharacterEvent(HubC_Lexa_Suzanne_Bartz_Temp_Talk_Flag, HubC_Lexa_Suzanne_Bartz_Convo, Lua, Bartz)
+
+CharacterEvent(HubC_Kai_Theana_Temp_Talk_Flag, HubC_Kai_Theana_Convo, Lua, Kai)
+CharacterEvent(HubC_Kai_Theana_Temp_Talk_Flag, HubC_Kai_Theana_Convo, Lua, Theana)
+
+CharacterEvent(HubC_Durgham_Yodsen_Juan_Temp_Talk_Flag, HubC_Durgham_Yodsen_Juan_Convo, Lua, Durgham)
+CharacterEvent(HubC_Durgham_Yodsen_Juan_Temp_Talk_Flag, HubC_Durgham_Yodsen_Juan_Convo, Lua, Yodsen)
+CharacterEvent(HubC_Durgham_Yodsen_Juan_Temp_Talk_Flag, HubC_Durgham_Yodsen_Juan_Convo, Lua, Juan)
+
+CharacterEvent(HubC_Biko_Ernest_Avocado_Temp_Talk_Flag, HubC_Biko_Ernest_Avocado_Convo, Lua, Biko)
+CharacterEvent(HubC_Biko_Ernest_Avocado_Temp_Talk_Flag, HubC_Biko_Ernest_Avocado_Convo, Lua, Ernest)
+CharacterEvent(HubC_Biko_Ernest_Avocado_Temp_Talk_Flag, HubC_Biko_Ernest_Avocado_Convo, Lua, Avocado)
+
+CharacterEvent(HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag, HubC_Ponte_Passarola_Bolton_Convo, Lua, Ponte)
+CharacterEvent(HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag, HubC_Ponte_Passarola_Bolton_Convo, Lua, Passarola)
+CharacterEvent(HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag, HubC_Ponte_Passarola_Bolton_Convo, Lua, Bolton)
 END_MAIN
+
+Windy_Recruitment_Convo:
+HubTalkToUnitFirstTime(HubC_WindySpokenToOnceFlag, 1, HubCWindyRecruitmentFirstTime)
+Text(HubCWindyRecruitmentChoice)
+HubRecruitUnit(Windy, 2, HubCWindyRecruitmentYes, 3, WelcomeAboardMateyID)
+LABEL 2
+HubRejectUnit(HubCWindyRecruitmentNo, HubC_Windy_Recruited_Flag)
+LABEL 3
+NoFade
+ENDA
+
+Kurt_Recruitment_Convo:
+HubFirstTimeTalkToUnit(HubC_KurtSpokenToOnceFlag, 1, HubCKurtRecruitmentFirstTime)
+LABEL 1
+SVAL s1 1000
+CHECK_MONEY
+BLE 4 s1 sC //if you have more money than the cost, branch to 4
+    Text(HubCKurtTellsLuaShesBroke)
+    GOTO 3
+LABEL 4
+Text(HubCKurtRecruitmentChoice)
+EVBIT_MODIFY 0
+SVAL s3 1000
+HubRecruitMoney(Kurt, 2, HubCKurtRecruitmentYes, 3, WelcomeAboardMateyID)
+LABEL 2
+HubRejectUnit(HubCKurtRecruitmentNo, HubC_Kurt_Recruited_Flag) //unsets this flag if you decided not to recruit
+LABEL 3
+NoFade
+ENDA
+
+Theana_Recruitment_Convo:
+HubFirstTimeTalkToUnit(HubC_TheanaSpokenToOnceFlag, 1, HubCTheanaRecruitmentFirstTime)
+LABEL 1
+SVAL s1 2000
+CHECK_MONEY
+BLE 4 s1 sC //if you have more money than the cost, branch to 4
+    Text(HubCTheanaTellsLuaShesBroke)
+    GOTO 3
+LABEL 4
+Text(HubCTheanaRecruitmentChoice)
+EVBIT_MODIFY 0
+SVAL s3 2000
+HubRecruitMoney(Theana, 2, HubCTheanaRecruitmentYes, 3, WelcomeAboardMateyID)
+LABEL 2
+HubRejectUnit(HubCTheanaRecruitmentNo, HubC_Theana_Recruited_Flag) //unsets this flag if you decided not to recruit
+NoFade
+ENDA
+
+HubC_Desiderio_Noah_Medwyn_Convo:
+DisplayConditionalTextOnCharAndSetEID(1, 2, Medwyn, HubC_Desiderio_Noah_Medwyn_Text, HubC_Desiderio_Noah_Text, HubC_Desiderio_Noah_Medwyn_Global_Talk_Flag)
+NoFade
+ENDA
+
+HubC_Adrian_Tangyuan_Rima_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Adrian_Tangyuan_Rima_Text, HubC_Adrian_Tangyuan_Rima_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Jaime_Carmen_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Jaime_Carmen_Text, HubC_Jaime_Carmen_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Razvan_Valerie_Calista_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Razvan_Valerie_Calista_Text, HubC_Razvan_Valerie_Calista_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Pilar_Windy_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Pilar_Windy_Text, HubC_Pilar_Windy_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Indio_Dmitr_Leandra_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Indio_Dmitr_Leandra_Text, HubC_Indio_Dmitr_Leandra_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Ondeh_Hermenegildo_Ruby_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Ondeh_Hermenegildo_Ruby_Text, HubC_Ondeh_Hermenegildo_Ruby_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Rahel_Ximo_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Rahel_Ximo_Text, HubC_Rahel_Ximo_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Matteo_Kurt_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Matteo_Kurt_Text, HubC_Matteo_Kurt_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Orlando_Remora_Triana_Convo:
+DisplayConditionalTextOnCharAndSetEID(1, 2, Triana, HubC_Orlando_Remora_Triana_Text, HubC_Orlando_Remora_Text, HubC_Orlando_Remora_Triana_Global_Talk_Flag)
+NoFade
+ENDA
+
+HubC_Fata_Neltume_Husniye_Convo:
+DisplayConditionalTextOnCharAndSetEID(1, 2, Husniye, HubC_Fata_Neltume_Husniye_Text, HubC_Fata_Neltume_Text, HubC_Fata_Neltume_Husniye_Global_Talk_Flag)
+NoFade
+ENDA
+
+HubC_Leonor_Estelle_Magdalena_Convo:
+DisplayConditionalTextOnCharAndSetEID(1, 2, Magdalena, HubC_Leonor_Estelle_Magdalena_Text, HubC_Leonor_Estelle_Text, HubC_Leonor_Estelle_Magdalena_Global_Talk_Flag)
+NoFade
+ENDA
+
+HubC_Lexa_Suzanne_Bartz_Convo:
+DisplayConditionalTextOnCharAndSetEID(1, 2, Bartz, HubC_Lexa_Suzanne_Bartz_Text, HubC_Lexa_Suzanne_Text, HubC_Lexa_Suzanne_Bartz_Global_Talk_Flag)
+NoFade
+ENDA
+
+HubC_Kai_Theana_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Kai_Theana_Text, HubC_Kai_Theana_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Durgham_Yodsen_Juan_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Durgham_Yodsen_Juan_Text, HubC_Durgham_Yodsen_Juan_Global_Talk_Flag) 
+NoFade
+ENDA
+
+HubC_Biko_Ernest_Avocado_Convo:
+DisplayConditionalTextOnCharAndSetEID(1, 2, Avocado, HubC_Biko_Ernest_Avocado_Text, HubC_Biko_Ernest_Text, HubC_Biko_Ernest_Avocado_Global_Talk_Flag)
+NoFade
+ENDA
+
+HubC_Ponte_Passarola_Bolton_Convo:
+DisplayTextThenSetGlobalFlag(HubC_Ponte_Passarola_Bolton_Text, HubC_Ponte_Passarola_Bolton_Global_Talk_Flag) 
+NoFade
+ENDA
+
+GotoHubC1:
+HubChapterFirstTimeEvent_DeathConditional(1, 2, Hermenegildo, SeenHubC1Pitch, HubC1Pitch_HermenAlive, HubC1Pitch_HermenDead)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubC_1, Shrine, HubC, HubCCallback)
+GotoHubChapterIfYes(3, HubC_1, HubC1Selection_Yes)
+Text(HubC1Selection_No)
+ENUF WentToHub1
+NoFade
+ENDA
+
+HubCCallback:
+SpawnQuestSigil(WentToHub1, 1, RedSigilTrapID, 2, 21)
+SpawnQuestSigil(WentToHub2, 2, RedSigilTrapID, 0, 8)
+SpawnQuestSigil(WentToHub3, 3, RedSigilTrapID, 23, 5)
+SpawnQuestSigil(WentToHub4, 4, RedSigilTrapID, 22, 15)
+WEATHER 7
+NoFade
+ENDA
+
+GotoHubC2:
+HubChapterFirstTimeEvent(1, SeenHubC2Pitch, HubC2Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubC_2, Plain, HubC, HubCCallback)
+GotoHubChapterIfYes(2, HubC_2, HubC2Accepted)
+Text(HubC2Rejected)
+ENUF WentToHub2
+NoFade
+ENDA
+
+GotoHubC3:
+HubChapterFirstTimeEvent(1, SeenHubC3Pitch, HubC3Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubC_3, Woodland, HubC, HubCCallback)
+GotoHubChapterIfYes(2, HubC_3, HubC3Accepted)
+Text(HubC3Rejected)
+ENUF WentToHub3
+NoFade
+ENDA
+
+GotoHubC4:
+HubChapterFirstTimeEvent(1, SeenHubC4Pitch, HubC4Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubC_4, Fort_2, HubC, HubCCallback)
+GotoHubChapterIfYes(2, HubC_4, HubC4Accepted)
+Text(HubC4Rejected)
+ENUF WentToHub4
+NoFade
+ENDA
+
+GotoChapter4:
+MNC2 Chapter4
+ENUF LuaInAHubFlag
+NoFade
+ENDA
 
 LocationBasedEvents:
 Armory(HubCArmoryOne,17,6)
@@ -41,43 +407,9 @@ SHLI Elfire Luna Elsurge Arcfire Nosferatu Sagittae Mend Silence Physic Sleep St
 ALIGN 4
 
 MiscBasedEvents:
-AREA WentToHub1 GotoHubC1 [11,11] [11,11]
-AREA WentToHub2 GotoHubC2 [13,11] [13,11]
-AREA WentToHub3 GotoHubC3 [11,14] [11,14]
-AREA WentToHub4 GotoHubC4 [13,14] [13,14]
-AREA GoToNextHubFlagID GotoChapter4 [12,13] [12,13]
+AREA GoToNextHubFlagID GotoChapter4 [11,3] [11,3]
 AFEV 0 RefreshLua 0
 END_MAIN
-
-GotoHubC1:
-MNC2 HubC_1
-ENUF LuaInAHubFlag
-NoFade
-ENDA
-
-GotoHubC2:
-MNC2 HubC_2
-ENUF LuaInAHubFlag
-NoFade
-ENDA
-
-GotoHubC3:
-MNC2 HubC_3
-ENUF LuaInAHubFlag
-NoFade
-ENDA
-
-GotoHubC4:
-MNC2 HubC_4
-ENUF LuaInAHubFlag
-NoFade
-ENDA
-
-GotoChapter4:
-MNC2 Chapter4
-ENUF LuaInAHubFlag
-NoFade
-ENDA
 
 RefreshLua:
 SVAL s1 0x42
@@ -86,10 +418,6 @@ NoFade
 ENDA
 
 Traps1:
-RedSigil(11, 11)
-RedSigil(13, 11)
-RedSigil(11, 14)
-RedSigil(13, 14)
 ENDTRAP
 ALIGN 4
 
@@ -102,39 +430,103 @@ UNIT Lua Captain 0 Level(10,Ally,False) [12,13] 0 0 0 0 [Cutlass, IronSword, Iro
 UNIT
 
 BeginningScene:
-//LoadPlayerUnits(NewUnits)
 WEATHER 7
 ENUT LuaInAHubFlag
-//BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHuB)
+BranchIfHubNotVisited(1, BeginningSceneFirstTimeInHubC)
 STAL 1
 FADI 15
 ENUT GoToNextHubFlagID
 CheckHowManyHubChaptersCompleted
 SVAL s1 4
 BNE 2 sC s1 //if chapters completed != 4, skip
-    AddTrap(GreenSigilTrapID, 12, 13)
+    AddTrap(GreenSigilTrapID, 11, 3)
     ENUF GoToNextHubFlagID
 LABEL 2
-/*
-SpawnQuestSigil(WentToHub1, 776, RedSigilTrapID, 4, 12)
-SpawnQuestSigil(WentToHub2, 777, RedSigilTrapID, 2, 17)
-SpawnQuestSigil(WentToHub3, 778, RedSigilTrapID, 7, 17)
-SpawnQuestSigil(WentToHub4, 779, RedSigilTrapID, 2, 23)
-SpawnQuestSigil(WentToHub5, 780, RedSigilTrapID, 7, 23)
-ENUT GoToNextHubFlagID
-CheckHowManyHubChaptersCompleted
-SVAL s1 4
-BNE 2 sC s1 //if chapters completed != 5, skip
-    AddTrap(GreenSigilTrapID, 5, 17)
-    ENUF GoToNextHubFlagID
-LABEL 2
-*/
 STAL 1
 GotoPrepScreenHub
 NoFade
 ENDA
 
+RubyNPCUnitGroup:
+UNIT Ruby Hero 0 Level(18,NPC,True) [2,21] 0 0 0 0 [WoDao,SteelAxe,HandAxe,Vulnerary] BossAI
+UNIT
+
+Keeper1UnitGroup:
+UNIT KeeperC2 Soldier 0 Level(15,NPC,True) [0,8] 0 0 0 0 [SteelLance] BossAI
+UNIT
+
+BoruUnitGroup:
+UNIT Boru Runeshield 0 Level(13,NPC,True) [23,5] 0 0 0 0 [Arcfire] BossAI
+UNIT
+
+RemoraNPCUnitGroup:
+UNIT Remora Berserker 0 Level(16,NPC,True) [22,15] 0 0 0 0 [Oversize, Swordreaver, Swimwear, Swimwear] BossAI
+UNIT
+
+C1Indicator:
+AddTrap(RedSigilTrapID, 2, 21)
+NoFade
+ENDA
+
+C2Indicator:
+AddTrap(RedSigilTrapID, 0, 8)
+NoFade
+ENDA
+
+C3Indicator:
+AddTrap(RedSigilTrapID, 23, 5)
+NoFade
+ENDA
+
+C4Indicator:
+AddTrap(RedSigilTrapID, 22, 15)
+NoFade
+ENDA
+
 EndingScene:
+NoFade
+ENDA
+
+BeginningSceneFirstTimeInHubC:
+SetBackground(Inn)
+MUSC WindAmbienceID
+Text(HubCBeginningScene1)
+FADI 15
+FadeOutMusic
+STAL 30
+SetBackground(Woodland_Night)
+Text(HubCBeginningScene2)
+MUSC OrlandosThemeID
+Text(HubCBeginningScene3)
+Text(HubCBeginningScene4)
+FADI 15
+FadeOutMusic
+STAL 30
+SetBackground(Village)
+BrownBoxText(HubCOneDayLater)
+MUSC CastawayHeartID
+Text(HubCBeginningScene5)
+//here we unset all flags that will be reused for hub C
+ENUF HubC_Desiderio_Noah_Medwyn_Global_Talk_Flag
+ENUF HubC_Adrian_Tangyuan_Rima_Global_Talk_Flag
+ENUF HubC_Jaime_Carmen_Global_Talk_Flag
+ENUF HubC_Razvan_Valerie_Calista_Global_Talk_Flag
+ENUF HubC_Pilar_Windy_Global_Talk_Flag
+ENUF HubC_Indio_Dmitr_Leandra_Global_Talk_Flag
+ENUF HubC_Ondeh_Hermenegildo_Ruby_Global_Talk_Flag
+ENUF HubC_Rahel_Ximo_Global_Talk_Flag
+ENUF HubC_Matteo_Kurt_Global_Talk_Flag
+ENUF HubC_Orlando_Remora_Triana_Global_Talk_Flag
+ENUF HubC_Fata_Neltume_Husniye_Global_Talk_Flag
+ENUF HubC_Leonor_Estelle_Magdalena_Global_Talk_Flag
+ENUF HubC_Lexa_Suzanne_Bartz_Global_Talk_Flag
+ENUF HubC_Kai_Theana_Global_Talk_Flag
+ENUF HubC_Durgham_Yodsen_Juan_Global_Talk_Flag
+ENUF HubC_Biko_Ernest_Avocado_Global_Talk_Flag
+ENUF HubC_Ponte_Passarola_Bolton_Global_Talk_Flag
+ENUF HubC_Windy_Recruited_Flag
+ENUF HubC_Kurt_Recruited_Flag
+ENUF HubC_Theana_Recruited_Flag
 NoFade
 ENDA
 
@@ -149,3 +541,147 @@ END_MAIN
 
 Tutorial:
 END_MAIN
+
+HubC_StartingCrewGuaranteed:
+//placed
+UNIT Pilar Ninja 0 Level(1,Ally,False) [3,20] 0 0 0 0 [0x0] NoAI
+UNIT Desiderio Vanguard 0 Level(1,Ally,False) [20,8] 0 0 0 0 [0x0] NoAI
+UNIT Razvan Curate 0 Level(1,Ally,False) [1,13] 0 0 0 0 [0x0] NoAI
+UNIT Carmen Mage_F 0 Level(1,Ally,False) [20,22] 0 0 0 0 [0x0] NoAI
+UNIT Jaime PegasusRider 0 Level(1,Ally,False) [21,21] 0 0 0 0 [0x0] NoAI
+UNIT Tangyuan DragonRider 0 Level(1,Ally,False) [3,4] 0 0 0 0 [0x0] NoAI
+UNIT Indio Shaman 0 Level(1,Ally,False) [8,23] 0 0 0 0 [0x0] NoAI
+UNIT Dmitr Brigand 0 Level(1,Ally,False) [9,22] 0 0 0 0 [0x0] NoAI
+UNIT Ondeh Hunter_F 0 Level(1,Ally,False) [8,17] 0 0 0 0 [0x0] NoAI
+UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [7,16] 0 0 0 0 [0x0] NoAI
+UNIT Rahel BowCav 0 Level(1,Ally,False) [10,14] 0 0 0 0 [0x0] NoAI
+UNIT Ximo Archer 0 Level(1,Ally,False) [10,15] 0 0 0 0 [0x0] NoAI
+UNIT Matteo Mercenary 0 Level(1,Ally,False) [14,10] 0 0 0 0 [0x0] NoAI
+UNIT Orlando Trickster 0 Level(1,Ally,False) [22,17] 0 0 0 0 [0x0] NoAI
+UNIT Leonor Cleric 0 Level(1,Ally,False) [4,10] 0 0 0 0 [0x0] NoAI
+UNIT Estelle Troubadour 0 Level(1,Ally,False) [6,10] 0 0 0 0 [0x0] NoAI
+UNIT Suzanne Gunner 0 Level(1,Ally,False) [17,18] 0 0 0 0 [0x0] NoAI
+UNIT Biko Soldier 0 Level(1,Ally,False) [10,6] 0 0 0 0 [0x0] NoAI
+UNIT Ernest Gryphoknight 0 Level(1,Ally,False) [11,5] 0 0 0 0 [0x0] NoAI
+//not placed
+UNIT
+
+RubyGroup:
+UNIT Ruby Hero_F 0 Level(1,Ally,False) [8,15] 0 0 0 0 [0x0] NoAI
+UNIT
+
+LeandraGroup:
+UNIT Leandra Fighter_F 0 Level(1,Ally,False) [10,22] 0 0 0 0 [0x0] NoAI
+UNIT
+
+AdrianGroup:
+UNIT Adrian Fighter 0 Level(1,Ally,False) [4,5] 0 0 0 0 [0x0] NoAI
+UNIT
+
+ValerieGroup:
+UNIT Valerie Gunner 0 Level(1,Ally,False) [0,13] 0 0 0 0 [0x0] NoAI
+UNIT
+
+CalistaGroup:
+UNIT Calista Dragoon 0 Level(1,Ally,False) [0,14] 0 0 0 0 [0x0] NoAI
+UNIT
+
+NoahGroup:
+UNIT Noah Warden 0 Level(1,Ally,False) [21,7] 0 0 0 0 [0x0] NoAI
+UNIT
+
+MedwynGroup:
+UNIT Medwyn Warden 0 Level(1,Ally,False) [21,9] 0 0 0 0 [0x0] NoAI
+UNIT
+
+WindyNPCGroup:
+UNIT Windy SwordCav 0 Level(6,NPC,True) [3,12] 0 0 0 0 [KillingEdge, LightBrand] BossAI
+UNIT
+
+WindyAllyGroup:
+UNIT Windy SwordCav 0 Level(6,Ally,False) [3,19] 0 0 0 0 [0x0] NoAI
+UNIT
+
+RimaGroup:
+UNIT Rima AxeCav 0 Level(1,Ally,False) [4,6] 0 0 0 0 [0x0] NoAI
+UNIT
+
+KurtNPCGroup:
+UNIT Kurt Wolfrider 0 Level(15,NPC,True) [19,6] 0 0 0 0 [SilverLance, SteelKnife] BossAI
+UNIT
+
+KurtAllyGroup:
+UNIT Kurt Wolfrider 0 Level(15,Ally,False) [15,11] 0 0 0 0 [0x0] NoAI
+UNIT
+
+RemoraAllyGroup:
+UNIT Remora Berserker 0 Level(15,Ally,False) [22,15] 0 0 0 0 [0x0] NoAI
+UNIT
+
+TrianaGroup:
+UNIT Triana Shaman 0 Level(1,Ally,False) [21,16] 0 0 0 0 [0x0] NoAI
+UNIT
+
+FataGroup:
+UNIT Fata Monk 0 Level(1,Ally,False) [0,10] 0 0 0 0 [0x0] NoAI
+UNIT
+
+NeltumeGroup:
+UNIT Neltume Priest 0 Level(1,Ally,False) [1,10] 0 0 0 0 [0x0] NoAI
+UNIT
+
+HusniyeGroup:
+UNIT Husniye Thief 0 Level(1,Ally,False) [2,10] 0 0 0 0 [0x0] NoAI
+UNIT
+
+MagdalenaGroup:
+UNIT Magdalena Sage_F 0 Level(1,Ally,False) [7,10] 0 0 0 0 [0x0] NoAI
+UNIT
+
+LexaGroup:
+UNIT Lexa Myrmidon_F 0 Level(1,Ally,False) [18,17] 0 0 0 0 [0x0] NoAI
+UNIT
+
+BartzGroup:
+UNIT Bartz Deserter 0 Level(1,Ally,False) [19,18] 0 0 0 0 [0x0] NoAI
+UNIT
+
+KaiGroup:
+UNIT Kai Ninja 0 Level(1,Ally,False) [13,1] 0 0 0 0 [0x0] NoAI
+UNIT
+
+TheanaAllyGroup:
+UNIT Theana Assassin 0 Level(20,Ally,False) [13,2] 0 0 0 0 [0x0] NoAI
+UNIT
+
+TheanaNPCGroup:
+UNIT Theana Assassin 0 Level(20,NPC,True) [21,3] 0 0 0 0 [DeadeyeBow, Bloodletter] NoAI
+UNIT
+
+DurghamGroup:
+UNIT Durgham LanceCav 0 Level(1,Ally,False) [4,14] 0 0 0 0 [0x0] NoAI
+UNIT
+
+YodsenGroup:
+UNIT Yodsen Gunner 0 Level(1,Ally,False) [5,13] 0 0 0 0 [0x0] NoAI
+UNIT
+
+JuanGroup:
+UNIT Juan Thief 0 Level(1,Ally,False) [5,12] 0 0 0 0 [0x0] NoAI
+UNIT
+
+AvocadoGroup:
+UNIT Avocado Deserter 0 Level(1,Ally,False) [12,5] 0 0 0 0 [0x0] NoAI
+UNIT
+
+PonteGroup:
+UNIT Ponte Brigand 0 Level(1,Ally,False) [15,21] 0 0 0 0 [0x0] NoAI
+UNIT
+
+PassarolaGroup:
+UNIT Passarola Adventurer 0 Level(1,Ally,False) [14,22] 0 0 0 0 [0x0] NoAI
+UNIT
+
+BoltonGroup:
+UNIT Bolton DarkKnight 0 Level(1,Ally,False) [16,21] 0 0 0 0 [0x0] NoAI
+UNIT

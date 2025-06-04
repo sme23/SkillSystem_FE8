@@ -9,8 +9,6 @@ his spell completes[X]
 Defeat Sanz[X]
 
 
-
-
 ## C1_Intro_HermenScene
 [ML][LoadHermenegildo]
 [MR][LoadRuby]
