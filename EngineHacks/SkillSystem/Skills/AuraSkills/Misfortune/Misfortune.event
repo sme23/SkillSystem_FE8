@@ -1,0 +1,11 @@
+#define MisfortuneRange 2
+
+ALIGN 4
+MisfortuneID_Link:
+WORD MisfortuneID
+
+ALIGN 4
+MisfortuneRange_Link:
+WORD MisfortuneRange
+
+#include "Misfortune.lyn.event"
