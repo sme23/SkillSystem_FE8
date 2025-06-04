@@ -194,3 +194,4 @@ WORD EqualizerID
 
 #include "ClassTypeSkills/ClassTypeSkills.event"
 
+#include "Misfortune/Misfortune.event"

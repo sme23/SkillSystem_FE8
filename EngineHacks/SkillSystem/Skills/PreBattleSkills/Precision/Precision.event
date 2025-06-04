@@ -1,0 +1,5 @@
+ALIGN 4
+PrecisionID_Link:
+WORD PrecisionID
+
+#include "Precision.lyn.event"

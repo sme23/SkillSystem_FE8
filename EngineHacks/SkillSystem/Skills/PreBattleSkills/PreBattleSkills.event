@@ -455,3 +455,5 @@ IraEffect:
 #incbin "IraEffect/IraEffect.dmp"
 POIN SkillTester
 WORD AvengerID
+
+#include "Precision/Precision.event"
