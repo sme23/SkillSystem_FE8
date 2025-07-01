@@ -12,10 +12,6 @@
 //By Sme
 // #define ShadeID 255
 
-//Shade+: Enemies will not target this unit.
-//By Sme
-#define ShadePlusID 255
-
 
 //Aura Skills
 

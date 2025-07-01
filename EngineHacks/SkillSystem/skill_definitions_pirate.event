@@ -290,3 +290,10 @@
 
 //Misfortune
 #define MisfortuneID 104
+
+//Special Ordinance
+#define SpecialOrdinanceID 105
+
+//Shade+: Enemies will not target this unit.
+//By Sme
+#define ShadePlusID 106

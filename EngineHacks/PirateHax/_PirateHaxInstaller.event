@@ -24,9 +24,6 @@
 #include "Equip/Installer.event"
 //Pikmin1211
 
-#include "FE8-New_CHAI/FE8-New_CHAI_EA.event"
-// Tequila/Gamma
-
 #include "FixedDifficulty.event"
 //StanH
 
@@ -134,8 +131,6 @@
 
 #include "ASMCCheckSuite/ASMCGetterSetterInstaller.event"
 
-#include "FE8U-Fancy-Items-main/_MasterHackInstaller.event"
-
 ALIGN 4
 ReusableTempRAMPointer:
 WORD 0x03003750
@@ -188,6 +183,15 @@ ALIGN 4
 
 ALIGN 4
 #include "NarrowFontExtension/SerifExtension.event"
+
+ALIGN 4
+#include "AI_EnemyDeterminer/Installer.event" // decides who is an enemy for AI purposes
+
+#include "FE8U-Fancy-Items-main/_MasterHackInstaller.event"
+
+#include "TrapReworkPirate/Installer.event"
+
+#include "CHAI_Pirate/Installer.event"
 
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743
@@ -271,7 +275,12 @@ ORG 0x80C498
 BYTE 20
 ORG 0x80C49C
 BYTE 20
+ORG $80C487 //sand avo removed
+BYTE 0
+ORG $80C488 //desert avo increased to 10
+BYTE 10
 POP
+
 
 PUSH //fixes level reset in prep screen - Pikmin1211
 	//ORG 0x736D0

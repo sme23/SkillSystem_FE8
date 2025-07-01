@@ -259,18 +259,18 @@ setMugEntry(LexaMug, LexaMugData, 2, 5, 2, 3)
 
 ALIGN 16
 NoahMugData:
-#incbin "Dmp/Noah_mug.dmp"
-#incbin "Dmp/Noah_frames.dmp"
-#incbin "Dmp/Noah_palette.dmp"
-#incbin "Dmp/Noah_minimug.dmp"
+#incbin "Dmp/NoahArmor_mug.dmp"
+#incbin "Dmp/NoahArmor_frames.dmp"
+#incbin "Dmp/NoahArmor_palette.dmp"
+#incbin "Dmp/NoahArmor_minimug.dmp"
 setMugEntry(NoahMug, NoahMugData, 3, 5, 3, 3)
 
 ALIGN 16
 Noah2MugData:
-#incbin "Dmp/Noah2_mug.dmp"
-#incbin "Dmp/Noah2_frames.dmp"
-#incbin "Dmp/Noah2_palette.dmp"
-#incbin "Dmp/Noah2_minimug.dmp"
+#incbin "Dmp/NoahCloak_mug.dmp"
+#incbin "Dmp/NoahCloak_frames.dmp"
+#incbin "Dmp/NoahCloak_palette.dmp"
+#incbin "Dmp/NoahCloak_minimug.dmp"
 setMugEntry(Noah2Mug, Noah2MugData, 2, 5, 3, 3)
 
 ALIGN 16
@@ -704,7 +704,7 @@ WindyMugData:
 #incbin "Dmp/Windy_frames.dmp"
 #incbin "Dmp/Windy_palette.dmp"
 #incbin "Dmp/Windy_minimug.dmp"
-setMugEntry(WindyMug, WindyMugData, 2, 5, 3, 3)
+setMugEntry(WindyMug, WindyMugData, 2, 5, 2, 3)
 
 ALIGN 16
 TheanaMugData:
@@ -730,3 +730,29 @@ QuispeMugData:
 #incbin "Dmp/Quispe_palette.dmp"
 #incbin "Dmp/Quispe_minimug.dmp"
 setMugEntry(QuispeMug, QuispeMugData, 2, 5, 3, 3)
+
+// placeholder mug D-3! (it's pent)
+ALIGN 16
+FidelMugData:
+#incbin "Dmp/Fidel_mug.dmp"
+#incbin "Dmp/Fidel_frames.dmp"
+#incbin "Dmp/Fidel_palette.dmp"
+#incbin "Dmp/Fidel_minimug.dmp"
+setMugEntry(FidelMug, FidelMugData, 3, 5, 4, 3)
+
+// recolors of already used mugs
+ALIGN 16
+D3TorchBossMugData:
+#incbin "Dmp/RedIgnacio_mug.dmp"
+#incbin "Dmp/RedIgnacio_frames.dmp"
+#incbin "Dmp/RedIgnacio_palette.dmp"
+#incbin "Dmp/RedIgnacio_minimug.dmp"
+setMugEntry(D3TorchBossMug, D3TorchBossMugData, 2, 5, 2, 3)
+
+ALIGN 16
+D3BanditBossMugData:
+#incbin "Dmp/GreenAzahar_mug.dmp"
+#incbin "Dmp/GreenAzahar_frames.dmp"
+#incbin "Dmp/GreenAzahar_palette.dmp"
+#incbin "Dmp/GreenAzahar_minimug.dmp"
+setMugEntry(D3BanditBossMug, D3BanditBossMugData, 3, 5, 3, 3)

@@ -94,4 +94,7 @@ DeathQuote(DalilaRematch, HubD_1, 0, DalilaRematchDQ)
 DeathQuote(Solange, HubD_1, 0, SolangeDQ)
 DeathQuote(Rogelio, HubD_1, 0x2, RogelioDQ)
 
+DeathQuote(Enrique, HubD_3, D3EnriqueDQFlag, EnriqueDQ)
+DeathQuote(Inka, HubD_3, D3InkaDQFlag, InkaDQ)
+
 DeathQuote(0xFFFF,0,0,0) // terminator

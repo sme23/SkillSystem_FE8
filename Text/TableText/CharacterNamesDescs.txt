@@ -317,8 +317,8 @@ Rima[X]
 Opportunist[X]
 
 ## RimaDesc
-A lively mercenary that abandoned their[N]
-imperial roots for freedom.[X]
+A lively mercenary that abandoned[N]
+their imperial roots for freedom.[X]
 
 ## BoltonName
 Bolton[X]
@@ -1197,7 +1197,7 @@ Jasper[X]
 First Mate[X]
 
 ## JasperDesc
-A loyal crewmmate in Runamel's Runaways.[N]
+A loyal crewmate in Runamel's Runaways.[N]
 Eager to gain treasure and reputation.[X]
 
 ## RunamelName
@@ -1234,8 +1234,8 @@ Salman[X]
 Ringleader[X]
 
 ## SalmanDesc
-The loudest voice of several that[N]
-are leery of Quispe.[X]
+The loudest voice of several[N]
+that are leery of Quispe.[X]
 
 ## BoruName
 Boru[X]
@@ -1326,8 +1326,8 @@ Zealot[X]
 Guardsman[X]
 
 ## KeeperC2Desc
-A humble and lazy guardsman who[N]
-nevertheless keeps a watchful eye.[X]
+Devoted soldiers who keep a close[N]
+eye and maintain the town's peace.[X]
 
 ## KeeperDesc
 Warriors who adhere to Wayra's vision,[N]
@@ -1372,7 +1372,7 @@ of money but has constant misfortune.[X]
 Theana[X]
 
 ## TheanaDesc
-Assassin[N]
+Manslayer[N]
 A drifting hitman for hire who[N]
 doesn't like to talk about her past.[X]
 
@@ -1415,3 +1415,87 @@ Trapper[X]
 ## WoodsmanDesc
 A huntsman who now relies on nature's[N]
 bounty instead of living with others.[X]
+
+## D3IncendivisName
+Imperials[X]
+
+## D3TorchBossName
+Enrique[X]
+
+## D3TorchUnitName ^
+Silverspears[X]
+
+## D3BanditBossName
+Inka[X]
+
+## D3BanditName
+Redwings[X]
+
+## D3BanditPrisonerName
+Prisoner[X]
+
+## D3IncendivisDesc
+Imperial magi under Fidel's command,[N]
+inspired by their leader's compassion.[X]
+
+## D3TorchBossDesc
+A man who prioritizes his duties to[N]
+Incendivis and his men above all.[X]
+
+## D3TorchUnitDesc
+Enrique's forces who reign supreme[N]
+in T.O.R.C.H., second only to Elodia's.[X]
+
+## D3BanditBossDesc
+A bandit hardened by the desolate[N]
+desert, thieving in order to survive.[X]
+
+## D3BanditDesc
+Common bandits who have tamed dragons,[N]
+greatly increasing their odds of escape.[X]
+
+## D3BanditPrisonerDesc
+Ne'er-do-wells captured by the Redwings,[N]
+for who freedom only come from death.[X]
+
+## D3IncendivisOccupation
+Mage[X]
+
+## D3TorchBossOccupation
+Commander[X]
+
+## D3TorchUnitOccupation
+T.O.R.C.H.[X]
+
+## D3BanditBossOccupation
+Raider Chief[X]
+
+## D3BanditOccupation
+Raider[X]
+
+## D3BanditPrisonerOccupation
+Pawn[X]
+
+## FidelName
+Fidel[X]
+
+## FidelOccupation
+Physician[X]
+
+## FidelDesc
+Formerly a pirate hunter, he now[N]
+save lives instead of taking them.[X]
+
+## D3Thief1Name
+Calkin[X]
+
+## D3Thief2Name
+Codrin[X]
+
+## D3ThiefOccupation
+Crook[X]
+
+## D3ThiefDesc
+One of a pair of brothers, committing[N]
+crime petty enough to be ignored.[X]
+

@@ -127,6 +127,4 @@ s8 IsUnitEnemyWithActiveUnit(struct Unit* unit);
 
 s8 AreUnitsAllied(int left, int right);
 
-extern u8 A3LogIDLink;
-
 bool LuaIsInHub(Unit* unit);

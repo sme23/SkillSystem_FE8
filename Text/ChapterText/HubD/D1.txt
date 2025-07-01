@@ -8,8 +8,6 @@ Find Rogelio[X]
 Find Rogelio,[N]
 and then...[X]
 
-
-
 ## D1_Intro_RogSolDepressed
 [ML][LoadSolange]
 [MR][LoadRogelio]

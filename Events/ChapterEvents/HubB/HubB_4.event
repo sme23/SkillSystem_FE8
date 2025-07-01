@@ -172,7 +172,7 @@ MainEvents:
 		LOAD1 1 JavierUnits
 		//LOAD1 1 TestUnit
 		SetUnitItemDurability(6, 14, 1, MagTonic) //Give enemy a magic tonic
-		SetUnitItemDurability(15, 6, 1, StrTonic) //Give enemy a strength tonic
+		SetUnitItemDurability(15, 6, 1, PotentBrewID) //Give enemy a strength tonic
 		GoToPrepScreen2
 		CAMERA_CENTERED[14,23]
 		FADU 10
@@ -471,7 +471,7 @@ UnitPlacement:
 		UNIT B4Bandit Mage			Javier Level(9,Enemy,True) [17,7] 0 0 0 0 [Elsurge, Vulnerary] GroupThreeAI
 		UNIT B4Bandit Mercenary		Javier Level(9,Enemy,True) [13,5] 0 0 0 0 [Onigiri] GroupThreeAI
 		UNIT B4Bandit Vanguard		Javier Level(10,Enemy,True) [8,7] 0 0 0 0 [Oversize] AttackInRangeAI
-		UNIT B4Bandit Warrior		Javier Level(10,Enemy,True) [15,6] 0 0 0 0 [SteelAxe, TealGem] GroupThreeAI
+		UNIT B4Bandit Warrior		Javier Level(10,Enemy,True) [15,6] 0 0 0 0 [SteelAxe, SkillScroll] GroupThreeAI
 		UNIT B4Bandit Myrmidon		Javier Level(9,Enemy,True) [5,10] 0 0 0 0 [SteelSword] AttackInRangeAI
 		UNIT B4Bandit Brigand		Javier Level(9,Enemy,True) [2,10] 0 0 0 0 [Bloodaxe] AttackInRangeAI
 		UNIT B4Bandit PegasusRider	Javier Level(9,Enemy,True) [7,1] 0 0 0 0 [SteelSword] GroupFourAI

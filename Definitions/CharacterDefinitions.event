@@ -81,7 +81,8 @@
 #define Kurt Burt
 #define Theana $2F
 
-
+// HUB D Units
+#define Fidel $32
 
 // ENEMY/NPC ($46 through $FF)
 
@@ -254,3 +255,16 @@
 #define DalilaRematch 0xE1
 #define Solange 0xE2
 #define Rogelio 0xE3
+
+// Hub D3
+#define D3Incendivis 0x97
+#define D3TorchBoss 0x98
+#define Enrique D3TorchBoss
+#define D3TorchUnit 0x99
+
+#define D3BanditBoss 0x9A
+#define Inka D3BanditBoss
+#define D3Bandit 0x9B
+#define D3Bandit_Raider 0x9C
+#define D3Thief1 0x9D
+#define D3Thief2 0x9E

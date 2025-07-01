@@ -788,26 +788,6 @@ void* GetChapterAllyUnitDefinitions(void) {
     return evGroup->playerUnitsInNormal;
 }
 
-s8 AreUnitsAllied(int left, int right) {
-    int a = left & 0x80;
-    int b = right & 0x80;
-    return (a == b);
-}
-
-s8 IsUnitEnemyWithActiveUnit(struct Unit* unit) {
-
-    if (AreUnitsAllied(gActiveUnit->index, unit->index)) {
-        return 0;
-    }
-
-    if (unit->pCharacterData->number == A3LogIDLink){
-        return 0; //do not attack the a3 logs, as they aren't enemies
-    }
-
-    return 1;
-}
-
-
 int GetUnitLuckCap(Unit* unit){
     if (unit->pClassData->attributes & CA_PROMOTED){
         return 40; //unpromo'd units get 25 cap

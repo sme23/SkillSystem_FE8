@@ -143,7 +143,7 @@
 	ALIGN 4
 	TrapBreakableTerrainList: 
 	TrapBreakableTerrain(0x34,0xFF,20) 		//Snag
-	TrapBreakableTerrain(0x1C,0xFE,0xFF) 	//Wall
+	TrapBreakableTerrain(0x1C,0xFE,80) 	//Wall
 	TrapBreakableTerrainListEnd
 	
 

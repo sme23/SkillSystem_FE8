@@ -18,6 +18,10 @@
 #define A1_YurenaGenericBattleQuoteSeen 0x27
 #define A1_GeraldoGenericBattleQuoteSeen 0x28
 
+// D-3 stuff
+#define D3EnriqueDQFlag 15
+#define D3InkaDQFlag 16
+
 // used everywhere, do not touch - Loog
 #define LuaInAHubFlag 0xA0
 #define InAHubFlag 0xA0
@@ -117,3 +121,4 @@
 #define HubC_Windy_Recruited_Flag 0xAB
 #define HubC_Kurt_Recruited_Flag 0xAC
 #define HubC_Theana_Recruited_Flag 0xAD
+#define HubC_Have_Encountered_The_Darkness_Flag 0xAE

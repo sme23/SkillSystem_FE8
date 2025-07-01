@@ -59,41 +59,6 @@ LABEL 3
 NoFade
 ENDA
 
-SpawnHubCUnits:
-LoadPlayerUnits(HubC_StartingCrewGuaranteed)
-LoadAllyUnitGroupIfAlive(Ruby, 1, RubyGroup)
-LoadAllyUnitGroupIfAlive(Leandra, 2, LeandraGroup)
-LoadAllyUnitGroupIfAlive(Adrian, 3, AdrianGroup)
-LoadAllyUnitGroupIfAlive(Valerie, 4, ValerieGroup)
-LoadAllyUnitGroupIfAlive(Calista, 5, CalistaGroup)
-LoadAllyUnitGroupIfAlive(Noah, 6, NoahGroup)
-LoadAllyUnitGroupIfAlive(Medwyn, 7, MedwynGroup)
-LoadAllyOrNPCUnitGroupIfEIDSet(HubC_Windy_Recruited_Flag, Windy, 8, 9, WindyAllyGroup, WindyNPCGroup)
-LoadAllyUnitGroupIfAlive(Rima, 10, RimaGroup)
-LoadAllyOrNPCUnitGroupIfEIDSet(HubC_Kurt_Recruited_Flag, Kurt, 11, 12, KurtAllyGroup, KurtNPCGroup)
-LoadAllyUnitGroupIfAlive(Remora, 13, RemoraAllyGroup)
-LoadAllyUnitGroupIfAlive(Triana, 14, TrianaGroup)
-LoadAllyUnitGroupIfAlive(Fata, 15, FataGroup)
-LoadAllyUnitGroupIfAlive(Neltume, 16, NeltumeGroup)
-LoadAllyUnitGroupIfAlive(Husniye, 17, HusniyeGroup)
-LoadAllyUnitGroupIfAlive(Magdalena, 18, MagdalenaGroup)
-LoadAllyUnitGroupIfAlive(Lexa, 19, LexaGroup)
-LoadAllyUnitGroupIfAlive(Bartz, 20, BartzGroup)
-LoadAllyUnitGroupIfAlive(Kai, 21, KaiGroup)
-LoadAllyOrNPCUnitGroupIfEIDSet(HubC_Theana_Recruited_Flag, Theana, 22, 23, TheanaAllyGroup, TheanaNPCGroup)
-LoadAllyUnitGroupIfAlive(Durgham, 24, DurghamGroup)
-LoadAllyUnitGroupIfAlive(Yodsen, 25, YodsenGroup)
-LoadAllyUnitGroupIfAlive(Juan, 26, JuanGroup)
-LoadAllyUnitGroupIfAlive(Passarola, 27, PassarolaGroup)
-LoadAllyUnitGroupIfAlive(Bolton, 28, BoltonGroup)
-//hub guys need to come after
-LoadNPCUnitGroupIfEIDNotSet(WentToHub1, 776, RubyNPCUnitGroup, C1Indicator)
-LoadNPCUnitGroupIfEIDNotSet(WentToHub2, 777, Keeper1UnitGroup, C2Indicator)
-LoadNPCUnitGroupIfEIDNotSet(WentToHub3, 778, BoruUnitGroup, C3Indicator)
-LoadNPCUnitGroupIfEIDNotSet(WentToHub4, 779, RemoraNPCUnitGroup, C4Indicator)
-NoFade
-ENDA
-
 SetAllHubCTalkFlags:
 //need to add conditional checks here for the convos where it could be 2 or 3 guys
 CheckIfHubBTalkLegalThreeChar(Adrian, Tangyuan, Rima, 1, 2, HubC_Adrian_Tangyuan_Rima_Global_Talk_Flag, HubC_Adrian_Tangyuan_Rima_Temp_Talk_Flag)
@@ -122,8 +87,7 @@ NoFade
 ENDA
 
 CharacterBasedEvents:
-//hub recruitment talks
-CharacterEvent(HubC_Windy_Recruited_Flag, Windy_Recruitment_Convo, Lua, Windy)
+//hub C recruitment talks
 CharacterEvent(HubC_Kurt_Recruited_Flag, Kurt_Recruitment_Convo, Lua, Kurt)
 CharacterEvent(HubC_Theana_Recruited_Flag, Theana_Recruitment_Convo, Lua, Theana)
 
@@ -197,16 +161,6 @@ CharacterEvent(HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag, HubC_Ponte_Passarola_
 CharacterEvent(HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag, HubC_Ponte_Passarola_Bolton_Convo, Lua, Passarola)
 CharacterEvent(HubC_Ponte_Passarola_Bolton_Temp_Talk_Flag, HubC_Ponte_Passarola_Bolton_Convo, Lua, Bolton)
 END_MAIN
-
-Windy_Recruitment_Convo:
-HubTalkToUnitFirstTime(HubC_WindySpokenToOnceFlag, 1, HubCWindyRecruitmentFirstTime)
-Text(HubCWindyRecruitmentChoice)
-HubRecruitUnit(Windy, 2, HubCWindyRecruitmentYes, 3, WelcomeAboardMateyID)
-LABEL 2
-HubRejectUnit(HubCWindyRecruitmentNo, HubC_Windy_Recruited_Flag)
-LABEL 3
-NoFade
-ENDA
 
 Kurt_Recruitment_Convo:
 HubFirstTimeTalkToUnit(HubC_KurtSpokenToOnceFlag, 1, HubCKurtRecruitmentFirstTime)
@@ -407,9 +361,51 @@ SHLI Elfire Luna Elsurge Arcfire Nosferatu Sagittae Mend Silence Physic Sleep St
 ALIGN 4
 
 MiscBasedEvents:
+AREA 0 GoToHubCMaze [23,9] [23,10] //no flag required
 AREA GoToNextHubFlagID GotoChapter4 [11,3] [11,3]
 AFEV 0 RefreshLua 0
 END_MAIN
+
+GoToHubCMaze:
+FADI 15
+SET_ACTIVE 0
+STAL 30
+RemoveAll
+LOMA HubC_Maze
+ENUN
+LOAD1 1 HubCMazeGroup // always load Lua and a friend of Windy's
+ENUN
+CALL HubCMazeTileChangeEvent // enough stuff to put it in its own event
+LoadNPCUnitGroupIfEIDNotSet(HubC_Windy_Recruited_Flag, 1337, WindyNPCGroup) //if she's still stuck in the maze, then load her
+SET_ACTIVE Lua
+CAMERA_CENTERED Lua
+ENUN
+ENUF InAHubFlag //no high move for you
+FOGVISION 3
+FADU 15
+CHECK_EVENTID HubC_Have_Encountered_The_Darkness_Flag
+BNE 776 s0 sC
+    CameraCursor(Lua) //an initial response from Lua if this is the first time that she's going into the "darkness"
+    Text(HubCLuaReactionToWindyMaze) 
+LABEL 776
+NoFade
+ENDA
+
+HubCMazeTileChangeEvent:
+TILECHANGE 0 //we always do the first tilechange
+CheckHowManyHubChaptersCompleted
+Check_If_SlotC_Less_Then_TileChange_Or_Branch(1, 776, 1)
+Check_If_SlotC_Less_Then_TileChange_Or_Branch(2, 776, 2)
+Check_If_SlotC_Less_Then_TileChange_Or_Branch(3, 776, 3)
+Check_If_SlotC_Less_Then_TileChange_Or_Branch(4, 776, 4)
+LABEL 776
+NoFade
+ENDA
+
+HubCMazeGroup:
+UNIT Lua Captain 0 Level(10,Ally,False) [0,12] 0 0 0 0 [Cutlass] NoAI
+UNIT KeeperC2 LanceCav 0 Level(5,NPC,True) [3,12] 0 0 0 0 [IronLance] NoAI
+UNIT
 
 RefreshLua:
 SVAL s1 0x42
@@ -418,6 +414,8 @@ NoFade
 ENDA
 
 Traps1:
+BlueSigil(23,9)
+BlueSigil(23,10)
 ENDTRAP
 ALIGN 4
 
@@ -444,42 +442,6 @@ BNE 2 sC s1 //if chapters completed != 4, skip
 LABEL 2
 STAL 1
 GotoPrepScreenHub
-NoFade
-ENDA
-
-RubyNPCUnitGroup:
-UNIT Ruby Hero 0 Level(18,NPC,True) [2,21] 0 0 0 0 [WoDao,SteelAxe,HandAxe,Vulnerary] BossAI
-UNIT
-
-Keeper1UnitGroup:
-UNIT KeeperC2 Soldier 0 Level(15,NPC,True) [0,8] 0 0 0 0 [SteelLance] BossAI
-UNIT
-
-BoruUnitGroup:
-UNIT Boru Runeshield 0 Level(13,NPC,True) [23,5] 0 0 0 0 [Arcfire] BossAI
-UNIT
-
-RemoraNPCUnitGroup:
-UNIT Remora Berserker 0 Level(16,NPC,True) [22,15] 0 0 0 0 [Oversize, Swordreaver, Swimwear, Swimwear] BossAI
-UNIT
-
-C1Indicator:
-AddTrap(RedSigilTrapID, 2, 21)
-NoFade
-ENDA
-
-C2Indicator:
-AddTrap(RedSigilTrapID, 0, 8)
-NoFade
-ENDA
-
-C3Indicator:
-AddTrap(RedSigilTrapID, 23, 5)
-NoFade
-ENDA
-
-C4Indicator:
-AddTrap(RedSigilTrapID, 22, 15)
 NoFade
 ENDA
 
@@ -527,6 +489,7 @@ ENUF HubC_Ponte_Passarola_Bolton_Global_Talk_Flag
 ENUF HubC_Windy_Recruited_Flag
 ENUF HubC_Kurt_Recruited_Flag
 ENUF HubC_Theana_Recruited_Flag
+ENUF HubC_Have_Encountered_The_Darkness_Flag
 NoFade
 ENDA
 
@@ -542,146 +505,6 @@ END_MAIN
 Tutorial:
 END_MAIN
 
-HubC_StartingCrewGuaranteed:
-//placed
-UNIT Pilar Ninja 0 Level(1,Ally,False) [3,20] 0 0 0 0 [0x0] NoAI
-UNIT Desiderio Vanguard 0 Level(1,Ally,False) [20,8] 0 0 0 0 [0x0] NoAI
-UNIT Razvan Curate 0 Level(1,Ally,False) [1,13] 0 0 0 0 [0x0] NoAI
-UNIT Carmen Mage_F 0 Level(1,Ally,False) [20,22] 0 0 0 0 [0x0] NoAI
-UNIT Jaime PegasusRider 0 Level(1,Ally,False) [21,21] 0 0 0 0 [0x0] NoAI
-UNIT Tangyuan DragonRider 0 Level(1,Ally,False) [3,4] 0 0 0 0 [0x0] NoAI
-UNIT Indio Shaman 0 Level(1,Ally,False) [8,23] 0 0 0 0 [0x0] NoAI
-UNIT Dmitr Brigand 0 Level(1,Ally,False) [9,22] 0 0 0 0 [0x0] NoAI
-UNIT Ondeh Hunter_F 0 Level(1,Ally,False) [8,17] 0 0 0 0 [0x0] NoAI
-UNIT Hermenegildo Myrmidon 0 Level(1,Ally,False) [7,16] 0 0 0 0 [0x0] NoAI
-UNIT Rahel BowCav 0 Level(1,Ally,False) [10,14] 0 0 0 0 [0x0] NoAI
-UNIT Ximo Archer 0 Level(1,Ally,False) [10,15] 0 0 0 0 [0x0] NoAI
-UNIT Matteo Mercenary 0 Level(1,Ally,False) [14,10] 0 0 0 0 [0x0] NoAI
-UNIT Orlando Trickster 0 Level(1,Ally,False) [22,17] 0 0 0 0 [0x0] NoAI
-UNIT Leonor Cleric 0 Level(1,Ally,False) [4,10] 0 0 0 0 [0x0] NoAI
-UNIT Estelle Troubadour 0 Level(1,Ally,False) [6,10] 0 0 0 0 [0x0] NoAI
-UNIT Suzanne Gunner 0 Level(1,Ally,False) [17,18] 0 0 0 0 [0x0] NoAI
-UNIT Biko Soldier 0 Level(1,Ally,False) [10,6] 0 0 0 0 [0x0] NoAI
-UNIT Ernest Gryphoknight 0 Level(1,Ally,False) [11,5] 0 0 0 0 [0x0] NoAI
-//not placed
-UNIT
-
-RubyGroup:
-UNIT Ruby Hero_F 0 Level(1,Ally,False) [8,15] 0 0 0 0 [0x0] NoAI
-UNIT
-
-LeandraGroup:
-UNIT Leandra Fighter_F 0 Level(1,Ally,False) [10,22] 0 0 0 0 [0x0] NoAI
-UNIT
-
-AdrianGroup:
-UNIT Adrian Fighter 0 Level(1,Ally,False) [4,5] 0 0 0 0 [0x0] NoAI
-UNIT
-
-ValerieGroup:
-UNIT Valerie Gunner 0 Level(1,Ally,False) [0,13] 0 0 0 0 [0x0] NoAI
-UNIT
-
-CalistaGroup:
-UNIT Calista Dragoon 0 Level(1,Ally,False) [0,14] 0 0 0 0 [0x0] NoAI
-UNIT
-
-NoahGroup:
-UNIT Noah Warden 0 Level(1,Ally,False) [21,7] 0 0 0 0 [0x0] NoAI
-UNIT
-
-MedwynGroup:
-UNIT Medwyn Warden 0 Level(1,Ally,False) [21,9] 0 0 0 0 [0x0] NoAI
-UNIT
-
 WindyNPCGroup:
-UNIT Windy SwordCav 0 Level(6,NPC,True) [3,12] 0 0 0 0 [KillingEdge, LightBrand] BossAI
-UNIT
-
-WindyAllyGroup:
-UNIT Windy SwordCav 0 Level(6,Ally,False) [3,19] 0 0 0 0 [0x0] NoAI
-UNIT
-
-RimaGroup:
-UNIT Rima AxeCav 0 Level(1,Ally,False) [4,6] 0 0 0 0 [0x0] NoAI
-UNIT
-
-KurtNPCGroup:
-UNIT Kurt Wolfrider 0 Level(15,NPC,True) [19,6] 0 0 0 0 [SilverLance, SteelKnife] BossAI
-UNIT
-
-KurtAllyGroup:
-UNIT Kurt Wolfrider 0 Level(15,Ally,False) [15,11] 0 0 0 0 [0x0] NoAI
-UNIT
-
-RemoraAllyGroup:
-UNIT Remora Berserker 0 Level(15,Ally,False) [22,15] 0 0 0 0 [0x0] NoAI
-UNIT
-
-TrianaGroup:
-UNIT Triana Shaman 0 Level(1,Ally,False) [21,16] 0 0 0 0 [0x0] NoAI
-UNIT
-
-FataGroup:
-UNIT Fata Monk 0 Level(1,Ally,False) [0,10] 0 0 0 0 [0x0] NoAI
-UNIT
-
-NeltumeGroup:
-UNIT Neltume Priest 0 Level(1,Ally,False) [1,10] 0 0 0 0 [0x0] NoAI
-UNIT
-
-HusniyeGroup:
-UNIT Husniye Thief 0 Level(1,Ally,False) [2,10] 0 0 0 0 [0x0] NoAI
-UNIT
-
-MagdalenaGroup:
-UNIT Magdalena Sage_F 0 Level(1,Ally,False) [7,10] 0 0 0 0 [0x0] NoAI
-UNIT
-
-LexaGroup:
-UNIT Lexa Myrmidon_F 0 Level(1,Ally,False) [18,17] 0 0 0 0 [0x0] NoAI
-UNIT
-
-BartzGroup:
-UNIT Bartz Deserter 0 Level(1,Ally,False) [19,18] 0 0 0 0 [0x0] NoAI
-UNIT
-
-KaiGroup:
-UNIT Kai Ninja 0 Level(1,Ally,False) [13,1] 0 0 0 0 [0x0] NoAI
-UNIT
-
-TheanaAllyGroup:
-UNIT Theana Assassin 0 Level(20,Ally,False) [13,2] 0 0 0 0 [0x0] NoAI
-UNIT
-
-TheanaNPCGroup:
-UNIT Theana Assassin 0 Level(20,NPC,True) [21,3] 0 0 0 0 [DeadeyeBow, Bloodletter] NoAI
-UNIT
-
-DurghamGroup:
-UNIT Durgham LanceCav 0 Level(1,Ally,False) [4,14] 0 0 0 0 [0x0] NoAI
-UNIT
-
-YodsenGroup:
-UNIT Yodsen Gunner 0 Level(1,Ally,False) [5,13] 0 0 0 0 [0x0] NoAI
-UNIT
-
-JuanGroup:
-UNIT Juan Thief 0 Level(1,Ally,False) [5,12] 0 0 0 0 [0x0] NoAI
-UNIT
-
-AvocadoGroup:
-UNIT Avocado Deserter 0 Level(1,Ally,False) [12,5] 0 0 0 0 [0x0] NoAI
-UNIT
-
-PonteGroup:
-UNIT Ponte Brigand 0 Level(1,Ally,False) [15,21] 0 0 0 0 [0x0] NoAI
-UNIT
-
-PassarolaGroup:
-UNIT Passarola Adventurer 0 Level(1,Ally,False) [14,22] 0 0 0 0 [0x0] NoAI
-UNIT
-
-BoltonGroup:
-UNIT Bolton DarkKnight 0 Level(1,Ally,False) [16,21] 0 0 0 0 [0x0] NoAI
+UNIT Windy SwordCav 0 Level(6,NPC,True) [9,3] 0 0 0 0 [KillingEdge, LightBrand] BossAI
 UNIT

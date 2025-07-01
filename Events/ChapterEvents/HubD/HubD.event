@@ -1,5 +1,10 @@
 EventPointerTable(HubDEventsID, PointerList)
 
+#define SeenHubD1Pitch 7
+#define SeenHubD2Pitch 8
+#define SeenHubD3Pitch 9
+
+
 PointerList:
 POIN TurnBasedEvents
 POIN CharacterBasedEvents
@@ -30,19 +35,36 @@ AFEV 0 RefreshLua 0
 END_MAIN
 
 GotoHubD1:
-MNC2 HubD_1
+HubChapterFirstTimeEvent(1, SeenHubD1Pitch, HubD1Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubD_1, Fort_Ruins_Outside, HubD, HubDCallback)
+GotoHubChapterIfYes(3, HubD_1, HubD1Selection_Yes)
+Text(HubD1Selection_No)
 ENUF LuaInAHubFlag
 NoFade
 ENDA
 
+HubDCallback:
+WEATHER 7
+NoFade
+ENDA
+
 GotoHubD2:
-MNC2 HubD_2
+HubChapterFirstTimeEvent(1, SeenHubD2Pitch, HubD2Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubD_2, Village, HubD, HubDCallback)
+GotoHubChapterIfYes(3, HubD_2, HubD2Selection_Yes)
+Text(HubD2Selection_No)
 ENUF LuaInAHubFlag
 NoFade
 ENDA
 
 GotoHubD3:
-MNC2 HubD_3
+HubChapterFirstTimeEvent(1, SeenHubD3Pitch, HubD3Pitch)
+FancyChapterMapOffset(-1,-1)
+FancyChapterPreview(HubD_3, Outside_Village_Evening, HubD, HubDCallback)
+GotoHubChapterIfYes(3, HubD_3, HubD3Selection_Yes)
+Text(HubD3Selection_No)
 ENUF LuaInAHubFlag
 NoFade
 ENDA

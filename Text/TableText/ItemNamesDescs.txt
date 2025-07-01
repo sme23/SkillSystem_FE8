@@ -554,7 +554,7 @@ If Lv. 10 or greater, use to access[N]
 or master the bow, knife, or gun.[X]
 
 ## FlierPermitName
-Flier Permit[X]
+Flier Whip[X]
 
 ## FlierPermitDesc
 If Lv. 10 or greater, use to procure[N]
@@ -606,7 +606,7 @@ Swimwear[X]
 
 ## SwimwearDesc
 Allows the wearer to traverse water[N]
-at 2 cost per tile. -2 Def, +2 Luck.[X]
+at 2 cost per tile. -2 Def, +2 Eva.[X]
 
 ## RustyHookName
 Rusty Hook[X]
@@ -638,11 +638,10 @@ Effective against infantry.[X]
 Hand Cannon[X]
 
 ## HandCannonDesc
-Fires staggering shells that[N]
-Break, but cannot follow-up.[X]
+Breaks, but cannot follow-up.[X]
 
 ## IgnisTriggerName
-Ignis Trigger[X]
+Ignisignia[X]
 
 ## IgnisTriggerDesc
 [LockIcon]Lua. Sword at 1 RNG. Hits Res at RNG.[X]

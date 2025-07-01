@@ -281,9 +281,9 @@ ENDA
 
 TalismanVillage:
 SetBackground(HouseBG)
-Text(B2a_TalismanVillage)
+Text(B2a_ScrollVillage)
 EraseBackground
-GiveItem(Talisman,0xFFFF)
+GiveItemWithDurability(SkillScroll,FinesseID,0xFFFF)
 TILECHANGE 0x0
 NoFade
 ENDA

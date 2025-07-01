@@ -139,6 +139,11 @@
 #define SolangeMug 0xB3
 #define RogelioMug 0xB4
 
+// D-3 Placeholder
+#define FidelMug 0xBA
+#define D3TorchBossMug 0xBB
+#define D3BanditBossMug 0xBC
+
 // hub C interlude unit placeholders
 #define WindyMug 0xB5
 #define BurtMug 0xB6
@@ -153,6 +158,7 @@
 
 
 //CLASS CARDS
+//Lua's classes (Captain, Admiral) don't matter
 
 #define WardenClassCard 0x100
 #define VanguardClassCard 0x101
@@ -167,6 +173,7 @@
 #define SlayerClassCard 0x10a
 #define Slayer_FClassCard 0x10b
 #define TricksterClassCard 0x10c
+#define Trickster_FClassCard TricksterClassCard
 #define MonkClassCard 0x10d
 #define Monk_FClassCard 0x10e
 #define Mercenary_FClassCard 0x10f
@@ -194,7 +201,6 @@
 #define Sniper_FClassCard 0x125
 #define BombardierClassCard 0x126
 #define SwordKnightClassCard 0x127
-#define DragoonClassCard SwordKnightClassCard
 #define DracoknightClassCard 0x128
 #define FalcoknightClassCard 0x129
 #define Assassin_FClassCard 0x12a
@@ -202,7 +208,25 @@
 #define AxeKnightClassCard 0x12c
 #define BowKnightClassCard 0x12d
 #define AssassinClassCard 0x12e
+#define ChampionClassCard 0x12f
+#define AdventurerClassCard 0x130
+#define Adventurer_FClassCard 0x131
+// to add for sure
+#define SeraphknightClassCard 0x132
+#define CurateClassCard 0x133
+#define LogClassCard 0x134
+#define GryphoknightClassCard 0x135
+#define WolfriderClassCard 0x136
+#define HorseClassCard 0x137
 
-// temporary
-#define AdventurerClassCard 0x79
-#define Adventurer_FClassCard 0x79 //sniper class card for now
+//placeholders
+#define GunnerClassCard WardenClassCard
+#define MarksmanClassCard WardenClassCard
+#define DragoonClassCard WardenClassCard
+#define KiteClassCard WardenClassCard
+#define AirshipClassCard WardenClassCard
+
+// doesn't actually matter
+#define Gryphoknight_DClassCard HalberdierClassCard
+
+

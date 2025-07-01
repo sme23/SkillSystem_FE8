@@ -1604,8 +1604,8 @@ an enemy within range of this unit's[N]
 weapon, ally ignores enemy's AVO.[X]
 
 ## SD_SurpriseAttack
-Surprise Attack: If foe is unable[N]
-to counter, ignore foe's defense.[X]
+Surprise Attack: If foe cannot counter,[N]
+this unit ignores the foe's defenses.[X]
 
 ## SD_ResoluteSacrifice
 Resolute Sacrifice: Healing staff[N]
@@ -1642,7 +1642,7 @@ Breaks an enemy, they gain an additional[N]
 follow-up attack immediately after.[X]
 
 ## SD_LiquidCourage
-Liquid Courage: Once per turn, unit[N]
+Liquid Courage: Once a turn, this unit[N]
 can consume an item without using[N]
 their action. +2 STR/SKL/SPD (decays).[X]
 
@@ -1653,7 +1653,7 @@ the foe's, perform a followup attack.[X]
 
 ## SD_AstralBlessing
 Astral Blessing: At start of turn,[N]
-units within 3 spaces randomly gain[N]
+allies within 3 spaces randomly gain[N]
 SPD+2, SKL+3, or EVA+4 for that turn.[X]
 
 ## SD_CatchingUp
@@ -1668,8 +1668,7 @@ in combat, using the Reverse command.[X]
 
 ## SD_Panache
 Panache: Unit can initiate combat[N]
-with guns in melee, gaining WTA[N]
-and +5 AS.[X]
+with guns at 1 RNG, giving WTA and 5 AS.[X]
 
 ## SD_Canter
 Canter: Unit can move 2[N]
@@ -1703,7 +1702,7 @@ and kills an enemy, +1 Str and +1 Mag[N]
 (Max +5). Lasts until end of chapter.[X]
 
 ## SD_WellRested
-Well-rested: When unit isn't deployed for[N]
+Well-Rested: When unit isn't deployed for[N]
 a chapter, +2 MOV. If deployed two maps[N]
 in a row, -1 MOV (Min: Base, Max: 15).[X]
 
@@ -1772,7 +1771,7 @@ max HP damage at the start of the turn.[X]
 
 ## SD_ArcaneArtifice
 Arcane Artifice: If this unit's weapon[N]
-uses MAG and the enemy's uses STR,[N]
+uses MAG and the enemy's doesn't,[N]
 this unit's Avoid is doubled.[X]
 
 ## SD_Dismount
@@ -1825,7 +1824,7 @@ an ally using the Pollinate command.[X]
 ## SD_BoardingParty
 Boarding Party: This unit can place[N]
 bridges on adjacent unoccupied tiles.[N]
-Costs X gold to use.[X]
+Costs 250 gold to use.[X]
 
 ## SD_ContraryWinds
 Contrary Winds: This unit can Summon[N]

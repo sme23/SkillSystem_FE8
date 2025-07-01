@@ -1,8 +1,226 @@
+//narrative idea
+
 ## HubD_3Title
 Ch. D-3: Black and White[X]
 
 ## HubD_3GoalWindow
-Rout[X]
+Kill bosses[X]
 
 ## HubD_3StatusObjective
-Defeat all enemies[X]
+Defeat Enrique[N]
+  and Inka[X]
+
+
+//However, when Razvan nears the gates and speaks to people he used to know, asking if he can visit his mother, the TORCH boss 
+//The villagers are driven into their homes, and Lua's crew, who hung close by in case of danger, come to Razvan's rescue. Though Razvan initially suggests retreating,
+//Lua informs him that there are bandits readying for a large attack on the place. Razvan tries telling the TORCH boss this, but he responds that his job is to kill pirates:
+//that is his priority, not the villagers.
+
+//Forced into a difficult decision (flee and outrun TORCH, but the village gets ravaged; fight through TORCH to save the villagers),
+//Razvan chooses the latter, though he hates that he does.
+
+//When the crew gets back, they find that TORCH has taken over the village and is using it as a makeshift base, protecting it from pirates and the like.
+//Seeing that the place is swarming with imperials and it seems like bandits are along the walls, Lua tells Razvan that they'll wait for him while he checks the place out.
+
+## HubD3BeginningScene1
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+//He tries walking up himself to the guards and speaks with them, but they quickly try to turn him away, not believing his bounty but wanting to keep him from being harmed.
+//They get him up to speed, telling him why there are imperial soldiers there and what's happened since he left (around one year of time).
+//They inform him that the Redwings have been showing up and going for daily raids, and that today's are particularly bad. Then, the TORCH captain arrives.
+
+## HubD3BeginningScene2
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// Unfortunately, the TORCH boss hears the disturbance, rolls up, and recognizes Razvan. He has a brief discussion with him, asking if he really thought that he could return home now.
+// Razvan gives the game away by saying that he just wanted to check on his mother, which Enrique takes to mean that the rest of the Skysabers are with Razvan.
+// Enrique admonishes him, saying that if he had truly cut ties, then only he would have to be taken right now...
+// Razvan argues back, asking him if he's really going to waste his time chasing them when the Redwings are attacking the city and putting people in harm's way.
+// Enrique's response is that his duty was never to protect villagers like some common town guard; it was to hunt down dangerous pirates and eliminate them.
+// In that sense, the Skysabers are much more of a threat with their acquisition of the Fire Emblem.
+// Razvan asks how they know, and Enrique responds by asking if they truly thought that the Empire wouldn't have its own spies in a rebel group like the Keepers.
+// Lastly, Enrique threatens the lives of everyone that lives here if Razvan tries to flee. Cowed, Razvan runs away back to the crew.
+
+## HubD3BeginningScene3
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// Then, Enrique is spoken to by Fidel, who asks what the hell he's doing and that they need to reinforce the walls in the main village.
+// Enrique smiles, and then tells him that Fidel's group can handle that themselves, if they choose. He has Skysabers to hunt.
+// Fidel berates him, telling him that he's playing with the lives of Incendivis citizens, but Enrique goes on a diatribe about the responsibilities 
+// of TORCH and that people in the outskirts have no right to complain about what happens to them, in the end.
+// Infuriated, Fidel tells him that he hopes he falls to the Lands Below and that today's the last day he works for the Empire, then leaves.
+
+## HubD3BeginningScene4
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+//Enrique briefly laments the loss of his talent, but assures his men that today, the Silverspears will become heroes of the empire, as he's very sure that Razvan will
+//return with the rest of the Skysabers, all the better for him to hunt.
+
+## HubD3BeginningScene5
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+
+//Then, we pan back to Razvan and Lua showing up, with Lua explaining that the bandits are looking to attack from all sides, and curses Enrique for not moving to stop them.
+//Razvan, filled with indecision, agonizes over the situation, sure that his mother is in there and in danger. Then, he begs Lua to help him cut through the Silverspears
+// and wipe out the Redwings so that he can save his mother's life and the rest of the villagers that he grew up with.
+//Lua agrees, saying that at this point, TORCH would just chase them and stop them from leaving port. There's only one way out, and it's through them!
+
+## HubDBeginningScene6
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+//post preps scenes: related to the side objective
+
+//first one: centers in on Inka, who orders her boys to direct their prisoners to break down the wall. Seeing the chance at finally breaking down the town's walls,
+//she muses on how, out of all the original members of her crew, she's the only one left who'll realize their dream of taking the town for themselves.
+//Orphans that were cast out of their own homes and had to survive off of the desert's bounty, they always wanted a home like this...
+//But she's the only one who'll get to enjoy it, so Inka resolves to enjoy it for all of their sakes, and make sure that her boys finally have a place of their own.
+
+## HubD3PostPrepsScene1
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+//Then, we pan to Fidel, who's guarding the town center. Multiple residents are inside, including Razvan's mother, who asks if they'll really be alright.
+//Fidel swears that his soldiers will do the best that they can to protect them all, but that they can only hold out for so long by themselves.
+//He tells her that it may be her son who swoops to their rescue, and although the mother is initially distressed by the idea that Razvan is in danger,
+//Fidel tells her that he trained the boy well enough that he's not worried; any disciple of his will make it through just fine. He then begs that The Maker watches over Razvan, and them all...
+
+## HubD3PostPrepsScene2
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// should trigger quite quickly, pops up and Fidel yells at Enrique again, who ignores his pleas.
+// Inka crows about it and orders her Redwings to fly in and start wrecking shop, along with forcing the prisoners to stay in place as bait for the magi defenders
+
+## HubD3MidBattle_Fidel_FirstSetOfWallsBrokenText 
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+## HubD3MidBattle_Enrique_FirstSetOfWallsBrokenText 
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+## HubD3MidBattle_Inka_FirstSetOfWallsBrokenText 
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+//check for when the target is at a specific location for the wall death quote text to make sure it's actually broken (since it's later maybe some deranged LTCer could troll me)
+//
+
+## HubD3MidBattle_Fidel_InnerWallBrokenText 
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+## HubD3MidBattle_Enrique_InnerWallBrokenText 
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+## HubD3MidBattle_Inka_InnerWallBrokenText 
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// During the battle, if Fidel dies and the top village is destroyed, have Razvan respond to that with despondence (if he's on the map) and,
+// if alive, have Inka respond to that by laughing it up and razing it to the ground immediately
+// Enrique responds with sorrow, and begins to question whether his approach was the right one
+
+## HubD3MidBattle_Razvan_OnFidelKilledText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+## HubD3MidBattle_Enrique_OnFidelKilledText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+## HubD3MidBattle_Inka_OnFidelKilledText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// After the battle, two different outtros depending on whether or not the main village was saved
+
+// Initial response: If all of the houses remain, then Razvan's friends and old mentor, an old man, will congratulate him.
+// The old man admits that he initially held animosity towards Razvan after hearing he became a pirate.
+// But due to today's feat, the old man forgives him and apologizes by giving Razvan the Rewarp staff, saying that he'll get better use out of it than he would.
+
+## HubD3EndingScene1_AllSideVillagesSavedText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// If half are saved, then the old man will not come to congratulate him, but will begrudgingly acknowledge him trying to do the right thing.
+// However, he will then lecture Razvan about the nature of lacking surety, and that that's what caused his failure.
+// Still, he offers the boy his pity and gives him a Statuette, telling him to redouble his efforts toward his faith.
+
+## HubD3EndingScene1_SomeSideVillagesSavedText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// If none are saved, then the old man will be dead and not show up. Instead, Razvan will find his body in the wreckage
+// as the Skysabers survey the village. Lua will try to comfort him, but Razvan will push through the tears, desperate to find his mother.
+
+## HubD3EndingScene1_FewtoNoSideVillagesSavedText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// Razvan runs to the house, meeting his old mentor Fidel once again. Fidel jokes around for a bit, but then sincerely thanks Razvan for his efforts.
+// Razvan hastily rushes through this part and asks where his mother is, only for her to come out herself.
+
+## HubD3EndingScene2_MainHouseSaved
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// If the main village is saved, Razvan has a scene with his mother where she accepts who he is, warts and all, and thanks Lua for her saving him.
+// The two have a heart-to-heart, and his mother sets off with the survivors of the Incendivis forces, who vow to sail back to the empire with the refugees,
+// disgusted by Enrique's actions. However, Fidel does not come with them.
+
+## HubD3EndingScene3_MainHouseSaved
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// After this, Fidel asks Lua for her permission to join the crew. Shocked that he expects her to accept a former TORCH pirate hunter,
+// Fidel lays out his change in perspective in a way that cements the same in Razvan's mind. He tells Razvan that he truly views him
+// as an equal, now, and that since he has no place to go and detests the culture that made Enrique make such a choice, he wants to become
+// a pirate and do good in his own way, regardless of whether the law recognizes it as such. 
+
+## HubD3EndingScene4_MainHouseSaved
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// With this experience, Razvan realizes that the world isn't so black and white: that arbiters of order, like TORCH, aren't free of sin, either.
+// He accepts that his place is with the Skysabers, and this allows him to stay with the party regardless of Lua's final choice.
+// He and Lua have a final heart-to-heart, where he tells her that he intends to stick around for the long haul, and that he is, at last, proud to be a pirate.
+
+## HubD3EndingScene5_MainHouseSaved
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// Razvan runs to the house, looking through the wreckage, but comes to the conclusion that everyone inside must have died.
+// And now that there's nowhere else to look... That his mother must have been crushed in the wreckage.
+// Lua, Pilar and Desiderio both try to comfort him in their own way, but he snaps at them, asking to be left alone. 
+
+## HubD3EndingScene2_MainHouseDestroyed
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// Lua refuses, irritating Razvan, but he ultimately acknowledges that he did want to speak to someone, at least.
+// He vents out all of his anger and sorrow, with Lua letting him get all of it out and accepting blame for failing to save his mother.
+// In the end, he responds that although his debt is paid, he doesn't have anywhere else to go, anymore.
+// Razvan tells Lua that he'll stay with them, for now. But that if the crew ever becomes more like the "Redwings",
+// pirates who care for nothing but themselves, then he'll leave them without a second thought. (foreshadowing him leaving if siding with Pirates)
+// Lua accepts this, somewhat disturbed by the change in him and the cruelty that he espouses. 
+
+## HubD3EndingScene3_MainHouseDestroyed
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+
+// death quotes down here
+
+## EnriqueDQ
+[X]
+
+## InkaDQ
+[X]

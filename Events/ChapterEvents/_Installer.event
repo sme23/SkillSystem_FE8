@@ -1,3 +1,4 @@
+// Hub A
 {
     #include "Chapter1.event"
 }
@@ -25,6 +26,8 @@
 {
     #include "HubA/HubALibrary.event"
 }
+
+// Hub B
 {
     #include "Chapter2.event"
 }
@@ -52,6 +55,8 @@
 {
     #include "HubB/HubBTheOutskirts.event"
 }
+
+// Hub C
 {
     #include "Chapter3.event"
 }
@@ -73,6 +78,11 @@
 {
 	#include "HubC/HubC_2.event"
 }
+{
+    #include "HubC/HubC_Maze.event"
+}
+
+// Hub D
 {
     #include "Chapter4.event"
 }
