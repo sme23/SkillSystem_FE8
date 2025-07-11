@@ -187,3 +187,11 @@ void DoesAnyUnitHaveForestFriendASMC(){ //here, we will loop through our entire 
         }
     }
 }
+
+void CheckIfTileChangeTriggered(){
+    if (AreMapChangeTriggered(gEventSlot[0x1])){
+        gEventSlot[0xC] = 1;
+        return;
+    }
+    gEventSlot[0xC] = 0;
+}

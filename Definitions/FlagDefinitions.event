@@ -19,8 +19,25 @@
 #define A1_GeraldoGenericBattleQuoteSeen 0x28
 
 // D-3 stuff
+#define D3_Enrique_BQ_Flag  1
+#define D3_Inka_BQ_Flag  2 //not using these for other purposes so should be fine
 #define D3EnriqueDQFlag 15
 #define D3InkaDQFlag 16
+#define D3FidelDQFlag 23
+#define D3WallBrokenAFEVFlag 24
+#define D3_Enrique_Razvan_BQ_Flag 26
+#define D3_Enrique_Pilar_BQ_Flag 27
+#define D3_Enrique_Desiderio_BQ_Flag 28
+#define D3_Enrique_Calista_BQ_Flag 29
+#define D3_Enrique_Avocado_BQ_Flag 30
+#define D3_Enrique_Jaime_BQ_Flag 31
+#define D3_Inka_Razvan_BQ_Flag 32
+#define D3_Inka_Lua_BQ_Flag 33
+#define D3_Fidel_Inka_BQ_Flag 34
+#define D3_Inka_Tangyuan_BQ_Flag 35
+#define D3_Inka_Dmitr_BQ_Flag 36
+
+
 
 // used everywhere, do not touch - Loog
 #define LuaInAHubFlag 0xA0

@@ -263,6 +263,14 @@
 
 [LoadSalvador] = [LoadFace][0xB8][0x1]
 
+[LoadD3SoldierBro1] = [LoadFace][0x70][0x1]
+[LoadD3SoldierBro2] = [LoadFace][0x71][0x1]
+[LoadFidel] = [LoadFace][0xBA][0x1]
+[LoadEnrique] = [LoadFace][0xBB][0x1]
+[LoadInka] = [LoadFace][0xBC][0x1]
+[LoadCorina] = [LoadFace][0x60][0x1]
+
+
 // 0x49 portrait id is open now
 
 [Font] = [0x80][0x26]

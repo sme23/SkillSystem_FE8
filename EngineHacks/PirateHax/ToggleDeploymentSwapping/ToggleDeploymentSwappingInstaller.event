@@ -51,6 +51,7 @@ ALIGN 4
 ALIGN 4
 
 ForcedDeploymentList: //Vanilla list at 0x9ED64C
+ForcedDeployment(Razvan, UnlockedPosition, AllModes, HubD_3)
 ForcedDeployment(Lua,LockedPosition,AllModes,Chapter3)
 ForcedDeployment(Pilar,LockedPosition,AllModes,Chapter3)
 ForcedDeployment(Desiderio,LockedPosition,AllModes,Chapter3)

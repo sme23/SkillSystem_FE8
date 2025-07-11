@@ -234,8 +234,14 @@
 }
 
 {
+    #include "Animations/SwordKnight/Sword Installer.event"
+    #include "Animations/SwordKnight/Unarmed Installer.event"
+}
+
+{
     #include "Animations/AxeKnight/Axe Installer.event"
     #include "Animations/AxeKnight/Handaxe Installer.event"
+    #include "Animations/AxeKnight/Unarmed Installer.event"
 }
 
 {
@@ -246,4 +252,16 @@
 {
     #include "Animations/BowKnight/Bow Installer.event"
     #include "Animations/BowKnight/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Champion/Sword Installer.event"
+    #include "Animations/Champion/Lance Installer.event"
+    #include "Animations/Champion/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Sage_Hermen/Sword Installer.event"
+    #include "Animations/Sage_Hermen/Magic Installer.event"
+    #include "Animations/Sage_Hermen/Staff Installer.event"
 }

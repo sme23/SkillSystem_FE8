@@ -8,11 +8,11 @@ int GetCurrentPromotedLevelBonus(){
 }
 
 void ComputeBattleUnitHitRate(BattleUnit* bu) {
-    bu->battleHitRate = (bu->unit.skl * 5) + GetItemHit(bu->weapon) + bu->wTriangleHitBonus;
+    bu->battleHitRate = (bu->unit.skl * 4) + GetItemHit(bu->weapon) + bu->wTriangleHitBonus;
 }
 
 void ComputeBattleUnitAvoidRate(BattleUnit* bu) {
-    bu->battleAvoidRate = bu->terrainAvoid + (bu->unit.lck * 5);
+    bu->battleAvoidRate = bu->terrainAvoid + (bu->unit.lck * 4);
 
     if (bu->battleAvoidRate < 0){
         bu->battleAvoidRate = 0;

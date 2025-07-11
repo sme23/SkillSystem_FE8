@@ -166,11 +166,23 @@
 #define LanceCavLanceAnim 0x135
 #define LanceCavUnarmedAnim 0x136
 
+#define SwordKnightSwordAnim 0x13d
+#define SwordKnightUnarmedAnim 0x13e
+
 #define AxeKnightAxeAnim 0x137
 #define AxeKnightHandaxeAnim 0x138
+#define AxeKnightUnarmedAnim 0x145
+
+#define LanceKnightLanceAnim 0x13b
+#define LanceKnightUnarmedAnim 0x13c
 
 #define BowKnightBowAnim 0x139
 #define BowKnightUnarmedAnim 0x13a
 
-#define LanceKnightLanceAnim 0x13b
-#define LanceKnightUnarmedAnim 0x13c
+#define ChampionSwordAnim 0x13f
+#define ChampionLanceAnim 0x140
+#define ChampionUnarmedAnim 0x141
+
+#define SageHermenSwordAnim 0x142
+#define SageHermenTomeAnim 0x143
+#define SageHermenStaffAnim 0x144

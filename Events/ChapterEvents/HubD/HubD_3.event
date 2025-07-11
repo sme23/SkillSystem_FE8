@@ -23,6 +23,10 @@ EventPointerTable(HubD_3EventsID, PointerList)
 #define D3TopRightTreasureFlag 20
 #define D3EnriqueAFEVFlag 21
 #define D3InkaAFEVFlag 22
+//#define D3FidelDQFlag 23
+//#define D3WallBrokenAFEVFlag 24
+#define D3FidelDiedFlag 25
+//26-36: battle quotes
 
 PointerList:
 POIN TurnBasedEvents
@@ -39,7 +43,7 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0, PostPrepsEvent, 1)
 TurnEventPlayer(0, MoreDragonsSpawnAndAiChanges, 2)
-//filler event on Turn 3 where Enrique and Fidel will talk again
+TurnEventPlayer(0, RazvanOrLuaNoticesEvacuation, 3) //just text
 TurnEventPlayer(0, MoreDragonsOnTheSide, 4)
 TurnEventPlayer(0, MoreMaligsOnTheSide, 5)
 TurnEventPlayer(0, InkaCharges, 6)
@@ -47,19 +51,22 @@ TurnEventPlayer(0, SpookyEnemiesIncoming, 7)
 END_MAIN
 
 PostPrepsEvent: //Fidel and crew call out, bandits as well
-CameraCursor(D3Thief1)
-CameraCursor(D3Thief2)
-Text(HubD3PostPrepsScene1)
 CameraCursor(Inka)
+MUSC SwabbieTalkID
 Text(HubD3PostPrepsScene1)
+FadeOutMusic
 CameraCursor(Fidel)
+MUSC EmergencyCrewmateID
 Text(HubD3PostPrepsScene2)
 NoFade
 ENDA
 
 MoreDragonsSpawnAndAiChanges:
-LoadEnemies(DragonReinforcementsTop) //flying wall breakers coming in for the next wall
-//Inka response to this and hints at AI changes
+IfAlivePanToThenDialog(Fidel, HubD3MidBattle_Fidel_FirstSetOfWallsBrokenText, 776)
+IfAlivePanToThenDialog(Enrique, HubD3MidBattle_Enrique_FirstSetOfWallsBrokenText, 777)
+IfAlivePanToThenDialog(Inka, HubD3MidBattle_Inka_FirstSetOfWallsBrokenText, 778)
+LoadEnemies(DragonReinforcementsTop)
+IfAliveDialog(Inka, HubD3MidBattle_Inka_ReinforcementResponse, 779)
 
 //now let's make the prisoners stationary so that they can be fodder and let the raiders do their job
 CheckForCharAtCoordsThenCHAI(0,12,D3Bandit_Raider,1,0,4,4,0) //left raiders: always do something and prioritize looting, then attacking
@@ -93,6 +100,19 @@ UNIT D3Bandit_Raider DragonRider 0 Level(RedwingMookLevel,Enemy,True) [12,0] 0 0
 UNIT D3Bandit_Raider DragonRider 0 Level(RedwingMookLevel,Enemy,True) [13,0] 0 0 1 REDA13R3 [IronAxe] WallAttackerAI
 UNIT D3Bandit_Raider DragonRider 0 Level(RedwingMookLevel,Enemy,True) [14,0] 0 0 1 REDA14R3 [IronAxe] WallAttackerAI
 UNIT
+
+RazvanOrLuaNoticesEvacuation:
+CHECK_DEPLOYED Razvan
+BEQ 776 s0 sC
+    CameraCursor(Razvan)
+    Text(D3RazvanNoticesEvacuationText) //if razvan deployed, he notices; otherwise, lua says it
+    GOTO 777
+LABEL 776
+CameraCursor(Lua)
+Text(D3LuaNoticesEvacuationText)
+LABEL 777
+NoFade
+ENDA
 
 MoreDragonsOnTheSide: // a bit of filler on the sides? some shittier guys who are easier to deal with: a new set of raiders
 CamOn
@@ -133,14 +153,14 @@ LoadEnemies(InkaChargeRightGroup)
 LoadEnemies(InkaChargeTopGroup)
 CHECK_ALIVE Inka
 BEQ 776 s0 sC
-    //Text of her crashing out and ordering everyone to charge
+    Text(D3InkaChargeText)
     SetAI(Inka,0,0,4,0) //Charge AI
     GOTO 777
 LABEL 776
-//Text of some generic raider being out for vengeance, lampshading that everyone will charge
+IfAliveDialog(D3Bandit_Raider, D3InkaDeadChargeText, 780) //no way they'd all be wiped out but just in case, check
 LABEL 777
-CheckIfAliveThenAIChange(D3Bandit_Raider, 778, 0, 0, 4, 0)
-CheckIfAliveThenAIChange(D3Bandit, 779, 0, 0, 4, 0) //changes any of the remaining bandits to attack you
+CheckIfAliveThenAIChange(D3Bandit_Raider, 778, 0, 4, 4, 0)
+CheckIfAliveThenAIChange(D3Bandit, 779, 0, 4, 4, 0) //changes any of the remaining bandits to attack you/raid villages
 NoFade
 ENDA
 
@@ -159,7 +179,6 @@ UNIT D3Bandit_Raider MaligKnight 0 Level(RedwingEliteLevel,Enemy,True) [14,0] 0 
 UNIT
 
 SpookyEnemiesIncoming:
-//just more on the right and left to deal with
 CamOn
 LoadEnemies(FinalEnemiesLeft)
 LoadEnemies(FinalEnemiesRight)
@@ -182,7 +201,7 @@ CharacterEvent(D3ThiefTalk2Flag, D3Thief2Convo, 0, D3Thief2)
 END_MAIN
 
 D3Thief1Convo:
-//Thief 1 Text
+CenterTextbox(D3Thief1ShowsYouTreasureText)
 CAMERA_CENTERED [4,3]
 STAL 10
 ENUF D3TopLeftTreasureFlag
@@ -199,7 +218,7 @@ NoFade
 ENDA
 
 D3Thief2Convo:
-//Thief 2 Text
+CenterTextbox(D3Thief2ShowsYouTreasureText)
 CAMERA_CENTERED [25,5]
 STAL 10
 ENUF D3TopRightTreasureFlag
@@ -218,40 +237,16 @@ ENDA
 LocationBasedEvents:
 Armory(D3Armory,21,25)
 Vendor(D3Vendor,5,25)
-//generic: these are the 6 villages thrown around the map that the dragons will try to destroy
-Village(D3House1Flag,D3House1,5,10)
-Village(D3House2Flag,D3House2,21,11)
-Village(D3House3Flag,D3House3,6,15)
-Village(D3House4Flag,D3House4,20,15)
-Village(D3House5Flag,D3House5,18,19)
-Village(D3House6Flag,D3House6,7,20)
+//generic: these are the 6 villages thrown around the map that the dragons will try to destroy; i don't want them to be visitable, so like so
+LOCA D3House1Flag [5,9] 0x20
+LOCA D3House2Flag [21,10] 0x20
+LOCA D3House3Flag [6,14] 0x20
+LOCA D3House4Flag [20,14] 0x20
+LOCA D3House5Flag [18,18] 0x20
+LOCA D3House6Flag [7,19] 0x20
 // actually gives something
 Village(D3VillageFlag, D3RedHouse, 19, 32)
 END_MAIN
-
-D3House1: //these are just here to be here, really; fill these with flavor?
-NoFade
-ENDA
-
-D3House2: 
-NoFade
-ENDA
-
-D3House3: 
-NoFade
-ENDA
-
-D3House4: 
-NoFade
-ENDA
-
-D3House5: 
-NoFade
-ENDA
-
-D3House6:
-NoFade
-ENDA
 
 D3RedHouse:
 GiveItem(Sleep,0xFFFF)
@@ -275,16 +270,16 @@ AREA D3TopLeftTreasureFlag TopLeftTreasure [4, 3] [4, 3]
 AREA D3TopRightTreasureFlag TopRightTreasure [25, 5] [25, 5]
 AFEV D3EnriqueAFEVFlag CheckIfBothBossesDead D3EnriqueDQFlag //check on death of either of them
 AFEV D3InkaAFEVFlag CheckIfBothBossesDead D3InkaDQFlag
+AFEV 0 CheckIfInnerWallBroken D3WallBrokenAFEVFlag
+AFEV D3FidelDiedFlag FidelDeathResponse D3FidelDQFlag
 END_MAIN
 
 TopLeftTreasure:
-//some text with the active unit
 GiveItem(TealGem, 0xFFFF)
 NoFade
 ENDA
 
 TopRightTreasure:
-//some text with the active unit
 GiveItem(Mine, 0xFFFF)
 NoFade
 ENDA
@@ -300,6 +295,52 @@ LABEL 1
 NoFade
 ENDA
 
+CheckIfInnerWallBroken:
+CheckTileChangeTriggered(19) //checking if our wall was actually broken; should be tilechange 19
+BEQ 1 s0 sC //if it is not set, then we skip ahead
+    CHECK_EVENTID D3FidelDQFlag
+    BNE 2 s0 sC //if he is dead, then skip past
+        CameraCursor(Fidel)
+        Text(HubD3MidBattle_Fidel_InnerWallBrokenText)
+    LABEL 2
+    CHECK_EVENTID D3EnriqueDQFlag
+    BNE 3 s0 sC //if he is dead, then skip past
+        CameraCursor(Enrique)
+        Text(HubD3MidBattle_Enrique_InnerWallBrokenText)
+    LABEL 3
+    CHECK_EVENTID D3InkaDQFlag
+    BNE 1 s0 sC //if he is dead, then skip past to end
+        CameraCursor(Inka)
+        Text(HubD3MidBattle_Inka_InnerWallBrokenText)
+LABEL 1
+ENUF D3WallBrokenAFEVFlag //should set this off so it doesn't play again, always; don't need to store this happening
+NoFade
+ENDA
+
+FidelDeathResponse:
+CHECK_EVENTID D3EnriqueDQFlag
+BNE 1 s0 sC //if he is dead, then skip past
+    CameraCursor(Enrique)
+    Text(HubD3MidBattle_Enrique_OnFidelKilledText)
+LABEL 1
+CHECK_EVENTID D3InkaDQFlag
+BNE 2 s0 sC //if he is dead, then skip past
+    CameraCursor(Inka)
+    Text(HubD3MidBattle_Inka_OnFidelKilledText)
+    SetAI(Inka,6,4,4,0) //Raid but also willing to fight
+    SetAI(D3Bandit_Raider, 6, 4, 4, 0) //raid only AI
+LABEL 2
+CHECK_DEPLOYED Razvan
+BEQ 3 s0 sC //if razvan was not deployed, then we skip to Lua's version
+    CameraCursor(Razvan)
+    Text(HubD3MidBattle_RazvanHere_OnFidelKilledText)
+    GOTO 4
+LABEL 3
+CameraCursor(Lua)
+Text(HubD3MidBattle_RazvanNotHere_OnFidelKilledText)
+LABEL 4
+NoFade
+ENDA
 
 Traps1:
 RedSigil(2,0)
@@ -460,6 +501,25 @@ LoadEnemies(RedwingUnits)
 LoadEnemies(WallbreakerUnits)
 LoadEnemies(FidelGroup)
 LoadEnemies(GreenThieves)
+SetBackground(Outside_Village_Day)
+MUSC CastawayHeartID
+Text(HubD3BeginningScene1)
+FADI 15
+STAL 60
+SetBackground(Town_Day)
+Text(HubD3BeginningScene2)
+FadeOutMusic
+STAL 30
+MUSC SwabbieTalkID
+Text(HubD3BeginningScene3)
+Text(HubD3BeginningScene4)
+Text(HubD3BeginningScene5)
+FADI 15
+FadeOutMusic
+STAL 60
+SetBackground(Outside_Village_Day)
+MUSC AvastMeHeartiesID
+Text(HubDBeginningScene6)
 ENUT D3TopLeftTreasureFlag
 ENUT D3TopRightTreasureFlag //set these ahead of time so they can't be triggered without talking to the shitters
 GotoPrepScreen

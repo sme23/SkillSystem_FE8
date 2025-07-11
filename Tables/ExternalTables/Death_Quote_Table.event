@@ -41,7 +41,9 @@ DeathQuote(Ruby, AllChapters, 0, RubyDQ)
 //C-2
 DeathQuote(Salvador, HubC_2, 0x2, 0)
 
-
+//D-3 while fidel is green
+DeathQuote(Fidel, HubD_3, D3FidelDQFlag, D3_FidelDQ)
+DeathQuote(Fidel, HubD_3, 0, FidelDQ)
 //DeathQuote()
 
 // Bosses
@@ -96,5 +98,6 @@ DeathQuote(Rogelio, HubD_1, 0x2, RogelioDQ)
 
 DeathQuote(Enrique, HubD_3, D3EnriqueDQFlag, EnriqueDQ)
 DeathQuote(Inka, HubD_3, D3InkaDQFlag, InkaDQ)
+DeathQuote(Wall, HubD_3, D3WallBrokenAFEVFlag, 0) //it's a wall.
 
 DeathQuote(0xFFFF,0,0,0) // terminator

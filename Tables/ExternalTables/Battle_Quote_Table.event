@@ -159,4 +159,24 @@ UnspecifiedBattleConvo(Solange,HubD_1, 0x13, D1_BQ_SolangeGeneric)
 // Rogelio
 UnspecifiedBattleConvo(Rogelio,HubD_1, 0x1, D1_BQ_Rogelio)
 
+// Chapter D-3
+// Enrique
+SpecifiedBattleConvo(Enrique,Razvan,HubD_3, D3_Enrique_Razvan_BQ_Flag, D3_Enrique_Razvan_BQ)
+SpecifiedBattleConvo(Enrique,Pilar,HubD_3, D3_Enrique_Pilar_BQ_Flag, D3_Enrique_Pilar_BQ)
+SpecifiedBattleConvo(Enrique,Desiderio,HubD_3, D3_Enrique_Desiderio_BQ_Flag, D3_Enrique_Desiderio_BQ)
+SpecifiedBattleConvo(Enrique,Calista,HubD_3, D3_Enrique_Calista_BQ_Flag, D3_Enrique_Calista_BQ)
+SpecifiedBattleConvo(Enrique,Avocado,HubD_3, D3_Enrique_Avocado_BQ_Flag, D3_Enrique_Avocado_BQ)
+SpecifiedBattleConvo(Enrique,Jaime,HubD_3, D3_Enrique_Jaime_BQ_Flag, D3_Enrique_Jaime_BQ)
+UnspecifiedBattleConvo(Enrique,HubD_3, D3_Enrique_BQ_Flag, D3_Enrique_BQ)
+
+// Inka
+
+SpecifiedBattleConvo(Inka,Razvan,HubD_3, D3_Inka_Razvan_BQ_Flag, D3_Inka_Razvan_BQ)
+SpecifiedBattleConvo(Inka,Lua,HubD_3, D3_Inka_Lua_BQ_Flag, D3_Inka_Lua_BQ)
+SpecifiedBattleConvo(Inka,Fidel,HubD_3, D3_Fidel_Inka_BQ_Flag, D3_Fidel_Inka_BQ)
+SpecifiedBattleConvo(Inka,Tangyuan,HubD_3, D3_Inka_Tangyuan_BQ_Flag, D3_Inka_Tangyuan_BQ)
+SpecifiedBattleConvo(Inka,Dmitr,HubD_3, D3_Inka_Dmitr_BQ_Flag, D3_Inka_Dmitr_BQ)
+UnspecifiedBattleConvo(Inka,HubD_3, D3_Inka_BQ_Flag, D3_Inka_BQ)
+
+
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Terminator

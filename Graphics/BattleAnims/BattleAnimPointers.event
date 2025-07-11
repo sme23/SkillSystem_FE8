@@ -297,7 +297,7 @@ ALIGN 4
 AxeKnightAnims:
 AxeAnim(AxeKnightAxeAnim)
 HandAxeAnim(AxeKnightHandaxeAnim)
-UnarmedAnim(AxeKnightAxeAnim)
+UnarmedAnim(AxeKnightUnarmedAnim)
 EndAnim
 
 ALIGN 4
@@ -310,4 +310,25 @@ ALIGN 4
 LanceKnightAnims:
 LanceAnim(LanceKnightLanceAnim)
 UnarmedAnim(LanceKnightUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SwordKnightAnims:
+SwordAnim(SwordKnightSwordAnim)
+UnarmedAnim(SwordKnightUnarmedAnim)
+EndAnim
+
+ALIGN 4
+ChampionAnims:
+SwordAnim(ChampionSwordAnim)
+LanceAnim(ChampionLanceAnim)
+UnarmedAnim(ChampionUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SageHermenAnims:
+SwordAnim(SageHermenSwordAnim)
+TomeAnim(SageHermenTomeAnim)
+StaffAnim(SageHermenStaffAnim)
+UnarmedAnim(SageHermenTomeAnim)
 EndAnim

@@ -34,6 +34,8 @@
 #define CheckIfAliveThenAIChange(charID, labelID, ai1, ai2, ai3, ai4) "CHECK_ALIVE charID; BEQ labelID s0 sC; SetAI(charID, ai1, ai2, ai3, ai4); LABEL labelID"
 
 #define IfAliveDeadDialog(character,alivetext,deadtext, label1, label2) "CHECK_ALIVE character; BEQ label1 0x0 0xC; Text(alivetext); GOTO label2; LABEL label1; Text(deadtext); LABEL label2"
+#define IfAlivePanToThenDialog(character, text, label) "CHECK_ALIVE character; BEQ label 0x0 0xC; CameraCursor(character); Text(text); LABEL label"
+#define IfAliveDialog(character, text, label) "CHECK_ALIVE character; BEQ label 0x0 0xC; Text(text); LABEL label"
 
 #define TextWithMusicChange(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSC songId; TEXTCONT; TEXTEND; REMA"
 #define TextWithMusicChange2(textId, songId) "TEXTSTART; TEXTSHOW textId; TEXTEND; MUSS songId; TEXTCONT; TEXTEND; REMA"
