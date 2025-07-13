@@ -454,6 +454,83 @@ Shit! That means the Redwings are[N]
 free to take the place down[Beat][N]
 Come on, everybody! Pick up the pace![AN][X]
 
+// if the town center is destroyed, then either razvan (if deployed) or lua (if he's not) will respond; the former with anguish, the latter with resignation
+
+## HubD3MidBattle_MainVillageDestroyed_RazvanResponse
+[MidRight][LoadRazvan][3LB]
+No[Beat] No! Everyone's inside the town[N]
+center, and they just brought it down![N]
+We[Beat] We have to hurry up, captain![AN]
+They could all still be alive, but[N]
+if we take too long, then everyone[Beat][N]
+No, I won't allow that fate to pass![A][X]
+
+## HubD3MidBattle_MainVillageDestroyed_LuaResponse
+[MidRight][LoadLua][3LB]
+[Beat]About every soul in town[N]
+was holed up in there, right?[AN]
+That means[Beat] No, there'll be[N]
+time to think about that later.[N]
+For now, we need to finish this![A][X]
+
+// the lone village text: gives sleep for the boss/others: special dialogue if Razvan visits (the old man who taught him to start with)
+
+## HubD3MidBattle_VillageText
+[MidLeft][LoadOldMan]
+[MidRight][LoadActive]
+[ML][3LB]
+Zzz[Beat] Guh! What's an outsider want[N]
+with me? [Beat]Oh, there's an attack?[N]
+Thank you for the warning, stranger.[AN]
+I suppose I must've missed the warning,[N]
+on account of this staff, here[Beat][N]
+Puts you right to sleep, it does.[AN]
+It'd be right useful for stopping[N]
+those Redwings, I'd say, but I'm[N]
+too old to go and fight myself.[AN]
+[Beat]Say, why don't you take it?[N]
+Consider it my thanks, stranger.[N]
+Stay safe out there, you hear?[A][X]
+
+## HubD3MidBattle_VillageText_RazvanEvent
+[MidLeft][LoadOldMan]
+[MidRight][LoadRazvan]
+[ML][3LB]
+Zzz[Beat] Guh! What's an outsider[N]
+want with an old man like me?[AN]
+[MR]
+[Beat]You really don't remember me,[N]
+sir? I know that I've grown a bit,[N]
+but surely, you still recognize me![AN]
+[ML]
+Hrm[Beat] Wait, you're little Razvan![N]
+My apologies, my boy. My eyesight[N]
+has grown poor with age, you see.[AN]
+[MR]
+Ah, is that so? Well, regardless,[N]
+it's good to see you again, sir.[AN]
+I came back to see my mother, but[Beat][N]
+Just as I feared, the Redwings[N]
+have taken advantage of the chaos.[AN]
+So, I came to warn you, at least.[N]
+You'd better board up your door;[N]
+leave the fighting out there to us![A]
+[ML]
+Fighting? You? Ha, you really have[N]
+grown, boy[Beat] Wasn't so long ago[N]
+that you shivered at the thought.[AN]
+[MR]
+[Beat] [Beat][AN]
+[ML]
+Here, before you go, take this.[N]
+Used it on myself, so I know[N]
+that it'll work right away![AN]
+[MR]
+A Sleep staff? T-Thank you so much![N]
+I promise to put it to good use.[AN]
+[Beat]But for now, I'd better get back[N]
+to work. Please, stay inside.[N]
+I'll handle the rest myself![AN][X]
 
 //battle quotes
 
@@ -1081,41 +1158,18 @@ just get their wings clipped![A][X]
 
 // After the battle, two different outtros depending on whether or not the main village was saved
 
-// Initial response: If all of the houses remain, then Razvan's friends and old mentor, an old man, will congratulate him.
-// The old man admits that he initially held animosity towards Razvan after hearing he became a pirate.
-// But due to today's feat, the old man forgives him and apologizes by giving Razvan the Rewarp staff, saying that he'll get better use out of it than he would.
-
-## HubD3EndingScene1_AllSideVillagesSavedText
-[MidLeft][LoadLua]
-Placeholder Text 1![A][X]
-
-// If half are saved, then the old man will not come to congratulate him, but will begrudgingly acknowledge him trying to do the right thing.
-// However, he will then lecture Razvan about the nature of lacking surety, and that that's what caused his failure.
-// Still, he offers the boy his pity and gives him a Statuette, telling him to redouble his efforts toward his faith.
-
-## HubD3EndingScene1_SomeSideVillagesSavedText
-[MidLeft][LoadLua]
-Placeholder Text 1![A][X]
-
-// If none are saved, then the old man will be dead and not show up. Instead, Razvan will find his body in the wreckage
-// as the Skysabers survey the village. Lua will try to comfort him, but Razvan will push through the tears, desperate to find his mother.
-
-## HubD3EndingScene1_FewtoNoSideVillagesSavedText
+## HubD3EndingScene1_MainHouseSaved
 [MidLeft][LoadLua]
 Placeholder Text 1![A][X]
 
 // Razvan runs to the house, meeting his old mentor Fidel once again. Fidel jokes around for a bit, but then sincerely thanks Razvan for his efforts.
 // Razvan hastily rushes through this part and asks where his mother is, only for her to come out herself.
 
-## HubD3EndingScene2_MainHouseSaved
-[MidLeft][LoadLua]
-Placeholder Text 1![A][X]
-
 // If the main village is saved, Razvan has a scene with his mother where she accepts who he is, warts and all, and thanks Lua for her saving him.
 // The two have a heart-to-heart, and his mother sets off with the survivors of the Incendivis forces, who vow to sail back to the empire with the refugees,
 // disgusted by Enrique's actions. However, Fidel does not come with them.
 
-## HubD3EndingScene3_MainHouseSaved
+## HubD3EndingScene2_MainHouseSaved
 [MidLeft][LoadLua]
 Placeholder Text 1![A][X]
 
@@ -1124,7 +1178,30 @@ Placeholder Text 1![A][X]
 // as an equal, now, and that since he has no place to go and detests the culture that made Enrique make such a choice, he wants to become
 // a pirate and do good in his own way, regardless of whether the law recognizes it as such. 
 
-## HubD3EndingScene4_MainHouseSaved
+## HubD3EndingScene3_MainHouseSaved
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// After Fidel leaves, the villagers will respond to the Skysabers based on whether or not their homes were saved.
+// The old man admits that he initially held animosity towards Razvan after hearing he became a pirate.
+// But due to today's feat, the old man forgives him and apologizes by giving Razvan the Rewarp staff, saying that he'll get better use out of it than he would.
+
+## HubD3EndingScene4_AllSideVillagesSavedText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// If half are saved, then the old man will not come to congratulate him, but will begrudgingly acknowledge him trying to do the right thing.
+// However, he will then lecture Razvan about the nature of lacking surety, and that that's what caused his failure.
+// Still, he offers the boy his pity and gives him a Statuette, telling him to redouble his efforts toward his faith.
+
+## HubD3EndingScene4_SomeSideVillagesSavedText
+[MidLeft][LoadLua]
+Placeholder Text 1![A][X]
+
+// If none are saved, then the old man will be dead and not show up. Instead, Razvan will find his body in the wreckage
+// as the Skysabers survey the village. Lua will try to comfort him, but Razvan will push through the tears, desperate to find his mother.
+
+## HubD3EndingScene4_FewtoNoSideVillagesSavedText
 [MidLeft][LoadLua]
 Placeholder Text 1![A][X]
 
@@ -1136,24 +1213,237 @@ Placeholder Text 1![A][X]
 [MidLeft][LoadLua]
 Placeholder Text 1![A][X]
 
-// Razvan runs to the house, looking through the wreckage, but comes to the conclusion that everyone inside must have died.
-// And now that there's nowhere else to look... That his mother must have been crushed in the wreckage.
-// Lua, Pilar and Desiderio both try to comfort him in their own way, but he snaps at them, asking to be left alone. 
+// If the village is destroyed, Lua tries to speak to Razvan but he shrugs it off and runs to the village, with her following
+
+## HubD3EndingScene1_MainHouseDestroyed
+[MidLeft][LoadLua]
+[MidRight][LoadRazvan][3LB]
+[Beat] [Beat] [Beat][A]
+[ML]
+Razvan, I[Beat] I don't know what to say.[N]
+I'm sorry. We could've moved faster,[N]
+we could've done something to stop-[AN]
+[MR]
+Why are you talking like that,[N]
+captain? It's not over yet[Beat][N]
+There could still be survivors![AN]
+[ML]
+Huh? But the building, it[Beat][N]
+No, you're right. Let's split up[N]
+and search the place, top-to-bottom.[AN]
+[MR]
+Right![.4][CloseEyes] O Maker, please[Beat][N]
+Just this once, answer me.[N][OpenEyes]
+Answer my prayers. I beg you[Beat][A][X]
 
 ## HubD3EndingScene2_MainHouseDestroyed
-[MidLeft][LoadLua]
-Placeholder Text 1![A][X]
-
-// Lua refuses, irritating Razvan, but he ultimately acknowledges that he did want to speak to someone, at least.
-// He vents out all of his anger and sorrow, with Lua letting him get all of it out and accepting blame for failing to save his mother.
-// In the end, he responds that although his debt is paid, he doesn't have anywhere else to go, anymore.
-// Razvan tells Lua that he'll stay with them, for now. But that if the crew ever becomes more like the "Redwings",
-// pirates who care for nothing but themselves, then he'll leave them without a second thought. (foreshadowing him leaving if siding with Pirates)
-// Lua accepts this, somewhat disturbed by the change in him and the cruelty that he espouses. 
+[Left][LoadLua][3LB]
+[Beat]No luck at all, huh?[N]
+So many bodies, and not one[N]
+with a beating pulse[Beat] Shit.[AN]
+[FarLeft][LoadPilar]
+Apologies, but my luck was no better.[N]
+The Redwings burned the place down[N]
+thoroughly[Beat] Little left but ashes.[AN]
+[FarRight][LoadDesiderio]
+It's a horror in there. Sorry, boss.[N]
+I couldn't find anybody breathin',[N]
+either. Damn massacre in there[Beat][AN]
+[FL]
+[Beat]There were a few fallen empire[N]
+troops around the perimeter, as well.[N]
+Some of them must have had a conscience.[AN]
+[FR]
+But the rest[Beat] What the hell?[N]
+Those T.O.R.C.H. assholes seriously[N]
+just sat and watched this all happen?![AN]
+[L]
+[Beat]Their leader kept saying that[N]
+he wanted the Fire Emblem, right?[N]
+So Orlando's guess proved correct;[AN]
+the empire did send its forces to the[N]
+outskirts all to secure this weapon[Beat][N]
+And this confirms something else, too.[AN]
+This weapon definitely caused the fall[N]
+of the islands. Why else would Incendivis[N]
+grow desperate enough for this to happen?[AN]
+[R][LoadRazvan]
+[Beat]Yes, it's all that makes sense.[A]
+[L]
+R-Razvan? Did you find anyone?[AN]
+[R]
+What do you think, captain?[N]
+I came to see if anyone else had[N]
+better luck, but[Beat] Clearly not.[AN]
+[FR]
+Sorry, kid. I looked under every[N]
+piece of debris, busted down each[N]
+door in my way[Beat] There's no survivors.[AN]
+[FL]
+[Beat]Razvan, would you like us[N]
+to gather the bodies ourselves?[N]
+The people inside will need a burial-[AN]
+[R]
+No. I'll help out with that, Miss Pilar.[N]
+It's my[Beat] responsibility, as the only[N]
+survivor of the village. Right, captain?[AN]
+[L]
+If you're up for it, sure.[N]
+[Beat]Is there anything that[N]
+we can do for you, Razvan?[AN]
+[R]
+Right now? I need time to think.[N]
+So[Beat] Please, just leave me alone.[N]
+I'll be back soon enough. I promise.[X]
 
 ## HubD3EndingScene3_MainHouseDestroyed
-[MidLeft][LoadLua]
-Placeholder Text 1![A][X]
+[FarLeft][LoadDesiderio]
+[Left][LoadPilar]
+[MidRight][LoadLua]
+[FL][3LB]
+Y'know, Razvan's been gone a while.[N]
+He put on a strong front, but[Beat][N]
+Boss, think you should check on him?[AN]
+[L]
+Why? The boy's just lost everything.[N]
+If he asks for some time to himself,[N]
+give it to him. He needs that.[AN]
+[MR]
+[Beat]He does, but if you spend too much[N]
+time alone, you just stew and simmer.[AN]
+I think he's had enough time alone.[N]
+He's going to need to talk to someone,[N]
+and that someone should be me.[AN]
+[L]
+Well, you are the captain.[N]
+Go ahead. We'll finish things here.[AN]
+[FL]
+Right! Just, uh[Beat] go easy on him,[N]
+boss. Now ain't the time for tough love.[AN]
+[MR]
+Did you really think that you needed[N]
+to tell me that? [Beat]Actually, don't[N]
+answer that. I don't have time for this.[AN][CSSCF]
+[L]
+You'd crack a joke[N]
+in a time like this?[AN]
+[FL]
+It's because it's a time[N]
+like this that I did, Pilar.[N]
+Otherwise, I'd lose my mind[Beat][AN][X]
+
+
+
+
+## HubD3EndingScene4_MainHouseDestroyed
+[MidLeft][LoadRazvan]
+[MidRight][LoadLua]
+[ML][3LB]
+[Beat]Captain. Didn't I ask to be alone?[N]
+You can't even do that much for me?[AN]
+[MR]
+[Beat][A]
+[ML]
+Haven't I done enough for the crew?[N]
+One little thing, and I can't have that?[N]
+You said that you'd save them, captain![AN]
+[MR]
+[Beat] [Beat][A]
+[ML]
+Was that all a lie? I believed in you,[N]
+and what did I get for that trust?[N]
+A hellish scene that I'll never forget?![AN]
+[MR]
+[Beat] [Beat] [Beat][A]
+[ML]
+What was even the point in coming here?[N]
+I couldn't do a damn thing to stop it![N]
+Everyone[Beat] I failed them all, captain![AN]
+[MR]
+No, you didn't fail them at all, Razvan.[N]
+The fault is mine. For your mother,[N]
+and for everyone else who died here.[AN]
+That's the responsibility of a captain,[N]
+not just another member of the crew.[N]
+The weight isn't yours to bear.[AN]
+[ML]
+[Beat]If only it were that simple.[N]
+Still, I appreciate the attempt.[N]
+So[Beat] thanks for being here, captain.[AN]
+You know, I thought about leaving[N]
+the crew, going through those ashes.[AN]
+[MR]
+[Beat]Like I said, your debt's paid.[N]
+You're free to go wherever you[N]
+like, anywhere the skies reach.[AN]
+[ML]
+[Beat]Trouble was, where to go?[N]
+There's nowhere left for me, anymore.[N]
+So for now, I'll keep playing pirate.[AN]
+Considering our crew's circumstances,[N]
+it seems the best way for me to find[N]
+some sort of penance, for all this.[AN]
+[MR]
+Penance? What do you mean?[AN]
+[ML]
+[Beat]While I was alone, I considered[N]
+something. Who should I blame?[N]
+Who should I hate, for all this?[AN]
+The Redwings? Yes, but they're just[N]
+a symptom of a societal infection.[AN]
+To eradicate them and those like them,[N]
+it isn't enough just to wipe them out.[N]
+A new order must establish itself.[AN]
+[MR]
+[Beat]A new order?[A]
+[ML]
+Yes. Incendivis has grown weak and[N]
+corrupt; I cannot dispute that.[N]
+But still, order is necessary.[AN]
+[Beat]Without it, the Redwings and[N]
+pirates like ourselves can stomp[N]
+all over people without hesitation.[AN]
+[MR]
+So you want to put the Skysabers[N]
+out of business[Beat] Is that it?[N]
+You've gotten pretty bold, Razvan.[AN]
+[ML]
+Ha[Beat] I suppose that I have, captain.[AN]
+It's true that we're more ethical[N]
+than most other pirate crews[Beat][N]
+But only your good nature sustains that.[AN]
+You could have a change of heart at[N]
+any time, and then, this crew would[N]
+become just like the Redwings.[AN]
+You could crush the weak at any time.[N]
+[Beat]A just world wouldn't allow that[N]
+to be the case. So, change is needed.[AN]
+[MR]
+[Beat]And how do you plan to make this[N]
+change happen? It's hardly a small[N]
+thing, rebuilding society itself.[AN]
+[ML]
+That part is something I'm working out,[N]
+but for now, I'll bide my time and[N]
+eliminate those who deserve it[Beat][AN]
+Like the Redwings, for instance.[N]
+We tend to run into those kinds[N]
+of people a lot, don't we?[AN]
+[Beat]Which is why I'm sticking around.[N]
+Well, besides having grown fond[N]
+of the crew, piracy aside.[AN]
+[MR]
+O-Oh[Beat] Well, whatever works.[N]
+You've always got a place with us,[N]
+Razvan. No matter what happens.[AN]
+[ML]
+Is that so? Glad to hear it.[N]
+Anyway, we'd better go gather[N]
+the bodies and start digging.[AN]
+Mom and everyone else[Beat][N]
+They at least deserve that much.[AN]
+[MR]
+[Beat]Right. Let's go, Razvan.[A][X]
 
 
 // death quotes down here

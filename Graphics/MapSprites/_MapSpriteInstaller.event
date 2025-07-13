@@ -482,17 +482,6 @@ ALIGN 4
 Adventurer_FMMS:
 #incbin "Dmp/Marksman (F) Nuramon-style {ArcherBias}-walk.dmp"
 
-StandingMapSprite(DarkKnightMapSprite,MapSprite16x32,DarkKnightSMS)
-MovingMapSprite(DarkKnight, $1C3D7C, DarkKnightMMS)
-
-ALIGN 4
-DarkKnightSMS:
-#incbin "Dmp/Dark Knight (U) {Pikmin, Nuramon, Der}-stand.dmp"
-
-ALIGN 4
-DarkKnightMMS:
-#incbin "Dmp/Dark Knight (U) {Pikmin, Nuramon, Der}-walk.dmp"
-
 StandingMapSprite(MaligKnightMapSprite,MapSprite16x32,MaligKnightSMS)
 MovingMapSprite(MaligKnight, $1C3D7C, MaligKnightMMS)
 
@@ -628,3 +617,16 @@ AirshipMMS:
 #incbin "Dmp/Ship (U) {daemoth, Zarg}-walk.dmp"
 
 MovingMapSprite(Sage_Hermen, $1D9B58, $1D91E4)
+
+StandingMapSprite(CataphractMapSprite,MapSprite16x32, CataphractSMS)
+MovingMapSprite(Cataphract, $1C3D7C, CataphractMMS)
+MovingMapSprite(Cataphract_F, $1C3D7C, CataphractMMS)
+
+
+ALIGN 4
+CataphractSMS:
+#incbin "Dmp/Gold Knight (M) Axe {Pikmin, Der}-stand.dmp"
+
+ALIGN 4
+CataphractMMS:
+#incbin "Dmp/Gold Knight (M) Axe {Pikmin, Der}-walk.dmp"

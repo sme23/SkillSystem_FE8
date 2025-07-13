@@ -179,10 +179,6 @@ Traits: Unbreakable, Steal, Locktouch[X]
 Weapons: Tome, Staff[N]
 Traits: Steal, Locktouch[X]
 
-## SageHermenDesc
-Weapons: Tome, Staff, Sword[N]
-Traits: Steal, Locktouch[X]
-
 ## SeraphName
 Seraph[X]
 
@@ -195,7 +191,7 @@ Weapons: Bow[N]
 Traits: Armsmaster, Steal, Locktouch[X]
 
 ## DarkKnightName
-Dark Knight[X]
+Mage Knight[X]
 
 ## MageKnightDesc
 Weapons: Tome, Lance[N]
@@ -407,4 +403,11 @@ Admiral[X]
 
 ## AdmiralDesc
 Weapons: Sword, Gun[N]
+Traits: Steal, Locktouch[X]
+
+## SpellswordName
+Spellsword[X]
+
+## SpellswordDesc
+Weapons: Swords, Tomes, Staves[N]
 Traits: Steal, Locktouch[X]

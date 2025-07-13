@@ -27,6 +27,7 @@ EventPointerTable(HubD_3EventsID, PointerList)
 //#define D3WallBrokenAFEVFlag 24
 #define D3FidelDiedFlag 25
 //26-36: battle quotes
+#define D3MainVillageFallsFlag 37
 
 PointerList:
 POIN TurnBasedEvents
@@ -41,7 +42,8 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0, PostPrepsEvent, 1)
+//TurnEventPlayer(0, PostPrepsEvent, 1)
+TurnEventPlayer(0, EndingScene, 1)
 TurnEventPlayer(0, MoreDragonsSpawnAndAiChanges, 2)
 TurnEventPlayer(0, RazvanOrLuaNoticesEvacuation, 3) //just text
 TurnEventPlayer(0, MoreDragonsOnTheSide, 4)
@@ -249,7 +251,18 @@ Village(D3VillageFlag, D3RedHouse, 19, 32)
 END_MAIN
 
 D3RedHouse:
-GiveItem(Sleep,0xFFFF)
+MUSI
+SetBackground(Salehs_House)
+CHECK_ACTIVEID Razvan
+BEQ 1 s0 sC //if it is not razvan, then branch
+    Text(HubD3MidBattle_VillageText_RazvanEvent)
+    GOTO 2
+LABEL 1
+    Text(HubD3MidBattle_VillageText)
+LABEL 2
+MUNO
+EraseBackground
+GiveItem(Sleep, 0xFFFF) //whoever the visitor is
 NoFade
 ENDA
 
@@ -272,6 +285,7 @@ AFEV D3EnriqueAFEVFlag CheckIfBothBossesDead D3EnriqueDQFlag //check on death of
 AFEV D3InkaAFEVFlag CheckIfBothBossesDead D3InkaDQFlag
 AFEV 0 CheckIfInnerWallBroken D3WallBrokenAFEVFlag
 AFEV D3FidelDiedFlag FidelDeathResponse D3FidelDQFlag
+AFEV D3MainVillageFallsFlag MainVillageFallsResponse 0 //have to check on every action probably
 END_MAIN
 
 TopLeftTreasure:
@@ -339,6 +353,24 @@ LABEL 3
 CameraCursor(Lua)
 Text(HubD3MidBattle_RazvanNotHere_OnFidelKilledText)
 LABEL 4
+NoFade
+ENDA
+
+MainVillageFallsResponse:
+CheckTileChangeTriggered(4) //the ruined big house
+BEQ 1 s0 sC //if it is not set, then we skip ahead and reset this flag
+    CHECK_DEPLOYED Razvan
+    BEQ 3 s0 sC //if not deployed, then branch to lua's response; either way, the event plays where someone reacts to the outcome
+        CameraCursor(Razvan)
+        Text(HubD3MidBattle_MainVillageDestroyed_RazvanResponse) //if razvan deployed, he notices; otherwise, lua says it
+        GOTO 2
+    LABEL 3
+        CameraCursor(Lua)
+        Text(HubD3MidBattle_MainVillageDestroyed_LuaResponse)
+        GOTO 2
+LABEL 1
+ENUF D3MainVillageFallsFlag
+LABEL 2
 NoFade
 ENDA
 
@@ -527,7 +559,41 @@ NoFade
 ENDA
 
 EndingScene:
+ENUT D3MainVillageFallsFlag
+FADI 15
+RemoveAll
+CHECK_EVENTID D3MainVillageFallsFlag
+BNE 1 s0 sC //if it is not set, branch past
+    CALL D3_GoodEndingEvent
+    GOTO 2
+LABEL 1
+CALL D3_BadEndingEvent
+LABEL 2
 MNC2 HubD
+NoFade
+ENDA
+
+D3_GoodEndingEvent:
+ENUT D3_Razvan_Mother_Alive_Flag 
+NoFade
+ENDA
+
+D3_BadEndingEvent:
+MUSC CherishTheDeadID
+SetBackground(Town_Day)
+Text(HubD3EndingScene1_MainHouseDestroyed)
+FADI 15
+STAL 60
+SetBackground(Village)
+Text(HubD3EndingScene2_MainHouseDestroyed)
+FADI 15
+STAL 120
+FADU 15
+Text(HubD3EndingScene3_MainHouseDestroyed)
+FADI 15
+STAL 60
+SetBackground(Outside_Village_Evening)
+Text(HubD3EndingScene4_MainHouseDestroyed)
 NoFade
 ENDA
 

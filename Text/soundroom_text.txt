@@ -109,3 +109,21 @@ Dead Winds, Still Tides[X]
 
 ## SongName_FallingFallout
 Falling Fallout[X]
+
+## Musician_Alusq
+Alusq[X]
+
+## Musician_Eric
+Eric[X]
+
+## Musician_ArcherBias
+ArcherBias[X]
+
+## Musician_catball
+catball[X]
+
+## Musician_RandomWizard
+RandomWizard[X]
+
+## Musician_PentV
+PentV[X]

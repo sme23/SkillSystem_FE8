@@ -6,11 +6,38 @@ ALIGN 4
 DesiderioVanguard:
 	#incbin "./_palettes/DesiderioVanguard.lzpal" 
 
-JuanThief:
-	#incbin "./_palettes/JuanThief.lzpal" 
+DesiderioMarshall:
+	#incbin "./_palettes/DesiderioMarshall.lzpal" 
 
-JuanRogue:
-	#incbin "./_palettes/JuanRogue.lzpal" 
+DesiderioGreatKnight:
+	#incbin "./_palettes/DesiderioGreatKnight.lzpal" 
+
+PilarNinja:
+	#incbin "./_palettes/PilarNinja.lzpal" 
+
+PilarMasterNinja:
+	#incbin "./_palettes/PilarMasterNinja.lzpal" 
+
+PilarTrickster:
+	#incbin "./_palettes/PilarTrickster.lzpal" 
+
+RazvanCurate:
+	#incbin "./_palettes/RazvanCurate.lzpal" 
+
+RazvanSage:
+	#incbin "./_palettes/RazvanSage.lzpal" 
+
+RazvanSeraph:
+	#incbin "./_palettes/RazvanSeraph.lzpal" 
+
+XimoArcher:
+	#incbin "./_palettes/XimoArcher.lzpal" 
+
+XimoSniper:
+	#incbin "./_palettes/XimoSniper.lzpal" 
+
+XimoBombardier:
+	#incbin "./_palettes/XimoBombardier.lzpal" 
 
 CarmenMage:
 	#incbin "./_palettes/CarmenMage.lzpal" 
@@ -18,33 +45,9 @@ CarmenMage:
 CarmenSage:
 	#incbin "./_palettes/CarmenSage.lzpal" 
 
-MatteoMercenary:
-	#incbin "./_palettes/MatteoMercenary.lzpal" 
-
-MatteoHero:
-	#incbin "./_palettes/MatteoHero.lzpal" 
-
-MatteoRanger:
-	#incbin "./_palettes/MatteoRanger.lzpal" 
-
-TrianaShaman:
-	#incbin "./_palettes/TrianaShaman.lzpal" 
+CarmenMageKnight:
+	#incbin "./_palettes/CarmenMageKnight.lzpal" 
 
 KhazhakFighter:
 	#incbin "./_palettes/KhazhakFighter.lzpal" 
-
-BuzuVanguard:
-	#incbin "./_palettes/BuzuVanguard.lzpal" 
-
-BozoWarden:
-	#incbin "./_palettes/BozoWarden.lzpal" 
-
-PilarNinja:
-	#incbin "./_palettes/PilarNinja.lzpal" 
-
-RazvanCurate:
-	#incbin "./_palettes/RazvanCurate.lzpal" 
-
-XimoArcher:
-	#incbin "./_palettes/XimoArcher.lzpal" 
 

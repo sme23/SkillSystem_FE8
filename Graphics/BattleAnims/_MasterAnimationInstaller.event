@@ -150,7 +150,13 @@
 }
 
 {
-    #include "Animations/DarkKnight/Magic Installer.event"
+    #include "Animations/MageKnight/Magic Installer.event"
+    #include "Animations/MageKnight/Lance Installer.event"
+}
+
+{
+    #include "Animations/MageKnight_F/Magic Installer.event"
+    #include "Animations/MageKnight_F/Lance Installer.event"
 }
 
 {
@@ -264,4 +270,31 @@
     #include "Animations/Sage_Hermen/Sword Installer.event"
     #include "Animations/Sage_Hermen/Magic Installer.event"
     #include "Animations/Sage_Hermen/Staff Installer.event"
+}
+
+{
+    #include "Animations/Cataphract/Lance Installer.event"
+    #include "Animations/Cataphract/Axe Installer.event"
+    #include "Animations/Cataphract/Handaxe Installer.event"
+    #include "Animations/Cataphract/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Sage/Magic Installer.event"
+    #include "Animations/Sage/Staff Installer.event"
+}
+
+{
+    #include "Animations/Sage_F/Magic Installer.event"
+    #include "Animations/Sage_F/Staff Installer.event"
+}
+
+{
+    #include "Animations/Sniper/Bow Installer.event"
+    #include "Animations/Sniper/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Sniper_F/Bow Installer.event"
+    #include "Animations/Sniper_F/Unarmed Installer.event"
 }

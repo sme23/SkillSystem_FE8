@@ -1,3 +1,30 @@
+//these exist only to fix issues with animations
+
+ALIGN 4
+ArcherAnims:
+BowAnim(ArcherBowAnim)
+UnarmedAnim(ArcherUnarmedAnim)
+EndAnim
+
+ALIGN 4
+ArcherFAnims:
+BowAnim(ArcherFBowAnim)
+UnarmedAnim(ArcherFUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SniperAnims:
+BowAnim(SniperBowAnim)
+UnarmedAnim(SniperUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SniperFAnims:
+BowAnim(SniperFBowAnim)
+UnarmedAnim(SniperFUnarmedAnim)
+EndAnim
+
+//new stuff
 
 ALIGN 4
 WardenAnims:
@@ -190,9 +217,17 @@ UnarmedAnim(MarshallUnarmedAnim)
 EndAnim
 
 ALIGN 4
-DarkKnightAnims:
-TomeAnim(DarkKnightMagicAnim)
-UnarmedAnim(DarkKnightMagicAnim)
+MageKnightAnims:
+LanceAnim(MageKnightLanceAnim)
+TomeAnim(MageKnightTomeAnim)
+UnarmedAnim(MageKnightTomeAnim)
+EndAnim
+
+ALIGN 4
+MageKnightFAnims:
+LanceAnim(MageKnightFLanceAnim)
+TomeAnim(MageKnightFTomeAnim)
+UnarmedAnim(MageKnightFTomeAnim)
 EndAnim
 
 ALIGN 4
@@ -331,4 +366,26 @@ SwordAnim(SageHermenSwordAnim)
 TomeAnim(SageHermenTomeAnim)
 StaffAnim(SageHermenStaffAnim)
 UnarmedAnim(SageHermenTomeAnim)
+EndAnim
+
+ALIGN 4
+CataphractAnims:
+LanceAnim(CataphractLanceAnim)
+AxeAnim(CataphractAxeAnim)
+HandAxeAnim(CataphractHandAxeAnim)
+UnarmedAnim(CataphractUnarmedAnim)
+EndAnim
+
+ALIGN 4
+SageAnims:
+TomeAnim(SageTomeAnim)
+StaffAnim(SageStaffAnim)
+UnarmedAnim(SageTomeAnim)
+EndAnim
+
+ALIGN 4
+SageFAnims:
+TomeAnim(SageFTomeAnim)
+StaffAnim(SageFStaffAnim)
+UnarmedAnim(SageFTomeAnim)
 EndAnim

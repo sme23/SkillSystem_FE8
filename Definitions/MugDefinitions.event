@@ -186,7 +186,7 @@
 #define MasterNinjaClassCard 0x116
 #define RuneshieldClassCard 0x117
 #define MarshallClassCard 0x118
-#define DarkKnightClassCard 0x119
+#define MageKnightFClassCard 0x119
 #define LanceCavClassCard 0x11a
 #define SwordCavClassCard 0x11b
 #define AxeCavClassCard 0x11c

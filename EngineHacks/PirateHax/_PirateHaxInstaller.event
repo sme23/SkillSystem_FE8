@@ -188,10 +188,11 @@ ALIGN 4
 #include "AI_EnemyDeterminer/Installer.event" // decides who is an enemy for AI purposes
 
 #include "FE8U-Fancy-Items-main/_MasterHackInstaller.event"
+#include "TrapReworkPirate/Installer.event" // Loog
 
-#include "TrapReworkPirate/Installer.event"
+#include "CHAI_Pirate/Installer.event" // Loog
 
-#include "CHAI_Pirate/Installer.event"
+#include "SoundRoomText/Installer.event"
 
 PUSH
 ORG 0x897B2 //Further MNC2 fixes that fix the chapter title being wonky on skirmish maps: 7743

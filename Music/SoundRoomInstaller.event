@@ -94,3 +94,67 @@ SoundRoomEntry(SleepinWithTheSkyFishesID,0,SongName_SleepinWithTheSkyFishes)
 SoundRoomTerminator
 
 
+#define SoundRoomSource(songId, textId) "WORD songId; SHORT textId 0"
+
+ALIGN 4 //using this to credit the musicians in-game
+SoundRoomSourceTable:
+// player phase themes
+SoundRoomSource(DistantSkiesID, Musician_Eric)
+SoundRoomSource(CloudsYearningID,  Musician_RandomWizard)
+SoundRoomSource(LastDanceSinkingShipID,  Musician_ArcherBias)
+SoundRoomSource(FallingFalloutID,  Musician_ArcherBias)
+
+//alt PP themes
+SoundRoomSource(TheRebelsKnifeID, Musician_ArcherBias)
+SoundRoomSource(TimesTickingID,  Musician_ArcherBias)
+
+// enemy phase themes
+SoundRoomSource(ScalleywagsOnDeckID, Musician_Eric)
+SoundRoomSource(StormsBrewingID,  Musician_RandomWizard)
+SoundRoomSource(WellAndTrulyLostID,  Musician_ArcherBias)
+// hub D theme here
+
+// hub themes
+SoundRoomSource(PortGreagorID, Musician_Eric)
+SoundRoomSource(ToTheSkiesID,  Musician_Eric)
+SoundRoomSource(MaroonedAliveID,  Musician_Eric)
+SoundRoomSource(DeadWindsStillTidesID,  Musician_Eric)
+SoundRoomSource(LetterOpenerID,  Musician_ArcherBias)
+
+// prep screen themes
+SoundRoomSource(BeatToQuartersID, Musician_catball)
+SoundRoomSource(DroppingAnchorID,  Musician_Eric)
+SoundRoomSource(OutIntoTheOpenSkyID,  Musician_ArcherBias)
+SoundRoomSource(OneLastVoyageID,  Musician_RandomWizard)
+
+// boss themes
+SoundRoomSource(FoolsBoldID, Musician_ArcherBias)
+SoundRoomSource(TheWavesApprenticeID,  Musician_ArcherBias)
+SoundRoomSource(TougherTussleID,  Musician_ArcherBias)
+SoundRoomSource(TheStormUponUsID,  Musician_RandomWizard)
+
+
+// cutscene themes
+// happy cutscenes
+SoundRoomSource(MeetTheCrewID, Musician_Alusq)
+SoundRoomSource(StillZephyrsID, Musician_Eric)
+// sad cutscenes
+SoundRoomSource(CastawayHeartID, Musician_Eric)
+SoundRoomSource(CherishTheDeadID, Musician_PentV)
+// recruitment themes
+SoundRoomSource(EmergencyCrewmateID, Musician_catball)
+SoundRoomSource(WelcomeAboardMateyID, Musician_Eric)
+// spooky cutscenes
+SoundRoomSource(SwabbieTalkID, Musician_Eric)
+SoundRoomSource(OrlandoThemeID, Musician_catball)
+SoundRoomSource(ABlackheartsPrideID, Musician_Eric)
+// violence cutscenes
+SoundRoomSource(FinInTheCloudsID,  Musician_ArcherBias)
+SoundRoomSource(AvastMeHeartiesID, Musician_Eric)
+
+// special mechanics themes
+SoundRoomSource(LookAtMeWaresID, Musician_Eric)
+SoundRoomSource(ToTheCrowsNestID, Musician_Eric)
+SoundRoomSource(DrownInGoodIntentionsID, Musician_ArcherBias)
+SoundRoomSource(SleepinWithTheSkyFishesID, Musician_ArcherBias)
+WORD 0 0 // term

@@ -219,12 +219,12 @@ MarshallClassCardPal:
 setCardEntry(MarshallClassCard, MarshallClassCardData, MarshallClassCardPal)
 
 ALIGN 4
-DarkKnightClassCardData:
-#incbin "Dmp/Dark Knight (M) Magic {Pikmin, Jj09} 1.dmp"
+MageKnightFClassCardData:
+#incbin "Dmp/Mage Knight (F) Magic {L95}.dmp"
 ALIGN 4
-DarkKnightClassCardPal:
-#incbin "Dmp/Dark Knight (M) Magic {Pikmin, Jj09} 1.png_pal.dmp"
-setCardEntry(DarkKnightClassCard, DarkKnightClassCardData, DarkKnightClassCardPal)
+MageKnightFClassCardPal:
+#incbin "Dmp/Mage Knight (F) Magic {L95}.png_pal.dmp"
+setCardEntry(MageKnightFClassCard, MageKnightFClassCardData, MageKnightFClassCardPal)
 
 ALIGN 4
 LanceCavClassCardData:

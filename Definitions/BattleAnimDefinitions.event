@@ -112,8 +112,8 @@
 #define MarshallBowAnim 0x10e
 #define MarshallUnarmedAnim 0x10f
 
-#define DarkKnightLanceAnim 0x110 //put this in later
-#define DarkKnightMagicAnim 0x110
+#define RogueKnifeAnim 0x110
+#define RogueUnarmedAnim 0x111
 
 #define SwordCavSwordAnim 0x112
 #define SwordCavUnarmedAnim 0x113
@@ -156,28 +156,25 @@
 #define Assassin_FKnifeAnim 0x12f
 #define Assassin_FBowAnim 0x130
 
-#define RogueKnifeAnim 0x131
-#define RogueUnarmedAnim 0x111
+#define WolfKnightLanceAnim 0x131
+#define WolfKnightKnifeAnim 0x132
+#define WolfKnightUnarmedAnim 0x133
 
-#define WolfKnightLanceAnim 0x132
-#define WolfKnightKnifeAnim 0x133
-#define WolfKnightUnarmedAnim 0x134
+#define LanceCavLanceAnim 0x134
+#define LanceCavUnarmedAnim 0x135
 
-#define LanceCavLanceAnim 0x135
-#define LanceCavUnarmedAnim 0x136
+#define AxeKnightAxeAnim 0x136
+#define AxeKnightHandaxeAnim 0x137
+#define AxeKnightUnarmedAnim 0x138
 
-#define SwordKnightSwordAnim 0x13d
-#define SwordKnightUnarmedAnim 0x13e
-
-#define AxeKnightAxeAnim 0x137
-#define AxeKnightHandaxeAnim 0x138
-#define AxeKnightUnarmedAnim 0x145
+#define BowKnightBowAnim 0x139
+#define BowKnightUnarmedAnim 0x13a
 
 #define LanceKnightLanceAnim 0x13b
 #define LanceKnightUnarmedAnim 0x13c
 
-#define BowKnightBowAnim 0x139
-#define BowKnightUnarmedAnim 0x13a
+#define SwordKnightSwordAnim 0x13d
+#define SwordKnightUnarmedAnim 0x13e
 
 #define ChampionSwordAnim 0x13f
 #define ChampionLanceAnim 0x140
@@ -186,3 +183,32 @@
 #define SageHermenSwordAnim 0x142
 #define SageHermenTomeAnim 0x143
 #define SageHermenStaffAnim 0x144
+
+#define CataphractLanceAnim 0x145
+#define CataphractAxeAnim 0x146
+#define CataphractHandAxeAnim 0x147
+#define CataphractUnarmedAnim 0x148
+
+#define SageTomeAnim 0x149
+#define SageStaffAnim 0x14a
+
+#define SageFTomeAnim 0x14b
+#define SageFStaffAnim 0x14c
+
+#define MageKnightLanceAnim 0x14d
+#define MageKnightTomeAnim 0x14e
+ 
+#define MageKnightFLanceAnim 0x14f 
+#define MageKnightFTomeAnim 0x150
+
+#define ArcherBowAnim 0x26
+#define ArcherUnarmedAnim 0x27
+
+#define ArcherFBowAnim 0x28
+#define ArcherFUnarmedAnim 0x29
+
+#define SniperBowAnim 0x2A
+#define SniperUnarmedAnim 0x2B
+
+#define SniperFBowAnim 0x2C
+#define SniperFUnarmedAnim 0x2D

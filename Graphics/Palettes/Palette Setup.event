@@ -8,58 +8,62 @@
 	setPalette(1,DesiderioVanguard)
 	setCBSP(1,Desiderio, 1, Vanguard)
 
-// JuanThief
-	setPalette(2,JuanThief)
-	setCBSP(2,Juan, 1, Thief)
+// DesiderioMarshall
+	setPalette(2,DesiderioMarshall)
+	setCBSP(2,Desiderio, 2, Marshall)
 
-// JuanRogue
-	setPalette(3,JuanRogue)
-	setCBSP(3,Juan, 2, Rogue)
-
-// CarmenMage
-	setPalette(4,CarmenMage)
-	setCBSP(4,Carmen, 1, Mage_F)
-
-// CarmenSage
-	setPalette(5,CarmenSage)
-	setCBSP(5,Carmen, 2, Sage_F)
-
-// MatteoMercenary
-	setPalette(6,MatteoMercenary)
-	setCBSP(6,Matteo, 1, Mercenary)
-
-// MatteoHero
-	setPalette(7,MatteoHero)
-	setCBSP(7,Matteo, 2, Hero)
-
-// MatteoRanger
-	setPalette(8,MatteoRanger)
-	setCBSP(8,Matteo, 3, Ranger)
-
-// TrianaShaman
-	setPalette(9,TrianaShaman)
-	setCBSP(9,Triana, 1, Shaman_F)
-
-// KhazhakFighter
-	setPalette(10,KhazhakFighter)
-	setCBSP(10,Khazhak, 1, Fighter)
-
-// BuzuVanguard
-	setPalette(11,BuzuVanguard)
-	setCBSP(11,Buzu, 1, Vanguard)
-
-// BozoWarden
-	setPalette(12,BozoWarden)
-	setCBSP(12,Bozo, 1, Warden)
+// DesiderioGreatKnight
+	setPalette(3,DesiderioGreatKnight)
+	setCBSP(3,Desiderio, 3, Cataphract)
 
 // PilarNinja
-	setPalette(13,PilarNinja)
-	setCBSP(13,Pilar, 1, Ninja)
+	setPalette(4,PilarNinja)
+	setCBSP(4,Pilar, 1, Ninja)
+
+// PilarMasterNinja
+	setPalette(5,PilarMasterNinja)
+	setCBSP(5,Pilar, 2, MasterNinja)
+
+// PilarTrickster
+	setPalette(6,PilarTrickster)
+	setCBSP(6,Pilar, 3, Trickster)
 
 // RazvanCurate
-	setPalette(14,RazvanCurate)
-	setCBSP(14,Razvan, 1, Curate)
+	setPalette(7,RazvanCurate)
+	setCBSP(7,Razvan, 1, Curate)
+
+// RazvanSage
+	setPalette(8,RazvanSage)
+	setCBSP(8,Razvan, 2, Sage)
+
+// RazvanSeraph
+	setPalette(9,RazvanSeraph)
+	setCBSP(9,Razvan, 3, Seraph)
 
 // XimoArcher
-	setPalette(15,XimoArcher)
-	setCBSP(15,Ximo, 1, Archer)
+	setPalette(10,XimoArcher)
+	setCBSP(10,Ximo, 1, Archer)
+
+// XimoSniper
+	setPalette(11,XimoSniper)
+	setCBSP(11,Ximo, 2, Sniper)
+
+// XimoBombardier
+	setPalette(12,XimoBombardier)
+	setCBSP(12,Ximo, 3, Bombardier)
+
+// CarmenMage
+	setPalette(13,CarmenMage)
+	setCBSP(13,Carmen, 1, Mage_F)
+
+// CarmenSage
+	setPalette(14,CarmenSage)
+	setCBSP(14,Carmen, 2, Sage_F)
+
+// CarmenMageKnight
+	setPalette(15,CarmenMageKnight)
+	setCBSP(15,Carmen, 3, MageKnight_F)
+
+// KhazhakFighter
+	setPalette(16,KhazhakFighter)
+	setCBSP(16,Khazhak, 1, Fighter)
