@@ -528,6 +528,7 @@ UNIT
 // Now, two thieves on each side on top of this: have to talk to them to stop them (so I can safely make them show up later, on Turn 3)
 
 BeginningScene:
+COUNTER_SET 0 0 //initializes 0th counter, which I'll use later
 LoadEnemies(TORCHUnits)
 LoadEnemies(RedwingUnits)
 LoadEnemies(WallbreakerUnits)
@@ -559,7 +560,6 @@ NoFade
 ENDA
 
 EndingScene:
-ENUT D3MainVillageFallsFlag
 FADI 15
 RemoveAll
 CHECK_EVENTID D3MainVillageFallsFlag
@@ -574,13 +574,88 @@ NoFade
 ENDA
 
 D3_GoodEndingEvent:
-ENUT D3_Razvan_Mother_Alive_Flag 
+ENUT D3_Razvan_Mother_Alive_Flag
+SetBackground(0x2)
+MUSC CastawayHeartID
+Text(HubD3EndingScene1_MainHouseSaved)
+FADI 15
+STAL 60
+SetBackground(0x5)
+Text(HubD3EndingScene2_MainHouseSaved)
+FADI 15
+FadeOutMusic
+STAL 60
+MUSC StillZephyrsID
+SetBackground(0x5)
+CHECK_EVENTID D3FidelDQFlag
+BNE 776 s0 sC  
+    Text(HubD3EndingScene3_FidelAlive)
+    LOAD1 1 FidelAllyGroup
+    ENUN
+    GOTO 777
+LABEL 776
+Text(HubD3EndingScene_FidelDead)
+LABEL 777
+CALL CheckD3HomesStatusAndIncrementCounter
+COUNTER_CHECK 0 //check counter 0 now
+SVAL s1 6
+BLT 778 sC s1 //if our counter's results are less than 6, branch past
+    Text(HubD3EndingScene4_AllSideVillagesSavedText)
+    GOTO 780
+LABEL 778
+SVAL s1 3
+BLT 779 sC s1 //if we saved less than 3 houses, then you don't get much
+    Text(HubD3EndingScene4_SomeSideVillagesSavedText)
+    GOTO 780
+LABEL 779
+    Text(HubD3EndingScene4_FewtoNoSideVillagesSavedText)
+LABEL 780
+FADI 15
+FadeOutMusic
+STAL 60
+SetBackground(0x1)
+MUSC CastawayHeartID
+SoloTextboxCenter(HubD3EndingScene5_ManyHoursLater)
+Text(HubD3EndingScene5_MainHouseSaved)
 NoFade
 ENDA
 
+FidelAllyGroup:
+UNIT Fidel Sage 0 Level(25,Ally,True) [13,14] 0 0 0 0 [Nosferatu, Fortify, AssistStaff, Elixir] NoAI
+UNIT
+
+CheckD3HomesStatusAndIncrementCounter: //checks all the yellow houses and increments Counter 0 if not ruined (if X tilechange is not triggered)
+CheckTileChangeTriggered(0)
+BNE 1000 s0 sC //if triggered, then skip past
+    COUNTER_INC 0
+LABEL 1000
+CheckTileChangeTriggered(2)
+BNE 1001 s0 sC 
+    COUNTER_INC 0
+LABEL 1001
+CheckTileChangeTriggered(6)
+BNE 1002 s0 sC 
+    COUNTER_INC 0
+LABEL 1002
+CheckTileChangeTriggered(8)
+BNE 1003 s0 sC 
+    COUNTER_INC 0
+LABEL 1003
+CheckTileChangeTriggered(10)
+BNE 1004 s0 sC 
+    COUNTER_INC 0
+LABEL 1004
+CheckTileChangeTriggered(12)
+BNE 1005 s0 sC 
+    COUNTER_INC 0
+LABEL 1005
+NoFade
+ENDA
+
+
 D3_BadEndingEvent:
-MUSC CherishTheDeadID
 SetBackground(Town_Day)
+MUSC CherishTheDeadID
 Text(HubD3EndingScene1_MainHouseDestroyed)
 FADI 15
 STAL 60

@@ -51,3 +51,177 @@ CarmenMageKnight:
 KhazhakFighter:
 	#incbin "./_palettes/KhazhakFighter.lzpal" 
 
+HermenMyrmidon:
+	#incbin "./_palettes/HermenMyrmidon.lzpal" 
+
+HermenSwordmaster:
+	#incbin "./_palettes/HermenSwordmaster.lzpal" 
+
+HermenSlayer:
+	#incbin "./_palettes/HermenSlayer.lzpal" 
+
+HermenSpellsword:
+	#incbin "./_palettes/HermenSpellsword.lzpal" 
+
+EstelleTroubadour:
+	#incbin "./_palettes/EstelleTroubadour.lzpal" 
+
+EstelleSavior:
+	#incbin "./_palettes/EstelleSavior.lzpal" 
+
+EstelleSeraph:
+	#incbin "./_palettes/EstelleSeraph.lzpal" 
+
+DurghamLanceCav:
+	#incbin "./_palettes/DurghamLanceCav.lzpal" 
+
+DurghamLanceKnight:
+	#incbin "./_palettes/DurghamLanceKnight.lzpal" 
+
+DurghamMageKnight:
+	#incbin "./_palettes/DurghamMageKnight.lzpal" 
+
+BartzDeserter:
+	#incbin "./_palettes/BartzDeserter.lzpal" 
+
+BartzChampion:
+	#incbin "./_palettes/BartzChampion.lzpal" 
+
+BartzWolfrider:
+	#incbin "./_palettes/BartzWolfrider.lzpal" 
+
+MedwynWarden:
+	#incbin "./_palettes/MedwynWarden.lzpal" 
+
+MedwynGeneral:
+	#incbin "./_palettes/MedwynGeneral.lzpal" 
+
+MedwynBaron:
+	#incbin "./_palettes/MedwynBaron.lzpal" 
+
+TrianaWarlock:
+	#incbin "./_palettes/TrianaWarlock.lzpal" 
+
+TrianaBaron:
+	#incbin "./_palettes/TrianaBaron.lzpal" 
+
+TrianaMaligKnight:
+	#incbin "./_palettes/TrianaMaligKnight.lzpal" 
+
+YodsenGunner:
+	#incbin "./_palettes/YodsenGunner.lzpal" 
+
+YodsenMarksman:
+	#incbin "./_palettes/YodsenMarksman.lzpal" 
+
+YodsenDragoon:
+	#incbin "./_palettes/YodsenDragoon.lzpal" 
+
+IndioWarlock:
+	#incbin "./_palettes/IndioWarlock.lzpal" 
+
+IndioRuneshield:
+	#incbin "./_palettes/IndioRuneshield.lzpal" 
+
+IndioMaligKnight:
+	#incbin "./_palettes/IndioMaligKnight.lzpal" 
+
+LeandraFighter:
+	#incbin "./_palettes/LeandraFighter.lzpal" 
+
+LeandraWarrior:
+	#incbin "./_palettes/LeandraWarrior.lzpal" 
+
+LeandraMarshall:
+	#incbin "./_palettes/LeandraMarshall.lzpal" 
+
+JaimePegRider:
+	#incbin "./_palettes/JaimePegRider.lzpal" 
+
+JaimeFalcoknight:
+	#incbin "./_palettes/JaimeFalcoknight.lzpal" 
+
+JaimeSeraph:
+	#incbin "./_palettes/JaimeSeraph.lzpal" 
+
+LeonorCleric:
+	#incbin "./_palettes/LeonorCleric.lzpal" 
+
+LeonorWarMonk:
+	#incbin "./_palettes/LeonorWarMonk.lzpal" 
+
+LeonorAdventurer:
+	#incbin "./_palettes/LeonorAdventurer.lzpal" 
+
+BikoSoldier:
+	#incbin "./_palettes/BikoSoldier.lzpal" 
+
+BikoHalberdier:
+	#incbin "./_palettes/BikoHalberdier.lzpal" 
+
+BikoGeneral:
+	#incbin "./_palettes/BikoGeneral.lzpal" 
+
+OndehHunter:
+	#incbin "./_palettes/OndehHunter.lzpal" 
+
+OndehAssassin:
+	#incbin "./_palettes/OndehAssassin.lzpal" 
+
+OndehAdventurer:
+	#incbin "./_palettes/OndehAdventurer.lzpal" 
+
+JuanThief:
+	#incbin "./_palettes/JuanThief.lzpal" 
+
+JuanRogue:
+	#incbin "./_palettes/JuanRogue.lzpal" 
+
+JuanWolfrider:
+	#incbin "./_palettes/JuanWolfrider.lzpal" 
+
+TangyuanDragonRider:
+	#incbin "./_palettes/TangyuanDragonRider.lzpal" 
+
+TangyuanDracoknight:
+	#incbin "./_palettes/TangyuanDracoknight.lzpal" 
+
+TangyuanMaligKnight:
+	#incbin "./_palettes/TangyuanMaligKnight.lzpal" 
+
+MatteoMercenary:
+	#incbin "./_palettes/MatteoMercenary.lzpal" 
+
+MatteoHero:
+	#incbin "./_palettes/MatteoHero.lzpal" 
+
+MatteoRanger:
+	#incbin "./_palettes/MatteoRanger.lzpal" 
+
+SuzanneGunner:
+	#incbin "./_palettes/SuzanneGunner.lzpal" 
+
+SuzanneMarksman:
+	#incbin "./_palettes/SuzanneMarksman.lzpal" 
+
+SuzanneDragoon:
+	#incbin "./_palettes/SuzanneDragoon.lzpal" 
+
+OrlandoTrickster:
+	#incbin "./_palettes/OrlandoTrickster.lzpal" 
+
+RahelBowCav:
+	#incbin "./_palettes/RahelBowCav.lzpal" 
+
+RahelBowKnight:
+	#incbin "./_palettes/RahelBowKnight.lzpal" 
+
+RahelRanger:
+	#incbin "./_palettes/RahelRanger.lzpal" 
+
+BuzuVanguard:
+	#incbin "./_palettes/BuzuVanguard.lzpal" 
+
+BozoWarden:
+	#incbin "./_palettes/BozoWarden.lzpal" 
+

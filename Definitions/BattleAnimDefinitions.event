@@ -17,7 +17,10 @@
 #define EndAnim "WORD 0x0"
 
 //0xC9 is last vanilla anim: just in case
-#define ArmorSwordAnim 0xCA
+#define WardenLanceAnim 0xA0
+#define WardenUnarmedAnim 0xA1 //like this because i'm lazy
+
+#define WardenSwordAnim 0xCA
 #define ArmorLanceAnim 0xCB
 #define ArmorAxeAnim 0xCC
 #define ArmorHandAxeAnim 0xCD
@@ -66,8 +69,8 @@
 #define TricksterKnifeAnim 0xEB
 #define TricksterTomeAnim 0xEC
 
-#define MonkTomeAnim 0xED
-#define Monk_FTomeAnim 0xEE
+#define ConjurerTomeAnim 0xed
+#define Conjurer_FTomeAnim 0xee
 
 #define Mercenary_FSwordAnim 0xEF
 #define Mercenary_FUnarmedAnim 0xF0
@@ -201,6 +204,30 @@
 #define MageKnightFLanceAnim 0x14f 
 #define MageKnightFTomeAnim 0x150
 
+#define WarlockTomeAnim 0x151
+
+#define FalcoknightSwordAnim 0x152
+#define FalcoknightUnarmedAnim 0x153
+
+#define GryphoknightLanceAnim 0x154
+#define GryphoknightUnarmedAnim 0x155
+
+#define ClericStaffAnim 0x156
+#define ClericUnarmedAnim 0x157
+
+#define Cleric_FStaffAnim 0x158
+#define Cleric_FUnarmedAnim 0x159
+
+#define RangerSwordAnim 0x15A
+#define RangerBowAnim 0x15B
+#define RangerUnarmedAnim 0x15C
+
+#define Ranger_FSwordAnim 0x15D
+#define Ranger_FBowAnim 0x15E
+#define Ranger_FUnarmedAnim 0x15F
+
+//vanilla repal type stuff, just put it in same slot
+
 #define ArcherBowAnim 0x26
 #define ArcherUnarmedAnim 0x27
 
@@ -212,3 +239,19 @@
 
 #define SniperFBowAnim 0x2C
 #define SniperFUnarmedAnim 0x2D
+
+#define MyrmidonSwordAnim 0x11
+#define MyrmidonUnarmedAnim 0x12
+
+#define Myrmidon_FSwordAnim 0x13
+#define Myrmidon_FUnarmedAnim 0x14
+
+#define SwordmasterSwordAnim 0x15
+#define SwordmasterUnarmedAnim 0x16
+
+#define TroubadourStaffAnim 0x86
+#define TroubadourUnarmedAnim 0x85
+
+#define SaviorStaffAnim 0x88
+#define SaviorUnarmedAnim 0x87
+

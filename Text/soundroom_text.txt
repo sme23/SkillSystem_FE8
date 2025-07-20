@@ -110,6 +110,15 @@ Dead Winds, Still Tides[X]
 ## SongName_FallingFallout
 Falling Fallout[X]
 
+## SongName_AllHandsOnDeck
+All Hands on Deck[X]
+
+## SongName_SkysEnd
+Sky's End[X]
+
+## SongName_BeforeTheGallows
+Before The Gallows[X]
+
 ## Musician_Alusq
 Alusq[X]
 
@@ -127,3 +136,6 @@ RandomWizard[X]
 
 ## Musician_PentV
 PentV[X]
+
+## Musician_TheColorRed
+TheColorRed[X]

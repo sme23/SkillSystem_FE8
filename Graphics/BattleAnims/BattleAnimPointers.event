@@ -1,4 +1,4 @@
-//these exist only to fix issues with animations
+//these exist only to fix issues with ballista animations
 
 ALIGN 4
 ArcherAnims:
@@ -28,9 +28,9 @@ EndAnim
 
 ALIGN 4
 WardenAnims:
-LanceAnim(ArmorLanceAnim)
-SwordAnim(ArmorSwordAnim)
-UnarmedAnim(ArmorUnarmedAnim)
+LanceAnim(WardenLanceAnim)
+SwordAnim(WardenSwordAnim)
+UnarmedAnim(WardenUnarmedAnim)
 EndAnim
 
 ALIGN 4
@@ -128,18 +128,6 @@ TricksterAnims:
 KnifeAnim(TricksterKnifeAnim)
 TomeAnim(TricksterTomeAnim)
 UnarmedAnim(TricksterTomeAnim)
-EndAnim
-
-ALIGN 4
-MonkAnims:
-TomeAnim(MonkTomeAnim)
-UnarmedAnim(MonkTomeAnim)
-EndAnim
-
-ALIGN 4
-Monk_FAnims:
-TomeAnim(Monk_FTomeAnim)
-UnarmedAnim(Monk_FTomeAnim)
 EndAnim
 
 ALIGN 4
@@ -262,6 +250,11 @@ StaffAnim(SeraphStaffAnim)
 UnarmedAnim(SeraphUnarmedAnim)
 EndAnim
 
+ALIGN 4
+FalcoknightAnims:
+SwordAnim(FalcoknightSwordAnim)
+UnarmedAnim(FalcoknightUnarmedAnim)
+EndAnim
 
 ALIGN 4
 MaligKnightAnims:
@@ -292,6 +285,12 @@ BombardierAnims:
 BowAnim(BombardierBowAnim)
 LanceAnim(BombardierLanceAnim)
 UnarmedAnim(BombardierUnarmedAnim)
+EndAnim
+
+ALIGN 4
+GryphoknightAnims:
+LanceAnim(GryphoknightLanceAnim)
+UnarmedAnim(GryphoknightUnarmedAnim)
 EndAnim
 
 ALIGN 4
@@ -388,4 +387,48 @@ SageFAnims:
 TomeAnim(SageFTomeAnim)
 StaffAnim(SageFStaffAnim)
 UnarmedAnim(SageFTomeAnim)
+EndAnim
+
+ALIGN 4
+WarlockAnims:
+TomeAnim(WarlockTomeAnim)
+UnarmedAnim(WarlockTomeAnim)
+EndAnim
+
+ALIGN 4
+ConjurerAnims:
+TomeAnim(ConjurerTomeAnim)
+UnarmedAnim(ConjurerTomeAnim)
+EndAnim
+
+ALIGN 4
+Conjurer_FAnims:
+TomeAnim(Conjurer_FTomeAnim)
+UnarmedAnim(Conjurer_FTomeAnim)
+EndAnim
+
+ALIGN 4
+ClericAnims:
+StaffAnim(ClericStaffAnim)
+UnarmedAnim(ClericUnarmedAnim)
+EndAnim
+
+ALIGN 4
+Cleric_FAnims:
+StaffAnim(Cleric_FStaffAnim)
+UnarmedAnim(Cleric_FUnarmedAnim)
+EndAnim
+
+ALIGN 4
+RangerAnims:
+SwordAnim(RangerSwordAnim)
+BowAnim(RangerBowAnim)
+UnarmedAnim(RangerUnarmedAnim)
+EndAnim
+
+ALIGN 4
+Ranger_FAnims:
+SwordAnim(Ranger_FSwordAnim)
+BowAnim(Ranger_FBowAnim)
+UnarmedAnim(Ranger_FUnarmedAnim)
 EndAnim

@@ -31,6 +31,8 @@ ALIGN 4
 SoundRoomList:
 
 // put the title screen theme here
+SoundRoomEntry(AllHandsOnDeckID, 0, SongName_AllHandsOnDeck)
+
 
 // player phase themes
 SoundRoomEntry(DistantSkiesID,0,SongName_DistantSkies)
@@ -46,6 +48,7 @@ SoundRoomEntry(TimesTickingID, 0, SongName_TimesTickingID)
 SoundRoomEntry(ScalleywagsOnDeckID,0,SongName_ScalleywagsOnDeck)
 SoundRoomEntry(StormsBrewingID, 0, SongName_StormsBrewing)
 SoundRoomEntry(WellAndTrulyLostID, 0, SongName_WellAndTrulyLost)
+SoundRoomEntry(SkysEndID, 0, SongName_SkysEnd)
 // hub D theme here
 
 // hub themes
@@ -66,7 +69,7 @@ SoundRoomEntry(FoolsBoldID,0,SongName_FoolsBold)
 SoundRoomEntry(TheWavesApprenticeID, 0, SongName_TheWavesApprenticeID)
 SoundRoomEntry(TougherTussleID, 0, SongName_TougherTussleID)
 SoundRoomEntry(TheStormUponUsID, 0, SongName_TheStormUponUs)
-
+SoundRoomEntry(BeforeTheGallowsID, 0, SongName_BeforeTheGallows)
 
 // cutscene themes
 // happy cutscenes
@@ -98,6 +101,7 @@ SoundRoomTerminator
 
 ALIGN 4 //using this to credit the musicians in-game
 SoundRoomSourceTable:
+SoundRoomSource(AllHandsOnDeckID, Musician_Eric)
 // player phase themes
 SoundRoomSource(DistantSkiesID, Musician_Eric)
 SoundRoomSource(CloudsYearningID,  Musician_RandomWizard)
@@ -112,6 +116,7 @@ SoundRoomSource(TimesTickingID,  Musician_ArcherBias)
 SoundRoomSource(ScalleywagsOnDeckID, Musician_Eric)
 SoundRoomSource(StormsBrewingID,  Musician_RandomWizard)
 SoundRoomSource(WellAndTrulyLostID,  Musician_ArcherBias)
+SoundRoomSource(SkysEndID, Musician_TheColorRed)
 // hub D theme here
 
 // hub themes
@@ -132,6 +137,7 @@ SoundRoomSource(FoolsBoldID, Musician_ArcherBias)
 SoundRoomSource(TheWavesApprenticeID,  Musician_ArcherBias)
 SoundRoomSource(TougherTussleID,  Musician_ArcherBias)
 SoundRoomSource(TheStormUponUsID,  Musician_RandomWizard)
+SoundRoomSource(BeforeTheGallowsID, Musician_Eric)
 
 
 // cutscene themes

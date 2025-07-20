@@ -4,10 +4,10 @@
 
 ALIGN 4
 WardenClassCardData:
-#incbin "Dmp/Knight (M) SALVAGED Sword {SALVAGED}.dmp"
+#incbin "Dmp/Knight (M) FE10-Style {flasuban}.dmp"
 ALIGN 4
 WardenClassCardPal:
-#incbin "Dmp/Knight (M) SALVAGED Sword {SALVAGED}.png_pal.dmp"
+#incbin "Dmp/Knight (M) FE10-Style {flasuban}.png_pal.dmp"
 setCardEntry(WardenClassCard, WardenClassCardData, WardenClassCardPal)
 
 ALIGN 4
@@ -114,20 +114,22 @@ Slayer_FClassCardPal:
 #incbin "Dmp/Dread Fighter (F) T2 Sword {Nuramon}.png_pal.dmp"
 setCardEntry(Slayer_FClassCard, Slayer_FClassCardData, Slayer_FClassCardPal)
 
+
+// actually "conjurers", too lazy to change this
 ALIGN 4
 MonkClassCardData:
-#incbin "Dmp/Monk (M) Magic {Blademaster, ltranc}.dmp"
+#incbin "Dmp/Mage (M) Hoodless {L95}.dmp"
 ALIGN 4
 MonkClassCardPal:
-#incbin "Dmp/Monk (M) Magic {Blademaster, ltranc}.png_pal.dmp"
+#incbin "Dmp/Mage (M) Hoodless {L95}.png_pal.dmp"
 setCardEntry(MonkClassCard, MonkClassCardData, MonkClassCardPal)
 
 ALIGN 4
 Monk_FClassCardData:
-#incbin "Dmp/Monk (F) Magic {RobertFPY, ltranc}.dmp"
+#incbin "Dmp/Mage (F) Hoodless {L95}.dmp"
 ALIGN 4
 Monk_FClassCardPal:
-#incbin "Dmp/Monk (F) Magic {RobertFPY, ltranc}.png_pal.dmp"
+#incbin "Dmp/Mage (F) Hoodless {L95}.png_pal.dmp"
 setCardEntry(Monk_FClassCard, Monk_FClassCardData, Monk_FClassCardPal)
 
 ALIGN 4
@@ -380,10 +382,10 @@ setCardEntry(AxeKnightClassCard, AxeKnightClassCardData, AxeKnightClassCardPal)
 
 ALIGN 4
 BowKnightClassCardData:
-#incbin "Dmp/Paladin (F) SALVAGED Bow {VelvetKitsune, Sir_Dadou, RobertFPY}.dmp"
+#incbin "Dmp/Bow Knight (M) Updated {Der, HyperGammaSpaces}.dmp"
 ALIGN 4
 BowKnightClassCardPal:
-#incbin "Dmp/Paladin (F) SALVAGED Bow {VelvetKitsune, Sir_Dadou, RobertFPY}.png_pal.dmp"
+#incbin "Dmp/Bow Knight (M) Updated {Der, HyperGammaSpaces}.png_pal.dmp"
 setCardEntry(BowKnightClassCard, BowKnightClassCardData, BowKnightClassCardPal)
 
 ALIGN 4
@@ -449,3 +451,19 @@ ALIGN 4
 WolfriderClassCardPal:
 #incbin "Dmp/Wolf Knight (F) Sword {darkjaden, RobertFPY}.png_pal.dmp"
 setCardEntry(WolfriderClassCard, WolfriderClassCardData, WolfriderClassCardPal)
+
+ALIGN 4
+WarlockClassCardData:
+#incbin "Dmp/Tactician (U) Magic {SALVAGED}.dmp"
+ALIGN 4
+WarlockClassCardPal:
+#incbin "Dmp/Tactician (U) Magic {SALVAGED}.png_pal.dmp"
+setCardEntry(WarlockClassCard, WarlockClassCardData, WarlockClassCardPal)
+
+ALIGN 4
+ClericFClassCardData:
+#incbin "Dmp/Cleric Updated (F) Staff {flasuban, HyperGammaSpaces}.dmp"
+ALIGN 4
+ClericFClassCardPal:
+#incbin "Dmp/Cleric Updated (F) Staff {flasuban, HyperGammaSpaces}.png_pal.dmp"
+setCardEntry(ClericFClassCard, ClericFClassCardData, ClericFClassCardPal)

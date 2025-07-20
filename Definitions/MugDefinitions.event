@@ -211,13 +211,14 @@
 #define ChampionClassCard 0x12f
 #define AdventurerClassCard 0x130
 #define Adventurer_FClassCard 0x131
-// to add for sure
 #define SeraphknightClassCard 0x132
 #define CurateClassCard 0x133
 #define LogClassCard 0x134
 #define GryphoknightClassCard 0x135
 #define WolfriderClassCard 0x136
 #define HorseClassCard 0x137
+#define WarlockClassCard 0x138
+#define ClericFClassCard 0x139
 
 //placeholders
 #define GunnerClassCard WardenClassCard

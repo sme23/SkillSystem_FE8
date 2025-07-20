@@ -16,6 +16,11 @@
 
 // --------------- SONGS: MUSIC ---------------
 
+{
+SongTable(AllHandsOnDeckID,AllHandsOnDeck,BattleMusicGroup)
+#include "songs/event/AllHandsOnDeck.event" 
+}
+
 // 6 - Port Greagor
 {
 SongTable(PortGreagorID,PortGreagor,MapMusicGroup)
@@ -237,6 +242,19 @@ SongTable(TheStormUponUsID,TheStormUponUs,MapMusicGroup)
   SongTable(FallingFalloutID,FallingFallout,MapMusicGroup)
   #include "songs/map/FallingFallout.event" 
 }
+
+//43 - Sky's End
+{
+  SongTable(SkysEndID,SkysEnd,MapMusicGroup)
+  #include "songs/map/SkysEnd.event" 
+}
+
+//44 - Before The Gallows
+{
+  SongTable(BeforeTheGallowsID,BeforeTheGallows,BattleMusicGroup)
+  #include "songs/boss/BeforeTheGallows.event" 
+}
+
 
 // --------------- SONGS: GUI AND SFX ---------------
 

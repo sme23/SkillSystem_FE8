@@ -88,6 +88,9 @@ Traits: Flight, Canto, Aid+[X]
 Weapons: Tome[N]
 Traits: Steal, Locktouch[X]
 
+## WarlockName
+Warlock[X]
+
 ## ShamanDesc
 Weapons: Tome[N]
 Traits: Steal, Locktouch[X]
@@ -203,6 +206,9 @@ Bombardier[X]
 ## BombardierDesc
 Weapons: Bow, Lance[N]
 Traits: Flight, Canto, Aid+[X]
+
+## ConjurerName
+Conjurer[X]
 
 ## MonkDesc
 Weapons: Tome[N]

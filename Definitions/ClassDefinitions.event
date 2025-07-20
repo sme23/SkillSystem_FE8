@@ -106,12 +106,18 @@
 
 //#define Shaman 0x2d
 //#define Shaman_F 0x2e
+#define Warlock Shaman
+#define Warlock_F Shaman_F
 
 //#define Monk
 #define Monk_F 0x99
 
 //#define Priest 0x45
 //#define Cleric 0x4a
+#undef Cleric
+#define Cleric 0x45
+#define Cleric_F 0x4a
+
 
 #define Curate 0x83
 
@@ -147,6 +153,7 @@
 #define HorseClass 0xA9
 
 #define Sage_Hermen 0xAC
+#define Spellsword Sage_Hermen
 #define Airship 0xAD
 
 
@@ -193,11 +200,10 @@
 #define HalberdierMapSprite 0x8F
 #define AdventurerMapSprite 0x90
 #define Adventurer_FMapSprite 0x91
-#define DarkKnightMapSprite 0x92
+#define MonkMapSprite 0x92
 #define MaligKnightMapSprite 0x93
 #define Warrior_FMapSprite 0x94
 #define SwordKnightMapSprite 0x95
-#define DragoonMapSprite SwordKnightMapSprite
 #define GryphknightMapSprite 0x96
 #define DracoknightMapSprite 0x97
 #define MarksmanMapSprite 0x98
@@ -207,6 +213,10 @@
 #define HorseMapSprite 0x9c
 #define Gryphknight_DMapSprite 0x9d
 #define AirshipMapSprite 0x9e
+#define WarlockMapSprite 0x9f
+#define ClericMapSprite 0xa0
+#define Cleric_FMapSprite 0xa1
+#define DragoonMapSprite SwordKnightMapSprite //placeholders for now
 #define KiteMapSprite LogMapSprite // 0x9e
 #define AdmiralMapSprite CaptainMapSprite
 

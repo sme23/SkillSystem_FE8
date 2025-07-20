@@ -1,3 +1,4 @@
+#define AllHandsOnDeckID 0x43 //title bgm slot
 #define PortGreagorID 0x6
 #define BeatToQuartersID 0x7
 #define DistantSkiesID 0x8
@@ -38,7 +39,8 @@
 #define MaroonedAliveID 0x28
 #define DeadWindsStillTidesID 0x29
 #define FallingFalloutID 0x2A
-
+#define SkysEndID 0x2B
+#define BeforeTheGallowsID 0x2C
 
 #define WindAmbienceID 0x47
 #define WindAmbianceID 0x47

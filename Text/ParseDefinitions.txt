@@ -240,6 +240,7 @@
 [LoadGreagorPeddler] = [LoadFace][0x31][0x1]
 [LoadGreagorLibrarianB] = [LoadFace][0x59][0x1]
 [LoadOldMan] = [LoadGreagorLibrarianB]
+[LoadOldWoman] = [LoadFace][0x5f][0x1]
 [LoadGreagorVillagerB] = [LoadFace][0x61][0x1]
 [LoadGreagorPatronB] = [LoadFace][0x5A][0x1]
 [LoadGreagorVillagerC] = [LoadFace][0x58][0x1]
