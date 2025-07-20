@@ -158,27 +158,27 @@
 
 // IndioWarlock
 	setPalette(39,IndioWarlock)
-	setCBSP(39,Indio, 1, Soldier)
+	setCBSP(39,Indio, 1, Warlock)
 
 // IndioRuneshield
 	setPalette(40,IndioRuneshield)
-	setCBSP(40,Indio, 2, Soldier)
+	setCBSP(40,Indio, 2, Runeshield)
 
 // IndioMaligKnight
 	setPalette(41,IndioMaligKnight)
-	setCBSP(41,Indio, 3, Halberdier)
+	setCBSP(41,Indio, 3, MaligKnight)
 
 // LeandraFighter
 	setPalette(42,LeandraFighter)
-	setCBSP(42,Leandra, 1, Soldier)
+	setCBSP(42,Leandra, 1, Fighter_F)
 
 // LeandraWarrior
 	setPalette(43,LeandraWarrior)
-	setCBSP(43,Leandra, 2, Soldier)
+	setCBSP(43,Leandra, 2, Warrior_F)
 
 // LeandraMarshall
 	setPalette(44,LeandraMarshall)
-	setCBSP(44,Leandra, 3, Halberdier)
+	setCBSP(44,Leandra, 3, Marshall)
 
 // JaimePegRider
 	setPalette(45,JaimePegRider)
