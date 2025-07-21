@@ -676,3 +676,14 @@ Cleric_FSMS:
 ALIGN 4
 Cleric_FMMS:
 #incbin "Dmp/Cleric (F) Awakening-Style {BatimaTheBat}-walk.dmp"
+
+StandingMapSprite(Champion_FMapSprite,MapSprite16x32,Champion_FSMS)
+MovingMapSprite(Champion_F, $1C3D7C, Champion_FMMS)
+
+ALIGN 4
+Champion_FSMS:
+#incbin "Dmp/Sergeant (F) {Spud, Dora Drago}-stand.dmp"
+
+ALIGN 4
+Champion_FMMS:
+#incbin "Dmp/Sergeant (F) {Spud, Dora Drago}-walk.dmp"

@@ -42,8 +42,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-//TurnEventPlayer(0, PostPrepsEvent, 1)
-TurnEventPlayer(0, EndingScene, 1)
+TurnEventPlayer(0, PostPrepsEvent, 1)
 TurnEventPlayer(0, MoreDragonsSpawnAndAiChanges, 2)
 TurnEventPlayer(0, RazvanOrLuaNoticesEvacuation, 3) //just text
 TurnEventPlayer(0, MoreDragonsOnTheSide, 4)
@@ -569,6 +568,12 @@ BNE 1 s0 sC //if it is not set, branch past
 LABEL 1
 CALL D3_BadEndingEvent
 LABEL 2
+FADI 15
+CHECK_EVENTID D3FidelDQFlag
+BNE 230 s0 sC
+    LOAD1 1 FidelAllyGroup //if he is dead, then don't load him in
+    ENUN
+LABEL 230
 MNC2 HubD
 NoFade
 ENDA
@@ -590,8 +595,6 @@ SetBackground(0x5)
 CHECK_EVENTID D3FidelDQFlag
 BNE 776 s0 sC  
     Text(HubD3EndingScene3_FidelAlive)
-    LOAD1 1 FidelAllyGroup
-    ENUN
     GOTO 777
 LABEL 776
 Text(HubD3EndingScene_FidelDead)

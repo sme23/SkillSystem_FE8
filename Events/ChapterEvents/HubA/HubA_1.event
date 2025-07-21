@@ -160,19 +160,19 @@ UNIT Contractor Brigand Sanz Level(3, Enemy, True) [23, 17] 0 0 0 0 [Bloodaxe] C
 UNIT
 
 SuperbossGang:
-UNIT Yurena Champion Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] BossAI
+UNIT Yurena Champion_F Sanz Level(20, Enemy, False) [12, 21] 0 0 1 REDA12R20 [BraveLance, Saunion] BossAI
 UNIT Sanz Sage Sanz Level(22, Enemy, False) [13, 21] 0 0 1 REDA13R20 [Tornado, Sagittae, Warp, HoardersCharm] BossAI
 UNIT Orlando 0 Orlando Level(13, Enemy, False) [14, 21] 0 0 1 REDA14R20 [0] BossAI
 UNIT
 
 YurenaGaming:
-UNIT Yurena Champion Sanz Level(20, Enemy, False) [14, 8] 0 0 0 0 [BraveLance, Saunion] ChargeAI
+UNIT Yurena Champion_F Sanz Level(20, Enemy, False) [14, 8] 0 0 0 0 [BraveLance, Saunion] ChargeAI
 UNIT
 
 SanzUndertaleEndCutscene:
 UNIT Sanz Sage Sanz Level(20, Enemy, False) [18, 9] 0 0 0 0 [0] NoAI
 UNIT Orlando 0 Orlando Level(13, Enemy, False) [18, 10] 0 0 0 0 [0] BossAI
-UNIT Yurena Champion Sanz Level(20, Enemy, False) [19, 17] 0 0 0 0 [BraveLance, Saunion] BossAI
+UNIT Yurena Champion_F Sanz Level(20, Enemy, False) [19, 17] 0 0 0 0 [BraveLance, Saunion] BossAI
 
 //generics that are running around at the beginning of this cutscene
 

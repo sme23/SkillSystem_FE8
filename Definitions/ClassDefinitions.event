@@ -34,6 +34,7 @@
 
 //T2
 #define Champion 0x8B
+#define Champion_F 0xAF
 #define MasterNinja 0x8D
 //#define Assassin 0x17
 //#define Assassin_F 0x18
@@ -157,6 +158,7 @@
 #define Airship 0xAD
 
 
+
 //STANDING MAP SPRITES
 #define CataphractMapSprite 0x2b
 #define CaptainMapSprite 0x6b 
@@ -216,6 +218,7 @@
 #define WarlockMapSprite 0x9f
 #define ClericMapSprite 0xa0
 #define Cleric_FMapSprite 0xa1
+#define Champion_FMapSprite 0xa2
 #define DragoonMapSprite SwordKnightMapSprite //placeholders for now
 #define KiteMapSprite LogMapSprite // 0x9e
 #define AdmiralMapSprite CaptainMapSprite

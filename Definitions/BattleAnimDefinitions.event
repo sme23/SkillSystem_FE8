@@ -226,6 +226,10 @@
 #define Ranger_FBowAnim 0x15E
 #define Ranger_FUnarmedAnim 0x15F
 
+#define Champion_FSwordAnim 0x160
+#define Champion_FLanceAnim 0x161
+#define Champion_FUnarmedAnim 0x162
+
 //vanilla repal type stuff, just put it in same slot
 
 #define ArcherBowAnim 0x26
@@ -255,3 +259,10 @@
 #define SaviorStaffAnim 0x88
 #define SaviorUnarmedAnim 0x87
 
+#define MercenarySwordAnim 0xb
+#define MercenaryUnarmedAnim 0xc
+
+#define HeroSwordAnim 0xD
+#define HeroAxeAnim 0xE
+#define HeroHandaxeAnim 0xF
+#define HeroUnarmedAnim 0x10

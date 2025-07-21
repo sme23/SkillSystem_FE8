@@ -225,3 +225,6 @@ BuzuVanguard:
 BozoWarden:
 	#incbin "./_palettes/BozoWarden.lzpal" 
 
+GeraldoMercenary:
+	#incbin "./_palettes/GeraldoMercenary.lzpal" 
+

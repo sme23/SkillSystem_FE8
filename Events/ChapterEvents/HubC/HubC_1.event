@@ -216,7 +216,7 @@ UNIT
 
 
 Intro_Cutscene_Trio:
-UNIT Yurena Champion 0 Level(20, Enemy, False) [6,9] 0 0 1 REDA6R6 [BraveLance, Saunion] NoAI
+UNIT Yurena Champion_F 0 Level(20, Enemy, False) [6,9] 0 0 1 REDA6R6 [BraveLance, Saunion] NoAI
 UNIT Sanz Sage 0 Level(22, Enemy, False) [7,9] 0 0 0x1 REDA7R7 [Tornado, Sagittae, Warp, Physic] NoAI
 UNIT Baltasar Dragoon 0 Level(20, Enemy, False) [8,9] 0 0 0x1 REDA8R6 [SilverSword,SilverMusket] NoAI
 UNIT
@@ -226,7 +226,7 @@ UNIT Krezke Slayer_F 0 Level(20, Enemy, False) [4,10] 0 0 0x1 REDA4R6 [Runesword
 UNIT
 
 Outro_Yurena:
-UNIT Yurena Champion 0 Level(20, NPC, False) [7,1] 0 0 0 0 [BraveLance, Saunion] NoAI
+UNIT Yurena Champion_F 0 Level(20, NPC, False) [7,1] 0 0 0 0 [BraveLance, Saunion] NoAI
 UNIT
 
 Outro_Players:

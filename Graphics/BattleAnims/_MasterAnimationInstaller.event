@@ -89,6 +89,13 @@
 }
 
 {
+    #include "Animations/Hero/Axe Installer.event"
+    #include "Animations/Hero/Handaxe Installer.event"
+    #include "Animations/Hero/Sword Installer.event"
+    #include "Animations/Hero/Unarmed Installer.event"
+}
+
+{
     #include "Animations/Hero_F/Axe Installer.event"
     #include "Animations/Hero_F/Handaxe Installer.event"
     #include "Animations/Hero_F/Sword Installer.event"
@@ -363,4 +370,15 @@
     #include "Animations/Ranger_F/Sword Installer.event"
     #include "Animations/Ranger_F/Bow Installer.event"
     #include "Animations/Ranger_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Champion_F/Sword Installer.event"
+    #include "Animations/Champion_F/Lance Installer.event"
+    #include "Animations/Champion_F/Unarmed Installer.event"
+}
+
+{
+    #include "Animations/Mercenary/Sword Installer.event"
+    #include "Animations/Mercenary/Unarmed Installer.event"
 }

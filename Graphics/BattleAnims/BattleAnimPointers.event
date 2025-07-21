@@ -137,6 +137,14 @@ UnarmedAnim(Mercenary_FUnarmedAnim)
 EndAnim
 
 ALIGN 4
+HeroAnims:
+SwordAnim(HeroSwordAnim)
+AxeAnim(HeroAxeAnim)
+HandAxeAnim(HeroHandaxeAnim)
+UnarmedAnim(HeroUnarmedAnim)
+EndAnim
+
+ALIGN 4
 Hero_FAnims:
 SwordAnim(Hero_FSwordAnim)
 AxeAnim(Hero_FAxeAnim)
@@ -431,4 +439,11 @@ Ranger_FAnims:
 SwordAnim(Ranger_FSwordAnim)
 BowAnim(Ranger_FBowAnim)
 UnarmedAnim(Ranger_FUnarmedAnim)
+EndAnim
+
+ALIGN 4
+Champion_FAnims:
+SwordAnim(Champion_FSwordAnim)
+LanceAnim(Champion_FLanceAnim)
+UnarmedAnim(Champion_FUnarmedAnim)
 EndAnim

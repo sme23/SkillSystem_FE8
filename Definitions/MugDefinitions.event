@@ -140,7 +140,7 @@
 #define RogelioMug 0xB4
 
 // D-3 Placeholder
-#define FidelMug 0xBA
+#define FidelMug 0xBD
 #define D3TorchBossMug 0xBB
 #define D3BanditBossMug 0xBC
 
@@ -219,6 +219,7 @@
 #define HorseClassCard 0x137
 #define WarlockClassCard 0x138
 #define ClericFClassCard 0x139
+#define ChampionFClassCard 0x12f
 
 //placeholders
 #define GunnerClassCard WardenClassCard

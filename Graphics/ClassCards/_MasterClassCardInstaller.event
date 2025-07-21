@@ -467,3 +467,11 @@ ALIGN 4
 ClericFClassCardPal:
 #incbin "Dmp/Cleric Updated (F) Staff {flasuban, HyperGammaSpaces}.png_pal.dmp"
 setCardEntry(ClericFClassCard, ClericFClassCardData, ClericFClassCardPal)
+
+ALIGN 4
+ChampionFClassCardData:
+#incbin "Dmp/Sergeant (F) {Spud, Rasdel, Pushwall}.dmp"
+ALIGN 4
+ChampionFClassCardPal:
+#incbin "Dmp/Sergeant (F) {Spud, Rasdel, Pushwall}.png_pal.dmp"
+setCardEntry(ChampionFClassCard, ChampionFClassCardData, ChampionFClassCardPal)

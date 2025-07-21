@@ -265,37 +265,41 @@
 	setCBSP(65,Matteo, 3, Ranger)
 
 // SuzanneGunner
-	setPalette(63,SuzanneGunner)
-	setCBSP(63,Suzanne, 1, Mercenary)
+	setPalette(66,SuzanneGunner)
+	setCBSP(66,Suzanne, 1, Mercenary)
 
 // SuzanneMarksman
-	setPalette(64,SuzanneMarksman)
-	setCBSP(64,Suzanne, 2, Hero)
+	setPalette(67,SuzanneMarksman)
+	setCBSP(67,Suzanne, 2, Hero)
 
 // SuzanneDragoon
-	setPalette(65,SuzanneDragoon)
-	setCBSP(65,Suzanne, 3, Ranger)
+	setPalette(68,SuzanneDragoon)
+	setCBSP(68,Suzanne, 3, Ranger)
 
 // OrlandoTrickster
-	setPalette(66,OrlandoTrickster)
-	setCBSP(66,Orlando, 1, Trickster)
+	setPalette(69,OrlandoTrickster)
+	setCBSP(69,Orlando, 1, Trickster)
 
 // RahelBowCav
-	setPalette(67,RahelBowCav)
-	setCBSP(67,Rahel, 1, BowCav)
+	setPalette(70,RahelBowCav)
+	setCBSP(70,Rahel, 1, BowCav)
 
 // RahelBowKnight
-	setPalette(68,RahelBowKnight)
-	setCBSP(68,Rahel, 2, BowKnight)
+	setPalette(71,RahelBowKnight)
+	setCBSP(71,Rahel, 2, BowKnight)
 
 // RahelRanger
-	setPalette(69,RahelRanger)
-	setCBSP(69,Rahel, 3, Ranger_F)
+	setPalette(72,RahelRanger)
+	setCBSP(72,Rahel, 3, Ranger_F)
 
 // BuzuVanguard
-	setPalette(70,BuzuVanguard)
-	setCBSP(70,Buzu, 1, Vanguard)
+	setPalette(73,BuzuVanguard)
+	setCBSP(73,Buzu, 1, Vanguard)
 
 // BozoWarden
-	setPalette(71,BozoWarden)
-	setCBSP(71,Bozo, 1, Warden)
+	setPalette(74,BozoWarden)
+	setCBSP(74,Bozo, 1, Warden)
+
+// GeraldoMercenary
+	setPalette(75,GeraldoMercenary)
+	setCBSP(75,Geraldo, 1, Mercenary)
