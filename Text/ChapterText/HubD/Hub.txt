@@ -1,8 +1,12 @@
 ## HubDTitle
 Hub D - Fractured Skies[X]
 
+## HubDStatusObjective
+Investigate[X]
 
-
+## HubDGoalWindow
+ Venture the outskirts[N]
+ and settle business.[X]
 
 // enter D-1 by talking to Desiderio
 

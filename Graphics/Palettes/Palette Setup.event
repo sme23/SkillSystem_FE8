@@ -303,3 +303,83 @@
 // GeraldoMercenary
 	setPalette(75,GeraldoMercenary)
 	setCBSP(75,Geraldo, 1, Mercenary)
+
+// FelipeSoldier
+	setPalette(76,FelipeSoldier)
+	setCBSP(76,Felipe, 1, Soldier)
+
+// SierraVanguard
+	setPalette(77,SierraVanguard)
+	setCBSP(77,Sierra, 1, Vanguard)
+
+// ManfredMercenary
+	setPalette(78,ManfredMercenary)
+	setCBSP(78,Manfred, 1, Mercenary)
+
+// SagargalaWarden
+	setPalette(79,SagargalaWarden)
+	setCBSP(79,Sagargala, 1, Warden)
+
+// StingrayDeserter
+	setPalette(80,StingrayDeserter)
+	setCBSP(80,Stingray, 1, Deserter)
+
+// RamiroSwordCav
+	setPalette(81,RamiroSwordCav)
+	setCBSP(81,Ramiro, 1, SwordCav)
+
+// TheCloserWarrior
+	setPalette(82,TheCloserWarrior)
+	setCBSP(82,TheCloser, 1, Warrior)
+
+// JozefGunner
+	setPalette(83,JozefGunner)
+	setCBSP(83,Jozef, 1, SwordCav)
+
+// BigBrickFighter
+	setPalette(84,BigBrickFighter)
+	setCBSP(84,BigBrick, 1, SwordCav)
+
+// HakmanMyrmidon
+	setPalette(85,HakmanMyrmidon)
+	setCBSP(85,Hakman, 1, SwordCav)
+
+// MrMistMage
+	setPalette(86,MrMistMage)
+	setCBSP(86,MrMist, 1, SwordCav)
+
+// YaoguaiNinja
+	setPalette(87,YaoguaiNinja)
+	setCBSP(87,Yaoguai, 1, SwordCav)
+
+// TheDukeArcher
+	setPalette(88,TheDukeArcher)
+	setCBSP(88,TheDuke, 1, SwordCav)
+
+// SantiagoGunner
+	setPalette(89,SantiagoGunner)
+	setCBSP(89,Santiago, 1, SwordCav)
+
+// SlicerThief
+	setPalette(90,SlicerThief)
+	setCBSP(90,Slicer, 1, Thief)
+
+// DicerMercenary
+	setPalette(91,DicerMercenary)
+	setCBSP(91,Dicer, 1, Mercenary)
+
+// HugoHero
+	setPalette(92,HugoHero)
+	setCBSP(92,Hugo, 1, Hero)
+
+// JulianaSage
+	setPalette(93,JulianaSage)
+	setCBSP(93,Juliana, 1, Sage_F)
+
+// IgnacioRuneshield
+	setPalette(94,IgnacioRuneshield)
+	setCBSP(94,Ignacio, 1, Runeshield)
+
+// ElodiaWolfrider
+	setPalette(95,ElodiaWolfrider)
+	setCBSP(95,Elodia, 1, Wolfrider)

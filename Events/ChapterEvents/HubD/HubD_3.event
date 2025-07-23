@@ -604,14 +604,17 @@ COUNTER_CHECK 0 //check counter 0 now
 SVAL s1 6
 BLT 778 sC s1 //if our counter's results are less than 6, branch past
     Text(HubD3EndingScene4_AllSideVillagesSavedText)
+    GiveGold(5000)
     GOTO 780
 LABEL 778
 SVAL s1 3
 BLT 779 sC s1 //if we saved less than 3 houses, then you don't get much
     Text(HubD3EndingScene4_SomeSideVillagesSavedText)
+    GiveGold(2500)
     GOTO 780
 LABEL 779
     Text(HubD3EndingScene4_FewtoNoSideVillagesSavedText)
+    GiveGold(1000)
 LABEL 780
 FADI 15
 FadeOutMusic

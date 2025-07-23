@@ -228,3 +228,63 @@ BozoWarden:
 GeraldoMercenary:
 	#incbin "./_palettes/GeraldoMercenary.lzpal" 
 
+FelipeSoldier:
+	#incbin "./_palettes/FelipeSoldier.lzpal" 
+
+SierraVanguard:
+	#incbin "./_palettes/SierraVanguard.lzpal" 
+
+ManfredMercenary:
+	#incbin "./_palettes/ManfredMercenary.lzpal" 
+
+SagargalaWarden:
+	#incbin "./_palettes/SagargalaWarden.lzpal" 
+
+StingrayDeserter:
+	#incbin "./_palettes/StingrayDeserter.lzpal" 
+
+RamiroSwordCav:
+	#incbin "./_palettes/RamiroSwordCav.lzpal" 
+
+TheCloserWarrior:
+	#incbin "./_palettes/TheCloserWarrior.lzpal" 
+
+JozefGunner:
+	#incbin "./_palettes/JozefGunner.lzpal" 
+
+BigBrickFighter:
+	#incbin "./_palettes/BigBrickFighter.lzpal" 
+
+HakmanMyrmidon:
+	#incbin "./_palettes/HakmanMyrmidon.lzpal" 
+
+MrMistMage:
+	#incbin "./_palettes/MrMistMage.lzpal" 
+
+YaoguaiNinja:
+	#incbin "./_palettes/YaoguaiNinja.lzpal" 
+
+TheDukeArcher:
+	#incbin "./_palettes/TheDukeArcher.lzpal" 
+
+SantiagoGunner:
+	#incbin "./_palettes/SantiagoGunner.lzpal" 
+
+SlicerThief:
+	#incbin "./_palettes/SlicerThief.lzpal" 
+
+DicerMercenary:
+	#incbin "./_palettes/DicerMercenary.lzpal" 
+
+HugoHero:
+	#incbin "./_palettes/HugoHero.lzpal" 
+
+JulianaSage:
+	#incbin "./_palettes/JulianaSage.lzpal" 
+
+IgnacioRuneshield:
+	#incbin "./_palettes/IgnacioRuneshield.lzpal" 
+
+ElodiaWolfrider:
+	#incbin "./_palettes/ElodiaWolfrider.lzpal" 
+
