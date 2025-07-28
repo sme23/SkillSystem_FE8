@@ -84,6 +84,8 @@
 // HUB D Units
 #define Fidel $32
 
+#define YurenaReal // ??? somewhere, not sure yet
+
 // ENEMY/NPC ($46 through $FF)
 
 //Chapter 1

@@ -1159,7 +1159,7 @@ Hub B - The Outskirts[X]
 
 ## HubBStatusObjective
 Search the outskirts[N]
-   for treasure.[X]
+ for gold and glory.[X]
 
 ## HubBGoalWindow
 Search[X]

@@ -95,3 +95,13 @@
 {
     #include "HubD/HubD_3.event"
 }
+{
+    #include "HubD/HubDTheOutskirts.event"
+}
+
+
+
+//Helper Events that need to be accessed by multiple event files: don't need to be in their own scope
+#include "HubB/_HubBHelperEvents.event"
+#include "HubC/_HubCHelperEvents.event"
+#include "HubD/_HubDHelperEvents.event"

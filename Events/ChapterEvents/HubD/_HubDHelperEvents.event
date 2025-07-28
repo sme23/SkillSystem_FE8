@@ -1,0 +1,48 @@
+HubD_Traps_Deck:
+CHECK_EVENTID GoToNextHubFlagID
+BNE 777 s0 sC //if the flag is set, then go to the normal traps
+    AddTrap(GreenSigilTrapID, 7, 14)
+    AddTrap(GreenSigilTrapID, 8, 14)
+    GOTO 778
+LABEL 777
+AddTrap(BlueSigilTrapID, 7, 14)
+AddTrap(BlueSigilTrapID, 8, 14)
+LABEL 778
+AddTrap(GreenSigilTrapID, 7, 8)
+AddTrap(GreenSigilTrapID, 8, 8)
+AddTrap(BlueSigilTrapID, 5, 20)
+AddTrap(BlueSigilTrapID, 10, 20)
+AddTrap(BlueSigilTrapID, 11, 23)
+AddTrap(BlueSigilTrapID, 11, 24)
+NoFade
+ENDA
+
+SpawnHubD_DeckUnits:
+NoFade
+ENDA
+
+SpawnInHubDQuests:
+SpawnQuestSigils(WentToHub1, 1, SpawnD1Traps)
+SpawnQuestSigils(WentToHub2, 2, SpawnD2Traps)
+SpawnQuestSigils(WentToHub3, 3, SpawnD3Traps)
+NoFade
+ENDA
+
+SpawnD1Traps:
+AddTrap(RedSigilTrapID, 35, 8)
+AddTrap(RedSigilTrapID, 36, 8)
+NoFade
+ENDA
+
+SpawnD2Traps:
+AddTrap(RedSigilTrapID, 14, 15)
+AddTrap(RedSigilTrapID, 14, 16)
+AddTrap(RedSigilTrapID, 14, 17)
+NoFade
+ENDa
+
+SpawnD3Traps:
+AddTrap(RedSigilTrapID, 34, 27)
+AddTrap(RedSigilTrapID, 35, 27)
+NoFade
+ENDA

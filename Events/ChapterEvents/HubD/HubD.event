@@ -3,6 +3,11 @@ EventPointerTable(HubDEventsID, PointerList)
 #define SeenHubD1Pitch 7
 #define SeenHubD2Pitch 8
 #define SeenHubD3Pitch 9
+#define Flag_HubD_CaptainsQuarters_ToDeck 10
+#define Flag_HubD_DiningQuarters_ToDeck 11
+#define Flag_HubD_LivingQuarters_ToDeck 12
+#define Flag_HubD_DeckToOtherAreas 13
+#define Flag_HubD_CaptainsQuarters_ToEnd 14
 
 
 PointerList:
@@ -19,7 +24,31 @@ POIN BeginningScene EndingScene
 
 
 TurnBasedEvents:
+TurnEventPlayer(0, PostPrepsEvent, 1)
 END_MAIN
+
+PostPrepsEvent:
+FADI 15
+CALL SpawnHubD_DeckUnits
+CALL HubD_Traps_Deck
+//CALL SetAllHubDTalkFlags
+CAMERA_CENTERED Lua
+ENUT Flag_HubD_CaptainsQuarters_ToDeck
+ENUT Flag_HubD_DiningQuarters_ToDeck
+ENUT Flag_HubD_LivingQuarters_ToDeck //turn off all flags except the ones that go to floor 1
+ENUT Flag_HubD_CaptainsQuarters_ToEnd
+ENUF Flag_HubD_DeckToOtherAreas
+FADU 15
+CheckHowManyHubChaptersCompleted
+BNE 2 sC s0 //if chapters completed != 0, skip
+    CenterTextbox(HubDArmadaExplanation) //initial explanation
+LABEL 2
+SVAL s1 3 //only 3, this time around
+BNE 3 sC s1
+    CenterTextbox(HubDSayWhereToGo) //note that you can move on
+LABEL 3
+NoFade
+ENDA
 
 CharacterBasedEvents:
 END_MAIN
@@ -28,46 +57,109 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-AREA WentToHub1 GotoHubD1 [8,8] [8,8]
-AREA WentToHub2 GotoHubD2 [9,11] [9,11]
-AREA WentToHub3 GotoHubD3 [8,16] [8,16]
+AREA Flag_HubD_CaptainsQuarters_ToEnd EndingScene [7,8] [8,8]
+AREA Flag_HubD_DeckToOtherAreas GotoCaptainQuarters [7,14] [8,14]
+AREA Flag_HubD_DeckToOtherAreas GotoDiningQuarters [5,20] [5,20]
+AREA Flag_HubD_DeckToOtherAreas GotoDiningQuarters [10,20] [10,20]
+AREA Flag_HubD_DeckToOtherAreas GotoLivingQuarters [11,23] [11,24]
+AREA Flag_HubD_CaptainsQuarters_ToDeck GotoDeck [7,14] [8,14]
+AREA Flag_HubD_DiningQuarters_ToDeck GotoDeck [5,20] [5,20]
+AREA Flag_HubD_DiningQuarters_ToDeck GotoDeck [10,20] [10,20]
+AREA Flag_HubD_LivingQuarters_ToDeck GotoDeck [11,23] [11,24]
+AREA 0 SwitchToFlyingMode [7,8] [8,8]
 AFEV 0 RefreshLua 0
 END_MAIN
 
-GotoHubD1:
-HubChapterFirstTimeEvent(1, SeenHubD1Pitch, HubD1Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubD_1, Fort_Ruins_Outside, HubD, HubDCallback)
-GotoHubChapterIfYes(3, HubD_1, HubD1Selection_Yes)
-Text(HubD1Selection_No)
-ENUF LuaInAHubFlag
+GotoCaptainQuarters:
+CALL RemoveAllTraps
+ENUF Flag_HubD_CaptainsQuarters_ToDeck
+InitiateHubDTileChange(HubD_Traps_CaptainsQuarters, 0, SpawnHubD_DeckUnits)
 NoFade
 ENDA
 
-HubDCallback:
-WEATHER 7
+GotoDiningQuarters:
+CALL RemoveAllTraps
+ENUF Flag_HubD_DiningQuarters_ToDeck
+InitiateHubDTileChange(HubD_Traps_DiningQuarters, 1, SpawnHubD_DeckUnits)
 NoFade
 ENDA
 
-GotoHubD2:
-HubChapterFirstTimeEvent(1, SeenHubD2Pitch, HubD2Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubD_2, Village, HubD, HubDCallback)
-GotoHubChapterIfYes(3, HubD_2, HubD2Selection_Yes)
-Text(HubD2Selection_No)
-ENUF LuaInAHubFlag
+GotoLivingQuarters:
+CALL RemoveAllTraps
+ENUF Flag_HubD_LivingQuarters_ToDeck
+InitiateHubDTileChange(HubD_Traps_LivingQuarters, 2, SpawnHubD_DeckUnits)
 NoFade
 ENDA
 
-GotoHubD3:
-HubChapterFirstTimeEvent(1, SeenHubD3Pitch, HubD3Pitch)
-FancyChapterMapOffset(-1,-1)
-FancyChapterPreview(HubD_3, Outside_Village_Evening, HubD, HubDCallback)
-GotoHubChapterIfYes(3, HubD_3, HubD3Selection_Yes)
-Text(HubD3Selection_No)
-ENUF LuaInAHubFlag
+GotoDeck:
+CALL RemoveAllTraps
+ENUF Flag_HubD_DeckToOtherAreas
+InitiateHubDTileRevertAll(HubD_Traps_Deck, SpawnHubD_DeckUnits)
 NoFade
 ENDA
+
+HubD_Traps_CaptainsQuarters:
+AddTrap(BlueSigilTrapID, 7, 14)
+AddTrap(BlueSigilTrapID, 8, 14)
+CHECK_EVENTID GoToNextHubFlagID //has to be unset to be "on"
+BNE 776 s0 sC
+    AddTrap(GreenSigilTrapID, 7, 8)
+    AddTrap(GreenSigilTrapID, 8, 8)
+    ENUF Flag_HubD_CaptainsQuarters_ToEnd //unset this flag if we're in this space only
+LABEL 776
+NoFade
+ENDA
+
+HubD_Traps_DiningQuarters:
+AddTrap(BlueSigilTrapID, 5, 20)
+AddTrap(BlueSigilTrapID, 10, 20)
+NoFade
+ENDA
+
+HubD_Traps_LivingQuarters:
+AddTrap(BlueSigilTrapID, 11, 23)
+AddTrap(BlueSigilTrapID, 11, 24)
+NoFade
+ENDA
+
+RemoveAllTraps: //clears all traps, disables all hub movement flags
+RemoveTrapAtCoords(7,8)
+RemoveTrapAtCoords(8,8)
+RemoveTrapAtCoords(7,14)
+RemoveTrapAtCoords(8,14)
+RemoveTrapAtCoords(5,20)
+RemoveTrapAtCoords(10,20)
+RemoveTrapAtCoords(11,23)
+RemoveTrapAtCoords(11,24)
+ENUT Flag_HubD_DeckToOtherAreas
+ENUT Flag_HubD_CaptainsQuarters_ToDeck
+ENUT Flag_HubD_DiningQuarters_ToDeck 
+ENUT Flag_HubD_LivingQuarters_ToDeck
+ENUT Flag_HubD_CaptainsQuarters_ToEnd
+NoFade
+ENDA
+
+SwitchToFlyingMode:
+FADI 15
+SET_ACTIVE 0
+STAL 30
+RemoveAll
+LOMA HubDTheOutskirts
+LOAD1 1 LiberatorShipGroup
+ENUN
+//LoadNPCUnitGroupIfEIDNotSet(PassarolaRecruitedFlag, 1337, PassarolaUnitGroup)
+SET_ACTIVE Liberator
+CAMERA_CENTERED Liberator
+HIDEUNIT Lua
+CALL SpawnInHubDQuests
+ENUN
+FADU 15
+NoFade
+ENDA
+
+LiberatorShipGroup:
+UNIT Liberator Airship 0 Level(20,Ally,False) [25,15] 0 0 0 0 [0x0] NoAI
+UNIT
 
 RefreshLua:
 SVAL s1 0x42
@@ -76,9 +168,6 @@ NoFade
 ENDA
 
 Traps1:
-RedSigil(8, 8)
-RedSigil(9, 11)
-RedSigil(8, 16)
 ENDTRAP
 ALIGN 4
 
@@ -98,17 +187,32 @@ UNIT
 
 BeginningScene:
 WEATHER 7
-STAL 30
-ENUN
 ENUT LuaInAHubFlag
-FADI 15
-//LOAD1 1 TestEnemyGroup
-//ENUN
+ENUT GoToNextHubFlagID
+CheckHowManyHubChaptersCompleted
+BNE 2 sC s0 //first time seeing it in this case, play first time event (both meant to take place in the captain's quarters)
+    SetBackground(Inn)
+    MUSC OrlandosThemeID
+    Text(HubDBeginningScene1)
+    Text(HubDBeginningScene2)
+    GOTO 3
+LABEL 2
+SVAL s1 3
+BNE 3 sC s1 //if chapters completed != 3, skip
+    SetBackground(Inn)
+    MUSC OrlandosThemeID
+    Text(HubDEndingScene1)
+    Text(HubDEndingScene2)
+    ENUF GoToNextHubFlagID
+    GOTO 3 //skip over the rest
+LABEL 3
+STAL 1
 GotoPrepScreenHub
 NoFade
 ENDA
 
 EndingScene:
+MNC2 HubETheDecision
 NoFade
 ENDA
 

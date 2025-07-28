@@ -54,6 +54,7 @@
 #define CheckIfHubChaptersCompleted "ASMC CheckIfHubChaptersCompletedASMC"
 #define CheckHowManyHubChaptersCompleted "ASMC CheckHowManyHubChaptersCompletedASMC"
 #define SpawnQuestSigil(eventId, labelId, trapId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; AddTrap(trapId, xPos, yPos); LABEL labelId"
+#define SpawnQuestSigils(eventId, labelId, eventPointer) "CHECK_EVENTID eventId; BNE labelId s0 sC; CALL eventPointer; LABEL labelId"
 #define RemoveQuestSigil(eventId, labelId, xPos, yPos) "CHECK_EVENTID eventId; BNE labelId s0 sC; RemoveTrapAtCoords(xPos, yPos); LABEL labelId"
 
 #define BranchIfHubNotVisited(labelId, eventId) "CheckIfHubVisited; BNE labelId s0 sC; CALL eventId; LABEL labelId"
@@ -96,6 +97,11 @@
 #define InitiateFloorRevertHubB_Midship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_MidshipFloor1; TILEREVERT TC_MidshipFloor2; TILEREVERT TC_MidshipFloor3; SET_ACTIVE 0; CALL SpawnDeckUnits; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
 #define InitiateFloorRevertHubB_Rightship(addTraps) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT TC_RightshipFloor1; TILEREVERT TC_RightshipFloor2; SET_ACTIVE 0; CALL SpawnDeckUnits ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+
+#define InitiateHubDTileRevertAll(addTraps, newUnitGroup) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILEREVERT 0; TILEREVERT 1; TILEREVERT 2; SET_ACTIVE 0; CALL newUnitGroup ; CAMERA_CENTERED Lua; MUNO; FADU 15"
+
+#define InitiateHubDTileChange(addTraps, tileChangeID, newUnitGroup) "FADI 10; MUSI; SOUN 0x96; STAL 15 ; RemoveAll ; SOUN 0x97; STAL 10; CALL addTraps; SOUN 0x98; STAL 10; TILECHANGE tileChangeID; SET_ACTIVE 0; CALL newUnitGroup ; CAMERA_CENTERED Lua; MUNO; FADU 15"
 
 //This is called whenever a questgiver is spawned, and easily 'cutscene' swap them into a green unit. 
 #define LoadHubBQuestgiverIfEIDNotSet(eventId, labelId, unitGroup, unitName) "CHECK_EVENTID eventId; BNE labelId s0 sC; LoadEnemies(unitGroup); CUSN unitName ; LABEL labelId"

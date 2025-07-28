@@ -7,10 +7,10 @@
   <properties>
    <property name="Anims1" value="0"/>
    <property name="Anims2" value="0"/>
-   <property name="ChapterID" value="HubD"/>
+   <property name="ChapterID" value="HubETheDecision"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="HubDMapChangesID"/>
-   <property name="MapID" value="HubDMapID"/>
+   <property name="MapChangesID" value="HubETheDecisionMapChangesID"/>
+   <property name="MapID" value="HubETheDecisionMapID"/>
    <property name="ObjectType" value="FlasubanVillageSkyObjectID"/>
    <property name="PaletteID" value="FlasubanVillageOurplePaletteID"/>
    <property name="TileConfig" value="FlasubanVillageSkyConfigID"/>
