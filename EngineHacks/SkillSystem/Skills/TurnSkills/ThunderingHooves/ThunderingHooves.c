@@ -26,7 +26,7 @@ void ThunderingHooves() {
 		
 		if (IsUnitOnField(curUnit)) {
 			if (AuraSkillCheck(curUnit, ThunderingHoovesID_Link, 0x2, ThunderingHoovesRange_Link)) { // i think this is for enemies?
-				curUnit->curHP = curUnit->curHP - (curUnit->maxHP * ThunderingHoovesDamage_Link / 100);
+				curUnit->curHP = curUnit->curHP - (GetUnitMaxHp(curUnit)* ThunderingHoovesDamage_Link / 100);
 				if (curUnit->curHP <= 0) curUnit->curHP = 1;
 			}
 		}

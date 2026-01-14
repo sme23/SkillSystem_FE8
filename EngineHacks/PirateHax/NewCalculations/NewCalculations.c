@@ -383,8 +383,8 @@ void ApplyUnitDefaultPromotion(struct Unit* unit) {
         
     unit->curHP += (promotedClass->baseHP - currentClass->baseHP);
 
-    if (unit->curHP > unit->maxHP){
-        unit->curHP = unit->maxHP;
+    if (unit->curHP > GetUnitMaxHp(unit)){
+        unit->curHP = GetUnitMaxHp(unit);
     }
 
     unit->pow += (promotedClass->basePow - currentClass->basePow);
@@ -495,8 +495,8 @@ void ApplyUnitPromotion(struct Unit* unit, u8 classId) {
         
     unit->curHP += (promotedClass->baseHP - currentClass->baseHP);
 
-    if (unit->curHP > unit->maxHP){
-        unit->curHP = unit->maxHP;
+    if (unit->curHP > GetUnitMaxHp(unit)){
+        unit->curHP = GetUnitMaxHp(unit);
     }
 
     unit->pow += (promotedClass->basePow - currentClass->basePow);
@@ -994,7 +994,7 @@ void AutolevelClass(struct Unit* unit, int levelCount)
 
 void FloorStats(struct Unit* unit)
 {
-    if (unit->maxHP < 0 || unit->maxHP >= 200) //to prevent underflow, check the high point
+    if (GetUnitMaxHp(unit) < 0 || GetUnitMaxHp(unit) >= 200) //to prevent underflow, check the high point
     {
         unit->maxHP = 0;
     }
@@ -1097,8 +1097,8 @@ int GetUnitLuckCap(Unit* unit){
 }
 
 void CheckBattleUnitStatCaps(struct Unit* unit, struct BattleUnit* bu) {
-    if ((unit->maxHP + bu->changeHP) > PIRATE_UNIT_MHP_MAX(unit)){
-        bu->changeHP = PIRATE_UNIT_MHP_MAX(unit) - unit->maxHP;
+    if ((GetUnitMaxHp(unit) + bu->changeHP) > PIRATE_UNIT_MHP_MAX(unit)){
+        bu->changeHP = PIRATE_UNIT_MHP_MAX(unit) - GetUnitMaxHp(unit);
     }
     if ((unit->pow + bu->changePow) > UNIT_POW_MAX(unit)){
         bu->changePow = UNIT_POW_MAX(unit) - unit->pow;
@@ -1124,7 +1124,7 @@ void CheckBattleUnitStatCaps(struct Unit* unit, struct BattleUnit* bu) {
 }
 
 void UnitCheckStatCaps(struct Unit* unit) {
-    if (unit->maxHP > PIRATE_UNIT_MHP_MAX(unit)){
+    if (GetUnitMaxHp(unit) > PIRATE_UNIT_MHP_MAX(unit)){
         unit->maxHP = PIRATE_UNIT_MHP_MAX(unit);
     }      
     if (unit->pow > UNIT_POW_MAX(unit)){

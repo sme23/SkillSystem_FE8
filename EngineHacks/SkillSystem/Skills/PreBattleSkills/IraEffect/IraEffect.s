@@ -1,6 +1,14 @@
 .thumb
 .equ AvengerID, SkillTester+4
 
+.macro blh to, reg
+    ldr \reg, =\to
+    mov lr, \reg
+    .short 0xF800
+.endm
+
+.equ GetMaxHP, 0x08019191
+
 push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
@@ -15,7 +23,8 @@ cmp r0, #0
 beq End
 
 @adds maxhp - currhp to hit/crit, reduces avo by same amount
-ldrb r0, [r4, #0x12] @maxhp
+mov r0, r4
+blh GetMaxHP, r0
 ldrb r1, [r4, #0x13] @currhp
 sub r2, r0, r1
 mov r1, #0x66
