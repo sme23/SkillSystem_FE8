@@ -439,9 +439,12 @@ NoFade
 ENDA
 
 Turn7SalmanWakesUp:
-CAM1 Salman
-STAL 20
-Text(HubC_3SalmanWakesUp)
+CHECK_EXISTS Salman
+BEQ 776 s0 sC 
+	CAM1 Salman
+	STAL 20
+	Text(HubC_3SalmanWakesUp)
+LABEL 776
 NoFade
 ENDA
 

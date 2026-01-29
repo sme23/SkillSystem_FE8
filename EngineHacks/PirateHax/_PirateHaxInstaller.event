@@ -370,3 +370,13 @@ PUSH
 ORG $1619C
 BYTE 0x04 0xE1
 POP
+
+//Fix MoveActiveUnit not using getters
+PUSH
+    ORG $1876A //partway through MoveActiveUnit 
+    SHORT 0x46C0    //nop
+     callHack_r1(prGotoCurHPGetter)    //SHORT 0x4901; BL(0xD18C4); SHORT 0xE001; POIN prGotoCurHPGetter"  
+    SHORT 0xE000    //b 0x801877C
+     ORG $1877C
+     SHORT 0x4284    //cmp r4,r0
+POP

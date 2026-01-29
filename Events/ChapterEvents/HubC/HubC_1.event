@@ -400,7 +400,15 @@ EndingScene:
 	SetBackground(Forest_Dense)
 	STAL 60
 	Music(CherishTheDeadID)
-	Text(C1_Outro_Crash_RazvanRuby)
+	CHECK_EVENTID WentToHub2 //check if we went to C-2: if so, slightly different
+	BEQ 776 s0 sC
+		Text(C1_Outro_Crash_RazvanRuby_C2Visit)
+		GOTO 777
+	LABEL 776
+		Text(C1_Outro_Crash_RazvanRuby_NoC2Visit)
+	LABEL 777
+
+	
 
 	// hermen scenes
 

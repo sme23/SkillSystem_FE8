@@ -20,7 +20,6 @@ POIN BreatherPostBattle
 POIN Pollenate_IncrementFromStaff 
 POIN Canto CantoPlus CantoAttack ReapingBlade_Refresh SeaShanty Canter Galeforce ReMove Powerstaff CulturedPostCombat Gridmaster LiquidCourage LikeDominoes_PostBattle ContraryWinds_PostBattle RushStaffCanto SpecialOrdinance_PostBattle //this order for canto and friends is the only one I tested
 POIN RecoilAxePostBattle
-POIN DelayedTonicDeletion //this goes last
 WORD 0 //Terminator
 
 PROTECT $1D308 $1D314

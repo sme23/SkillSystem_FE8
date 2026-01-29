@@ -118,17 +118,3 @@ void ExecLatona(ProcPtr proc) {
 
     return;
 }
-
-void AddUnitHp(struct Unit* unit, int amount) {
-    int hp = unit->curHP;
-
-    hp += amount;
-
-    if (hp > GetUnitMaxHp(unit))
-        hp = GetUnitMaxHp(unit);
-
-    if (hp < 0)
-        hp = 0;
-
-    unit->curHP = hp;
-}
