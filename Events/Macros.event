@@ -184,6 +184,9 @@
 #define MoveSlow(unitId,x,y) "MOVE 6 unitId [x,y]"
 #define BrownBoxText(textId) "BROWNBOXTEXT textId [8,8]"
 
+// C-3 macro, copied and edited from A-4
+#define BranchIfUnitAtCoords(xcoord, ycoord, unitId, labelId) "CHECK_AT [xcoord, ycoord]; SVAL s1 unitId; BEQ labelId s1 sC"
+
 //hub D
 #define CheckForCharAtCoordsThenCHAI(x,y,charId, labelId, ai1,ai2,ai3,ai4) "CHECK_AT [x, y]; SVAL s1 charId; BNE labelId s1 sC; SetAI(x,y,ai1,ai2,ai3,ai4); LABEL labelId"
 

@@ -149,7 +149,10 @@ DeathQuote(Sanz, HubC_1, 0x2, SanzDQ)
 //C-2
 DeathQuote(Salvador, HubC_2, 0x2, 0)
 
-
+//C-3
+DeathQuote(Jasper, HubC_3, 0, JasperDQ)
+DeathQuote(Runamel, HubC_3, 0x2, RunamelDQ)
+DeathQuote(Boru, HubC_3, 0, BoruDQChapterC3)
 
 DeathQuote(DalilaRematch, HubD_1, 0, DalilaRematchDQ)
 DeathQuote(Solange, HubD_1, 0, SolangeDQ)

@@ -12,6 +12,18 @@ ALIGN 4
 BlackBackgroundPal:
 #incbin "Dmp/BlackBackgroundPalette.dmp"
 
+//For use in chapters with Wave's Cave.
+ALIGN 4
+FE7CavesBlueImage:
+#incbin "Dmp/FE7CavesBlue.png.dmp"
+
+ALIGN 4
+FE7CavesBlueTSA:
+#incbin "Dmp/FE7CavesBlue.png.tsa.dmp"
+
+ALIGN 4
+FE7CavesBluePal:
+#incbin "Dmp/FE7CavesBlue.pal.dmp"
 
 //battle backgrounds
 

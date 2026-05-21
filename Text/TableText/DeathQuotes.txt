@@ -633,12 +633,31 @@ And you're[Beat] just[Beat][N]
 [X]
 
 ## JasperDQ
+[ML][LoadJasper]
+Heh[Beat]so I die out here[N]
+in the middle of nowhere?[AN]
+[CloseEyes]Should've[Beat]learned my damn[N]
+lesson after the Razorbloods[Beat][AN]
 [X]
+
 
 ## RunamelDQ
+[ML][LoadRunamel]
+Urgh[Beat]damn it all![AN]
+To be beaten like this[Beat][AN]
 [X]
 
-## BoroDQChapterC3
+## BoruDQChapterC3
+[ML][LoadBoru]
+U-Ugh[Beat]! [A]C-Can't[N]
+carry on like this[Beat][AN][CSSCF]
+[MR][LoadLua][1LB]
+Boru![A] Are you alright?[AN][CSSCF]
+[ML][LoadBoru][ToggleSmile][2LB]
+Not really[Beat][A] I'll need[N]
+to fall back and heal.[AN]
+M-Make sure that the[N]
+prisoners don't get away![AN]
 [X]
 
 ## SalmanDQChapterC3

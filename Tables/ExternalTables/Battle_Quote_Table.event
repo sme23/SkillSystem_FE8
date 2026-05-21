@@ -143,6 +143,21 @@ UnspecifiedBattleConvo(Sanz,HubC_1,0x1,C1_BQ_SanzGeneric)
 // Chapter C-2
 UnspecifiedAttackerConvo(Calista, HubC_2, 20, C2_CalistaBattleQuote)
 
+// Chapter C-3
+SpecifiedBattleConvo(Jasper, Pilar, HubC_3, 0x1B, C3_BQ_JasperPilar)
+SpecifiedBattleConvo(Jasper, Windy, HubC_3, 0x1C, C3_BQ_JasperWindy)
+SpecifiedBattleConvo(Jasper, Kurt, HubC_3, 0x1D, C3_BQ_JasperKurt)
+SpecifiedBattleConvo(Jasper, Calista, HubC_3, 0x1E, C3_BQ_JasperCalista)
+SpecifiedBattleConvo(Jasper, Valerie, HubC_3, 0x1F, C3_BQ_JasperValerie)
+SpecifiedBattleConvo(Jasper, Avocado, HubC_3, 0x20, C3_BQ_JasperAvocado)
+UnspecifiedBattleConvo(Jasper, HubC_3, 0x21, C3_BQ_JasperGeneric)
+
+SpecifiedBattleConvo(Runamel, Theana, HubC_3, 0x22, C3_BQ_RunamelTheana)
+UnspecifiedBattleConvo(Runamel, HubC_3, 0x23, C3_BQ_RunamelGeneric)
+
+UnspecifiedBattleConvo(Boru, HubC_3, 0x24, C3_BQ_BoruGeneric)
+
+
 // Chapter D-1
 // DalilaRematch
 SpecifiedBattleConvo(DalilaRematch,Lua,HubD_1, 0xA, D1_BQ_DalilaLua)
