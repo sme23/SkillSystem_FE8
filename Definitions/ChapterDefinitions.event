@@ -39,6 +39,8 @@
 #define HubC_2_Cutscene 0x3E
 #define CutsceneHubB_2a 0x3F
 #define CutsceneC_1 0x40
+#define CutsceneHubC_3_A 0x41
+#define CutsceneHubC_3_B 0x42
 
 //CHAPTER MAP/MAPCHANGES/EVENTS IDs
 #define Chapter1MapID 0x4
@@ -180,9 +182,20 @@
 #define HubETheDecisionMapChangesID 0x7B
 #define HubETheDecisionEventsID 0x7C
 
-#define HubC_4_CutsceneMapID 0x7D
-#define HubC_4_CutsceneMapChangesID 0x7E
-#define HubC_4_CutsceneEventsID 0x7F
+// This is for the night-time flasubian tileset, for when Salman is giving a speech.
+#define CutsceneC_3_AMapID 0x7D
+#define CutsceneC_3_AMapChangesID 0x7E
+#define CutsceneC_3_AEventsID 0x7F
+
+// This is for the pirate cave tileset, when Lua and the other crew/Keepers storm and capture the cave. 
+#define CutsceneC_3_BMapID 0x80
+#define CutsceneC_3_BMapChangesID 0x81
+#define CutsceneC_3_BEventsID 0x82
+
+#define HubC_4_CutsceneMapID 0x83
+#define HubC_4_CutsceneMapChangesID 0x84
+#define HubC_4_CutsceneEventsID 0x85
+
 
 //5A - 5C currently used by b_2a cutscene
 

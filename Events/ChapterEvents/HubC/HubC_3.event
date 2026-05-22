@@ -1,5 +1,12 @@
-
 EventPointerTable(HubC_3EventsID, PointerList)
+
+#define TC_C3EndingCutsceneMap 0x1
+#define TC_C3EndingCutsceneDoor 0x2
+#define TC_C3EndingCutsceneDoorRevert 0x3
+#define TC_C3EndingCutscenePassage 0x4
+#define FE7CavesBlueBG 0x3A
+#define SalmanNotRescuedFlag 0x10
+#define SalmanTriggerRescueDialogueFlag 0x11
 
 PointerList:
 POIN TurnBasedEvents
@@ -17,10 +24,12 @@ TurnBasedEvents:
 TurnEventPlayer(0,C3FirstTurnEvent,1)
 TurnEventPlayer(0,Turn4Reinforcements,4)
 TurnEventPlayer(0,RimaJoins,5)
-TurnEventNPC(0,Turn7SalmanWakesUp,6) //this can play if he's rescued which is a little awkward
+TurnEventPlayer(0,Turn6Reinforcements,6)
+TurnEventPlayer(0,Turn7SalmanWakesUp,7) 
 TurnEventPlayer(0,Turn8Reinforcements,7)
 TurnEventPlayer(0,Turn9ReinforcementWarning,8)
 TurnEventPlayer(0,Turn10Reinforcements,9)
+
 END_MAIN
 
 CharacterBasedEvents:
@@ -33,7 +42,10 @@ Escape(0,21)
 END_MAIN
 
 MiscBasedEvents:
+AFEV 0 SalmanRescued SalmanNotRescuedFlag
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
+
 END_MAIN
 
 Traps1:
@@ -121,7 +133,7 @@ UNIT C3Pirate Ninja 0 Level(16,Enemy,True) [4,11] 0 0 0 0 [SteelKnife] NoAI
 
 //North/ Wave 1 & 2
 UNIT C3Pirate Mercenary 0 Level(16,Enemy,True) [12,0] 0 0 0 0 [IronBlade] NoAI
-UNIT C3Pirate Mercenary 0 Level(16,Enemy,True) [16,2] 0 0 0 0 [IronBlade] NoAI
+UNIT C3Pirate Mercenary 0 Level(16,Enemy,True) [16,2] 0 0 0 0 [IronBlade, Vulnerary] NoAI
 UNIT C3Pirate Ninja 0 Level(16,Enemy,True) [17,1] 0 0 0 0 [SteelKnife] NoAI
 UNIT C3Pirate Shaman 0 Level(16,Enemy,True) [8,1] 0 0 0 0 [Elfire] NoAI
 UNIT C3Pirate Vanguard 0 Level(16,Enemy,True) [8,3] 0 0 0 0 [SteelLance] NoAI
@@ -147,7 +159,7 @@ UNIT C3Pirate Bombardier 0 Level(18,Enemy,True) [1,18] 0 0 0 0 [SteelLance,Steel
 UNIT C3Pirate Fighter 0 Level(16,Enemy,True) [3,17] 0 0 0 0 [Hammer] NoAI
 UNIT C3Pirate Mage 0 Level(16,Enemy,True) [6,14] 0 0 0 0 [Elfire] NoAI
 UNIT C3Pirate Hero 0 Level(18,Enemy,True) [3,21] 0 0 0 0 [SilverSword] AttackInRangeAI
-UNIT C3Pirate Sage 0 Level(18,Enemy,True) [0,22] 0 0 0 0 [Elfire] AttackInRangeAI
+UNIT C3Pirate Sage 0 Level(18,Enemy,True) [0,22] 0 0 0 0 [Sagittae, Elixir] AttackInRangeAI
 
 //Bridge
 UNIT C3Pirate Halberdier 0 Level(18,Enemy,True) [8,21] 0 0 0 0 [Spear,PureWater] BossAI
@@ -155,7 +167,7 @@ UNIT C3Pirate Marshall 0 Level(18,Enemy,True) [8,22] 0 0 0 0 [Tomahawk] BossAI
 UNIT C3Pirate Adventurer 0 Level(18,Enemy,True) [9,22] 0 0 0 0 [Greatbow,AssistStaff] BossAI
 UNIT C3Pirate Mercenary 0 Level(16,Enemy,True) [5,23] 0 0 0 0 [IronBlade] NoAI
 UNIT C3Pirate Gunner 0 Level(16,Enemy,True) [5,24] 0 0 0 0 [SteelMusket,GlassShield] NoAI
-UNIT C3Pirate Deserter 0 Level(16,Enemy,True) [13,24] 0 0 0 0 [SteelLance] AttackInRangeAI
+UNIT C3Pirate Deserter 0 Level(16,Enemy,True) [13,24] 0 0 0 0 [SteelLance, Vulnerary] AttackInRangeAI
 
 //South Grave
 UNIT C3Pirate Ninja 0 Level(16,Enemy,True) [14,30] 0 0 0 0 [SteelKnife] AttackInTwoAI
@@ -178,7 +190,7 @@ UNIT C3Traitor Deserter 0 Level(8,NPC,True) [4,1] 0 0 0 0 [0] EscapeOnlyAI
 UNIT C3Traitor Hunter 0 Level(8,NPC,True) [3,4] 0 0 0 0 [0] EscapeOnlyAI
 UNIT C3Traitor Mage 0 Level(8,NPC,True) [5,4] 0 0 0 0 [0] EscapeOnlyAI
 
-UNIT Salman Swordmaster 0 Level(18,NPC,True) [24,8] 0 0 0 0 [SteelSword] EscapeOnlyAI
+UNIT Salman Swordmaster 0 Level(18,NPC,True) [24,8] 0 0 0 0 [SteelSword] BossAI
 
 UNIT
 
@@ -190,16 +202,29 @@ Turn4ReinforcementsSWGroup:
 UNIT C3Pirate Deserter 0 Level(16,Enemy,True) [4,30] 0 0 1 REDA4R30 [SteelLance] NoAI
 UNIT
 
+// also turns a nearby ninja aggro
+Turn6ReinforcementsSWRiverGroup:
+UNIT C3Pirate Shaman 0 Level(16,Enemy,True) [11,30] 0 0 1 REDA11R30 [Elfire] NoAI
+UNIT C3Pirate Mercenary 0 Level(16,Enemy,True) [12,30] 0 0 1 REDA12R29 [Estoc] NoAI
+UNIT
+
 Turn8ReinforcementsSEGroup:
 UNIT C3Pirate Fighter 0 Level(16,Enemy,True) [25,21] 0 0 1 REDA25R21 [SteelAxe] NoAI
 UNIT C3Pirate Gunner 0 Level(16,Enemy,True) [25,22] 0 0 1 REDA25R22 [SteelMusket] NoAI
 UNIT C3Pirate Bombardier 0 Level(18,Enemy,True) [25,25] 0 0 1 REDA22R25 [SteelLance,SteelBow] NoAI
 UNIT
 
+Turn10ReinforcementsSouthGroup:
+UNIT C3Pirate Dracoknight 0 Level(21,Enemy,True) [24,30] 0 0 1 REDA24R28 [KillerAxe, Hammer, GlassShield] NoAI
+UNIT C3Pirate Bombardier 0 Level(20,Enemy,True) [25,30] 0 0 1 REDA25R29 [KillerBow, SilverLance] NoAI
+UNIT C3Pirate Bombardier 0 Level(20,Enemy,True) [23,30] 0 0 1 REDA23R29 [KillerBow, SilverLance] NoAI
+UNIT
+
 Turn10ReinforcementsSEGroup:
-UNIT Runamel 0 0 Level(22,Enemy,True) [25,21] 0 0 1 REDA25R21 [Tomahawk, BraveSword] NoAI
-UNIT C3Pirate Halberdier 0 Level(18,Enemy,True) [25,21] 0 0 1 REDA23R21 [Spear] NoAI
-UNIT C3Pirate Halberdier 0 Level(18,Enemy,True) [25,22] 0 0 1 REDA24R22 [Spear] NoAI
+UNIT Runamel 0 0 Level(22,Enemy,True) [25,21] 0 0 1 REDA25R21 [Tomahawk, BraveSword, HexlockShield] NoAI
+UNIT C3Pirate Halberdier 0 Level(20,Enemy,True) [25,21] 0 0 1 REDA23R21 [Spear] NoAI
+UNIT C3Pirate Halberdier 0 Level(20,Enemy,True) [25,22] 0 0 1 REDA24R22 [Impaler] NoAI
+UNIT C3Pirate Sage 0 Level(20,Enemy,True) [25,23] 0 0 1 REDA25R23 [Arcfire] NoAI
 UNIT
 
 //Cutscene units beyond this point
@@ -217,16 +242,70 @@ UNIT
 
 IntroGroup3:
 UNIT Lua Captain 0 Level(10,Ally,False) [0,6] 0 0 1 REDA4R6 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,7] 0 0 1 REDA3R7 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,8] 0 0 1 REDA0R8 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,5] 0 0 1 REDA3R5 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,6] 0 0 1 REDA2R6 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,8] 0 0 1 REDA2R8 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,7] 0 0 1 REDA1R7 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,6] 0 0 1 REDA1R6 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,5] 0 0 1 REDA0R5 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
-UNIT Pilar Ninja 0 Level(10,Ally,False) [0,5] 0 0 1 REDA1R4 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar Ninja 0 Level(10,Ally,False) [0,7] 0 0 1 REDA0R5 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,8] 0 0 1 REDA0R8 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,5] 0 0 1 REDA3R5 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,6] 0 0 1 REDA2R6 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,8] 0 0 1 REDA2R8 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,7] 0 0 1 REDA1R7 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,6] 0 0 1 REDA1R6 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,5] 0 0 1 REDA3R7 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Razvan Ninja 0 Level(10,Ally,False) [0,5] 0 0 1 REDA1R4 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
 UNIT
+
+// For when Salman is talking to all the rebels...
+IntroGroupFlashback1:
+UNIT Boru Runeshield 0 Level(13,NPC,True) [6,8] 0 0 1 REDA5R6 [Arcfire] EscapeOnlyAI
+UNIT Salman Swordmaster 0 Level(15,NPC,True) [8,7] 0 0 0 0 [SteelSword] EscapeOnlyAI
+UNIT GreagorVillager  GriffinRider  0 Level(16,NPC,True) [6,10] 0 0 0 0 [IronBlade] NoAI
+UNIT GreagorVillagerB Vanguard      0 Level(16,NPC,True) [9,9] 0 0 0 0 [SteelLance,RustyHook] NoAI
+UNIT GreagorVillagerC Ninja         0 Level(16,NPC,True) [6,6] 0 0 0 0 [SteelKnife] NoAI 
+UNIT GreagorPatron    Halberdier    0 Level(16,NPC,True) [7,4] 0 0 0 0 [SteelLance,RustyHook] NoAI
+UNIT GreagorPatronB   Curate        0 Level(16,NPC,True) [9,5] 0 0 0 0 [SteelKnife] NoAI 
+
+UNIT 0x55 Mage 0 Level(16,NPC,True) [6,3] 0 0 0 0 [Elfire] NoAI
+UNIT 0x55 Hunter 0 Level(16,NPC,True) [10,7] 0 0 0 0 [SteelLance,RustyHook] NoAI
+UNIT 0x55 Deserter 0 Level(16,NPC,True) [11,6] 0 0 0 0 [SteelLance,RustyHook] NoAI
+UNIT
+
+IntroGroupCave1:
+UNIT GreagorVillager  Mage  		0 Level(16,NPC,True)  [10,10] 0 0 0 0 [IronBlade] NoAI
+UNIT GreagorVillagerB Hunter        0 Level(16,NPC,True)  [16,9] 0 0 0 0 [SteelLance,RustyHook] NoAI
+UNIT GreagorVillagerC Ninja         0 Level(16,NPC,True)  [8,6] 0 0 0 0 [SteelKnife] NoAI 
+UNIT GreagorPatron    Deserter      0 Level(16,NPC,True) [14,10] 0 0 0 0 [SteelLance,RustyHook] NoAI
+UNIT
+
+// Main cast enters
+IntroGroupCave2:
+UNIT Lua 		Captain 0 Level(10,Ally,False) 	 [12,2] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Pilar 		Ninja 0 Level(10,Ally,False) 	 [13,2] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Boru 		Runeshield 0 Level(13,NPC,True)  [11,2] 0 0 0 0 [Arcfire] NoAI
+UNIT C3Pirate 	DarkKnight 0 Level(18,NPC,False) [11,1] 0 0 0 0 [HeroFlare,Elfire,Sidepierce] NoAI
+UNIT Rima 		AxeCav 0 Level(15,NPC,False)	 [13,1] 0 0 0 0 [RecoilAxe,SlimAxe,HandAxe,Vulnerary] NoAI
+UNIT 0x50 Marshall 0 Level(12,NPC,True) [11,0] 0 0 0 0 [HandAxe] NoAI
+UNIT 0x51 Warden 0 Level(10,NPC,True) [12,0] 0 0 0 0 [Peacekeeper] NoAI
+UNIT 0x52 Vanguard 0 Level(10,NPC,True) [13,0] 0 0 0 0 [Javelin] NoAI
+UNIT
+
+// Boru and Keepers coming in to intercept Pilar, and arrest the lone rebel.
+IntroGroupCave4:
+UNIT Boru Runeshield 0 Level(13,NPC,True)   [12,19] 0 0 0 0 [Arcfire] NoAI
+UNIT 0x52 Vanguard 0 Level(10,NPC,True) 	[13,19] 0 0 0 0 [Javelin] NoAI
+UNIT
+
+// Everyone grouped together. 
+IntroGroupCave5: 
+UNIT Lua 		Captain 0 Level(10,Ally,False) 	 [12,5] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT C3Pirate 	DarkKnight 0 Level(18,NPC,False) [9,6] 0 0 0 0 [HeroFlare,Elfire,Sidepierce] NoAI
+UNIT Rima 		AxeCav 0 Level(15,NPC,False)	 [10,6] 0 0 0 0 [RecoilAxe,SlimAxe,HandAxe,Vulnerary] NoAI
+UNIT 0x50 		Marshall 0 Level(12,NPC,True) 	 [10,9] 0 0 0 0 [HandAxe] NoAI
+UNIT 0x51 		Warden 0 Level(10,NPC,True) 	 [15,9] 0 0 0 0 [Peacekeeper] NoAI
+UNIT 0x52 		Vanguard 0 Level(10,NPC,True) 	 [14,8] 0 0 0 0 [Javelin] NoAI
+
+UNIT Pilar 		Ninja 0 Level(10,Ally,False) 	 [13,6] 0 0 0 0 [Cutlass, IronSword, IronMusket, Vulnerary] NoAI
+UNIT Boru 		Runeshield 0 Level(13,NPC,True)  [12,10] 0 0 0 0 [Arcfire] NoAI
+UNIT
+
 
 IntroGroup4:
 UNIT C3Pirate Vanguard 0 Level(16,Enemy,True) [2,7] 0 0 0 0 [SteelAxe] NoAI
@@ -259,10 +338,20 @@ EndingGroup2:
 UNIT GreagorVillager MaligKnight 0 Level(20,NPC,False) [0,17] 0 0 1 REDA3R20 [0] NoAI
 UNIT
 
+EndingGroup3:
+UNIT GreagorVillager MaligKnight 0 Level(20,NPC,False) [20,2] 0 0 0 0 [0] NoAI
+UNIT 0x55 Deserter 0 Level(12,NPC,True) [17,1] 0 0 0 0 [0] NoAI
+UNIT 0x55 Deserter 0 Level(12,NPC,True) [17,4] 0 0 0 0 [0] NoAI
+UNIT Salman Swordmaster 0 Level(18,NPC,True) [6,2] 0 0 0 0 [0] NoAI
+UNIT Pilar Ninja 0 Level(1,NPC,True) [3,2] 0 0 0 0 [0] NoAI
+UNIT
+
 
 //----------------------------------------------
 //BeginningScene
 //----------------------------------------------
+
+// LOMA CutsceneHubC_3_A
 
 BeginningScene:
 //Objective progress is tracked here
@@ -291,22 +380,25 @@ MUSC MeetTheCrewID
 Text(HubC_3Intro1)
 STAL 20
 
-MOVE 0 Rima [5,4]
-MOVE 0 C3Pirate [6,4]
+MOVE 5 Rima [5,4]
+MOVE 6 C3Pirate [6,4]
 ENUN
 STAL 15
 Text(HubC_3Intro2)
 STAL 20
 
-MOVE 0 Rima [0,6]
-MOVE 0 C3Pirate [0,7]
+MOVE 6 Rima [0,6]
+MOVE 7 C3Pirate [0,7] // 6-7 LMAO!!!!!!!
 ENUN
 DISA Rima
 DISA C3Pirate
 STAL 10
-TEXTSTART
-TEXTSHOW(HubC_3Intro3)
-TEXTEND
+Text(HubC_3Intro3)
+// Pilar moves over.
+MOVE 5 Pilar [4,7]
+ENUN
+FlashCursor(Pilar,60)
+Text(HubC_3Intro4)
 FADI 10
 REMA
 STAL 45
@@ -318,61 +410,300 @@ CHECK_EXISTS Bolton
 IFNE 2 sC s0
 	REVEAL Bolton
 LABEL 2
-SetBackground(0x28) //inside of ruined fort
+
+// We have a secret meeting with Salman and prospective Rebel Rebels...
+LOMA CutsceneHubC_3_A
+CAMERA_CENTERED [0,7]
+LoadCutsceneUnits(IntroGroupFlashback1)
 MUSC AKeepersOathID
+FADU 6
+BROWNBOX HubC_3FlashbackLocation [0,0]
+STAL 60
+FlashCursor(Salman, 60)
+SetBackground(0x20) //within the woods at night
 TEXTSTART
 TEXTSHOW(HubC_3Flashback1)
 TEXTEND
+EraseBackground
+
+// Salman leaves, along with a few rebels. Boru mutters to himself...
+STAL 30
+MOVE 5 Salman [9,1]
+MOVE 5 GreagorPatron [7,1] //halb
+MOVE 5 GreagorPatronB [8,1] //curate
+STAL 30
+MOVE 7 GreagorVillager [8,0] //griffin
+MOVE 5 GreagorVillagerB [9,0] //vanguard
+MOVE 6 GreagorVillagerC [7,0] //ninja
+ENUN
+
+FlashCursor(Boru, 60)
+TEXTSTART
+TEXTSHOW(HubC_3Flashback2)
+TEXTEND
+STAL 20
 FADI 10
 REMA
 STAL 20
+CLEA 0
+CLEN 0
 
+// Back to the village, where Boru reports to Quispe about the incident. 
+LOMA HubC
+CAMERA_CENTERED [11,3] // this is Quispe's house for now. 
+FADU 6
+STAL 60
+// House gets highlighted.
+FlashCursor(11, 3, 60)
 SetBackground(0x00) //inside of house
 TEXTSTART
-TEXTSHOW(HubC_3Flashback2)
+TEXTSHOW(HubC_3Flashback3)
 TEXTEND
 FADI 10
 REMA
 STAL 45
 
+// And we're back, baby. 
+LOMA HubC_3
 SetBackground(0x1D) //wilderness, close to mountains
 MUSC WindAmbienceID
-TEXTSTART
-TEXTSHOW(HubC_3Intro4)
-TEXTEND
-FADI 10
-REMA
-STAL 20
-
-SetBackground(0x1B) //wilderness, mountains in the distance
-MUSC AvastMeHeartiesID
 TEXTSTART
 TEXTSHOW(HubC_3Intro5)
 TEXTEND
 FADI 10
 REMA
-LoadCutsceneUnits(IntroGroup4)
 STAL 20
 
-MUSI
-SetBackground(0x28) //inside of ruined fort
+// Runaways see what's going on. 
+SetBackground(0x1B) //wilderness, mountains in the distance
+MUSC SwabbieTalkID
 TEXTSTART
 TEXTSHOW(HubC_3Intro6)
 TEXTEND
+ClearBackground
+STAL 60
+// Enemies move back out. 
 FADI 10
 REMA
+STAL 20
 
-ClearBackground
+//Inside of the caves
+LOMA CutsceneHubC_3_B
+MUSC LetterOpenerID
+LoadCutsceneUnits(IntroGroupCave1)
+CAMERA_CENTERED [11,8]
+FADU 6
+STAL 60
+LOAD1 2 IntroGroupCave2
+ENUN
+STAL 15
+MOVE 4 Boru [13,7]
+ENUN
+FlashCursor(GreagorVillagerB, 60)
+SetBackground(FE7CavesBlueBG)
+Text(HubC_3Intro7)
+EraseBackground
+
+// All the units roll in. 
+MOVE 7 C3Pirate [15,8] 
+MOVE 7 Rima [9,7] 
+MOVE 7 Lua [11,8] 
+MOVE 4 Pilar [11, 5]
+STAL 30
+// Jagen, get the red paint for the rebellious rebels...
+CUSE GreagorVillager
+CUSE GreagorVillagerB
+CUSE GreagorVillagerC
+CUSE GreagorPatron
+MOVE 4 0x50 [12,4] 
+MOVE 4 0x51 [13,5] 
+MOVE 4 0x52 [14,6]
+ENUN
+FlashCursor(Lua, 60)
+SetBackground(FE7CavesBlueBG)
+Text(HubC_3Intro8)
+EraseBackground
+
+// Deserter quickly runs off!
+MOVE 8 GreagorPatron [13,18]
+STAL 30
+MOVE 5 Lua [13, 8]
+MOVE 5 Pilar [13, 10]
+STAL 20 
+MOVE 4 Boru [12, 10]
+MOVE 4 Rima [12, 9]
+ENUN
+FlashCursor(Pilar, 60)
+SetBackground(FE7CavesBlueBG)
+Text(HubC_3Intro9)
+EraseBackground
+
+// Pilar follows suit, with Bolton in tow. Other green armors capture their units...except for one. 
+// 0x52 will stick with Boru and capture later.
+
+MOVE 8 Pilar [13,13]
+MOVE 9 C3Pirate [14,14]
+ENUN
+STAL 10
+MOVE 5 0x50 [8,6] //captures GreagorVillagerC (Ninja)
+MOVE 5 0x51 [16,9] //captures GreagorVillagerB (hunter)
+MOVE 5 Rima [10,9] //GreagorVillager (mage) is spared, but watched closely by Rima. 
+STAL 20
+MOVE 4 Boru [13, 6]
+STAL 50
+REMOVEUNIT GreagorVillagerC
+STAL 15
+REMOVEUNIT GreagorVillagerB
+ENUN
+STAL 60
+
+FlashCursor(Lua, 60)
+Text(HubC_3Intro10)
+STAL 10
+FADI 7
+
+// Setup for next part of cave scene, where it's just Pilar and Bolton for now.
+REMOVEUNIT Boru
+REMOVEUNIT 0x52
+CAMERA_CENTERED [13,19]
+MOVE 60 C3Pirate [14, 13] //need to set bolton to be higher to be out of sight
+MOVE 60 GreagorPatron [5,28] //and the rebel rebel at the end of the cave
+STAL 60
+
+// Bolton and Pilar make it to an intersection.
+FADU 7
+STAL 10
+MOVE 7 C3Pirate [14, 18]
+MOVE 5 Pilar [13, 17]
+ENUN
+FlashCursor(C3Pirate, 60)
+SetBackground(FE7CavesBlueBG) 
+Text(HubC_3Intro11)
+EraseBackground
+
+// Bolton decides to head over to the right side of the cave because loot!
+// ...don't tell him he can't dismount and doesn't have access to lockpick.
+
+MOVE 7 C3Pirate [21,23]
+ENUN
+STAL 30
+FlashCursor(Pilar, 60)
+SetBackground(FE7CavesBlueBG) 
+Text(HubC_3Intro12)
+EraseBackground
+
+MUSCSLOW 0x7FFF
+MOVE 7 Pilar [7,23]
+STAL 30
+ENUN
+CAMERA_CENTERED [7,26]
+STAL 30
+FlashCursor(GreagorPatron, 60)
+
+// Pilar sights the lone traitor and confronts them
+MOVE 3 Pilar [7,25]
+MOVE 6 GreagorPatron [6,28]
+STAL 15
+MOVE 6 GreagorPatron [5,28]
+STAL 15
+MOVE 6 GreagorPatron [6,28]
+ENUN
+FlashCursor(Pilar, 60)
+SetBackground(FE7CavesBlueBG) 
+Text(HubC_3Intro13)
+EraseBackground
+
+// Pilar assumingly does something like tie them up/disarm them.
+MOVE 20 Pilar [6,27]
+ENUN
+STAL 10
+SOUN 0xB1 //lockpick sound
+STAL 30
+
+// big dialogue section where Pilar interrogates the traitor for info
+SetBackground(FE7CavesBlueBG) 
+TEXTSTART
+TEXTSHOW HubC_3Intro14
+TEXTEND
+MUSCMID AKeepersOathID //once the traitor starts talking, keepers oath plays
+TEXTCONT
+TEXTEND
+MUSCFAST 0x7FFF // at the end of the dialogue, once Boru appears, pause music.
+TEXTCONT
+TEXTEND
+EraseBackground
+REMA
+
+// boru comes bolting in
+LoadCutsceneUnits(IntroGroupCave4)
+STAL 5
+ENUN
+MOVE 6 Boru [7, 25]
+MOVE 6 0x52 [8, 24]
+ENUN
+FlashCursor(Boru, 60)
+SetBackground(FE7CavesBlueBG) 
+Text(HubC_3Intro15)
+EraseBackground
+
+// The accompanying armor takes the traitor away, leaving Boru and Pilar alone.
+MOVE 6 0x52 [6, 28]
+MOVE 4 Pilar [5, 27]
+STAL 65
+REMOVEUNIT GreagorPatron
+ENUN
+STAL 15
+MOVE 8 0x52 [13, 16]
+ENUN 
+MOVE 4 Boru [7, 27]
+ENUN
+FlashCursor(Boru, 60)
+SetBackground(FE7CavesBlueBG) 
+Text(HubC_3Intro16)
+EraseBackground
+
+MOVE 8 Pilar [9, 20]
+STAL 15
+MOVE 6 Boru [9, 21]
+FADI 8
+ENUN
+STAL 30
+
+// clean slate scene
+CLEA 0
+CLEN 0
+CLEE 0
+
+LoadCutsceneUnits(IntroGroupCave5)
+CAMERA_CENTERED [11,8]
+STAL 30
+MUSC LetterOpenerID
+SetBackground(FE7CavesBlueBG)
+Text(HubC_3Intro17)
+STAL 20
+Text(HubC_3Intro18)
+EraseBackground
+
+// end cave scene
+FADI 10
+CLEA 0
+CLEN 0
+
+//Now back outside, enemies are waiting. 
+LOMA HubC_3
+LoadCutsceneUnits(IntroGroup4)
+FADU 6
+STAL 20
+MUSC SwabbieTalkID
 STAL 15
 LoadCutsceneUnits(IntroGroup5)
 STAL 20
 MUNO
-Text(HubC_3Intro7)
+Text(HubC_3Intro19)
 STAL 15
 MOVE 0 Rima [5,16]
 ENUN
 DISA Rima
-Text(HubC_3Intro8)
 STAL 10
 
 CenterTextbox(HubC_3Explanation)
@@ -387,11 +718,12 @@ LoadEnemies(EnemyUnits)
 LoadPlayerUnits(NewUnit_Bolton)
 LOAD1 1 NPCUnits
 ENUN
-SetUnitStatusAll(Salman,BadStatus,0x72,AnyDeployed,AnyArmy,AnyClass,Area(24,8,24,8),AnyItem) //7 turns of Sleep on Salman
+SetUnitStatusAll(Salman,BadStatus,0x62,AnyDeployed,AnyArmy,AnyClass,Area(24,8,24,8),AnyItem) //6 turns of Sleep on Salman
 Rescue(4,7,4,6)
 Rescue(4,2,4,1)
 Rescue(3,5,3,4)
 Rescue(5,5,5,4)
+ENUT SalmanNotRescuedFlag
 
 GotoPrepScreen
 NoFade
@@ -401,6 +733,13 @@ ENDA
 //----------------------------------------------
 //Turn Events
 //----------------------------------------------
+
+TurnOnSalmanAbleRescueFlagEvent:
+ENUT SalmanTriggerRescueDialogueFlag
+ENDA
+
+TurnOffSalmanAbleRescueFlagEvent:
+ENUF SalmanTriggerRescueDialogueFlag
 
 C3FirstTurnEvent:
 CenterTextbox(EarlyLeaveExplanation)
@@ -420,31 +759,61 @@ SpawnReinforcements(Turn4ReinforcementsSWGroup)
 NoFade
 ENDA
 
+Turn6Reinforcements:
+SpawnReinforcements(Turn6ReinforcementsSWRiverGroup)
+// Stole this macro from D-3, make this Ninja aggressive!
+CheckForCharAtCoordsThenCHAI(14, 30, C3Pirate, 776, 0, 0, 0, 0)
+NoFade
+ENDA
+
 RimaJoins:
 
+// If alive and undeployed, play escaped.
+// If alive and deployed, play early leave. 
+// If dead, play dead. 
 CHECK_ALIVE Bolton
-IFEQ 1 sC s0
-//If Bolton is dead, Rima enters the map through this turn event
+IFNE 776 sC s0
+  CHECK_DEPLOYED Bolton
+  IFEQ 777 sC s0
+LABEL 776 //Both dead and escaped cases fall here.
+//  If Bolton has already escaped, or is killed/retreated/escaped,
+//  Rima enters the map through this turn event.
 	CAM1 [7,20]
 	STAL 10
 	LoadPlayerUnits(NewUnit_Rima)
 	STAL 20
-GOTO 2
-LABEL 1
+  FlashCursor(Rima, 60)
+  CHECK_ALIVE Bolton
+  IFEQ 3 sC s0
+    // Bolton dead
+    Text(HubC_3RimaJoins_AfterBoltonDead)
+    GOTO 2
+  LABEL 3
+    // Bolton escaped
+    Text(HubC_3RimaJoins_AfterBoltonEscapes)
+    GOTO 2
+    
+LABEL 777
 //If Bolton is alive, Rima enters the map by being selected through Early Leave
 	LoadPlayerUnits(NewUnit_RimaOffscreen)
 	SetUnitStatus(Rima,State,0x00000009)
+  CAMERA Bolton
+  STAL 20
+  FlashCursor(Bolton, 60)
+  Text(HubC_3RimaJoins_BeforeBoltonEarlyLeaves)
 LABEL 2
 NoFade
 ENDA
 
 Turn7SalmanWakesUp:
-CHECK_EXISTS Salman
-BEQ 776 s0 sC 
+BranchIfNotUnitAtCoords(24, 8, Salman, 776)
 	CAM1 Salman
 	STAL 20
 	Text(HubC_3SalmanWakesUp)
+	SetAI(Salman,0x6,0xC,0x4,0x0)
+	GOTO 777
 LABEL 776
+LABEL 777
 NoFade
 ENDA
 
@@ -452,6 +821,15 @@ Turn8Reinforcements:
 CAM1 [18,22]
 STAL 20
 LoadEnemies(Turn8ReinforcementsSEGroup)
+CHECK_ALIVE Jasper
+IFNE 776 sC s0
+	STAL 30
+	CAM1 [21, 14]
+	STAL 20
+	FlashCursor(Jasper, 60)
+	Text(HubC_3JasperAggro)
+	SetAI(Jasper,0,0,4,0)
+LABEL 776
 STAL 10
 NoFade
 ENDA
@@ -468,10 +846,72 @@ NoFade
 ENDA
 
 Turn10Reinforcements:
-CAM1 [18,22]
+CAM1 [20,25]
 STAL 20
+LoadEnemies(Turn10ReinforcementsSouthGroup)
 LoadEnemies(Turn10ReinforcementsSEGroup)
+FlashCursor(Runamel, 60)
+IFNE 776 sC s0
+	Text(HubC_3MajorBossAppearsJaspAlive)
+	GOTO 777
+LABEL 776
+	Text(HubC_3MajorBossAppearsJaspDead)
+LABEL 777
 STAL 10
+NoFade
+ENDA
+
+//----------------------------------------------
+// AlwaysEvents
+//----------------------------------------------
+
+SalmanRescued:
+
+CHECK_ACTIVEID Salman 
+		BNE 777 0xC 0x0 //If Saman active, ignore all logic (he can't trigger his own rescue event)
+BranchIfUnitAtCoords(24, 8, Salman, 777)  // salman must be off his sleeping spot 
+BranchIfUnitAtCoords(23, 11, Salman, 777) // ...and also not be in the tile that he'll route to after waking up. 
+											 // in theory this can be circumvented if the tile is blocked and
+											 // incorrectly trigger the event anyways but I've spent too much time
+											 // on this and it'd be a really crazy edge case UGH
+LABEL 776	
+	CHECK_TURNS //checks the turn and returns it
+	SVAL s1 6 //makes s1 6, the turn Salman wakes up.
+	BLT 778 s1 sC 
+		//play sleeping dialogue if less than turn 6
+		CHECK_ACTIVEID Pilar 
+		BNE 1 0xC 0x0 //If Pilar active jump to 1
+		CHECK_ACTIVEID Windy
+		BNE 2 0xC 0x0 //If Windy active jump to 2
+		GOTO 3
+		LABEL 1
+			Text(HubC_3SalmanIsRescuedAsleep_Pilar)
+			GOTO 779
+		LABEL 2
+			Text(HubC_3SalmanIsRescuedAsleep_Windy)
+			GOTO 779
+		LABEL 3
+			Text(HubC_3SalmanIsRescuedAsleep_Generic)
+			GOTO 779
+	LABEL 778
+		//play normal dialogue if past turn 6
+		CHECK_ACTIVEID Pilar 
+		BNE 4 0xC 0x0 //If Pilar active jump to 1
+		CHECK_ACTIVEID Windy
+		BNE 5 0xC 0x0 //If Windy active jump to 2
+		GOTO 6
+		LABEL 4
+			Text(HubC_3SalmanIsRescuedAwake_Pilar)
+			GOTO 779
+		LABEL 5
+			Text(HubC_3SalmanIsRescuedAwake_Windy)
+			GOTO 779
+		LABEL 6
+			Text(HubC_3SalmanIsRescuedAwake_Generic)
+			GOTO 779
+	LABEL 779
+	ENUF SalmanNotRescuedFlag //event disabled
+LABEL 777
 NoFade
 ENDA
 
@@ -503,30 +943,57 @@ ClearBackground
 STAL 60
 MOVE 0 Runamel [4,20]
 ENUN
-Text(HubC_3Ending1)
-STAL 20
 
-LoadCutsceneUnits(EndingGroup2)
-STAL 20
-Text(HubC_3Ending2)
-STAL 20
+FlagIsSet(0x02, 776) // Boss was routed, Runamel immediately retreats.
+	Text(HubC_3Ending2_BossDefeated)
 
-MOVE 0 Runamel [19,21]
-STAL 10
-MOVE 0 C3Pirate [19,20]
-MOVE 0 C3Traitor [19,22]
-ENUN
-DISA Runamel
-DISA C3Pirate
-DISA C3Traitor
-STAL 10
-FADI 10
-SetBackground(0x1D) //wilderness, close to mountains
-MUSC StillZephyrsID
-TEXTSTART
-TEXTSHOW HubC_3Ending3
-TEXTEND
-REMA
+	MOVE 0 Runamel [19,21]
+	STAL 10
+	MOVE 0 C3Pirate [19,20]
+	MOVE 0 C3Traitor [19,22]
+	ENUN
+	DISA Runamel
+	DISA C3Pirate
+	DISA C3Traitor
+	STAL 20
+
+	LoadCutsceneUnits(EndingGroup2)
+	FlashCursor(GreagorVillager, 60)
+	STAL 10
+	FADI 10
+	SetBackground(0x1D) //wilderness, close to mountains
+	MUSC StillZephyrsID
+	Text(HubC_3Ending3_BossDefeated)
+	REMA
+
+	GOTO 777
+LABEL 776 // Boss was not routed, Runamel threatens Lua. 
+	Text(HubC_3Ending1)
+	STAL 20
+
+	LoadCutsceneUnits(EndingGroup2)
+	STAL 20
+	Text(HubC_3Ending2)
+	STAL 20
+
+	MOVE 0 Runamel [19,21]
+	STAL 10
+	MOVE 0 C3Pirate [19,20]
+	MOVE 0 C3Traitor [19,22]
+	ENUN
+	DISA Runamel
+	DISA C3Pirate
+	DISA C3Traitor
+	STAL 10
+	FADI 10
+	SetBackground(0x1D) //wilderness, close to mountains
+	MUSC StillZephyrsID
+	TEXTSTART
+	TEXTSHOW HubC_3Ending3
+	TEXTEND
+	REMA
+
+Label 777
 GiveItem(BlueGem,Lua)
 FADI 10
 STAL 20
@@ -570,17 +1037,87 @@ LABEL 1
 LABEL 2
 
 MUSCSLOW 0x7FFF
-SetBackground(0x17) //prison cell
-STAL 10
-MUSC AKeepersOathID
+SetBackground(0x19) //evening wilderness, nearby forest
+MUSC WindAmbienceID
 TEXTSTART
 TEXTSHOW HubC_3Ending4
 TEXTEND
+FADI 10
+REMA
+STAL 20
+
+// Back into the caves!
+CLEA 0x0
+CLEE 0x0
+CLEN 0x0
+MUSCSLOW 0x7FFF
+LOMA CutsceneHubC_3_B
+TILECHANGE TC_C3EndingCutsceneMap
+CAMERA_CENTERED [11,0]
+LoadCutsceneUnits(EndingGroup3)
+FADU 5
+STAL 30
+MUSC AKeepersOathID
+BROWNBOX HubC_3EndingLocation [0,0]
+STAL 60
+MOVE 6 GreagorVillager [6,6]
+ENUN
+FlashCursor(GreagorVillager, 60)
+STAL 10
+SOUN 0xB1 //lockpick sound
+TILECHANGE TC_C3EndingCutsceneDoor
+STAL 30
+MOVE 3 GreagorVillager [6,4]
+STAL 10
+MOVE 2 Salman [6,3]
+ENUN
+SetBackground(0x17) //prison cell
+STAL 10
+TEXTSTART
+TEXTSHOW HubC_3Ending5
+TEXTEND
+ClearBackground
+
+MUSCSLOW 0x7FFF
+MOVE 6 GreagorVillager [5,11]
+STAL 10
+TILECHANGE TC_C3EndingCutsceneDoorRevert
+STAL 15
+MOVE 2 Salman [6,4]
+ENUN
+STAL 60
+// Pilar was doing stealth things and was listening ALL ALONG!!!!
+CAMERA_CENTERED [0,0]
+MUSC LetterOpenerID
+STAL 30
+FlashCursor(Pilar, 60)
+SetBackground(FE7CavesBlueBG) //prison cell
+TEXTSTART
+TEXTSHOW HubC_3Ending6
+TEXTEND
+REMA
+EraseBackground
+
+MOVE 4 Pilar [2, 1]
+ENUN
+STAL 30
+SetBackground(FE7CavesBlueBG)
+Text(HubC_3Ending7)
+EraseBackground
+STAL 15
+SOUN 0xB1 //lockpick sound
+TILECHANGE TC_C3EndingCutscenePassage
+STAL 15
+FlashCursor(Pilar, 60)
+SetBackground(FE7CavesBlueBG)
+Text(HubC_3Ending8)
+REMA
+EraseBackground
+
 FADI 4
 REMA
 STAL 20
 
-//GOTO_TITLE //Playtesting
 GoToHubChapter(HubC)
 NoFade
 ENDA

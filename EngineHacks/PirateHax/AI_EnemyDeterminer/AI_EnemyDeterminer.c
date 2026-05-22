@@ -19,6 +19,16 @@ s8 IsUnitEnemyWithActiveUnit(struct Unit* unit) { //for AI specifically, unit is
         return 0; //do not attack the a3 logs, as they aren't enemies
     }
 
+    // C-3 checks for the rebel Keepers
+    if (unit->pCharacterData->number == C3TraitorIDLink){
+        return 0; //the Runaways will not attack the rebel rebels, because their name sounds stupid or something
+    } 
+
+    // C-3 checks for the rebel Keepers
+    if (unit->pCharacterData->number == C3SalmanIDLink){
+        return 0; //the Runaways will not attack Salman, because his name sounds stupid lmao Salman like the fish???
+    } 
+
     // We need to do D-3 checks here for the gimmick to work: Want Incendivis troops to ignore each other
 
     if ((gActiveUnit->pCharacterData->number == D3TorchUnitCharIDLink) && (UNIT_FACTION(unit) == FACTION_GREEN)){
@@ -44,7 +54,7 @@ s8 IsUnitEnemyWithActiveUnit(struct Unit* unit) { //for AI specifically, unit is
 
 
 
-bool IsUnitAValidTarget(Unit* actor, Unit* target){ //this is for player units i believe, don't actually need anything for this currently but copied it over in case I do
+bool IsUnitAValidTarget(struct Unit* actor, struct Unit* target){ //this is for player units i believe, don't actually need anything for this currently but copied it over in case I do
     if (AreUnitsAllied(target->index, actor->index)){
         return false;
     }

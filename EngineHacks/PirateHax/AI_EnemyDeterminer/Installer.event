@@ -13,6 +13,14 @@ A3LogIDLink:
 BYTE A3Log
 
 ALIGN 4
+C3TraitorIDLink:
+BYTE C3Traitor
+
+ALIGN 4
+C3SalmanIDLink:
+BYTE Salman
+
+ALIGN 4
 D3Thief1CharIDLink:
 BYTE D3Thief1
 
