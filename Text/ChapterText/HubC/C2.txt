@@ -237,7 +237,7 @@ Hmph. It means that you count yourselves[N]
 friends to a woman too accustomed to the[N]
 outside world. In my view, an apostate.[AN]
 But she was quite close to the former[N]
-chief, and helped raise the current[Beat][N]
+chief, and helped raise the current one[Beat][N]
 I can offer you a 5% discount, perhaps.[AN]
 [R]
 [Beat]Oh, you son of a-[A]
@@ -1270,8 +1270,10 @@ I've got the firearm just for him.[AN][X]
 
 ## C2BridgeLowered_T4
 [MR][LoadSalvador]
-Lower that bridge down![AN]
-Start pushing through that route![AN][X]
+Those bastards just won't stop[N]
+pushing[Beat] Fine, let 'em come![AN]
+Lower that bridge and take[N]
+the fight to them, men![A][X]
 
 ## C2_GriffonWarning_T6_CalistaAlive
 What the hell's going on here?[AN]

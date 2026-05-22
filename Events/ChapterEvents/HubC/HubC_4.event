@@ -38,7 +38,7 @@ Chest(Crusher,1,19)
 Chest(RidersBadge,11,14)
 Chest(Saunion,9,11)
 Chest(Warp,18,8)
-Chest(BlueGem,0,7)
+Chest(SilverBlade,0,7)
 END_MAIN
 
 MiscBasedEvents:
@@ -79,16 +79,18 @@ LoadUnit(9,21)
 LoadUnit(10,21)
 UNIT
 
-NewUnits:
-UNIT Remora Berserker_F 0 Level(16,Ally,True) [15,19] 0 0 0 0 [BraveAxe, Swordreaver, Swimwear, Swimwear] NoAI
+CutsceneUnits:
+UNIT Lua Captain 0 Level(16,Ally,True) [8,22] 0 0 1 REDA8R20 [0x0] NoAI
+UNIT Razvan Curate 0 Level(16,Ally,True) [8,22] 0 0 1 REDA8R21 [0x0] NoAI
+UNIT Remora Berserker_F 0 Level(16,Ally,True) [9,22] 0 0 1 REDA9R20 [BraveAxe, Swordreaver, Swimwear, Swimwear] NoAI
 UNIT
 
 EnemyUnits1:
 // Bosses
 UNIT C4Elite Slayer 0 Level(21, Enemy, True) [9,6] 0 0 0 0 [HeroFlare, BraveSword] BossAI
-UNIT C4Elite Marksman 0 Level(20, Enemy, True) [8,2] 0 0 0 0 [SilverMusket] AttackInRangeAI
-UNIT C4Elite Assassin 0 Level(20, Enemy, True) [5,5] 0 0 0 0 [Heartpiercer, Pursuer] AttackInRangeAI
-UNIT C4Elite Warrior 0 Level(20, Enemy, True) [14,2] 0 0 0 0 [BattleAxe, SilverBow] AttackInRangeAI
+UNIT C4Phantom Marksman 0 Level(20, Enemy, True) [8,2] 0 0 0 0 [SilverMusket] AttackInRangeAI
+UNIT C4Phantom Assassin 0 Level(20, Enemy, True) [5,5] 0 0 0 0 [Heartpiercer, Pursuer] AttackInRangeAI
+UNIT C4Phantom Warrior 0 Level(20, Enemy, True) [14,2] 0 0 0 0 [BattleAxe, SilverBow] AttackInRangeAI
 
 // Chest guards, north
 UNIT C4Elite General 0 Level(C4LevelElite, Enemy, True) [0,7] 0 0 0 0 [Spear, SilverSword] BossAI
@@ -147,19 +149,192 @@ UNIT C4Phantom Deserter 0 Level(C4LevelT2, Enemy, True) [10,3] 0 0 0 0 [SteelLan
 UNIT
 
 BeginningScene:
-LoadPlayerUnits(NewUnits)
 LoadEnemies(EnemyUnits1)
 LoadEnemies(EnemyUnits2)
 LoadEnemies(EnemyUnits3)
 LoadEnemies(EnemyUnits4)
+SetBackground(Fort_2)
+MUSC OrlandosThemeID
+Text(C4_BS_1)
+FADI 15
+FadeOutMusic
+CAMERA_CENTERED [8,22]
+STAL 60
+EraseBackground
+MUSC FinInTheCloudsID
+FlashCursor(8,22,30)
+FlashCursor(9,22,30)
+LoadPlayerUnits(CutsceneUnits)
+STAL 30
+TEXTSTART
+TEXTSHOW C4_BS_2
+TEXTEND
+CameraCursor(9,14)
+CAMERA_CENTERED Razvan
+STAL 30
+TEXTCONT
+TEXTEND
+REMA
+FADI 15
 GotoPrepScreen
 NoFade
 ENDA
 
 EndingScene:
+FADI 15
+LOMA HubC_4_Cutscene
+RemoveAll
+CAMERA_CENTERED [8,22]
+FadeOutMusic
+STAL 60
+FADU 15
+CHECK_ALIVE Remora
+BEQ 776 s0 sC
+    LOAD1 1 PostBattleRemoraGroup
+    ENUN
+    LoadCutsceneUnits(EndingSceneRemoraGroup)
+    CAMERA_CENTERED [8,7]
+    MUSC ASoldiersDutyID
+    Text(C4_ES_1)
+    FlashCursor(7,11,30)
+    FlashCursor(8,11,30)
+    FlashCursor(9,11,30)
+    TILECHANGE 0
+    SOUN AttackSnagSoundID
+    Text(C4_ES_2)
+    CamOff
+    STAL 30
+    MOVE 15 Razvan [7,9]
+    STAL 30
+    MOVE 15 Razvan [9,9]
+    STAL 30
+    MOVE 15 Razvan [8,9]
+    ENUN
+    CamOn
+    Text(C4_ES_3_1)
+    MOVE 15 Lua [8,4]
+    MOVE 15 Remora [8,5]
+    ENUN
+    FadeOutMusic
+    FlashCursor(8,3,60)
+    MUSC OrlandosThemeID
+    Text(C4_ES_3_2)
+    TILECHANGE 1
+    SOUN UnlockDoorChestSoundID
+    STAL 30
+    GiveItem(WhiteGem, Lua)
+    MOVE 15 Lua [9,9]
+    MOVE 15 Remora [7,9]
+    ENUN
+    STAL 30
+    Text(C4_ES_4)
+    FadeOutMusic
+    CameraCursor(8,11)
+    TILEREVERT 0
+    SOUN AttackSnagSoundID
+    CamOff
+    MOVE 15 Lua [10,17]
+    MOVE 15 Razvan [6,17]
+    MOVE 15 Remora [8,17]
+    ENUN
+    SVAL s1 0x1
+    SET_CONDITION Remora //Hide
+    STAL 30
+    GOTO 777
+LABEL 776
+    LoadCutsceneUnits(EndingSceneNoRemoraGroup)
+    MUSC CherishTheDeadID
+    Text(C4_ES_1_NoRemora)
+    FlashCursor(7,11,30)
+    FlashCursor(8,11,30)
+    FlashCursor(9,11,30)
+    TILECHANGE 0
+    SOUN AttackSnagSoundID
+    Text(C4_ES_2_NoRemora)
+    CamOff
+    STAL 30
+    MOVE 15 Razvan [7,9]
+    STAL 30
+    MOVE 15 Razvan [9,9]
+    STAL 30
+    MOVE 15 Razvan [8,9]
+    ENUN
+    CamOn
+    Text(C4_ES_3_1_NoRemora)
+    MOVE 15 Lua [8,4]
+    MOVE 15 Remora [8,5]
+    ENUN
+    Text(C4_ES_3_2_NoRemora)
+    TILECHANGE 1
+    SOUN UnlockDoorChestSoundID
+    STAL 30
+    GiveItem(WhiteGem, Lua)
+    MOVE 15 Lua [9,9]
+    ENUN
+    STAL 30
+    Text(C4_ES_4)
+    FadeOutMusic
+    CameraCursor(8,11)
+    TILEREVERT 0
+    SOUN AttackSnagSoundID
+    CamOff
+    MOVE 15 Lua [10,17]
+    MOVE 15 Razvan [6,17]
+    ENUN
+    STAL 30
+LABEL 777
+MOVE 10 Pilar [8,10]
+MOVE 15 Desiderio [8,11]
+ENUN
+MUSC CastawayHeartID
+TEXTSTART
+TEXTSHOW C4_ES_5
+TEXTEND
+CAMERA_CENTERED [8,17]
+STAL 60
+TEXTCONT
+TEXTEND
+REMA
+CAMERA_CENTERED [8,10]
+STAL 60
+CHECK_EVENTID WentToHub3
+BEQ 420 s0 sC
+    Text(C4_ES_6_C3Seen)
+    GOTO 421
+LABEL 420
+Text(C4_ES_6_C3Unseen)
+LABEL 421
+MOVE 15 Lua [8,12]
+ENUN
+Text(C4_ES_7_1)
+MOVE 15 Lua [8,17]
+ENUN
+Text(C4_ES_7_2)
+MOVE 10 Desiderio [8,16]
+ENUN
+Text(C4_ES_8)
 GoToHubChapter(HubC)
 NoFade
 ENDA
+
+EndingSceneNoRemoraGroup:
+UNIT Lua Captain 0 Level(16,Ally,True) [3,22] 0 0 1 REDA8R10 [0x0] NoAI
+UNIT Razvan Curate 0 Level(16,Ally,True) [4,22] 0 0 1 REDA8R9 [0x0] NoAI
+UNIT Desiderio Captain 0 Level(16,Ally,True) [12,22] 0 0 1 REDA7R10 [0x0] NoAI
+UNIT Pilar Curate 0 Level(16,Ally,True) [13,22] 0 0 1 REDA9R10 [0x0] NoAI
+UNIT
+
+EndingSceneRemoraGroup:
+UNIT Lua Captain 0 Level(16,Ally,True) [3,22] 0 0 1 REDA8R10 [0x0] NoAI
+UNIT Razvan Curate 0 Level(16,Ally,True) [4,22] 0 0 1 REDA8R9 [0x0] NoAI
+UNIT Desiderio Captain 0 Level(16,Ally,True) [12,22] 0 0 1 REDA7R10 [0x0] NoAI
+UNIT Pilar Curate 0 Level(16,Ally,True) [13,22] 0 0 1 REDA9R10 [0x0] NoAI
+UNIT
+
+PostBattleRemoraGroup:
+UNIT Remora Berserker_F 0 Level(16,Ally,True) [6,9] 0 0 0 0 [BraveAxe, Swordreaver, Swimwear, Swimwear] NoAI
+UNIT
+
 
 Warning1:
 Text(HubC4WaterWarning1)

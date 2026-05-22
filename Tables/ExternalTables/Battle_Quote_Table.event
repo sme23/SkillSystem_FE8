@@ -157,6 +157,7 @@ UnspecifiedBattleConvo(Runamel, HubC_3, 0x23, C3_BQ_RunamelGeneric)
 
 UnspecifiedBattleConvo(Boru, HubC_3, 0x24, C3_BQ_BoruGeneric)
 
+UnspecifiedBattleConvo(QuispeChapter4, Chapter4, 1, Chapter4_BQ_Quispe)
 
 // Chapter D-1
 // DalilaRematch

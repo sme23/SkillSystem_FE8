@@ -17,7 +17,7 @@ prAddEquipHP:
 	rAdd(rForUnitEquipped(rCallExternal(prGetItemHPBonus)))
 
 prHPTonicBonus:
-rTonicBonus(STAT_HP)
+	rTonicBonus(STAT_HP)
 
 prItemPassiveHp:
 #ifndef DONT_STACK_BOOSTS

@@ -813,7 +813,6 @@ BranchIfNotUnitAtCoords(24, 8, Salman, 776)
 	SetAI(Salman,0x6,0xC,0x4,0x0)
 	GOTO 777
 LABEL 776
-
 LABEL 777
 NoFade
 ENDA

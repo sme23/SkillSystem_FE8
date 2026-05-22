@@ -37,7 +37,7 @@ void ComputeAiAttackWeight(struct AiCombatSimulationSt* st) {
 int AiBattleGetDamageDealtWeight(void) {
     int score;
     
-    if (gBattleTarget.unit.curHP == 0) {
+    if (gBattleTarget.unit.curHP <= 0) {
         return 500; //if enemy dies and actor doesn't, very big value considered
     }
 

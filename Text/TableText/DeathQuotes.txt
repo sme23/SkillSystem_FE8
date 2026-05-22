@@ -404,6 +404,12 @@ At least I[Beat][CloseEyes] died free[Beat][A][X]
 that I survived this long.[AN]
 Can't really[Beat][CloseEyes] complain[Beat][A][X]
 
+## RemoraDQBeforeRecruit
+[MR][LoadRemora]
+Lua, I'm[Beat] not gonna make it.[AN]
+The treasure[Beat] It's all[N]
+yours, now[Beat][CloseEyes] Good[Beat] luck[Beat][AN][X]
+
 ## RemoraDQ
 [MR][LoadRemora]
 Aaah[Beat] This is too soon![AN]
@@ -664,7 +670,11 @@ prisoners don't get away![AN]
 [X]
 
 ## QuispeDQChapter4
-[X]
+[ML][LoadQuispe][ToggleSmile]
+Heh[Beat] Not bad, Skysabers.[N]
+Keep your prize, then.[AN]
+We'll meet again, though[Beat][N]
+I can promise you that.[A][X]
 
 // HUB D
 

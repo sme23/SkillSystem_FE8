@@ -32,6 +32,7 @@
 #define HubC_Maze 29
 #define HubDTheOutskirts 30
 #define HubETheDecision 31
+#define HubC_4_Cutscene 32
 
 #define CutsceneHubB_5 0x3C
 #define HubB_2a 0x3D
@@ -190,6 +191,11 @@
 #define CutsceneC_3_BMapID 0x80
 #define CutsceneC_3_BMapChangesID 0x81
 #define CutsceneC_3_BEventsID 0x82
+
+#define HubC_4_CutsceneMapID 0x83
+#define HubC_4_CutsceneMapChangesID 0x84
+#define HubC_4_CutsceneEventsID 0x85
+
 
 //5A - 5C currently used by b_2a cutscene
 

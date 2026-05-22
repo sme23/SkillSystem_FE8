@@ -89,6 +89,7 @@ DeathQuote(Valerie, AllChapters, 0, ValerieDQ)
 DeathQuote(Rima, AllChapters, 0, RimaDQ)
 DeathQuote(Bolton, AllChapters, 0, BoltonDQ)
 
+DeathQuote(Remora, HubC_4, 0, RemoraDQBeforeRecruit)
 DeathQuote(Remora, AllChapters, 0, RemoraDQ)
 
 DeathQuote(Windy, AllChapters, 0, WindyDQ)
@@ -153,6 +154,8 @@ DeathQuote(Salvador, HubC_2, 0x2, 0)
 DeathQuote(Jasper, HubC_3, 0, JasperDQ)
 DeathQuote(Runamel, HubC_3, 0x2, RunamelDQ)
 DeathQuote(Boru, HubC_3, 0, BoruDQChapterC3)
+DeathQuote(QuispeChapter4, Chapter4, 0x2, QuispeDQChapter4)
+
 
 DeathQuote(DalilaRematch, HubD_1, 0, DalilaRematchDQ)
 DeathQuote(Solange, HubD_1, 0, SolangeDQ)

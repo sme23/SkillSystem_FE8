@@ -87,8 +87,8 @@ void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* de
     	}
 
         if (GetItemWeaponEffect(attacker->weapon) == WPN_EFFECT_HPDRAIN) {
-            if (attacker->unit.maxHP < (attacker->unit.curHP + gBattleStats.damage))
-                attacker->unit.curHP = attacker->unit.maxHP;
+            if (GetUnitMaxHp(&attacker->unit) < (attacker->unit.curHP + gBattleStats.damage))
+                attacker->unit.curHP = GetUnitMaxHp(&attacker->unit);
             else
                 attacker->unit.curHP += gBattleStats.damage;
 

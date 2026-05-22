@@ -12,10 +12,10 @@ void BreatherPostBattle()
 	{
 		if 	((gActionData.unitActionType == UNIT_ACTION_WAIT)) //did the unit Wait
 		{
-			if (unit->curHP < unit->maxHP) //are they damaged?
+			if (unit->curHP < GetUnitMaxHp(unit)) //are they damaged?
 			{
 				CallMapEventEngine(BreatherMapEvent, EV_RUN_CUTSCENE);
-				unit->curHP = unit->maxHP;
+				unit->curHP = GetUnitMaxHp(unit);
 			}
 		}
 	}
