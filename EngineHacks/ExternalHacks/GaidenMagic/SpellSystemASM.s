@@ -15,7 +15,7 @@
 .equ StartEFXStatusChange, 0x08055518
 .equ LoadFlashBG, 0x08053f10
 
-@ .include "MissRelated.s" @ Somewhat verbose functions associated with HP costs on miss. I could not get these to work. -Snek
+.include "MissRelated.s" @ Somewhat verbose functions associated with HP costs on miss. I could not get these to work. -Snek
 
 .global SetUpBattleWeaponDataHack
 .type SetUpBattleWeaponDataHack, %function

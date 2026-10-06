@@ -1,0 +1,13 @@
+// Allows HP changes to show up with anims on when missing
+
+#include "HPChangeOnMiss.lyn.event"
+#include "HPChangeOnMissWrapper.lyn.event"
+
+PUSH
+
+	ORG $5849A
+	SHORT 0x46C0
+	jumpToHack(HPChangeOnMissWrapper)
+
+POP
+

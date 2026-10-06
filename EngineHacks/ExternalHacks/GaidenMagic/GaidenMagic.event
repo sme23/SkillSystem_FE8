@@ -76,14 +76,18 @@
 	ORG $62768
 	jumpToHack(SleepFix)
 	
+	ORG $55496
+	SHORT $46C0 //nop
+	jumpToHack(MakeHPEffectsWorkOnMiss_Nos)
+	
 	ORG $552D2 // Credit Gamma for these as well.
 	SHORT $46C0 //nop
 	SHORT 0x4E00 0x4730 ; POIN MakeHPEffectsWorkOnMiss|1 // jumpToHack_r6(MakeHPEffectsWorkOnMiss)
+	*/
 	
-	ORG $55496
-	SHORT $46C0 //nop
-	jumpToHack(MakeHPEffectsWorkOnMiss_Nos)*/
 	POP
+	
+	#include "HPChangeOnMiss/HPChangeOnMiss.event"
 	
 	ALIGN 4
 	SetUpBattleWeaponDataSwitchRepoint:

@@ -1,4 +1,6 @@
 
+.equ BattleBufferAnimsOn2, 0x203AC34
+
 .global MakeHPEffectsWorkOnMiss
 .type MakeHPEffectsWorkOnMiss, %function
 MakeHPEffectsWorkOnMiss: @ jumpToHacked at 0x080552D2 (with a preceding nop).
@@ -48,7 +50,7 @@ LSL r0, r6, #0x10
 ASR r0, r0, #0x10
 
 //We want to check if the attacker's HP is set to change on this round, and if so, apply Devil Effect
-LDR r4, =0x0203E152
+LDR r4, =BattleBufferAnimsOn2
 MOV r0, r5
 blh 0x0805A16C, r3   //GetAISSubjectId r0=@AnimationInterpreter (still has defender)
 LSL r0, r0, #0x1
@@ -63,8 +65,6 @@ MOV r1, #0x0
 LDSH r4, [r0, r1] //pointer:0203E152
 ADD r4, #0x1 //This lets us check the HP from the next round
 MOV r0, r5
-// NOTE: THIS METHOD DOES NOT WORK
-// The data this reads from is not updated for rounds with a miss
 
 
 blh 0x0805A16C, r3   //GetAISSubjectId r0=@AnimationInterpreter
@@ -107,7 +107,7 @@ cmp r6, r4
 bne HpChanged
 
 //If HP did not change, just advance the round numbers.
-	ldr r4,	=0x0203E152     
+	ldr r4,	=BattleBufferAnimsOn2     
 	MOV r0, r5    
 	blh 0x0805A16C, r3   //GetAISSubjectId
 	lsl     r0,r0,#0x1
@@ -115,7 +115,7 @@ bne HpChanged
 	ldrh    r1,[r0]    
 	add     r1,#0x1  
 	strh    r1,[r0] 
-	ldr r4,	=0x0203E152     
+	ldr r4,	=BattleBufferAnimsOn2     
 	MOV r0, r7    
 	blh 0x0805A16C, r3   //GetAISSubjectId
 	lsl     r0,r0,#0x1
@@ -133,7 +133,7 @@ HpChanged:
 	MOV r8, r9
 
 label4: //Running this again with our new values in place
-LDR r4, =0x0203E152
+LDR r4, =BattleBufferAnimsOn2
 MOV r0, r5 //attacker AIS
 blh 0x0805A16C, r3   //GetAISSubjectId r0=@AnimationInterpreter
 LSL r0, r0, #0x1
@@ -252,7 +252,7 @@ bx r3
 DodgeTimeNos:
 
 //If HP did not change, just advance the round numbers.
-	ldr r4,	=0x0203E152     
+	ldr r4,	=BattleBufferAnimsOn2     
 	MOV r0, r5    
 	blh 0x0805A16C, r3   //GetAISSubjectId
 	lsl     r0,r0,#0x1
@@ -260,7 +260,7 @@ DodgeTimeNos:
 	ldrh    r1,[r0]    
 	add     r1,#0x1  
 	strh    r1,[r0] 
-	ldr r4,	=0x0203E152     
+	ldr r4,	=BattleBufferAnimsOn2     
 	MOV r0, r7    
 	blh 0x0805A16C, r3   //GetAISSubjectId
 	lsl     r0,r0,#0x1
